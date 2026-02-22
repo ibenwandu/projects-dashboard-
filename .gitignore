@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Environment
+.env
+.env.local
+*.secrets
+
+# Nested git repositories (sub-projects maintain their own repos)
+job-search/.git/
+Trade-Alerts/.git/
+# But track everything else in subdirectories
+!job-search/**
+!Trade-Alerts/**
+
+# Temporary files
+*.tmp
+*.temp
+/temp/
+
+# Data files (optional, uncomment if needed)
+# *.db
+# *.sqlite
+# *.csv (if you want to version control these, comment out)
+
+# Node modules (if any projects use Node)
+node_modules/
+
+# Private/sensitive files
+credentials.json
+token.json
+*.key
+*.pem
