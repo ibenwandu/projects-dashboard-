@@ -1,6 +1,6 @@
 # Cursor Works – Session Notes (Personal Folder)
 
-This file records interactions, plans, and fixes implemented across projects under the personal folder so future sessions have context. Sections: **BackupRenderLogs** (Render/Oanda log backup) and **Scalp-Engine / Trade-Alerts** (suggestions from cursor3 implementation).
+This file records interactions, plans, and fixes implemented across projects under the personal folder so future sessions have context. Sections: **BackupRenderLogs** (Render/Oanda log backup), **Scalp-Engine / Trade-Alerts** (suggestions from cursor3 implementation), **Cursor4 / consol-recommend4** (Manual logs review, consolidated plan v4), and **consol-recommend4 Implementation** (Mar 2, 2026 — phases 1.1, 1.4, 2.1, 2.2–2.6, 2.3, 3.1, 3.x docs).
 
 ---
 
@@ -251,3 +251,185 @@ Implement the improvement plan from **`suggestions from cursor3.md`** (Round 4) 
 - **Rollback backups (if needed):** e.g. `personal\backup_before_consol_recommend3_20260228_090025` (see CLAUDE.md for full list)
 
 *Part 2 last updated: session implementing suggestions from cursor3 (log throttles, optional close/orphan logs, USER_GUIDE §9–11, RED FLAG 30 min window).*
+
+---
+
+# Part 3: Cursor4 Manual Logs Review and consol-recommend4 (Mar 2, 2026)
+
+---
+
+## Goal of This Session
+
+Review documents in **Manual logs** (`C:\Users\user\Desktop\Test\Manual logs`) for **consistency of logic, business rules, and transactions** across the four touchpoints (Trade-Alerts, Scalp-engine, Scalp-engine UI, OANDA). Produce improvement plans (Cursor4), then **compare with Anthropic’s suggestions** (suggestions_from_anthropic4.md) and create a **consolidated implementation plan** (consol-recommend4.md) that improves the trading system while **avoiding failures from previous implementations** (Feb 25 rollback, consol-recommend2/3 lessons).
+
+**No implementation was performed**; all outputs are plans only. Approval required before any code or config changes.
+
+---
+
+## What Was Done
+
+1. **Manual logs reviewed:** trade-alerts_*.txt, scalp-engine_*.txt, scalp-engine-ui_*.txt, oanda_*.txt, oanda_transactions_*.json, config-api_*.txt, market-state-api_*.txt (Mar 1–2, 2026), plus “Additional quality checks to review using the Logs.txt”.
+2. **Context used:** Trade-Alerts `CLAUDE.md`, personal `cursor_works.md`, and prior suggestion docs (`suggestions from cursor.md`, cursor1, cursor2, cursor3) so Cursor4 did not re-suggest already-implemented items and respected the do-not-do list.
+3. **Cursor4 output:** `personal\Trade-Alerts\Scalp-Engine\suggestions from cursor4.md` — cross-touchpoint consistency, forex-specific flaws, and improvement plans (no code changes).
+4. **Anthropic4 input:** `personal\Trade-Alerts\suggestions_from_anthropic4.md` — 18 issues across CRITICAL/HIGH/MEDIUM (SL, premature closures, max_runs, Claude/DeepSeek, consensus display, etc.).
+5. **Consolidated plan:** `personal\Trade-Alerts\consol-recommend4.md` — merged Cursor4 + Anthropic4 into phased plan (Phase 0–4) with explicit “what not to do” and one-change-at-a-time rule.
+
+---
+
+## Key Finding (Critical – Cursor4 Only)
+
+**JPY pair limit order price sent incorrectly to OANDA**
+
+- **Evidence:** In `oanda_transactions_*.json`, USD_JPY LIMIT_ORDER has **entry** `"price": "1.560"` but **takeProfitOnFill** `"price": "157.500"`. USD/JPY trades around 156–158; 1.56 is wrong (e.g. price ÷ 100 applied only to limit price).
+- **Impact:** Limit orders for USD/JPY (and possibly other JPY pairs) are placed at wrong price; TP is correct, so execution/risk is inconsistent.
+- **Plan:** Phase 1.1 in consol-recommend4 — locate order builder, fix JPY price scale, add sanity check, verify with OANDA transaction log. Single, isolated change; test in MONITOR first.
+
+---
+
+## Consolidated Plan (consol-recommend4) Summary
+
+| Phase | Content |
+|-------|--------|
+| **Phase 0** | Immediate: Claude API (replenish or disable); investigate what is closing trades (manual closures); verify max_runs reset in code. No execution-path code. |
+| **Phase 1** | Critical, one at a time: (1.1) JPY limit order price to OANDA, (1.2) max_runs fix/verify, (1.3) premature closures fix after root cause known, (1.4) trailing SL verify + optional close log. |
+| **Phase 2** | High: Consensus **display** as X/available_llm_count (no formula change), parser doc + optional parsed-count log, DeepSeek parser or doc, trading hours verify, replace-threshold verify, market state timestamp doc. |
+| **Phase 3** | Medium: Sync/orphan procedure doc, position sizing doc, optional RL/partial-failure log, log spam verify, OANDA request trace doc, AUTO mode doc. |
+| **Phase 4** | Monitoring: closure %, win rate, LLM health (ongoing). |
+
+**Safeguards (do not repeat past failures):**
+
+- Do **not** change consensus **formula**, min_consensus_level, or required_llms **logic**; display-only denominator (e.g. “2/3”) is allowed.
+- Do **not** add config fields to TradeConfig without stripping before `TradeConfig.__init__`.
+- Do **not** change `open_trade()` return signature.
+- Do **not** batch execution-path changes; one fix per deployment, then verify trades still open.
+- Premature closures: **investigate first** (Phase 0.2), then single fix (Phase 1.3).
+
+---
+
+## References for Future Sessions
+
+| Document | Location | Purpose |
+|----------|----------|---------|
+| **suggestions from cursor4.md** | `Trade-Alerts\Scalp-Engine\suggestions from cursor4.md` | Cursor’s Manual-logs review; cross-touchpoint consistency; JPY price bug; quality checks 1–7. |
+| **suggestions_from_anthropic4.md** | `Trade-Alerts\suggestions_from_anthropic4.md` | Anthropic’s 18 issues; CRITICAL/HIGH/MEDIUM; phases and success criteria. |
+| **consol-recommend4.md** | `Trade-Alerts\consol-recommend4.md` | Consolidated plan v4; Cursor4 vs Anthropic4 comparison; Phase 0–4; verification checklist; what not to do. |
+| **CLAUDE.md** | `Trade-Alerts\CLAUDE.md` | Architecture, Feb 25 rollback, consol-recommend2/3, do-not-do list, Session notes. |
+| **Manual logs** | `C:\Users\user\Desktop\Test\Manual logs` | trade-alerts_*, scalp-engine_*, scalp-engine-ui_*, oanda_*, oanda_transactions_*.json, config-api_*, market-state-api_*. |
+| **Additional quality checks** | `Manual logs\Additional quality checks to review using the Logs.txt` | Seven checks: trailing SL, Structure_ATR, profitable→loss, RL, trading hours, sync, orphans. |
+
+---
+
+## Status
+
+- **Implementation:** None. All of the above is **plan only**; no code or config changes were made.
+- **Next steps (for user):** Review consol-recommend4.md; approve phases/items; implement **one change at a time** (starting with Phase 0 and Phase 1.1 JPY price fix); verify after each step.
+- **Rollback:** If implementing consol-recommend4 and issues occur, use existing backups and see CLAUDE.md for rollback steps.
+- **Backup for consol-recommend4 rollback:** `personal\backup_before_consol_recommend4_20260302` (created Mar 2, 2026; robocopy of Trade-Alerts excluding .git and __pycache__; 4200+ files). Restore by replacing `Trade-Alerts` contents with this backup’s contents (or renaming backup to Trade-Alerts).
+
+*Part 3 (plan) last updated: Mar 2, 2026 — Manual logs review, cursor4, Anthropic4 comparison, consol-recommend4 created; backup_before_consol_recommend4_20260302 taken.*
+
+---
+
+# Part 3 (continued): consol-recommend4 Implementation (Mar 2, 2026)
+
+---
+
+## Goal of This Session
+
+Implement the **consolidated plan** in `personal\Trade-Alerts\consol-recommend4.md` (from Cursor4 + Anthropic4), following the plan’s safeguards: no consensus formula change, no new TradeConfig fields without stripping, no `open_trade()` return signature change, one execution-path change at a time. Context was taken from `Trade-Alerts\CLAUDE.md` and this file (cursor_works.md).
+
+---
+
+## Plan Source and Constraints
+
+- **Plan:** `personal\Trade-Alerts\consol-recommend4.md`
+- **Context:** `personal\Trade-Alerts\CLAUDE.md`, `personal\cursor_works.md` (Part 1–3)
+- **Explicit “do not do” (from plan):**
+  - Do **not** change consensus calculation, min_consensus_level, or required_llms **logic** (display-only denominator allowed).
+  - Do **not** add fields to the config object passed to `TradeConfig` without stripping before `TradeConfig.__init__`.
+  - Do **not** change `open_trade()` return signature.
+  - Do **not** implement multiple execution-path or config changes in one deployment.
+- **Scope implemented:** Phase 1.1 (JPY price), Phase 1.4 (trailing SL verify + close log doc), Phase 2.1 (consensus display), Phase 2.2/2.4/2.5/2.6 (docs/verify), Phase 2.3 (DeepSeek parser + doc), Phase 3.1 (sync/orphan doc + optional log), Phase 3.x (USER_GUIDE §§12–17). Phase 0.3/1.2 verified in code (max_runs reset present). Phase 0.1/0.2 (operator), 1.2 fix (only if 0.3 found missing), 1.3 (premature closures after 0.2), Phase 4 (monitoring) not implemented.
+
+---
+
+## What Was Implemented (Summary Table)
+
+| Phase | Item | What was done |
+|-------|------|----------------|
+| **0.3 / 1.2** | max_runs auto-reset | **Verified in code** (no change): In `auto_trader_core.py`, when directive is REJECT for max_runs and `has_existing_position(pair, direction)` is False, engine calls `reset_run_count(opp_id)`, re-gets directive, proceeds if EXECUTE_NOW/PLACE_PENDING. |
+| **1.1** | JPY limit order price to OANDA | **Fix:** In `TradeExecutor.open_trade()` (auto_trader_core.py): For JPY pairs and LIMIT/STOP orders, if entry_price &lt; 10 and take_profit &gt; 10, correct entry scale (×100). If entry &lt; 10 and no TP to infer scale, **reject** with ERROR and do not send. Use `round_price_for_oanda(entry_price, pair)` for order price; use corrected `entry_price` in STOP/LIMIT payloads and pending-fill log. |
+| **1.4** | Trailing SL verify + close-event log | **Doc only:** USER_GUIDE §17 added: trailing SL is applied in main monitoring loop (`_check_be_transition`, `_check_ai_trailing_conversion`); direction correct (longs SL up, shorts down). One INFO log per trade close already present: `Trade closed: {pair} {direction} exit_reason=... final_PnL=...`. |
+| **2.1** | Consensus denominator display | **Display only:** market_bridge.py computes `available_llm_count` (LLMs that contributed this run), adds to each enhanced opp and to state. scalp_ui.py and scalp_engine.py show consensus as `X/{denom}` (e.g. 2/3). No formula change. |
+| **2.2** | Parser failure / consensus doc | USER_GUIDE §13: when LLM returns 0 parsed opportunities, that LLM contributes 0; denominator reflects contributing LLMs. |
+| **2.3** | DeepSeek parser | **Parser:** recommendation_parser.py Pattern set 10 (DeepSeek/narrative): `Pair:` / `**Pair:**` X/Y; bullet `- X/Y Long`; inline `X/Y - Long`. main.py: when DeepSeek returns text but 0 opps, log INFO pointing to USER_GUIDE §13. USER_GUIDE §13 updated with DeepSeek structured-output note. |
+| **2.4 / 2.5** | Trading hours, replace-threshold | **Verify + doc:** Confirmed `can_open_new_trade()` and `REPLACE_ENTRY_MIN_PIPS` / `REPLACE_SL_TP_MIN_PIPS` in use. USER_GUIDE §14 documents both. |
+| **2.6** | Market state timestamp | USER_GUIDE §12: timestamp set when state is written/POSTed; optional warning when state old. |
+| **3.1** | Sync/orphan procedure | **Doc:** USER_GUIDE §10 expanded (a) GET /trades vs OANDA by pair/direction, (b) candidate orphan = OANDA position with no match in GET /trades, (c) cross-check with Manual logs (scalp-engine_*.txt, oanda_transactions_*.json). Optional orphan WARNING (once per (pair, direction) per 15 min) already in auto_trader_core.py. |
+| **3.2 / 3.5 / 3.6** | Position sizing, OANDA log, AUTO mode | USER_GUIDE §§15, 16: position sizing audit, OANDA app log vs transaction history, AUTO mode and manual close. |
+
+---
+
+## Files Modified
+
+### Trade-Alerts (root)
+
+| File | Changes |
+|------|--------|
+| `src/market_bridge.py` | `available_llm_count` computed in `_enhance_opportunities_with_consensus`, added to each enhanced opp and to state. |
+| `src/recommendation_parser.py` | Pattern set 10 (DeepSeek/narrative): 10a `Pair:` / `**Pair:**` X/Y; 10b bullet `- X/Y Long`; 10c `X/Y - Long`. Direction captured for extractor. Debug log includes P10 count. |
+| `main.py` | When `deepseek` returns text but 0 opportunities (text len &gt; 50), log INFO: "DeepSeek: 0 opportunities parsed. If DeepSeek output format differs..." and reference USER_GUIDE §13. |
+
+### Scalp-Engine
+
+| File | Changes |
+|------|--------|
+| `auto_trader_core.py` | Phase 1.1: JPY entry price scale check and correction for LIMIT/STOP; `round_price_for_oanda` for entry; reject if JPY and entry &lt; 10 with no TP; use `entry_price` variable in STOP/LIMIT and pending-fill log. |
+| `scalp_engine.py` | Consensus log lines use `opp.get('available_llm_count', 3)` for denominator (Phase 2.1). |
+| `scalp_ui.py` | Market Intelligence and trade card: consensus shown as `X/{denom}` using `available_llm_count` from opp or market_state (Phase 2.1). |
+| `USER_GUIDE.md` | New/updated: §10 sync/orphan (3.1), §12 market state timestamp (2.6), §13 parser/DeepSeek (2.2, 2.3), §14 trading hours + replace-threshold (2.4, 2.5), §15 position sizing + AUTO (3.2, 3.6), §16 OANDA app log (3.5), §17 trailing SL verify + close log (1.4). |
+
+### Plan document
+
+| File | Changes |
+|------|--------|
+| `consol-recommend4.md` | Status line updated to "Partially implemented" and list of implemented phases (1.1, 1.4, 2.1, 2.2–2.6, 2.3, 3.1, 3.x docs; 0.3/1.2 verified). |
+
+---
+
+## Verification (for future sessions)
+
+- After deploy: at least one trade still opens when an opportunity passes (consensus ≥ 2, no duplicate block).
+- No `TradeConfig.__init__() got an unexpected keyword argument`.
+- OANDA USD_JPY (and other JPY) LIMIT/STOP entry price in correct range (e.g. 156.xxx); if upstream sends 1.56 and TP 157.5, entry is corrected to 156.0 or rejected with ERROR.
+- max_runs: same (pair, direction) can be retried after order closed/cancelled (verified in code).
+- Consensus display: UI and engine logs show X/available_llm_count (e.g. 2/3).
+- DeepSeek: if output matches new patterns or MACHINE_READABLE JSON, opportunities parse; otherwise INFO log and USER_GUIDE §13.
+- USER_GUIDE: §§10, 12–17 present and accurate.
+
+---
+
+## References for Future Sessions
+
+| Document | Location | Purpose |
+|----------|----------|---------|
+| **consol-recommend4.md** | `Trade-Alerts\consol-recommend4.md` | Consolidated plan; implemented vs not implemented; verification checklist; what not to do. |
+| **CLAUDE.md** | `Trade-Alerts\CLAUDE.md` | Architecture, Feb 25 rollback, consol-recommend2/3, do-not-do list. |
+| **suggestions from cursor4.md** | `Trade-Alerts\Scalp-Engine\suggestions from cursor4.md` | Cursor4 Manual-logs review; JPY bug; quality checks. |
+| **suggestions_from_anthropic4.md** | `Trade-Alerts\suggestions_from_anthropic4.md` | Anthropic 18 issues; phases. |
+| **Backup (rollback)** | `personal\backup_before_consol_recommend4_20260302` | Full Trade-Alerts copy before consol-recommend4 implementation; restore if needed. |
+
+---
+
+## Changelog (session summary)
+
+- **Phase 1.1:** JPY limit/stop order price scale and sanity check in `auto_trader_core.py`; correct or reject and use rounded entry in order payload.
+- **Phase 1.4:** USER_GUIDE §17: trailing SL verification (monitoring loop, direction), trade-close audit log.
+- **Phase 2.1:** Consensus display as X/available_llm_count in market_bridge, scalp_ui, scalp_engine (display only).
+- **Phase 2.2 / 2.4 / 2.5 / 2.6:** USER_GUIDE §§12–14 (parser, trading hours, replace-threshold, market state timestamp).
+- **Phase 2.3:** DeepSeek parser patterns (recommendation_parser.py), main.py INFO when DeepSeek 0 opps, USER_GUIDE §13.
+- **Phase 3.1:** USER_GUIDE §10 expanded (GET /trades vs OANDA, candidate orphan, Manual logs); optional orphan WARNING already in code.
+- **Phase 3.2 / 3.5 / 3.6:** USER_GUIDE §§15, 16 (position sizing, OANDA log, AUTO mode).
+- **Phase 0.3 / 1.2:** Verified max_runs reset logic present in `auto_trader_core.py`; no code change.
+
+*Part 3 (implementation) last updated: Mar 2, 2026 — consol-recommend4 phases 1.1, 1.4, 2.1, 2.2–2.6, 2.3, 3.1, 3.x docs implemented and documented in cursor_works.md.*
