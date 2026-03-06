@@ -21,6 +21,7 @@ This file records interactions, plans, and fixes implemented across projects und
 | 13 | Improvement plan implementation (Fixes 1–3) | max_runs legacy key (Fix 1), MACD guard (Fix 2), JPY MARKET sanity (Fix 3); commit 35e7ec8; Fix 4 blocked. |
 | 14 | 3× GBP/USD on OANDA, 1 on UI/logs | Load PENDING trades from state file on startup; USER_GUIDE §10(d) engine-load note. |
 | 15 | Orphan/duplicate cleanup; single (pair, direction) | Cleanup on every sync: close extra open positions, cancel extra pending orders per (pair, direction); never allow multiple same pair on OANDA or UI. |
+| 16 | ATR_TRAILING immediate activation (Fix 4) | Phase 0.5 complete; min age 120s + OANDA P/L gate in `_check_ai_trailing_conversion()`; improvementplan Fix 4 implemented. |
 
 ---
 
@@ -1354,3 +1355,35 @@ The system **must never** allow multiple open positions or multiple pending orde
 | Clean up orphan trades on OANDA; system must NEVER allow multiple trades of same pair (open or pending) on UI and OANDA | **Part 15:** On every sync, run `_cleanup_duplicate_positions_and_orders_on_oanda()`: close extra open positions and cancel extra pending orders per (pair, direction); keep one (prefer tracked, else oldest). Final gate already blocks placing a second order; cleanup removes any existing duplicates. |
 
 **Commit:** Changes for Parts 14 and 15 (auto_trader_core.py, USER_GUIDE.md, cursor_works.md) committed and pushed in same session as this summary.
+
+---
+
+# Part 16: ATR_TRAILING Immediate Activation Fix (Fix 4) — Mar 6, 2026
+
+## Context
+
+Phase 0.5 investigation completed; user confirmed implementation should no longer be gated. ATR_TRAILING was converting to trailing stop **immediately when trade opened** instead of only when in profit (e.g. GBP/USD SELL showing +39.5 pips in UI while chart showed loss; trailing set at entry).
+
+## What was implemented
+
+- **Time-based guard:** In `Scalp-Engine/auto_trader_core.py`, `_check_ai_trailing_conversion()`: for OPEN trades, require `trade.opened_at` and `time_since_open >= ATR_TRAILING_MIN_AGE_SECONDS` (120s). Otherwise skip conversion (DEBUG log).
+- **OANDA unrealized P/L gate:** When `trade.oanda_unrealized_pl` is set and ≤ 0, skip conversion (DEBUG log). Conversion only when OANDA shows positive unrealized P/L or value unavailable.
+- **Constant:** `ATR_TRAILING_MIN_AGE_SECONDS = 120` added next to `MIN_PROFIT_PIPS_FOR_TRAILING`.
+- **Docs:** `Trade-Alerts/improvementplan.md` — Fix 4 status set to implemented; changelog and Fix 4 section updated. `Scalp-Engine/ATR_TRAILING_FIX_PLAN.md` — detailed plan (already created in same session).
+
+## Files modified
+
+| File | Change |
+|------|--------|
+| `Trade-Alerts/Scalp-Engine/auto_trader_core.py` | `ATR_TRAILING_MIN_AGE_SECONDS`; time guard and OANDA P/L gate in `_check_ai_trailing_conversion()` OPEN branch. |
+| `Trade-Alerts/improvementplan.md` | Fix 4 implemented; status, Fix 4 section, Files to Modify table, Changelog. |
+| `Trade-Alerts/Scalp-Engine/ATR_TRAILING_FIX_PLAN.md` | Created earlier in session (detailed plan). |
+| `personal/cursor_works.md` | Quick reference Part 16; this section. |
+
+## Verification (for future sessions)
+
+- New ATR_TRAILING trades should not show “(TRAILING)” in UI until open ≥2 minutes **and** actually in profit (and OANDA unrealized P/L > 0 when available). Logs: DEBUG “skipping … open Ns < min 120s” or “OANDA unrealized P/L … not positive” in first minutes; then “ATR Trailing: attempting conversion” and “converted to trailing stop” when conditions met.
+
+---
+
+*Part 16 last updated: ATR_TRAILING Fix 4 implemented; Phase 0.5 complete.*
