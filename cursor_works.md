@@ -16,6 +16,11 @@ This file records interactions, plans, and fixes implemented across projects und
 | 8 | cursor6 Implementation | Plan 5.1–5.6: Open/Pending display, trailing check/ALREADY_EXISTS, stale cooldown, 502 handling, AUD/CHF doc, UI DB DEBUG. |
 | 9 | User-Reported Fixes | max_trades final gate (never > UI limit); trailing only when ≥1 pip profit; final duplicate (pair,direction) check; commit 19f15a3. |
 | 10 | Multiple pending same pair / UI one row | Final gate checks OANDA **pending orders** (not only open positions); `get_pending_orders()` on TradeExecutor; USER_GUIDE §10(d) UI/store by trade_id. |
+| 11 | Indeed-jobs: same results + already-reported filter | days_posted 3; `output/reported_job_ids.txt`; exclude previously reported job IDs from score/report; `--include-reported`; README. |
+| 12 | Manual logs + .odt + improvementplan comparison | Manual logs folder; .odt read method; comparison with improvementplan.md; trailing-stop evidence from ODT screenshots and logs (Phase 0.5). |
+| 13 | Improvement plan implementation (Fixes 1–3) | max_runs legacy key (Fix 1), MACD guard (Fix 2), JPY MARKET sanity (Fix 3); commit 35e7ec8; Fix 4 blocked. |
+| 14 | 3× GBP/USD on OANDA, 1 on UI/logs | Load PENDING trades from state file on startup; USER_GUIDE §10(d) engine-load note. |
+| 15 | Orphan/duplicate cleanup; single (pair, direction) | Cleanup on every sync: close extra open positions, cancel extra pending orders per (pair, direction); never allow multiple same pair on OANDA or UI. |
 
 ---
 
@@ -984,3 +989,368 @@ User asked that **when reviewing logs**, the same type of checks as in this sess
 ---
 
 *Part 10 last updated: multiple pending same pair; final gate pending-orders check; get_pending_orders(); USER_GUIDE §10(d); log review checks documented.*
+
+---
+
+# Part 11: Indeed-jobs — Same Results Over Days; Already-Reported Filter
+
+---
+
+## Goal of This Session
+
+User was **getting the same Indeed job search results over the past two days**. They asked to review report folders and then to (1) increase the date window to 3 days and (2) **ensure jobs that have been selected/reported before do not appear in future selection**.
+
+---
+
+## What Was Reviewed
+
+- **Reports:** `personal/Indeed-jobs/reports/2026-03-05_1415/report.md`, `2026-03-04_1104/report.md`, `2026-03-03_2358/report.md`.
+- **Finding:** All three contained the **same 25 job IDs** (only score/order differed). So either the workflow was reusing cache without a fresh fetch, or Indeed was returning the same postings because `days_posted: 1` (last 24h) keeps many listings in the window for 2–3 days.
+
+---
+
+## Implementations and Fixes
+
+### 1. Increase window to 3 days
+
+- **File:** `personal/Indeed-jobs/config/indeed_search.json`
+- **Change:** `"days_posted": 1` → `"days_posted": 3` (Indeed `fromage`: last 3 days).
+- **Reason:** Broader window so each fetch can include newer postings and more turnover.
+
+### 2. Already-reported filter (exclude previously reported jobs)
+
+- **Purpose:** Jobs that have already been included in a report are excluded from **future** score/report runs, so the same job does not keep appearing run after run.
+- **Persistence:** Job IDs (Indeed `jk`) are stored in **`output/reported_job_ids.txt`** (one ID per line; lines starting with `#` ignored).
+- **Config:** `src/config.py` — added `REPORTED_JOB_IDS_PATH = OUTPUT_DIR / "reported_job_ids.txt"`.
+- **Job cache:** `src/job_cache.py` — added:
+  - **`load_reported_job_ids(path=None)`** — returns `set[str]` of IDs already reported.
+  - **`append_reported_job_ids(job_ids, path=None)`** — appends IDs to the file after a report.
+- **Workflow:** `run_workflow.py` — in **`run_score_and_report()`**:
+  - Before scoring: load cache, load `reported_job_ids`, **filter out** jobs whose `jk` is in that set.
+  - If no jobs remain: print that all jobs were already reported; suggest running fetch again or clearing the file; return.
+  - Score and report only the **filtered** list.
+  - After writing the report: **append** the job IDs from this run to `reported_job_ids.txt`.
+- **Override:** **`--include-reported`** — when set, the filter is skipped (score and report all jobs in cache; do not append to the file).
+- **Resumes:** Unchanged. Resumes still use `config/approved_jobs.txt` and the cache; the filter only affects which jobs appear in **reports**.
+
+### 3. Create `reported_job_ids.txt` so it exists from the start
+
+- **Issue:** The file was only created when the first report run appended IDs, so `output/reported_job_ids.txt` did not exist until after the first score/report.
+- **Fix:** Created **`personal/Indeed-jobs/output/reported_job_ids.txt`** with a short comment header. Comment lines are ignored when loading; IDs are appended below after each report.
+
+### 4. README and docs
+
+- **README.md:**
+  - **days_posted:** Documented as `1` = last 24h, `3` = last 3 days, `7` = last 7 days; note that `1` often repeats for 2–3 days.
+  - **Same jobs / already-reported:** Explained that reports use the cache; that job IDs in `output/reported_job_ids.txt` are excluded from future reports; that `--include-reported` bypasses the filter; and that deleting/editing the file resets the list.
+
+---
+
+## Files Modified (Part 11)
+
+| File | Changes |
+|------|--------|
+| `Indeed-jobs/config/indeed_search.json` | `days_posted`: 1 → 3. |
+| `Indeed-jobs/src/config.py` | `REPORTED_JOB_IDS_PATH` added. |
+| `Indeed-jobs/src/job_cache.py` | `load_reported_job_ids()`, `append_reported_job_ids()` added. |
+| `Indeed-jobs/run_workflow.py` | Filter by reported IDs in `run_score_and_report()`; append IDs after report; `--include-reported` flag. |
+| `Indeed-jobs/README.md` | days_posted options; "Same jobs every day?" replaced with explanation of reported filter and `--include-reported`. |
+| `Indeed-jobs/output/reported_job_ids.txt` | Created with comment header (file exists from the start). |
+
+---
+
+## Verification (for future sessions)
+
+- After a report run, **`output/reported_job_ids.txt`** contains the job IDs from that run (appended).
+- A later run (same or new cache) **excludes** those IDs from the report; only jobs not in the file are scored and reported.
+- If all jobs in cache are already in the file, the run prints that all were already reported and suggests fetch or clearing the file.
+- **`--include-reported`** causes all jobs in cache to be scored and reported, and no append to the file.
+
+---
+
+## Other job-pipeline context (same timeframe)
+
+- **Scoring-criteria and profile_loader** changes were made in **Indeed-jobs**, **Indeed-jobs-cs**, **Linkedin-jobs**, **Linkedin-jobs-cs** (e.g. remove key_differentiators, required_skills, industries; add weights to location/salary; profile_loader no longer references removed fields). See each project’s `config/scoring-criteria.json` and `src/profile_loader.py`.
+- **Indeed-jobs-cs** and **Linkedin-jobs-cs** were completed as customer-success mirrors of Indeed-jobs and Linkedin-jobs (same pipeline; CS-focused config and keywords).
+
+---
+
+*Part 11 last updated: Indeed-jobs same results; days_posted 3; already-reported filter (reported_job_ids.txt); --include-reported; create reported_job_ids.txt in output.*
+
+---
+
+# Part 12: Manual logs folder and .odt files (session prep)
+
+---
+
+## Location and contents
+
+- **Folder:** `C:\Users\user\Desktop\Test\Manual logs`
+- **Log files:** Many timestamped backups: `trade-alerts_*.txt`, `scalp-engine_*.txt`, `scalp-engine-ui_*.txt`, `config-api_*.txt`, `market-state-api_*.txt`, `oanda_*.txt`, `oanda_transactions_*.json` (Feb 28 – Mar 5, 2026). Also `error_log.txt`, `Additional quality checks to review using the Logs.txt` (never moved by hygiene).
+- **.odt files (user evidence):** At least two present:
+  - **Tailing stop activated in a losing trade.odt** — content is mostly **two embedded PNG screenshots**; no substantive text in `content.xml`. Information is visual (logs/dashboard).
+  - **Tailing stop not working properly. It get activated even before Breakeven.odt** — has **text** in `content.xml`: *"Tailing stop not working properly. It get activated even before Breakeven thereby reducing the original SL cushion and increasing the risk of the trade being stopped out."* Plus two embedded PNGs.
+- **Reference:** cursor_works Part 9 also mentioned **Multiple trades opened for same pairs.odt**; if present, same reading method applies.
+
+## Reading .odt files
+
+- **Confirmed:** .odt can be read by treating the file as **ZIP**, extracting it, and reading **`content.xml`** (OpenDocument XML).
+- **Method:** Copy the .odt to a `.zip` file, then `Expand-Archive` (PowerShell) or any ZIP extractor; open `content.xml`. Paragraph text is in `<text:p>` and `<text:span>` elements.
+- **Limitation:** When the ODT is mainly **screenshots**, the only “content” is embedded images (e.g. under `Pictures/` in the ODT). Text in those images is not in the XML; for image content, use the extracted PNGs (e.g. Read tool on the image path) in a future session if needed.
+
+## Quality checks (reference)
+
+The file **Additional quality checks to review using the Logs.txt** lists seven checks: (1) trailing stop loss, (2) Structure_ATR Stages SL, (3) profitable trades with trailing stops closing as losses, (4) RL runs, (5) trading hours, (6) sync Open/Pending (OANDA, UI, engine), (7) orphan trades. Align with the “Log review checks” section near the top of this document.
+
+---
+
+## Comparison with improvementplan.md (Trade-Alerts)
+
+**File:** `Trade-Alerts/improvementplan.md` (Mar 5, 2026; source: suggestions_from_anthropic6.md + codebase).
+
+| improvementplan.md finding / fix | cursor_works / prior findings | Comparison |
+|----------------------------------|-------------------------------|------------|
+| **Fix 1 — max_runs blocks 97%:** `reset_run_count()` doesn’t clear **legacy** key; reset silently does nothing. Fix: clear legacy key in `execution_mode_enforcer.reset_run_count()`. | Part 3 cont. / Part 6: max_runs **reset logic verified present** in auto_trader_core (REJECT + no position → reset_run_count, re-get directive). | **New root cause:** Prior notes said reset exists; improvement plan shows it **fails** because execution_history uses legacy keys (`EUR/USD_LONG`) and reset only deletes new key (`LLM_EUR/USD_LONG`). Fix 1 is the correct next step. |
+| **Fix 2 — 80% premature closures:** MACD reverse-crossover check runs on **all** open trades every 60s regardless of `sl_type`. Fix: guard with `trade.sl_type == StopLossType.MACD_CROSSOVER`. | Part 6 (5.7): MANUAL_CLOSURES_INVESTIGATION.md — list of close_trade call sites (MACD, DMI, trading hours, etc.); **investigation only**, no code fix. | **Specific cause and fix:** Improvement plan identifies the exact block (scalp_engine.py 3155–3162) and restricts MACD close to MACD_CROSSOVER trades. Aligns with quality check 3 (profitable→loss). |
+| **Fix 3 — JPY MARKET unguarded:** JPY sanity check only in LIMIT/STOP branch; MARKET orders skip it. Fix: apply JPY check to all order types. | Part 3 cont. Phase 1.1: JPY **limit/stop** entry price scale fixed (scale or reject). | **Gap closed:** cursor_works did not mention MARKET; improvement plan adds MARKET to the same sanity logic. |
+| **Fix 4 — Trailing SL (BLOCKED):** Code uses OrderCreate TRAILING_STOP_LOSS correctly; user confirms still not working. No code change until Phase 0.5 log investigation. | Part 5/6/8/9: ATR trailing OrderCreate, observability, ALREADY_EXISTS handling, **trailing only when ≥1 pip profit** (Part 9). ODTs: “activated in losing trade” / “before Breakeven”. | **Aligned:** 1-pip rule (Part 9) already addresses “activated in loss/before BE”. Improvement plan adds: investigate logs (Phase 0.5 checklist) before any further trailing fix; possible causes listed (pre-flight skip, distance units, ALREADY_EXISTS stale, etc.). |
+| **Phase 0.5 — Trailing SL log investigation:** Search logs for ATR Trailing, convert_to_trailing_stop, pre-flight skip, OANDA errors; cross-check oanda_transactions for TRAILING_STOP_LOSS_ORDER; check distance value. | Part 12: Manual logs folder and .odt content; log review checks (trailing, ALREADY_EXISTS, etc.). | **Reinforces:** Phase 0.5 checklist is the right next step using Manual logs (and extracted ODT screenshots if needed). |
+
+**Not in improvementplan (still from cursor_works / quality checks):** Structure_ATR (quality check 2), RL (4), trading hours (5 — plan says “by design”), sync (6), orphans (7). Duplicate/max_trades fixes (Parts 6, 9, 10) are unchanged; plan does not reopen them.
+
+**Deployment order (improvementplan):** Fix 1 → Fix 2 → Fix 3 → Phase 0.5 investigation → Fix 4 (trailing, after investigation).
+
+---
+
+## Trailing stop: evidence from .odt screenshots and Manual logs
+
+The following was derived by extracting and viewing the **ODT embedded images** and searching **scalp-engine_*.txt** and **oanda_transactions_*.json** in Manual logs.
+
+### 1. ODT screenshots — what they show
+
+| ODT | Screenshot | What it shows |
+|-----|------------|----------------|
+| **Tailing stop activated in a losing trade** | 1. GBP/JPY 15m chart (OANDA) | TRAILING STOP line at ~210.816; current price ~210.456; second line at ~210.301 (-3.13, 2000). |
+| | 2. Scalp-engine UI dashboard | **Sync status: UNKNOWN**, Last Sync: Never. **2 active trades:** EUR/GBP BUY (TRAILING) ATR-Trail **+1.8 pips** (green); **GBP/JPY SELL (TRAILING) ATR-Trail -17.9 pips** (red). |
+| **Tailing stop not working properly / before Breakeven** | 1. GBP/USD 1h chart | **TRAILING STOP 2000** at **1.34075** (above price); current price **1.33502**; TAKE PROFIT 2000 at 1.32950. Short position: trailing stop is above price and not moving down with price. |
+| | 2. Scalp-engine UI | 4 trades loaded; all **(TRAILING)** ATR-Trail: EUR/GBP BUY +11.9, GBP/JPY SELL +51.9, GBP/USD SELL +5.8, EUR/JPY SELL +14.7 pips (all green). |
+
+**Interpretation:**
+
+- **“Activated in a losing trade”:** UI shows **GBP/JPY SELL (TRAILING)** at **-17.9 pips**. So the system had already marked this trade as TRAILING while it was in loss — either (a) conversion happened when it was briefly in profit and then price moved against it, or (b) state was set to TRAILING without the ≥1 pip profit check (e.g. before Part 9 fix, or ALREADY_EXISTS path setting state without re-checking profit).
+- **“Before breakeven”:** User text says trailing activates before breakeven and reduces the original SL cushion. GBP/USD screenshot shows trailing stop **above** current price for a short — consistent with a stop placed near entry that never moved down as price moved in favour.
+- **Sync status UNKNOWN / Never:** UI had not run a sync check; possible mismatch between engine state and OANDA (e.g. engine thinks TRAILING, OANDA may have different order state).
+
+### 2. Scalp-engine logs — conversion path
+
+- **Searched for:** `ATR Trailing: attempting conversion`, `Converted to trailing`, `Failed to convert`, `already exists`, `ALREADY_EXISTS`, `converted to trailing`.
+- **Result:** **No matches** in any `scalp-engine_*.txt` in Manual logs.
+- **Implications:** Either (a) in the backup windows there were no OPEN ATR_TRAILING trades (e.g. recent logs show Open: 0/4, Pending: 3–4), so the conversion block was never entered; (b) `current_price` was missing for those trades and they were skipped (DEBUG “Skipping … no current_price” would not appear in INFO logs); or (c) conversion runs only when there are open trades in profit, and the backup timeframe didn’t capture that.
+
+Config lines **Stop Loss Type: ATR_TRAILING** and **Open: X/4, Pending: P** appear regularly; no INFO-level conversion success/failure logs.
+
+### 3. OANDA transactions — trailing stop creates and rejects
+
+- **TRAILING_STOP_LOSS_ORDER** (success): Present in `oanda_transactions_2026-03-05_1700.json` and `_2100.json` (multiple `type` and `reason` entries). So trailing stops **are** being created successfully in some cases.
+- **TRAILING_STOP_LOSS_ORDER_REJECT** with **TRAILING_STOP_LOSS_ORDER_ALREADY_EXISTS**: In `oanda_transactions_2026-03-05_1500.json` (and similar), **same trade IDs** (e.g. 24968, 25085, 25292) get repeated rejects at 20:00:34, 20:02:32, 20:04:27… with `distance`: `"0.003"` (non-JPY) or `"0.3"` (JPY). So the engine is **repeatedly** sending “create trailing stop” for trades that already have one; OANDA correctly rejects with ALREADY_EXISTS.
+- **Possible causes:** (1) Pre-flight check (trade already has `trailingStopLossOrder`) does not see the existing order, so we call the API every cycle. (2) On ALREADY_EXISTS we return True and set `trade.state = TRAILING`, but state is not persisted before restart or next run, so we try again. (3) Multiple engine instances or restarts so in-memory state is lost and we retry.
+
+### 4. Summary for Phase 0.5 / Fix 4
+
+| Finding | Source | Suggestion |
+|--------|--------|------------|
+| Trailing can appear on losing or pre-BE trades in UI | ODT “losing trade” + “before Breakeven” | Ensure 1-pip rule is enforced everywhere we set TRAILING (including when handling ALREADY_EXISTS). |
+| No “attempting conversion” / “Converted to trailing” in logs | scalp-engine_*.txt | Confirm backup window includes periods with OPEN ATR_TRAILING trades in profit; if yes, add or raise log level for conversion attempt so Phase 0.5 can see it. |
+| Repeated ALREADY_EXISTS rejects for same trades | oanda_transactions_*.json | Fix pre-flight: when TradeDetails shows `trailingStopLossOrderID` / trailing already present, skip create and set state to TRAILING without calling API. And/or ensure ALREADY_EXISTS → set TRAILING and persist state so we don’t retry next cycle. |
+| Trailing stop line not moving (e.g. GBP/USD short) | ODT chart | After conversion, OANDA holds the trailing order; if the line doesn’t move, either the order wasn’t created correctly (distance/units) or the UI/chart is not reflecting OANDA’s trailing order. Cross-check with OANDA position/order details. |
+
+---
+
+*Part 12 last updated: Manual logs folder reviewed; .odt read method confirmed; comparison with improvementplan.md; trailing-stop evidence from ODT screenshots and logs added for Phase 0.5 / Fix 4.*
+
+---
+
+# Part 13: Improvement Plan Implementation Session (Mar 5, 2026)
+
+---
+
+## Goal of this session
+
+Provide context for future sessions by (1) reviewing cursor_works.md, (2) reviewing Manual logs and .odt files, (3) comparing findings with improvementplan.md, (4) gathering evidence on trailing-stop issues from ODTs and logs, (5) implementing improvement plan Fixes 1–3, and (6) committing and pushing changes. All of this is documented here so the next session has full context.
+
+---
+
+## Session flow (what was done)
+
+| Step | User request | Action taken |
+|------|--------------|--------------|
+| 1 | Review cursor_works.md for next session context | Read `personal/cursor_works.md` and `personal/job-alert-resume/cursor_works.md`; summarized quick-reference table and key areas (BackupRenderLogs, Scalp-Engine/Trade-Alerts Parts 2–10, Indeed-jobs Part 11). |
+| 2 | Review Manual logs; confirm .odt can be read | Listed `C:\Users\user\Desktop\Test\Manual logs`; extracted .odt as ZIP, read `content.xml`; confirmed text in `<text:p>`/`<text:span>`; noted first ODT = images, second ODT = text + images. Added **Part 12** with location, .odt read method, quality checks reference. |
+| 3 | Compare improvementplan.md with findings | Added **Comparison with improvementplan.md** table to Part 12 (Fix 1–4 vs cursor_works; deployment order). |
+| 4 | Use .odt and logs to shed light on trailing stop | Extracted ODT images; read all four PNGs (dashboard: GBP/JPY -17.9 pips TRAILING; GBP/USD chart trailing stop above price; etc.). Searched scalp-engine_*.txt (no conversion logs); oanda_transactions_*.json (TRAILING_STOP_LOSS_ORDER + repeated ALREADY_EXISTS). Added **Trailing stop: evidence from .odt screenshots and Manual logs** to Part 12 with interpretation and Phase 0.5 suggestions. |
+| 5 | Implement the fixes | Implemented **Fix 1** (reset_run_count legacy key), **Fix 2** (MACD close only for MACD_CROSSOVER), **Fix 3** (JPY sanity for all order types). Fix 4 left **blocked** per plan. Updated improvementplan.md with status and changelog. |
+| 6 | Commit and push changes | Staged Scalp-Engine and improvementplan.md; committed; pushed to origin main. |
+
+---
+
+## What was implemented (Fixes 1–3)
+
+| Fix | File | Change |
+|-----|------|--------|
+| **Fix 1** | `Scalp-Engine/src/execution/execution_mode_enforcer.py` | **reset_run_count(opp_id):** Now clears both new-format key (e.g. `LLM_EUR/USD_LONG`) and legacy key (e.g. `EUR/USD_LONG`) using same legacy-key logic as `_get_run_count()`. Logs "Reset run count for {opp_id} (legacy key also cleared)" or DEBUG when no entry found. Prevents max_runs from permanently blocking after reset. |
+| **Fix 2** | `Scalp-Engine/scalp_engine.py` | **MACD reverse-crossover close:** Wrapped in `if trade.sl_type == StopLossType.MACD_CROSSOVER:` so only MACD_CROSSOVER trades are closed on MACD signal. ATR_TRAILING, BE_TO_TRAILING, STRUCTURE_ATR (and other sl_types) are no longer closed by this check. Addresses ~80% premature closures. |
+| **Fix 3** | `Scalp-Engine/auto_trader_core.py` | **JPY sanity check:** Moved before `order_type` branch; applies to **MARKET**, LIMIT, and STOP. For JPY pairs: if `0 < entry_price < 10`, correct with TP scale or reject; if `entry_price <= 0`, reject. Closes gap where MARKET orders skipped the check. |
+
+**Fix 4 (Trailing SL):** Not implemented. Blocked until Phase 0.5 log investigation is completed and a specific failure mode is documented (see improvementplan.md Phase 0.5 and Part 12 trailing-stop evidence).
+
+---
+
+## Files modified (this session)
+
+| File | Purpose |
+|------|--------|
+| `personal/cursor_works.md` | Part 12 (Manual logs, .odt, comparison, trailing evidence); Part 13 (this session summary); quick-reference table updated. |
+| `Trade-Alerts/improvementplan.md` | Added to repo; status line (Fixes 1–3 implemented, Fix 4 blocked); changelog (implementation notes). |
+| `Trade-Alerts/Scalp-Engine/src/execution/execution_mode_enforcer.py` | Fix 1. |
+| `Trade-Alerts/Scalp-Engine/scalp_engine.py` | Fix 2. |
+| `Trade-Alerts/Scalp-Engine/auto_trader_core.py` | Fix 3. |
+
+---
+
+## Commit and push
+
+- **Repo:** `personal/Trade-Alerts` (remote: https://github.com/ibenwandu/Trade-Alerts)
+- **Branch:** `main`
+- **Commit:** `35e7ec8` — "Scalp-Engine: improvement plan Fixes 1-3 (max_runs legacy key, MACD guard, JPY MARKET sanity)"
+- **Pushed:** 35260f4..35e7ec8 main → main
+
+Not committed (left local/untracked): `.claude/settings.local.json`, `suggestions_from_anthropic6.md`.
+
+---
+
+## Verification (for future sessions)
+
+- **Fix 1:** After deploy, look for log "Reset run count for … (legacy key also cleared)"; previously blocked pairs (e.g. after position closed) should open within 2 cycles; `reason=max_runs` rejections should drop from ~97% toward <20%.
+- **Fix 2:** Trades with ATR_TRAILING or BE_TO_TRAILING should no longer close on MACD signals; only MACD_CROSSOVER trades close on reverse crossover; premature closure rate should drop.
+- **Fix 3:** JPY MARKET orders with valid entry (e.g. 156.xxx) open normally; wrongly scaled JPY entry (e.g. 1.56 without TP to infer scale) rejected with "JPY price sanity check failed".
+
+---
+
+## References for future sessions
+
+| Document / location | Purpose |
+|---------------------|--------|
+| **improvementplan.md** | `Trade-Alerts/improvementplan.md` — Full plan; Fixes 1–3 implemented; Fix 4 blocked; Phase 0.5 checklist; deployment order. |
+| **Part 12 (cursor_works.md)** | Manual logs path; .odt read method; improvementplan comparison; trailing-stop evidence (ODT screenshots, scalp-engine logs, oanda_transactions). |
+| **Log review checks** | Top of cursor_works.md — Max trades, trailing, duplicate, UI/OANDA, stale-order, ALREADY_EXISTS, 502. |
+| **Manual logs** | `C:\Users\user\Desktop\Test\Manual logs` — Timestamped backups; .odt user evidence; Additional quality checks to review using the Logs.txt. |
+
+---
+
+*Part 13 last updated: Session plan, implementations (Fixes 1–3), commit 35e7ec8, and references documented for future context.*
+
+---
+
+# Part 14: 3× GBP/USD on OANDA, Only 1 on UI/Logs (Mar 2026)
+
+---
+
+## User report
+
+OANDA showed **3 instances** of GBP/USD (e.g. three STOP LOSS lines on the chart, plus SELL LIMIT, SELL ENTRY, TAKE PROFIT), but the **Scalp-Engine UI** showed only **1** GBP/USD row (“Loaded 4 trades from API” with one GBP/USD SELL PENDING), and the **logs** showed one placed order and one blocked duplicate (RED FLAG BLOCKED DUPLICATE – only one order per pair allowed).
+
+---
+
+## Root cause
+
+- The engine stores one entry per **trade_id** / order ID in `active_trades` and POSTs that list to the Config API; the Config API stores the payload as-is (no merge by pair/direction). So the UI shows whatever list the engine last POSTed.
+- On **engine startup**, state was loaded from disk but **only** trades with state OPEN, AT_BREAKEVEN, or TRAILING were added to `active_trades`. **PENDING** trades in the state file were **skipped**, so after a restart the engine had fewer entries than before (all PENDING dropped). It would then repopulate from OANDA on the next sync, but until sync ran (and if sync ran before the next POST), the engine could POST a list with only one GBP/USD (e.g. the single open or the single one that was in memory from the last run). So the UI could show 1 row even when OANDA had 3.
+
+---
+
+## Fix implemented
+
+**Load PENDING trades from state file on startup** (`Scalp-Engine/auto_trader_core.py`, `_load_state`):
+
+- When restoring from the state file, include **TradeState.PENDING** in the allowed states so that every trade with a valid `trade_id` (including order IDs for pending orders) is restored into `active_trades`.
+- The engine then POSTs the full list (one entry per trade/order ID) to the Config API, so the UI can show one row per OANDA ticket (e.g. 3× GBP/USD when there are 3 orders).
+
+**USER_GUIDE §10(d):** Added a short note that the engine now loads OPEN, AT_BREAKEVEN, TRAILING, and PENDING from disk on startup, so after a restart the full list is restored and the UI can display one row per ticket.
+
+---
+
+## Files modified
+
+| File | Change |
+|------|--------|
+| `Scalp-Engine/auto_trader_core.py` | In `_load_state()`, allow `TradeState.PENDING` when adding trades from file to `active_trades`. |
+| `Scalp-Engine/USER_GUIDE.md` | §10(d): note on engine load (PENDING included on restart). |
+
+---
+
+## Verification (for future sessions)
+
+- After engine restart, if the state file contained multiple entries for the same pair (e.g. 3× GBP/USD with different trade_id/order_id), all of them should appear in the UI (3 rows).
+- Logs: “Loaded N active trades from disk” should reflect the full count including PENDING; subsequent POST to Config API sends that list so “Loaded N trades from API” in the UI matches.
+
+---
+
+*Part 14 last updated: 3× GBP/USD on OANDA vs 1 on UI — load PENDING from state file; USER_GUIDE §10(d) updated.*
+
+---
+
+# Part 15: Orphan/Duplicate Cleanup — Single (Pair, Direction) on OANDA and UI
+
+---
+
+## Requirement
+
+The system **must never** allow multiple open positions or multiple pending orders for the same (pair, direction) on OANDA or on the UI. User requested cleanup of orphan/duplicate trades on OANDA and strict enforcement of one-per-pair.
+
+---
+
+## What was implemented
+
+**1. Cleanup on every sync** (`Scalp-Engine/auto_trader_core.py`)
+
+- **`_cleanup_duplicate_positions_and_orders_on_oanda()`** runs at the **start** of `sync_with_oanda()` (before the rest of sync).
+- **Open positions:** Group OANDA open positions by (pair, direction). For any group with more than one position, **keep one** (prefer the trade id we have in `active_trades`, else the oldest by id) and **close** the others via `executor.close_trade(tid, "Cleanup: duplicate (pair, direction) - only one allowed")`. Removes closed trade ids from `active_trades`.
+- **Pending orders:** Group OANDA pending orders by (pair, direction). For any group with more than one order, **keep one** (same rule) and **cancel** the others via `executor.cancel_order(oid, ...)`. Removes cancelled order ids from `active_trades`.
+- Logs: `🧹 Cleaned up duplicate open position: {pair} {direction} (closed trade_id=…, keeping …)` and `🧹 Cleaned up duplicate pending order: …` when extras are closed/cancelled. Cleanup failures are logged as warning and do not abort sync.
+
+**2. Enforcement**
+
+- **Existing:** Final gate before placing an order already blocks if (pair, direction) exists in OANDA open positions or pending orders (Parts 6, 9, 10). No second order is sent.
+- **New:** Every sync **removes** any existing duplicates on OANDA (close/cancel extras), so OANDA and the engine/UI stay aligned with at most one open and one pending per (pair, direction).
+
+---
+
+## Files modified
+
+| File | Change |
+|------|--------|
+| `Scalp-Engine/auto_trader_core.py` | `from collections import defaultdict`; `_cleanup_duplicate_positions_and_orders_on_oanda()` added; called at start of `sync_with_oanda()`. |
+| `Scalp-Engine/USER_GUIDE.md` | §10(d): paragraph on duplicate (pair, direction) cleanup on OANDA (close/cancel extras each sync; logs). |
+| `personal/cursor_works.md` | Quick reference Part 15; this section. |
+
+---
+
+## Verification (for future sessions)
+
+- After sync, OANDA should have at most one open position and one pending order per (pair, direction). If duplicates were present, logs show `🧹 Cleaned up duplicate open position` or `🧹 Cleaned up duplicate pending order`.
+- UI shows at most one row per (pair, direction) when engine state is POSTed (one entry per trade_id/order_id; cleanup ensures OANDA has no extras).
+
+---
+
+*Part 15 last updated: Orphan/duplicate cleanup; single (pair, direction) enforced on OANDA and UI.*
+
+---
+
+## Session summary (Parts 14–15 implementation)
+
+| User request | Response |
+|--------------|----------|
+| 3× GBP/USD on OANDA, only 1 on UI/logs | **Part 14:** Load PENDING trades from state file on engine startup so the full list (one per trade_id/order_id) is restored and POSTed to Config API; UI can show one row per ticket. |
+| Clean up orphan trades on OANDA; system must NEVER allow multiple trades of same pair (open or pending) on UI and OANDA | **Part 15:** On every sync, run `_cleanup_duplicate_positions_and_orders_on_oanda()`: close extra open positions and cancel extra pending orders per (pair, direction); keep one (prefer tracked, else oldest). Final gate already blocks placing a second order; cleanup removes any existing duplicates. |
+
+**Commit:** Changes for Parts 14 and 15 (auto_trader_core.py, USER_GUIDE.md, cursor_works.md) committed and pushed in same session as this summary.
