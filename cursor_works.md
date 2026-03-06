@@ -2,6 +2,8 @@
 
 This file records interactions, plans, and fixes implemented across projects under the personal folder so future sessions have context.
 
+**Last updated:** Part 17 (Mar 6, 2026) — No pending order for pair with open position; commit 8dc6d3d; cursor_works updated.
+
 **Quick reference — Parts:**
 
 | Part | Topic | Summary |
@@ -22,6 +24,7 @@ This file records interactions, plans, and fixes implemented across projects und
 | 14 | 3× GBP/USD on OANDA, 1 on UI/logs | Load PENDING trades from state file on startup; USER_GUIDE §10(d) engine-load note. |
 | 15 | Orphan/duplicate cleanup; single (pair, direction) | Cleanup on every sync: close extra open positions, cancel extra pending orders per (pair, direction); never allow multiple same pair on OANDA or UI. |
 | 16 | ATR_TRAILING immediate activation (Fix 4) | Phase 0.5 complete; min age 120s + OANDA P/L gate in `_check_ai_trailing_conversion()`; improvementplan Fix 4 implemented. |
+| 17 | No pending when pair has open | Once a pair has an open position, no pending order allowed until closed/cancelled; block on place, cancel on sync; commit 8dc6d3d. |
 
 ---
 
@@ -32,6 +35,7 @@ When asked to **review the logs**, future sessions should perform checks like th
 - **Max trades:** Never more open positions than UI `max_trades`; logs show "Open: X/Y, Pending: P" (not "Active: 6/4"); ERROR if OANDA > max_trades; BLOCKED when at limit.
 - **Trailing stop:** Trailing only activated when trade is in profit (≥1 pip), never in loss or before breakeven; look for "converted to trailing stop" only after profit; USER_GUIDE §17.
 - **Duplicate (pair, direction):** No multiple open or **pending** orders for same pair/direction on OANDA; final gate blocks with "BLOCKED DUPLICATE (final check)" or "BLOCKED DUPLICATE (final check – pending)"; has_existing_position and pre-open check include pending orders.
+- **No pending when pair has open:** Once a pair has an open position, no pending order (LIMIT/STOP) is allowed for that pair until the open is closed or cancelled. Block on place: "BLOCKED: {pair} already has an open position. No pending order allowed until that position is closed or cancelled." On sync, cleanup cancels any pending order for a pair that has an open: "🧹 Cleaned up pending order: {pair} (pair has open position, no pending allowed)".
 - **UI vs OANDA alignment:** If OANDA shows multiple tickets for same pair (e.g. two USD/JPY SELL LIMIT) but UI shows one row, the list must be one entry per `trade_id`/order ID (store/display by ID, not merge by (pair, direction)); USER_GUIDE §10(d).
 - **Stale-order loop:** No cancel-then-replace same level within cooldown (cursor6 §5.3); "Skipping re-place after stale cancel" when applicable.
 - **TRAILING_STOP_LOSS_ORDER_ALREADY_EXISTS:** Check before create; ALREADY_EXISTS treated as success; reject count in OANDA transactions should drop (cursor6 §5.2).
@@ -1360,6 +1364,16 @@ The system **must never** allow multiple open positions or multiple pending orde
 
 # Part 16: ATR_TRAILING Immediate Activation Fix (Fix 4) — Mar 6, 2026
 
+## Session flow (what was done this session)
+
+| Step | User request | Action taken |
+|------|--------------|--------------|
+| 1 | Check cursor_works.md for context for next assignment | Read `personal/cursor_works.md` and `job-alert-resume/cursor_works.md`; user clarified they meant the **personal folder** cursor_works. |
+| 2 | Review the cursor_works.md file in the personal folder | Reviewed full structure: Quick reference (Parts 1–15), Log review checks, Part 1 (BackupRenderLogs) through Part 15; summarized table and noted no explicit "next assignment" section. |
+| 3 | Check improvementplan.md for Trailing stop updates and recommendations | Summarized improvementplan.md: Phase 0.5 (ATR_TRAILING immediate activation), Phase 0.6 (trailing SL log investigation), Fix 4 (BLOCKED), Fix 5 (BLOCKED); placeholder fix (delay 120s); deployment order; Fix 4 status BLOCKED until Phase 0.5. |
+| 4 | Phase 0.5 completed — create detailed plan to fix ATR_TRAILING (no piecemeal); user provided GBP/USD UI screenshot | Created **`Trade-Alerts/Scalp-Engine/ATR_TRAILING_FIX_PLAN.md`**: root cause (first-cycle conversion, single source for "in profit", no stabilization); design (time guard 120s, OANDA P/L gate, keep in_profit check); exact code changes; verification; rollback. Single non-piecemeal plan. |
+| 5 | Implement, commit and push changes | Implemented Fix 4 in code and docs; committed both repos; pushed Trade-Alerts (personal has no remote). See "Commits and push" below. |
+
 ## Context
 
 Phase 0.5 investigation completed; user confirmed implementation should no longer be gated. ATR_TRAILING was converting to trailing stop **immediately when trade opened** instead of only when in profit (e.g. GBP/USD SELL showing +39.5 pips in UI while chart showed loss; trailing set at entry).
@@ -1378,12 +1392,93 @@ Phase 0.5 investigation completed; user confirmed implementation should no longe
 | `Trade-Alerts/Scalp-Engine/auto_trader_core.py` | `ATR_TRAILING_MIN_AGE_SECONDS`; time guard and OANDA P/L gate in `_check_ai_trailing_conversion()` OPEN branch. |
 | `Trade-Alerts/improvementplan.md` | Fix 4 implemented; status, Fix 4 section, Files to Modify table, Changelog. |
 | `Trade-Alerts/Scalp-Engine/ATR_TRAILING_FIX_PLAN.md` | Created earlier in session (detailed plan). |
-| `personal/cursor_works.md` | Quick reference Part 16; this section. |
+| `personal/cursor_works.md` | Quick reference Part 16; this section (including session flow and commit/push notes). |
+
+## Commits and push
+
+| Repo | Branch | Commit | Message | Push |
+|------|--------|--------|---------|------|
+| **Trade-Alerts** | `main` | `84d71b0` | Scalp-Engine: Fix 4 ATR_TRAILING - min age 120s + OANDA P/L gate to prevent immediate activation | Pushed to `origin/main` (https://github.com/ibenwandu/Trade-Alerts) |
+| **personal** | `master` | `7111a91` | cursor_works: Part 16 ATR_TRAILING Fix 4 (Phase 0.5 complete, min age + OANDA P/L gate) | Not pushed — no `git remote` configured for personal folder |
 
 ## Verification (for future sessions)
 
 - New ATR_TRAILING trades should not show “(TRAILING)” in UI until open ≥2 minutes **and** actually in profit (and OANDA unrealized P/L > 0 when available). Logs: DEBUG “skipping … open Ns < min 120s” or “OANDA unrealized P/L … not positive” in first minutes; then “ATR Trailing: attempting conversion” and “converted to trailing stop” when conditions met.
 
+## References for future sessions
+
+| Document | Location | Purpose |
+|----------|----------|---------|
+| **ATR_TRAILING_FIX_PLAN.md** | `Trade-Alerts/Scalp-Engine/ATR_TRAILING_FIX_PLAN.md` | Full fix plan: root cause, design, code changes, verification, rollback. |
+| **improvementplan.md** | `Trade-Alerts/improvementplan.md` | Fix 4 status (implemented); Phase 0.5/0.6; deployment order; changelog. |
+| **Log review checks** | Top of this file (cursor_works.md) | Max trades, trailing, duplicate, UI/OANDA, etc. |
+
 ---
 
-*Part 16 last updated: ATR_TRAILING Fix 4 implemented; Phase 0.5 complete.*
+*Part 16 last updated: Session flow, implementation, commits/push, and references documented for future context.*
+
+---
+
+# Part 17: No Pending Order for Pair with Open Position — Mar 6, 2026
+
+## Goal
+
+Enforce the rule: **once a pair has an open position, there must never be a pending order for that same pair until the open is closed or cancelled.** So at any time a pair may have either (a) at most one open position and no pending, or (b) no open and at most one pending per (pair, direction).
+
+## What was implemented
+
+### 1. New helper: `has_open_position_for_pair(pair)`
+
+- **File:** `Scalp-Engine/auto_trader_core.py` (PositionManager)
+- **Behaviour:** Returns `True` if there is any **open** position (state OPEN, TRAILING, or AT_BREAKEVEN) for that pair, **any direction**. Checks in-memory `active_trades` and OANDA `get_open_positions()`.
+- **Use:** Decides whether placing a pending order for that pair is allowed.
+
+### 2. Block placing a pending order when the pair has an open
+
+- **File:** `Scalp-Engine/auto_trader_core.py`, in `PositionManager.open_trade()`
+- **When:** After creating the managed trade and before adding the placeholder, when `directive.order_type` is `LIMIT` or `STOP` (i.e. we are placing a **pending** order).
+- **Check:** If `has_open_position_for_pair(pair)` is True → do not add placeholder, do not send order; set `_last_reject_reason = "open_exists_no_pending"`; log at ERROR and return `None`.
+- **Log message:** `🚫 BLOCKED: {pair} already has an open position. No pending order allowed until that position is closed or cancelled.`
+
+### 3. Cleanup: cancel pending orders for pairs that have an open
+
+- **File:** `Scalp-Engine/auto_trader_core.py`, in `_cleanup_duplicate_positions_and_orders_on_oanda()`
+- **After:** Closing duplicate open positions per (pair, direction).
+- **Step:** Build set `pairs_with_open` = { pair_norm for each (pair_norm, direction) in open_by_key }. For each **pending** order, if its pair is in `pairs_with_open`, **cancel** that order and remove from `active_trades` if present.
+- **Log message:** `🧹 Cleaned up pending order: {pair_norm} (cancelled order_id=…) - pair has open position, no pending allowed`
+- **Docstring:** Cleanup docstring updated to state that we also enforce “no pending for a pair that has an open” and cancel any such pending.
+
+### 4. USER_GUIDE §10(d)
+
+- **File:** `Scalp-Engine/USER_GUIDE.md`
+- **Change:** In the “Duplicate (pair, direction) cleanup on OANDA” paragraph: added the rule “Once a pair has an open position, no pending order is allowed for that pair until the open is closed or cancelled”; described cleanup step (2) “cancels any pending order for a pair that has an open position”; noted that no pair may have both an open and a pending; documented the block log and the new cleanup log.
+
+## Files modified
+
+| File | Change |
+|------|--------|
+| `Trade-Alerts/Scalp-Engine/auto_trader_core.py` | `has_open_position_for_pair()`; in `open_trade()` block pending when pair has open (LIMIT/STOP); in `_cleanup_duplicate_positions_and_orders_on_oanda()` cancel pending for pairs with open; updated cleanup docstring. |
+| `Trade-Alerts/Scalp-Engine/USER_GUIDE.md` | §10(d): rule “no pending when pair has open”, cleanup step (2), block and cleanup log messages. |
+
+## Commit and push
+
+| Repo | Branch | Commit | Message | Push |
+|------|--------|--------|---------|------|
+| **Trade-Alerts** | `main` | `8dc6d3d` | Scalp-Engine: no pending order for pair with open position - block on place, cancel on sync | Pushed to `origin/main` (https://github.com/ibenwandu/Trade-Alerts) |
+
+## Verification (for future sessions)
+
+- **Place path:** Attempting to place a LIMIT or STOP order for a pair that already has an open position is blocked; logs show `BLOCKED: {pair} already has an open position. No pending order allowed until that position is closed or cancelled.`
+- **Sync path:** On each sync, any pending order whose pair has an open position is cancelled; logs show `🧹 Cleaned up pending order: {pair} (pair has open position, no pending allowed)` when such orders exist.
+- **Result:** No pair ever has both an open position and a pending order; existing duplicate checks (one per (pair, direction), final gate) unchanged.
+
+## References for future sessions
+
+| Document | Location | Purpose |
+|----------|----------|---------|
+| **USER_GUIDE.md** | `Trade-Alerts/Scalp-Engine/USER_GUIDE.md` | §10(d) duplicate cleanup and “no pending when pair has open” rule. |
+| **Log review checks** | Top of this file (cursor_works.md) | Duplicate, no-pending-when-open. |
+
+---
+
+*Part 17 last updated: No pending when pair has open; implementation, commit 8dc6d3d, cursor_works updated.*
