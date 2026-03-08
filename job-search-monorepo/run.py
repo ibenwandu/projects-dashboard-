@@ -68,19 +68,21 @@ class JobSearchCLI:
                 print(f"  Error fetching from {platform}: {e}")
 
         # Deduplicate
-        unique_jobs = deduplicate_jobs(jobs)
+        unique_jobs, dedup_db = deduplicate_jobs(jobs)
         print(f"\nTotal unique jobs: {len(unique_jobs)}")
 
         # Save to cache
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-        save_jobs_cache(unique_jobs, self.cache_dir)
+        cache_path = self.cache_dir / "jobs_cache.json"
+        save_jobs_cache(unique_jobs, cache_path)
 
         return unique_jobs
 
     def score_jobs(self, force: bool = False) -> list:
         """Score jobs using AI scorer."""
         print(f"\nLoading jobs from cache...")
-        jobs = load_jobs_cache(self.cache_dir)
+        cache_path = self.cache_dir / "jobs_cache.json"
+        jobs = load_jobs_cache(cache_path)
         print(f"Loaded {len(jobs)} jobs")
 
         if not jobs:
