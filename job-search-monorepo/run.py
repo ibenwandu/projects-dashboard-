@@ -24,7 +24,7 @@ class JobSearchCLI:
 
     def __init__(self, profile: str = "cs"):
         self.profile = profile
-        self.base_dir = Path("job-search-monorepo")
+        self.base_dir = Path(".")  # Current directory (we're inside job-search-monorepo)
         self.profile_dir = self.base_dir / "profiles" / profile
         self.cache_dir = self.base_dir / "cache" / profile
         self.reports_dir = self.base_dir / "reports" / profile
