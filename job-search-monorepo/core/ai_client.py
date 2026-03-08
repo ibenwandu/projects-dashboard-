@@ -23,17 +23,19 @@ def generate(prompt: str, model: Optional[str] = None) -> str:
 def _generate_gemini(prompt: str, model: str) -> str:
     """Generate using Google Gemini API."""
     try:
-        import google.generativeai as genai
+        from google import genai
     except ImportError:
-        raise ImportError("google-generativeai not installed. Run: pip install google-generativeai")
+        raise ImportError("google-genai not installed. Run: pip install google-genai")
 
     api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
     if not api_key:
         raise ValueError("GEMINI_API_KEY or GOOGLE_API_KEY not set in .env")
 
-    genai.configure(api_key=api_key)
-    client = genai.GenerativeModel(model)
-    response = client.generate_content(prompt)
+    client = genai.Client(api_key=api_key)
+    response = client.models.generate_content(
+        model=model,
+        contents=prompt
+    )
     return response.text
 
 

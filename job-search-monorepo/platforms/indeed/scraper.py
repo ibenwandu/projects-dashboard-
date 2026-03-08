@@ -1,5 +1,6 @@
 """Indeed job scraper using Playwright."""
 import time
+import urllib.parse
 from typing import Optional
 
 from playwright.sync_api import sync_playwright
@@ -24,9 +25,62 @@ class IndeedScraper(BaseScraper):
 
     platform_name = "indeed"
 
-    def search(self, keywords, locations, max_results=50, **kwargs):
-        """Build Indeed search URLs (MVP stub)."""
-        return []
+    def search(self, keywords: list[str], locations: list[str], max_results: int = 50, **kwargs) -> list[str]:
+        """Search Indeed for job URLs matching keywords and locations.
+
+        Builds search result page URLs and extracts job posting URLs from them.
+        """
+        if not keywords or not locations:
+            return []
+
+        job_urls = []
+        jobs_per_page = 15
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            page = browser.new_page()
+
+            try:
+                for keyword in keywords:
+                    for location in locations:
+                        # Calculate pages needed
+                        pages_needed = (max_results + jobs_per_page - 1) // jobs_per_page
+
+                        for page_num in range(pages_needed):
+                            offset = page_num * jobs_per_page
+
+                            # Build and navigate to search page
+                            params = {
+                                "q": keyword,
+                                "l": location,
+                                "start": offset
+                            }
+                            search_url = "https://www.indeed.com/jobs?" + urllib.parse.urlencode(params)
+
+                            try:
+                                page.goto(search_url, timeout=10000, wait_until="load")
+                                time.sleep(1)
+
+                                # Extract job URLs from search results
+                                job_links = page.query_selector_all("a[data-jk]")
+
+                                for link in job_links:
+                                    jk = link.get_attribute("data-jk")
+                                    if jk:
+                                        job_url = f"https://www.indeed.com/viewjob?jk={jk}"
+                                        job_urls.append(job_url)
+
+                                        if len(job_urls) >= max_results:
+                                            return job_urls
+
+                            except Exception as e:
+                                print(f"Error searching page {page_num}: {e}")
+                                continue
+
+            finally:
+                browser.close()
+
+        return job_urls
 
     def scrape_job(self, url: str) -> Optional[JobDetails]:
         """Scrape an Indeed job posting."""
