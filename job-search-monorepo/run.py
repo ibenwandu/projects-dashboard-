@@ -39,13 +39,13 @@ class JobSearchCLI:
 
             if platform == "linkedin":
                 scraper = LinkedInScraper()
-                config = load_search_config(self.profile_dir / "linkedin_search.json")
+                config = load_search_config(self.profile, "linkedin")
             elif platform == "glassdoor":
                 scraper = GlassdoorScraper()
-                config = load_search_config(self.profile_dir / "glassdoor_search.json")
+                config = load_search_config(self.profile, "glassdoor")
             elif platform == "indeed":
                 scraper = IndeedScraper()
-                config = load_search_config(self.profile_dir / "indeed_search.json")
+                config = load_search_config(self.profile, "indeed")
             else:
                 print(f"Unknown platform: {platform}")
                 continue
