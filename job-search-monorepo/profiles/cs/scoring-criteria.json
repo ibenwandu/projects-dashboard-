@@ -1,0 +1,25 @@
+{
+  "candidate_profile": {
+    "name": "Ibe Nwandu",
+    "title": "Customer Experience | Business Development | Data-Driven Strategist",
+    "credentials": ["MBA Management Engineering", "PMP", "ITIL Foundation", "CSP-SM", "CBAP"],
+    "years_of_experience": 10
+  },
+  "location": {
+    "weight": 0.35,
+    "preferred": ["Remote", "Hybrid"],
+    "acceptable": ["Toronto", "GTA", "Ontario", "Canada"]
+  },
+  "salary": {
+    "weight": 0.35,
+    "currency": "CAD",
+    "minimum": 90000,
+    "target": 135000
+  },
+  "role_types": {
+    "weight": 0.30,
+    "primary_targets": ["Customer Experience Analyst", "Customer Experience Manager", "Data-Driven Strategist", "CX Business Analyst", "Customer Success Manager"],
+    "secondary_targets": ["Business Development Lead", "Regional Market Expansion Lead", "Senior Delivery Manager", "Account Manager", "Business Development Manager"]
+  },
+  "job_types": ["Full-time", "Contract", "Permanent"]
+}
