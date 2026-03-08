@@ -16,23 +16,41 @@ Unified job scraping, AI scoring, and resume tailoring for LinkedIn, Glassdoor, 
 
 3. **Run full pipeline:**
    ```bash
-   python run.py --platforms linkedin,glassdoor --profile cs --phase all
+   python run.py full --platforms linkedin glassdoor indeed --profile cs
    ```
 
 ## Usage
 
+**Command Structure:**
 ```bash
-# Fetch jobs from platforms
-python run.py --platforms linkedin,glassdoor,indeed --profile cs --phase fetch --max-jobs 25
+python run.py <PHASE> [--platforms PLATFORM ...] [--profile PROFILE] [--max-jobs N] [--top-n N]
+```
 
-# Score jobs with AI
-python run.py --profile cs --phase score
+**Available Phases:** `validate`, `fetch`, `score`, `report`, `tailor`, `full`
 
-# Generate report
-python run.py --profile cs --phase report --top-n 10
+**Examples:**
 
-# Generate tailored resumes
-python run.py --profile cs --phase resumes
+```bash
+# Fetch jobs from multiple platforms (note: SPACES between platforms, not commas)
+python run.py fetch --platforms linkedin glassdoor indeed --profile cs --max-jobs 25
+
+# Score jobs with AI (uses cached jobs from fetch)
+python run.py score --profile cs
+
+# Generate report of top matches
+python run.py report --profile cs --top-n 10
+
+# Generate tailored resumes for top jobs
+python run.py tailor --profile cs --top-n 10
+
+# Run everything in one command
+python run.py full --platforms indeed --profile cs
+
+# Use analyst profile instead of cs
+python run.py fetch --platforms linkedin glassdoor --profile analyst --max-jobs 50
+
+# Validate configuration without running pipeline
+python run.py validate --profile cs
 ```
 
 ## Architecture
