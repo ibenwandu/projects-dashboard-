@@ -1,0 +1,19 @@
+# Gmail API secrets (never commit)
+credentials.json
+token.json
+.env
+
+# Output and reports (optional: remove if you want to track)
+output/
+reports/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env.local
+
+# Playwright
+playwright-report/
+test-results/

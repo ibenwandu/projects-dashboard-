@@ -1,0 +1,27 @@
+# Watchlist Configuration
+# Copy this file to watchlist.yaml and customize for your trades
+
+watchlist:
+  - asset: "USD/CAD"
+    trade_direction: "short"  # short USD, long CAD
+    bias_expectation: "Weak USD"
+    sensitivity: "high"
+    notes: "Watching BoC rate decision"
+    
+  - asset: "EUR/USD"
+    trade_direction: "long"  # long EUR, short USD
+    bias_expectation: "Strong EUR"
+    sensitivity: "medium"
+    notes: ""
+    
+  - asset: "GBP/USD"
+    trade_direction: "short"  # short GBP, long USD
+    bias_expectation: "Weak GBP"
+    sensitivity: "high"
+    notes: "Brexit concerns"
+
+
+
+
+
+

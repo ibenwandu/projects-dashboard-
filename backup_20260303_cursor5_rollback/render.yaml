@@ -1,0 +1,186 @@
+services:
+  # -------------------------------------------------------
+  # SERVICE 1: Trade-Alerts (The Writer)
+  # -------------------------------------------------------
+  # Reverted to worker service (runs analysis loop only, no API server)
+  - type: worker
+    name: trade-alerts
+    runtime: python
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: ENV
+        value: production
+      # Google Drive Configuration
+      - key: GOOGLE_DRIVE_FOLDER_ID
+        sync: false
+      - key: GOOGLE_DRIVE_CREDENTIALS_JSON
+        sync: false
+      - key: GOOGLE_DRIVE_REFRESH_TOKEN
+        sync: false
+      # LLM API Keys
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      # Email Configuration
+      - key: SENDER_EMAIL
+        sync: false
+      - key: SENDER_PASSWORD
+        sync: false
+      - key: RECIPIENT_EMAIL
+        sync: false
+      # SHARED DISK PATH (Critical)
+      - key: MARKET_STATE_FILE_PATH
+        value: /var/data/market_state.json
+      # Market State API (for sending to Scalp-Engine)
+      # Set these in Render Dashboard → Environment (after deployment)
+      - key: MARKET_STATE_API_URL
+        sync: false
+      - key: MARKET_STATE_API_KEY
+        sync: false
+    disk:
+      name: shared-market-data
+      mountPath: /var/data
+      sizeGB: 1
+
+  # -------------------------------------------------------
+  # SERVICE 2: Scalp-Engine (The Trader)
+  # -------------------------------------------------------
+  - type: worker
+    name: scalp-engine
+    runtime: python
+    plan: starter
+    # FIX: Change directory to subfolder before installing requirements
+    buildCommand: |
+      cd Scalp-Engine && pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+    # FIX: Change directory to subfolder before starting engine
+    startCommand: cd Scalp-Engine && python scalp_engine.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: ENV
+        value: production
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      # OANDA KEYS (Set these in Render Dashboard)
+      - key: OANDA_ACCESS_TOKEN
+        sync: false
+      - key: OANDA_ACCOUNT_ID
+        sync: false
+      - key: OANDA_ENV
+        value: practice
+      # SHARED DISK PATH (Must match Service 1)
+      - key: MARKET_STATE_FILE_PATH
+        value: /var/data/market_state.json
+      # Market State API (read market state + POST FT-DMI-EMA/Fisher opportunities so UI sees them)
+      - key: MARKET_STATE_API_URL
+        value: https://market-state-api.onrender.com/market-state
+      - key: MARKET_STATE_API_KEY
+        sync: false
+      # Config API (for reading config from separate config-api service)
+      - key: CONFIG_API_URL
+        value: https://config-api-8n37.onrender.com/config
+    disk:
+      name: shared-market-data  # <--- MUST MATCH SERVICE 1
+      mountPath: /var/data
+      sizeGB: 1
+
+  # -------------------------------------------------------
+  # SERVICE 3: Market State API (Receives state from Trade-Alerts)
+  # -------------------------------------------------------
+  - type: web
+    name: market-state-api
+    runtime: python
+    plan: starter
+    buildCommand: |
+      cd Scalp-Engine && pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+    startCommand: cd Scalp-Engine && python market_state_server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      # Market State Storage Path
+      - key: MARKET_STATE_FILE_PATH
+        value: /var/data/market_state.json
+      # API Authentication (optional but recommended)
+      # Set in Render Dashboard → Environment (after deployment)
+      - key: MARKET_STATE_API_KEY
+        sync: false
+    disk:
+      name: shared-market-data  # <--- MUST MATCH SERVICE 1
+      mountPath: /var/data
+      sizeGB: 1
+
+  # -------------------------------------------------------
+  # SERVICE 4: Config API (Serves auto-trader config)
+  # -------------------------------------------------------
+  - type: web
+    name: config-api
+    runtime: python
+    plan: starter
+    buildCommand: |
+      cd Scalp-Engine && pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+    startCommand: cd Scalp-Engine && python config_api_server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: ENV
+        value: production
+      # Config file path (on shared disk with UI)
+      - key: CONFIG_FILE_PATH
+        value: /var/data/auto_trader_config.json
+    disk:
+      name: shared-market-data  # <--- MUST MATCH SERVICE 1 (same disk as UI)
+      mountPath: /var/data
+      sizeGB: 1
+
+  # -------------------------------------------------------
+  # SERVICE 5: Scalp-UI (The Dashboard)
+  # -------------------------------------------------------
+  - type: web
+    name: scalp-engine-ui
+    runtime: python
+    plan: starter
+    buildCommand: |
+      cd Scalp-Engine && pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+    startCommand: cd Scalp-Engine && streamlit run scalp_ui.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: ENV
+        value: production
+      # OANDA KEYS (Set these in Render Dashboard - same as Service 2)
+      - key: OANDA_ACCESS_TOKEN
+        sync: false
+      - key: OANDA_ACCOUNT_ID
+        sync: false
+      - key: OANDA_ENV
+        value: practice
+      # SHARED DISK PATH (Must match Service 1)
+      - key: MARKET_STATE_FILE_PATH
+        value: /var/data/market_state.json
+      # Market State API (for reading from API service)
+      - key: MARKET_STATE_API_URL
+        sync: false
+      - key: MARKET_STATE_API_KEY
+        sync: false
+      # Config API (for sending config updates)
+      - key: CONFIG_API_URL
+        value: https://config-api-8n37.onrender.com/config
+    disk:
+      name: shared-market-data  # <--- MUST MATCH SERVICE 1
+      mountPath: /var/data
+      sizeGB: 1

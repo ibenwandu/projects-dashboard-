@@ -1,0 +1,19 @@
+﻿2026-03-01 11:19:21: Oanda log: Config API returned 200
+2026-03-01 11:37:06: Failed scalp-engine-ui - The remote server returned an error: (401) Unauthorized. | 
+2026-03-01 11:37:07: Failed scalp-engine - The remote server returned an error: (401) Unauthorized. | 
+2026-03-01 11:37:07: Failed config-api - The remote server returned an error: (401) Unauthorized. | 
+2026-03-01 11:37:07: Failed market-state-api - The remote server returned an error: (401) Unauthorized. | 
+2026-03-01 11:37:07: Failed trade-alerts - The remote server returned an error: (401) Unauthorized. | 
+2026-03-01 11:37:08: Oanda log: Config API returned 200
+2026-03-01 11:37:08: Oanda transactions failed - The remote server returned an error: (400) Bad Request. | {"errorMessage":"Invalid value specified for 'accountID'"}
+2026-03-01 11:39:45: Failed scalp-engine-ui - The remote server returned an error: (401) Unauthorized. |  [Check RENDER_API_KEY is set and valid.]
+2026-03-01 11:39:45: Failed scalp-engine - The remote server returned an error: (401) Unauthorized. |  [Check RENDER_API_KEY is set and valid.]
+2026-03-01 11:39:45: Failed config-api - The remote server returned an error: (401) Unauthorized. |  [Check RENDER_API_KEY is set and valid.]
+2026-03-01 11:39:45: Failed market-state-api - The remote server returned an error: (401) Unauthorized. |  [Check RENDER_API_KEY is set and valid.]
+2026-03-01 11:39:45: Failed trade-alerts - The remote server returned an error: (401) Unauthorized. |  [Check RENDER_API_KEY is set and valid.]
+2026-03-01 11:39:46: Oanda log: Config API returned 200
+2026-03-01 11:39:46: Oanda transactions failed - The remote server returned an error: (400) Bad Request. | {"errorMessage":"Invalid value specified for 'accountID'"} [Check OANDA_ACCOUNT_ID format: usually XXX-XXX-XXXXXXX-XXX from Oanda account dashboard.]
+2026-03-01 11:48:55: Oanda log: Config API returned 200
+2026-03-01 11:48:55: Oanda transactions failed - The remote server returned an error: (403) Forbidden. | {"errorMessage":"The provided request was forbidden."}
+2026-03-01 12:04:26: Oanda log: Config API returned 200
+2026-03-01 12:08:28: Oanda log: Config API returned 200

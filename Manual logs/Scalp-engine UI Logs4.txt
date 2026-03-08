@@ -1,0 +1,446 @@
+Scalp-engine UI Logs
+==> Deploying...
+==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+  Stopping...
+==> Your service is live ??
+==> 
+==> ///////////////////////////////////////////////////////////
+==> 
+==> Available at your primary URL https://scalp-engine-ui.onrender.com
+==> 
+==> ///////////////////////////////////////////////////////////
+==> Detected service running on port 10000
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+? Market state loaded from API successfully
+?? Creating new database: scalping_rl.db
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? Log file initialized: /var/data/logs/scalp_ui_20260227.log
+? [LOGGER] Log file created and verified: /var/data/logs/scalp_ui_20260227.log
+? [LOGGER] File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260227.log
+? File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260227.log
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+2026-02-27 14:34:14.737 Session with id fc517ffd-1711-4102-b65a-7781c27c8cfd is already connected! Connecting to a new session.
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+==> Deploying...
+==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+[LogSync] ui -> config-api 502 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>502</title>
+    <style>@font-face {
+  font-fami
+  Stopping...
+==> Running 'cd Scalp-Engine && streamlit run scalp_ui.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true'
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+  You can now view your Streamlit app in your browser.
+  Local URL: http://localhost:10000
+  Network URL: http://10.23.69.255:10000
+  External URL: http://74.220.48.242:10000
+==> Your service is live ??
+==> 
+==> ///////////////////////////////////////////////////////////
+==> 
+==> Available at your primary URL https://scalp-engine-ui.onrender.com
+==> 
+==> ///////////////////////////////////////////////////////////
+==> Detected service running on port 10000
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? Log file initialized: /var/data/logs/scalp_ui_20260227.log
+? [LOGGER] Log file created and verified: /var/data/logs/scalp_ui_20260227.log
+? [LOGGER] File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260227.log
+? File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260227.log
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Creating new database: scalping_rl.db
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Config saved - Mode: SEMI_AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4
+? Config sent to API: https://config-api-8n37.onrender.com/config
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Config saved - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4
+? Config sent to API: https://config-api-8n37.onrender.com/config
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? [ScalpUI] Attempting to attach file handler...
+?? [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+? [ScalpUI] File handler attached successfully
+[ScalpUI] Log sync to config-api started (every 60s)
+?? UI page loaded
+?? Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+? Market state loaded from API successfully
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db
+?? Opening existing database: scalping_rl.db (12288 bytes)
+? Database initialized successfully: scalping_rl.db

@@ -1,0 +1,40 @@
+# Environment variables
+.env
+.env.local
+
+# Configuration (keep examples, ignore actual configs)
+config/watchlist.yaml
+config/settings.yaml
+
+# State and logs
+data/
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+
+
+
+

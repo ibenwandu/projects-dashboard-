@@ -1,0 +1,1000 @@
+2026-03-01 23:19:36  2026-03-01 23:19:36,013 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:19:36  2026-03-01 23:19:36,104 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-01T23:03:25.593597Z, no change)
+2026-03-01 23:19:36  2026-03-01 23:19:36,257 - ScalpEngine - INFO - ≡ƒºá Market: NEUTRAL bias, HIGH_VOL volatility, 5 opportunities
+2026-03-01 23:19:36  2026-03-01 23:19:36,460 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:19:36  2026-03-01 23:19:36,620 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:19:36  2026-03-01 23:19:36,785 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:19:36  2026-03-01 23:19:36,949 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:19:37  2026-03-01 23:19:37,120 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:19:37  2026-03-01 23:19:37,280 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:19:37  2026-03-01 23:19:37,286 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:21:28  2026-03-01 23:21:28,555 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:21:28  2026-03-01 23:21:28,645 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:21:28  2026-03-01 23:21:28,645 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:21:29  2026-03-01 23:21:29,069 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:21:29  2026-03-01 23:21:29,273 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:21:29  2026-03-01 23:21:29,436 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:21:29  2026-03-01 23:21:29,595 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:21:29  2026-03-01 23:21:29,756 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:21:29  2026-03-01 23:21:29,940 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:21:29  2026-03-01 23:21:29,946 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:23:22  2026-03-01 23:23:22,767 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:23:22  2026-03-01 23:23:22,864 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:23:22  2026-03-01 23:23:22,864 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:23:23  2026-03-01 23:23:23,300 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:23:23  2026-03-01 23:23:23,459 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:23:23  2026-03-01 23:23:23,638 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:23:23  2026-03-01 23:23:23,807 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:23:23  2026-03-01 23:23:23,976 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:23:24  2026-03-01 23:23:24,147 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:23:24  2026-03-01 23:23:24,155 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:25:15  2026-03-01 23:25:15,728 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:25:15  2026-03-01 23:25:15,822 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:25:15  2026-03-01 23:25:15,822 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:25:16  2026-03-01 23:25:16,254 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:25:16  2026-03-01 23:25:16,416 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:25:16  2026-03-01 23:25:16,586 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:25:16  2026-03-01 23:25:16,755 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:25:16  2026-03-01 23:25:16,917 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:25:17  2026-03-01 23:25:17,082 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:25:17  2026-03-01 23:25:17,091 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:27:09  2026-03-01 23:27:09,640 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:27:09  2026-03-01 23:27:09,742 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:27:09  2026-03-01 23:27:09,742 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:27:10  2026-03-01 23:27:10,175 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:27:10  2026-03-01 23:27:10,368 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:27:10  2026-03-01 23:27:10,535 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:27:10  2026-03-01 23:27:10,707 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:27:10  2026-03-01 23:27:10,871 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:27:11  2026-03-01 23:27:11,034 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:27:11  2026-03-01 23:27:11,040 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:29:01  2026-03-01 23:29:01,561 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:29:01  2026-03-01 23:29:01,662 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:29:01  2026-03-01 23:29:01,662 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:29:01  2026-03-01 23:29:01,754 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-01T23:03:25.593597Z, no change)
+2026-03-01 23:29:02  2026-03-01 23:29:02,077 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:29:02  2026-03-01 23:29:02,240 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:29:02  2026-03-01 23:29:02,407 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:29:02  2026-03-01 23:29:02,579 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:29:02  2026-03-01 23:29:02,747 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:29:02  2026-03-01 23:29:02,912 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:29:02  2026-03-01 23:29:02,919 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:30:54  2026-03-01 23:30:54,356 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:30:54  2026-03-01 23:30:54,446 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:30:54  2026-03-01 23:30:54,446 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:30:54  2026-03-01 23:30:54,869 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:30:55  2026-03-01 23:30:55,030 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:30:55  2026-03-01 23:30:55,201 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:30:55  2026-03-01 23:30:55,385 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:30:55  2026-03-01 23:30:55,559 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:30:55  2026-03-01 23:30:55,730 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:30:55  2026-03-01 23:30:55,736 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:32:47  2026-03-01 23:32:47,274 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:32:47  2026-03-01 23:32:47,360 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:32:47  2026-03-01 23:32:47,361 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:32:47  2026-03-01 23:32:47,770 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:32:47  2026-03-01 23:32:47,928 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:32:48  2026-03-01 23:32:48,090 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:32:48  2026-03-01 23:32:48,259 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:32:48  2026-03-01 23:32:48,426 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:32:48  2026-03-01 23:32:48,593 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:32:48  2026-03-01 23:32:48,599 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:34:39  2026-03-01 23:34:39,806 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:34:39  2026-03-01 23:34:39,920 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:34:39  2026-03-01 23:34:39,920 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:34:40  2026-03-01 23:34:40,382 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:34:40  2026-03-01 23:34:40,546 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:34:40  2026-03-01 23:34:40,710 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:34:40  2026-03-01 23:34:40,893 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:34:41  2026-03-01 23:34:41,071 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:34:41  2026-03-01 23:34:41,242 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:34:41  2026-03-01 23:34:41,250 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:36:32  2026-03-01 23:36:32,919 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:36:33  2026-03-01 23:36:33,023 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:36:33  2026-03-01 23:36:33,023 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:36:33  2026-03-01 23:36:33,444 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:36:33  2026-03-01 23:36:33,601 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:36:33  2026-03-01 23:36:33,774 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:36:33  2026-03-01 23:36:33,941 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:36:34  2026-03-01 23:36:34,101 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:36:34  2026-03-01 23:36:34,266 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:36:34  2026-03-01 23:36:34,272 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:38:25  2026-03-01 23:38:25,099 - ScalpEngine - INFO - 
+2026-03-01 23:38:25  === Status Check #1050 ===
+2026-03-01 23:38:25  2026-03-01 23:38:25,100 - ScalpEngine - INFO - Time: 23:38:25 UTC
+2026-03-01 23:38:25  2026-03-01 23:38:25,100 - ScalpEngine - INFO - Mode: AUTO
+2026-03-01 23:38:25  2026-03-01 23:38:25,100 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-01 23:38:25  2026-03-01 23:38:25,100 - ScalpEngine - INFO - Active Trades: 0/4
+2026-03-01 23:38:25  2026-03-01 23:38:25,100 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:38:25  2026-03-01 23:38:25,191 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:38:25  2026-03-01 23:38:25,191 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:38:25  2026-03-01 23:38:25,281 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-01T23:03:25.593597Z, no change)
+2026-03-01 23:38:25  2026-03-01 23:38:25,440 - ScalpEngine - INFO - ≡ƒºá Market: NEUTRAL bias, HIGH_VOL volatility, 5 opportunities
+2026-03-01 23:38:25  2026-03-01 23:38:25,610 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:38:25  2026-03-01 23:38:25,770 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:38:25  2026-03-01 23:38:25,938 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:38:26  2026-03-01 23:38:26,108 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:38:26  2026-03-01 23:38:26,275 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:38:26  2026-03-01 23:38:26,439 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:38:26  2026-03-01 23:38:26,445 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:40:18  2026-03-01 23:40:18,368 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:40:18  2026-03-01 23:40:18,451 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:40:18  2026-03-01 23:40:18,451 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:40:18  2026-03-01 23:40:18,857 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:40:19  2026-03-01 23:40:19,013 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:40:19  2026-03-01 23:40:19,175 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:40:19  2026-03-01 23:40:19,335 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:40:19  2026-03-01 23:40:19,508 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:40:19  2026-03-01 23:40:19,678 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:40:19  2026-03-01 23:40:19,684 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:42:12  2026-03-01 23:42:12,588 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:42:12  2026-03-01 23:42:12,675 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:42:12  2026-03-01 23:42:12,675 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:42:13  2026-03-01 23:42:13,155 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:42:13  2026-03-01 23:42:13,321 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:42:13  2026-03-01 23:42:13,484 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:42:13  2026-03-01 23:42:13,649 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:42:13  2026-03-01 23:42:13,812 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:42:13  2026-03-01 23:42:13,976 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:42:13  2026-03-01 23:42:13,982 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:44:05  2026-03-01 23:44:05,730 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:44:05  2026-03-01 23:44:05,831 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:44:05  2026-03-01 23:44:05,832 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:44:06  2026-03-01 23:44:06,315 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:44:06  2026-03-01 23:44:06,497 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:44:06  2026-03-01 23:44:06,663 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:44:06  2026-03-01 23:44:06,837 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:44:07  2026-03-01 23:44:07,004 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:44:07  2026-03-01 23:44:07,174 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:44:07  2026-03-01 23:44:07,180 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:45:59  2026-03-01 23:45:59,050 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:45:59  2026-03-01 23:45:59,147 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:45:59  2026-03-01 23:45:59,147 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:45:59  2026-03-01 23:45:59,607 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:45:59  2026-03-01 23:45:59,774 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:45:59  2026-03-01 23:45:59,941 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:46:00  2026-03-01 23:46:00,134 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:46:00  2026-03-01 23:46:00,308 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:46:00  2026-03-01 23:46:00,476 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:46:00  2026-03-01 23:46:00,485 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:47:52  2026-03-01 23:47:52,207 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:47:52  2026-03-01 23:47:52,301 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:47:52  2026-03-01 23:47:52,301 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:47:52  2026-03-01 23:47:52,407 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-01T23:03:25.593597Z, no change)
+2026-03-01 23:47:52  2026-03-01 23:47:52,793 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:47:52  2026-03-01 23:47:52,958 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:47:53  2026-03-01 23:47:53,123 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:47:53  2026-03-01 23:47:53,301 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:47:53  2026-03-01 23:47:53,480 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:47:53  2026-03-01 23:47:53,652 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:47:53  2026-03-01 23:47:53,659 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:49:44  2026-03-01 23:49:44,584 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:49:44  2026-03-01 23:49:44,724 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:49:44  2026-03-01 23:49:44,724 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:49:45  2026-03-01 23:49:45,223 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:49:45  2026-03-01 23:49:45,390 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:49:45  2026-03-01 23:49:45,551 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:49:45  2026-03-01 23:49:45,720 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:49:45  2026-03-01 23:49:45,899 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:49:46  2026-03-01 23:49:46,070 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:49:46  2026-03-01 23:49:46,076 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:51:37  2026-03-01 23:51:37,555 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:51:37  2026-03-01 23:51:37,653 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:51:37  2026-03-01 23:51:37,653 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:51:38  2026-03-01 23:51:38,100 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:51:38  2026-03-01 23:51:38,266 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:51:38  2026-03-01 23:51:38,441 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:51:38  2026-03-01 23:51:38,606 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:51:38  2026-03-01 23:51:38,773 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:51:38  2026-03-01 23:51:38,939 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:51:38  2026-03-01 23:51:38,945 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:53:31  2026-03-01 23:53:31,990 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:53:32  2026-03-01 23:53:32,080 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:53:32  2026-03-01 23:53:32,080 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:53:32  2026-03-01 23:53:32,540 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:53:32  2026-03-01 23:53:32,701 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:53:32  2026-03-01 23:53:32,864 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:53:33  2026-03-01 23:53:33,029 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:53:33  2026-03-01 23:53:33,192 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:53:33  2026-03-01 23:53:33,368 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:53:33  2026-03-01 23:53:33,374 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:55:24  2026-03-01 23:55:24,949 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:55:25  2026-03-01 23:55:25,038 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:55:25  2026-03-01 23:55:25,038 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:55:25  2026-03-01 23:55:25,493 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:55:25  2026-03-01 23:55:25,657 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:55:25  2026-03-01 23:55:25,828 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:55:25  2026-03-01 23:55:25,994 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:55:26  2026-03-01 23:55:26,159 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:55:26  2026-03-01 23:55:26,331 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:55:26  2026-03-01 23:55:26,338 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:57:18  2026-03-01 23:57:18,071 - ScalpEngine - INFO - 
+2026-03-01 23:57:18  === Status Check #1060 ===
+2026-03-01 23:57:18  2026-03-01 23:57:18,072 - ScalpEngine - INFO - Time: 23:57:18 UTC
+2026-03-01 23:57:18  2026-03-01 23:57:18,073 - ScalpEngine - INFO - Mode: AUTO
+2026-03-01 23:57:18  2026-03-01 23:57:18,073 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-01 23:57:18  2026-03-01 23:57:18,073 - ScalpEngine - INFO - Active Trades: 0/4
+2026-03-01 23:57:18  2026-03-01 23:57:18,073 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:57:18  2026-03-01 23:57:18,166 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:57:18  2026-03-01 23:57:18,166 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:57:18  2026-03-01 23:57:18,287 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-01T23:03:25.593597Z, no change)
+2026-03-01 23:57:18  2026-03-01 23:57:18,444 - ScalpEngine - INFO - ≡ƒºá Market: NEUTRAL bias, HIGH_VOL volatility, 5 opportunities
+2026-03-01 23:57:18  2026-03-01 23:57:18,607 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:57:18  2026-03-01 23:57:18,772 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.347: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:57:18  2026-03-01 23:57:18,946 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.0: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:57:19  2026-03-01 23:57:19,109 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:57:19  2026-03-01 23:57:19,275 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:57:19  2026-03-01 23:57:19,448 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:57:19  2026-03-01 23:57:19,456 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 failed validation (total: 5)
+2026-03-01 23:59:13  2026-03-01 23:59:13,053 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-01 23:59:13  2026-03-01 23:59:13,184 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-01 23:59:13  2026-03-01 23:59:13,184 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-01 23:59:13  2026-03-01 23:59:13,278 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 6 opportunities (timestamp: 2026-03-01T23:58:15.382214Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-01 23:59:13  2026-03-01 23:59:13,613 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-01 23:59:13  2026-03-01 23:59:13,779 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3475: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-01 23:59:13  2026-03-01 23:59:13,954 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.4: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:59:14  2026-03-01 23:59:14,131 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-01 23:59:14  2026-03-01 23:59:14,312 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:59:14  2026-03-01 23:59:14,490 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.8755: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-01 23:59:14  2026-03-01 23:59:14,677 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-01 23:59:14  2026-03-01 23:59:14,687 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:01:06  2026-03-02 00:01:06,952 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:01:07  2026-03-02 00:01:07,075 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:01:07  2026-03-02 00:01:07,075 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:01:07  2026-03-02 00:01:07,505 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:01:07  2026-03-02 00:01:07,663 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3475: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-02 00:01:07  2026-03-02 00:01:07,831 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.4: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:01:07  2026-03-02 00:01:07,997 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:01:08  2026-03-02 00:01:08,171 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:01:08  2026-03-02 00:01:08,342 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.8755: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:01:08  2026-03-02 00:01:08,518 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:01:08  2026-03-02 00:01:08,524 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:03:00  2026-03-02 00:03:00,889 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:03:00  2026-03-02 00:03:00,984 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:03:00  2026-03-02 00:03:00,984 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:03:01  2026-03-02 00:03:01,436 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:03:01  2026-03-02 00:03:01,606 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3475: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt', 'synthesis'])
+2026-03-02 00:03:01  2026-03-02 00:03:01,771 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.4: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:03:01  2026-03-02 00:03:01,940 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.71: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:03:02  2026-03-02 00:03:02,104 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.6: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:03:02  2026-03-02 00:03:02,271 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.8755: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:03:02  2026-03-02 00:03:02,440 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:03:02  2026-03-02 00:03:02,446 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:04:55  2026-03-02 00:04:55,241 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:04:55  2026-03-02 00:04:55,341 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:04:55  2026-03-02 00:04:55,341 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:04:55  2026-03-02 00:04:55,448 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 6 opportunities (timestamp: 2026-03-02T00:03:48.114819Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-02 00:04:55  2026-03-02 00:04:55,840 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:04:55  2026-03-02 00:04:55,998 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:04:56  2026-03-02 00:04:56,164 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:04:56  2026-03-02 00:04:56,331 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:04:56  2026-03-02 00:04:56,501 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:04:56  2026-03-02 00:04:56,664 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:04:56  2026-03-02 00:04:56,826 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:04:56  2026-03-02 00:04:56,833 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:06:49  2026-03-02 00:06:49,706 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:06:49  2026-03-02 00:06:49,800 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:06:49  2026-03-02 00:06:49,800 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:06:49  2026-03-02 00:06:49,906 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T00:03:48.114819Z, no change)
+2026-03-02 00:06:50  2026-03-02 00:06:50,271 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:06:50  2026-03-02 00:06:50,433 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:06:50  2026-03-02 00:06:50,614 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:06:50  2026-03-02 00:06:50,802 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:06:50  2026-03-02 00:06:50,973 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:06:51  2026-03-02 00:06:51,143 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:06:51  2026-03-02 00:06:51,309 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:06:51  2026-03-02 00:06:51,318 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:08:45  2026-03-02 00:08:45,393 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:08:45  2026-03-02 00:08:45,483 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:08:45  2026-03-02 00:08:45,483 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:08:45  2026-03-02 00:08:45,892 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:08:46  2026-03-02 00:08:46,045 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:08:46  2026-03-02 00:08:46,214 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:08:46  2026-03-02 00:08:46,374 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:08:46  2026-03-02 00:08:46,533 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:08:46  2026-03-02 00:08:46,697 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:08:46  2026-03-02 00:08:46,856 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:08:46  2026-03-02 00:08:46,862 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:10:39  2026-03-02 00:10:39,022 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:10:39  2026-03-02 00:10:39,129 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:10:39  2026-03-02 00:10:39,130 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:10:39  2026-03-02 00:10:39,586 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:10:39  2026-03-02 00:10:39,742 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:10:39  2026-03-02 00:10:39,908 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:10:40  2026-03-02 00:10:40,068 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:10:40  2026-03-02 00:10:40,226 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:10:40  2026-03-02 00:10:40,392 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:10:40  2026-03-02 00:10:40,549 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:10:40  2026-03-02 00:10:40,555 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:12:31  2026-03-02 00:12:31,658 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:12:31  2026-03-02 00:12:31,766 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:12:31  2026-03-02 00:12:31,766 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:12:32  2026-03-02 00:12:32,217 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:12:32  2026-03-02 00:12:32,375 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:12:32  2026-03-02 00:12:32,537 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:12:32  2026-03-02 00:12:32,698 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:12:32  2026-03-02 00:12:32,855 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:12:33  2026-03-02 00:12:33,014 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:12:33  2026-03-02 00:12:33,178 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:12:33  2026-03-02 00:12:33,183 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:14:24  2026-03-02 00:14:24,820 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:14:24  2026-03-02 00:14:24,914 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:14:24  2026-03-02 00:14:24,915 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:14:25  2026-03-02 00:14:25,369 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:14:25  2026-03-02 00:14:25,531 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:14:25  2026-03-02 00:14:25,716 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:14:25  2026-03-02 00:14:25,892 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:14:26  2026-03-02 00:14:26,068 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:14:26  2026-03-02 00:14:26,264 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:14:26  2026-03-02 00:14:26,447 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:14:26  2026-03-02 00:14:26,454 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:16:17  2026-03-02 00:16:17,968 - ScalpEngine - INFO - 
+2026-03-02 00:16:17  === Status Check #1070 ===
+2026-03-02 00:16:17  2026-03-02 00:16:17,969 - ScalpEngine - INFO - Time: 00:16:17 UTC
+2026-03-02 00:16:17  2026-03-02 00:16:17,969 - ScalpEngine - INFO - Mode: AUTO
+2026-03-02 00:16:17  2026-03-02 00:16:17,969 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-02 00:16:17  2026-03-02 00:16:17,969 - ScalpEngine - INFO - Active Trades: 0/4
+2026-03-02 00:16:17  2026-03-02 00:16:17,969 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:16:18  2026-03-02 00:16:18,058 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:16:18  2026-03-02 00:16:18,059 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:16:18  2026-03-02 00:16:18,182 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T00:03:48.114819Z, no change)
+2026-03-02 00:16:18  2026-03-02 00:16:18,342 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, HIGH_VOL volatility, 6 opportunities
+2026-03-02 00:16:18  2026-03-02 00:16:18,510 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:16:18  2026-03-02 00:16:18,666 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:16:18  2026-03-02 00:16:18,825 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:16:18  2026-03-02 00:16:18,981 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:16:19  2026-03-02 00:16:19,156 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:16:19  2026-03-02 00:16:19,312 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:16:19  2026-03-02 00:16:19,477 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:16:19  2026-03-02 00:16:19,483 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:18:10  2026-03-02 00:18:10,270 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:18:10  2026-03-02 00:18:10,371 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:18:10  2026-03-02 00:18:10,371 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:18:10  2026-03-02 00:18:10,833 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:18:10  2026-03-02 00:18:10,984 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:18:11  2026-03-02 00:18:11,142 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:18:11  2026-03-02 00:18:11,302 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:18:11  2026-03-02 00:18:11,460 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:18:11  2026-03-02 00:18:11,624 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:18:11  2026-03-02 00:18:11,785 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:18:11  2026-03-02 00:18:11,791 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:20:03  2026-03-02 00:20:03,205 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:20:03  2026-03-02 00:20:03,310 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:20:03  2026-03-02 00:20:03,310 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:20:03  2026-03-02 00:20:03,761 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:20:03  2026-03-02 00:20:03,921 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:20:04  2026-03-02 00:20:04,085 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:20:04  2026-03-02 00:20:04,239 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:20:04  2026-03-02 00:20:04,401 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:20:04  2026-03-02 00:20:04,559 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:20:04  2026-03-02 00:20:04,724 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:20:04  2026-03-02 00:20:04,731 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:21:56  2026-03-02 00:21:56,747 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:21:56  2026-03-02 00:21:56,845 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:21:56  2026-03-02 00:21:56,845 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:21:57  2026-03-02 00:21:57,263 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:21:57  2026-03-02 00:21:57,419 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:21:57  2026-03-02 00:21:57,578 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:21:57  2026-03-02 00:21:57,743 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:21:57  2026-03-02 00:21:57,901 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:21:58  2026-03-02 00:21:58,065 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:21:58  2026-03-02 00:21:58,246 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:21:58  2026-03-02 00:21:58,252 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:23:49  2026-03-02 00:23:49,683 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:23:49  2026-03-02 00:23:49,779 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:23:49  2026-03-02 00:23:49,779 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:23:50  2026-03-02 00:23:50,243 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:23:50  2026-03-02 00:23:50,394 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:23:50  2026-03-02 00:23:50,557 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:23:50  2026-03-02 00:23:50,721 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:23:50  2026-03-02 00:23:50,885 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:23:51  2026-03-02 00:23:51,044 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:23:51  2026-03-02 00:23:51,203 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:23:51  2026-03-02 00:23:51,209 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:25:43  2026-03-02 00:25:43,058 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:25:43  2026-03-02 00:25:43,149 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:25:43  2026-03-02 00:25:43,150 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:25:43  2026-03-02 00:25:43,292 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T00:03:48.114819Z, no change)
+2026-03-02 00:25:44  2026-03-02 00:25:44,074 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:25:44  2026-03-02 00:25:44,235 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:25:44  2026-03-02 00:25:44,394 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:25:44  2026-03-02 00:25:44,556 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:25:44  2026-03-02 00:25:44,719 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:25:44  2026-03-02 00:25:44,880 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:25:45  2026-03-02 00:25:45,047 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:25:45  2026-03-02 00:25:45,053 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:27:38  2026-03-02 00:27:38,356 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:27:38  2026-03-02 00:27:38,462 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:27:38  2026-03-02 00:27:38,462 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:27:38  2026-03-02 00:27:38,915 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:27:39  2026-03-02 00:27:39,076 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:27:39  2026-03-02 00:27:39,266 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:27:39  2026-03-02 00:27:39,432 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:27:39  2026-03-02 00:27:39,595 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:27:39  2026-03-02 00:27:39,768 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:27:39  2026-03-02 00:27:39,930 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:27:39  2026-03-02 00:27:39,940 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:29:34  2026-03-02 00:29:34,277 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:29:34  2026-03-02 00:29:34,364 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:29:34  2026-03-02 00:29:34,364 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:29:34  2026-03-02 00:29:34,781 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:29:34  2026-03-02 00:29:34,936 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:29:35  2026-03-02 00:29:35,095 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:29:35  2026-03-02 00:29:35,256 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:29:35  2026-03-02 00:29:35,428 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:29:35  2026-03-02 00:29:35,601 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:29:35  2026-03-02 00:29:35,761 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:29:35  2026-03-02 00:29:35,767 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:31:27  2026-03-02 00:31:27,753 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:31:27  2026-03-02 00:31:27,850 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:31:27  2026-03-02 00:31:27,850 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:31:28  2026-03-02 00:31:28,298 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:31:28  2026-03-02 00:31:28,883 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:31:29  2026-03-02 00:31:29,050 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:31:29  2026-03-02 00:31:29,212 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:31:29  2026-03-02 00:31:29,377 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:31:29  2026-03-02 00:31:29,541 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:31:29  2026-03-02 00:31:29,701 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:31:29  2026-03-02 00:31:29,711 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:33:21  2026-03-02 00:33:21,432 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:33:21  2026-03-02 00:33:21,547 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:33:21  2026-03-02 00:33:21,547 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:33:21  2026-03-02 00:33:21,997 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:33:22  2026-03-02 00:33:22,157 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:33:22  2026-03-02 00:33:22,322 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:33:22  2026-03-02 00:33:22,483 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:33:22  2026-03-02 00:33:22,642 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:33:22  2026-03-02 00:33:22,813 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:33:22  2026-03-02 00:33:22,987 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:33:22  2026-03-02 00:33:22,993 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:35:19  2026-03-02 00:35:19,627 - ScalpEngine - INFO - 
+2026-03-02 00:35:19  === Status Check #1080 ===
+2026-03-02 00:35:19  2026-03-02 00:35:19,628 - ScalpEngine - INFO - Time: 00:35:19 UTC
+2026-03-02 00:35:19  2026-03-02 00:35:19,628 - ScalpEngine - INFO - Mode: AUTO
+2026-03-02 00:35:19  2026-03-02 00:35:19,628 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-02 00:35:19  2026-03-02 00:35:19,628 - ScalpEngine - INFO - Active Trades: 0/4
+2026-03-02 00:35:19  2026-03-02 00:35:19,628 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:35:19  2026-03-02 00:35:19,720 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:35:19  2026-03-02 00:35:19,720 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:35:19  2026-03-02 00:35:19,828 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T00:03:48.114819Z, no change)
+2026-03-02 00:35:19  2026-03-02 00:35:19,996 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, HIGH_VOL volatility, 6 opportunities
+2026-03-02 00:35:20  2026-03-02 00:35:20,153 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:35:20  2026-03-02 00:35:20,318 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:35:20  2026-03-02 00:35:20,483 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:35:20  2026-03-02 00:35:20,644 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:35:20  2026-03-02 00:35:20,814 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:35:20  2026-03-02 00:35:20,973 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:35:21  2026-03-02 00:35:21,132 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:35:21  2026-03-02 00:35:21,137 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:37:16  2026-03-02 00:37:16,067 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:37:16  2026-03-02 00:37:16,171 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:37:16  2026-03-02 00:37:16,172 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:37:16  2026-03-02 00:37:16,651 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:37:16  2026-03-02 00:37:16,817 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:37:16  2026-03-02 00:37:16,978 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:37:17  2026-03-02 00:37:17,142 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:37:17  2026-03-02 00:37:17,307 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:37:17  2026-03-02 00:37:17,469 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:37:17  2026-03-02 00:37:17,647 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:37:17  2026-03-02 00:37:17,653 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:39:10  2026-03-02 00:39:10,677 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:39:10  2026-03-02 00:39:10,772 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:39:10  2026-03-02 00:39:10,772 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:39:11  2026-03-02 00:39:11,198 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:39:11  2026-03-02 00:39:11,356 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:39:11  2026-03-02 00:39:11,527 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:39:11  2026-03-02 00:39:11,686 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:39:11  2026-03-02 00:39:11,846 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:39:12  2026-03-02 00:39:12,004 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:39:12  2026-03-02 00:39:12,165 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:39:12  2026-03-02 00:39:12,171 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:41:06  2026-03-02 00:41:06,636 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:41:06  2026-03-02 00:41:06,733 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:41:06  2026-03-02 00:41:06,733 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:41:07  2026-03-02 00:41:07,621 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:41:07  2026-03-02 00:41:07,776 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:41:07  2026-03-02 00:41:07,971 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:41:08  2026-03-02 00:41:08,133 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:41:08  2026-03-02 00:41:08,298 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:41:08  2026-03-02 00:41:08,463 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:41:08  2026-03-02 00:41:08,628 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:41:08  2026-03-02 00:41:08,634 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:43:01  2026-03-02 00:43:01,376 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:43:01  2026-03-02 00:43:01,476 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:43:01  2026-03-02 00:43:01,476 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:43:01  2026-03-02 00:43:01,885 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:43:02  2026-03-02 00:43:02,046 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:43:02  2026-03-02 00:43:02,215 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:43:02  2026-03-02 00:43:02,375 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:43:02  2026-03-02 00:43:02,541 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:43:02  2026-03-02 00:43:02,700 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:43:02  2026-03-02 00:43:02,859 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:43:02  2026-03-02 00:43:02,865 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:44:57  2026-03-02 00:44:57,339 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:44:57  2026-03-02 00:44:57,455 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:44:57  2026-03-02 00:44:57,455 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:44:57  2026-03-02 00:44:57,561 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T00:03:48.114819Z, no change)
+2026-03-02 00:44:57  2026-03-02 00:44:57,882 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:44:58  2026-03-02 00:44:58,035 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:44:58  2026-03-02 00:44:58,197 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:44:58  2026-03-02 00:44:58,366 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:44:58  2026-03-02 00:44:58,528 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:44:58  2026-03-02 00:44:58,696 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:44:58  2026-03-02 00:44:58,859 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:44:58  2026-03-02 00:44:58,865 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:46:50  2026-03-02 00:46:50,047 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:46:50  2026-03-02 00:46:50,146 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:46:50  2026-03-02 00:46:50,146 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:46:50  2026-03-02 00:46:50,574 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:46:50  2026-03-02 00:46:50,728 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:46:51  2026-03-02 00:46:51,326 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:46:51  2026-03-02 00:46:51,491 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:46:51  2026-03-02 00:46:51,654 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:46:51  2026-03-02 00:46:51,821 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:46:51  2026-03-02 00:46:51,992 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:46:51  2026-03-02 00:46:51,998 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:48:43  2026-03-02 00:48:43,287 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:48:43  2026-03-02 00:48:43,381 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:48:43  2026-03-02 00:48:43,381 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:48:43  2026-03-02 00:48:43,874 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:48:44  2026-03-02 00:48:44,027 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:48:44  2026-03-02 00:48:44,187 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:48:44  2026-03-02 00:48:44,343 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:48:44  2026-03-02 00:48:44,499 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:48:44  2026-03-02 00:48:44,661 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:48:44  2026-03-02 00:48:44,825 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:48:44  2026-03-02 00:48:44,830 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:50:36  2026-03-02 00:50:36,537 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:50:36  2026-03-02 00:50:36,639 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:50:36  2026-03-02 00:50:36,640 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:50:37  2026-03-02 00:50:37,076 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:50:37  2026-03-02 00:50:37,236 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:50:37  2026-03-02 00:50:37,399 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:50:37  2026-03-02 00:50:37,565 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:50:37  2026-03-02 00:50:37,751 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:50:37  2026-03-02 00:50:37,925 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:50:38  2026-03-02 00:50:38,098 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:50:38  2026-03-02 00:50:38,106 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:52:30  2026-03-02 00:52:30,303 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:52:30  2026-03-02 00:52:30,394 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:52:30  2026-03-02 00:52:30,394 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:52:30  2026-03-02 00:52:30,816 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:52:30  2026-03-02 00:52:30,972 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:52:31  2026-03-02 00:52:31,134 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:52:31  2026-03-02 00:52:31,291 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:52:31  2026-03-02 00:52:31,449 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:52:31  2026-03-02 00:52:31,609 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:52:31  2026-03-02 00:52:31,775 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:52:31  2026-03-02 00:52:31,781 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:54:25  2026-03-02 00:54:25,761 - ScalpEngine - INFO - 
+2026-03-02 00:54:25  === Status Check #1090 ===
+2026-03-02 00:54:25  2026-03-02 00:54:25,763 - ScalpEngine - INFO - Time: 00:54:25 UTC
+2026-03-02 00:54:25  2026-03-02 00:54:25,763 - ScalpEngine - INFO - Mode: AUTO
+2026-03-02 00:54:25  2026-03-02 00:54:25,764 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-02 00:54:25  2026-03-02 00:54:25,764 - ScalpEngine - INFO - Active Trades: 0/4
+2026-03-02 00:54:25  2026-03-02 00:54:25,764 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:54:25  2026-03-02 00:54:25,950 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:54:25  2026-03-02 00:54:25,950 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:54:26  2026-03-02 00:54:26,055 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T00:03:48.114819Z, no change)
+2026-03-02 00:54:26  2026-03-02 00:54:26,212 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, HIGH_VOL volatility, 6 opportunities
+2026-03-02 00:54:26  2026-03-02 00:54:26,411 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:54:26  2026-03-02 00:54:26,571 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:54:26  2026-03-02 00:54:26,728 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:54:26  2026-03-02 00:54:26,898 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:54:27  2026-03-02 00:54:27,059 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:54:27  2026-03-02 00:54:27,219 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:54:27  2026-03-02 00:54:27,377 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:54:27  2026-03-02 00:54:27,383 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:56:19  2026-03-02 00:56:19,135 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:56:19  2026-03-02 00:56:19,231 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:56:19  2026-03-02 00:56:19,232 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:56:19  2026-03-02 00:56:19,675 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:56:19  2026-03-02 00:56:19,830 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:56:19  2026-03-02 00:56:19,992 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:56:20  2026-03-02 00:56:20,151 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:56:20  2026-03-02 00:56:20,311 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:56:20  2026-03-02 00:56:20,477 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:56:20  2026-03-02 00:56:20,637 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:56:20  2026-03-02 00:56:20,643 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 00:58:12  2026-03-02 00:58:12,395 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 00:58:12  2026-03-02 00:58:12,497 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 00:58:12  2026-03-02 00:58:12,497 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 00:58:12  2026-03-02 00:58:12,949 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 00:58:13  2026-03-02 00:58:13,110 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:58:13  2026-03-02 00:58:13,271 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:58:13  2026-03-02 00:58:13,436 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.711: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 00:58:13  2026-03-02 00:58:13,604 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.65: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:58:13  2026-03-02 00:58:13,768 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 00:58:13  2026-03-02 00:58:13,925 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3485: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 00:58:13  2026-03-02 00:58:13,931 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:00:07  2026-03-02 01:00:07,566 - ScalpEngine - INFO - 
+2026-03-02 01:00:07  ≡ƒòÉ Monday 01:00 UTC - Start of trading week: Safety check - cancelling any stale pending orders
+2026-03-02 01:00:07  2026-03-02 01:00:07,568 - ScalpEngine - INFO - Γ£à No stale pending orders found at start of trading week - safe to begin trading
+2026-03-02 01:00:07  2026-03-02 01:00:07,590 - ScalpEngine - INFO - 
+2026-03-02 01:00:07  ≡ƒÄ» Starting hourly Fisher Transform scan (trading hours, Reversal Strategy)...
+2026-03-02 01:00:07  2026-03-02 01:00:07,683 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 6 opportunities (timestamp: 2026-03-02T00:58:35.852362Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-02 01:00:11  2026-03-02 01:00:11,937 - ScalpEngine - INFO - Γ£à Fisher opportunities sent to market-state-api
+2026-03-02 01:00:11  2026-03-02 01:00:11,938 - ScalpEngine - INFO - Γ£à Hourly Fisher scan complete: 1 opportunities
+2026-03-02 01:00:11  2026-03-02 01:00:11,938 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:00:12  2026-03-02 01:00:12,043 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:00:12  2026-03-02 01:00:12,043 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:00:12  2026-03-02 01:00:12,429 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:00:12  2026-03-02 01:00:12,584 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.3475: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:00:12  2026-03-02 01:00:12,741 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:00:12  2026-03-02 01:00:12,917 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.7105: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:00:13  2026-03-02 01:00:13,081 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.75: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:00:13  2026-03-02 01:00:13,244 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:00:13  2026-03-02 01:00:13,401 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.8755: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:00:13  2026-03-02 01:00:13,407 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:02:04  2026-03-02 01:02:04,051 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:02:04  2026-03-02 01:02:04,149 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:02:04  2026-03-02 01:02:04,149 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:02:04  2026-03-02 01:02:04,592 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:02:04  2026-03-02 01:02:04,746 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.3475: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:02:04  2026-03-02 01:02:04,910 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:02:05  2026-03-02 01:02:05,071 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.7105: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:02:05  2026-03-02 01:02:05,235 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.75: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:02:05  2026-03-02 01:02:05,409 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:02:05  2026-03-02 01:02:05,572 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.8755: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:02:05  2026-03-02 01:02:05,578 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:03:56  2026-03-02 01:03:56,700 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:03:56  2026-03-02 01:03:56,802 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:03:56  2026-03-02 01:03:56,803 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:03:56  2026-03-02 01:03:56,917 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T00:58:35.852362Z, no change)
+2026-03-02 01:03:57  2026-03-02 01:03:57,288 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:03:57  2026-03-02 01:03:57,443 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.3475: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:03:57  2026-03-02 01:03:57,611 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:03:57  2026-03-02 01:03:57,771 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.7105: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:03:57  2026-03-02 01:03:57,939 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.75: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:03:58  2026-03-02 01:03:58,099 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL @ 1.3495: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:03:58  2026-03-02 01:03:58,258 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.8755: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:03:58  2026-03-02 01:03:58,264 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:05:50  2026-03-02 01:05:50,310 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:05:50  2026-03-02 01:05:50,416 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:05:50  2026-03-02 01:05:50,416 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:05:50  2026-03-02 01:05:50,527 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 6 opportunities (timestamp: 2026-03-02T01:04:15.730023Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-02 01:05:50  2026-03-02 01:05:50,893 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:05:51  2026-03-02 01:05:51,048 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:05:51  2026-03-02 01:05:51,211 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:05:51  2026-03-02 01:05:51,363 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:05:51  2026-03-02 01:05:51,516 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:05:51  2026-03-02 01:05:51,672 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:05:51  2026-03-02 01:05:51,841 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:05:51  2026-03-02 01:05:51,846 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:07:42  2026-03-02 01:07:42,780 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:07:42  2026-03-02 01:07:42,893 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:07:42  2026-03-02 01:07:42,893 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:07:43  2026-03-02 01:07:43,332 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:07:43  2026-03-02 01:07:43,488 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:07:43  2026-03-02 01:07:43,645 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:07:43  2026-03-02 01:07:43,813 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:07:43  2026-03-02 01:07:43,972 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:07:44  2026-03-02 01:07:44,135 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:07:44  2026-03-02 01:07:44,290 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:07:44  2026-03-02 01:07:44,296 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:09:35  2026-03-02 01:09:35,088 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:09:35  2026-03-02 01:09:35,200 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:09:35  2026-03-02 01:09:35,200 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:09:35  2026-03-02 01:09:35,637 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:09:35  2026-03-02 01:09:35,785 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:09:35  2026-03-02 01:09:35,940 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:09:36  2026-03-02 01:09:36,095 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:09:36  2026-03-02 01:09:36,247 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:09:36  2026-03-02 01:09:36,415 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:09:36  2026-03-02 01:09:36,566 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:09:36  2026-03-02 01:09:36,574 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:11:28  2026-03-02 01:11:28,268 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:11:28  2026-03-02 01:11:28,363 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:11:28  2026-03-02 01:11:28,363 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:11:28  2026-03-02 01:11:28,795 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:11:28  2026-03-02 01:11:28,943 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:11:29  2026-03-02 01:11:29,093 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:11:29  2026-03-02 01:11:29,248 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:11:29  2026-03-02 01:11:29,405 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:11:29  2026-03-02 01:11:29,558 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:11:29  2026-03-02 01:11:29,713 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:11:29  2026-03-02 01:11:29,719 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:13:22  2026-03-02 01:13:22,421 - ScalpEngine - INFO - 
+2026-03-02 01:13:22  === Status Check #1100 ===
+2026-03-02 01:13:22  2026-03-02 01:13:22,423 - ScalpEngine - INFO - Time: 01:13:22 UTC
+2026-03-02 01:13:22  2026-03-02 01:13:22,423 - ScalpEngine - INFO - Mode: AUTO
+2026-03-02 01:13:22  2026-03-02 01:13:22,423 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-02 01:13:22  2026-03-02 01:13:22,423 - ScalpEngine - INFO - Active Trades: 0/4
+2026-03-02 01:13:22  2026-03-02 01:13:22,423 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:13:22  2026-03-02 01:13:22,518 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:13:22  2026-03-02 01:13:22,518 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:13:22  2026-03-02 01:13:22,615 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T01:04:15.730023Z, no change)
+2026-03-02 01:13:22  2026-03-02 01:13:22,876 - ScalpEngine - INFO - ≡ƒºá Market: NEUTRAL bias, HIGH_VOL volatility, 6 opportunities
+2026-03-02 01:13:23  2026-03-02 01:13:23,145 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:13:23  2026-03-02 01:13:23,304 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:13:23  2026-03-02 01:13:23,467 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:13:23  2026-03-02 01:13:23,637 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:13:23  2026-03-02 01:13:23,809 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:13:23  2026-03-02 01:13:23,984 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:13:24  2026-03-02 01:13:24,153 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:13:24  2026-03-02 01:13:24,162 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:13:24  2026-03-02 01:13:24,162 - ScalpEngine - INFO - Γä╣∩╕Å Fisher: 1 opportunity(ies) skipped (AUTO mode - Fisher never executes)
+2026-03-02 01:15:16  2026-03-02 01:15:16,280 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:15:16  2026-03-02 01:15:16,383 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:15:16  2026-03-02 01:15:16,383 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:15:16  2026-03-02 01:15:16,894 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:15:17  2026-03-02 01:15:17,048 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:15:17  2026-03-02 01:15:17,219 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:15:17  2026-03-02 01:15:17,377 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:15:17  2026-03-02 01:15:17,538 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:15:17  2026-03-02 01:15:17,696 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:15:17  2026-03-02 01:15:17,856 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:15:17  2026-03-02 01:15:17,865 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:17:08  2026-03-02 01:17:08,946 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:17:09  2026-03-02 01:17:09,028 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:17:09  2026-03-02 01:17:09,028 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:17:09  2026-03-02 01:17:09,443 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:17:09  2026-03-02 01:17:09,593 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:17:09  2026-03-02 01:17:09,745 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:17:09  2026-03-02 01:17:09,918 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:17:10  2026-03-02 01:17:10,075 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:17:10  2026-03-02 01:17:10,233 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:17:10  2026-03-02 01:17:10,388 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:17:10  2026-03-02 01:17:10,395 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:19:02  2026-03-02 01:19:02,876 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:19:02  2026-03-02 01:19:02,985 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:19:02  2026-03-02 01:19:02,985 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:19:03  2026-03-02 01:19:03,389 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:19:03  2026-03-02 01:19:03,538 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:19:03  2026-03-02 01:19:03,690 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:19:03  2026-03-02 01:19:03,843 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:19:03  2026-03-02 01:19:03,999 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:19:04  2026-03-02 01:19:04,156 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:19:04  2026-03-02 01:19:04,312 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:19:04  2026-03-02 01:19:04,320 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:20:55  2026-03-02 01:20:55,612 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:20:55  2026-03-02 01:20:55,700 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:20:55  2026-03-02 01:20:55,701 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:20:56  2026-03-02 01:20:56,150 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:20:56  2026-03-02 01:20:56,303 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:20:56  2026-03-02 01:20:56,476 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:20:56  2026-03-02 01:20:56,633 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:20:56  2026-03-02 01:20:56,791 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:20:56  2026-03-02 01:20:56,941 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:20:57  2026-03-02 01:20:57,093 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:20:57  2026-03-02 01:20:57,099 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:22:47  2026-03-02 01:22:47,631 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:22:47  2026-03-02 01:22:47,724 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:22:47  2026-03-02 01:22:47,724 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:22:47  2026-03-02 01:22:47,816 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T01:04:15.730023Z, no change)
+2026-03-02 01:22:48  2026-03-02 01:22:48,162 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:22:48  2026-03-02 01:22:48,311 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:22:48  2026-03-02 01:22:48,468 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:22:48  2026-03-02 01:22:48,619 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:22:48  2026-03-02 01:22:48,807 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:22:48  2026-03-02 01:22:48,956 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:22:49  2026-03-02 01:22:49,109 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:22:49  2026-03-02 01:22:49,115 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:24:39  2026-03-02 01:24:39,927 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:24:40  2026-03-02 01:24:40,038 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:24:40  2026-03-02 01:24:40,038 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:24:40  2026-03-02 01:24:40,447 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:24:40  2026-03-02 01:24:40,599 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:24:40  2026-03-02 01:24:40,749 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:24:40  2026-03-02 01:24:40,907 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:24:41  2026-03-02 01:24:41,068 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:24:41  2026-03-02 01:24:41,218 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:24:41  2026-03-02 01:24:41,382 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:24:41  2026-03-02 01:24:41,388 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:26:35  2026-03-02 01:26:35,051 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:26:35  2026-03-02 01:26:35,143 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:26:35  2026-03-02 01:26:35,143 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:26:35  2026-03-02 01:26:35,627 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:26:35  2026-03-02 01:26:35,774 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:26:35  2026-03-02 01:26:35,930 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:26:36  2026-03-02 01:26:36,082 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:26:36  2026-03-02 01:26:36,242 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:26:36  2026-03-02 01:26:36,404 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:26:36  2026-03-02 01:26:36,564 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:26:36  2026-03-02 01:26:36,570 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:28:29  2026-03-02 01:28:29,587 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:28:29  2026-03-02 01:28:29,675 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:28:29  2026-03-02 01:28:29,675 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:28:30  2026-03-02 01:28:30,153 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:28:30  2026-03-02 01:28:30,308 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:28:30  2026-03-02 01:28:30,465 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:28:30  2026-03-02 01:28:30,619 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:28:30  2026-03-02 01:28:30,775 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:28:30  2026-03-02 01:28:30,940 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:28:31  2026-03-02 01:28:31,106 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:28:31  2026-03-02 01:28:31,114 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:30:24  2026-03-02 01:30:24,305 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:30:24  2026-03-02 01:30:24,393 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:30:24  2026-03-02 01:30:24,393 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:30:24  2026-03-02 01:30:24,871 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:30:25  2026-03-02 01:30:25,022 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:30:25  2026-03-02 01:30:25,173 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:30:25  2026-03-02 01:30:25,332 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:30:25  2026-03-02 01:30:25,487 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:30:25  2026-03-02 01:30:25,653 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:30:25  2026-03-02 01:30:25,812 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:30:25  2026-03-02 01:30:25,818 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:32:18  2026-03-02 01:32:18,496 - ScalpEngine - INFO - 
+2026-03-02 01:32:18  === Status Check #1110 ===
+2026-03-02 01:32:18  2026-03-02 01:32:18,498 - ScalpEngine - INFO - Time: 01:32:18 UTC
+2026-03-02 01:32:18  2026-03-02 01:32:18,498 - ScalpEngine - INFO - Mode: AUTO
+2026-03-02 01:32:18  2026-03-02 01:32:18,498 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-02 01:32:18  2026-03-02 01:32:18,498 - ScalpEngine - INFO - Active Trades: 0/4
+2026-03-02 01:32:18  2026-03-02 01:32:18,498 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:32:18  2026-03-02 01:32:18,589 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:32:18  2026-03-02 01:32:18,589 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:32:18  2026-03-02 01:32:18,699 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T01:04:15.730023Z, no change)
+2026-03-02 01:32:18  2026-03-02 01:32:18,886 - ScalpEngine - INFO - ≡ƒºá Market: NEUTRAL bias, HIGH_VOL volatility, 6 opportunities
+2026-03-02 01:32:19  2026-03-02 01:32:19,061 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:32:19  2026-03-02 01:32:19,212 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:32:19  2026-03-02 01:32:19,368 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:32:19  2026-03-02 01:32:19,521 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:32:19  2026-03-02 01:32:19,683 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:32:19  2026-03-02 01:32:19,844 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:32:20  2026-03-02 01:32:20,030 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:32:20  2026-03-02 01:32:20,039 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:34:10  2026-03-02 01:34:10,988 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:34:11  2026-03-02 01:34:11,117 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:34:11  2026-03-02 01:34:11,117 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:34:11  2026-03-02 01:34:11,570 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:34:11  2026-03-02 01:34:11,724 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:34:11  2026-03-02 01:34:11,890 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:34:12  2026-03-02 01:34:12,053 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:34:12  2026-03-02 01:34:12,208 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:34:12  2026-03-02 01:34:12,358 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:34:12  2026-03-02 01:34:12,513 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:34:12  2026-03-02 01:34:12,518 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:36:05  2026-03-02 01:36:05,005 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:36:05  2026-03-02 01:36:05,101 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:36:05  2026-03-02 01:36:05,101 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:36:05  2026-03-02 01:36:05,559 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:36:05  2026-03-02 01:36:05,712 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:36:05  2026-03-02 01:36:05,874 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:36:06  2026-03-02 01:36:06,024 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:36:06  2026-03-02 01:36:06,182 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:36:06  2026-03-02 01:36:06,335 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:36:06  2026-03-02 01:36:06,494 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:36:06  2026-03-02 01:36:06,500 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:37:57  2026-03-02 01:37:57,088 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:37:57  2026-03-02 01:37:57,175 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:37:57  2026-03-02 01:37:57,175 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:37:57  2026-03-02 01:37:57,598 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:37:57  2026-03-02 01:37:57,744 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:37:57  2026-03-02 01:37:57,908 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:37:58  2026-03-02 01:37:58,067 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:37:58  2026-03-02 01:37:58,223 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:37:58  2026-03-02 01:37:58,380 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:37:58  2026-03-02 01:37:58,531 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:37:58  2026-03-02 01:37:58,539 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:39:49  2026-03-02 01:39:49,765 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:39:49  2026-03-02 01:39:49,861 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:39:49  2026-03-02 01:39:49,861 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:39:50  2026-03-02 01:39:50,319 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:39:50  2026-03-02 01:39:50,469 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:39:50  2026-03-02 01:39:50,627 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:39:50  2026-03-02 01:39:50,781 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:39:50  2026-03-02 01:39:50,943 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:39:51  2026-03-02 01:39:51,121 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:39:51  2026-03-02 01:39:51,275 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:39:51  2026-03-02 01:39:51,280 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:41:43  2026-03-02 01:41:43,143 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:41:43  2026-03-02 01:41:43,257 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:41:43  2026-03-02 01:41:43,257 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:41:43  2026-03-02 01:41:43,396 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T01:04:15.730023Z, no change)
+2026-03-02 01:41:43  2026-03-02 01:41:43,711 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:41:43  2026-03-02 01:41:43,863 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:41:44  2026-03-02 01:41:44,019 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:41:44  2026-03-02 01:41:44,173 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:41:44  2026-03-02 01:41:44,330 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:41:44  2026-03-02 01:41:44,486 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:41:44  2026-03-02 01:41:44,642 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:41:44  2026-03-02 01:41:44,648 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:43:36  2026-03-02 01:43:36,063 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:43:36  2026-03-02 01:43:36,164 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:43:36  2026-03-02 01:43:36,164 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:43:36  2026-03-02 01:43:36,583 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:43:36  2026-03-02 01:43:36,746 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:43:36  2026-03-02 01:43:36,905 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:43:37  2026-03-02 01:43:37,056 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:43:37  2026-03-02 01:43:37,213 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:43:37  2026-03-02 01:43:37,371 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:43:37  2026-03-02 01:43:37,526 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:43:37  2026-03-02 01:43:37,532 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:45:28  2026-03-02 01:45:28,893 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:45:28  2026-03-02 01:45:28,985 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:45:28  2026-03-02 01:45:28,985 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:45:29  2026-03-02 01:45:29,414 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:45:29  2026-03-02 01:45:29,560 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:45:29  2026-03-02 01:45:29,721 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:45:29  2026-03-02 01:45:29,872 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:45:30  2026-03-02 01:45:30,029 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:45:30  2026-03-02 01:45:30,190 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:45:30  2026-03-02 01:45:30,344 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:45:30  2026-03-02 01:45:30,350 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:47:21  2026-03-02 01:47:21,026 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:47:21  2026-03-02 01:47:21,146 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:47:21  2026-03-02 01:47:21,146 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:47:21  2026-03-02 01:47:21,599 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:47:21  2026-03-02 01:47:21,748 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:47:21  2026-03-02 01:47:21,904 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:47:22  2026-03-02 01:47:22,075 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:47:22  2026-03-02 01:47:22,229 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:47:22  2026-03-02 01:47:22,380 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:47:22  2026-03-02 01:47:22,537 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:47:22  2026-03-02 01:47:22,545 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:49:15  2026-03-02 01:49:15,130 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:49:15  2026-03-02 01:49:15,224 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:49:15  2026-03-02 01:49:15,224 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:49:15  2026-03-02 01:49:15,681 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:49:16  2026-03-02 01:49:16,269 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:49:16  2026-03-02 01:49:16,427 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:49:16  2026-03-02 01:49:16,586 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:49:16  2026-03-02 01:49:16,742 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:49:16  2026-03-02 01:49:16,901 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:49:17  2026-03-02 01:49:17,058 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:49:17  2026-03-02 01:49:17,064 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:51:08  2026-03-02 01:51:08,174 - ScalpEngine - INFO - 
+2026-03-02 01:51:08  === Status Check #1120 ===
+2026-03-02 01:51:08  2026-03-02 01:51:08,176 - ScalpEngine - INFO - Time: 01:51:08 UTC
+2026-03-02 01:51:08  2026-03-02 01:51:08,176 - ScalpEngine - INFO - Mode: AUTO
+2026-03-02 01:51:08  2026-03-02 01:51:08,176 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-02 01:51:08  2026-03-02 01:51:08,176 - ScalpEngine - INFO - Active Trades: 0/4
+2026-03-02 01:51:08  2026-03-02 01:51:08,176 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:51:08  2026-03-02 01:51:08,449 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:51:08  2026-03-02 01:51:08,458 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:51:08  2026-03-02 01:51:08,669 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 6 opportunities (timestamp: 2026-03-02T01:04:15.730023Z, no change)
+2026-03-02 01:51:09  2026-03-02 01:51:09,089 - ScalpEngine - INFO - ≡ƒºá Market: NEUTRAL bias, HIGH_VOL volatility, 6 opportunities
+2026-03-02 01:51:09  2026-03-02 01:51:09,440 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:51:09  2026-03-02 01:51:09,626 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:51:09  2026-03-02 01:51:09,803 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:51:09  2026-03-02 01:51:09,981 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:51:10  2026-03-02 01:51:10,161 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:51:10  2026-03-02 01:51:10,330 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:51:10  2026-03-02 01:51:10,511 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:51:10  2026-03-02 01:51:10,540 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:51:10  2026-03-02 01:51:10,542 - ScalpEngine - INFO - Γä╣∩╕Å Fisher: 1 opportunity(ies) skipped (AUTO mode - Fisher never executes)
+2026-03-02 01:53:01  2026-03-02 01:53:01,721 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:53:01  2026-03-02 01:53:01,808 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:53:01  2026-03-02 01:53:01,809 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:53:02  2026-03-02 01:53:02,240 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:53:02  2026-03-02 01:53:02,400 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:53:02  2026-03-02 01:53:02,562 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:53:02  2026-03-02 01:53:02,717 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:53:02  2026-03-02 01:53:02,869 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:53:03  2026-03-02 01:53:03,026 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:53:03  2026-03-02 01:53:03,184 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:53:03  2026-03-02 01:53:03,190 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:54:54  2026-03-02 01:54:54,603 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:54:54  2026-03-02 01:54:54,703 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:54:54  2026-03-02 01:54:54,703 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:54:55  2026-03-02 01:54:55,177 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:54:55  2026-03-02 01:54:55,332 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:54:55  2026-03-02 01:54:55,487 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:54:55  2026-03-02 01:54:55,643 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:54:55  2026-03-02 01:54:55,812 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:54:55  2026-03-02 01:54:55,975 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:54:56  2026-03-02 01:54:56,130 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:54:56  2026-03-02 01:54:56,136 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:56:47  2026-03-02 01:56:47,411 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:56:47  2026-03-02 01:56:47,521 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:56:47  2026-03-02 01:56:47,521 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:56:47  2026-03-02 01:56:47,973 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:56:48  2026-03-02 01:56:48,133 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.346: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:56:48  2026-03-02 01:56:48,289 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.1: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:56:48  2026-03-02 01:56:48,443 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.708: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:56:48  2026-03-02 01:56:48,605 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:56:48  2026-03-02 01:56:48,758 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP BUY @ 0.876: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:56:48  2026-03-02 01:56:48,912 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.712: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:56:48  2026-03-02 01:56:48,920 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)
+2026-03-02 01:58:40  2026-03-02 01:58:40,280 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-02 01:58:40  2026-03-02 01:58:40,377 - ScalpEngine - INFO - Γ£à Config loaded from API - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4, Required LLMs: gemini
+2026-03-02 01:58:40  2026-03-02 01:58:40,377 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-02 01:58:40  2026-03-02 01:58:40,470 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 6 opportunities (timestamp: 2026-03-02T01:58:00.275689Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-02 01:58:41  2026-03-02 01:58:41,345 - ScalpEngine - INFO - ≡ƒöì Checking 6 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-02 01:58:41  2026-03-02 01:58:41,504 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY @ 1.348: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:58:41  2026-03-02 01:58:41,668 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY @ 156.2: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:58:41  2026-03-02 01:58:41,833 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD BUY @ 1.1785: Consensus level 1 < minimum 2 (consensus: 1, sources: ['chatgpt'])
+2026-03-02 01:58:41  2026-03-02 01:58:41,995 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.85: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini', 'synthesis'])
+2026-03-02 01:58:42  2026-03-02 01:58:42,162 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL @ 156.05: Consensus level 1 < minimum 2 (consensus: 1, sources: ['gemini'])
+2026-03-02 01:58:42  2026-03-02 01:58:42,335 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD SELL @ 0.714: Consensus level 1 < minimum 2 (consensus: 1, sources: ['synthesis', 'deepseek'])
+2026-03-02 01:58:42  2026-03-02 01:58:42,346 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 6 failed validation (total: 6)

@@ -1,0 +1,9 @@
+Additional quality checks to review using the Logs
+
+1) Is trailing stop loss working properly? 
+2) Is the Structure_ATR Stages SL working properly? 
+3) What is causing profitable trades with traling stops to close as losing trades.
+4) Do the RL run properly? 
+5) Is the trading hours logic being properly enforced?
+6) Is the sync (Open/Pending Trades) between the Oanda, Scalp-engine UI and Scalp-engine correct? 
+7) Are there still orphan trades on Oanda that are not accounted for on Scalp-engine and Scalp-engine UI

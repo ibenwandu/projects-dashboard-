@@ -1,0 +1,21 @@
+# Indeed-jobs-cs — manual run commands
+
+# Full workflow (fetch + score + report)
+python run_workflow.py --phase all
+
+# Fetch only (default up to 25 jobs, visible browser)
+python run_workflow.py --phase fetch
+python run_workflow.py --phase fetch --max-jobs 10
+
+# Score + report only (uses existing cache)
+python run_workflow.py --phase score
+
+# Generate tailored resumes (after adding Job IDs to config/approved_jobs.txt)
+python run_workflow.py --phase resumes
+
+# Regenerate PDFs from existing .md in output/resumes/
+python run_workflow.py --phase pdf
+
+# Scrape only (main.py)
+python main.py
+python main.py --max-jobs 10 --headless

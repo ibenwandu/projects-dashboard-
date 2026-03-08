@@ -2,7 +2,7 @@
 
 This file records interactions, plans, and fixes implemented across projects under the personal folder so future sessions have context.
 
-**Last updated:** Part 17 (Mar 6, 2026) — No pending order for pair with open position; commit 8dc6d3d; cursor_works updated.
+**Last updated:** Part 19 (Mar 6, 2026) — ATR_Trailing: convert only after meaningful profit, stop never below entry; commit 4d2330b; cursor_works updated.
 
 **Quick reference — Parts:**
 
@@ -24,7 +24,9 @@ This file records interactions, plans, and fixes implemented across projects und
 | 14 | 3× GBP/USD on OANDA, 1 on UI/logs | Load PENDING trades from state file on startup; USER_GUIDE §10(d) engine-load note. |
 | 15 | Orphan/duplicate cleanup; single (pair, direction) | Cleanup on every sync: close extra open positions, cancel extra pending orders per (pair, direction); never allow multiple same pair on OANDA or UI. |
 | 16 | ATR_TRAILING immediate activation (Fix 4) | Phase 0.5 complete; min age 120s + OANDA P/L gate in `_check_ai_trailing_conversion()`; improvementplan Fix 4 implemented. |
-| 17 | No pending when pair has open | Once a pair has an open position, no pending order allowed until closed/cancelled; block on place, cancel on sync; commit 8dc6d3d. |
+| 17 | No pending when pair has open | Once a pair has an open position, no pending order allowed until closed/cancelled; block on place, cancel on sync (8dc6d3d); hardening: final gate by pair, replace-pending skip, early skip in loop (560a98c). |
+| 18 | Research implementation (Phases 0–3) | Phase 0: USER_GUIDE target exit, research index, safety note. Phase 1: risk-based position size, 2% daily limit, 5-loss circuit breaker, config strip. Phase 2: BE +50 pips, trail +100 pips, verification logging. Phase 3: ATR TP, half-and-run, max hold, safety doc. Commit aadbddb. |
+| 19 | ATR_Trailing conversion fix | Convert only after meaningful profit; default 100 pips when config missing (never 1 pip); require profit >= max(activation, trailing distance) so initial stop never below entry; avoids tiny cushion on retrace. Commit 4d2330b. |
 
 ---
 
@@ -35,11 +37,15 @@ When asked to **review the logs**, future sessions should perform checks like th
 - **Max trades:** Never more open positions than UI `max_trades`; logs show "Open: X/Y, Pending: P" (not "Active: 6/4"); ERROR if OANDA > max_trades; BLOCKED when at limit.
 - **Trailing stop:** Trailing only activated when trade is in profit (≥1 pip), never in loss or before breakeven; look for "converted to trailing stop" only after profit; USER_GUIDE §17.
 - **Duplicate (pair, direction):** No multiple open or **pending** orders for same pair/direction on OANDA; final gate blocks with "BLOCKED DUPLICATE (final check)" or "BLOCKED DUPLICATE (final check – pending)"; has_existing_position and pre-open check include pending orders.
-- **No pending when pair has open:** Once a pair has an open position, no pending order (LIMIT/STOP) is allowed for that pair until the open is closed or cancelled. Block on place: "BLOCKED: {pair} already has an open position. No pending order allowed until that position is closed or cancelled." On sync, cleanup cancels any pending order for a pair that has an open: "🧹 Cleaned up pending order: {pair} (pair has open position, no pending allowed)".
+- **No pending when pair has open:** Once a pair has an open position, no pending order (LIMIT/STOP) is allowed for that pair until the open is closed or cancelled. Block on place: "BLOCKED: {pair} already has an open position. No pending order allowed until that position is closed or cancelled." Final gate (before send): "🚫 BLOCKED (final check): {pair} already has an open position on OANDA. No pending order allowed until it is closed or cancelled." Replace-pending path: "🔄 Skipping replace for {pair} {direction}: pair has an open position. No pending allowed until it is closed or cancelled." On sync, cleanup cancels any pending order for a pair that has an open: "🧹 Cleaned up pending order: {pair} (pair has open position, no pending allowed)". Main loop skips opportunities for pairs with an open (DEBUG: "Skipped {pair} {direction} - pair already has an open position (no second open/pending allowed)").
 - **UI vs OANDA alignment:** If OANDA shows multiple tickets for same pair (e.g. two USD/JPY SELL LIMIT) but UI shows one row, the list must be one entry per `trade_id`/order ID (store/display by ID, not merge by (pair, direction)); USER_GUIDE §10(d).
 - **Stale-order loop:** No cancel-then-replace same level within cooldown (cursor6 §5.3); "Skipping re-place after stale cancel" when applicable.
 - **TRAILING_STOP_LOSS_ORDER_ALREADY_EXISTS:** Check before create; ALREADY_EXISTS treated as success; reject count in OANDA transactions should drop (cursor6 §5.2).
 - **502/5xx:** No raw HTML in logs; WARNING with truncated message and retry (cursor6 §5.5).
+- **Circuit breaker (Part 18):** After 5 consecutive losses, new opens blocked; logs show "Circuit breaker: N consecutive losses (max 5). No new opens until next win or daily reset."; `record_trade_close` logs "consecutive_losses: N".
+- **Daily loss % (Part 18):** When `max_daily_loss_pct` set, opens blocked if daily loss ≥ that % of account; "Daily loss limit reached (X% >= Y% of account)".
+- **Risk-based position size (Part 18):** When balance and SL pips available, units from formula; optional config: `trading_phase`, `risk_percent_per_trade`, `account_balance_override`.
+- **ATR_Trailing conversion (Part 19):** Conversion only when profit >= max(trailing_activation_min_pips, trailing distance); default 100 pips when config missing. Log: "ATR Trailing: attempting conversion ... profit >= X.X pips (activation/distance), trailing distance=Y.Y pips". Initial trailing stop never below entry.
 
 ---
 
@@ -1460,11 +1466,20 @@ Enforce the rule: **once a pair has an open position, there must never be a pend
 | `Trade-Alerts/Scalp-Engine/auto_trader_core.py` | `has_open_position_for_pair()`; in `open_trade()` block pending when pair has open (LIMIT/STOP); in `_cleanup_duplicate_positions_and_orders_on_oanda()` cancel pending for pairs with open; updated cleanup docstring. |
 | `Trade-Alerts/Scalp-Engine/USER_GUIDE.md` | §10(d): rule “no pending when pair has open”, cleanup step (2), block and cleanup log messages. |
 
+## Part 17 hardening (Mar 6, 2026) — commit 560a98c
+
+Three additional layers so OANDA never shows open + pending for the same pair:
+
+1. **Final gate (auto_trader_core.py):** Before sending a LIMIT/STOP order to OANDA, block if **any** open position exists for that pair (any direction). Log: `🚫 BLOCKED (final check): {pair} already has an open position on OANDA. No pending order allowed until it is closed or cancelled.`
+2. **Replace-pending path (scalp_engine.py):** In `_review_and_replace_pending_trades`, after cancelling the old order, if `has_open_position_for_pair(pair)` then do **not** place the replacement pending; log and skip. Log: `🔄 Skipping replace for {pair} {direction}: pair has an open position. No pending allowed until it is closed or cancelled.`
+3. **Early skip in main loop (scalp_engine.py):** After cooldown check, if `has_open_position_for_pair(pair)` then skip the opportunity (continue) with DEBUG log so we never attempt open or pending for that pair in the same cycle.
+
 ## Commit and push
 
 | Repo | Branch | Commit | Message | Push |
 |------|--------|--------|---------|------|
 | **Trade-Alerts** | `main` | `8dc6d3d` | Scalp-Engine: no pending order for pair with open position - block on place, cancel on sync | Pushed to `origin/main` (https://github.com/ibenwandu/Trade-Alerts) |
+| **Trade-Alerts** | `main` | `560a98c` | Harden no-pending-when-open: final gate, replace-pending check, early skip in loop | Pushed to `origin/main` |
 
 ## Verification (for future sessions)
 
@@ -1481,4 +1496,137 @@ Enforce the rule: **once a pair has an open position, there must never be a pend
 
 ---
 
-*Part 17 last updated: No pending when pair has open; implementation, commit 8dc6d3d, cursor_works updated.*
+*Part 17 last updated: No pending when pair has open; implementation (8dc6d3d), hardening final gate/replace-pending/early skip (560a98c), cursor_works updated.*
+
+---
+
+# Part 18: Research Implementation (Phases 0–3) — Mar 6, 2026
+
+## Goal
+
+Implement the outstanding items from `personal/research/` and `personal/OUTSTANDING_IMPLEMENTATION_PLAN.md`: Phase 0 (docs), Phase 1 (risk and position sizing), Phase 2 (trailing and breakeven), Phase 3 (exit strategy), without changing consensus formula, `open_trade()` signature, or adding config keys to TradeConfig without stripping.
+
+## Interactions
+
+- User requested implementation of all phases from the research-based improvement plan.
+- Implementation was done in one session: Phase 0 (docs only), then Phase 1 (risk/sizing), Phase 2 (BE/trailing), Phase 3 (ATR TP, half-and-run, max hold, safety note).
+
+## Fixes and features applied
+
+### Phase 0 (docs)
+
+- **USER_GUIDE.md:** Added "Target Exit Behaviour (Research)" (first TP 1.5× risk, runner ATR×1.0, BE +50 pips, trail activation +100 pips); "Research Documentation (Index)" with links to `personal/research/` (Exit Strategy, Trailing SL, Position Sizing, Sources) and improvement/outstanding plans; "Safety: Manual Close of Winners (Phase 3.4)" note.
+
+### Phase 1 (risk and position sizing)
+
+- **TradeConfig (auto_trader_core.py):** Added `max_daily_loss_pct`, `trading_phase`, `risk_percent_per_trade`, `account_balance_override`, `consecutive_losses_max`.
+- **Config stripping (scalp_engine.py):** When loading config from API or file, only keys that are `TradeConfig` fields are passed to `TradeConfig(**data)` (using `dataclasses.fields(TradeConfig)`).
+- **Position size from formula:** `_position_units_from_risk(account_balance, risk_pct, sl_pips, pair)` with formula `(Account × Risk%) / (SL pips × pip value)`. In `_create_trade_from_opportunity`, units use this when balance (config or OANDA) and SL pips are available; else fallback to `base_position_size × consensus_multiplier`.
+- **Daily loss 2%:** `RiskController.can_take_loss(potential_loss, account_balance=None)` enforces `max_daily_loss_pct` when account_balance is provided. `can_open_new_trade()` blocks when daily loss already ≥ that % (balance from config or OANDA).
+- **Circuit breaker (5 consecutive losses):** `RiskController.consecutive_losses` updated in `record_trade_close` (increment on loss, reset on win); `circuit_breaker_ok()` blocks when `consecutive_losses >= consecutive_losses_max`; `can_open_new_trade()` calls it.
+
+### Phase 2 (trailing and breakeven)
+
+- **TradeConfig:** `be_min_pips` (default 50), `trailing_activation_min_pips` (default 100).
+- **Breakeven:** `_check_be_transition` moves SL to breakeven only when profit ≥ `be_min_pips`.
+- **Trailing activation:** BE→trailing and ATR trailing use `trailing_activation_min_pips` when set (default 100); else existing 1 pip minimum.
+- **Verification logging:** DEBUG log when ATR trailing is verified and distance unchanged ("Trailing SL verified for … [verification]").
+
+### Phase 3 (exit strategy)
+
+- **TradeConfig:** `half_and_run_enabled`, `half_and_run_r_multiple` (default 1.5), `max_hold_seconds`.
+- **ATR-based TP (3.1):** In `_create_trade_from_opportunity`, take profit taken from `take_profit_atr` or `tp_atr` when present.
+- **Half-and-run (3.2):** In `monitor_positions`, when `half_and_run_enabled` and trade OPEN and not STRUCTURE_ATR_STAGED, at ≥ `half_and_run_r_multiple` R close 50% via `close_trade_partial`, set `partial_profit_taken`.
+- **Max hold (3.3):** If `max_hold_seconds` set, close trade when hold time exceeds it.
+- **Safety (3.4):** USER_GUIDE note only (manual close of winners).
+
+### Config API
+
+- **config_api_server.py:** Default config extended with new keys (`be_min_pips`, `trailing_activation_min_pips`, `max_daily_loss_pct`, `trading_phase`, `risk_percent_per_trade`, `account_balance_override`, `consecutive_losses_max`, `half_and_run_enabled`, `half_and_run_r_multiple`, `max_hold_seconds`).
+
+## Files modified
+
+| File | Changes |
+|------|--------|
+| `Trade-Alerts/Scalp-Engine/USER_GUIDE.md` | Target exit (research), research index, safety note. |
+| `Trade-Alerts/Scalp-Engine/auto_trader_core.py` | TradeConfig new fields; `_position_units_from_risk`; risk-based units in `_create_trade_from_opportunity`; `RiskController` daily % and circuit breaker; `can_open_new_trade` circuit breaker and daily % check; BE/trailing configurable thresholds; trailing verification log; Phase 3 (ATR TP, half-and-run, max hold). |
+| `Trade-Alerts/Scalp-Engine/scalp_engine.py` | Config strip to TradeConfig fields only when loading from API or file. |
+| `Trade-Alerts/Scalp-Engine/config_api_server.py` | Default config includes new Part 18 keys. |
+
+## Commit and push
+
+| Repo | Branch | Commit | Message | Push |
+|------|--------|--------|---------|------|
+| **Trade-Alerts** | `main` | `aadbddb` | Research implementation: Phase 0-3 (docs, risk/sizing, trailing/BE, exit strategy) | Pushed to `origin/main` |
+
+## Verification (for future sessions)
+
+- **Position size:** When account balance and SL pips available, units follow formula; logs can show risk-based size.
+- **Daily loss %:** Set `max_daily_loss_pct` (e.g. 2.0); after daily loss ≥ 2% of account, new opens blocked; log "Daily loss limit reached".
+- **Circuit breaker:** After 5 consecutive losses (from `record_trade_close`), new opens blocked; log "Circuit breaker: 5 consecutive losses"; resets on win or daily reset.
+- **BE/trailing:** `be_min_pips` (default 50) and `trailing_activation_min_pips` (default 100) control when SL moves to BE and when trailing activates.
+- **Half-and-run:** With `half_and_run_enabled=True`, at 1.5R (configurable) 50% of position closed; log "Half-and-run: closed 50% of … at +1.5R".
+
+## References for future sessions
+
+| Document | Location | Purpose |
+|----------|----------|---------|
+| **OUTSTANDING_IMPLEMENTATION_PLAN.md** | `personal/OUTSTANDING_IMPLEMENTATION_PLAN.md` | Step-by-step outstanding items (Phases 0–3). |
+| **TRADING_SYSTEM_IMPROVEMENT_PLAN.md** | `personal/TRADING_SYSTEM_IMPROVEMENT_PLAN.md` | Phased plan from research. |
+| **USER_GUIDE.md** | `Trade-Alerts/Scalp-Engine/USER_GUIDE.md` | Target exit, research index, safety. |
+| **Log review checks** | Top of this file (cursor_works.md) | Circuit breaker, daily loss %, risk-based size. |
+
+---
+
+*Part 18 last updated: Research implementation Phases 0–3; commit aadbddb; cursor_works updated.*
+
+---
+
+# Part 19: ATR_Trailing Conversion Fix — Mar 6, 2026
+
+## Goal
+
+Fix ATR_Trailing converting too early (2 min after open with 1 pip profit), which placed the trailing stop so close to entry that any retrace stopped the trade out. Ensure conversion only after meaningful profit and that the initial trailing stop is never below entry.
+
+## Problem
+
+- All ATR_Trailing trades were converting 2 minutes after open; the trailing stop started very close to entry (effective cushion small).
+- When price moved away from entry, trailing looked fine; when price retraced toward entry, the SL cushion had shrunk and trades were stopped out.
+- Cause: conversion was allowed at 1 pip profit (fallback when `trailing_activation_min_pips` missing/zero) and no requirement that profit be at least the trailing distance, so the first stop could be below entry.
+
+## Fixes applied
+
+1. **Default 100 pips when config missing:** In `_check_ai_trailing_conversion`, if `trailing_activation_min_pips` is None or ≤ 0, use 100.0 so we never convert on 1 pip.
+2. **Profit >= trailing distance:** Require profit (pips) >= **max(trailing_activation_min_pips, trailing_distance_pips)** before converting. That way the initial trailing stop (current_price − distance) is at or above entry; no tiny cushion on retrace.
+3. **Single threshold:** Compute `trailing_pips` and regime once at top of the check; use `min_pips_for_conversion = max(trail_activation_config, trailing_pips)` so one consistent condition.
+4. **USER_GUIDE:** Updated trailing-SL description to state ATR_Trailing requires profit >= max(activation, trailing distance) and default 100 pips when config missing.
+
+## Files modified
+
+| File | Change |
+|------|--------|
+| `Trade-Alerts/Scalp-Engine/auto_trader_core.py` | `_check_ai_trailing_conversion`: default activation 100 pips; require profit >= max(activation, trailing_pips); docstring and log updated. |
+| `Trade-Alerts/Scalp-Engine/USER_GUIDE.md` | Trailing SL / ATR_Trailing paragraph: activation rule and "profit >= … (activation/distance)" log. |
+
+## Commit and push
+
+| Repo | Branch | Commit | Message | Push |
+|------|--------|--------|---------|------|
+| **Trade-Alerts** | `main` | `4d2330b` | ATR_Trailing: convert only after meaningful profit, stop never below entry (default 100 pips, profit >= trailing distance) | Pushed to `origin/main` |
+
+## Verification (for future sessions)
+
+- ATR_Trailing conversion only when trade is in profit by at least max(100 or config, trailing distance in pips); min age and OANDA P/L > 0 unchanged.
+- Log shows "ATR Trailing: attempting conversion ... profit >= X.X pips (activation/distance), trailing distance=Y.Y pips" when conversion is attempted.
+- Initial trailing stop level is at or above entry (for a long), so retraces don’t wipe out the cushion immediately.
+
+## References
+
+| Document | Location |
+|----------|----------|
+| **USER_GUIDE.md** | `Trade-Alerts/Scalp-Engine/USER_GUIDE.md` — Trailing SL / ATR_Trailing. |
+| **Log review checks** | Top of this file — ATR_Trailing conversion (Part 19). |
+
+---
+
+*Part 19 last updated: ATR_Trailing conversion fix; commit 4d2330b; cursor_works updated.*

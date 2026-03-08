@@ -1,0 +1,1000 @@
+2026-03-04 20:01:35              margin-right: -15px;
+2026-03-04 20:01:35              margin-left: -15px;
+2026-03-04 20:01:35              padding-top: 30px;
+2026-03-04 20:01:35              padding-bottom: 30px;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards__card {
+2026-03-04 20:01:35              display: -ms-flexbox;
+2026-03-04 20:01:35              display: flex;
+2026-03-04 20:01:35              -ms-flex: 1;
+2026-03-04 20:01:35              flex: 1;
+2026-03-04 20:01:35              padding-left: 15px;
+2026-03-04 20:01:35              padding-right: 15px;
+2026-03-04 20:01:35              position: relative;
+2026-03-04 20:01:35              width: 100%;
+2026-03-04 20:01:35              min-height: 1px;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards--equal-height .content-cards__card__inner {
+2026-03-04 20:01:35              height: 100%;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards--align-top .content-cards__card__inner {
+2026-03-04 20:01:35              -ms-flex-item-align: flex-start;
+2026-03-04 20:01:35              align-self: flex-start;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards__card--align-left {
+2026-03-04 20:01:35              text-align: left;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards__card--rounded {
+2026-03-04 20:01:35              border-radius: 15px;
+2026-03-04 20:01:35              overflow: hidden;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards__card__inner {
+2026-03-04 20:01:35              -ms-flex-item-align: center;
+2026-03-04 20:01:35              align-self: center;
+2026-03-04 20:01:35              width: 100%;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .background--white {
+2026-03-04 20:01:35              background-color: #fff;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .error-page .content-cards__card .content-cards__card__content {
+2026-03-04 20:01:35              padding: 15px;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards__card__content-block--ctas, .content-cards__card__content-block--icon {
+2026-03-04 20:01:35              margin-bottom: 15px;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          @media (min-width: 768px) {
+2026-03-04 20:01:35              .error-page .content-cards__card .content-cards__card__content {
+2026-03-04 20:01:35                  padding: 30px;
+2026-03-04 20:01:35              }
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards__card__content-block {
+2026-03-04 20:01:35              margin-bottom: 30px;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards__card__content .icon--left {
+2026-03-04 20:01:35              text-align: left;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          img {
+2026-03-04 20:01:35              vertical-align: middle;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .button-group .btn:last-child {
+2026-03-04 20:01:35              margin-right: 0;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .content-cards__card--align-left .btn {
+2026-03-04 20:01:35              text-align: left;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .button-group .btn {
+2026-03-04 20:01:35              margin-right: 7.5px;
+2026-03-04 20:01:35              margin-bottom: 15px;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .btn--primary.btn--blue {
+2026-03-04 20:01:35              background-color: #004AC3;
+2026-03-04 20:01:35              border-color: #004AC3;
+2026-03-04 20:01:35              color: #fff;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .btn {
+2026-03-04 20:01:35              display: inline-block;
+2026-03-04 20:01:35              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+2026-03-04 20:01:35              line-height: 20px;
+2026-03-04 20:01:35              font-size: 16px;
+2026-03-04 20:01:35              letter-spacing: 1px;
+2026-03-04 20:01:35              text-align: center;
+2026-03-04 20:01:35              padding: 10px 20px;
+2026-03-04 20:01:35              vertical-align: text-bottom;
+2026-03-04 20:01:35              text-decoration: none;
+2026-03-04 20:01:35              border-radius: 100px;
+2026-03-04 20:01:35              border: 2px solid;
+2026-03-04 20:01:35              transition: background-color .2s ease-out, border-color .2s ease-out;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          a {
+2026-03-04 20:01:35              color: #004AC3;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          .button-group {
+2026-03-04 20:01:35              margin-top: 15px;
+2026-03-04 20:01:35          }
+2026-03-04 20:01:35      </style>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35  
+2026-03-04 20:01:35  </head>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35  <body>
+2026-03-04 20:01:35  <div class="error-page">
+2026-03-04 20:01:35      <div class="oa-container">
+2026-03-04 20:01:35          <a href="/" class="logo"><img
+2026-03-04 20:01:35              src="data:image/png;base64,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"
+2026-03-04 20:01:35              alt="OANDA Logo"></a>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          <h1>Sorry, there's a problem on our side</h1>
+2026-03-04 20:01:35          <h4>We are aware of this problem and are working to fix it.</h4>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          <p><strong>In the meantime, here is what you can do:</strong></p>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          <ul>
+2026-03-04 20:01:35              <li><i class="material-icons">autorenew</i> Refresh the page (sometimes this helps)</li>
+2026-03-04 20:01:35              <li><i class="material-icons">access_time</i> Try again in 30 minutes</li>
+2026-03-04 20:01:35              <li><i class="material-icons">help</i> Visit our <a href="https://help.oanda.com" target="_blank"
+2026-03-04 20:01:35                                                                  rel="noopener">support site</a> and tell us what
+2026-03-04 20:01:35                  happened
+2026-03-04 20:01:35              </li>
+2026-03-04 20:01:35          </ul>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          <h3>You can still use the following services</h3>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35          <div class="content-cards content-cards--equal-height content-cards--align-top">
+2026-03-04 20:01:35              <div class="content-cards__card">
+2026-03-04 20:01:35                  <div
+2026-03-04 20:01:35                      class="content-cards__card__inner background--white content-cards__card--align-left  content-cards__card--rounded">
+2026-03-04 20:01:35                      <div class="content-cards__card__content">
+2026-03-04 20:01:35                          <div class="content-cards__card__content-block content-cards__card__content-block--icon">
+2026-03-04 20:01:35                              <div class="icon icon--left">
+2026-03-04 20:01:35                                  <img
+2026-03-04 20:01:35                                      src="data:image/png;base64,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"
+2026-03-04 20:01:35                                      width="60" height="60" alt="Existing client image">
+2026-03-04 20:01:35                              </div>
+2026-03-04 20:01:35                          </div>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35                          <div class="content-cards__card__content-block content-cards__card__content-block--title">
+2026-03-04 20:01:35                              <h3>Existing client?</h3>
+2026-03-04 20:01:35                          </div>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35                          <div class="content-cards__card__content-block content-cards__card__content-block--text">
+2026-03-04 20:01:35                              <div class="rich-text"><p>Log in to the portal to deposit or withdraw funds to/from your
+2026-03-04 20:01:35                                  OANDA account.</p></div>
+2026-03-04 20:01:35                          </div>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35                          <div class="content-cards__card__content-block content-cards__card__content-block--ctas">
+2026-03-04 20:01:35                              <div class="button-group">
+2026-03-04 20:01:35                                  <a href="https://www.oanda.com/account/login" class="btn btn--primary btn--blue"
+2026-03-04 20:01:35                                     target="_blank" rel="noopener">Sign in</a>
+2026-03-04 20:01:35                              </div>
+2026-03-04 20:01:35                          </div>
+2026-03-04 20:01:35                      </div>
+2026-03-04 20:01:35                  </div>
+2026-03-04 20:01:35              </div>
+2026-03-04 20:01:35          </div>
+2026-03-04 20:01:35          <div class="cf">
+2026-03-04 20:01:35              <h5><div class="cf-error-details cf-error-502">
+2026-03-04 20:01:35    <h1>Bad gateway</h1>
+2026-03-04 20:01:35    <p>The web server reported a bad gateway error.</p>
+2026-03-04 20:01:35    <ul>
+2026-03-04 20:01:35      <li>Ray ID: 9d737946a955ef73</li>
+2026-03-04 20:01:35      <li>Your IP address: 74.220.48.242</li>
+2026-03-04 20:01:35      <li>Error reference number: 502</li>
+2026-03-04 20:01:35      <li>Cloudflare Location: Portland</li>
+2026-03-04 20:01:35    </ul>
+2026-03-04 20:01:35  </div>
+2026-03-04 20:01:35  </h5>
+2026-03-04 20:01:35          </div>
+2026-03-04 20:01:35      </div>
+2026-03-04 20:01:35  </div>
+2026-03-04 20:01:35  </body>
+2026-03-04 20:01:35  </html>
+2026-03-04 20:01:35  
+2026-03-04 20:01:35  
+2026-03-04 20:01:39  Failed pairs: [('GBP/USD', 'Analysis returned None'), ('AUD/USD', 'Analysis returned None')]
+2026-03-04 20:01:39  2026-03-04 20:01:39,199 - ScalpEngine - INFO - Γ£à Fisher opportunities sent to market-state-api
+2026-03-04 20:01:39  2026-03-04 20:01:39,199 - ScalpEngine - INFO - Γ£à Hourly Fisher scan complete: 0 opportunities
+2026-03-04 20:01:39  2026-03-04 20:01:39,200 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:01:39  2026-03-04 20:01:39,682 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:01:39  2026-03-04 20:01:39,847 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:01:40  2026-03-04 20:01:40,022 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:01:40  2026-03-04 20:01:40,198 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:01:40  2026-03-04 20:01:40,374 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:01:40  2026-03-04 20:01:40,382 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 4 max trades limit (total: 5)
+2026-03-04 20:02:33  2026-03-04 20:02:33,190 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 31.9 pips
+2026-03-04 20:03:33  2026-03-04 20:03:33,250 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:03:33  2026-03-04 20:03:33,766 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:03:33  2026-03-04 20:03:33,929 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:03:34  2026-03-04 20:03:34,106 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:03:34  2026-03-04 20:03:34,283 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:03:34  2026-03-04 20:03:34,462 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:03:34  2026-03-04 20:03:34,468 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 4 max trades limit (total: 5)
+2026-03-04 20:04:28  2026-03-04 20:04:28,166 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 29.0 pips
+2026-03-04 20:05:28  2026-03-04 20:05:28,226 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:05:28  2026-03-04 20:05:28,398 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 3 opportunities (timestamp: 2026-03-04T20:03:42.660635Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 20:05:28  2026-03-04 20:05:28,737 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:05:28  2026-03-04 20:05:28,902 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:05:29  2026-03-04 20:05:29,079 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:05:29  2026-03-04 20:05:29,255 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:05:29  2026-03-04 20:05:29,260 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 max trades limit (total: 3)
+2026-03-04 20:06:24  2026-03-04 20:06:24,143 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 35.7 pips
+2026-03-04 20:07:24  2026-03-04 20:07:24,204 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:07:24  2026-03-04 20:07:24,402 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 3 opportunities (timestamp: 2026-03-04T20:03:42.660635Z, no change)
+2026-03-04 20:07:24  2026-03-04 20:07:24,779 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:07:24  2026-03-04 20:07:24,946 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:07:25  2026-03-04 20:07:25,109 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:07:25  2026-03-04 20:07:25,292 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:07:25  2026-03-04 20:07:25,298 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 max trades limit (total: 3)
+2026-03-04 20:08:20  2026-03-04 20:08:20,229 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 37.0 pips
+2026-03-04 20:09:20  2026-03-04 20:09:20,274 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:09:20  2026-03-04 20:09:20,467 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 4 opportunities (timestamp: 2026-03-04T20:08:59.822640Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 20:09:20  2026-03-04 20:09:20,826 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:09:20  2026-03-04 20:09:20,986 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:09:21  2026-03-04 20:09:21,158 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:09:21  2026-03-04 20:09:21,331 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:09:21  2026-03-04 20:09:21,337 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - GBP/JPY SELL - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-04 20:09:21  2026-03-04 20:09:21,337 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 3 max trades limit (total: 4)
+2026-03-04 20:10:17  2026-03-04 20:10:17,223 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 32.4 pips
+2026-03-04 20:11:17  2026-03-04 20:11:17,284 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:11:17  2026-03-04 20:11:17,368 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-04 20:11:17  2026-03-04 20:11:17,816 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:11:17  2026-03-04 20:11:17,984 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:11:18  2026-03-04 20:11:18,150 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:11:18  2026-03-04 20:11:18,322 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:11:18  2026-03-04 20:11:18,328 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 3 max trades limit (total: 4)
+2026-03-04 20:12:11  2026-03-04 20:12:11,606 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 34.4 pips
+2026-03-04 20:13:11  2026-03-04 20:13:11,667 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:13:12  2026-03-04 20:13:12,159 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:13:12  2026-03-04 20:13:12,324 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:13:12  2026-03-04 20:13:12,503 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:13:12  2026-03-04 20:13:12,674 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:13:12  2026-03-04 20:13:12,680 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 3 max trades limit (total: 4)
+2026-03-04 20:14:04  2026-03-04 20:14:04,513 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 29.6 pips
+2026-03-04 20:15:04  2026-03-04 20:15:04,574 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:15:05  2026-03-04 20:15:05,110 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:15:05  2026-03-04 20:15:05,265 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:15:05  2026-03-04 20:15:05,423 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:15:05  2026-03-04 20:15:05,588 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 20:15:05  2026-03-04 20:15:05,595 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 3 max trades limit (total: 4)
+2026-03-04 20:15:57  2026-03-04 20:15:57,796 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 29.1 pips
+2026-03-04 20:16:57  2026-03-04 20:16:57,856 - ScalpEngine - INFO - 
+2026-03-04 20:16:57  === Status Check #610 ===
+2026-03-04 20:16:57  2026-03-04 20:16:57,857 - ScalpEngine - INFO - Time: 20:16:57 UTC
+2026-03-04 20:16:57  2026-03-04 20:16:57,857 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 20:16:57  2026-03-04 20:16:57,857 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 20:16:57  2026-03-04 20:16:57,857 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-04 20:16:57  2026-03-04 20:16:57,857 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:16:58  2026-03-04 20:16:58,018 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 4 opportunities (timestamp: 2026-03-04T20:08:59.822640Z, no change)
+2026-03-04 20:16:58  2026-03-04 20:16:58,162 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, NORMAL volatility, 4 opportunities
+2026-03-04 20:16:58  2026-03-04 20:16:58,341 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:16:58  2026-03-04 20:16:58,570 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7077549999999999, diff: 72.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:16:59  2026-03-04 20:16:59,028 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7077549999999999)
+2026-03-04 20:16:59  2026-03-04 20:16:59,255 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.333 (current: 1.33727, diff: 42.7 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/4
+2026-03-04 20:16:59  2026-03-04 20:16:59,727 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.333 (current: 1.33727)
+2026-03-04 20:16:59  2026-03-04 20:16:59,952 - ScalpEngine - INFO - ΓÜá∩╕Å Opportunity USD/CHF has slightly stale current_price: 0.78219 vs live 0.77906 (31.3 pips diff) - proceeding with live price
+2026-03-04 20:16:59  2026-03-04 20:16:59,953 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7825 (current: 0.77906, diff: 34.4 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:17:00  2026-03-04 20:17:00,413 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7825 (current: 0.77906)
+2026-03-04 20:17:00  2026-03-04 20:17:00,414 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 processed, 1 duplicates (total: 4)
+2026-03-04 20:18:05  2026-03-04 20:18:05,109 - ScalpEngine - INFO - ≡ƒôê Active: 6/4, Unrealized: 23.7 pips
+2026-03-04 20:19:05  2026-03-04 20:19:05,170 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:19:06  2026-03-04 20:19:06,177 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25677: AUD/USD BUY @ 0.7005 is 72.2 pips away from current price 0.70772 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:19:06  2026-03-04 20:19:06,257 - ScalpEngine - INFO - Γ£à Cancelled stale order 25677 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:19:06  2026-03-04 20:19:06,257 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:19:06  2026-03-04 20:19:06,258 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:19:06  2026-03-04 20:19:06,490 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7077249999999999, diff: 72.2 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:19:07  2026-03-04 20:19:07,044 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7077249999999999)
+2026-03-04 20:19:07  2026-03-04 20:19:07,121 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - GBP/USD BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-04 20:19:07  2026-03-04 20:19:07,197 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - USD/CHF SELL - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-04 20:19:07  2026-03-04 20:19:07,198 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 3 duplicates (total: 4)
+2026-03-04 20:19:59  2026-03-04 20:19:59,365 - ScalpEngine - INFO - ≡ƒôê Active: 6/4, Unrealized: 23.7 pips
+2026-03-04 20:20:59  2026-03-04 20:20:59,425 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:21:00  2026-03-04 20:21:00,456 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25684: AUD/USD BUY @ 0.7005 is 72.7 pips away from current price 0.70777 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:21:00  2026-03-04 20:21:00,532 - ScalpEngine - INFO - Γ£à Cancelled stale order 25684 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:21:00  2026-03-04 20:21:00,532 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:21:00  2026-03-04 20:21:00,532 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:21:00  2026-03-04 20:21:00,768 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70777, diff: 72.7 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:21:01  2026-03-04 20:21:01,323 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70777)
+2026-03-04 20:21:01  2026-03-04 20:21:01,486 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 3 duplicates (total: 4)
+2026-03-04 20:21:53  2026-03-04 20:21:53,738 - ScalpEngine - INFO - ≡ƒôê Active: 6/4, Unrealized: 25.0 pips
+2026-03-04 20:22:53  2026-03-04 20:22:53,746 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:22:54  2026-03-04 20:22:54,753 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25689: AUD/USD BUY @ 0.7005 is 73.0 pips away from current price 0.70780 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:22:54  2026-03-04 20:22:54,835 - ScalpEngine - INFO - Γ£à Cancelled stale order 25689 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:22:54  2026-03-04 20:22:54,835 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:22:54  2026-03-04 20:22:54,835 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:22:55  2026-03-04 20:22:55,069 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707805, diff: 73.1 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:22:55  2026-03-04 20:22:55,635 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707805)
+2026-03-04 20:22:55  2026-03-04 20:22:55,793 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 3 duplicates (total: 4)
+2026-03-04 20:24:09  2026-03-04 20:24:09,803 - ScalpEngine - INFO - ≡ƒôê Active: 6/4, Unrealized: 18.3 pips
+2026-03-04 20:25:09  2026-03-04 20:25:09,837 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:25:10  2026-03-04 20:25:10,813 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25694: AUD/USD BUY @ 0.7005 is 73.6 pips away from current price 0.70786 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:25:10  2026-03-04 20:25:10,891 - ScalpEngine - INFO - Γ£à Cancelled stale order 25694 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:25:10  2026-03-04 20:25:10,891 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:25:10  2026-03-04 20:25:10,891 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:25:11  2026-03-04 20:25:11,118 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7078599999999999, diff: 73.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:25:11  2026-03-04 20:25:11,649 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7078599999999999)
+2026-03-04 20:25:11  2026-03-04 20:25:11,798 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 3 duplicates (total: 4)
+2026-03-04 20:26:04  2026-03-04 20:26:04,711 - ScalpEngine - INFO - ≡ƒôê Active: 6/4, Unrealized: 18.6 pips
+2026-03-04 20:27:04  2026-03-04 20:27:04,771 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:27:04  2026-03-04 20:27:04,949 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 4 opportunities (timestamp: 2026-03-04T20:08:59.822640Z, no change)
+2026-03-04 20:27:05  2026-03-04 20:27:05,766 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25699: AUD/USD BUY @ 0.7005 is 73.2 pips away from current price 0.70782 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:27:05  2026-03-04 20:27:05,854 - ScalpEngine - INFO - Γ£à Cancelled stale order 25699 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:27:05  2026-03-04 20:27:05,854 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:27:05  2026-03-04 20:27:05,855 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:27:06  2026-03-04 20:27:06,083 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7078199999999999, diff: 73.2 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:27:06  2026-03-04 20:27:06,637 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7078199999999999)
+2026-03-04 20:27:06  2026-03-04 20:27:06,788 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 3 duplicates (total: 4)
+2026-03-04 20:28:15  2026-03-04 20:28:15,018 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -7.0 pips
+2026-03-04 20:29:15  2026-03-04 20:29:15,078 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:29:16  2026-03-04 20:29:16,052 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25704: AUD/USD BUY @ 0.7005 is 74.3 pips away from current price 0.70793 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:29:16  2026-03-04 20:29:16,130 - ScalpEngine - INFO - Γ£à Cancelled stale order 25704 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:29:16  2026-03-04 20:29:16,131 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:29:16  2026-03-04 20:29:16,131 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:29:16  2026-03-04 20:29:16,367 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707935, diff: 74.3 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:29:16  2026-03-04 20:29:16,960 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707935)
+2026-03-04 20:29:17  2026-03-04 20:29:17,276 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:29:17  2026-03-04 20:29:17,282 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:30:09  2026-03-04 20:30:09,371 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -8.7 pips
+2026-03-04 20:31:09  2026-03-04 20:31:09,431 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:31:10  2026-03-04 20:31:10,383 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25710: AUD/USD BUY @ 0.7005 is 74.2 pips away from current price 0.70792 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:31:10  2026-03-04 20:31:10,463 - ScalpEngine - INFO - Γ£à Cancelled stale order 25710 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:31:10  2026-03-04 20:31:10,463 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:31:10  2026-03-04 20:31:10,463 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:31:10  2026-03-04 20:31:10,690 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7079150000000001, diff: 74.2 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:31:11  2026-03-04 20:31:11,247 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7079150000000001)
+2026-03-04 20:31:11  2026-03-04 20:31:11,570 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:31:11  2026-03-04 20:31:11,576 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:32:03  2026-03-04 20:32:03,506 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -8.5 pips
+2026-03-04 20:33:03  2026-03-04 20:33:03,566 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:33:04  2026-03-04 20:33:04,780 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25714: AUD/USD BUY @ 0.7005 is 74.3 pips away from current price 0.70793 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:33:04  2026-03-04 20:33:04,874 - ScalpEngine - INFO - Γ£à Cancelled stale order 25714 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:33:04  2026-03-04 20:33:04,874 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:33:04  2026-03-04 20:33:04,874 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:33:05  2026-03-04 20:33:05,103 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707935, diff: 74.3 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:33:05  2026-03-04 20:33:05,662 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707935)
+2026-03-04 20:33:05  2026-03-04 20:33:05,975 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:33:05  2026-03-04 20:33:05,983 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:33:57  2026-03-04 20:33:57,930 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -9.0 pips
+2026-03-04 20:34:57  2026-03-04 20:34:57,990 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:34:58  2026-03-04 20:34:58,953 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25718: AUD/USD BUY @ 0.7005 is 73.3 pips away from current price 0.70783 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:34:59  2026-03-04 20:34:59,028 - ScalpEngine - INFO - Γ£à Cancelled stale order 25718 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:34:59  2026-03-04 20:34:59,028 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:34:59  2026-03-04 20:34:59,028 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:34:59  2026-03-04 20:34:59,255 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70783, diff: 73.3 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:34:59  2026-03-04 20:34:59,795 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70783)
+2026-03-04 20:35:00  2026-03-04 20:35:00,092 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:35:00  2026-03-04 20:35:00,098 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:35:52  2026-03-04 20:35:52,074 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -11.2 pips
+2026-03-04 20:36:52  2026-03-04 20:36:52,137 - ScalpEngine - INFO - 
+2026-03-04 20:36:52  === Status Check #620 ===
+2026-03-04 20:36:52  2026-03-04 20:36:52,137 - ScalpEngine - INFO - Time: 20:36:52 UTC
+2026-03-04 20:36:52  2026-03-04 20:36:52,137 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 20:36:52  2026-03-04 20:36:52,137 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 20:36:52  2026-03-04 20:36:52,138 - ScalpEngine - INFO - Active Trades: 5/4
+2026-03-04 20:36:52  2026-03-04 20:36:52,138 - ScalpEngine - INFO - Pending Orders: 3
+2026-03-04 20:36:52  2026-03-04 20:36:52,138 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:36:52  2026-03-04 20:36:52,330 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 4 opportunities (timestamp: 2026-03-04T20:08:59.822640Z, no change)
+2026-03-04 20:36:52  2026-03-04 20:36:52,524 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, NORMAL volatility, 4 opportunities
+2026-03-04 20:36:53  2026-03-04 20:36:53,147 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25722: AUD/USD BUY @ 0.7005 is 74.2 pips away from current price 0.70792 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:36:53  2026-03-04 20:36:53,225 - ScalpEngine - INFO - Γ£à Cancelled stale order 25722 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:36:53  2026-03-04 20:36:53,225 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:36:53  2026-03-04 20:36:53,225 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:36:53  2026-03-04 20:36:53,457 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70789, diff: 73.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:36:54  2026-03-04 20:36:54,017 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70789)
+2026-03-04 20:36:54  2026-03-04 20:36:54,322 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:36:54  2026-03-04 20:36:54,328 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:37:46  2026-03-04 20:37:46,498 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -12.4 pips
+2026-03-04 20:38:46  2026-03-04 20:38:46,559 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:38:47  2026-03-04 20:38:47,531 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25726: AUD/USD BUY @ 0.7005 is 74.9 pips away from current price 0.70799 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:38:47  2026-03-04 20:38:47,608 - ScalpEngine - INFO - Γ£à Cancelled stale order 25726 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:38:47  2026-03-04 20:38:47,608 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:38:47  2026-03-04 20:38:47,608 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:38:47  2026-03-04 20:38:47,835 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70799, diff: 74.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:38:48  2026-03-04 20:38:48,387 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70799)
+2026-03-04 20:38:48  2026-03-04 20:38:48,687 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:38:48  2026-03-04 20:38:48,693 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:39:40  2026-03-04 20:39:40,759 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -12.4 pips
+2026-03-04 20:40:40  2026-03-04 20:40:40,819 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:40:42  2026-03-04 20:40:42,065 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25730: AUD/USD BUY @ 0.7005 is 74.8 pips away from current price 0.70798 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:40:42  2026-03-04 20:40:42,149 - ScalpEngine - INFO - Γ£à Cancelled stale order 25730 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:40:42  2026-03-04 20:40:42,149 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:40:42  2026-03-04 20:40:42,149 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:40:42  2026-03-04 20:40:42,404 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70798, diff: 74.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:40:42  2026-03-04 20:40:42,962 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70798)
+2026-03-04 20:40:43  2026-03-04 20:40:43,289 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:40:43  2026-03-04 20:40:43,295 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:41:35  2026-03-04 20:41:35,627 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -12.7 pips
+2026-03-04 20:42:35  2026-03-04 20:42:35,687 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:42:36  2026-03-04 20:42:36,678 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25734: AUD/USD BUY @ 0.7005 is 75.4 pips away from current price 0.70804 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:42:36  2026-03-04 20:42:36,769 - ScalpEngine - INFO - Γ£à Cancelled stale order 25734 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:42:36  2026-03-04 20:42:36,769 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:42:36  2026-03-04 20:42:36,770 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:42:37  2026-03-04 20:42:37,012 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70804, diff: 75.4 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:42:37  2026-03-04 20:42:37,597 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70804)
+2026-03-04 20:42:37  2026-03-04 20:42:37,891 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:42:37  2026-03-04 20:42:37,898 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:43:30  2026-03-04 20:43:30,926 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -12.6 pips
+2026-03-04 20:44:30  2026-03-04 20:44:30,987 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:44:31  2026-03-04 20:44:31,987 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25738: AUD/USD BUY @ 0.7005 is 76.2 pips away from current price 0.70812 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:44:32  2026-03-04 20:44:32,065 - ScalpEngine - INFO - Γ£à Cancelled stale order 25738 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:44:32  2026-03-04 20:44:32,065 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:44:32  2026-03-04 20:44:32,065 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:44:32  2026-03-04 20:44:32,299 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.708115, diff: 76.2 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:44:32  2026-03-04 20:44:32,839 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.708115)
+2026-03-04 20:44:33  2026-03-04 20:44:33,146 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:44:33  2026-03-04 20:44:33,151 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:45:25  2026-03-04 20:45:25,106 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -12.4 pips
+2026-03-04 20:46:25  2026-03-04 20:46:25,167 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:46:25  2026-03-04 20:46:25,358 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 4 opportunities (timestamp: 2026-03-04T20:08:59.822640Z, no change)
+2026-03-04 20:46:26  2026-03-04 20:46:26,187 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25742: AUD/USD BUY @ 0.7005 is 75.0 pips away from current price 0.70800 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:46:26  2026-03-04 20:46:26,266 - ScalpEngine - INFO - Γ£à Cancelled stale order 25742 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:46:26  2026-03-04 20:46:26,266 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:46:26  2026-03-04 20:46:26,266 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:46:26  2026-03-04 20:46:26,518 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.708005, diff: 75.0 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:46:27  2026-03-04 20:46:27,065 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.708005)
+2026-03-04 20:46:27  2026-03-04 20:46:27,386 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:46:27  2026-03-04 20:46:27,392 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:47:19  2026-03-04 20:47:19,345 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -12.3 pips
+2026-03-04 20:48:19  2026-03-04 20:48:19,400 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:48:20  2026-03-04 20:48:20,433 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25746: AUD/USD BUY @ 0.7005 is 74.6 pips away from current price 0.70796 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:48:20  2026-03-04 20:48:20,513 - ScalpEngine - INFO - Γ£à Cancelled stale order 25746 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:48:20  2026-03-04 20:48:20,513 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:48:20  2026-03-04 20:48:20,513 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:48:20  2026-03-04 20:48:20,753 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707965, diff: 74.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:48:21  2026-03-04 20:48:21,312 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707965)
+2026-03-04 20:48:21  2026-03-04 20:48:21,610 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:48:21  2026-03-04 20:48:21,615 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:49:13  2026-03-04 20:49:13,537 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -10.6 pips
+2026-03-04 20:50:13  2026-03-04 20:50:13,597 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:50:14  2026-03-04 20:50:14,717 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25750: AUD/USD BUY @ 0.7005 is 71.2 pips away from current price 0.70762 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:50:14  2026-03-04 20:50:14,793 - ScalpEngine - INFO - Γ£à Cancelled stale order 25750 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:50:14  2026-03-04 20:50:14,794 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:50:14  2026-03-04 20:50:14,794 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:50:15  2026-03-04 20:50:15,024 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70762, diff: 71.2 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:50:15  2026-03-04 20:50:15,590 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70762)
+2026-03-04 20:50:15  2026-03-04 20:50:15,675 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - GBP/USD BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-04 20:50:15  2026-03-04 20:50:15,749 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - USD/CHF SELL - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-04 20:50:15  2026-03-04 20:50:15,914 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:50:15  2026-03-04 20:50:15,926 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:51:08  2026-03-04 20:51:08,942 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -8.2 pips
+2026-03-04 20:52:09  2026-03-04 20:52:09,002 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:52:10  2026-03-04 20:52:10,027 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25754: AUD/USD BUY @ 0.7005 is 71.0 pips away from current price 0.70760 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:52:10  2026-03-04 20:52:10,105 - ScalpEngine - INFO - Γ£à Cancelled stale order 25754 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:52:10  2026-03-04 20:52:10,105 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:52:10  2026-03-04 20:52:10,106 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:52:10  2026-03-04 20:52:10,344 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7076, diff: 71.0 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:52:10  2026-03-04 20:52:10,889 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7076)
+2026-03-04 20:52:11  2026-03-04 20:52:11,184 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:52:11  2026-03-04 20:52:11,191 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:53:02  2026-03-04 20:53:02,961 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -9.3 pips
+2026-03-04 20:54:03  2026-03-04 20:54:03,022 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:54:04  2026-03-04 20:54:04,024 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25758: AUD/USD BUY @ 0.7005 is 71.6 pips away from current price 0.70766 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:54:04  2026-03-04 20:54:04,103 - ScalpEngine - INFO - Γ£à Cancelled stale order 25758 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:54:04  2026-03-04 20:54:04,103 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:54:04  2026-03-04 20:54:04,104 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:54:04  2026-03-04 20:54:04,327 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707655, diff: 71.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:54:04  2026-03-04 20:54:04,904 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707655)
+2026-03-04 20:54:05  2026-03-04 20:54:05,229 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:54:05  2026-03-04 20:54:05,243 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:54:57  2026-03-04 20:54:57,780 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -11.6 pips
+2026-03-04 20:55:57  2026-03-04 20:55:57,840 - ScalpEngine - INFO - 
+2026-03-04 20:55:57  === Status Check #630 ===
+2026-03-04 20:55:57  2026-03-04 20:55:57,840 - ScalpEngine - INFO - Time: 20:55:57 UTC
+2026-03-04 20:55:57  2026-03-04 20:55:57,840 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 20:55:57  2026-03-04 20:55:57,840 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 20:55:57  2026-03-04 20:55:57,840 - ScalpEngine - INFO - Active Trades: 5/4
+2026-03-04 20:55:57  2026-03-04 20:55:57,840 - ScalpEngine - INFO - Pending Orders: 3
+2026-03-04 20:55:57  2026-03-04 20:55:57,841 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:55:58  2026-03-04 20:55:58,041 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 4 opportunities (timestamp: 2026-03-04T20:08:59.822640Z, no change)
+2026-03-04 20:55:58  2026-03-04 20:55:58,207 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, NORMAL volatility, 4 opportunities
+2026-03-04 20:55:58  2026-03-04 20:55:58,826 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25762: AUD/USD BUY @ 0.7005 is 72.7 pips away from current price 0.70777 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:55:58  2026-03-04 20:55:58,906 - ScalpEngine - INFO - Γ£à Cancelled stale order 25762 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:55:58  2026-03-04 20:55:58,907 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:55:58  2026-03-04 20:55:58,907 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:55:59  2026-03-04 20:55:59,139 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70777, diff: 72.7 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:55:59  2026-03-04 20:55:59,701 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70777)
+2026-03-04 20:56:00  2026-03-04 20:56:00,008 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:56:00  2026-03-04 20:56:00,013 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:56:52  2026-03-04 20:56:52,740 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -12.0 pips
+2026-03-04 20:57:52  2026-03-04 20:57:52,800 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:57:53  2026-03-04 20:57:53,766 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25766: AUD/USD BUY @ 0.7005 is 71.6 pips away from current price 0.70766 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:57:53  2026-03-04 20:57:53,841 - ScalpEngine - INFO - Γ£à Cancelled stale order 25766 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:57:53  2026-03-04 20:57:53,842 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:57:53  2026-03-04 20:57:53,842 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:57:54  2026-03-04 20:57:54,075 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70766, diff: 71.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 20:57:54  2026-03-04 20:57:54,631 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70766)
+2026-03-04 20:57:54  2026-03-04 20:57:54,931 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL @ 210.35: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek', 'synthesis'])
+2026-03-04 20:57:54  2026-03-04 20:57:54,938 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 20:58:46  2026-03-04 20:58:46,952 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -13.6 pips
+2026-03-04 20:59:47  2026-03-04 20:59:47,012 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 20:59:47  2026-03-04 20:59:47,194 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 4 opportunities (timestamp: 2026-03-04T20:58:09.665104Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 20:59:48  2026-03-04 20:59:48,016 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 25678: GBP/USD BUY @ 1.333 ΓåÆ 1.332 (better entry price (better by 10.0 pips))
+2026-03-04 20:59:48  2026-03-04 20:59:48,575 - ScalpEngine - INFO - Γ£à Replaced pending order 25678 - new order placed for GBP/USD BUY @ 1.332
+2026-03-04 20:59:48  2026-03-04 20:59:48,575 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 25679: USD/CHF SELL @ 0.7825 ΓåÆ 0.7835 (better entry price (better by 10.0 pips))
+2026-03-04 20:59:49  2026-03-04 20:59:49,147 - ScalpEngine - INFO - Γ£à Replaced pending order 25679 - new order placed for USD/CHF SELL @ 0.7835
+2026-03-04 20:59:49  2026-03-04 20:59:49,147 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25770: AUD/USD BUY @ 0.7005 is 73.5 pips away from current price 0.70786 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 20:59:49  2026-03-04 20:59:49,226 - ScalpEngine - INFO - Γ£à Cancelled stale order 25770 - new recommendations can now be processed for AUD/USD
+2026-03-04 20:59:49  2026-03-04 20:59:49,227 - ScalpEngine - INFO - Γ£à Replaced 2 pending order(s) with updated prices/sizes
+2026-03-04 20:59:49  2026-03-04 20:59:49,227 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 20:59:49  2026-03-04 20:59:49,227 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 20:59:49  2026-03-04 20:59:49,460 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.70085 (current: 0.7078199999999999, diff: 69.7 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/4
+2026-03-04 20:59:50  2026-03-04 20:59:50,001 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.70085 (current: 0.7078199999999999)
+2026-03-04 20:59:50  2026-03-04 20:59:50,310 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/CHF SELL @ 0.549: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek'])
+2026-03-04 20:59:50  2026-03-04 20:59:50,316 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates, 1 failed validation (total: 4)
+2026-03-04 21:00:43  2026-03-04 21:00:43,887 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -6.4 pips
+2026-03-04 21:01:43  2026-03-04 21:01:43,947 - ScalpEngine - INFO - 
+2026-03-04 21:01:43  ≡ƒÄ» Starting hourly Fisher Transform scan (trading hours, Reversal Strategy)...
+2026-03-04 21:01:48  2026-03-04 21:01:48,154 - ScalpEngine - INFO - Γ£à Fisher opportunities sent to market-state-api
+2026-03-04 21:01:48  2026-03-04 21:01:48,155 - ScalpEngine - INFO - Γ£à Hourly Fisher scan complete: 0 opportunities
+2026-03-04 21:01:48  2026-03-04 21:01:48,155 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:01:49  2026-03-04 21:01:49,096 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25774: GBP/USD BUY @ 1.332 is 54.4 pips away from current price 1.33744 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:01:49  2026-03-04 21:01:49,180 - ScalpEngine - INFO - Γ£à Cancelled stale order 25774 - new recommendations can now be processed for GBP/USD
+2026-03-04 21:01:49  2026-03-04 21:01:49,180 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25778: AUD/USD BUY @ 0.70085 is 68.6 pips away from current price 0.70771 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:01:49  2026-03-04 21:01:49,256 - ScalpEngine - INFO - Γ£à Cancelled stale order 25778 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:01:49  2026-03-04 21:01:49,257 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:01:49  2026-03-04 21:01:49,257 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:01:49  2026-03-04 21:01:49,476 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.70085 (current: 0.7077100000000001, diff: 68.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/4
+2026-03-04 21:01:50  2026-03-04 21:01:50,035 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.70085 (current: 0.7077100000000001)
+2026-03-04 21:01:50  2026-03-04 21:01:50,265 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.332 (current: 1.337445, diff: 54.4 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 21:01:50  2026-03-04 21:01:50,825 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.332 (current: 1.337445)
+2026-03-04 21:01:51  2026-03-04 21:01:51,049 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/CHF SELL @ 0.549: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek'])
+2026-03-04 21:01:51  2026-03-04 21:01:51,055 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates, 1 failed validation (total: 4)
+2026-03-04 21:02:44  2026-03-04 21:02:44,061 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -6.8 pips
+2026-03-04 21:03:44  2026-03-04 21:03:44,122 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:03:44  2026-03-04 21:03:44,331 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 3 opportunities (timestamp: 2026-03-04T21:03:18.064139Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 21:03:45  2026-03-04 21:03:45,183 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 25776: USD/CHF SELL @ 0.7835 ΓåÆ 0.7825 (better entry price (better by 10.0 pips))
+2026-03-04 21:03:45  2026-03-04 21:03:45,744 - ScalpEngine - INFO - Γ£à Replaced pending order 25776 - new order placed for USD/CHF SELL @ 0.7825
+2026-03-04 21:03:45  2026-03-04 21:03:45,745 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25783: AUD/USD BUY @ 0.70085 is 68.6 pips away from current price 0.70771 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:03:45  2026-03-04 21:03:45,822 - ScalpEngine - INFO - Γ£à Cancelled stale order 25783 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:03:45  2026-03-04 21:03:45,822 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25784: GBP/USD BUY @ 1.332 is 53.3 pips away from current price 1.33733 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:03:45  2026-03-04 21:03:45,907 - ScalpEngine - INFO - Γ£à Cancelled stale order 25784 - new recommendations can now be processed for GBP/USD
+2026-03-04 21:03:45  2026-03-04 21:03:45,907 - ScalpEngine - INFO - Γ£à Replaced 1 pending order(s) with updated prices/sizes
+2026-03-04 21:03:45  2026-03-04 21:03:45,907 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:03:45  2026-03-04 21:03:45,907 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:03:46  2026-03-04 21:03:46,148 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.333 (current: 1.337335, diff: 43.3 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:03:46  2026-03-04 21:03:46,748 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.333 (current: 1.337335)
+2026-03-04 21:03:47  2026-03-04 21:03:47,018 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707715, diff: 72.1 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:03:47  2026-03-04 21:03:47,577 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707715)
+2026-03-04 21:03:47  2026-03-04 21:03:47,663 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:04:39  2026-03-04 21:04:39,276 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -5.4 pips
+2026-03-04 21:05:39  2026-03-04 21:05:39,337 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:05:39  2026-03-04 21:05:39,527 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 3 opportunities (timestamp: 2026-03-04T21:03:18.064139Z, no change)
+2026-03-04 21:05:40  2026-03-04 21:05:40,798 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25792: AUD/USD BUY @ 0.7005 is 73.1 pips away from current price 0.70781 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:05:40  2026-03-04 21:05:40,878 - ScalpEngine - INFO - Γ£à Cancelled stale order 25792 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:05:40  2026-03-04 21:05:40,878 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 21:05:40  2026-03-04 21:05:40,878 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:05:41  2026-03-04 21:05:41,198 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7078, diff: 73.0 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:05:41  2026-03-04 21:05:41,763 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7078)
+2026-03-04 21:05:41  2026-03-04 21:05:41,845 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates (total: 3)
+2026-03-04 21:06:34  2026-03-04 21:06:34,330 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -7.2 pips
+2026-03-04 21:07:34  2026-03-04 21:07:34,391 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:07:35  2026-03-04 21:07:35,384 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25794: AUD/USD BUY @ 0.7005 is 73.9 pips away from current price 0.70789 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:07:35  2026-03-04 21:07:35,464 - ScalpEngine - INFO - Γ£à Cancelled stale order 25794 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:07:35  2026-03-04 21:07:35,464 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 21:07:35  2026-03-04 21:07:35,464 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:07:35  2026-03-04 21:07:35,774 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7078949999999999, diff: 73.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:07:36  2026-03-04 21:07:36,349 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7078949999999999)
+2026-03-04 21:07:36  2026-03-04 21:07:36,429 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates (total: 3)
+2026-03-04 21:08:40  2026-03-04 21:08:40,733 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -5.5 pips
+2026-03-04 21:09:40  2026-03-04 21:09:40,797 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:09:41  2026-03-04 21:09:41,057 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 3 opportunities (timestamp: 2026-03-04T21:08:06.699058Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 21:09:41  2026-03-04 21:09:41,954 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 25788: USD/CHF SELL @ 0.7825 ΓåÆ 0.7845 (better entry price (better by 20.0 pips))
+2026-03-04 21:09:42  2026-03-04 21:09:42,532 - ScalpEngine - INFO - Γ£à Replaced pending order 25788 - new order placed for USD/CHF SELL @ 0.7845
+2026-03-04 21:09:42  2026-03-04 21:09:42,533 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 25791: GBP/USD BUY @ 1.333 ΓåÆ 1.3325 (stop loss changed (5+ pips))
+2026-03-04 21:09:43  2026-03-04 21:09:43,091 - ScalpEngine - INFO - Γ£à Replaced pending order 25791 - new order placed for GBP/USD BUY @ 1.3325
+2026-03-04 21:09:43  2026-03-04 21:09:43,091 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25796: AUD/USD BUY @ 0.7005 is 73.5 pips away from current price 0.70785 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:09:43  2026-03-04 21:09:43,173 - ScalpEngine - INFO - Γ£à Cancelled stale order 25796 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:09:43  2026-03-04 21:09:43,173 - ScalpEngine - INFO - Γ£à Replaced 2 pending order(s) with updated prices/sizes
+2026-03-04 21:09:43  2026-03-04 21:09:43,173 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 1 stale pending order(s) that were too far from current market price
+2026-03-04 21:09:43  2026-03-04 21:09:43,173 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:09:43  2026-03-04 21:09:43,452 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7078450000000001, diff: 73.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:09:44  2026-03-04 21:09:44,020 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7078450000000001)
+2026-03-04 21:09:44  2026-03-04 21:09:44,176 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 2 duplicates (total: 3)
+2026-03-04 21:10:43  2026-03-04 21:10:43,022 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -4.6 pips
+2026-03-04 21:11:43  2026-03-04 21:11:43,088 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:11:43  2026-03-04 21:11:43,163 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-04 21:11:44  2026-03-04 21:11:44,095 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25798: USD/CHF SELL @ 0.7845 is 51.5 pips away from current price 0.77935 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:11:44  2026-03-04 21:11:44,175 - ScalpEngine - INFO - Γ£à Cancelled stale order 25798 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:11:44  2026-03-04 21:11:44,175 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25802: AUD/USD BUY @ 0.7005 is 72.2 pips away from current price 0.70772 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:11:44  2026-03-04 21:11:44,255 - ScalpEngine - INFO - Γ£à Cancelled stale order 25802 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:11:44  2026-03-04 21:11:44,256 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:11:44  2026-03-04 21:11:44,256 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:11:44  2026-03-04 21:11:44,493 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7077150000000001, diff: 72.2 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:11:45  2026-03-04 21:11:45,092 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7077150000000001)
+2026-03-04 21:11:45  2026-03-04 21:11:45,415 - ScalpEngine - INFO - ΓÜá∩╕Å Opportunity USD/CHF has slightly stale current_price: 0.78219 vs live 0.77934 (28.5 pips diff) - proceeding with live price
+2026-03-04 21:11:45  2026-03-04 21:11:45,416 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.7793399999999999, diff: 51.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:11:46  2026-03-04 21:11:46,005 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.7793399999999999)
+2026-03-04 21:11:46  2026-03-04 21:11:46,005 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:12:44  Γ¥î AUD_NZD @ M15: OANDA API returned HTML error page (500). Possible causes: 1) Invalid instrument name (check format: EUR_USD not EUR/USD), 2) Wrong environment (practice vs live mismatch), 3) OANDA API outage. Error: <!DOCTYPE html>
+2026-03-04 21:12:44  <html>
+2026-03-04 21:12:44  <head>
+2026-03-04 21:12:44      <meta charset="utf-8"/>
+2026-03-04 21:12:44      <title>Internal Server Error</title>
+2026-03-04 21:12:44      <meta name="viewport" content="width=device-width, initial-scale=1">
+2026-03-04 21:12:44  
+2026-03-04 21:12:44      <link rel="preload" as=
+2026-03-04 21:13:01  2026-03-04 21:13:01,588 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -4.9 pips
+2026-03-04 21:14:01  2026-03-04 21:14:01,649 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:14:02  2026-03-04 21:14:02,619 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25805: AUD/USD BUY @ 0.7005 is 73.8 pips away from current price 0.70788 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:14:02  2026-03-04 21:14:02,702 - ScalpEngine - INFO - Γ£à Cancelled stale order 25805 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:14:02  2026-03-04 21:14:02,703 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25806: USD/CHF SELL @ 0.7845 is 53.1 pips away from current price 0.77919 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:14:02  2026-03-04 21:14:02,780 - ScalpEngine - INFO - Γ£à Cancelled stale order 25806 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:14:02  2026-03-04 21:14:02,780 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:14:02  2026-03-04 21:14:02,780 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:14:03  2026-03-04 21:14:03,016 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7078800000000001, diff: 73.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:14:03  2026-03-04 21:14:03,597 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7078800000000001)
+2026-03-04 21:14:03  2026-03-04 21:14:03,922 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.779185, diff: 53.1 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:14:04  2026-03-04 21:14:04,476 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.779185)
+2026-03-04 21:14:04  2026-03-04 21:14:04,476 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:14:55  2026-03-04 21:14:55,799 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -6.3 pips
+2026-03-04 21:15:55  2026-03-04 21:15:55,860 - ScalpEngine - INFO - 
+2026-03-04 21:15:55  === Status Check #640 ===
+2026-03-04 21:15:55  2026-03-04 21:15:55,860 - ScalpEngine - INFO - Time: 21:15:55 UTC
+2026-03-04 21:15:55  2026-03-04 21:15:55,860 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 21:15:55  2026-03-04 21:15:55,860 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 21:15:55  2026-03-04 21:15:55,860 - ScalpEngine - INFO - Active Trades: 5/4
+2026-03-04 21:15:55  2026-03-04 21:15:55,860 - ScalpEngine - INFO - Pending Orders: 3
+2026-03-04 21:15:55  2026-03-04 21:15:55,860 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:15:56  2026-03-04 21:15:56,077 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 3 opportunities (timestamp: 2026-03-04T21:08:06.699058Z, no change)
+2026-03-04 21:15:56  2026-03-04 21:15:56,274 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, HIGH_VOL volatility, 3 opportunities
+2026-03-04 21:15:56  2026-03-04 21:15:56,911 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25809: AUD/USD BUY @ 0.7005 is 73.6 pips away from current price 0.70786 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:15:56  2026-03-04 21:15:56,993 - ScalpEngine - INFO - Γ£à Cancelled stale order 25809 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:15:56  2026-03-04 21:15:56,994 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25810: USD/CHF SELL @ 0.7845 is 54.4 pips away from current price 0.77906 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:15:57  2026-03-04 21:15:57,077 - ScalpEngine - INFO - Γ£à Cancelled stale order 25810 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:15:57  2026-03-04 21:15:57,077 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:15:57  2026-03-04 21:15:57,077 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:15:57  2026-03-04 21:15:57,330 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7078599999999999, diff: 73.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:15:57  2026-03-04 21:15:57,933 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7078599999999999)
+2026-03-04 21:15:58  2026-03-04 21:15:58,265 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.779055, diff: 54.4 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:15:58  2026-03-04 21:15:58,834 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.779055)
+2026-03-04 21:15:58  2026-03-04 21:15:58,835 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:16:50  2026-03-04 21:16:50,364 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -7.2 pips
+2026-03-04 21:17:50  2026-03-04 21:17:50,424 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:17:51  2026-03-04 21:17:51,407 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25813: AUD/USD BUY @ 0.7005 is 73.6 pips away from current price 0.70786 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:17:51  2026-03-04 21:17:51,489 - ScalpEngine - INFO - Γ£à Cancelled stale order 25813 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:17:51  2026-03-04 21:17:51,490 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25814: USD/CHF SELL @ 0.7845 is 54.6 pips away from current price 0.77904 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:17:51  2026-03-04 21:17:51,570 - ScalpEngine - INFO - Γ£à Cancelled stale order 25814 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:17:51  2026-03-04 21:17:51,570 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:17:51  2026-03-04 21:17:51,570 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:17:51  2026-03-04 21:17:51,817 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707865, diff: 73.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:17:52  2026-03-04 21:17:52,400 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707865)
+2026-03-04 21:17:52  2026-03-04 21:17:52,709 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.77904, diff: 54.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:17:53  2026-03-04 21:17:53,299 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.77904)
+2026-03-04 21:17:53  2026-03-04 21:17:53,299 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:18:45  2026-03-04 21:18:45,870 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -8.0 pips
+2026-03-04 21:19:45  2026-03-04 21:19:45,931 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:19:46  2026-03-04 21:19:46,929 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25800: GBP/USD BUY @ 1.3325 is 51.9 pips away from current price 1.33769 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:19:47  2026-03-04 21:19:47,008 - ScalpEngine - INFO - Γ£à Cancelled stale order 25800 - new recommendations can now be processed for GBP/USD
+2026-03-04 21:19:47  2026-03-04 21:19:47,008 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25817: AUD/USD BUY @ 0.7005 is 74.5 pips away from current price 0.70796 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:19:47  2026-03-04 21:19:47,085 - ScalpEngine - INFO - Γ£à Cancelled stale order 25817 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:19:47  2026-03-04 21:19:47,085 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25818: USD/CHF SELL @ 0.7845 is 56.5 pips away from current price 0.77885 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:19:47  2026-03-04 21:19:47,166 - ScalpEngine - INFO - Γ£à Cancelled stale order 25818 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:19:47  2026-03-04 21:19:47,166 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 3 stale pending order(s) that were too far from current market price
+2026-03-04 21:19:47  2026-03-04 21:19:47,166 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:19:47  2026-03-04 21:19:47,397 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707955, diff: 74.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:19:47  2026-03-04 21:19:47,959 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707955)
+2026-03-04 21:19:48  2026-03-04 21:19:48,217 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.3325 (current: 1.33769, diff: 51.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:19:48  2026-03-04 21:19:48,828 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.3325 (current: 1.33769)
+2026-03-04 21:19:49  2026-03-04 21:19:49,076 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.77885, diff: 56.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:19:49  2026-03-04 21:19:49,730 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.77885)
+2026-03-04 21:19:49  2026-03-04 21:19:49,731 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 processed (total: 3)
+2026-03-04 21:20:42  2026-03-04 21:20:42,953 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -9.1 pips
+2026-03-04 21:21:43  2026-03-04 21:21:43,013 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:21:44  2026-03-04 21:21:44,024 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25822: AUD/USD BUY @ 0.7005 is 73.8 pips away from current price 0.70788 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:21:44  2026-03-04 21:21:44,103 - ScalpEngine - INFO - Γ£à Cancelled stale order 25822 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:21:44  2026-03-04 21:21:44,103 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25823: GBP/USD BUY @ 1.3325 is 52.6 pips away from current price 1.33776 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:21:44  2026-03-04 21:21:44,188 - ScalpEngine - INFO - Γ£à Cancelled stale order 25823 - new recommendations can now be processed for GBP/USD
+2026-03-04 21:21:44  2026-03-04 21:21:44,188 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25824: USD/CHF SELL @ 0.7845 is 55.8 pips away from current price 0.77892 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:21:44  2026-03-04 21:21:44,265 - ScalpEngine - INFO - Γ£à Cancelled stale order 25824 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:21:44  2026-03-04 21:21:44,266 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 3 stale pending order(s) that were too far from current market price
+2026-03-04 21:21:44  2026-03-04 21:21:44,266 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:21:44  2026-03-04 21:21:44,497 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707885, diff: 73.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:21:45  2026-03-04 21:21:45,051 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707885)
+2026-03-04 21:21:45  2026-03-04 21:21:45,286 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.3325 (current: 1.337755, diff: 52.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:21:45  2026-03-04 21:21:45,850 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.3325 (current: 1.337755)
+2026-03-04 21:21:46  2026-03-04 21:21:46,085 - ScalpEngine - INFO - ΓÜá∩╕Å Opportunity USD/CHF has slightly stale current_price: 0.78219 vs live 0.77892 (32.7 pips diff) - proceeding with live price
+2026-03-04 21:21:46  2026-03-04 21:21:46,085 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.778915, diff: 55.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:21:46  2026-03-04 21:21:46,639 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.778915)
+2026-03-04 21:21:46  2026-03-04 21:21:46,639 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 processed (total: 3)
+2026-03-04 21:22:39  2026-03-04 21:22:39,055 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -10.7 pips
+2026-03-04 21:23:39  2026-03-04 21:23:39,115 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:23:40  2026-03-04 21:23:40,084 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25828: AUD/USD BUY @ 0.7005 is 74.9 pips away from current price 0.70799 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:23:40  2026-03-04 21:23:40,162 - ScalpEngine - INFO - Γ£à Cancelled stale order 25828 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:23:40  2026-03-04 21:23:40,163 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25829: GBP/USD BUY @ 1.3325 is 52.6 pips away from current price 1.33776 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:23:40  2026-03-04 21:23:40,239 - ScalpEngine - INFO - Γ£à Cancelled stale order 25829 - new recommendations can now be processed for GBP/USD
+2026-03-04 21:23:40  2026-03-04 21:23:40,239 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25830: USD/CHF SELL @ 0.7845 is 55.8 pips away from current price 0.77892 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:23:40  2026-03-04 21:23:40,316 - ScalpEngine - INFO - Γ£à Cancelled stale order 25830 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:23:40  2026-03-04 21:23:40,316 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 3 stale pending order(s) that were too far from current market price
+2026-03-04 21:23:40  2026-03-04 21:23:40,316 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:23:40  2026-03-04 21:23:40,552 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7079949999999999, diff: 74.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:23:41  2026-03-04 21:23:41,105 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7079949999999999)
+2026-03-04 21:23:41  2026-03-04 21:23:41,366 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.3325 (current: 1.337845, diff: 53.4 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:23:41  2026-03-04 21:23:41,918 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.3325 (current: 1.337845)
+2026-03-04 21:23:42  2026-03-04 21:23:42,152 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.778915, diff: 55.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:23:42  2026-03-04 21:23:42,727 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.778915)
+2026-03-04 21:23:42  2026-03-04 21:23:42,728 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 processed (total: 3)
+2026-03-04 21:24:34  2026-03-04 21:24:34,155 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -11.7 pips
+2026-03-04 21:25:34  2026-03-04 21:25:34,217 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:25:34  2026-03-04 21:25:34,427 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 3 opportunities (timestamp: 2026-03-04T21:08:06.699058Z, no change)
+2026-03-04 21:25:35  2026-03-04 21:25:35,287 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25834: AUD/USD BUY @ 0.7005 is 74.5 pips away from current price 0.70795 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:25:35  2026-03-04 21:25:35,363 - ScalpEngine - INFO - Γ£à Cancelled stale order 25834 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:25:35  2026-03-04 21:25:35,363 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25835: GBP/USD BUY @ 1.3325 is 51.8 pips away from current price 1.33768 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:25:35  2026-03-04 21:25:35,441 - ScalpEngine - INFO - Γ£à Cancelled stale order 25835 - new recommendations can now be processed for GBP/USD
+2026-03-04 21:25:35  2026-03-04 21:25:35,441 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25836: USD/CHF SELL @ 0.7845 is 54.4 pips away from current price 0.77906 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:25:35  2026-03-04 21:25:35,524 - ScalpEngine - INFO - Γ£à Cancelled stale order 25836 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:25:35  2026-03-04 21:25:35,524 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 3 stale pending order(s) that were too far from current market price
+2026-03-04 21:25:35  2026-03-04 21:25:35,524 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:25:35  2026-03-04 21:25:35,756 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7079500000000001, diff: 74.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:25:36  2026-03-04 21:25:36,341 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7079500000000001)
+2026-03-04 21:25:36  2026-03-04 21:25:36,575 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.3325 (current: 1.33769, diff: 51.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:25:37  2026-03-04 21:25:37,138 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.3325 (current: 1.33769)
+2026-03-04 21:25:37  2026-03-04 21:25:37,375 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.7790699999999999, diff: 54.3 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:25:37  2026-03-04 21:25:37,981 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.7790699999999999)
+2026-03-04 21:25:37  2026-03-04 21:25:37,982 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 processed (total: 3)
+2026-03-04 21:26:28  2026-03-04 21:26:28,829 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -10.4 pips
+2026-03-04 21:27:28  2026-03-04 21:27:28,886 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:27:29  2026-03-04 21:27:29,924 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25840: AUD/USD BUY @ 0.7005 is 74.8 pips away from current price 0.70798 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:27:30  2026-03-04 21:27:30,008 - ScalpEngine - INFO - Γ£à Cancelled stale order 25840 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:27:30  2026-03-04 21:27:30,008 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25841: GBP/USD BUY @ 1.3325 is 52.0 pips away from current price 1.33770 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:27:30  2026-03-04 21:27:30,087 - ScalpEngine - INFO - Γ£à Cancelled stale order 25841 - new recommendations can now be processed for GBP/USD
+2026-03-04 21:27:30  2026-03-04 21:27:30,087 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25842: USD/CHF SELL @ 0.7845 is 54.4 pips away from current price 0.77906 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:27:30  2026-03-04 21:27:30,167 - ScalpEngine - INFO - Γ£à Cancelled stale order 25842 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:27:30  2026-03-04 21:27:30,167 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 3 stale pending order(s) that were too far from current market price
+2026-03-04 21:27:30  2026-03-04 21:27:30,167 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:27:30  2026-03-04 21:27:30,397 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70798, diff: 74.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:27:30  2026-03-04 21:27:30,943 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70798)
+2026-03-04 21:27:31  2026-03-04 21:27:31,173 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.3325 (current: 1.337695, diff: 52.0 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:27:31  2026-03-04 21:27:31,731 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.3325 (current: 1.337695)
+2026-03-04 21:27:31  2026-03-04 21:27:31,962 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.7790699999999999, diff: 54.3 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:27:32  2026-03-04 21:27:32,537 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.7790699999999999)
+2026-03-04 21:27:32  2026-03-04 21:27:32,538 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 processed (total: 3)
+2026-03-04 21:28:24  2026-03-04 21:28:24,170 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: -12.1 pips
+2026-03-04 21:29:24  2026-03-04 21:29:24,230 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:29:25  2026-03-04 21:29:25,231 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25846: AUD/USD BUY @ 0.7005 is 74.8 pips away from current price 0.70798 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:29:25  2026-03-04 21:29:25,308 - ScalpEngine - INFO - Γ£à Cancelled stale order 25846 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:29:25  2026-03-04 21:29:25,308 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25847: GBP/USD BUY @ 1.3325 is 52.9 pips away from current price 1.33779 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:29:25  2026-03-04 21:29:25,385 - ScalpEngine - INFO - Γ£à Cancelled stale order 25847 - new recommendations can now be processed for GBP/USD
+2026-03-04 21:29:25  2026-03-04 21:29:25,385 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25848: USD/CHF SELL @ 0.7845 is 54.1 pips away from current price 0.77909 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:29:25  2026-03-04 21:29:25,464 - ScalpEngine - INFO - Γ£à Cancelled stale order 25848 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:29:25  2026-03-04 21:29:25,465 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 3 stale pending order(s) that were too far from current market price
+2026-03-04 21:29:25  2026-03-04 21:29:25,465 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:29:25  2026-03-04 21:29:25,701 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70798, diff: 74.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:29:26  2026-03-04 21:29:26,254 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70798)
+2026-03-04 21:29:26  2026-03-04 21:29:26,489 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.3325 (current: 1.33779, diff: 52.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:29:27  2026-03-04 21:29:27,055 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.3325 (current: 1.33779)
+2026-03-04 21:29:27  2026-03-04 21:29:27,289 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.779105, diff: 53.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:29:27  2026-03-04 21:29:27,838 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.779105)
+2026-03-04 21:29:27  2026-03-04 21:29:27,839 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 processed (total: 3)
+2026-03-04 21:30:20  2026-03-04 21:30:20,137 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:31:20  2026-03-04 21:31:20,198 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:31:21  2026-03-04 21:31:21,355 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25852: AUD/USD BUY @ 0.7005 is 75.2 pips away from current price 0.70802 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:31:21  2026-03-04 21:31:21,436 - ScalpEngine - INFO - Γ£à Cancelled stale order 25852 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:31:21  2026-03-04 21:31:21,436 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25853: GBP/USD BUY @ 1.3325 is 50.0 pips away from current price 1.33750 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:31:21  2026-03-04 21:31:21,518 - ScalpEngine - INFO - Γ£à Cancelled stale order 25853 - new recommendations can now be processed for GBP/USD
+2026-03-04 21:31:21  2026-03-04 21:31:21,518 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25854: USD/CHF SELL @ 0.7845 is 54.3 pips away from current price 0.77907 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:31:21  2026-03-04 21:31:21,602 - ScalpEngine - INFO - Γ£à Cancelled stale order 25854 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:31:21  2026-03-04 21:31:21,602 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 3 stale pending order(s) that were too far from current market price
+2026-03-04 21:31:21  2026-03-04 21:31:21,602 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:31:21  2026-03-04 21:31:21,852 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7080249999999999, diff: 75.2 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:31:22  2026-03-04 21:31:22,419 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7080249999999999)
+2026-03-04 21:31:22  2026-03-04 21:31:22,651 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 1.3325 (current: 1.337505, diff: 50.0 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:31:23  2026-03-04 21:31:23,195 - ScalpEngine - INFO - Γ£à Placed STOP order: GBP/USD BUY @ 1.3325 (current: 1.337505)
+2026-03-04 21:31:23  2026-03-04 21:31:23,424 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.7790600000000001, diff: 54.4 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:31:23  2026-03-04 21:31:23,992 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.7790600000000001)
+2026-03-04 21:31:23  2026-03-04 21:31:23,993 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 processed (total: 3)
+2026-03-04 21:32:23  2026-03-04 21:32:23,141 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:33:23  2026-03-04 21:33:23,202 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:33:24  2026-03-04 21:33:24,235 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25866: AUD/USD BUY @ 0.7005 is 73.5 pips away from current price 0.70785 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:33:24  2026-03-04 21:33:24,312 - ScalpEngine - INFO - Γ£à Cancelled stale order 25866 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:33:24  2026-03-04 21:33:24,313 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25868: USD/CHF SELL @ 0.7845 is 52.7 pips away from current price 0.77923 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:33:24  2026-03-04 21:33:24,393 - ScalpEngine - INFO - Γ£à Cancelled stale order 25868 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:33:24  2026-03-04 21:33:24,393 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:33:24  2026-03-04 21:33:24,393 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:33:24  2026-03-04 21:33:24,626 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70785, diff: 73.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:33:25  2026-03-04 21:33:25,183 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70785)
+2026-03-04 21:33:25  2026-03-04 21:33:25,264 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - GBP/USD BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-04 21:33:25  2026-03-04 21:33:25,495 - ScalpEngine - INFO - ΓÜá∩╕Å Opportunity USD/CHF has slightly stale current_price: 0.78219 vs live 0.77923 (29.5 pips diff) - proceeding with live price
+2026-03-04 21:33:25  2026-03-04 21:33:25,495 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.7792300000000001, diff: 52.7 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:33:26  2026-03-04 21:33:26,061 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.7792300000000001)
+2026-03-04 21:33:26  2026-03-04 21:33:26,061 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:34:18  2026-03-04 21:34:18,717 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:35:18  2026-03-04 21:35:18,777 - ScalpEngine - INFO - 
+2026-03-04 21:35:18  === Status Check #650 ===
+2026-03-04 21:35:18  2026-03-04 21:35:18,777 - ScalpEngine - INFO - Time: 21:35:18 UTC
+2026-03-04 21:35:18  2026-03-04 21:35:18,777 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 21:35:18  2026-03-04 21:35:18,777 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 21:35:18  2026-03-04 21:35:18,777 - ScalpEngine - INFO - Active Trades: 3/4
+2026-03-04 21:35:18  2026-03-04 21:35:18,777 - ScalpEngine - INFO - Pending Orders: 3
+2026-03-04 21:35:18  2026-03-04 21:35:18,777 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:35:18  2026-03-04 21:35:18,959 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 3 opportunities (timestamp: 2026-03-04T21:08:06.699058Z, no change)
+2026-03-04 21:35:19  2026-03-04 21:35:19,119 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, HIGH_VOL volatility, 3 opportunities
+2026-03-04 21:35:19  2026-03-04 21:35:19,768 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25871: AUD/USD BUY @ 0.7005 is 73.8 pips away from current price 0.70788 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:35:19  2026-03-04 21:35:19,848 - ScalpEngine - INFO - Γ£à Cancelled stale order 25871 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:35:19  2026-03-04 21:35:19,848 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25872: USD/CHF SELL @ 0.7845 is 52.4 pips away from current price 0.77926 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:35:19  2026-03-04 21:35:19,927 - ScalpEngine - INFO - Γ£à Cancelled stale order 25872 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:35:19  2026-03-04 21:35:19,927 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:35:19  2026-03-04 21:35:19,927 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:35:20  2026-03-04 21:35:20,158 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7078800000000001, diff: 73.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:35:20  2026-03-04 21:35:20,702 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7078800000000001)
+2026-03-04 21:35:21  2026-03-04 21:35:21,021 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.77925, diff: 52.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:35:21  2026-03-04 21:35:21,557 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.77925)
+2026-03-04 21:35:21  2026-03-04 21:35:21,557 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:36:06  Γ¥î GBP_JPY @ H1: OANDA API returned HTML error page (500). Possible causes: 1) Invalid instrument name (check format: EUR_USD not EUR/USD), 2) Wrong environment (practice vs live mismatch), 3) OANDA API outage. Error: <!DOCTYPE html>
+2026-03-04 21:36:06  <html>
+2026-03-04 21:36:06  <head>
+2026-03-04 21:36:06      <meta charset="utf-8"/>
+2026-03-04 21:36:06      <title>Internal Server Error</title>
+2026-03-04 21:36:06      <meta name="viewport" content="width=device-width, initial-scale=1">
+2026-03-04 21:36:06  
+2026-03-04 21:36:06      <link rel="preload" as=
+2026-03-04 21:36:46  2026-03-04 21:36:46,300 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:37:46  2026-03-04 21:37:46,361 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:37:47  2026-03-04 21:37:47,313 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25875: AUD/USD BUY @ 0.7005 is 72.7 pips away from current price 0.70777 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:37:47  2026-03-04 21:37:47,387 - ScalpEngine - INFO - Γ£à Cancelled stale order 25875 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:37:47  2026-03-04 21:37:47,387 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25876: USD/CHF SELL @ 0.7845 is 51.9 pips away from current price 0.77931 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:37:47  2026-03-04 21:37:47,464 - ScalpEngine - INFO - Γ£à Cancelled stale order 25876 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:37:47  2026-03-04 21:37:47,465 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:37:47  2026-03-04 21:37:47,465 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:37:47  2026-03-04 21:37:47,687 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70777, diff: 72.7 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:37:48  2026-03-04 21:37:48,242 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70777)
+2026-03-04 21:37:48  2026-03-04 21:37:48,546 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.779305, diff: 51.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:37:49  2026-03-04 21:37:49,078 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.779305)
+2026-03-04 21:37:49  2026-03-04 21:37:49,078 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:38:43  2026-03-04 21:38:43,095 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:39:43  2026-03-04 21:39:43,156 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:39:44  2026-03-04 21:39:44,099 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25879: AUD/USD BUY @ 0.7005 is 72.1 pips away from current price 0.70771 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:39:44  2026-03-04 21:39:44,182 - ScalpEngine - INFO - Γ£à Cancelled stale order 25879 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:39:44  2026-03-04 21:39:44,182 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25880: USD/CHF SELL @ 0.7845 is 53.2 pips away from current price 0.77918 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:39:44  2026-03-04 21:39:44,261 - ScalpEngine - INFO - Γ£à Cancelled stale order 25880 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:39:44  2026-03-04 21:39:44,262 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:39:44  2026-03-04 21:39:44,262 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:39:44  2026-03-04 21:39:44,499 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707715, diff: 72.1 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:39:45  2026-03-04 21:39:45,041 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707715)
+2026-03-04 21:39:45  2026-03-04 21:39:45,349 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.77918, diff: 53.2 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:39:45  2026-03-04 21:39:45,909 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.77918)
+2026-03-04 21:39:45  2026-03-04 21:39:45,909 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:40:43  2026-03-04 21:40:43,247 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:41:43  2026-03-04 21:41:43,307 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:41:44  2026-03-04 21:41:44,284 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25883: AUD/USD BUY @ 0.7005 is 71.8 pips away from current price 0.70768 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:41:44  2026-03-04 21:41:44,361 - ScalpEngine - INFO - Γ£à Cancelled stale order 25883 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:41:44  2026-03-04 21:41:44,361 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25884: USD/CHF SELL @ 0.7845 is 52.6 pips away from current price 0.77924 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:41:44  2026-03-04 21:41:44,438 - ScalpEngine - INFO - Γ£à Cancelled stale order 25884 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:41:44  2026-03-04 21:41:44,438 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:41:44  2026-03-04 21:41:44,438 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:41:44  2026-03-04 21:41:44,669 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70768, diff: 71.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:41:45  2026-03-04 21:41:45,219 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70768)
+2026-03-04 21:41:45  2026-03-04 21:41:45,522 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.779235, diff: 52.6 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:41:46  2026-03-04 21:41:46,078 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.779235)
+2026-03-04 21:41:46  2026-03-04 21:41:46,078 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:42:37  2026-03-04 21:42:37,409 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:43:37  2026-03-04 21:43:37,470 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:43:38  2026-03-04 21:43:38,404 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25887: AUD/USD BUY @ 0.7005 is 71.9 pips away from current price 0.70769 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:43:38  2026-03-04 21:43:38,482 - ScalpEngine - INFO - Γ£à Cancelled stale order 25887 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:43:38  2026-03-04 21:43:38,482 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25888: USD/CHF SELL @ 0.7845 is 52.9 pips away from current price 0.77921 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:43:38  2026-03-04 21:43:38,560 - ScalpEngine - INFO - Γ£à Cancelled stale order 25888 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:43:38  2026-03-04 21:43:38,560 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:43:38  2026-03-04 21:43:38,560 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:43:38  2026-03-04 21:43:38,781 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7076899999999999, diff: 71.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:43:39  2026-03-04 21:43:39,338 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7076899999999999)
+2026-03-04 21:43:39  2026-03-04 21:43:39,643 - ScalpEngine - INFO - ΓÜá∩╕Å Opportunity USD/CHF has slightly stale current_price: 0.78219 vs live 0.77921 (29.8 pips diff) - proceeding with live price
+2026-03-04 21:43:39  2026-03-04 21:43:39,643 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.77921, diff: 52.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:43:40  2026-03-04 21:43:40,180 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.77921)
+2026-03-04 21:43:40  2026-03-04 21:43:40,180 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:44:31  2026-03-04 21:44:31,091 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:45:31  2026-03-04 21:45:31,152 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:45:31  2026-03-04 21:45:31,314 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 3 opportunities (timestamp: 2026-03-04T21:08:06.699058Z, no change)
+2026-03-04 21:45:32  2026-03-04 21:45:32,103 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25891: AUD/USD BUY @ 0.7005 is 71.8 pips away from current price 0.70768 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:45:32  2026-03-04 21:45:32,185 - ScalpEngine - INFO - Γ£à Cancelled stale order 25891 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:45:32  2026-03-04 21:45:32,185 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25892: USD/CHF SELL @ 0.7845 is 53.3 pips away from current price 0.77917 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:45:32  2026-03-04 21:45:32,262 - ScalpEngine - INFO - Γ£à Cancelled stale order 25892 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:45:32  2026-03-04 21:45:32,262 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:45:32  2026-03-04 21:45:32,262 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:45:32  2026-03-04 21:45:32,486 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.707685, diff: 71.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:45:33  2026-03-04 21:45:33,025 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.707685)
+2026-03-04 21:45:33  2026-03-04 21:45:33,333 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.7791699999999999, diff: 53.3 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:45:33  2026-03-04 21:45:33,867 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.7791699999999999)
+2026-03-04 21:45:33  2026-03-04 21:45:33,868 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:46:25  2026-03-04 21:46:25,961 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:47:26  2026-03-04 21:47:26,022 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:47:26  2026-03-04 21:47:26,966 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25895: AUD/USD BUY @ 0.7005 is 72.2 pips away from current price 0.70772 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:47:27  2026-03-04 21:47:27,046 - ScalpEngine - INFO - Γ£à Cancelled stale order 25895 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:47:27  2026-03-04 21:47:27,046 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25896: USD/CHF SELL @ 0.7845 is 53.5 pips away from current price 0.77915 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:47:27  2026-03-04 21:47:27,123 - ScalpEngine - INFO - Γ£à Cancelled stale order 25896 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:47:27  2026-03-04 21:47:27,124 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:47:27  2026-03-04 21:47:27,124 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:47:27  2026-03-04 21:47:27,343 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7077249999999999, diff: 72.2 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:47:27  2026-03-04 21:47:27,902 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7077249999999999)
+2026-03-04 21:47:28  2026-03-04 21:47:28,202 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.77915, diff: 53.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:47:28  2026-03-04 21:47:28,728 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.77915)
+2026-03-04 21:47:28  2026-03-04 21:47:28,728 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:48:21  2026-03-04 21:48:21,167 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:49:21  2026-03-04 21:49:21,227 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:49:22  2026-03-04 21:49:22,214 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25899: AUD/USD BUY @ 0.7005 is 72.5 pips away from current price 0.70775 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:49:22  2026-03-04 21:49:22,295 - ScalpEngine - INFO - Γ£à Cancelled stale order 25899 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:49:22  2026-03-04 21:49:22,295 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25900: USD/CHF SELL @ 0.7845 is 52.8 pips away from current price 0.77922 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:49:22  2026-03-04 21:49:22,369 - ScalpEngine - INFO - Γ£à Cancelled stale order 25900 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:49:22  2026-03-04 21:49:22,369 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:49:22  2026-03-04 21:49:22,369 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:49:22  2026-03-04 21:49:22,590 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7077549999999999, diff: 72.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:49:23  2026-03-04 21:49:23,110 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7077549999999999)
+2026-03-04 21:49:23  2026-03-04 21:49:23,427 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.77922, diff: 52.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:49:23  2026-03-04 21:49:23,981 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.77922)
+2026-03-04 21:49:23  2026-03-04 21:49:23,981 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:50:15  2026-03-04 21:50:15,892 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:51:15  2026-03-04 21:51:15,952 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:51:16  2026-03-04 21:51:16,963 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25903: AUD/USD BUY @ 0.7005 is 72.6 pips away from current price 0.70776 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:51:17  2026-03-04 21:51:17,044 - ScalpEngine - INFO - Γ£à Cancelled stale order 25903 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:51:17  2026-03-04 21:51:17,044 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25904: USD/CHF SELL @ 0.7845 is 52.8 pips away from current price 0.77921 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:51:17  2026-03-04 21:51:17,124 - ScalpEngine - INFO - Γ£à Cancelled stale order 25904 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:51:17  2026-03-04 21:51:17,124 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:51:17  2026-03-04 21:51:17,124 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:51:17  2026-03-04 21:51:17,402 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7077549999999999, diff: 72.5 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:51:18  2026-03-04 21:51:18,009 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7077549999999999)
+2026-03-04 21:51:18  2026-03-04 21:51:18,320 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.779215, diff: 52.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:51:18  2026-03-04 21:51:18,873 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.779215)
+2026-03-04 21:51:18  2026-03-04 21:51:18,873 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:52:10  2026-03-04 21:52:10,444 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:53:10  2026-03-04 21:53:10,504 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:53:11  2026-03-04 21:53:11,507 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25907: AUD/USD BUY @ 0.7005 is 71.9 pips away from current price 0.70769 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:53:11  2026-03-04 21:53:11,583 - ScalpEngine - INFO - Γ£à Cancelled stale order 25907 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:53:11  2026-03-04 21:53:11,583 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25908: USD/CHF SELL @ 0.7845 is 52.8 pips away from current price 0.77922 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:53:11  2026-03-04 21:53:11,660 - ScalpEngine - INFO - Γ£à Cancelled stale order 25908 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:53:11  2026-03-04 21:53:11,660 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:53:11  2026-03-04 21:53:11,660 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:53:11  2026-03-04 21:53:11,884 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7076899999999999, diff: 71.9 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:53:12  2026-03-04 21:53:12,452 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7076899999999999)
+2026-03-04 21:53:12  2026-03-04 21:53:12,764 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.77922, diff: 52.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:53:13  2026-03-04 21:53:13,341 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.77922)
+2026-03-04 21:53:13  2026-03-04 21:53:13,342 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:54:04  2026-03-04 21:54:04,833 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:55:04  2026-03-04 21:55:04,893 - ScalpEngine - INFO - 
+2026-03-04 21:55:04  === Status Check #660 ===
+2026-03-04 21:55:04  2026-03-04 21:55:04,893 - ScalpEngine - INFO - Time: 21:55:04 UTC
+2026-03-04 21:55:04  2026-03-04 21:55:04,893 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 21:55:04  2026-03-04 21:55:04,893 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 21:55:04  2026-03-04 21:55:04,893 - ScalpEngine - INFO - Active Trades: 3/4
+2026-03-04 21:55:04  2026-03-04 21:55:04,893 - ScalpEngine - INFO - Pending Orders: 3
+2026-03-04 21:55:04  2026-03-04 21:55:04,894 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:55:05  2026-03-04 21:55:05,091 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 3 opportunities (timestamp: 2026-03-04T21:08:06.699058Z, no change)
+2026-03-04 21:55:05  2026-03-04 21:55:05,279 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, HIGH_VOL volatility, 3 opportunities
+2026-03-04 21:55:05  2026-03-04 21:55:05,903 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25911: AUD/USD BUY @ 0.7005 is 73.6 pips away from current price 0.70786 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:55:05  2026-03-04 21:55:05,979 - ScalpEngine - INFO - Γ£à Cancelled stale order 25911 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:55:05  2026-03-04 21:55:05,980 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25912: USD/CHF SELL @ 0.7845 is 53.7 pips away from current price 0.77913 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:55:06  2026-03-04 21:55:06,056 - ScalpEngine - INFO - Γ£à Cancelled stale order 25912 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:55:06  2026-03-04 21:55:06,056 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:55:06  2026-03-04 21:55:06,056 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:55:06  2026-03-04 21:55:06,290 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.70787, diff: 73.7 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:55:06  2026-03-04 21:55:06,830 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.70787)
+2026-03-04 21:55:07  2026-03-04 21:55:07,143 - ScalpEngine - INFO - ΓÜá∩╕Å Opportunity USD/CHF has slightly stale current_price: 0.78219 vs live 0.77913 (30.6 pips diff) - proceeding with live price
+2026-03-04 21:55:07  2026-03-04 21:55:07,143 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.77913, diff: 53.7 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:55:07  2026-03-04 21:55:07,710 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.77913)
+2026-03-04 21:55:07  2026-03-04 21:55:07,710 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:55:59  2026-03-04 21:55:59,651 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:56:59  2026-03-04 21:56:59,712 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:57:00  2026-03-04 21:57:00,657 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25915: AUD/USD BUY @ 0.7005 is 70.8 pips away from current price 0.70758 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:57:00  2026-03-04 21:57:00,736 - ScalpEngine - INFO - Γ£à Cancelled stale order 25915 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:57:00  2026-03-04 21:57:00,737 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25916: USD/CHF SELL @ 0.7845 is 53.0 pips away from current price 0.77920 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:57:00  2026-03-04 21:57:00,810 - ScalpEngine - INFO - Γ£à Cancelled stale order 25916 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:57:00  2026-03-04 21:57:00,811 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:57:00  2026-03-04 21:57:00,811 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:57:01  2026-03-04 21:57:01,043 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7005 (current: 0.7075750000000001, diff: 70.8 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:57:01  2026-03-04 21:57:01,585 - ScalpEngine - INFO - Γ£à Placed STOP order: AUD/USD BUY @ 0.7005 (current: 0.7075750000000001)
+2026-03-04 21:57:01  2026-03-04 21:57:01,884 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.7845 (current: 0.7791950000000001, diff: 53.0 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 3/3
+2026-03-04 21:57:02  2026-03-04 21:57:02,420 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.7845 (current: 0.7791950000000001)
+2026-03-04 21:57:02  2026-03-04 21:57:02,421 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 processed, 1 duplicates (total: 3)
+2026-03-04 21:57:53  2026-03-04 21:57:53,446 - ScalpEngine - INFO - ≡ƒôê Active: 3/4, Unrealized: 0.0 pips
+2026-03-04 21:58:53  2026-03-04 21:58:53,506 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 21:58:53  2026-03-04 21:58:53,718 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 4 opportunities (timestamp: 2026-03-04T21:58:24.525657Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 21:58:54  2026-03-04 21:58:54,536 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 25867: GBP/USD BUY @ 1.3325 ΓåÆ 1.3325 (stop loss changed (5+ pips))
+2026-03-04 21:58:55  2026-03-04 21:58:55,084 - ScalpEngine - INFO - Γ£à Replaced pending order 25867 - new order placed for GBP/USD BUY @ 1.3325
+2026-03-04 21:58:55  2026-03-04 21:58:55,084 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25919: AUD/USD BUY @ 0.7005 is 71.2 pips away from current price 0.70762 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:58:55  2026-03-04 21:58:55,160 - ScalpEngine - INFO - Γ£à Cancelled stale order 25919 - new recommendations can now be processed for AUD/USD
+2026-03-04 21:58:55  2026-03-04 21:58:55,160 - ScalpEngine - WARNING - ≡ƒùæ∩╕Å Cancelling stale pending order 25920: USD/CHF SELL @ 0.7845 is 53.4 pips away from current price 0.77916 (threshold: 50.0 pips). Order is unlikely to fill.
+2026-03-04 21:58:55  2026-03-04 21:58:55,245 - ScalpEngine - INFO - Γ£à Cancelled stale order 25920 - new recommendations can now be processed for USD/CHF
+2026-03-04 21:58:55  2026-03-04 21:58:55,245 - ScalpEngine - INFO - Γ£à Replaced 1 pending order(s) with updated prices/sizes
+2026-03-04 21:58:55  2026-03-04 21:58:55,245 - ScalpEngine - INFO - ≡ƒùæ∩╕Å Cancelled 2 stale pending order(s) that were too far from current market price
+2026-03-04 21:58:55  2026-03-04 21:58:55,246 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 21:58:55  2026-03-04 21:58:55,396 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY @ 0.7005: None of the required LLMs ['gemini'] are in consensus (sources: ['chatgpt', 'claude']) (consensus: 2, sources: ['chatgpt', 'claude'])
+2026-03-04 21:58:55  2026-03-04 21:58:55,711 - ScalpEngine - INFO - ≡ƒÄ» HYBRID MODE: Placing STOP order @ 0.783 (current: 0.7791600000000001, diff: 38.4 pips) AND monitoring MACD crossover - whichever triggers first, Consensus: 4/4
+2026-03-04 21:58:56  2026-03-04 21:58:56,258 - ScalpEngine - INFO - Γ£à Placed STOP order: USD/CHF SELL @ 0.783 (current: 0.7791600000000001)
+2026-03-04 21:58:56  2026-03-04 21:58:56,404 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL @ 110.5: Consensus level 1 < minimum 2 (consensus: 1, sources: ['deepseek'])
+2026-03-04 21:58:56  2026-03-04 21:58:56,409 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 processed, 1 duplicates, 2 failed validation (total: 4)
+2026-03-04 21:59:48  2026-03-04 21:59:48,308 - ScalpEngine - INFO - ≡ƒôê Active: 2/4, Unrealized: 0.0 pips

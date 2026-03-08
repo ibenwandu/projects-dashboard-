@@ -1,0 +1,1000 @@
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Normalized: pair_clean='USDJPY', pair_with_slash='USD/JPY', direction_upper='SELL'
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 5 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on USD/JPY SELL (matched: USD/JPY SELL)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/JPY SELL:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for USD/JPY SELL: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/JPY SELL:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for GBP/USD SELL
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Input: pair='GBP/USD', direction='SELL'
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Normalized: pair_clean='GBPUSD', pair_with_slash='GBP/USD', direction_upper='SELL'
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 5 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on GBP/USD SELL (matched: GBP/USD SELL)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/USD SELL:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    all sources: ['claude', 'synthesis'] (count: 2)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/USD SELL: 1/4 (sources: ['claude'], all sources: ['claude', 'synthesis'])
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/USD SELL:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources: ['claude', 'synthesis']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources count: 2
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for AUD/JPY SELL
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Input: pair='AUD/JPY', direction='SELL'
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Normalized: pair_clean='AUDJPY', pair_with_slash='AUD/JPY', direction_upper='SELL'
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 5 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on AUD/JPY SELL (matched: AUD/JPY SELL)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for AUD/JPY SELL:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for AUD/JPY SELL: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for AUD/JPY SELL:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/CHF BUY
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Input: pair='USD/CHF', direction='BUY'
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Normalized: pair_clean='USDCHF', pair_with_slash='USD/CHF', direction_upper='BUY'
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 5 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on USD/CHF BUY (matched: USD/CHF BUY)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/CHF BUY:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for USD/CHF BUY: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/CHF BUY:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for EUR/USD SELL
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Input: pair='EUR/USD', direction='SELL'
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Normalized: pair_clean='EURUSD', pair_with_slash='EUR/USD', direction_upper='SELL'
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 2 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 5 opportunities
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on EUR/USD SELL (matched: EUR/USD SELL)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for EUR/USD SELL:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for EUR/USD SELL: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for EUR/USD SELL:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒöì [MARKET-STATE-DEBUG] Writing 9 opportunities to market state:
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Opp #0: GBP/USD BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Opp #1: USD/JPY BUY - consensus_level=2, llm_sources=['chatgpt', 'gemini', 'synthesis']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Opp #2: AUD/JPY BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Opp #3: GBP/JPY BUY - consensus_level=1, llm_sources=['gemini']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Opp #4: USD/JPY SELL - consensus_level=1, llm_sources=['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Opp #5: GBP/USD SELL - consensus_level=1, llm_sources=['claude', 'synthesis']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Opp #6: AUD/JPY SELL - consensus_level=1, llm_sources=['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Opp #7: USD/CHF BUY - consensus_level=1, llm_sources=['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Opp #8: EUR/USD SELL - consensus_level=1, llm_sources=['claude']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Attempting to export market state to /var/data/market_state.json
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Market State exported to /var/data/market_state.json
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Bias: BULLISH, Regime: NORMAL, Pairs: ['GBP/USD', 'AUD/JPY', 'USD/CHF', 'USD/JPY', 'GBP/JPY', 'EUR/USD']
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Sending market state to API: https://market-state-api.onrender.com/market-state
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Market state sent to API successfully
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    API response: Market state saved successfully
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Market state exported for Scalp-Engine
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO -    Exported state: 9 opportunities, bias=BULLISH, regime=NORMAL
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Full analysis workflow completed
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - Γ£à Analysis completed successfully at 09:55:49 EST
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY BUY @ 211.0 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 157.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/JPY SELL @ 111.7 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/CHF BUY @ 0.779 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 14:59:23  2026-03-03 14:59:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD SELL @ 1.156 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:00:23  2026-03-03 15:00:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/JPY BUY @ 111.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:01:24  2026-03-03 15:01:24 - trade_alerts - INFO - 
+2026-03-03 15:01:24  ================================================================================
+2026-03-03 15:01:24  2026-03-03 15:01:24 - trade_alerts - INFO - === Scheduled Analysis Time: 2026-03-03 10:01:24 EST (EST/EDT) ===
+2026-03-03 15:01:24  2026-03-03 15:01:24 - trade_alerts - INFO - ================================================================================
+2026-03-03 15:01:24  2026-03-03 15:01:24 - trade_alerts - INFO - Starting analysis workflow with RL integration...
+2026-03-03 15:01:24  2026-03-03 15:01:24 - trade_alerts - INFO - Step 1: Reading data from Google Drive...
+2026-03-03 15:01:35  2026-03-03 15:01:35 - trade_alerts - INFO - Found 3301 files in folder
+2026-03-03 15:01:36  2026-03-03 15:01:36 - trade_alerts - INFO - Downloaded forex_trends_summary_20260303_142347.txt
+2026-03-03 15:01:37  2026-03-03 15:01:37 - trade_alerts - INFO - Downloaded forex_trends_summary_20260303_132330.txt
+2026-03-03 15:01:38  2026-03-03 15:01:38 - trade_alerts - INFO - Downloaded forex_trends_summary_20260303_122313.txt
+2026-03-03 15:01:38  2026-03-03 15:01:38 - trade_alerts - INFO - Downloaded 3 files
+2026-03-03 15:01:38  2026-03-03 15:01:38 - trade_alerts - INFO - Step 2: Formatting data for LLMs...
+2026-03-03 15:01:38  2026-03-03 15:01:38 - trade_alerts - INFO - Step 3: Running LLM analysis...
+2026-03-03 15:01:38  2026-03-03 15:01:38 - trade_alerts - INFO - Starting LLM analysis at 2026-03-03 10:01:38 EST (EST/EDT)
+2026-03-03 15:01:38  2026-03-03 15:01:38 - trade_alerts - INFO - Running ChatGPT analysis...
+2026-03-03 15:02:00  2026-03-03 15:02:00 - trade_alerts - INFO - Γ£à ChatGPT analysis completed
+2026-03-03 15:02:00  2026-03-03 15:02:00 - trade_alerts - INFO - Running Gemini analysis...
+2026-03-03 15:02:00  2026-03-03 15:02:00 - trade_alerts - INFO - Available Gemini models: 32 found
+2026-03-03 15:02:00  2026-03-03 15:02:00 - trade_alerts - INFO - First 5: ['models/gemini-2.5-flash', 'models/gemini-2.5-pro', 'models/gemini-2.0-flash', 'models/gemini-2.0-flash-001', 'models/gemini-2.0-flash-exp-image-generation']
+2026-03-03 15:02:00  2026-03-03 15:02:00 - trade_alerts - INFO - Trying 5 Gemini models from available list...
+2026-03-03 15:02:01  2026-03-03 15:02:01 - trade_alerts - INFO - Γ£à Found working Gemini model: models/gemini-2.5-pro
+2026-03-03 15:02:43  2026-03-03 15:02:43 - trade_alerts - INFO - Γ£à Gemini analysis completed (model: models/gemini-2.5-pro)
+2026-03-03 15:02:43  2026-03-03 15:02:43 - trade_alerts - INFO - Running Claude analysis...
+2026-03-03 15:03:03  2026-03-03 15:03:03 - trade_alerts - WARNING - Trying claude-sonnet-4-20250514
+2026-03-03 15:03:25  2026-03-03 15:03:25 - trade_alerts - INFO - Γ£à Successfully used claude-sonnet-4-20250514
+2026-03-03 15:03:25  2026-03-03 15:03:25 - trade_alerts - INFO - Γ£à Claude analysis completed
+2026-03-03 15:03:25  2026-03-03 15:03:25 - trade_alerts - INFO - Running DeepSeek analysis...
+2026-03-03 15:04:36  2026-03-03 15:04:36 - trade_alerts - INFO - Γ£à DeepSeek analysis completed
+2026-03-03 15:04:36  2026-03-03 15:04:36 - trade_alerts - INFO - Completed 4/4 LLM analyses
+2026-03-03 15:04:36  2026-03-03 15:04:36 - trade_alerts - INFO - Γ£à CHATGPT analysis completed successfully
+2026-03-03 15:04:36  2026-03-03 15:04:36 - trade_alerts - INFO - Γ£à GEMINI analysis completed successfully
+2026-03-03 15:04:36  2026-03-03 15:04:36 - trade_alerts - INFO - Γ£à CLAUDE analysis completed successfully
+2026-03-03 15:04:36  2026-03-03 15:04:36 - trade_alerts - INFO - Γ£à DEEPSEEK analysis completed successfully
+2026-03-03 15:04:36  2026-03-03 15:04:36 - trade_alerts - INFO - Step 3.5: Fetching current live prices...
+2026-03-03 15:04:37  2026-03-03 15:04:37 - trade_alerts - INFO - Γ£à Fetched 26 current prices for synthesis
+2026-03-03 15:04:37  2026-03-03 15:04:37 - trade_alerts - INFO - Step 4: Synthesizing with Gemini...
+2026-03-03 15:04:39  2026-03-03 15:04:39 - trade_alerts - INFO - Γ£à Found working Gemini model for synthesis: models/gemini-2.5-pro
+2026-03-03 15:05:11  2026-03-03 15:05:11 - trade_alerts - INFO - Γ£à Gemini synthesis completed (model: models/gemini-2.5-pro)
+2026-03-03 15:05:11  2026-03-03 15:05:11 - trade_alerts - INFO - Step 5 (NEW): Enhancing recommendations with RL insights...
+2026-03-03 15:05:16  2026-03-03 15:05:16 - trade_alerts - INFO - ≡ƒôè Calculating LLM weights from database...
+2026-03-03 15:05:16  2026-03-03 15:05:16 - trade_alerts - INFO -    chatgpt: 48 evaluated recommendations (total: 67)
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO -    gemini: 3211 evaluated recommendations (total: 3275)
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO -    claude: 76 evaluated recommendations (total: 80)
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO -    synthesis: 6363 evaluated recommendations (total: 6541)
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO -    deepseek: 0 evaluated recommendations (total: 0)
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO -    deepseek: Only 0 evaluated recommendations (need 5+) - using default 0.25
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO - ≡ƒôè Calculated LLM weights: {'chatgpt': np.float64(0.199271467575377), 'gemini': np.float64(0.2603269504119028), 'claude': np.float64(0.11865186164715799), 'synthesis': np.float64(0.26805676133064027), 'deepseek': np.float64(0.15369295903492192)}
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO - Step 6: Sending enhanced recommendations email...
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO - Preparing to send email to rockforexx@gmail.com...
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO - Email contains 4/3 LLM recommendations + Gemini final
+2026-03-03 15:05:17  2026-03-03 15:05:17 - trade_alerts - INFO - Connecting to SMTP server smtp.gmail.com:587...
+2026-03-03 15:05:20  2026-03-03 15:05:20 - trade_alerts - INFO - Γ£à Email sent successfully to rockforexx@gmail.com
+2026-03-03 15:05:20  2026-03-03 15:05:20 - trade_alerts - INFO -    Subject: Forex Trading Recommendations - 2026-03-03 15:05
+2026-03-03 15:05:20  2026-03-03 15:05:20 - trade_alerts - INFO - Step 7 (NEW): Logging recommendations to RL database...
+2026-03-03 15:05:20  2026-03-03 15:05:20 - trade_alerts - WARNING - No pattern matches found for CHATGPT. Text preview (first 500 chars): ### Forex Trading Recommendations for March 3, 2026
+2026-03-03 15:05:20  
+2026-03-03 15:05:20  **Currency Pair 1: GBP/USD**  
+2026-03-03 15:05:20  - **Current Price:** 1.34066  
+2026-03-03 15:05:20  - **TIMEFRAME CLASSIFICATION:** SWING  
+2026-03-03 15:05:20  - **Entry Price:** 1.34200  
+2026-03-03 15:05:20  - **Exit/Target Price:** 1.35200  
+2026-03-03 15:05:20  - **Stop Loss:** 1.33500  
+2026-03-03 15:05:20  - **Position Sizing:** Risk 1.5% of account balance  
+2026-03-03 15:05:20  - **Rationale:** The recent news from the Google Drive indicates a finely balanced situation regarding the Bank of England's (BoE) potential rate cut, which implies volatility for the GBP. Additionall
+2026-03-03 15:05:20  2026-03-03 15:05:20 - trade_alerts - INFO - Γ£à Added recommendation: AUDUSD SHORT @ 0.711 SL:0.718 TP1:0.695 TP2:None
+2026-03-03 15:05:20  2026-03-03 15:05:20 - trade_alerts - INFO - Γ£à Added recommendation: USDZAR SHORT @ 16.07 SL:15.79 TP1:16.6 TP2:None
+2026-03-03 15:05:20  2026-03-03 15:05:20 - trade_alerts - INFO - Γ£à Added recommendation: AUDUSD SHORT @ 0.711 SL:0.718 TP1:0.695 TP2:None
+2026-03-03 15:05:20  2026-03-03 15:05:20 - trade_alerts - INFO - Γ£à Added recommendation: USDZAR LONG @ 16.07 SL:15.79 TP1:16.6 TP2:None
+2026-03-03 15:05:20  2026-03-03 15:05:20 - trade_alerts - INFO - Γ£à Added recommendation: GBPJPY SHORT @ 211.0 SL:211.45 TP1:210.6 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for AUD/USD: Recommended=0.71006, Live=0.69661 (diff: 134.5 pips, 1.93%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - ≡ƒöº Updated current_price for AUDUSD: 0.71006 ΓåÆ 0.69661 (corrected from historical data)
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/ZAR: Recommended=16.08174, Live=16.07388 (diff: 78.6 pips, 0.05%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDZAR: 16.08174 ΓåÆ 16.07388 (corrected from historical data)
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for AUD/USD: Recommended=0.71006, Live=0.69661 (diff: 134.5 pips, 1.93%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - ≡ƒöº Updated current_price for AUDUSD: 0.71006 ΓåÆ 0.69661 (corrected from historical data)
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/ZAR: Recommended=16.08174, Live=16.07388 (diff: 78.6 pips, 0.05%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDZAR: 16.08174 ΓåÆ 16.07388 (corrected from historical data)
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - WARNING - ΓÜá∩╕Å  Unrealistic entry price for GBPJPY: Entry=211.00000, Current=209.89800, Distance=110.2 pips (0.53%). Reason: Entry price too far from current: 110.2 pips (0.53%) away. Max allowed: 50 pips (0.5%)
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for GBP/JPY: Recommended=211.18900, Live=209.89550 (diff: 129.4 pips, 0.62%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - ≡ƒöº Updated current_price for GBPJPY: 211.18900 ΓåÆ 209.89550 (corrected from historical data)
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - WARNING - No pattern matches found for CLAUDE. Text preview (first 500 chars): Based on my analysis of both the Google Drive forex tracker data and current market conditions as of March 3, 2026, I've identified several key trading opportunities driven by geopolitical tensions and central bank policy expectations.
+2026-03-03 15:05:22  
+2026-03-03 15:05:22  ## KEY MARKET DRIVERS
+2026-03-03 15:05:22  
+2026-03-03 15:05:22  **From Google Drive Data:**
+2026-03-03 15:05:22  - US-Iran conflict escalation creating safe-haven flows
+2026-03-03 15:05:22  - BoE March rate cut increasingly likely according to Nomura and TD Securities
+2026-03-03 15:05:22  - BoJ rate hike expectations being pushed back due to geopolitical uncertaint
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: USDJPY SHORT @ 157.3 SL:156.5 TP1:159.0 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: GBPJPY SHORT @ 211.2 SL:211.75 TP1:210.4 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: USDJPY LONG @ 157.3 SL:156.5 TP1:159.0 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: GBPJPY SHORT @ 211.2 SL:211.75 TP1:210.4 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: AUDUSD SHORT @ 0.7105 SL:0.718 TP1:0.695 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: USDJPY LONG @ 157.3 SL:156.5 TP1:159.0 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: GBPJPY SHORT @ 211.2 SL:211.75 TP1:210.4 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: AUDUSD SHORT @ 0.7105 SL:0.718 TP1:0.695 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: USDJPY LONG @ 157.3 SL:156.5 TP1:159.0 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: GBPJPY SHORT @ 211.2 SL:211.75 TP1:210.4 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - Γ£à Added recommendation: AUDUSD SHORT @ 0.7105 SL:0.718 TP1:0.695 TP2:None
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/JPY: Recommended=157.46100, Live=157.76000 (diff: 29.9 pips, 0.19%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:22  2026-03-03 15:05:22 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDJPY: 157.46100 ΓåÆ 157.76000 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Unrealistic entry price for GBPJPY: Entry=211.20000, Current=209.89800, Distance=130.2 pips (0.62%). Reason: Entry price too far from current: 130.2 pips (0.62%) away. Max allowed: 50 pips (0.5%)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for GBP/JPY: Recommended=211.18900, Live=209.89550 (diff: 129.4 pips, 0.62%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for GBPJPY: 211.18900 ΓåÆ 209.89550 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/JPY: Recommended=157.46100, Live=157.76000 (diff: 29.9 pips, 0.19%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDJPY: 157.46100 ΓåÆ 157.76000 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Unrealistic entry price for GBPJPY: Entry=211.20000, Current=209.89800, Distance=130.2 pips (0.62%). Reason: Entry price too far from current: 130.2 pips (0.62%) away. Max allowed: 50 pips (0.5%)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for GBP/JPY: Recommended=211.18900, Live=209.89550 (diff: 129.4 pips, 0.62%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for GBPJPY: 211.18900 ΓåÆ 209.89550 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for AUD/USD: Recommended=0.71006, Live=0.69661 (diff: 134.5 pips, 1.93%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for AUDUSD: 0.71006 ΓåÆ 0.69661 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/JPY: Recommended=157.46100, Live=157.76000 (diff: 29.9 pips, 0.19%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDJPY: 157.46100 ΓåÆ 157.76000 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Unrealistic entry price for GBPJPY: Entry=211.20000, Current=209.89800, Distance=130.2 pips (0.62%). Reason: Entry price too far from current: 130.2 pips (0.62%) away. Max allowed: 50 pips (0.5%)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for GBP/JPY: Recommended=211.18900, Live=209.89550 (diff: 129.4 pips, 0.62%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for GBPJPY: 211.18900 ΓåÆ 209.89550 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for AUD/USD: Recommended=0.71006, Live=0.69661 (diff: 134.5 pips, 1.93%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for AUDUSD: 0.71006 ΓåÆ 0.69661 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/JPY: Recommended=157.46100, Live=157.76000 (diff: 29.9 pips, 0.19%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDJPY: 157.46100 ΓåÆ 157.76000 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Unrealistic entry price for GBPJPY: Entry=211.20000, Current=209.89800, Distance=130.2 pips (0.62%). Reason: Entry price too far from current: 130.2 pips (0.62%) away. Max allowed: 50 pips (0.5%)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for GBP/JPY: Recommended=211.18900, Live=209.89550 (diff: 129.4 pips, 0.62%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for GBPJPY: 211.18900 ΓåÆ 209.89550 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for AUD/USD: Recommended=0.71006, Live=0.69661 (diff: 134.5 pips, 1.93%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for AUDUSD: 0.71006 ΓåÆ 0.69661 (corrected from historical data)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Logged 8 recommendations for future learning (deduplicated: 8, unrealistic: 2)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Step 8: Extracting entry/exit points from all LLMs...
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Parsing CHATGPT recommendations...
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôï Parsed 3 opportunities from JSON code block
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Parsed CHATGPT: 3 opportunities, pairs: [GBP/USD, USD/JPY, AUD/JPY]
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Parsing GEMINI recommendations...
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôï Parsed 3 opportunities from MACHINE_READABLE JSON block
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Parsed GEMINI: 3 opportunities, pairs: [AUD/USD, USD/ZAR, GBP/JPY]
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Parsing CLAUDE recommendations...
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôï Parsed 4 opportunities from MACHINE_READABLE JSON block
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Parsed CLAUDE: 4 opportunities, pairs: [USD/JPY, GBP/USD, GBP/JPY, AUD/JPY]
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Parsing DEEPSEEK recommendations...
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - WARNING - ΓÜá∩╕Å Parser found 0 pattern matches. Text preview (first 500 chars): ## **Forex Market Analysis & Trading Recommendations**
+2026-03-03 15:05:23  **Analysis Date:** 2026-03-03 | **Time (EST):** 10:01 AM
+2026-03-03 15:05:23  
+2026-03-03 15:05:23  ### **Executive Summary**
+2026-03-03 15:05:23  The market is dominated by two primary, interconnected themes: **geopolitical risk escalation** (US-Iran conflict) and **central bank policy divergence**. The Google Drive data highlights significant pressure on the Japanese Yen (JPY) and British Pound (GBP), while my own research confirms these trends are active and being driven by fresh, high-impact news. T
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    DeepSeek: 0 opportunities parsed. If DeepSeek output format differs (narrative vs JSON), request MACHINE_READABLE JSON in the prompt or see Scalp-Engine USER_GUIDE ┬º13.
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Parsing SYNTHESIS recommendations...
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì Deduplication: Removed 9 duplicate(s) from 12 matches ΓåÆ 3 unique opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Parsed SYNTHESIS: 3 opportunities, pairs: [USD/JPY, GBP/JPY, AUD/USD]
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - MarketBridge initialized with shared disk path: /var/data/market_state.json
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - MarketBridge API configured: https://market-state-api.onrender.com/market-state
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Merged opportunities: 7 unique pairs (from 13 total recommendations). Per-LLM: chatgpt: 1, claude: 3, gemini: 2, synthesis: 1
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Merged 7 unique opportunities from all LLMs
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Step 9 (NEW): Exporting market state for Scalp-Engine...
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - MarketBridge initialized with shared disk path: /var/data/market_state.json
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - MarketBridge API configured: https://market-state-api.onrender.com/market-state
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Global Bias (USD-Normalized): BULLISH (USD Bullish: 4, USD Bearish: 1, Non-USD: 2, Total: 7)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Consensus calculation: 7 merged opportunities to analyze
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    chatgpt: 3 parsed opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    gemini: 3 parsed opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    claude: 4 parsed opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    synthesis: 3 parsed opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for GBP/USD BUY
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Input: pair='GBP/USD', direction='BUY'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Normalized: pair_clean='GBPUSD', pair_with_slash='GBP/USD', direction_upper='BUY'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on GBP/USD BUY (matched: GBP/USD BUY)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/USD BUY:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base_llm_sources: ['chatgpt'] (count: 1)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all sources: ['chatgpt'] (count: 1)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/USD BUY: 1/4 (sources: ['chatgpt'], all sources: ['chatgpt'])
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/USD BUY:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources: ['chatgpt']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/JPY BUY
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Input: pair='USD/JPY', direction='BUY'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Normalized: pair_clean='USDJPY', pair_with_slash='USD/JPY', direction_upper='BUY'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on USD/JPY BUY (matched: USD/JPY BUY)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['chatgpt', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['chatgpt', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on USD/JPY BUY (matched: USD/JPY BUY)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/JPY BUY:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base_llm_sources: ['chatgpt', 'claude'] (count: 2)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all sources: ['chatgpt', 'claude', 'synthesis'] (count: 3)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 2/4
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Consensus for USD/JPY BUY: 2/4 (sources: ['chatgpt', 'claude'], all sources: ['chatgpt', 'claude', 'synthesis'])
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/JPY BUY:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 2
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources: ['chatgpt', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources count: 3
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for AUD/JPY BUY
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Input: pair='AUD/JPY', direction='BUY'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Normalized: pair_clean='AUDJPY', pair_with_slash='AUD/JPY', direction_upper='BUY'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on AUD/JPY BUY (matched: AUD/JPY BUY)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['chatgpt', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['chatgpt', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on AUD/JPY BUY (matched: AUD/JPY BUY)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for AUD/JPY BUY:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base_llm_sources: ['chatgpt', 'claude'] (count: 2)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all sources: ['chatgpt', 'claude'] (count: 2)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 2/4
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Consensus for AUD/JPY BUY: 2/4 (sources: ['chatgpt', 'claude'], all sources: ['chatgpt', 'claude'])
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for AUD/JPY BUY:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 2
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources: ['chatgpt', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources count: 2
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for AUD/USD SELL
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Input: pair='AUD/USD', direction='SELL'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Normalized: pair_clean='AUDUSD', pair_with_slash='AUD/USD', direction_upper='SELL'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [gemini] MATCHED! Added to base_llm_sources. Current: ['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [gemini] Added to sources. Current: ['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on AUD/USD SELL (matched: AUD/USD SELL)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for AUD/USD SELL:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base_llm_sources: ['gemini'] (count: 1)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all sources: ['gemini', 'synthesis'] (count: 2)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Consensus for AUD/USD SELL: 1/4 (sources: ['gemini'], all sources: ['gemini', 'synthesis'])
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for AUD/USD SELL:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources: ['gemini', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources count: 2
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/ZAR BUY
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Input: pair='USD/ZAR', direction='BUY'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Normalized: pair_clean='USDZAR', pair_with_slash='USD/ZAR', direction_upper='BUY'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [gemini] MATCHED! Added to base_llm_sources. Current: ['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [gemini] Added to sources. Current: ['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on USD/ZAR BUY (matched: USD/ZAR BUY)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/ZAR BUY:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base_llm_sources: ['gemini'] (count: 1)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all sources: ['gemini'] (count: 1)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Consensus for USD/ZAR BUY: 1/4 (sources: ['gemini'], all sources: ['gemini'])
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/ZAR BUY:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources: ['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for GBP/JPY SELL
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Input: pair='GBP/JPY', direction='SELL'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Normalized: pair_clean='GBPJPY', pair_with_slash='GBP/JPY', direction_upper='SELL'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [gemini] MATCHED! Added to base_llm_sources. Current: ['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [gemini] Added to sources. Current: ['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on GBP/JPY SELL (matched: GBP/JPY SELL)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['gemini', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['gemini', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on GBP/JPY SELL (matched: GBP/JPY SELL)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/JPY SELL:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base_llm_sources: ['gemini', 'claude'] (count: 2)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all sources: ['gemini', 'claude', 'synthesis'] (count: 3)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 2/4
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/JPY SELL: 2/4 (sources: ['gemini', 'claude'], all sources: ['gemini', 'claude', 'synthesis'])
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/JPY SELL:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 2
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources: ['gemini', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources count: 3
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['gemini', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for GBP/USD SELL
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Input: pair='GBP/USD', direction='SELL'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Normalized: pair_clean='GBPUSD', pair_with_slash='GBP/USD', direction_upper='SELL'
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on GBP/USD SELL (matched: GBP/USD SELL)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/USD SELL:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/USD SELL: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/USD SELL:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒöì [MARKET-STATE-DEBUG] Writing 7 opportunities to market state:
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Opp #0: GBP/USD BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Opp #1: USD/JPY BUY - consensus_level=2, llm_sources=['chatgpt', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Opp #2: AUD/JPY BUY - consensus_level=2, llm_sources=['chatgpt', 'claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Opp #3: AUD/USD SELL - consensus_level=1, llm_sources=['gemini', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Opp #4: USD/ZAR BUY - consensus_level=1, llm_sources=['gemini']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Opp #5: GBP/JPY SELL - consensus_level=2, llm_sources=['gemini', 'claude', 'synthesis']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Opp #6: GBP/USD SELL - consensus_level=1, llm_sources=['claude']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Attempting to export market state to /var/data/market_state.json
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Market State exported to /var/data/market_state.json
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Bias: BULLISH, Regime: HIGH_VOL, Pairs: ['GBP/USD', 'AUD/JPY', 'USD/JPY', 'GBP/JPY', 'AUD/USD', 'USD/ZAR']
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Sending market state to API: https://market-state-api.onrender.com/market-state
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Market state sent to API successfully
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    API response: Market state saved successfully
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Market state exported for Scalp-Engine
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO -    Exported state: 7 opportunities, bias=BULLISH, regime=HIGH_VOL
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Full analysis workflow completed
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - Γ£à Analysis completed successfully at 10:01:24 EST
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.342 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/USD SELL @ 0.711 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.07 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:05:23  2026-03-03 15:05:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 211.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:07:23  2026-03-03 15:07:23 - trade_alerts - INFO - ≡ƒöä Loop check #766 - 10:07:23 EST
+2026-03-03 15:10:24  2026-03-03 15:10:24 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/JPY BUY @ 111.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:11:24  2026-03-03 15:11:24 - trade_alerts - INFO - 
+2026-03-03 15:11:24  === Status Check #770 ===
+2026-03-03 15:11:24  2026-03-03 15:11:24 - trade_alerts - INFO - Current time: 10:11:24 EST (EST/EDT)
+2026-03-03 15:11:24  2026-03-03 15:11:24 - trade_alerts - INFO - Active opportunities: 7
+2026-03-03 15:11:24  2026-03-03 15:11:24 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 12%, synthesis: 27%, deepseek: 15%
+2026-03-03 15:11:24  2026-03-03 15:11:24 - trade_alerts - INFO - Next analysis at: 11:00 EST (in 48 minutes)
+2026-03-03 15:12:24  2026-03-03 15:12:24 - trade_alerts - INFO - ≡ƒöä Loop check #771 - 10:12:24 EST
+2026-03-03 15:15:25  2026-03-03 15:15:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.342 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:15:25  2026-03-03 15:15:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:15:25  2026-03-03 15:15:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/USD SELL @ 0.711 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:15:25  2026-03-03 15:15:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.07 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:15:25  2026-03-03 15:15:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 211.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:17:25  2026-03-03 15:17:25 - trade_alerts - INFO - ≡ƒöä Loop check #776 - 10:17:25 EST
+2026-03-03 15:20:26  2026-03-03 15:20:26 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/JPY BUY @ 111.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:21:26  2026-03-03 15:21:26 - trade_alerts - INFO - 
+2026-03-03 15:21:26  === Status Check #780 ===
+2026-03-03 15:21:26  2026-03-03 15:21:26 - trade_alerts - INFO - Current time: 10:21:26 EST (EST/EDT)
+2026-03-03 15:21:26  2026-03-03 15:21:26 - trade_alerts - INFO - Active opportunities: 7
+2026-03-03 15:21:26  2026-03-03 15:21:26 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 12%, synthesis: 27%, deepseek: 15%
+2026-03-03 15:21:26  2026-03-03 15:21:26 - trade_alerts - INFO - Next analysis at: 11:00 EST (in 38 minutes)
+2026-03-03 15:22:26  2026-03-03 15:22:26 - trade_alerts - INFO - ≡ƒöä Loop check #781 - 10:22:26 EST
+2026-03-03 15:25:27  2026-03-03 15:25:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.342 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:25:27  2026-03-03 15:25:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:25:27  2026-03-03 15:25:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/USD SELL @ 0.711 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:25:27  2026-03-03 15:25:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.07 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:25:27  2026-03-03 15:25:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 211.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:27:27  2026-03-03 15:27:27 - trade_alerts - INFO - ≡ƒöä Loop check #786 - 10:27:27 EST
+2026-03-03 15:30:28  2026-03-03 15:30:28 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/JPY BUY @ 111.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:31:28  2026-03-03 15:31:28 - trade_alerts - INFO - 
+2026-03-03 15:31:28  === Status Check #790 ===
+2026-03-03 15:31:28  2026-03-03 15:31:28 - trade_alerts - INFO - Current time: 10:31:28 EST (EST/EDT)
+2026-03-03 15:31:28  2026-03-03 15:31:28 - trade_alerts - INFO - Active opportunities: 7
+2026-03-03 15:31:28  2026-03-03 15:31:28 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 12%, synthesis: 27%, deepseek: 15%
+2026-03-03 15:31:28  2026-03-03 15:31:28 - trade_alerts - INFO - Next analysis at: 11:00 EST (in 28 minutes)
+2026-03-03 15:32:28  2026-03-03 15:32:28 - trade_alerts - INFO - ≡ƒöä Loop check #791 - 10:32:28 EST
+2026-03-03 15:33:28  2026-03-03 15:33:28 - trade_alerts - INFO - ≡ƒôè Calculating LLM weights from database...
+2026-03-03 15:33:28  2026-03-03 15:33:28 - trade_alerts - INFO -    chatgpt: 48 evaluated recommendations (total: 67)
+2026-03-03 15:33:28  2026-03-03 15:33:28 - trade_alerts - INFO -    gemini: 3211 evaluated recommendations (total: 3279)
+2026-03-03 15:33:28  2026-03-03 15:33:28 - trade_alerts - INFO -    claude: 76 evaluated recommendations (total: 80)
+2026-03-03 15:33:28  2026-03-03 15:33:28 - trade_alerts - INFO -    synthesis: 6363 evaluated recommendations (total: 6545)
+2026-03-03 15:33:28  2026-03-03 15:33:28 - trade_alerts - INFO -    deepseek: 0 evaluated recommendations (total: 0)
+2026-03-03 15:33:28  2026-03-03 15:33:28 - trade_alerts - INFO -    deepseek: Only 0 evaluated recommendations (need 5+) - using default 0.25
+2026-03-03 15:33:28  2026-03-03 15:33:28 - trade_alerts - INFO - ≡ƒôè Calculated LLM weights: {'chatgpt': np.float64(0.199271467575377), 'gemini': np.float64(0.2603269504119028), 'claude': np.float64(0.11865186164715799), 'synthesis': np.float64(0.26805676133064027), 'deepseek': np.float64(0.15369295903492192)}
+2026-03-03 15:33:28  2026-03-03 15:33:28 - trade_alerts - INFO - ≡ƒôè Loaded LLM weights from database: {'chatgpt': np.float64(0.199271467575377), 'gemini': np.float64(0.2603269504119028), 'claude': np.float64(0.11865186164715799), 'synthesis': np.float64(0.26805676133064027), 'deepseek': np.float64(0.15369295903492192)}
+2026-03-03 15:35:29  2026-03-03 15:35:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.342 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:35:29  2026-03-03 15:35:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:35:29  2026-03-03 15:35:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/USD SELL @ 0.711 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:35:29  2026-03-03 15:35:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.07 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:35:29  2026-03-03 15:35:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 211.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:37:29  2026-03-03 15:37:29 - trade_alerts - INFO - ≡ƒöä Loop check #796 - 10:37:29 EST
+2026-03-03 15:40:30  2026-03-03 15:40:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/JPY BUY @ 111.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:41:30  2026-03-03 15:41:30 - trade_alerts - INFO - 
+2026-03-03 15:41:30  === Status Check #800 ===
+2026-03-03 15:41:30  2026-03-03 15:41:30 - trade_alerts - INFO - Current time: 10:41:30 EST (EST/EDT)
+2026-03-03 15:41:30  2026-03-03 15:41:30 - trade_alerts - INFO - Active opportunities: 7
+2026-03-03 15:41:30  2026-03-03 15:41:30 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 12%, synthesis: 27%, deepseek: 15%
+2026-03-03 15:41:30  2026-03-03 15:41:30 - trade_alerts - INFO - Next analysis at: 11:00 EST (in 18 minutes)
+2026-03-03 15:42:30  2026-03-03 15:42:30 - trade_alerts - INFO - ≡ƒöä Loop check #801 - 10:42:30 EST
+2026-03-03 15:45:30  2026-03-03 15:45:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.342 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:45:30  2026-03-03 15:45:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:45:30  2026-03-03 15:45:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/USD SELL @ 0.711 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:45:30  2026-03-03 15:45:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.07 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:45:30  2026-03-03 15:45:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 211.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:47:31  2026-03-03 15:47:31 - trade_alerts - INFO - ≡ƒöä Loop check #806 - 10:47:31 EST
+2026-03-03 15:50:31  2026-03-03 15:50:31 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: AUD/JPY BUY @ 111.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:51:31  2026-03-03 15:51:31 - trade_alerts - INFO - 
+2026-03-03 15:51:31  === Status Check #810 ===
+2026-03-03 15:51:31  2026-03-03 15:51:31 - trade_alerts - INFO - Current time: 10:51:31 EST (EST/EDT)
+2026-03-03 15:51:31  2026-03-03 15:51:31 - trade_alerts - INFO - Active opportunities: 7
+2026-03-03 15:51:31  2026-03-03 15:51:31 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 12%, synthesis: 27%, deepseek: 15%
+2026-03-03 15:51:31  2026-03-03 15:51:31 - trade_alerts - INFO - Next analysis at: 11:00 EST (in 8 minutes)
+2026-03-03 15:52:31  2026-03-03 15:52:31 - trade_alerts - INFO - ≡ƒöä Loop check #811 - 10:52:31 EST
+2026-03-03 15:55:32  2026-03-03 15:55:32 - trade_alerts - INFO - 
+2026-03-03 15:55:32  ================================================================================
+2026-03-03 15:55:32  2026-03-03 15:55:32 - trade_alerts - INFO - === Scheduled Analysis Time: 2026-03-03 10:55:32 EST (EST/EDT) ===
+2026-03-03 15:55:32  2026-03-03 15:55:32 - trade_alerts - INFO - ================================================================================
+2026-03-03 15:55:32  2026-03-03 15:55:32 - trade_alerts - INFO - Starting analysis workflow with RL integration...
+2026-03-03 15:55:32  2026-03-03 15:55:32 - trade_alerts - INFO - Step 1: Reading data from Google Drive...
+2026-03-03 15:55:45  2026-03-03 15:55:45 - trade_alerts - INFO - Found 3303 files in folder
+2026-03-03 15:55:46  2026-03-03 15:55:46 - trade_alerts - INFO - Downloaded forex_trends_summary_20260303_152630.txt
+2026-03-03 15:55:47  2026-03-03 15:55:47 - trade_alerts - INFO - Downloaded forex_trends_summary_20260303_142347.txt
+2026-03-03 15:55:48  2026-03-03 15:55:48 - trade_alerts - INFO - Downloaded forex_trends_summary_20260303_132330.txt
+2026-03-03 15:55:48  2026-03-03 15:55:48 - trade_alerts - INFO - Downloaded 3 files
+2026-03-03 15:55:48  2026-03-03 15:55:48 - trade_alerts - INFO - Step 2: Formatting data for LLMs...
+2026-03-03 15:55:48  2026-03-03 15:55:48 - trade_alerts - INFO - Step 3: Running LLM analysis...
+2026-03-03 15:55:48  2026-03-03 15:55:48 - trade_alerts - INFO - Starting LLM analysis at 2026-03-03 10:55:48 EST (EST/EDT)
+2026-03-03 15:55:48  2026-03-03 15:55:48 - trade_alerts - INFO - Running ChatGPT analysis...
+2026-03-03 15:56:14  2026-03-03 15:56:14 - trade_alerts - INFO - Γ£à ChatGPT analysis completed
+2026-03-03 15:56:14  2026-03-03 15:56:14 - trade_alerts - INFO - Running Gemini analysis...
+2026-03-03 15:56:14  2026-03-03 15:56:14 - trade_alerts - INFO - Available Gemini models: 32 found
+2026-03-03 15:56:14  2026-03-03 15:56:14 - trade_alerts - INFO - First 5: ['models/gemini-2.5-flash', 'models/gemini-2.5-pro', 'models/gemini-2.0-flash', 'models/gemini-2.0-flash-001', 'models/gemini-2.0-flash-exp-image-generation']
+2026-03-03 15:56:14  2026-03-03 15:56:14 - trade_alerts - INFO - Trying 5 Gemini models from available list...
+2026-03-03 15:56:16  2026-03-03 15:56:16 - trade_alerts - INFO - Γ£à Found working Gemini model: models/gemini-2.5-pro
+2026-03-03 15:57:01  2026-03-03 15:57:01 - trade_alerts - INFO - Γ£à Gemini analysis completed (model: models/gemini-2.5-pro)
+2026-03-03 15:57:01  2026-03-03 15:57:01 - trade_alerts - INFO - Running Claude analysis...
+2026-03-03 15:57:31  2026-03-03 15:57:31 - trade_alerts - INFO - Γ£à Claude analysis completed
+2026-03-03 15:57:31  2026-03-03 15:57:31 - trade_alerts - INFO - Running DeepSeek analysis...
+2026-03-03 15:58:38  2026-03-03 15:58:38 - trade_alerts - INFO - Γ£à DeepSeek analysis completed
+2026-03-03 15:58:38  2026-03-03 15:58:38 - trade_alerts - INFO - Completed 4/4 LLM analyses
+2026-03-03 15:58:38  2026-03-03 15:58:38 - trade_alerts - INFO - Γ£à CHATGPT analysis completed successfully
+2026-03-03 15:58:38  2026-03-03 15:58:38 - trade_alerts - INFO - Γ£à GEMINI analysis completed successfully
+2026-03-03 15:58:38  2026-03-03 15:58:38 - trade_alerts - INFO - Γ£à CLAUDE analysis completed successfully
+2026-03-03 15:58:38  2026-03-03 15:58:38 - trade_alerts - INFO - Γ£à DEEPSEEK analysis completed successfully
+2026-03-03 15:58:38  2026-03-03 15:58:38 - trade_alerts - INFO - Step 3.5: Fetching current live prices...
+2026-03-03 15:58:38  2026-03-03 15:58:38 - trade_alerts - INFO - Γ£à Fetched 26 current prices for synthesis
+2026-03-03 15:58:38  2026-03-03 15:58:38 - trade_alerts - INFO - Step 4: Synthesizing with Gemini...
+2026-03-03 15:58:40  2026-03-03 15:58:40 - trade_alerts - INFO - Γ£à Found working Gemini model for synthesis: models/gemini-2.5-pro
+2026-03-03 15:59:14  2026-03-03 15:59:14 - trade_alerts - INFO - Γ£à Gemini synthesis completed (model: models/gemini-2.5-pro)
+2026-03-03 15:59:14  2026-03-03 15:59:14 - trade_alerts - INFO - Step 5 (NEW): Enhancing recommendations with RL insights...
+2026-03-03 15:59:19  2026-03-03 15:59:19 - trade_alerts - INFO - ≡ƒôè Calculating LLM weights from database...
+2026-03-03 15:59:19  2026-03-03 15:59:19 - trade_alerts - INFO -    chatgpt: 48 evaluated recommendations (total: 67)
+2026-03-03 15:59:19  2026-03-03 15:59:19 - trade_alerts - INFO -    gemini: 3211 evaluated recommendations (total: 3279)
+2026-03-03 15:59:19  2026-03-03 15:59:19 - trade_alerts - INFO -    claude: 76 evaluated recommendations (total: 80)
+2026-03-03 15:59:20  2026-03-03 15:59:20 - trade_alerts - INFO -    synthesis: 6363 evaluated recommendations (total: 6545)
+2026-03-03 15:59:20  2026-03-03 15:59:20 - trade_alerts - INFO -    deepseek: 0 evaluated recommendations (total: 0)
+2026-03-03 15:59:20  2026-03-03 15:59:20 - trade_alerts - INFO -    deepseek: Only 0 evaluated recommendations (need 5+) - using default 0.25
+2026-03-03 15:59:20  2026-03-03 15:59:20 - trade_alerts - INFO - ≡ƒôè Calculated LLM weights: {'chatgpt': np.float64(0.199271467575377), 'gemini': np.float64(0.2603269504119028), 'claude': np.float64(0.11865186164715799), 'synthesis': np.float64(0.26805676133064027), 'deepseek': np.float64(0.15369295903492192)}
+2026-03-03 15:59:20  2026-03-03 15:59:20 - trade_alerts - INFO - Step 6: Sending enhanced recommendations email...
+2026-03-03 15:59:20  2026-03-03 15:59:20 - trade_alerts - INFO - Preparing to send email to rockforexx@gmail.com...
+2026-03-03 15:59:20  2026-03-03 15:59:20 - trade_alerts - INFO - Email contains 4/3 LLM recommendations + Gemini final
+2026-03-03 15:59:20  2026-03-03 15:59:20 - trade_alerts - INFO - Connecting to SMTP server smtp.gmail.com:587...
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Email sent successfully to rockforexx@gmail.com
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO -    Subject: Forex Trading Recommendations - 2026-03-03 15:59
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Step 7 (NEW): Logging recommendations to RL database...
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - WARNING - No pattern matches found for CHATGPT. Text preview (first 500 chars): Based on the analysis of the current forex trends, market prices, and the news impacting currency pairs, here are the recommended trading opportunities for today, March 3, 2026:
+2026-03-03 15:59:21  
+2026-03-03 15:59:21  ### Trade Recommendations
+2026-03-03 15:59:21  
+2026-03-03 15:59:21  **1. Currency Pair: USD/ZAR**
+2026-03-03 15:59:21  - **Current Price:** 16.07082
+2026-03-03 15:59:21  - **TIMEFRAME CLASSIFICATION:** INTRADAY
+2026-03-03 15:59:21  - **Entry Price:** 16.0700 (slightly below current price for better entry)
+2026-03-03 15:59:21  - **Exit/Target Price:** 16.1000 (30 pips target)
+2026-03-03 15:59:21  - **Stop Loss Level:** 16.0400 (30 pips risk)
+2026-03-03 15:59:21  - **Position Sizing Re
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - WARNING - No pattern matches found for GEMINI. Text preview (first 500 chars): Greetings,
+2026-03-03 15:59:21  
+2026-03-03 15:59:21  As a senior forex trader, I have analyzed the provided market data and combined it with my own research to identify the highest-probability trading opportunities for today, March 3, 2026.
+2026-03-03 15:59:21  
+2026-03-03 15:59:21  The dominant market theme is clear: broad-based US Dollar strength. This is confirmed by both the Google Drive trend reports showing the USD rallying against multiple currencies (ZAR, MXN, EUR, NZD, CHF) and the underlying fundamental news pointing to weakness in other major currencies like the JPY
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - WARNING - No pattern matches found for CLAUDE. Text preview (first 500 chars): # FOREX TRADING ANALYSIS
+2026-03-03 15:59:21  **Analysis Date:** March 3, 2026 | **Time:** 10:55:48 EST | **Report Generated:** Current Market Session
+2026-03-03 15:59:21  
+2026-03-03 15:59:21  ---
+2026-03-03 15:59:21  
+2026-03-03 15:59:21  ## EXECUTIVE SUMMARY
+2026-03-03 15:59:21  
+2026-03-03 15:59:21  Based on analysis of Google Drive forex tracker data (reports from 13:23-15:26 UTC) combined with current market intelligence, I identify **4 primary trading opportunities** across major currency pairs. Key themes include:
+2026-03-03 15:59:21  
+2026-03-03 15:59:21  1. **USD Strength** - ZAR and MXN showing consistent appreciation vs. USD
+2026-03-03 15:59:21  2. **EUR Weakness** - Dovish ECB commentary 
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: EURUSD LONG @ 1.158 SL:1.161 TP1:1.151 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: USDJPY LONG @ 157.25 SL:156.65 TP1:158.4 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: EURUSD SHORT @ 1.158 SL:1.161 TP1:1.151 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: USDJPY LONG @ 157.25 SL:156.65 TP1:158.4 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: GBPJPY LONG @ 210.9 SL:209.7 TP1:213.5 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: EURUSD SHORT @ 1.158 SL:1.161 TP1:1.151 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: USDJPY LONG @ 157.25 SL:156.65 TP1:158.4 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: GBPJPY LONG @ 210.9 SL:209.7 TP1:213.5 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: EURUSD SHORT @ 1.158 SL:1.161 TP1:1.151 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: USDJPY LONG @ 157.25 SL:156.65 TP1:158.4 TP2:None
+2026-03-03 15:59:21  2026-03-03 15:59:21 - trade_alerts - INFO - Γ£à Added recommendation: GBPJPY LONG @ 210.9 SL:209.7 TP1:213.5 TP2:None
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for EURUSD: 1.15733 ΓåÆ 1.15734 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/JPY: Recommended=157.46100, Live=157.76000 (diff: 29.9 pips, 0.19%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDJPY: 157.46100 ΓåÆ 157.76000 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for EURUSD: 1.15733 ΓåÆ 1.15734 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/JPY: Recommended=157.46100, Live=157.76000 (diff: 29.9 pips, 0.19%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDJPY: 157.46100 ΓåÆ 157.76000 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for GBP/JPY: Recommended=211.18900, Live=209.89550 (diff: 129.4 pips, 0.62%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for GBPJPY: 211.18900 ΓåÆ 209.89550 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for EURUSD: 1.15733 ΓåÆ 1.15734 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/JPY: Recommended=157.46100, Live=157.76000 (diff: 29.9 pips, 0.19%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDJPY: 157.46100 ΓåÆ 157.76000 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for GBP/JPY: Recommended=211.18900, Live=209.89550 (diff: 129.4 pips, 0.62%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for GBPJPY: 211.18900 ΓåÆ 209.89550 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for EURUSD: 1.15733 ΓåÆ 1.15734 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/JPY: Recommended=157.46100, Live=157.76000 (diff: 29.9 pips, 0.19%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDJPY: 157.46100 ΓåÆ 157.76000 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for GBP/JPY: Recommended=211.18900, Live=209.89550 (diff: 129.4 pips, 0.62%). Recommended price appears to be from historical data, not live market.
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöº Updated current_price for GBPJPY: 211.18900 ΓåÆ 209.89550 (corrected from historical data)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Logged 4 recommendations for future learning (deduplicated: 7, unrealistic: 0)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Step 8: Extracting entry/exit points from all LLMs...
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsing CHATGPT recommendations...
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôï Parsed 4 opportunities from MACHINE_READABLE JSON block
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsed CHATGPT: 4 opportunities, pairs: [USD/ZAR, USD/MXN, EUR/USD, USD/JPY]
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsing GEMINI recommendations...
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôï Parsed 3 opportunities from MACHINE_READABLE JSON block
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsed GEMINI: 3 opportunities, pairs: [EUR/USD, USD/JPY, GBP/USD]
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsing CLAUDE recommendations...
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôï Parsed 4 opportunities from JSON code block
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsed CLAUDE: 4 opportunities, pairs: [EUR/USD, USD/JPY, GBP/USD, USD/ZAR]
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsing DEEPSEEK recommendations...
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsed DEEPSEEK: 3 opportunities, pairs: [GBP/JPY, EUR/GBP, USD/ZAR]
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsing SYNTHESIS recommendations...
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì Deduplication: Removed 9 duplicate(s) from 12 matches ΓåÆ 3 unique opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Parsed SYNTHESIS: 3 opportunities, pairs: [EUR/USD, USD/JPY, GBP/JPY]
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôï Fill missing entry: 3 from current price, 0 from synthesis, 0 dropped
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - MarketBridge initialized with shared disk path: /var/data/market_state.json
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - MarketBridge API configured: https://market-state-api.onrender.com/market-state
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Merged opportunities: 10 unique pairs (from 17 total recommendations). Per-LLM: chatgpt: 3, deepseek: 3, gemini: 2, synthesis: 2
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Merged 10 unique opportunities from all LLMs
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Step 9 (NEW): Exporting market state for Scalp-Engine...
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - MarketBridge initialized with shared disk path: /var/data/market_state.json
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - MarketBridge API configured: https://market-state-api.onrender.com/market-state
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Global Bias (USD-Normalized): BULLISH (USD Bullish: 5, USD Bearish: 2, Non-USD: 3, Total: 10)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus calculation: 10 merged opportunities to analyze
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    chatgpt: 4 parsed opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    gemini: 3 parsed opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    claude: 4 parsed opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    deepseek: 3 parsed opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    synthesis: 3 parsed opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/ZAR BUY
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='USD/ZAR', direction='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='USDZAR', pair_with_slash='USD/ZAR', direction_upper='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on USD/ZAR BUY (matched: USD/ZAR BUY)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['chatgpt', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['chatgpt', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on USD/ZAR BUY (matched: USD/ZAR BUY)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î deepseek: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/ZAR BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: ['chatgpt', 'claude'] (count: 2)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['chatgpt', 'claude'] (count: 2)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 2/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for USD/ZAR BUY: 2/4 (sources: ['chatgpt', 'claude'], all sources: ['chatgpt', 'claude'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/ZAR BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 2
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['chatgpt', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 2
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/MXN BUY
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='USD/MXN', direction='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='USDMXN', pair_with_slash='USD/MXN', direction_upper='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on USD/MXN BUY (matched: USD/MXN BUY)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î deepseek: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/MXN BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: ['chatgpt'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['chatgpt'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for USD/MXN BUY: 1/4 (sources: ['chatgpt'], all sources: ['chatgpt'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/MXN BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for EUR/USD BUY
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='EUR/USD', direction='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='EURUSD', pair_with_slash='EUR/USD', direction_upper='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on EUR/USD BUY (matched: EUR/USD BUY)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î deepseek: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for EUR/USD BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: ['chatgpt'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['chatgpt'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for EUR/USD BUY: 1/4 (sources: ['chatgpt'], all sources: ['chatgpt'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for EUR/USD BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/JPY BUY
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='USD/JPY', direction='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='USDJPY', pair_with_slash='USD/JPY', direction_upper='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on USD/JPY BUY (matched: USD/JPY BUY)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [gemini] MATCHED! Added to base_llm_sources. Current: ['chatgpt', 'gemini']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [gemini] Added to sources. Current: ['chatgpt', 'gemini']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on USD/JPY BUY (matched: USD/JPY BUY)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['chatgpt', 'gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['chatgpt', 'gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on USD/JPY BUY (matched: USD/JPY BUY)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î deepseek: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/JPY BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: ['chatgpt', 'gemini', 'claude'] (count: 3)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['chatgpt', 'gemini', 'claude', 'synthesis'] (count: 4)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 3/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for USD/JPY BUY: 3/4 (sources: ['chatgpt', 'gemini', 'claude'], all sources: ['chatgpt', 'gemini', 'claude', 'synthesis'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/JPY BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 3
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt', 'gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for EUR/USD SELL
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='EUR/USD', direction='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='EURUSD', pair_with_slash='EUR/USD', direction_upper='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [gemini] MATCHED! Added to base_llm_sources. Current: ['gemini']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [gemini] Added to sources. Current: ['gemini']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on EUR/USD SELL (matched: EUR/USD SELL)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on EUR/USD SELL (matched: EUR/USD SELL)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î deepseek: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for EUR/USD SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: ['gemini', 'claude'] (count: 2)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['gemini', 'claude', 'synthesis'] (count: 3)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 2/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for EUR/USD SELL: 2/4 (sources: ['gemini', 'claude'], all sources: ['gemini', 'claude', 'synthesis'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for EUR/USD SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 2
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['gemini', 'claude', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 3
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for GBP/USD SELL
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='GBP/USD', direction='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='GBPUSD', pair_with_slash='GBP/USD', direction_upper='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [gemini] MATCHED! Added to base_llm_sources. Current: ['gemini']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [gemini] Added to sources. Current: ['gemini']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on GBP/USD SELL (matched: GBP/USD SELL)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: claude agrees on GBP/USD SELL (matched: GBP/USD SELL)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î deepseek: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/USD SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: ['gemini', 'claude'] (count: 2)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['gemini', 'claude'] (count: 2)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 2/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/USD SELL: 2/4 (sources: ['gemini', 'claude'], all sources: ['gemini', 'claude'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/USD SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 2
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 2
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for GBP/JPY SELL
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='GBP/JPY', direction='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='GBPJPY', pair_with_slash='GBP/JPY', direction_upper='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [deepseek] MATCHED! Added to base_llm_sources. Current: ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [deepseek] Added to sources. Current: ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: deepseek agrees on GBP/JPY SELL (matched: GBP/JPY SELL)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/JPY SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: ['deepseek'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['deepseek'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/JPY SELL: 1/4 (sources: ['deepseek'], all sources: ['deepseek'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/JPY SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for EUR/GBP SELL
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='EUR/GBP', direction='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='EURGBP', pair_with_slash='EUR/GBP', direction_upper='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [deepseek] MATCHED! Added to base_llm_sources. Current: ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [deepseek] Added to sources. Current: ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: deepseek agrees on EUR/GBP SELL (matched: EUR/GBP SELL)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for EUR/GBP SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: ['deepseek'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['deepseek'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for EUR/GBP SELL: 1/4 (sources: ['deepseek'], all sources: ['deepseek'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for EUR/GBP SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/ZAR SELL
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='USD/ZAR', direction='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='USDZAR', pair_with_slash='USD/ZAR', direction_upper='SELL'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [deepseek] MATCHED! Added to base_llm_sources. Current: ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ£à [deepseek] Added to sources. Current: ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Consensus: deepseek agrees on USD/ZAR SELL (matched: USD/ZAR SELL)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/ZAR SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: ['deepseek'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['deepseek'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for USD/ZAR SELL: 1/4 (sources: ['deepseek'], all sources: ['deepseek'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/ZAR SELL:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for GBP/JPY BUY
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Input: pair='GBP/JPY', direction='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'deepseek', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Normalized: pair_clean='GBPJPY', pair_with_slash='GBP/JPY', direction_upper='BUY'
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ≡ƒöÄ deepseek: Checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Γ¥î deepseek: NO MATCH found after checking 3 opportunities
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/JPY BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base_llm_sources: [] (count: 0)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    all sources: ['synthesis'] (count: 1)
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 0/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/JPY BUY: 0/4 (sources: [], all sources: ['synthesis'])
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    ΓÜá∩╕Å Synthesis exists but doesn't mention GBP/JPY, defaulting to 1/4
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/JPY BUY:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    consensus_level: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources: ['synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): []
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒöì [MARKET-STATE-DEBUG] Writing 10 opportunities to market state:
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #0: USD/ZAR BUY - consensus_level=2, llm_sources=['chatgpt', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #1: USD/MXN BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #2: EUR/USD BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #3: USD/JPY BUY - consensus_level=3, llm_sources=['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #4: EUR/USD SELL - consensus_level=2, llm_sources=['gemini', 'claude', 'synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #5: GBP/USD SELL - consensus_level=2, llm_sources=['gemini', 'claude']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #6: GBP/JPY SELL - consensus_level=1, llm_sources=['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #7: EUR/GBP SELL - consensus_level=1, llm_sources=['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #8: USD/ZAR SELL - consensus_level=1, llm_sources=['deepseek']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Opp #9: GBP/JPY BUY - consensus_level=1, llm_sources=['synthesis']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Attempting to export market state to /var/data/market_state.json
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Market State exported to /var/data/market_state.json
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Bias: BULLISH, Regime: HIGH_VOL, Pairs: ['GBP/USD', 'USD/JPY', 'EUR/USD', 'GBP/JPY', 'EUR/GBP', 'USD/ZAR', 'USD/MXN']
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Sending market state to API: https://market-state-api.onrender.com/market-state
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Market state sent to API successfully
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    API response: Market state saved successfully
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Market state exported for Scalp-Engine
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO -    Exported state: 10 opportunities, bias=BULLISH, regime=HIGH_VOL
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Full analysis workflow completed
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - Γ£à Analysis completed successfully at 10:55:32 EST
+2026-03-03 15:59:23  2026-03-03 15:59:23 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.07 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:59:24  2026-03-03 15:59:24 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/MXN BUY @ 17.3 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:59:24  2026-03-03 15:59:24 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD BUY @ 1.16 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:59:24  2026-03-03 15:59:24 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.2 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:59:24  2026-03-03 15:59:24 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD SELL @ 1.158 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:59:24  2026-03-03 15:59:24 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 211.18900000000002 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:59:24  2026-03-03 15:59:24 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/GBP SELL @ 0.872 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-03 15:59:24  2026-03-03 15:59:24 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR SELL @ 16.08174 (INTRADAY, confidence: 0.75, ATR-based tolerance)

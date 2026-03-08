@@ -1,0 +1,1000 @@
+2026-03-04 18:01:51    font-style: normal;
+2026-03-04 18:01:51    font-size: 24px;
+2026-03-04 18:01:51    line-height: 1;
+2026-03-04 18:01:51    letter-spacing: normal;
+2026-03-04 18:01:51    text-transform: none;
+2026-03-04 18:01:51    display: inline-block;
+2026-03-04 18:01:51    white-space: nowrap;
+2026-03-04 18:01:51    word-wrap: normal;
+2026-03-04 18:01:51    direction: ltr;
+2026-03-04 18:01:51    -moz-font-feature-settings: 'liga';
+2026-03-04 18:01:51    -moz-osx-font-smoothing: grayscale;
+2026-03-04 18:01:51  }
+2026-03-04 18:01:51  </style>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51      <style type="text/css">
+2026-03-04 18:01:51          /*******************************************************************
+2026-03-04 18:01:51          Page-specific styles for the Maintenance page.
+2026-03-04 18:01:51          *******************************************************************/
+2026-03-04 18:01:51          body {
+2026-03-04 18:01:51              color: #333;
+2026-03-04 18:01:51              overflow-x: hidden;
+2026-03-04 18:01:51              background: #FAFBFC;
+2026-03-04 18:01:51              -webkit-font-smoothing: antialiased;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          @media (min-width: 768.02px) {
+2026-03-04 18:01:51              body {
+2026-03-04 18:01:51                  font-size: 16px;
+2026-03-04 18:01:51                  line-height: 22px;
+2026-03-04 18:01:51              }
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          body {
+2026-03-04 18:01:51              font-family: Helvetica, Arial, sans-serif;
+2026-03-04 18:01:51              font-size: 15px;
+2026-03-04 18:01:51              line-height: 21px;
+2026-03-04 18:01:51              letter-spacing: 0.25px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          body {
+2026-03-04 18:01:51              font-weight: 400;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards {
+2026-03-04 18:01:51              display: -ms-flexbox;
+2026-03-04 18:01:51              display: flex;
+2026-03-04 18:01:51              -ms-flex-wrap: wrap;
+2026-03-04 18:01:51              flex-wrap: wrap;
+2026-03-04 18:01:51              margin-right: -15px;
+2026-03-04 18:01:51              margin-left: -15px;
+2026-03-04 18:01:51              padding-top: 30px;
+2026-03-04 18:01:51              padding-bottom: 30px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          h1, h2, h3, h4, h5, h6 {
+2026-03-04 18:01:51              margin: 0;
+2026-03-04 18:01:51              font-weight: 700;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          @media (min-width: 768.02px) {
+2026-03-04 18:01:51              h4, .h4 {
+2026-03-04 18:01:51                  font-size: 22px;
+2026-03-04 18:01:51                  line-height: 26px;
+2026-03-04 18:01:51              }
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          h4 {
+2026-03-04 18:01:51              font-family: Effra, Helvetica, Arial, sans-serif;
+2026-03-04 18:01:51              font-size: 20px;
+2026-03-04 18:01:51              line-height: 24px;
+2026-03-04 18:01:51              letter-spacing: 0.1px;
+2026-03-04 18:01:51              word-spacing: 1px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          p {
+2026-03-04 18:01:51              margin: 0 0 15px 0;
+2026-03-04 18:01:51              font-weight: 400;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          p, li, body {
+2026-03-04 18:01:51              font-family: Helvetica, Arial, sans-serif;
+2026-03-04 18:01:51              font-size: 15px;
+2026-03-04 18:01:51              line-height: 21px;
+2026-03-04 18:01:51              letter-spacing: 0.25px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          @media (min-width: 768.02px) {
+2026-03-04 18:01:51              p, li, body {
+2026-03-04 18:01:51                  font-size: 16px;
+2026-03-04 18:01:51                  line-height: 22px;
+2026-03-04 18:01:51              }
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          @media (min-width: 768.02px) {
+2026-03-04 18:01:51              h1 {
+2026-03-04 18:01:51                  font-size: 50px;
+2026-03-04 18:01:51                  line-height: normal;
+2026-03-04 18:01:51                  letter-spacing: -1px;
+2026-03-04 18:01:51              }
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          h1 {
+2026-03-04 18:01:51              font-family: Effra, Helvetica, Arial, sans-serif;
+2026-03-04 18:01:51              font-size: 44px;
+2026-03-04 18:01:51              line-height: 52px;
+2026-03-04 18:01:51              letter-spacing: normal;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          h4 {
+2026-03-04 18:01:51              font-weight: 400;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page {
+2026-03-04 18:01:51              margin-top: 30px;
+2026-03-04 18:01:51              margin-left: 8px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page .container {
+2026-03-04 18:01:51              max-width: 850px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page .logo {
+2026-03-04 18:01:51              width: 150px;
+2026-03-04 18:01:51              display: inline-block;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page .logo img {
+2026-03-04 18:01:51              width: 100%;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page .logo,
+2026-03-04 18:01:51          .error-page h1,
+2026-03-04 18:01:51          .error-page h4 {
+2026-03-04 18:01:51              margin-bottom: 30px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page ul {
+2026-03-04 18:01:51              margin: 0 0 45px 0;
+2026-03-04 18:01:51              padding-left: 10px;
+2026-03-04 18:01:51              list-style-type: none;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page ul li {
+2026-03-04 18:01:51              margin-bottom: 2px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          @media (min-width: 768px) {
+2026-03-04 18:01:51              .error-page ul {
+2026-03-04 18:01:51                  padding-left: 20px;
+2026-03-04 18:01:51              }
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page .material-icons {
+2026-03-04 18:01:51              margin-top: -5px;
+2026-03-04 18:01:51              font-size: 16px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page .content-cards__card .content-cards__card__content {
+2026-03-04 18:01:51              padding: 15px
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          @media (min-width: 768px) {
+2026-03-04 18:01:51              .error-page .content-cards__card .content-cards__card__content {
+2026-03-04 18:01:51                  padding: 30px
+2026-03-04 18:01:51              }
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page .cf {
+2026-03-04 18:01:51              background-color: rgb(255 168 168 / 17%);
+2026-03-04 18:01:51              padding: 10px;
+2026-03-04 18:01:51              border: 1px solid #ff8a8a54;
+2026-03-04 18:01:51              border-radius: 10px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards {
+2026-03-04 18:01:51              display: -ms-flexbox;
+2026-03-04 18:01:51              display: flex;
+2026-03-04 18:01:51              -ms-flex-wrap: wrap;
+2026-03-04 18:01:51              flex-wrap: wrap;
+2026-03-04 18:01:51              margin-right: -15px;
+2026-03-04 18:01:51              margin-left: -15px;
+2026-03-04 18:01:51              padding-top: 30px;
+2026-03-04 18:01:51              padding-bottom: 30px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards__card {
+2026-03-04 18:01:51              display: -ms-flexbox;
+2026-03-04 18:01:51              display: flex;
+2026-03-04 18:01:51              -ms-flex: 1;
+2026-03-04 18:01:51              flex: 1;
+2026-03-04 18:01:51              padding-left: 15px;
+2026-03-04 18:01:51              padding-right: 15px;
+2026-03-04 18:01:51              position: relative;
+2026-03-04 18:01:51              width: 100%;
+2026-03-04 18:01:51              min-height: 1px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards--equal-height .content-cards__card__inner {
+2026-03-04 18:01:51              height: 100%;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards--align-top .content-cards__card__inner {
+2026-03-04 18:01:51              -ms-flex-item-align: flex-start;
+2026-03-04 18:01:51              align-self: flex-start;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards__card--align-left {
+2026-03-04 18:01:51              text-align: left;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards__card--rounded {
+2026-03-04 18:01:51              border-radius: 15px;
+2026-03-04 18:01:51              overflow: hidden;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards__card__inner {
+2026-03-04 18:01:51              -ms-flex-item-align: center;
+2026-03-04 18:01:51              align-self: center;
+2026-03-04 18:01:51              width: 100%;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .background--white {
+2026-03-04 18:01:51              background-color: #fff;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .error-page .content-cards__card .content-cards__card__content {
+2026-03-04 18:01:51              padding: 15px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards__card__content-block--ctas, .content-cards__card__content-block--icon {
+2026-03-04 18:01:51              margin-bottom: 15px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          @media (min-width: 768px) {
+2026-03-04 18:01:51              .error-page .content-cards__card .content-cards__card__content {
+2026-03-04 18:01:51                  padding: 30px;
+2026-03-04 18:01:51              }
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards__card__content-block {
+2026-03-04 18:01:51              margin-bottom: 30px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards__card__content .icon--left {
+2026-03-04 18:01:51              text-align: left;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          img {
+2026-03-04 18:01:51              vertical-align: middle;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .button-group .btn:last-child {
+2026-03-04 18:01:51              margin-right: 0;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .content-cards__card--align-left .btn {
+2026-03-04 18:01:51              text-align: left;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .button-group .btn {
+2026-03-04 18:01:51              margin-right: 7.5px;
+2026-03-04 18:01:51              margin-bottom: 15px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .btn--primary.btn--blue {
+2026-03-04 18:01:51              background-color: #004AC3;
+2026-03-04 18:01:51              border-color: #004AC3;
+2026-03-04 18:01:51              color: #fff;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .btn {
+2026-03-04 18:01:51              display: inline-block;
+2026-03-04 18:01:51              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+2026-03-04 18:01:51              line-height: 20px;
+2026-03-04 18:01:51              font-size: 16px;
+2026-03-04 18:01:51              letter-spacing: 1px;
+2026-03-04 18:01:51              text-align: center;
+2026-03-04 18:01:51              padding: 10px 20px;
+2026-03-04 18:01:51              vertical-align: text-bottom;
+2026-03-04 18:01:51              text-decoration: none;
+2026-03-04 18:01:51              border-radius: 100px;
+2026-03-04 18:01:51              border: 2px solid;
+2026-03-04 18:01:51              transition: background-color .2s ease-out, border-color .2s ease-out;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          a {
+2026-03-04 18:01:51              color: #004AC3;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          .button-group {
+2026-03-04 18:01:51              margin-top: 15px;
+2026-03-04 18:01:51          }
+2026-03-04 18:01:51      </style>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51  
+2026-03-04 18:01:51  </head>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51  <body>
+2026-03-04 18:01:51  <div class="error-page">
+2026-03-04 18:01:51      <div class="oa-container">
+2026-03-04 18:01:51          <a href="/" class="logo"><img
+2026-03-04 18:01:51              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKkAAAAxCAYAAACh4IkBAAAABmJLR0QA/wD/AP+gvaeTAAANgUlEQVR42u1dDXQU1RUeWn/6o9a2tiqg2dmg1iLaHqylnlrSqpCZSVAaItRaFYtYBfwBa0XIZhWLtqdoEa1V+kOBIqQcWy0FAalKtT0IFUiIAiqiLT8WAUFA/pLtu/fN7M7PvbMzs7vZ4Jl7zjtJdt+8N3PfN/fv3fuiKJ2JmlO3KS0Ni72t8RElppg6BbWkWkXLeFpz44Mxc2IqP61NdxWAbCdB2pKuiRkUU/lpTeoaGqCpQ8rr6RNiBsXUGVT9dBKka1JLY+bEVH7KKF0EIDczkrQxZlBM5afV6XMYgII9emHMoJg6gT3acCsD0t3KiuFHxwyKqTPYo/Po0FPDUzFzYiq9rdmcTpJt7R3HY5/n0kcJQO5iJOmomIkxlZaaG3qxtubqdB9pjzZcxNuj488u+j310E5QEtUJpWvtp+IFisnc5iQBuBMlKNqjjXfTqj61qSj3kLj8RCWp3aio+iLR9oiWsbUdimr8SXz/faVn/TEFzXPWgOMVVXtGjLnY2bRpocdS9X+J9qajJbRb81wz1XMNNDdV9vsi2c/bWkRbqCT1R0WrURJVnyiIP8AHL2+eQb6V1yFKzWdA+qTNHn2JAem0guauqjpKMPc2wYztLmByDYAwOPJ88kWgx05Wfy3kgm4ixjmkVNR8wwekT5Nzu+m0AV0D8sPdtogX+oeKkv5YeIDWXMCOm9B/VD6AtqaPEWD7gAHpjdgH7NKW1EG6T8NVhUk1fV60xTAejyRVVf0VfiGM3xYBpNDeVrr3/1yZQGq1vyjd6z8ZTpvpv/MZb3UZPfZ0FWtrtqZ7mObAZUyfduXVu04tAKCrC16IMBKj0rgwz3j7lNONzxYBpBk0T8oL0gyaAUH5A+aWqu/1Hc9PQ5Q4rHQvA8CNtj4PMX1aok0qGAcA82fwTtHeQuD49UvoE0NI0el5Fzah31wckOJYN5QZpKJpdwWUorcEGO8P5QLpMsbWfNzW5zWmzwPRjHPjKoYJhwVTH1N69O+Z61z/cWGD9hXXPMtc0yZsqfPyztlt4OdF3w8DLMRroneXooAU53PdW+Egna4kjUtszRAAaxSfb2O1AzhheUFqrAnAm/0i6vIFfpCKmoFioeo9LamfGRmgK9MnCrAdZgBYj31WjevGh55SRug5wY6UEpJyOAb6XNlFPOvPGFvybwEANYa4dh09Xk1VkUAqnDG91RFGKxSkST3NhOy6M3yFNsEfoOJ5vRL4Pdk8n4/xY8g/i2LsO736OgZ8bcq69ElmDPXaoqbmQZgkuloCoM4nrm9Xutd0872OAmRSu078XEZ8/kTRQCrbb0oOUgQbaBzmRfE3g2YT1z0isPUrwoR5g9c0Se1u1pOMrOobH2UAuDwH5IbzUKq6W2u6Opqqxzih+xm2BQ7ag/oMGyIBtUipYnQWjFHEdwcUdcDJRQRpBmO8pQapHP9l8iXmngfUN6hxykniHM1k9cXc5N9iGXC6kYxoj77BgHSiUiqiPfoZIcdYF0qjqPpcYs45tkU6SIBhbFFBqhofKGr1WSUHaVK7P5QJAxrMT1qq+vrAkQtpy8GDkkwYFsEeTbC25prUt0sI0m0EwH4Scoy5xOLNp235/qeSIFS1Wtt482gNJZy2ooEU2woMC5USpKBRaHNqEBNl2eA7B63BD/HmFTgItKr7o43hPxetydtgF8KxXz+cAele5fVRx5YQpPuJZxgRYevOzYOXGJ6liPm2OzYCEsYQRq3p4UGKn+3yAWpbadU9ONQkRq4lzCCDmSPnjFf27yHNBc9zNnBOx2jmwbdmxTPs4dJ9XnE5TU1M2t2Ckoa8VP2d0Iz38mE+McafvR2FJKTmA3MB1KLVVH0yw7OnI0hSkJZXhI5nFk3dcxixaQ5/J26XgzeSP9RL9w6tadTqc3m7VPuyeZN1TJ/2bIwrI8R8S2obA9LRpQUpFaUQCQxh9vox4cRjJ00hVN9lBQbDQepVhAYp7yB2BEhpIZXQ+rgSWE6TcelC+GMM4EIpm5kLRtm2tw4zNzrY3Ao9n7VHIW2vtJJ0AnFvB33B4FyEK5lnu5yYa0ERdm0mRAIpZCOp+qoOBWnv3keL7/9LBuHd+/iqdm/BvOH8AAHGmUyI40nb4ixjBp5qevVjGZBuxQToUlJSP5/fh88z95m1JzHqe59ycr9PuwBaUbikMLOKYPHDghQItFu+/fCixkm5rU3tOa82Cu300ZqmolalFnkou9dt2Qiq8VOmz0bTaVpCg7RxhtIRlNT/zga9uXxICbqVzAv6YOBQTLT970GRQCrv47oOAal0/g4w4/8gkHMVpSX0+7w3A64/d0Gl0Zvf5jLbxXXnCkDup0NPDVd3CEhl3mIbc49viYW4UzDyIvGzl2BCtenYcBLpfZSw3q3Xd4m+r2K4i2usChR5A1FBGjSxJfje/YtOxwaSnbV/+4y9waMJ6DyIwxgz9eWP/h/iunfplElVX8vc0I9ti7SH7FM3ZAprj8I+fUcRFUQO39pJKZfUv+drt/vbzCvpeUQgPipIe1Ydh4krxQFpOHVcqX3H6TBxISVREZE/U+o+Zmt+iEI+NOQ9upszkYF2GvoNWs8klKzp4Pwr2If/fUEATWh3MEB7gZYUAbY6ofyDnm9SZJDKF6eXb9ph8UHaJuKgNxFAeyBwHJV+Bmqu56PafXS8rGftYVFU11lOxOtiBtvbQy7Ah+jlkztMxtlM8DlYmIvbJgWb351fEAak8uUZ0UEg3YGhSI+pKDx8ukxH8POSzwSMzjSTczrSKwOrU5+Y6tzRBEjTulIuAlsa3sZgC/BXAaRKHzPiIcb5uTqEKfJUoDHCglQ6Uk+UDqRwP8Yv2NKVhHFNqCoCWviNZeafHE1KcTHV8de7QXpAZDUdp5SbKrSvyjiqCJlgEonIZ4Q0M6zuNG73BWeOiXd6dkygQYl0UEroXyfH8HjJwq729Mlj90IcG2w793WUSefnxOScvZFCrX8XeZcvhAf3Tz0XPG9QgrxVagzgezTnhImp1g52g/R5JaaYykJgDFMgPcPIKMvH2UE6LmZWTOUhv5jqtJvtVaEXxMyKqXwEAWwKpLcMzZ1S0pQnbzKmmEocNKe93b51FkjnxkyKqcwgFelU9B5wRnlhLATxb4iZFFN5CU4KSRqHSKBOGZnB4x1jiqnsdGn9s0q/+u2eNmboyjKaISPNHIS3hVT/JaaPZaMSmIu52LOrBAeK4SlvYqPCE8nApBo4Ae5673e41SlPiIMSHIjpWUkXUCohNxKczb5N6P1uom3sPrYT6BZhGTBX/yMPqMg312zbeHMxcdtDImkdUjMxPdN1jI6cw34q3hzP/r31TPZ5s88hEnuQLzVnSH65kqUhGw3mlQk8UKQ3nk1lPMKduUuztVkJfZa56zE8+z0E7a0MHjt4raN5IIHEO2YT7ldTdeFwKgoUMcqA/HS5r22mvMlDFSaJv3+dTbSAv1Wtn23sjFlRMEn2Fel3ubFrze+n4cuGGxAiK4ki2FCwxmDnwl2sVea9vohbvO7T/mSJtswig9/tlNupWiDr3XBjpA1PjXHyy5n2Zz0HnGQCPJe7gM6yEzgvVh5/tMFMB30YnzfoYRpHFEFiCKYWioycHtqxmN+Y0L9i+76vp149Uful7MK4q0shuQayz63kiWT1N70g1TbZFmgpJqGQi2t7WbgFdY5d60iThEw07J9nL5ydC0Aq7hfBKMaQ/W53+RkzzRf2TU85OPUcsrp2q0PqciC1CiMpkEoJutlxqBus30eSpIrdaRZ4NaFkdX5/ZTaPExIachlTyzB/FFSqU7LcJD7fjQkgsnxiKgHS9+TZSQL0ct6poUAKh9WC1IcmtyCdiwvnnkJ1KR7OgC9El+ggFSXWKC2t5HVbLZGUxntxi1OW4uxzvBDUc8hnzqAkzCtJ9SUyCUVId0/pN5bUP4y/Qw6v/UwqMkP/SCesh8ec0vUmw3L2p0ywlZk1UOMNp9NB1rksrFvlOfsJwIuJvyiRlyAIHWmLAFKH07jYk7aXH6Qbszak/QhEpwSSh/xWGPnPLfAHqe3AM5Ew4pCAojTdujab7GErV6dBKqsDoPguH0jh3kHqZkuQHOcTvJ99uWUy+o5sJWm+E66POAJDHk53BgKjW2bvzLQxYzIyQP4+A3NB8TwjcBhE6TLYTVmwY2pexmTWjlwlqc0GkyDdggnS7kUtlrqHQkBV/x9dWh1a3U/DQ4JBO7iTaqSpst/2rPvxM+45ZAL8UlmCbJPuHEilmh/GHKLRhPcETlVWoKAA8VajHvnqXmTtSNUyy7QjnQm60oZqloA2zpFHkJvZ37L/bpuUuB8ljj3LSVZpLiJtUuk47fGcRhhG3UOZCbW4uRLqYQWC9DEsLJQ258tZ7xlUKjpSDl6NMMvVK12O0woTVOtMR7EukOOEtjWebLLcA1I5/xZTok431+kgpjZ+NDcZRKhINf6B/xxBSlXbW27cw56QIaXh4qw6R6/aleom1dvC7D8jkCGo2TYna57nCEOZQjeLDNdY4KRAaoVuLOmC3rrQCvn+wQI3F9ynpTrhYDDw0i3vWR46IcJC+im2cU4xQ01X2J7POrlmDhYpUql4XAjKeg5wPqkQFMwny0gWmrmxI6yX6P8YEdky/HbWOAAAAABJRU5ErkJggg=="
+2026-03-04 18:01:51              alt="OANDA Logo"></a>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          <h1>Sorry, there's a problem on our side</h1>
+2026-03-04 18:01:51          <h4>We are aware of this problem and are working to fix it.</h4>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          <p><strong>In the meantime, here is what you can do:</strong></p>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          <ul>
+2026-03-04 18:01:51              <li><i class="material-icons">autorenew</i> Refresh the page (sometimes this helps)</li>
+2026-03-04 18:01:51              <li><i class="material-icons">access_time</i> Try again in 30 minutes</li>
+2026-03-04 18:01:51              <li><i class="material-icons">help</i> Visit our <a href="https://help.oanda.com" target="_blank"
+2026-03-04 18:01:51                                                                  rel="noopener">support site</a> and tell us what
+2026-03-04 18:01:51                  happened
+2026-03-04 18:01:51              </li>
+2026-03-04 18:01:51          </ul>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          <h3>You can still use the following services</h3>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51          <div class="content-cards content-cards--equal-height content-cards--align-top">
+2026-03-04 18:01:51              <div class="content-cards__card">
+2026-03-04 18:01:51                  <div
+2026-03-04 18:01:51                      class="content-cards__card__inner background--white content-cards__card--align-left  content-cards__card--rounded">
+2026-03-04 18:01:51                      <div class="content-cards__card__content">
+2026-03-04 18:01:51                          <div class="content-cards__card__content-block content-cards__card__content-block--icon">
+2026-03-04 18:01:51                              <div class="icon icon--left">
+2026-03-04 18:01:51                                  <img
+2026-03-04 18:01:51                                      src="data:image/png;base64,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"
+2026-03-04 18:01:51                                      width="60" height="60" alt="Existing client image">
+2026-03-04 18:01:51                              </div>
+2026-03-04 18:01:51                          </div>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51                          <div class="content-cards__card__content-block content-cards__card__content-block--title">
+2026-03-04 18:01:51                              <h3>Existing client?</h3>
+2026-03-04 18:01:51                          </div>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51                          <div class="content-cards__card__content-block content-cards__card__content-block--text">
+2026-03-04 18:01:51                              <div class="rich-text"><p>Log in to the portal to deposit or withdraw funds to/from your
+2026-03-04 18:01:51                                  OANDA account.</p></div>
+2026-03-04 18:01:51                          </div>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51                          <div class="content-cards__card__content-block content-cards__card__content-block--ctas">
+2026-03-04 18:01:51                              <div class="button-group">
+2026-03-04 18:01:51                                  <a href="https://www.oanda.com/account/login" class="btn btn--primary btn--blue"
+2026-03-04 18:01:51                                     target="_blank" rel="noopener">Sign in</a>
+2026-03-04 18:01:51                              </div>
+2026-03-04 18:01:51                          </div>
+2026-03-04 18:01:51                      </div>
+2026-03-04 18:01:51                  </div>
+2026-03-04 18:01:51              </div>
+2026-03-04 18:01:51          </div>
+2026-03-04 18:01:51          <div class="cf">
+2026-03-04 18:01:51              <h5><div class="cf-error-details cf-error-502">
+2026-03-04 18:01:51    <h1>Bad gateway</h1>
+2026-03-04 18:01:51    <p>The web server reported a bad gateway error.</p>
+2026-03-04 18:01:51    <ul>
+2026-03-04 18:01:51      <li>Ray ID: 9d72c9e15a75c153</li>
+2026-03-04 18:01:51      <li>Your IP address: 74.220.48.242</li>
+2026-03-04 18:01:51      <li>Error reference number: 502</li>
+2026-03-04 18:01:51      <li>Cloudflare Location: Portland</li>
+2026-03-04 18:01:51    </ul>
+2026-03-04 18:01:51  </div>
+2026-03-04 18:01:51  </h5>
+2026-03-04 18:01:51          </div>
+2026-03-04 18:01:51      </div>
+2026-03-04 18:01:51  </div>
+2026-03-04 18:01:51  </body>
+2026-03-04 18:01:51  </html>
+2026-03-04 18:01:51  
+2026-03-04 18:01:51  
+2026-03-04 18:01:58  Failed pairs: [('EUR/CHF', 'Analysis returned None')]
+2026-03-04 18:01:58  2026-03-04 18:01:58,654 - ScalpEngine - INFO - Γ£à Fisher opportunities sent to market-state-api
+2026-03-04 18:01:58  2026-03-04 18:01:58,654 - ScalpEngine - INFO - Γ£à Hourly Fisher scan complete: 0 opportunities
+2026-03-04 18:01:58  2026-03-04 18:01:58,654 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:01:59  2026-03-04 18:01:59,357 - ScalpEngine - INFO - ≡ƒöì Checking 3 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:01:59  2026-03-04 18:01:59,558 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:01:59  2026-03-04 18:01:59,722 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:01:59  2026-03-04 18:01:59,915 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:01:59  2026-03-04 18:01:59,921 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 3 max trades limit (total: 3)
+2026-03-04 18:03:14  2026-03-04 18:03:14,778 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 87.6 pips
+2026-03-04 18:04:14  2026-03-04 18:04:14,838 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:04:15  2026-03-04 18:04:15,060 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 5 opportunities (timestamp: 2026-03-04T18:03:52.259779Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 18:04:15  2026-03-04 18:04:15,561 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:04:15  2026-03-04 18:04:15,726 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:04:15  2026-03-04 18:04:15,898 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:04:16  2026-03-04 18:04:16,059 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:04:16  2026-03-04 18:04:16,236 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:04:16  2026-03-04 18:04:16,395 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:04:16  2026-03-04 18:04:16,401 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:05:30  2026-03-04 18:05:30,723 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 93.1 pips
+2026-03-04 18:06:30  2026-03-04 18:06:30,783 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:06:31  2026-03-04 18:06:31,446 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:06:31  2026-03-04 18:06:31,601 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:06:31  2026-03-04 18:06:31,760 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:06:31  2026-03-04 18:06:31,919 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:06:32  2026-03-04 18:06:32,091 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:06:32  2026-03-04 18:06:32,268 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:06:32  2026-03-04 18:06:32,274 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:07:24  2026-03-04 18:07:24,680 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 89.2 pips
+2026-03-04 18:08:24  2026-03-04 18:08:24,742 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:08:24  2026-03-04 18:08:24,857 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-04 18:08:25  2026-03-04 18:08:25,676 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:08:25  2026-03-04 18:08:25,849 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:08:26  2026-03-04 18:08:26,017 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:08:26  2026-03-04 18:08:26,188 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:08:26  2026-03-04 18:08:26,358 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:08:26  2026-03-04 18:08:26,523 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:08:26  2026-03-04 18:08:26,529 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:09:18  2026-03-04 18:09:18,473 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 85.0 pips
+2026-03-04 18:10:18  2026-03-04 18:10:18,533 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:10:18  2026-03-04 18:10:18,707 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 5 opportunities (timestamp: 2026-03-04T18:09:24.283384Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 18:10:19  2026-03-04 18:10:19,175 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 25299: AUD/JPY SELL @ 110.65 ΓåÆ 110.5 (better entry price (better by 15.0 pips))
+2026-03-04 18:10:19  2026-03-04 18:10:19,486 - ScalpEngine - WARNING - ΓÜá∩╕Å Replaced cancelled order 25299 but new order for AUD/JPY was not placed (check above)
+2026-03-04 18:10:19  2026-03-04 18:10:19,486 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:10:19  2026-03-04 18:10:19,640 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:10:19  2026-03-04 18:10:19,803 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:10:20  2026-03-04 18:10:20,016 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:10:20  2026-03-04 18:10:20,172 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:10:20  2026-03-04 18:10:20,329 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:10:20  2026-03-04 18:10:20,335 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:11:11  2026-03-04 18:11:11,535 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 77.8 pips
+2026-03-04 18:12:11  2026-03-04 18:12:11,596 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:12:12  2026-03-04 18:12:12,095 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:12:12  2026-03-04 18:12:12,247 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:12:12  2026-03-04 18:12:12,416 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:12:12  2026-03-04 18:12:12,576 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:12:12  2026-03-04 18:12:12,763 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:12:12  2026-03-04 18:12:12,920 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:12:12  2026-03-04 18:12:12,928 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:13:04  2026-03-04 18:13:04,795 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 83.4 pips
+2026-03-04 18:14:04  2026-03-04 18:14:04,812 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:14:05  2026-03-04 18:14:05,332 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:14:05  2026-03-04 18:14:05,490 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:14:05  2026-03-04 18:14:05,651 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:14:05  2026-03-04 18:14:05,814 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:14:05  2026-03-04 18:14:05,976 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:14:06  2026-03-04 18:14:06,138 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:14:06  2026-03-04 18:14:06,144 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:14:57  2026-03-04 18:14:57,905 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 86.2 pips
+2026-03-04 18:15:57  2026-03-04 18:15:57,966 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:15:58  2026-03-04 18:15:58,891 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:15:59  2026-03-04 18:15:59,043 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:15:59  2026-03-04 18:15:59,213 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:15:59  2026-03-04 18:15:59,373 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:15:59  2026-03-04 18:15:59,535 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:15:59  2026-03-04 18:15:59,700 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:15:59  2026-03-04 18:15:59,705 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:16:51  2026-03-04 18:16:51,169 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 84.3 pips
+2026-03-04 18:17:51  2026-03-04 18:17:51,230 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:17:51  2026-03-04 18:17:51,737 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:17:51  2026-03-04 18:17:51,900 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:17:52  2026-03-04 18:17:52,060 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:17:52  2026-03-04 18:17:52,220 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:17:52  2026-03-04 18:17:52,385 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:17:52  2026-03-04 18:17:52,543 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:17:52  2026-03-04 18:17:52,551 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:18:43  2026-03-04 18:18:43,980 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 86.3 pips
+2026-03-04 18:19:44  2026-03-04 18:19:44,041 - ScalpEngine - INFO - 
+2026-03-04 18:19:44  === Status Check #550 ===
+2026-03-04 18:19:44  2026-03-04 18:19:44,041 - ScalpEngine - INFO - Time: 18:19:44 UTC
+2026-03-04 18:19:44  2026-03-04 18:19:44,041 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 18:19:44  2026-03-04 18:19:44,041 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 18:19:44  2026-03-04 18:19:44,041 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-04 18:19:44  2026-03-04 18:19:44,041 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:19:44  2026-03-04 18:19:44,216 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T18:09:24.283384Z, no change)
+2026-03-04 18:19:44  2026-03-04 18:19:44,429 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, HIGH_VOL volatility, 5 opportunities
+2026-03-04 18:19:44  2026-03-04 18:19:44,589 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:19:44  2026-03-04 18:19:44,749 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:19:44  2026-03-04 18:19:44,915 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:19:45  2026-03-04 18:19:45,082 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:19:45  2026-03-04 18:19:45,246 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:19:45  2026-03-04 18:19:45,401 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:19:45  2026-03-04 18:19:45,407 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:20:36  2026-03-04 18:20:36,631 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 91.8 pips
+2026-03-04 18:21:36  2026-03-04 18:21:36,691 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:21:37  2026-03-04 18:21:37,199 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:21:37  2026-03-04 18:21:37,355 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:21:37  2026-03-04 18:21:37,531 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:21:37  2026-03-04 18:21:37,688 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:21:37  2026-03-04 18:21:37,851 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:21:38  2026-03-04 18:21:38,007 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:21:38  2026-03-04 18:21:38,013 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:22:29  2026-03-04 18:22:29,910 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 88.4 pips
+2026-03-04 18:23:29  2026-03-04 18:23:29,971 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:23:30  2026-03-04 18:23:30,492 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:23:30  2026-03-04 18:23:30,670 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:23:30  2026-03-04 18:23:30,845 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:23:31  2026-03-04 18:23:31,033 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:23:31  2026-03-04 18:23:31,211 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:23:31  2026-03-04 18:23:31,379 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:23:31  2026-03-04 18:23:31,387 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:24:31  2026-03-04 18:24:31,772 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 83.5 pips
+2026-03-04 18:25:31  2026-03-04 18:25:31,833 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:25:32  2026-03-04 18:25:32,468 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:25:32  2026-03-04 18:25:32,642 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:25:32  2026-03-04 18:25:32,910 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:25:33  2026-03-04 18:25:33,104 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:25:33  2026-03-04 18:25:33,290 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:25:33  2026-03-04 18:25:33,478 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:25:33  2026-03-04 18:25:33,484 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:26:26  2026-03-04 18:26:26,623 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 81.3 pips
+2026-03-04 18:27:26  2026-03-04 18:27:26,673 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:27:27  2026-03-04 18:27:27,172 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:27:27  2026-03-04 18:27:27,358 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:27:27  2026-03-04 18:27:27,536 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:27:27  2026-03-04 18:27:27,714 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:27:27  2026-03-04 18:27:27,888 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:27:28  2026-03-04 18:27:28,061 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:27:28  2026-03-04 18:27:28,067 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:28:20  2026-03-04 18:28:20,217 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 90.4 pips
+2026-03-04 18:29:20  2026-03-04 18:29:20,277 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:29:20  2026-03-04 18:29:20,459 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T18:09:24.283384Z, no change)
+2026-03-04 18:29:20  2026-03-04 18:29:20,871 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:29:21  2026-03-04 18:29:21,052 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:29:21  2026-03-04 18:29:21,224 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:29:21  2026-03-04 18:29:21,401 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:29:21  2026-03-04 18:29:21,575 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:29:21  2026-03-04 18:29:21,754 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:29:21  2026-03-04 18:29:21,763 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:30:16  2026-03-04 18:30:16,465 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 80.9 pips
+2026-03-04 18:31:16  2026-03-04 18:31:16,525 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:31:17  2026-03-04 18:31:17,070 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:31:17  2026-03-04 18:31:17,247 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:31:17  2026-03-04 18:31:17,420 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:31:17  2026-03-04 18:31:17,602 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:31:17  2026-03-04 18:31:17,777 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:31:17  2026-03-04 18:31:17,951 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:31:17  2026-03-04 18:31:17,957 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:32:11  2026-03-04 18:32:11,663 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 75.8 pips
+2026-03-04 18:33:11  2026-03-04 18:33:11,723 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:33:12  2026-03-04 18:33:12,265 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:33:12  2026-03-04 18:33:12,445 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:33:12  2026-03-04 18:33:12,615 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:33:12  2026-03-04 18:33:12,808 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:33:12  2026-03-04 18:33:12,982 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:33:13  2026-03-04 18:33:13,160 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:33:13  2026-03-04 18:33:13,166 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:34:05  2026-03-04 18:34:05,021 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 83.8 pips
+2026-03-04 18:35:05  2026-03-04 18:35:05,081 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:35:05  2026-03-04 18:35:05,747 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:35:05  2026-03-04 18:35:05,926 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:35:06  2026-03-04 18:35:06,100 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:35:06  2026-03-04 18:35:06,275 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:35:06  2026-03-04 18:35:06,449 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:35:06  2026-03-04 18:35:06,668 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:35:06  2026-03-04 18:35:06,676 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:36:00  2026-03-04 18:36:00,058 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 80.7 pips
+2026-03-04 18:37:00  2026-03-04 18:37:00,119 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:37:00  2026-03-04 18:37:00,669 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:37:00  2026-03-04 18:37:00,842 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:37:01  2026-03-04 18:37:01,018 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:37:01  2026-03-04 18:37:01,237 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:37:01  2026-03-04 18:37:01,415 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:37:01  2026-03-04 18:37:01,597 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:37:01  2026-03-04 18:37:01,603 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:37:54  2026-03-04 18:37:54,585 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 81.3 pips
+2026-03-04 18:38:54  2026-03-04 18:38:54,643 - ScalpEngine - INFO - 
+2026-03-04 18:38:54  === Status Check #560 ===
+2026-03-04 18:38:54  2026-03-04 18:38:54,643 - ScalpEngine - INFO - Time: 18:38:54 UTC
+2026-03-04 18:38:54  2026-03-04 18:38:54,643 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 18:38:54  2026-03-04 18:38:54,643 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 18:38:54  2026-03-04 18:38:54,643 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-04 18:38:54  2026-03-04 18:38:54,643 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:38:54  2026-03-04 18:38:54,819 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T18:09:24.283384Z, no change)
+2026-03-04 18:38:54  2026-03-04 18:38:54,980 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, HIGH_VOL volatility, 5 opportunities
+2026-03-04 18:38:55  2026-03-04 18:38:55,161 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:38:55  2026-03-04 18:38:55,334 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:38:55  2026-03-04 18:38:55,508 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:38:55  2026-03-04 18:38:55,691 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:38:55  2026-03-04 18:38:55,869 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:38:56  2026-03-04 18:38:56,073 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:38:56  2026-03-04 18:38:56,079 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:39:49  2026-03-04 18:39:49,575 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 84.0 pips
+2026-03-04 18:40:49  2026-03-04 18:40:49,635 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:40:50  2026-03-04 18:40:50,139 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:40:50  2026-03-04 18:40:50,301 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:40:50  2026-03-04 18:40:50,471 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:40:50  2026-03-04 18:40:50,644 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:40:50  2026-03-04 18:40:50,821 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:40:50  2026-03-04 18:40:50,987 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:40:50  2026-03-04 18:40:50,995 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:41:43  2026-03-04 18:41:43,028 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 85.0 pips
+2026-03-04 18:42:43  2026-03-04 18:42:43,088 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:42:43  2026-03-04 18:42:43,623 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:42:43  2026-03-04 18:42:43,787 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:42:43  2026-03-04 18:42:43,946 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:42:44  2026-03-04 18:42:44,110 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:42:44  2026-03-04 18:42:44,282 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:42:44  2026-03-04 18:42:44,441 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:42:44  2026-03-04 18:42:44,447 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:43:36  2026-03-04 18:43:36,629 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 86.1 pips
+2026-03-04 18:44:36  2026-03-04 18:44:36,674 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:44:37  2026-03-04 18:44:37,204 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:44:37  2026-03-04 18:44:37,366 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:44:37  2026-03-04 18:44:37,533 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:44:37  2026-03-04 18:44:37,705 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:44:37  2026-03-04 18:44:37,885 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:44:38  2026-03-04 18:44:38,056 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:44:38  2026-03-04 18:44:38,062 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:45:30  2026-03-04 18:45:30,180 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 75.4 pips
+2026-03-04 18:46:30  2026-03-04 18:46:30,240 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:46:30  2026-03-04 18:46:30,795 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:46:30  2026-03-04 18:46:30,949 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:46:31  2026-03-04 18:46:31,108 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:46:31  2026-03-04 18:46:31,275 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:46:31  2026-03-04 18:46:31,452 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:46:31  2026-03-04 18:46:31,611 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:46:31  2026-03-04 18:46:31,619 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:47:23  2026-03-04 18:47:23,942 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 86.6 pips
+2026-03-04 18:48:24  2026-03-04 18:48:24,002 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:48:24  2026-03-04 18:48:24,262 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T18:09:24.283384Z, no change)
+2026-03-04 18:48:24  2026-03-04 18:48:24,739 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:48:24  2026-03-04 18:48:24,895 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:48:25  2026-03-04 18:48:25,083 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:48:25  2026-03-04 18:48:25,252 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:48:25  2026-03-04 18:48:25,427 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:48:25  2026-03-04 18:48:25,588 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:48:25  2026-03-04 18:48:25,601 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:49:17  2026-03-04 18:49:17,245 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 89.7 pips
+2026-03-04 18:50:17  2026-03-04 18:50:17,306 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:50:17  2026-03-04 18:50:17,826 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:50:17  2026-03-04 18:50:17,980 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:50:18  2026-03-04 18:50:18,145 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:50:18  2026-03-04 18:50:18,299 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:50:18  2026-03-04 18:50:18,463 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:50:18  2026-03-04 18:50:18,616 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:50:18  2026-03-04 18:50:18,622 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:50:37  Γ¥î USD_CHF @ H1: OANDA API returned HTML error page (500). Possible causes: 1) Invalid instrument name (check format: EUR_USD not EUR/USD), 2) Wrong environment (practice vs live mismatch), 3) OANDA API outage. Error: <!DOCTYPE html>
+2026-03-04 18:50:37  <html>
+2026-03-04 18:50:37  <head>
+2026-03-04 18:50:37      <meta charset="utf-8"/>
+2026-03-04 18:50:37      <title>Internal Server Error</title>
+2026-03-04 18:50:37      <meta name="viewport" content="width=device-width, initial-scale=1">
+2026-03-04 18:50:37  
+2026-03-04 18:50:37      <link rel="preload" as=
+2026-03-04 18:51:14  Γ¥î GBP_JPY @ H4: OANDA API returned HTML error page (500). Possible causes: 1) Invalid instrument name (check format: EUR_USD not EUR/USD), 2) Wrong environment (practice vs live mismatch), 3) OANDA API outage. Error: <!DOCTYPE html>
+2026-03-04 18:51:14  <html>
+2026-03-04 18:51:14  <head>
+2026-03-04 18:51:14      <meta charset="utf-8"/>
+2026-03-04 18:51:14      <title>Internal Server Error</title>
+2026-03-04 18:51:14      <meta name="viewport" content="width=device-width, initial-scale=1">
+2026-03-04 18:51:14  
+2026-03-04 18:51:14      <link rel="preload" as=
+2026-03-04 18:51:55  2026-03-04 18:51:55,853 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 86.3 pips
+2026-03-04 18:52:55  2026-03-04 18:52:55,914 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:52:56  2026-03-04 18:52:56,445 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:52:56  2026-03-04 18:52:56,621 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:52:56  2026-03-04 18:52:56,776 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:52:56  2026-03-04 18:52:56,946 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:52:57  2026-03-04 18:52:57,109 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:52:57  2026-03-04 18:52:57,272 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:52:57  2026-03-04 18:52:57,280 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:53:50  2026-03-04 18:53:50,139 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 88.4 pips
+2026-03-04 18:54:50  2026-03-04 18:54:50,199 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:54:50  2026-03-04 18:54:50,675 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:54:50  2026-03-04 18:54:50,832 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:54:51  2026-03-04 18:54:51,006 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:54:51  2026-03-04 18:54:51,184 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:54:51  2026-03-04 18:54:51,348 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:54:51  2026-03-04 18:54:51,517 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:54:51  2026-03-04 18:54:51,523 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:55:54  2026-03-04 18:55:54,050 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 95.2 pips
+2026-03-04 18:56:54  2026-03-04 18:56:54,110 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:56:54  2026-03-04 18:56:54,626 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:56:54  2026-03-04 18:56:54,777 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:56:54  2026-03-04 18:56:54,930 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:56:55  2026-03-04 18:56:55,085 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:56:55  2026-03-04 18:56:55,283 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:56:55  2026-03-04 18:56:55,443 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:56:55  2026-03-04 18:56:55,449 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:57:47  2026-03-04 18:57:47,933 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 88.9 pips
+2026-03-04 18:58:47  2026-03-04 18:58:47,993 - ScalpEngine - INFO - 
+2026-03-04 18:58:47  === Status Check #570 ===
+2026-03-04 18:58:47  2026-03-04 18:58:47,993 - ScalpEngine - INFO - Time: 18:58:47 UTC
+2026-03-04 18:58:47  2026-03-04 18:58:47,993 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 18:58:47  2026-03-04 18:58:47,993 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 18:58:47  2026-03-04 18:58:47,993 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-04 18:58:47  2026-03-04 18:58:47,993 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 18:58:48  2026-03-04 18:58:48,187 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T18:09:24.283384Z, no change)
+2026-03-04 18:58:48  2026-03-04 18:58:48,325 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, HIGH_VOL volatility, 5 opportunities
+2026-03-04 18:58:48  2026-03-04 18:58:48,482 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 18:58:48  2026-03-04 18:58:48,637 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:58:48  2026-03-04 18:58:48,794 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:58:48  2026-03-04 18:58:48,968 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:58:49  2026-03-04 18:58:49,124 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:58:49  2026-03-04 18:58:49,279 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 18:58:49  2026-03-04 18:58:49,287 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 18:59:41  2026-03-04 18:59:41,109 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 83.2 pips
+2026-03-04 19:00:41  2026-03-04 19:00:41,169 - ScalpEngine - INFO - 
+2026-03-04 19:00:41  ≡ƒÄ» Starting hourly Fisher Transform scan (trading hours, Reversal Strategy)...
+2026-03-04 19:00:41  2026-03-04 19:00:41,287 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 5 opportunities (timestamp: 2026-03-04T18:58:48.965102Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 19:00:45  2026-03-04 19:00:45,292 - ScalpEngine - INFO - Γ£à Fisher opportunities sent to market-state-api
+2026-03-04 19:00:45  2026-03-04 19:00:45,292 - ScalpEngine - INFO - Γ£à Hourly Fisher scan complete: 0 opportunities
+2026-03-04 19:00:45  2026-03-04 19:00:45,293 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:00:45  2026-03-04 19:00:45,792 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:00:45  2026-03-04 19:00:45,958 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:00:46  2026-03-04 19:00:46,143 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:00:46  2026-03-04 19:00:46,313 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:00:46  2026-03-04 19:00:46,478 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:00:46  2026-03-04 19:00:46,636 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:00:46  2026-03-04 19:00:46,641 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:01:38  2026-03-04 19:01:38,422 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 77.2 pips
+2026-03-04 19:02:38  2026-03-04 19:02:38,482 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:02:39  2026-03-04 19:02:39,467 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:02:39  2026-03-04 19:02:39,626 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:02:39  2026-03-04 19:02:39,785 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:02:39  2026-03-04 19:02:39,944 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:02:40  2026-03-04 19:02:40,102 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:02:40  2026-03-04 19:02:40,267 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:02:40  2026-03-04 19:02:40,273 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:03:32  2026-03-04 19:03:32,964 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 78.4 pips
+2026-03-04 19:04:33  2026-03-04 19:04:33,024 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:04:33  2026-03-04 19:04:33,285 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 4 opportunities (timestamp: 2026-03-04T19:03:58.320867Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 19:04:33  2026-03-04 19:04:33,787 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:04:33  2026-03-04 19:04:33,975 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:04:34  2026-03-04 19:04:34,153 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:04:34  2026-03-04 19:04:34,325 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:04:34  2026-03-04 19:04:34,496 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:04:34  2026-03-04 19:04:34,510 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 4 max trades limit (total: 4)
+2026-03-04 19:05:26  2026-03-04 19:05:26,036 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 78.2 pips
+2026-03-04 19:06:26  2026-03-04 19:06:26,096 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:06:26  2026-03-04 19:06:26,597 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:06:26  2026-03-04 19:06:26,752 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:06:26  2026-03-04 19:06:26,918 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:06:27  2026-03-04 19:06:27,078 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:06:27  2026-03-04 19:06:27,241 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:06:27  2026-03-04 19:06:27,249 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 4 max trades limit (total: 4)
+2026-03-04 19:07:22  2026-03-04 19:07:22,164 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 81.0 pips
+2026-03-04 19:08:22  2026-03-04 19:08:22,228 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:08:22  2026-03-04 19:08:22,405 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 4 opportunities (timestamp: 2026-03-04T19:03:58.320867Z, no change)
+2026-03-04 19:08:22  2026-03-04 19:08:22,749 - ScalpEngine - INFO - ≡ƒöì Checking 4 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:08:22  2026-03-04 19:08:22,911 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:08:23  2026-03-04 19:08:23,076 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:08:23  2026-03-04 19:08:23,239 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:08:23  2026-03-04 19:08:23,405 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:08:23  2026-03-04 19:08:23,410 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 4 max trades limit (total: 4)
+2026-03-04 19:09:15  2026-03-04 19:09:15,981 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 86.1 pips
+2026-03-04 19:10:16  2026-03-04 19:10:16,022 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:10:16  2026-03-04 19:10:16,099 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-04 19:10:16  2026-03-04 19:10:16,193 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 5 opportunities (timestamp: 2026-03-04T19:09:06.716868Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 19:10:16  2026-03-04 19:10:16,551 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:10:16  2026-03-04 19:10:16,716 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:10:16  2026-03-04 19:10:16,893 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:10:17  2026-03-04 19:10:17,071 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:10:17  2026-03-04 19:10:17,235 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:10:17  2026-03-04 19:10:17,398 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:10:17  2026-03-04 19:10:17,404 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:11:10  2026-03-04 19:11:10,132 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 85.8 pips
+2026-03-04 19:12:10  2026-03-04 19:12:10,192 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:12:10  2026-03-04 19:12:10,715 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:12:10  2026-03-04 19:12:10,872 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:12:11  2026-03-04 19:12:11,025 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:12:11  2026-03-04 19:12:11,184 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:12:11  2026-03-04 19:12:11,343 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:12:11  2026-03-04 19:12:11,508 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:12:11  2026-03-04 19:12:11,516 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:13:03  2026-03-04 19:13:03,228 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 83.7 pips
+2026-03-04 19:14:03  2026-03-04 19:14:03,289 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:14:03  2026-03-04 19:14:03,819 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:14:03  2026-03-04 19:14:03,979 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:14:04  2026-03-04 19:14:04,146 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:14:04  2026-03-04 19:14:04,304 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:14:04  2026-03-04 19:14:04,461 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:14:04  2026-03-04 19:14:04,630 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:14:04  2026-03-04 19:14:04,641 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:14:56  2026-03-04 19:14:56,116 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 82.0 pips
+2026-03-04 19:15:56  2026-03-04 19:15:56,176 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:15:56  2026-03-04 19:15:56,751 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:15:56  2026-03-04 19:15:56,904 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:15:57  2026-03-04 19:15:57,073 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:15:57  2026-03-04 19:15:57,232 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:15:57  2026-03-04 19:15:57,396 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:15:57  2026-03-04 19:15:57,553 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:15:57  2026-03-04 19:15:57,559 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:16:49  2026-03-04 19:16:49,759 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 74.6 pips
+2026-03-04 19:17:49  2026-03-04 19:17:49,819 - ScalpEngine - INFO - 
+2026-03-04 19:17:49  === Status Check #580 ===
+2026-03-04 19:17:49  2026-03-04 19:17:49,819 - ScalpEngine - INFO - Time: 19:17:49 UTC
+2026-03-04 19:17:49  2026-03-04 19:17:49,819 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 19:17:49  2026-03-04 19:17:49,819 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 19:17:49  2026-03-04 19:17:49,819 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-04 19:17:49  2026-03-04 19:17:49,820 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:17:49  2026-03-04 19:17:49,997 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T19:09:06.716868Z, no change)
+2026-03-04 19:17:50  2026-03-04 19:17:50,164 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, TRENDING volatility, 5 opportunities
+2026-03-04 19:17:50  2026-03-04 19:17:50,790 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:17:50  2026-03-04 19:17:50,951 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:17:51  2026-03-04 19:17:51,121 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:17:51  2026-03-04 19:17:51,287 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:17:51  2026-03-04 19:17:51,442 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:17:51  2026-03-04 19:17:51,606 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:17:51  2026-03-04 19:17:51,614 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:19:05  2026-03-04 19:19:05,631 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 73.6 pips
+2026-03-04 19:20:05  2026-03-04 19:20:05,691 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:20:06  2026-03-04 19:20:06,216 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:20:06  2026-03-04 19:20:06,374 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:20:06  2026-03-04 19:20:06,539 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:20:06  2026-03-04 19:20:06,701 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:20:06  2026-03-04 19:20:06,870 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:20:07  2026-03-04 19:20:07,026 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:20:07  2026-03-04 19:20:07,031 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:21:03  2026-03-04 19:21:03,493 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 70.6 pips
+2026-03-04 19:22:03  2026-03-04 19:22:03,554 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:22:04  2026-03-04 19:22:04,100 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:22:04  2026-03-04 19:22:04,256 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:22:04  2026-03-04 19:22:04,418 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:22:04  2026-03-04 19:22:04,589 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:22:04  2026-03-04 19:22:04,744 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:22:04  2026-03-04 19:22:04,904 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:22:04  2026-03-04 19:22:04,910 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:23:13  2026-03-04 19:23:13,760 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 72.7 pips
+2026-03-04 19:24:13  2026-03-04 19:24:13,820 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:24:14  2026-03-04 19:24:14,370 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:24:14  2026-03-04 19:24:14,527 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:24:14  2026-03-04 19:24:14,681 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:24:14  2026-03-04 19:24:14,841 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:24:15  2026-03-04 19:24:15,003 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:24:15  2026-03-04 19:24:15,166 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:24:15  2026-03-04 19:24:15,174 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:25:06  2026-03-04 19:25:06,280 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 72.8 pips
+2026-03-04 19:26:06  2026-03-04 19:26:06,341 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:26:06  2026-03-04 19:26:06,891 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:26:07  2026-03-04 19:26:07,047 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:26:07  2026-03-04 19:26:07,207 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:26:07  2026-03-04 19:26:07,426 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:26:07  2026-03-04 19:26:07,597 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:26:07  2026-03-04 19:26:07,756 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:26:07  2026-03-04 19:26:07,762 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:26:59  2026-03-04 19:26:59,794 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 72.2 pips
+2026-03-04 19:27:59  2026-03-04 19:27:59,852 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:28:00  2026-03-04 19:28:00,020 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T19:09:06.716868Z, no change)
+2026-03-04 19:28:00  2026-03-04 19:28:00,348 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:28:00  2026-03-04 19:28:00,529 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:28:00  2026-03-04 19:28:00,683 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:28:00  2026-03-04 19:28:00,841 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:28:01  2026-03-04 19:28:01,011 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:28:01  2026-03-04 19:28:01,173 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:28:01  2026-03-04 19:28:01,179 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:28:53  2026-03-04 19:28:53,384 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 74.8 pips
+2026-03-04 19:29:53  2026-03-04 19:29:53,444 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:29:53  2026-03-04 19:29:53,938 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:29:54  2026-03-04 19:29:54,093 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:29:54  2026-03-04 19:29:54,253 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:29:54  2026-03-04 19:29:54,424 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:29:54  2026-03-04 19:29:54,591 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:29:54  2026-03-04 19:29:54,768 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:29:54  2026-03-04 19:29:54,776 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:30:47  2026-03-04 19:30:47,627 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 70.3 pips
+2026-03-04 19:31:47  2026-03-04 19:31:47,687 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:31:48  2026-03-04 19:31:48,242 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:31:48  2026-03-04 19:31:48,401 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:31:48  2026-03-04 19:31:48,567 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:31:48  2026-03-04 19:31:48,746 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:31:48  2026-03-04 19:31:48,905 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:31:49  2026-03-04 19:31:49,062 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:31:49  2026-03-04 19:31:49,069 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:32:41  2026-03-04 19:32:41,263 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 70.1 pips
+2026-03-04 19:33:41  2026-03-04 19:33:41,323 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:33:42  2026-03-04 19:33:42,295 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:33:42  2026-03-04 19:33:42,455 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:33:42  2026-03-04 19:33:42,613 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:33:42  2026-03-04 19:33:42,775 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:33:42  2026-03-04 19:33:42,942 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:33:43  2026-03-04 19:33:43,105 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:33:43  2026-03-04 19:33:43,111 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:34:34  2026-03-04 19:34:34,881 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 77.1 pips
+2026-03-04 19:35:34  2026-03-04 19:35:34,942 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:35:35  2026-03-04 19:35:35,503 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:35:35  2026-03-04 19:35:35,665 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:35:35  2026-03-04 19:35:35,823 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:35:36  2026-03-04 19:35:36,025 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:35:36  2026-03-04 19:35:36,186 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:35:36  2026-03-04 19:35:36,347 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:35:36  2026-03-04 19:35:36,355 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:36:28  2026-03-04 19:36:28,605 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 71.7 pips
+2026-03-04 19:37:28  2026-03-04 19:37:28,666 - ScalpEngine - INFO - 
+2026-03-04 19:37:28  === Status Check #590 ===
+2026-03-04 19:37:28  2026-03-04 19:37:28,666 - ScalpEngine - INFO - Time: 19:37:28 UTC
+2026-03-04 19:37:28  2026-03-04 19:37:28,666 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 19:37:28  2026-03-04 19:37:28,666 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 19:37:28  2026-03-04 19:37:28,666 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-04 19:37:28  2026-03-04 19:37:28,666 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:37:28  2026-03-04 19:37:28,881 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T19:09:06.716868Z, no change)
+2026-03-04 19:37:29  2026-03-04 19:37:29,036 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, TRENDING volatility, 5 opportunities
+2026-03-04 19:37:29  2026-03-04 19:37:29,204 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:37:29  2026-03-04 19:37:29,365 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:37:29  2026-03-04 19:37:29,539 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:37:29  2026-03-04 19:37:29,706 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:37:29  2026-03-04 19:37:29,883 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:37:30  2026-03-04 19:37:30,056 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:37:30  2026-03-04 19:37:30,062 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:38:21  2026-03-04 19:38:21,887 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 67.8 pips
+2026-03-04 19:39:21  2026-03-04 19:39:21,952 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:39:22  2026-03-04 19:39:22,518 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:39:22  2026-03-04 19:39:22,688 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:39:22  2026-03-04 19:39:22,851 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:39:23  2026-03-04 19:39:23,011 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:39:23  2026-03-04 19:39:23,179 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:39:23  2026-03-04 19:39:23,344 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:39:23  2026-03-04 19:39:23,350 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:40:15  2026-03-04 19:40:15,234 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 64.5 pips
+2026-03-04 19:41:15  2026-03-04 19:41:15,294 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:41:15  2026-03-04 19:41:15,852 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:41:16  2026-03-04 19:41:16,011 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:41:16  2026-03-04 19:41:16,182 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:41:16  2026-03-04 19:41:16,364 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:41:16  2026-03-04 19:41:16,527 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:41:16  2026-03-04 19:41:16,691 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:41:16  2026-03-04 19:41:16,699 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:42:08  2026-03-04 19:42:08,836 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 64.0 pips
+2026-03-04 19:43:08  2026-03-04 19:43:08,897 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:43:09  2026-03-04 19:43:09,433 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:43:09  2026-03-04 19:43:09,594 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:43:09  2026-03-04 19:43:09,756 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:43:09  2026-03-04 19:43:09,920 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:43:10  2026-03-04 19:43:10,091 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:43:10  2026-03-04 19:43:10,265 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:43:10  2026-03-04 19:43:10,271 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:44:02  2026-03-04 19:44:02,978 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 65.1 pips
+2026-03-04 19:45:03  2026-03-04 19:45:03,038 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:45:03  2026-03-04 19:45:03,583 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:45:04  2026-03-04 19:45:04,487 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:45:04  2026-03-04 19:45:04,654 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:45:04  2026-03-04 19:45:04,831 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:45:04  2026-03-04 19:45:04,994 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:45:05  2026-03-04 19:45:05,158 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:45:05  2026-03-04 19:45:05,164 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:45:57  2026-03-04 19:45:57,817 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 57.2 pips
+2026-03-04 19:46:57  2026-03-04 19:46:57,876 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:46:58  2026-03-04 19:46:58,058 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T19:09:06.716868Z, no change)
+2026-03-04 19:46:58  2026-03-04 19:46:58,427 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:46:58  2026-03-04 19:46:58,585 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:46:58  2026-03-04 19:46:58,753 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:46:58  2026-03-04 19:46:58,972 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:46:59  2026-03-04 19:46:59,134 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:46:59  2026-03-04 19:46:59,309 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:46:59  2026-03-04 19:46:59,318 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:48:05  2026-03-04 19:48:05,479 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 59.6 pips
+2026-03-04 19:49:05  2026-03-04 19:49:05,540 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:49:06  2026-03-04 19:49:06,067 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:49:06  2026-03-04 19:49:06,229 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:49:06  2026-03-04 19:49:06,395 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:49:06  2026-03-04 19:49:06,560 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:49:06  2026-03-04 19:49:06,720 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:49:06  2026-03-04 19:49:06,879 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:49:06  2026-03-04 19:49:06,885 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:50:18  2026-03-04 19:50:18,578 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 62.6 pips
+2026-03-04 19:51:18  2026-03-04 19:51:18,639 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:51:19  2026-03-04 19:51:19,127 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:51:19  2026-03-04 19:51:19,291 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:51:19  2026-03-04 19:51:19,456 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:51:19  2026-03-04 19:51:19,615 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:51:19  2026-03-04 19:51:19,782 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:51:19  2026-03-04 19:51:19,941 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:51:19  2026-03-04 19:51:19,951 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:52:16  2026-03-04 19:52:16,958 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 69.7 pips
+2026-03-04 19:53:17  2026-03-04 19:53:17,020 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:53:17  2026-03-04 19:53:17,585 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:53:17  2026-03-04 19:53:17,740 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:53:17  2026-03-04 19:53:17,911 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:53:18  2026-03-04 19:53:18,071 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:53:18  2026-03-04 19:53:18,242 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:53:18  2026-03-04 19:53:18,402 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:53:18  2026-03-04 19:53:18,410 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:54:51  2026-03-04 19:54:51,907 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 53.3 pips
+2026-03-04 19:55:51  2026-03-04 19:55:51,967 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:55:52  2026-03-04 19:55:52,516 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:55:52  2026-03-04 19:55:52,691 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:55:52  2026-03-04 19:55:52,857 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:55:53  2026-03-04 19:55:53,037 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:55:53  2026-03-04 19:55:53,207 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:55:53  2026-03-04 19:55:53,385 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:55:53  2026-03-04 19:55:53,391 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:56:45  2026-03-04 19:56:45,726 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 41.1 pips
+2026-03-04 19:57:45  2026-03-04 19:57:45,786 - ScalpEngine - INFO - 
+2026-03-04 19:57:45  === Status Check #600 ===
+2026-03-04 19:57:45  2026-03-04 19:57:45,786 - ScalpEngine - INFO - Time: 19:57:45 UTC
+2026-03-04 19:57:45  2026-03-04 19:57:45,786 - ScalpEngine - INFO - Mode: AUTO
+2026-03-04 19:57:45  2026-03-04 19:57:45,786 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-04 19:57:45  2026-03-04 19:57:45,786 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-04 19:57:45  2026-03-04 19:57:45,786 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:57:46  2026-03-04 19:57:46,005 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-04T19:09:06.716868Z, no change)
+2026-03-04 19:57:46  2026-03-04 19:57:46,182 - ScalpEngine - INFO - ≡ƒºá Market: BEARISH bias, TRENDING volatility, 5 opportunities
+2026-03-04 19:57:46  2026-03-04 19:57:46,362 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:57:46  2026-03-04 19:57:46,534 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:57:46  2026-03-04 19:57:46,711 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:57:46  2026-03-04 19:57:46,897 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:57:47  2026-03-04 19:57:47,073 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/USD SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:57:47  2026-03-04 19:57:47,269 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/GBP SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:57:47  2026-03-04 19:57:47,275 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 5 max trades limit (total: 5)
+2026-03-04 19:58:39  2026-03-04 19:58:39,319 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 35.3 pips
+2026-03-04 19:59:39  2026-03-04 19:59:39,379 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-04 19:59:39  2026-03-04 19:59:39,562 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 5 opportunities (timestamp: 2026-03-04T19:58:31.917513Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-04 19:59:39  2026-03-04 19:59:39,910 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-04 19:59:40  2026-03-04 19:59:40,075 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:59:40  2026-03-04 19:59:40,265 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/USD BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:59:40  2026-03-04 19:59:40,431 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:59:40  2026-03-04 19:59:40,600 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF SELL - Max trades limit reached (4/4) - in-memory open: 4, OANDA: 4
+2026-03-04 19:59:40  2026-03-04 19:59:40,606 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - GBP/USD SELL - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-04 19:59:40  2026-03-04 19:59:40,606 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 4 max trades limit (total: 5)

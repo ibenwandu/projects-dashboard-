@@ -1,0 +1,29 @@
+1) We should move from APIs to MCP for connectivity. Please give me the Pros and Cons and a plan to acheive it.
+   STATUS: MOVED TO things to review3.txt
+
+2) Do a thorough investigation to find out why valid trades are being rejected and fix the problem.
+   STATUS: ✅ DONE - Fixed 3 critical bugs:
+   - Fix 1a: Correct opportunity_id tracking (prevents max_runs blocks)
+   - Fix 1b: Auto-cleanup stale execution records on startup
+   - Fix 2: FT-DMI-EMA AUTO mode execution config
+
+3) I want to create a super-agent name "Ugo". This is still at the concept stage so ignore it for now.
+   STATUS: MOVED TO things to review3.txt (conceptual phase)
+
+4) I created 4 agents that should run by 17:30 EST every day to provide insights and improvement to my trading strategy. However they have never worked well so I want to get rid of them.
+   STATUS: ✅ DONE - Removed all 4 agents (12 files deleted):
+   - analyst_agent.py
+   - forex_trading_expert_agent.py
+   - coding_expert_agent.py
+   - orchestrator_agent.py
+
+5) In their place, I will build a modular system.
+5i) First will be to create an agent which runs every 15mins to create local backup of all log files from Scalp-engine Service, Scalp-engine UI and Oanda
+   STATUS: ✅ DONE - Log Backup Agent created and operational:
+   - Backs up logs every 15 minutes via Windows Task Scheduler
+   - Stores backups locally in logs_archive/ directory
+   - Monitors: Trade-Alerts, Scalp-Engine, Scalp-UI, OANDA logs
+   - Ready for future agent modules
+
+---
+OVERALL STATUS: ✅ DONE - All completed items delivered and tested

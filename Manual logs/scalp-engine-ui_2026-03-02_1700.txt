@@ -1,0 +1,1000 @@
+2026-02-27 16:42:39  Collecting itsdangerous>=2.2.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-02-27 16:42:39    Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2026-02-27 16:42:39  Collecting markupsafe>=2.1.1 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-02-27 16:42:39    Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-02-27 16:42:39  Collecting werkzeug>=3.1.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-02-27 16:42:39    Using cached werkzeug-3.1.6-py3-none-any.whl.metadata (4.0 kB)
+2026-02-27 16:42:39  Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.11.1->yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-27 16:42:39    Using cached soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-02-27 16:42:40  Collecting pycparser (from cffi>=1.12.0->curl_cffi<0.14,>=0.7->yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-27 16:42:40    Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-02-27 16:42:40  Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-27 16:42:40    Using cached attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2026-02-27 16:42:40  Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-27 16:42:40    Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-02-27 16:42:40  Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-27 16:42:40    Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-02-27 16:42:40  Collecting rpds-py>=0.25.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-27 16:42:40    Using cached rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-02-27 16:42:40  Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas>=2.0.0->-r requirements.txt (line 8))
+2026-02-27 16:42:40    Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-02-27 16:42:40  Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+2026-02-27 16:42:40  Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+2026-02-27 16:42:40  Using cached idna-3.11-py3-none-any.whl (71 kB)
+2026-02-27 16:42:40  Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-02-27 16:42:40  Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-02-27 16:42:40  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+2026-02-27 16:42:40  Using cached python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+2026-02-27 16:42:40  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-02-27 16:42:40  Using cached yfinance-1.2.0-py2.py3-none-any.whl (130 kB)
+2026-02-27 16:42:40  Using cached curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+2026-02-27 16:42:40  Using cached colorlog-6.10.1-py3-none-any.whl (11 kB)
+2026-02-27 16:42:40  Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
+2026-02-27 16:42:40  Using cached streamlit-1.54.0-py3-none-any.whl (9.1 MB)
+2026-02-27 16:42:40  Using cached altair-6.0.0-py3-none-any.whl (795 kB)
+2026-02-27 16:42:40  Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2026-02-27 16:42:40  Using cached cachetools-6.2.6-py3-none-any.whl (11 kB)
+2026-02-27 16:42:40  Using cached click-8.3.1-py3-none-any.whl (108 kB)
+2026-02-27 16:42:40  Using cached gitpython-3.1.46-py3-none-any.whl (208 kB)
+2026-02-27 16:42:40  Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+2026-02-27 16:42:40  Using cached pillow-12.1.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+2026-02-27 16:42:40  Using cached protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+2026-02-27 16:42:40  Using cached pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+2026-02-27 16:42:40  Using cached smmap-5.0.2-py3-none-any.whl (24 kB)
+2026-02-27 16:42:40  Using cached tenacity-9.1.4-py3-none-any.whl (28 kB)
+2026-02-27 16:42:40  Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+2026-02-27 16:42:40  Using cached tornado-6.5.4-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (445 kB)
+2026-02-27 16:42:40  Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-02-27 16:42:40  Using cached watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+2026-02-27 16:42:40  Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+2026-02-27 16:42:40  Using cached beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-02-27 16:42:40  Using cached certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-02-27 16:42:40  Using cached cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
+2026-02-27 16:42:40  Using cached frozendict-2.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (120 kB)
+2026-02-27 16:42:40  Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2026-02-27 16:42:40  Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-02-27 16:42:40  Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-02-27 16:42:40  Using cached attrs-25.4.0-py3-none-any.whl (67 kB)
+2026-02-27 16:42:40  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-02-27 16:42:40  Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+2026-02-27 16:42:40  Using cached narwhals-2.17.0-py3-none-any.whl (444 kB)
+2026-02-27 16:42:40  Using cached peewee-4.0.0-py3-none-any.whl (139 kB)
+2026-02-27 16:42:40  Using cached platformdirs-4.9.2-py3-none-any.whl (21 kB)
+2026-02-27 16:42:40  Using cached pyarrow-23.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (47.6 MB)
+2026-02-27 16:42:40  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-02-27 16:42:40  Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-02-27 16:42:40  Using cached rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+2026-02-27 16:42:40  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-02-27 16:42:40  Using cached soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-02-27 16:42:40  Using cached tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+2026-02-27 16:42:40  Using cached websockets-16.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (183 kB)
+2026-02-27 16:42:40  Using cached werkzeug-3.1.6-py3-none-any.whl (225 kB)
+2026-02-27 16:42:40  Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+2026-02-27 16:42:41  Installing collected packages: pytz, peewee, oandapyV20, multitasking, websockets, watchdog, urllib3, tzdata, typing-extensions, tornado, toml, tenacity, soupsieve, smmap, six, rpds-py, pyyaml, python-dotenv, pycparser, pyarrow, protobuf, platformdirs, pillow, numpy, narwhals, markupsafe, itsdangerous, idna, frozendict, colorlog, click, charset_normalizer, certifi, cachetools, blinker, attrs, werkzeug, requests, referencing, python-dateutil, jinja2, gitdb, cffi, beautifulsoup4, pydeck, pandas, jsonschema-specifications, gitpython, flask, curl_cffi, yfinance, jsonschema, altair, streamlit
+2026-02-27 16:42:55  
+2026-02-27 16:42:55  Successfully installed altair-6.0.0 attrs-25.4.0 beautifulsoup4-4.14.3 blinker-1.9.0 cachetools-6.2.6 certifi-2026.2.25 cffi-2.0.0 charset_normalizer-3.4.4 click-8.3.1 colorlog-6.10.1 curl_cffi-0.13.0 flask-3.1.3 frozendict-2.4.7 gitdb-4.0.12 gitpython-3.1.46 idna-3.11 itsdangerous-2.2.0 jinja2-3.1.6 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markupsafe-3.0.3 multitasking-0.0.12 narwhals-2.17.0 numpy-2.2.6 oandapyV20-0.7.2 pandas-2.3.3 peewee-4.0.0 pillow-12.1.1 platformdirs-4.9.2 protobuf-6.33.5 pyarrow-23.0.1 pycparser-3.0 pydeck-0.9.1 python-dateutil-2.9.0.post0 python-dotenv-1.2.1 pytz-2025.2 pyyaml-6.0.3 referencing-0.37.0 requests-2.32.5 rpds-py-0.30.0 six-1.17.0 smmap-5.0.2 soupsieve-2.8.3 streamlit-1.54.0 tenacity-9.1.4 toml-0.10.2 tornado-6.5.4 typing-extensions-4.15.0 tzdata-2025.3 urllib3-2.6.3 watchdog-6.0.0 websockets-16.0 werkzeug-3.1.6 yfinance-1.2.0
+2026-02-27 16:42:57  ==> Uploading build...
+2026-02-27 16:43:18  ==> Uploaded in 12.9s. Compression took 7.7s
+2026-02-27 16:43:18  ==> Build successful ≡ƒÄë
+2026-02-27 16:43:21  ==> Deploying...
+2026-02-27 16:43:21  ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-02-27 16:43:24  [LogSync] ui -> config-api 502 <!DOCTYPE html>
+2026-02-27 16:43:24  <html lang="en">
+2026-02-27 16:43:24    <head>
+2026-02-27 16:43:24      <meta charset="utf-8">
+2026-02-27 16:43:24      <meta name="viewport" content="width=device-width, initial-scale=1">
+2026-02-27 16:43:24      <title>502</title>
+2026-02-27 16:43:24      <style>@font-face {
+2026-02-27 16:43:24    font-fami
+2026-02-27 16:43:26    Stopping...
+2026-02-27 16:44:02  ==>(B Running 'cd Scalp-Engine && streamlit run scalp_ui.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true'(B
+2026-02-27 16:44:04  
+2026-02-27 16:44:04  Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+2026-02-27 16:44:04  
+2026-02-27 16:44:05  
+2026-02-27 16:44:05    You can now view your Streamlit app in your browser.
+2026-02-27 16:44:05  
+2026-02-27 16:44:05    Local URL: http://localhost:10000
+2026-02-27 16:44:05    Network URL: http://10.23.69.255:10000
+2026-02-27 16:44:05    External URL: http://74.220.48.242:10000
+2026-02-27 16:44:05  
+2026-02-27 16:44:09  ==> Your service is live ≡ƒÄë
+2026-02-27 16:44:09  ==> 
+2026-02-27 16:44:09  ==> ///////////////////////////////////////////////////////////
+2026-02-27 16:44:09  ==> 
+2026-02-27 16:44:09  ==> Available at your primary URL https://scalp-engine-ui.onrender.com
+2026-02-27 16:44:09  ==> 
+2026-02-27 16:44:09  ==> ///////////////////////////////////////////////////////////
+2026-02-27 16:49:11  ==> Detected service running on port 10000
+2026-02-27 16:49:11  ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-02-27 17:55:58  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 17:55:58  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 17:55:58  Γ£à Log file initialized: /var/data/logs/scalp_ui_20260227.log
+2026-02-27 17:55:58  Γ£à [LOGGER] Log file created and verified: /var/data/logs/scalp_ui_20260227.log
+2026-02-27 17:55:58  Γ£à [LOGGER] File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260227.log
+2026-02-27 17:55:58  Γ£à File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260227.log
+2026-02-27 17:55:58  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 17:55:58  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 17:56:00  ≡ƒôè UI page loaded
+2026-02-27 17:56:00  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 17:56:00  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 17:56:00  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 17:56:00  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 17:56:00  ≡ƒôè UI page loaded
+2026-02-27 17:56:00  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 17:56:00  Γ£à Market state loaded from API successfully
+2026-02-27 17:56:00  ≡ƒôª Creating new database: scalping_rl.db
+2026-02-27 17:56:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 17:56:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 17:56:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 17:56:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 17:56:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 17:56:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 17:56:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 17:56:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 17:56:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:23  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:02:23  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:02:23  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:02:23  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:02:23  ≡ƒôè UI page loaded
+2026-02-27 19:02:23  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 19:02:23  Γ£à Market state loaded from API successfully
+2026-02-27 19:02:23  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:23  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:23  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:23  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:23  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:23  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:23  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:23  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:23  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:23  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:23  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:23  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:45  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:02:45  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:02:45  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:02:45  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:02:45  ≡ƒôè UI page loaded
+2026-02-27 19:02:45  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:45  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:45  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:45  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:45  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:45  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:02:45  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:02:45  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:19  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:03:19  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:03:19  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:03:19  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:03:19  ≡ƒôè UI page loaded
+2026-02-27 19:03:19  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 19:03:19  Γ£à Market state loaded from API successfully
+2026-02-27 19:03:19  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:19  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:19  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:19  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:19  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:19  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:19  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:19  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:19  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:19  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:19  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:19  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:25  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:03:25  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:03:25  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:03:25  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:03:25  ≡ƒôè UI page loaded
+2026-02-27 19:03:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:25  ΓÜÖ∩╕Å Config saved - Mode: SEMI_AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4
+2026-02-27 19:03:25  Γ£à Config sent to API: https://config-api-8n37.onrender.com/config
+2026-02-27 19:03:28  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:03:28  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:03:28  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:03:28  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:03:28  ≡ƒôè UI page loaded
+2026-02-27 19:03:28  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:03:28  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:03:28  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:03:28  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:03:28  ≡ƒôè UI page loaded
+2026-02-27 19:03:28  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 19:03:28  Γ£à Market state loaded from API successfully
+2026-02-27 19:03:28  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:28  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:28  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:28  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:28  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:28  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:28  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:28  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:28  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:28  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:28  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:28  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:59  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:03:59  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:03:59  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:03:59  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:03:59  ≡ƒôè UI page loaded
+2026-02-27 19:03:59  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 19:03:59  Γ£à Market state loaded from API successfully
+2026-02-27 19:03:59  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:59  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:59  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:59  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:59  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:59  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:03:59  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:03:59  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:04:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:04:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:04:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:04:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:25  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:05:25  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:05:25  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:05:25  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:05:25  ≡ƒôè UI page loaded
+2026-02-27 19:05:25  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 19:05:25  Γ£à Market state loaded from API successfully
+2026-02-27 19:05:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:32  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:05:32  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:05:32  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:05:32  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:05:32  ≡ƒôè UI page loaded
+2026-02-27 19:05:32  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:05:32  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:05:32  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:05:32  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:05:32  ≡ƒôè UI page loaded
+2026-02-27 19:05:32  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 19:05:32  Γ£à Market state loaded from API successfully
+2026-02-27 19:05:32  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:32  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:32  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:32  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:32  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:32  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:32  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:32  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:32  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:32  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:54  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:05:54  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:05:54  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:05:54  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:05:54  ≡ƒôè UI page loaded
+2026-02-27 19:05:54  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:54  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:54  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:54  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:54  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:05:54  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:05:55  ΓÜÖ∩╕Å Config saved - Mode: AUTO, Stop Loss: ATR_TRAILING, Max Trades: 4
+2026-02-27 19:05:55  Γ£à Config sent to API: https://config-api-8n37.onrender.com/config
+2026-02-27 19:06:36  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:06:36  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:06:36  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:06:36  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:06:36  ≡ƒôè UI page loaded
+2026-02-27 19:06:36  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 19:06:36  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 19:06:36  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 19:06:36  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 19:06:36  ≡ƒôè UI page loaded
+2026-02-27 19:06:36  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 19:06:36  Γ£à Market state loaded from API successfully
+2026-02-27 19:06:36  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:06:36  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:06:36  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:06:36  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:06:36  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:06:36  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:06:36  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:06:37  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 19:06:37  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 19:06:37  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:26  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 22:10:26  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 22:10:26  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 22:10:26  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 22:10:26  ≡ƒôè UI page loaded
+2026-02-27 22:10:26  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 22:10:26  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 22:10:26  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 22:10:26  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 22:10:26  ≡ƒôè UI page loaded
+2026-02-27 22:10:26  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 22:10:27  Γ£à Market state loaded from API successfully
+2026-02-27 22:10:27  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:27  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:27  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:27  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:27  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:27  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:27  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:27  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:27  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:27  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:37  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 22:10:37  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 22:10:37  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 22:10:37  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 22:10:37  ≡ƒôè UI page loaded
+2026-02-27 22:10:37  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-02-27 22:10:37  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-02-27 22:10:37  Γ£à [ScalpUI] File handler attached successfully
+2026-02-27 22:10:37  [ScalpUI] Log sync to config-api started (every 60s)
+2026-02-27 22:10:37  ≡ƒôè UI page loaded
+2026-02-27 22:10:37  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-02-27 22:10:37  Γ£à Market state loaded from API successfully
+2026-02-27 22:10:37  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:37  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:37  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:37  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:37  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:37  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:37  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:37  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-27 22:10:37  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-02-27 22:10:37  Γ£à Database initialized successfully: scalping_rl.db
+2026-02-28 14:29:58  ==>(B Downloading cache...(B
+2026-02-28 14:29:58  ==>(B Cloning from https://github.com/ibenwandu/Trade-Alerts(B
+2026-02-28 14:30:00  ==>(B Checking out commit 19b29ca38e83e06ae9752207349b19a9f0c369c7 in branch main(B
+2026-02-28 14:30:09  ==>(B Downloaded 299MB in 5s. Extraction took 5s.(B
+2026-02-28 14:30:15  ==>(B Installing Python version 3.10.0...(B
+2026-02-28 14:30:21  ==>(B Using Python version 3.10.0 via environment variable PYTHON_VERSION(B
+2026-02-28 14:30:21  ==>(B Docs on specifying a Python version: https://render.com/docs/python-version(B
+2026-02-28 14:30:26  ==>(B Using Poetry version 2.1.3 (default)(B
+2026-02-28 14:30:26  ==>(B Docs on specifying a Poetry version: https://render.com/docs/poetry-version(B
+2026-02-28 14:30:26  ==>(B Running build command 'cd Scalp-Engine && pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+2026-02-28 14:30:26  '...(B
+2026-02-28 14:30:26  Requirement already satisfied: pip in /opt/render/project/src/.venv/lib/python3.10/site-packages (21.2.3)
+2026-02-28 14:30:26  Collecting pip
+2026-02-28 14:30:27    Using cached pip-26.0.1-py3-none-any.whl (1.8 MB)
+2026-02-28 14:30:27  Requirement already satisfied: setuptools in /opt/render/project/src/.venv/lib/python3.10/site-packages (57.4.0)
+2026-02-28 14:30:27  Collecting setuptools
+2026-02-28 14:30:27    Using cached setuptools-82.0.0-py3-none-any.whl (1.0 MB)
+2026-02-28 14:30:27  Collecting wheel
+2026-02-28 14:30:27    Using cached wheel-0.46.3-py3-none-any.whl (30 kB)
+2026-02-28 14:30:27  Collecting packaging>=24.0
+2026-02-28 14:30:27    Using cached packaging-26.0-py3-none-any.whl (74 kB)
+2026-02-28 14:30:27  Installing collected packages: packaging, wheel, setuptools, pip
+2026-02-28 14:30:28    Attempting uninstall: setuptools
+2026-02-28 14:30:28      Found existing installation: setuptools 57.4.0
+2026-02-28 14:30:28      Uninstalling setuptools-57.4.0:
+2026-02-28 14:30:28        Successfully uninstalled setuptools-57.4.0
+2026-02-28 14:30:28    Attempting uninstall: pip
+2026-02-28 14:30:28      Found existing installation: pip 21.2.3
+2026-02-28 14:30:29      Uninstalling pip-21.2.3:
+2026-02-28 14:30:29        Successfully uninstalled pip-21.2.3
+2026-02-28 14:30:30  Successfully installed packaging-26.0 pip-26.0.1 setuptools-82.0.0 wheel-0.46.3
+2026-02-28 14:30:31  Collecting oandapyV20>=0.6.3 (from -r requirements.txt (line 4))
+2026-02-28 14:30:31    Using cached oandapyv20-0.7.2-py3-none-any.whl
+2026-02-28 14:30:31  Collecting requests>=2.31.0 (from -r requirements.txt (line 5))
+2026-02-28 14:30:31    Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+2026-02-28 14:30:31  Collecting pandas>=2.0.0 (from -r requirements.txt (line 8))
+2026-02-28 14:30:31    Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+2026-02-28 14:30:31  Collecting numpy>=1.24.0 (from -r requirements.txt (line 9))
+2026-02-28 14:30:31    Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+2026-02-28 14:30:31  Collecting python-dotenv>=1.0.0 (from -r requirements.txt (line 12))
+2026-02-28 14:30:31    Using cached python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+2026-02-28 14:30:31  Collecting pyyaml>=6.0 (from -r requirements.txt (line 13))
+2026-02-28 14:30:31    Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-02-28 14:30:31  Collecting yfinance>=0.2.28 (from -r requirements.txt (line 19))
+2026-02-28 14:30:31    Using cached yfinance-1.2.0-py2.py3-none-any.whl.metadata (6.1 kB)
+2026-02-28 14:30:31  Collecting colorlog>=6.7.0 (from -r requirements.txt (line 22))
+2026-02-28 14:30:31    Using cached colorlog-6.10.1-py3-none-any.whl.metadata (11 kB)
+2026-02-28 14:30:31  Collecting pytz>=2023.3 (from -r requirements.txt (line 25))
+2026-02-28 14:30:31    Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+2026-02-28 14:30:31  Collecting streamlit>=1.28.0 (from -r requirements.txt (line 28))
+2026-02-28 14:30:31    Using cached streamlit-1.54.0-py3-none-any.whl.metadata (9.8 kB)
+2026-02-28 14:30:31  Collecting flask>=3.0.0 (from -r requirements.txt (line 31))
+2026-02-28 14:30:31    Using cached flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+2026-02-28 14:30:32  Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->-r requirements.txt (line 5))
+2026-02-28 14:30:32    Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+2026-02-28 14:30:32  Collecting idna<4,>=2.5 (from requests>=2.31.0->-r requirements.txt (line 5))
+2026-02-28 14:30:32    Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-02-28 14:30:32  Collecting urllib3<3,>=1.21.1 (from requests>=2.31.0->-r requirements.txt (line 5))
+2026-02-28 14:30:32    Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-02-28 14:30:32  Collecting certifi>=2017.4.17 (from requests>=2.31.0->-r requirements.txt (line 5))
+2026-02-28 14:30:32    Using cached certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+2026-02-28 14:30:32  Collecting python-dateutil>=2.8.2 (from pandas>=2.0.0->-r requirements.txt (line 8))
+2026-02-28 14:30:32    Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-02-28 14:30:32  Collecting tzdata>=2022.7 (from pandas>=2.0.0->-r requirements.txt (line 8))
+2026-02-28 14:30:32    Using cached tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-02-28 14:30:32  Collecting multitasking>=0.0.7 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:32    Using cached multitasking-0.0.12-py3-none-any.whl
+2026-02-28 14:30:32  Collecting platformdirs>=2.0.0 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:32    Using cached platformdirs-4.9.2-py3-none-any.whl.metadata (4.7 kB)
+2026-02-28 14:30:32  Collecting frozendict>=2.3.4 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:32    Using cached frozendict-2.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+2026-02-28 14:30:32  Collecting peewee>=3.16.2 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:32    Using cached peewee-4.0.0-py3-none-any.whl.metadata (8.1 kB)
+2026-02-28 14:30:32  Collecting beautifulsoup4>=4.11.1 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:32    Using cached beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-02-28 14:30:32  Collecting curl_cffi<0.14,>=0.7 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:32    Using cached curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+2026-02-28 14:30:32  Collecting protobuf>=3.19.0 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:32    Using cached protobuf-7.34.0-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+2026-02-28 14:30:33  Collecting websockets>=13.0 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:33    Using cached websockets-16.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+2026-02-28 14:30:33  Collecting cffi>=1.12.0 (from curl_cffi<0.14,>=0.7->yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:33    Using cached cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-02-28 14:30:33  Collecting altair!=5.4.0,!=5.4.1,<7,>=4.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached altair-6.0.0-py3-none-any.whl.metadata (11 kB)
+2026-02-28 14:30:33  Collecting blinker<2,>=1.5.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2026-02-28 14:30:33  Collecting cachetools<7,>=5.5 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached cachetools-6.2.6-py3-none-any.whl.metadata (5.6 kB)
+2026-02-28 14:30:33  Collecting click<9,>=7.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-02-28 14:30:33  Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached gitpython-3.1.46-py3-none-any.whl.metadata (13 kB)
+2026-02-28 14:30:33  Requirement already satisfied: packaging>=20 in /opt/render/project/src/.venv/lib/python3.10/site-packages (from streamlit>=1.28.0->-r requirements.txt (line 28)) (26.0)
+2026-02-28 14:30:33  Collecting pillow<13,>=7.1.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached pillow-12.1.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+2026-02-28 14:30:33  Collecting pydeck<1,>=0.8.0b4 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached pydeck-0.9.1-py2.py3-none-any.whl.metadata (4.1 kB)
+2026-02-28 14:30:33  Collecting protobuf>=3.19.0 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:33    Using cached protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+2026-02-28 14:30:33  Collecting pyarrow>=7.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached pyarrow-23.0.1-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.1 kB)
+2026-02-28 14:30:33  Collecting tenacity<10,>=8.1.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+2026-02-28 14:30:33  Collecting toml<2,>=0.10.1 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+2026-02-28 14:30:33  Collecting tornado!=6.5.0,<7,>=6.0.3 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached tornado-6.5.4-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+2026-02-28 14:30:33  Collecting typing-extensions<5,>=4.10.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:33    Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-02-28 14:30:34  Collecting watchdog<7,>=2.1.5 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+2026-02-28 14:30:34  Collecting jinja2 (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-02-28 14:30:34  Collecting jsonschema>=3.0 (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-02-28 14:30:34  Collecting narwhals>=1.27.1 (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached narwhals-2.17.0-py3-none-any.whl.metadata (14 kB)
+2026-02-28 14:30:34  Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+2026-02-28 14:30:34  Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached smmap-5.0.2-py3-none-any.whl.metadata (4.3 kB)
+2026-02-28 14:30:34  Collecting itsdangerous>=2.2.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-02-28 14:30:34    Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2026-02-28 14:30:34  Collecting markupsafe>=2.1.1 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-02-28 14:30:34    Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-02-28 14:30:34  Collecting werkzeug>=3.1.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-02-28 14:30:34    Using cached werkzeug-3.1.6-py3-none-any.whl.metadata (4.0 kB)
+2026-02-28 14:30:34  Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.11.1->yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:34    Using cached soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-02-28 14:30:34  Collecting pycparser (from cffi>=1.12.0->curl_cffi<0.14,>=0.7->yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-02-28 14:30:34    Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-02-28 14:30:34  Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2026-02-28 14:30:34  Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-02-28 14:30:34  Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-02-28 14:30:34  Collecting rpds-py>=0.25.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-02-28 14:30:34    Using cached rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-02-28 14:30:35  Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas>=2.0.0->-r requirements.txt (line 8))
+2026-02-28 14:30:35    Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-02-28 14:30:35  Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+2026-02-28 14:30:35  Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+2026-02-28 14:30:35  Using cached idna-3.11-py3-none-any.whl (71 kB)
+2026-02-28 14:30:35  Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-02-28 14:30:35  Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-02-28 14:30:35  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+2026-02-28 14:30:35  Using cached python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+2026-02-28 14:30:35  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-02-28 14:30:35  Using cached yfinance-1.2.0-py2.py3-none-any.whl (130 kB)
+2026-02-28 14:30:35  Using cached curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+2026-02-28 14:30:35  Using cached colorlog-6.10.1-py3-none-any.whl (11 kB)
+2026-02-28 14:30:35  Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
+2026-02-28 14:30:35  Using cached streamlit-1.54.0-py3-none-any.whl (9.1 MB)
+2026-02-28 14:30:35  Using cached altair-6.0.0-py3-none-any.whl (795 kB)
+2026-02-28 14:30:35  Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2026-02-28 14:30:35  Using cached cachetools-6.2.6-py3-none-any.whl (11 kB)
+2026-02-28 14:30:35  Using cached click-8.3.1-py3-none-any.whl (108 kB)
+2026-02-28 14:30:35  Using cached gitpython-3.1.46-py3-none-any.whl (208 kB)
+2026-02-28 14:30:35  Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+2026-02-28 14:30:35  Using cached pillow-12.1.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+2026-02-28 14:30:35  Using cached protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+2026-02-28 14:30:35  Using cached pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+2026-02-28 14:30:35  Using cached smmap-5.0.2-py3-none-any.whl (24 kB)
+2026-02-28 14:30:35  Using cached tenacity-9.1.4-py3-none-any.whl (28 kB)
+2026-02-28 14:30:35  Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+2026-02-28 14:30:35  Using cached tornado-6.5.4-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (445 kB)
+2026-02-28 14:30:35  Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-02-28 14:30:35  Using cached watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+2026-02-28 14:30:35  Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+2026-02-28 14:30:35  Using cached beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-02-28 14:30:35  Using cached certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-02-28 14:30:35  Using cached cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
+2026-02-28 14:30:35  Using cached frozendict-2.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (120 kB)
+2026-02-28 14:30:35  Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2026-02-28 14:30:35  Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-02-28 14:30:35  Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-02-28 14:30:35  Using cached attrs-25.4.0-py3-none-any.whl (67 kB)
+2026-02-28 14:30:35  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-02-28 14:30:35  Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+2026-02-28 14:30:35  Using cached narwhals-2.17.0-py3-none-any.whl (444 kB)
+2026-02-28 14:30:35  Using cached peewee-4.0.0-py3-none-any.whl (139 kB)
+2026-02-28 14:30:35  Using cached platformdirs-4.9.2-py3-none-any.whl (21 kB)
+2026-02-28 14:30:35  Using cached pyarrow-23.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (47.6 MB)
+2026-02-28 14:30:35  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-02-28 14:30:35  Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-02-28 14:30:35  Using cached rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+2026-02-28 14:30:35  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-02-28 14:30:35  Using cached soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-02-28 14:30:35  Using cached tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+2026-02-28 14:30:35  Using cached websockets-16.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (183 kB)
+2026-02-28 14:30:35  Using cached werkzeug-3.1.6-py3-none-any.whl (225 kB)
+2026-02-28 14:30:35  Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+2026-02-28 14:30:35  Installing collected packages: pytz, peewee, oandapyV20, multitasking, websockets, watchdog, urllib3, tzdata, typing-extensions, tornado, toml, tenacity, soupsieve, smmap, six, rpds-py, pyyaml, python-dotenv, pycparser, pyarrow, protobuf, platformdirs, pillow, numpy, narwhals, markupsafe, itsdangerous, idna, frozendict, colorlog, click, charset_normalizer, certifi, cachetools, blinker, attrs, werkzeug, requests, referencing, python-dateutil, jinja2, gitdb, cffi, beautifulsoup4, pydeck, pandas, jsonschema-specifications, gitpython, flask, curl_cffi, yfinance, jsonschema, altair, streamlit
+2026-02-28 14:30:48  
+2026-02-28 14:30:48  Successfully installed altair-6.0.0 attrs-25.4.0 beautifulsoup4-4.14.3 blinker-1.9.0 cachetools-6.2.6 certifi-2026.2.25 cffi-2.0.0 charset_normalizer-3.4.4 click-8.3.1 colorlog-6.10.1 curl_cffi-0.13.0 flask-3.1.3 frozendict-2.4.7 gitdb-4.0.12 gitpython-3.1.46 idna-3.11 itsdangerous-2.2.0 jinja2-3.1.6 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markupsafe-3.0.3 multitasking-0.0.12 narwhals-2.17.0 numpy-2.2.6 oandapyV20-0.7.2 pandas-2.3.3 peewee-4.0.0 pillow-12.1.1 platformdirs-4.9.2 protobuf-6.33.5 pyarrow-23.0.1 pycparser-3.0 pydeck-0.9.1 python-dateutil-2.9.0.post0 python-dotenv-1.2.1 pytz-2025.2 pyyaml-6.0.3 referencing-0.37.0 requests-2.32.5 rpds-py-0.30.0 six-1.17.0 smmap-5.0.2 soupsieve-2.8.3 streamlit-1.54.0 tenacity-9.1.4 toml-0.10.2 tornado-6.5.4 typing-extensions-4.15.0 tzdata-2025.3 urllib3-2.6.3 watchdog-6.0.0 websockets-16.0 werkzeug-3.1.6 yfinance-1.2.0
+2026-02-28 14:30:52  ==> Uploading build...
+2026-02-28 14:31:32  ==> Uploaded in 14.5s. Compression took 26.2s
+2026-02-28 14:31:32  ==> Build successful ≡ƒÄë
+2026-02-28 14:31:35  ==> Deploying...
+2026-02-28 14:31:35  ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-02-28 14:31:40    Stopping...
+2026-02-28 14:32:15  ==>(B Running 'cd Scalp-Engine && streamlit run scalp_ui.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true'(B
+2026-02-28 14:32:16  
+2026-02-28 14:32:16  Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+2026-02-28 14:32:16  
+2026-02-28 14:32:16  
+2026-02-28 14:32:16    You can now view your Streamlit app in your browser.
+2026-02-28 14:32:16  
+2026-02-28 14:32:16    Local URL: http://localhost:10000
+2026-02-28 14:32:16    Network URL: http://10.23.69.246:10000
+2026-02-28 14:32:16    External URL: http://74.220.48.242:10000
+2026-02-28 14:32:16  
+2026-02-28 14:32:22  ==> Your service is live ≡ƒÄë
+2026-02-28 14:32:23  ==> 
+2026-02-28 14:32:23  ==> ///////////////////////////////////////////////////////////
+2026-02-28 14:32:23  ==> 
+2026-02-28 14:32:23  ==> Available at your primary URL https://scalp-engine-ui.onrender.com
+2026-02-28 14:32:23  ==> 
+2026-02-28 14:32:23  ==> ///////////////////////////////////////////////////////////
+2026-02-28 14:37:23  ==> Detected service running on port 10000
+2026-02-28 14:37:23  ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-03-02 02:14:14  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 02:14:14  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 02:14:14  Γ£à Log file initialized: /var/data/logs/scalp_ui_20260302.log
+2026-03-02 02:14:14  Γ£à [LOGGER] Log file created and verified: /var/data/logs/scalp_ui_20260302.log
+2026-03-02 02:14:14  Γ£à [LOGGER] File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260302.log
+2026-03-02 02:14:14  Γ£à File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260302.log
+2026-03-02 02:14:14  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 02:14:14  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 02:14:16  ≡ƒôè UI page loaded
+2026-03-02 02:14:16  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-03-02 02:14:16  Γ£à Market state loaded from API successfully
+2026-03-02 02:14:16  ≡ƒôª Creating new database: scalping_rl.db
+2026-03-02 02:14:16  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 02:14:16  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 02:14:16  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 02:14:16  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 02:14:16  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 02:14:16  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 02:14:16  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 02:14:16  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 02:14:16  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 02:14:16  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 02:14:16  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 10:49:00  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 10:49:00  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 10:49:00  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 10:49:00  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 10:49:00  ≡ƒôè UI page loaded
+2026-03-02 10:49:00  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-03-02 10:49:00  Γ£à Market state loaded from API successfully
+2026-03-02 10:49:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 10:49:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 10:49:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 10:49:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 10:49:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 10:49:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 10:49:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 10:49:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 10:49:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 10:49:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 10:49:00  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 10:49:00  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 12:42:40  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 12:42:40  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 12:42:40  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 12:42:40  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 12:42:40  ≡ƒôè UI page loaded
+2026-03-02 12:42:40  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 12:42:40  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 12:42:40  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 12:42:40  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 12:42:40  ≡ƒôè UI page loaded
+2026-03-02 12:42:40  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-03-02 12:42:40  Γ£à Market state loaded from API successfully
+2026-03-02 12:42:40  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 12:42:40  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 12:42:40  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 12:42:40  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 12:42:40  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 12:42:40  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 12:42:40  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 12:42:40  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 12:42:40  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 12:42:40  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 12:42:40  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 12:42:40  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 12:42:40  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 12:42:40  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 13:31:51  ==>(B Downloading cache...(B
+2026-03-02 13:31:51  ==>(B Cloning from https://github.com/ibenwandu/Trade-Alerts(B
+2026-03-02 13:31:52  ==>(B Checking out commit 98801c60193b0f704a36cd3bf19c8bd63d013acc in branch main(B
+2026-03-02 13:32:00  ==>(B Downloaded 299MB in 4s. Extraction took 5s.(B
+2026-03-02 13:32:07  ==>(B Installing Python version 3.10.0...(B
+2026-03-02 13:32:15  ==>(B Using Python version 3.10.0 via environment variable PYTHON_VERSION(B
+2026-03-02 13:32:15  ==>(B Docs on specifying a Python version: https://render.com/docs/python-version(B
+2026-03-02 13:32:20  ==>(B Using Poetry version 2.1.3 (default)(B
+2026-03-02 13:32:20  ==>(B Docs on specifying a Poetry version: https://render.com/docs/poetry-version(B
+2026-03-02 13:32:20  ==>(B Running build command 'cd Scalp-Engine && pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+2026-03-02 13:32:20  '...(B
+2026-03-02 13:32:21  Requirement already satisfied: pip in /opt/render/project/src/.venv/lib/python3.10/site-packages (21.2.3)
+2026-03-02 13:32:21  Collecting pip
+2026-03-02 13:32:21    Using cached pip-26.0.1-py3-none-any.whl (1.8 MB)
+2026-03-02 13:32:21  Requirement already satisfied: setuptools in /opt/render/project/src/.venv/lib/python3.10/site-packages (57.4.0)
+2026-03-02 13:32:22  Collecting setuptools
+2026-03-02 13:32:22    Using cached setuptools-82.0.0-py3-none-any.whl (1.0 MB)
+2026-03-02 13:32:22  Collecting wheel
+2026-03-02 13:32:22    Using cached wheel-0.46.3-py3-none-any.whl (30 kB)
+2026-03-02 13:32:22  Collecting packaging>=24.0
+2026-03-02 13:32:22    Using cached packaging-26.0-py3-none-any.whl (74 kB)
+2026-03-02 13:32:22  Installing collected packages: packaging, wheel, setuptools, pip
+2026-03-02 13:32:22    Attempting uninstall: setuptools
+2026-03-02 13:32:22      Found existing installation: setuptools 57.4.0
+2026-03-02 13:32:22      Uninstalling setuptools-57.4.0:
+2026-03-02 13:32:22        Successfully uninstalled setuptools-57.4.0
+2026-03-02 13:32:23    Attempting uninstall: pip
+2026-03-02 13:32:23      Found existing installation: pip 21.2.3
+2026-03-02 13:32:23      Uninstalling pip-21.2.3:
+2026-03-02 13:32:23        Successfully uninstalled pip-21.2.3
+2026-03-02 13:32:24  Successfully installed packaging-26.0 pip-26.0.1 setuptools-82.0.0 wheel-0.46.3
+2026-03-02 13:32:25  Collecting oandapyV20>=0.6.3 (from -r requirements.txt (line 4))
+2026-03-02 13:32:25    Using cached oandapyv20-0.7.2-py3-none-any.whl
+2026-03-02 13:32:25  Collecting requests>=2.31.0 (from -r requirements.txt (line 5))
+2026-03-02 13:32:25    Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+2026-03-02 13:32:25  Collecting pandas>=2.0.0 (from -r requirements.txt (line 8))
+2026-03-02 13:32:25    Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+2026-03-02 13:32:25  Collecting numpy>=1.24.0 (from -r requirements.txt (line 9))
+2026-03-02 13:32:25    Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+2026-03-02 13:32:25  Collecting python-dotenv>=1.0.0 (from -r requirements.txt (line 12))
+2026-03-02 13:32:25    Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+2026-03-02 13:32:26  Collecting pyyaml>=6.0 (from -r requirements.txt (line 13))
+2026-03-02 13:32:26    Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-03-02 13:32:26  Collecting yfinance>=0.2.28 (from -r requirements.txt (line 19))
+2026-03-02 13:32:26    Using cached yfinance-1.2.0-py2.py3-none-any.whl.metadata (6.1 kB)
+2026-03-02 13:32:26  Collecting colorlog>=6.7.0 (from -r requirements.txt (line 22))
+2026-03-02 13:32:26    Using cached colorlog-6.10.1-py3-none-any.whl.metadata (11 kB)
+2026-03-02 13:32:26  Collecting pytz>=2023.3 (from -r requirements.txt (line 25))
+2026-03-02 13:32:26    Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+2026-03-02 13:32:26  Collecting streamlit>=1.28.0 (from -r requirements.txt (line 28))
+2026-03-02 13:32:26    Using cached streamlit-1.54.0-py3-none-any.whl.metadata (9.8 kB)
+2026-03-02 13:32:26  Collecting flask>=3.0.0 (from -r requirements.txt (line 31))
+2026-03-02 13:32:26    Using cached flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+2026-03-02 13:32:26  Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->-r requirements.txt (line 5))
+2026-03-02 13:32:26    Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+2026-03-02 13:32:26  Collecting idna<4,>=2.5 (from requests>=2.31.0->-r requirements.txt (line 5))
+2026-03-02 13:32:26    Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-03-02 13:32:26  Collecting urllib3<3,>=1.21.1 (from requests>=2.31.0->-r requirements.txt (line 5))
+2026-03-02 13:32:26    Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-03-02 13:32:26  Collecting certifi>=2017.4.17 (from requests>=2.31.0->-r requirements.txt (line 5))
+2026-03-02 13:32:26    Using cached certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+2026-03-02 13:32:26  Collecting python-dateutil>=2.8.2 (from pandas>=2.0.0->-r requirements.txt (line 8))
+2026-03-02 13:32:26    Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-03-02 13:32:26  Collecting tzdata>=2022.7 (from pandas>=2.0.0->-r requirements.txt (line 8))
+2026-03-02 13:32:26    Using cached tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-03-02 13:32:26  Collecting multitasking>=0.0.7 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:26    Using cached multitasking-0.0.12-py3-none-any.whl
+2026-03-02 13:32:26  Collecting platformdirs>=2.0.0 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:26    Using cached platformdirs-4.9.2-py3-none-any.whl.metadata (4.7 kB)
+2026-03-02 13:32:26  Collecting frozendict>=2.3.4 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:26    Using cached frozendict-2.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+2026-03-02 13:32:26  Collecting peewee>=3.16.2 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:26    Downloading peewee-4.0.1-py3-none-any.whl.metadata (8.5 kB)
+2026-03-02 13:32:26  Collecting beautifulsoup4>=4.11.1 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:26    Using cached beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-02 13:32:26  Collecting curl_cffi<0.14,>=0.7 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:26    Using cached curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+2026-03-02 13:32:27  Collecting protobuf>=3.19.0 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:27    Using cached protobuf-7.34.0-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+2026-03-02 13:32:27  Collecting websockets>=13.0 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:27    Using cached websockets-16.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+2026-03-02 13:32:27  Collecting cffi>=1.12.0 (from curl_cffi<0.14,>=0.7->yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:27    Using cached cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-03-02 13:32:27  Collecting altair!=5.4.0,!=5.4.1,<7,>=4.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:27    Using cached altair-6.0.0-py3-none-any.whl.metadata (11 kB)
+2026-03-02 13:32:27  Collecting blinker<2,>=1.5.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:27    Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2026-03-02 13:32:27  Collecting cachetools<7,>=5.5 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:27    Using cached cachetools-6.2.6-py3-none-any.whl.metadata (5.6 kB)
+2026-03-02 13:32:27  Collecting click<9,>=7.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:27    Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-03-02 13:32:27  Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:27    Using cached gitpython-3.1.46-py3-none-any.whl.metadata (13 kB)
+2026-03-02 13:32:27  Requirement already satisfied: packaging>=20 in /opt/render/project/src/.venv/lib/python3.10/site-packages (from streamlit>=1.28.0->-r requirements.txt (line 28)) (26.0)
+2026-03-02 13:32:27  Collecting pillow<13,>=7.1.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:27    Using cached pillow-12.1.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+2026-03-02 13:32:27  Collecting pydeck<1,>=0.8.0b4 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:27    Using cached pydeck-0.9.1-py2.py3-none-any.whl.metadata (4.1 kB)
+2026-03-02 13:32:28  Collecting protobuf>=3.19.0 (from yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:28    Using cached protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+2026-03-02 13:32:28  Collecting pyarrow>=7.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached pyarrow-23.0.1-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.1 kB)
+2026-03-02 13:32:28  Collecting tenacity<10,>=8.1.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+2026-03-02 13:32:28  Collecting toml<2,>=0.10.1 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+2026-03-02 13:32:28  Collecting tornado!=6.5.0,<7,>=6.0.3 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached tornado-6.5.4-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+2026-03-02 13:32:28  Collecting typing-extensions<5,>=4.10.0 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-03-02 13:32:28  Collecting watchdog<7,>=2.1.5 (from streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+2026-03-02 13:32:28  Collecting jinja2 (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-03-02 13:32:28  Collecting jsonschema>=3.0 (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-03-02 13:32:28  Collecting narwhals>=1.27.1 (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached narwhals-2.17.0-py3-none-any.whl.metadata (14 kB)
+2026-03-02 13:32:28  Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+2026-03-02 13:32:28  Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached smmap-5.0.2-py3-none-any.whl.metadata (4.3 kB)
+2026-03-02 13:32:28  Collecting itsdangerous>=2.2.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-02 13:32:28    Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2026-03-02 13:32:28  Collecting markupsafe>=2.1.1 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-02 13:32:28    Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-03-02 13:32:28  Collecting werkzeug>=3.1.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-02 13:32:28    Using cached werkzeug-3.1.6-py3-none-any.whl.metadata (4.0 kB)
+2026-03-02 13:32:28  Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.11.1->yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:28    Using cached soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-02 13:32:28  Collecting pycparser (from cffi>=1.12.0->curl_cffi<0.14,>=0.7->yfinance>=0.2.28->-r requirements.txt (line 19))
+2026-03-02 13:32:28    Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-03-02 13:32:28  Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2026-03-02 13:32:28  Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-03-02 13:32:28  Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:28    Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-03-02 13:32:29  Collecting rpds-py>=0.25.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.28.0->-r requirements.txt (line 28))
+2026-03-02 13:32:29    Using cached rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-03-02 13:32:29  Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas>=2.0.0->-r requirements.txt (line 8))
+2026-03-02 13:32:29    Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-03-02 13:32:29  Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+2026-03-02 13:32:29  Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+2026-03-02 13:32:29  Using cached idna-3.11-py3-none-any.whl (71 kB)
+2026-03-02 13:32:29  Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-03-02 13:32:29  Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-03-02 13:32:29  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+2026-03-02 13:32:29  Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+2026-03-02 13:32:29  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-03-02 13:32:29  Using cached yfinance-1.2.0-py2.py3-none-any.whl (130 kB)
+2026-03-02 13:32:29  Using cached curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+2026-03-02 13:32:29  Using cached colorlog-6.10.1-py3-none-any.whl (11 kB)
+2026-03-02 13:32:29  Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
+2026-03-02 13:32:29  Using cached streamlit-1.54.0-py3-none-any.whl (9.1 MB)
+2026-03-02 13:32:29  Using cached altair-6.0.0-py3-none-any.whl (795 kB)
+2026-03-02 13:32:29  Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2026-03-02 13:32:29  Using cached cachetools-6.2.6-py3-none-any.whl (11 kB)
+2026-03-02 13:32:29  Using cached click-8.3.1-py3-none-any.whl (108 kB)
+2026-03-02 13:32:29  Using cached gitpython-3.1.46-py3-none-any.whl (208 kB)
+2026-03-02 13:32:29  Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+2026-03-02 13:32:29  Using cached pillow-12.1.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+2026-03-02 13:32:29  Using cached protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+2026-03-02 13:32:29  Using cached pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+2026-03-02 13:32:29  Using cached smmap-5.0.2-py3-none-any.whl (24 kB)
+2026-03-02 13:32:29  Using cached tenacity-9.1.4-py3-none-any.whl (28 kB)
+2026-03-02 13:32:29  Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+2026-03-02 13:32:29  Using cached tornado-6.5.4-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (445 kB)
+2026-03-02 13:32:29  Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-03-02 13:32:29  Using cached watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+2026-03-02 13:32:29  Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+2026-03-02 13:32:29  Using cached beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-02 13:32:29  Using cached certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-03-02 13:32:29  Using cached cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
+2026-03-02 13:32:29  Using cached frozendict-2.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (120 kB)
+2026-03-02 13:32:29  Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2026-03-02 13:32:29  Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-03-02 13:32:29  Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-03-02 13:32:29  Using cached attrs-25.4.0-py3-none-any.whl (67 kB)
+2026-03-02 13:32:29  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-03-02 13:32:29  Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+2026-03-02 13:32:29  Using cached narwhals-2.17.0-py3-none-any.whl (444 kB)
+2026-03-02 13:32:29  Downloading peewee-4.0.1-py3-none-any.whl (139 kB)
+2026-03-02 13:32:29  Using cached platformdirs-4.9.2-py3-none-any.whl (21 kB)
+2026-03-02 13:32:29  Using cached pyarrow-23.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (47.6 MB)
+2026-03-02 13:32:30  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-03-02 13:32:30  Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-03-02 13:32:30  Using cached rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+2026-03-02 13:32:30  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-03-02 13:32:30  Using cached soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-02 13:32:30  Using cached tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+2026-03-02 13:32:30  Using cached websockets-16.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (183 kB)
+2026-03-02 13:32:30  Using cached werkzeug-3.1.6-py3-none-any.whl (225 kB)
+2026-03-02 13:32:30  Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+2026-03-02 13:32:30  Installing collected packages: pytz, peewee, oandapyV20, multitasking, websockets, watchdog, urllib3, tzdata, typing-extensions, tornado, toml, tenacity, soupsieve, smmap, six, rpds-py, pyyaml, python-dotenv, pycparser, pyarrow, protobuf, platformdirs, pillow, numpy, narwhals, markupsafe, itsdangerous, idna, frozendict, colorlog, click, charset_normalizer, certifi, cachetools, blinker, attrs, werkzeug, requests, referencing, python-dateutil, jinja2, gitdb, cffi, beautifulsoup4, pydeck, pandas, jsonschema-specifications, gitpython, flask, curl_cffi, yfinance, jsonschema, altair, streamlit
+2026-03-02 13:32:42  
+2026-03-02 13:32:42  Successfully installed altair-6.0.0 attrs-25.4.0 beautifulsoup4-4.14.3 blinker-1.9.0 cachetools-6.2.6 certifi-2026.2.25 cffi-2.0.0 charset_normalizer-3.4.4 click-8.3.1 colorlog-6.10.1 curl_cffi-0.13.0 flask-3.1.3 frozendict-2.4.7 gitdb-4.0.12 gitpython-3.1.46 idna-3.11 itsdangerous-2.2.0 jinja2-3.1.6 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markupsafe-3.0.3 multitasking-0.0.12 narwhals-2.17.0 numpy-2.2.6 oandapyV20-0.7.2 pandas-2.3.3 peewee-4.0.1 pillow-12.1.1 platformdirs-4.9.2 protobuf-6.33.5 pyarrow-23.0.1 pycparser-3.0 pydeck-0.9.1 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 pytz-2025.2 pyyaml-6.0.3 referencing-0.37.0 requests-2.32.5 rpds-py-0.30.0 six-1.17.0 smmap-5.0.2 soupsieve-2.8.3 streamlit-1.54.0 tenacity-9.1.4 toml-0.10.2 tornado-6.5.4 typing-extensions-4.15.0 tzdata-2025.3 urllib3-2.6.3 watchdog-6.0.0 websockets-16.0 werkzeug-3.1.6 yfinance-1.2.0
+2026-03-02 13:32:45  ==> Uploading build...
+2026-03-02 13:33:17  ==> Uploaded in 11.4s. Compression took 20.5s
+2026-03-02 13:33:17  ==> Build successful ≡ƒÄë
+2026-03-02 13:33:21  ==> Deploying...
+2026-03-02 13:33:21  ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-03-02 13:33:24  [LogSync] ui -> config-api 502 <!DOCTYPE html>
+2026-03-02 13:33:24  <html lang="en">
+2026-03-02 13:33:24    <head>
+2026-03-02 13:33:24      <meta charset="utf-8">
+2026-03-02 13:33:24      <meta name="viewport" content="width=device-width, initial-scale=1">
+2026-03-02 13:33:24      <title>502</title>
+2026-03-02 13:33:24      <style>@font-face {
+2026-03-02 13:33:24    font-fami
+2026-03-02 13:33:26    Stopping...
+2026-03-02 13:33:56  ==>(B Running 'cd Scalp-Engine && streamlit run scalp_ui.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true'(B
+2026-03-02 13:33:57  
+2026-03-02 13:33:57  Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+2026-03-02 13:33:57  
+2026-03-02 13:33:58  
+2026-03-02 13:33:58    You can now view your Streamlit app in your browser.
+2026-03-02 13:33:58  
+2026-03-02 13:33:58    Local URL: http://localhost:10000
+2026-03-02 13:33:58    Network URL: http://10.23.69.253:10000
+2026-03-02 13:33:58    External URL: http://74.220.48.242:10000
+2026-03-02 13:33:58  
+2026-03-02 13:34:03  ==> Your service is live ≡ƒÄë
+2026-03-02 13:34:03  ==> 
+2026-03-02 13:34:03  ==> ///////////////////////////////////////////////////////////
+2026-03-02 13:34:03  ==> 
+2026-03-02 13:34:03  ==> Available at your primary URL https://scalp-engine-ui.onrender.com
+2026-03-02 13:34:03  ==> 
+2026-03-02 13:34:03  ==> ///////////////////////////////////////////////////////////
+2026-03-02 13:39:04  ==> Detected service running on port 10000
+2026-03-02 13:39:05  ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-03-02 14:01:06  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 14:01:06  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 14:01:06  Γ£à Log file initialized: /var/data/logs/scalp_ui_20260302.log
+2026-03-02 14:01:06  Γ£à [LOGGER] Log file created and verified: /var/data/logs/scalp_ui_20260302.log
+2026-03-02 14:01:06  Γ£à [LOGGER] File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260302.log
+2026-03-02 14:01:06  Γ£à File handler attached for ScalpUI -> /var/data/logs/scalp_ui_20260302.log
+2026-03-02 14:01:06  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 14:01:06  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 14:01:08  ≡ƒôè UI page loaded
+2026-03-02 14:01:08  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-03-02 14:01:08  Γ£à Market state loaded from API successfully
+2026-03-02 14:01:08  ≡ƒôª Creating new database: scalping_rl.db
+2026-03-02 14:01:08  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:01:08  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:01:08  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:01:08  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:01:08  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:01:08  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:01:08  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:01:08  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:01:08  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:45:46  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 14:45:46  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 14:45:46  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 14:45:46  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 14:45:46  ≡ƒôè UI page loaded
+2026-03-02 14:45:46  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 14:45:46  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 14:45:46  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 14:45:46  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 14:45:46  ≡ƒôè UI page loaded
+2026-03-02 14:45:46  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-03-02 14:45:46  Γ£à Market state loaded from API successfully
+2026-03-02 14:45:46  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:45:46  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:45:47  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:45:47  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:45:47  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:45:47  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:45:47  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:45:47  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:45:47  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:45:47  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:45:47  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:45:47  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 14:45:47  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 14:45:47  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 16:28:24  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 16:28:24  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 16:28:24  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 16:28:24  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 16:28:24  ≡ƒôè UI page loaded
+2026-03-02 16:28:24  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 16:28:24  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 16:28:24  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 16:28:24  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 16:28:24  ≡ƒôè UI page loaded
+2026-03-02 16:28:24  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-03-02 16:28:24  Γ£à Market state loaded from API successfully
+2026-03-02 16:28:24  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 16:28:24  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 16:28:24  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 16:28:24  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 16:28:24  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 16:28:24  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 16:28:24  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 16:28:24  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 16:28:24  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 16:28:24  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 16:28:24  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 16:28:24  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 16:28:24  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 16:28:24  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 18:02:29  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 18:02:29  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 18:02:29  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 18:02:29  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 18:02:29  ≡ƒôè UI page loaded
+2026-03-02 18:02:29  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-03-02 18:02:29  Γ£à Market state loaded from API successfully
+2026-03-02 18:02:29  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 18:02:29  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 18:02:29  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 18:02:29  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 18:02:29  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 18:02:29  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 18:02:29  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 18:02:29  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 18:02:29  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 18:02:29  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 18:02:29  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 18:02:29  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 18:02:29  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 18:02:29  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 20:59:25  ≡ƒöì [ScalpUI] Attempting to attach file handler...
+2026-03-02 20:59:25  ≡ƒöì [LOGGER] attach_file_handler called - log_dir: /var/data/logs, filename: scalp_ui, loggers: ['ScalpUI']
+2026-03-02 20:59:25  Γ£à [ScalpUI] File handler attached successfully
+2026-03-02 20:59:25  [ScalpUI] Log sync to config-api started (every 60s)
+2026-03-02 20:59:25  ≡ƒôè UI page loaded
+2026-03-02 20:59:25  ≡ƒîÉ Attempting to load market state from API: https://market-state-api.onrender.com/market-state
+2026-03-02 20:59:25  Γ£à Market state loaded from API successfully
+2026-03-02 20:59:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 20:59:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 20:59:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 20:59:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 20:59:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 20:59:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 20:59:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 20:59:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 20:59:25  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 20:59:25  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 20:59:26  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 20:59:26  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 20:59:26  ≡ƒôª Opening existing database: scalping_rl.db (12288 bytes)
+2026-03-02 20:59:26  Γ£à Database initialized successfully: scalping_rl.db
+2026-03-02 21:52:56  2026-03-02 21:52:56.544 Session with id a45873a5-3f35-453e-8210-86dce4934220 is already connected! Connecting to a new session.

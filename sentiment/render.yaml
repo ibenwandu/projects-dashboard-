@@ -1,0 +1,86 @@
+services:
+  # PostgreSQL Database
+  - type: pspg
+    name: sentiment-monitor-db
+    plan: starter
+    databaseName: sentiment_monitor
+    user: sentiment_monitor
+
+  # Web UI Service
+  - type: web
+    name: sentiment-monitor-web
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 8000
+      - key: FLASK_DEBUG
+        value: "false"
+      - key: SECRET_KEY
+        sync: false
+      # Database (PostgreSQL - shared between services)
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sentiment-monitor-db
+          property: connectionString
+      # LLM Configuration
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      # Email Configuration
+      - key: SENDER_EMAIL
+        sync: false
+      - key: SENDER_PASSWORD
+        sync: false
+      - key: EMAIL_RECIPIENT
+        sync: false
+      - key: SMTP_SERVER
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      # Optional: News API
+      - key: NEWSAPI_KEY
+        sync: false
+
+  # Background Worker Service
+  - type: worker
+    name: sentiment-monitor-worker
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python worker.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      # Database (PostgreSQL - shared between services)
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sentiment-monitor-db
+          property: connectionString
+      # LLM Configuration
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      # Email Configuration
+      - key: SENDER_EMAIL
+        sync: false
+      - key: SENDER_PASSWORD
+        sync: false
+      - key: EMAIL_RECIPIENT
+        sync: false
+      - key: SMTP_SERVER
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      # Optional: News API
+      - key: NEWSAPI_KEY
+        sync: false
+

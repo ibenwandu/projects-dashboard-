@@ -1,0 +1,134 @@
+# Agent Ecosystem Configuration
+
+# Primary Agent Settings
+primary_agent:
+  name: "Coordinator"
+  max_concurrent_tasks: 5
+  timeout_seconds: 300
+  retry_attempts: 3
+  log_level: "INFO"
+
+# Sub-Agent Settings
+sub_agents:
+  research:
+    name: "Research Agent"
+    enabled: true
+    max_requests_per_minute: 60
+    timeout_seconds: 120
+    data_sources:
+      - "web_scraping"
+      - "api_calls"
+      - "database_queries"
+    
+  analysis:
+    name: "Analysis Agent"
+    enabled: true
+    max_processing_time: 180
+    algorithms:
+      - "statistical_analysis"
+      - "pattern_recognition"
+      - "sentiment_analysis"
+      - "clustering"
+    
+  writing:
+    name: "Writing Agent"
+    enabled: true
+    output_formats:
+      - "markdown"
+      - "json"
+      - "html"
+      - "pdf"
+    templates_path: "templates/"
+    
+  quality_control:
+    name: "Quality Control Agent"
+    enabled: true
+    quality_threshold: 0.8
+    validation_rules:
+      - "completeness"
+      - "accuracy"
+      - "consistency"
+      - "readability"
+
+# Communication Settings
+communication:
+  message_bus:
+    type: "redis"
+    host: "localhost"
+    port: 6379
+    db: 0
+  
+  protocols:
+    default_timeout: 30
+    max_message_size: 1048576  # 1MB
+    compression: true
+
+# Data Processing
+data_processing:
+  batch_size: 100
+  max_memory_usage: "2GB"
+  cache_enabled: true
+  cache_ttl: 3600  # 1 hour
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {name}:{function}:{line} | {message}"
+  file: "logs/agent_ecosystem.log"
+  max_file_size: "10MB"
+  rotation: "1 day"
+
+# API Keys and External Services
+external_services:
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-3.5-turbo"
+    max_tokens: 2000
+  
+  news_api:
+    api_key: "${NEWS_API_KEY}"
+    base_url: "https://newsapi.org/v2/"
+  
+  weather_api:
+    api_key: "${WEATHER_API_KEY}"
+    base_url: "https://api.openweathermap.org/data/2.5/"
+
+# Database Configuration
+database:
+  type: "sqlite"
+  path: "data/agent_ecosystem.db"
+  backup_enabled: true
+  backup_interval: "1 day"
+
+# Security Settings
+security:
+  encryption_enabled: true
+  api_rate_limiting: true
+  max_request_size: "10MB"
+  allowed_origins:
+    - "localhost"
+    - "127.0.0.1"
+
+# Performance Monitoring
+monitoring:
+  enabled: true
+  metrics_port: 9090
+  health_check_interval: 30
+  alert_thresholds:
+    cpu_usage: 80
+    memory_usage: 85
+    response_time: 5000  # ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+

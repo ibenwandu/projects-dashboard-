@@ -1,0 +1,276 @@
+#!/usr/bin/env python3
+"""
+Scalp-Engine Execution Review - Analyze what trades were executed by the system
+
+Parses Scalp-Engine logs to show what trades were executed, when, and why.
+
+Usage:
+    python scalp-engine-review              # Show summary of recent execution
+    python scalp-engine-review --detailed   # Show detailed execution breakdown
+    python scalp-engine-review --sources    # Show execution breakdown by source
+"""
+
+import sqlite3
+import sys
+import argparse
+from pathlib import Path
+from datetime import datetime, timedelta
+from collections import defaultdict
+import json
+import re
+
+class ScalpEngineReviewer:
+    """Analyze Scalp-Engine execution from database and logs"""
+
+    def __init__(self):
+        # Try to connect to Scalp-Engine database if it exists
+        db_path = Path(__file__).parent / "Scalp-Engine" / "execution.db"
+
+        self.db_path = db_path
+        self.conn = None
+        self.has_db = False
+
+        if db_path.exists():
+            try:
+                self.conn = sqlite3.connect(db_path)
+                self.conn.row_factory = sqlite3.Row
+                self.has_db = True
+            except Exception as e:
+                print(f"WARNING: Could not connect to execution database: {e}")
+
+    def get_recent_executions(self, days=7, limit=100):
+        """Get recent execution records"""
+        if not self.has_db:
+            return []
+
+        cursor = self.conn.cursor()
+        since = datetime.utcnow() - timedelta(days=days)
+
+        try:
+            cursor.execute("""
+                SELECT
+                    timestamp, pair, direction, entry_price, exit_price,
+                    position_size, status, pnl, source, reason
+                FROM executions
+                WHERE timestamp >= ?
+                ORDER BY timestamp DESC
+                LIMIT ?
+            """, (since.isoformat(), limit))
+
+            return cursor.fetchall()
+        except Exception as e:
+            print(f"ERROR querying executions: {e}")
+            return []
+
+    def get_execution_summary(self):
+        """Get summary statistics of executions"""
+        if not self.has_db:
+            return None
+
+        cursor = self.conn.cursor()
+
+        try:
+            cursor.execute("""
+                SELECT
+                    COUNT(*) as total,
+                    COUNT(CASE WHEN status = 'CLOSED' THEN 1 END) as closed,
+                    COUNT(CASE WHEN status = 'OPEN' THEN 1 END) as open,
+                    COUNT(CASE WHEN status = 'CANCELLED' THEN 1 END) as cancelled,
+                    COUNT(CASE WHEN pnl > 0 THEN 1 END) as winning_closed,
+                    COUNT(CASE WHEN pnl < 0 THEN 1 END) as losing_closed,
+                    ROUND(AVG(CASE WHEN pnl IS NOT NULL THEN pnl ELSE NULL END), 2) as avg_pnl,
+                    ROUND(SUM(CASE WHEN pnl IS NOT NULL AND pnl > 0 THEN pnl ELSE 0 END), 2) as total_wins,
+                    ROUND(SUM(CASE WHEN pnl IS NOT NULL AND pnl < 0 THEN pnl ELSE 0 END), 2) as total_losses
+                FROM executions
+            """)
+
+            return cursor.fetchone()
+        except Exception as e:
+            print(f"ERROR getting summary: {e}")
+            return None
+
+    def get_execution_by_source(self):
+        """Get execution breakdown by source (LLM, Fisher, DMI-EMA, etc)"""
+        if not self.has_db:
+            return []
+
+        cursor = self.conn.cursor()
+
+        try:
+            cursor.execute("""
+                SELECT
+                    source,
+                    COUNT(*) as total,
+                    COUNT(CASE WHEN status = 'CLOSED' THEN 1 END) as closed,
+                    COUNT(CASE WHEN pnl > 0 THEN 1 END) as wins,
+                    ROUND(AVG(CASE WHEN pnl IS NOT NULL THEN pnl ELSE NULL END), 2) as avg_pnl,
+                    ROUND(SUM(CASE WHEN pnl IS NOT NULL AND pnl > 0 THEN pnl ELSE 0 END), 2) as total_wins
+                FROM executions
+                GROUP BY source
+                ORDER BY total DESC
+            """)
+
+            return cursor.fetchall()
+        except Exception as e:
+            print(f"ERROR getting source breakdown: {e}")
+            return []
+
+    def get_execution_by_pair(self):
+        """Get execution breakdown by pair"""
+        if not self.has_db:
+            return []
+
+        cursor = self.conn.cursor()
+
+        try:
+            cursor.execute("""
+                SELECT
+                    pair,
+                    direction,
+                    COUNT(*) as total,
+                    COUNT(CASE WHEN status = 'CLOSED' THEN 1 END) as closed,
+                    ROUND(SUM(CASE WHEN pnl IS NOT NULL THEN pnl ELSE 0 END), 2) as total_pnl,
+                    ROUND(AVG(CASE WHEN pnl IS NOT NULL THEN pnl ELSE NULL END), 2) as avg_pnl
+                FROM executions
+                GROUP BY pair, direction
+                ORDER BY total DESC
+                LIMIT 20
+            """)
+
+            return cursor.fetchall()
+        except Exception as e:
+            print(f"ERROR getting pair breakdown: {e}")
+            return []
+
+    def print_summary(self):
+        """Print summary of recent executions"""
+        print("\n" + "=" * 80)
+        print("SCALP-ENGINE EXECUTION SUMMARY")
+        print("=" * 80)
+
+        if not self.has_db:
+            print("\nNo execution database found at:", self.db_path)
+            print("This is expected if Scalp-Engine has never been run locally.")
+            print("\nTo get execution data:")
+            print("  1. Run Scalp-Engine in MONITOR or MANUAL mode")
+            print("  2. Check logs: Scalp-Engine/logs/scalp_engine_*.log")
+            print("  3. Correlate with OANDA trades via /oanda-review")
+            return
+
+        summary = self.get_execution_summary()
+
+        if not summary:
+            print("\nNo executions recorded in database.")
+            print("Expected if Scalp-Engine is still in setup phase.")
+            return
+
+        print(f"\nExecution Summary:")
+        print(f"  Total Executions: {summary['total']}")
+        print(f"  Closed: {summary['closed']}")
+        print(f"  Open: {summary['open']}")
+        print(f"  Cancelled: {summary['cancelled']}")
+
+        if summary['closed'] > 0:
+            print(f"\nClosed Trade Performance:")
+            print(f"  Winning Trades: {summary['winning_closed']}")
+            print(f"  Losing Trades: {summary['losing_closed']}")
+            print(f"  Total P&L: ${summary['total_wins'] + summary['total_losses']:.2f}")
+            print(f"  Avg P&L: ${summary['avg_pnl']:.2f}")
+
+        print(f"\nExecution by Source:")
+        for source in self.get_execution_by_source():
+            print(f"  {source['source']:15} - {source['total']} executions, {source['closed']} closed, "
+                  f"{source['wins']} wins, Avg P&L: ${source['avg_pnl']:.2f}")
+
+        print(f"\nTop Trading Pairs:")
+        for pair_stat in self.get_execution_by_pair():
+            print(f"  {pair_stat['pair']:10} {pair_stat['direction']:5} - {pair_stat['total']} execs, "
+                  f"{pair_stat['closed']} closed, ${pair_stat['total_pnl']:.2f} P&L")
+
+        print("\n" + "=" * 80)
+
+    def print_detailed(self):
+        """Print detailed execution breakdown"""
+        print("\n" + "=" * 80)
+        print("SCALP-ENGINE EXECUTION DETAILS (Last 7 days)")
+        print("=" * 80)
+
+        if not self.has_db:
+            print("\nNo execution database found at:", self.db_path)
+            return
+
+        executions = self.get_recent_executions(days=7, limit=50)
+
+        if not executions:
+            print("\nNo executions found in database.")
+            return
+
+        for i, exec_record in enumerate(executions, 1):
+            status = exec_record['status']
+            pnl = f"${exec_record['pnl']:.2f}" if exec_record['pnl'] else "N/A"
+
+            print(f"\n{i}. {exec_record['pair']} {exec_record['direction']}")
+            print(f"   Source: {exec_record['source']}")
+            print(f"   Entry: {exec_record['entry_price']:.5f}, Exit: {exec_record['exit_price']:.5f if exec_record['exit_price'] else 'OPEN'}")
+            print(f"   Position: {exec_record['position_size']} units")
+            print(f"   Status: {status}, P&L: {pnl}")
+            print(f"   Reason: {exec_record['reason']}")
+            print(f"   Time: {exec_record['timestamp'][:10]}")
+
+        print("\n" + "=" * 80)
+
+    def print_sources(self):
+        """Print execution breakdown by source"""
+        print("\n" + "=" * 80)
+        print("SCALP-ENGINE EXECUTION BY SOURCE")
+        print("=" * 80)
+
+        if not self.has_db:
+            print("\nNo execution database found.")
+            return
+
+        sources = self.get_execution_by_source()
+
+        if not sources:
+            print("\nNo executions by source found.")
+            return
+
+        for source in sources:
+            print(f"\n{source['source'].upper()}")
+            print(f"  Total Executions: {source['total']}")
+            print(f"  Closed: {source['closed']}")
+            print(f"  Winning Trades: {source['wins']}")
+            print(f"  Total Wins: ${source['total_wins']:.2f}")
+            print(f"  Avg P&L: ${source['avg_pnl']:.2f}")
+
+        print("\n" + "=" * 80)
+
+    def run(self):
+        """Execute the reviewer"""
+        return True
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Analyze Scalp-Engine execution")
+    parser.add_argument("--detailed", action="store_true", help="Show detailed execution breakdown")
+    parser.add_argument("--sources", action="store_true", help="Show execution breakdown by source")
+
+    args = parser.parse_args()
+
+    reviewer = ScalpEngineReviewer()
+
+    if not reviewer.run():
+        return 1
+
+    if args.detailed:
+        reviewer.print_detailed()
+    elif args.sources:
+        reviewer.print_sources()
+    else:
+        reviewer.print_summary()
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

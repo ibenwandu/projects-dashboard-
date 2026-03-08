@@ -1,0 +1,131 @@
+services:
+  # ============================================
+  # First-Monitor Services
+  # ============================================
+  
+  - type: worker
+    name: first-monitor-worker
+    rootDir: first-monitor
+    runtime: python
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
+    startCommand: python worker.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: ENV
+        value: production
+      - key: FRED_API_KEY
+        sync: false
+      - key: OANDA_API_KEY
+        sync: false
+      - key: OANDA_ACCOUNT_ID
+        sync: false
+      - key: USE_LAYER3_CONFIRMATION
+        value: "0"
+    disk:
+      name: first-monitor-data
+      mountPath: /var/data
+      sizeGB: 1
+
+  - type: web
+    name: first-monitor-app
+    rootDir: first-monitor
+    runtime: python
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --server.enableXsrfProtection false
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: ENV
+        value: production
+      - key: FRED_API_KEY
+        sync: false
+      - key: OANDA_API_KEY
+        sync: false
+      - key: OANDA_ACCOUNT_ID
+        sync: false
+      - key: USE_LAYER3_CONFIRMATION
+        value: "0"
+    healthCheckPath: /
+    disk:
+      name: first-monitor-data
+      mountPath: /var/data
+      sizeGB: 1
+
+  # ============================================
+  # Fx-Engine Services (Unchanged Configuration)
+  # ============================================
+  
+  - type: web
+    name: fx-engine-app
+    rootDir: Fx-engine
+    runtime: python
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --server.enableXsrfProtection false
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: DATABASE_PATH
+        value: /var/data/fx_engine.db
+      - key: ENV
+        value: production
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: OANDA_API_KEY
+        sync: false
+      - key: OANDA_ACCOUNT_ID
+        sync: false
+      - key: FRED_API_KEY
+        sync: false
+    disk:
+      name: fx-data
+      mountPath: /var/data
+      sizeGB: 1
+    healthCheckPath: /
+
+  - type: worker
+    name: fx-engine-worker
+    rootDir: Fx-engine
+    runtime: python
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
+    startCommand: python worker.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: DATABASE_PATH
+        value: /var/data/fx_engine.db
+      - key: ENV
+        value: production
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: OANDA_API_KEY
+        sync: false
+      - key: OANDA_ACCOUNT_ID
+        sync: false
+      - key: FRED_API_KEY
+        sync: false
+    disk:
+      name: fx-data
+      mountPath: /var/data
+      sizeGB: 1
+

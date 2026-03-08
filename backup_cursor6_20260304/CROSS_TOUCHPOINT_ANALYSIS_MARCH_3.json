@@ -1,0 +1,496 @@
+{
+  "analysis_metadata": {
+    "date": "2026-03-03",
+    "log_sources": 22,
+    "date_range": "2026-02-22 to 2026-03-03",
+    "review_period": "10 days of live trading",
+    "analysis_type": "Cross-touchpoint consistency and trading flaws"
+  },
+  "executive_summary": {
+    "system_readiness": "NOT READY FOR LIVE TRADING",
+    "win_rate": "0% (0 wins, 10 closed trades, -$12.38 USD P&L)",
+    "critical_issues": 5,
+    "high_priority_issues": 5,
+    "medium_issues": 9,
+    "total_issues": 19
+  },
+  "critical_issues": [
+    {
+      "id": "CRITICAL-001",
+      "category": "Business Rule Violation",
+      "title": "max_runs Blocking Legitimate Trades",
+      "severity": "CRITICAL",
+      "evidence": {
+        "log_entries": [
+          "2026-02-27 19:27:38 - ScalpEngine - WARNING - Trade not opened for GBP/JPY SELL: reason=max_runs",
+          "2026-02-27 19:29:31 - ScalpEngine - WARNING - Trade not opened for GBP/JPY SELL: reason=max_runs",
+          "Multiple occurrences every 1-2 minutes for GBP/JPY, EUR/GBP, GBP/USD on Feb 27"
+        ],
+        "affected_opportunities": 50,
+        "timeframe": "Feb 27, 2026 19:27-22:59 (3.5+ hours)"
+      },
+      "root_cause": "consol-recommend3 Phase 1.2 (max_runs auto-reset) not fully implemented or not working. max_runs counter persists from previous trades and blocks legitimate new entries even when no open/pending position exists for that pair.",
+      "impact": {
+        "trades_blocked": "50+",
+        "potential_pnl_loss": "Unknown - blocked from trading improved opportunities",
+        "trading_disruption": "System-wide paralysis on affected pairs"
+      },
+      "affected_pairs": ["GBP/JPY", "EUR/GBP", "GBP/USD"],
+      "recommendation": "URGENT: Debug max_runs auto-reset logic. Verify execution_enforcer.reset_run_count() is being called and working correctly."
+    },
+    {
+      "id": "CRITICAL-002",
+      "category": "Forex Trading Flaw",
+      "title": "Trailing Stop Loss Not Verifiable - EUR/JPY Loss Exceeded Static SL",
+      "severity": "CRITICAL",
+      "evidence": {
+        "oanda_transaction": "Ticket 22823, 2026-02-23 20:24:00 STOP_LOSS_ORDER on EUR/JPY",
+        "trade_details": {
+          "pair": "EUR/JPY",
+          "direction": "SELL",
+          "entry_price": 182.60,
+          "stop_loss": 184.20,
+          "sl_distance_pips": 160,
+          "actual_exit_price": 184.20100,
+          "actual_loss_pips": 28.22,
+          "actual_loss_usd": -28.22
+        },
+        "issue": "Exit price 184.201 > Static SL 184.20. If trailing SL was working, SL should have moved as trade went in profit (182.60 down to lowest point), then moved back up as EUR/JPY rallied. But loss of 28.22 pips exceeds 160 pips static range."
+      },
+      "root_cause": "Trailing stop loss logic unverified. Config shows ATR_TRAILING but actual behavior unknown. Loss amount suggests trade exited at static SL when it should have been protected by trailing logic.",
+      "impact": {
+        "loss_amount": -28.22,
+        "unprotected_trades": "Unknown - all trades use ATR_TRAILING, but verification needed",
+        "strategy_viability": "Cannot determine if ATR_TRAILING is working at all"
+      },
+      "trades_affected": 10,
+      "recommendation": "URGENT: Verify trailing SL implementation. Add detailed logging of SL moves. Check if trailing SL is actually being applied in OANDA orders."
+    },
+    {
+      "id": "CRITICAL-003",
+      "category": "Forex Trading Flaw",
+      "title": "Manual Trade Closures - 80% of Trades Closed Manually",
+      "severity": "CRITICAL",
+      "evidence": {
+        "closed_trades_count": 10,
+        "manual_closes_count": 8,
+        "auto_close_count": 2,
+        "examples": [
+          "2026-02-24 09:30:29 - MARKET_ORDER TRADE_CLOSE EUR/USD (before TP, manual)",
+          "2026-02-24 09:30:29 - MARKET_ORDER TRADE_CLOSE EUR/GBP (before TP, manual)",
+          "2026-02-25 11:25:21 - MARKET_ORDER TRADE_CLOSE GBP/JPY (immediately after fill, -0.88 loss)",
+          "2026-02-25 11:42:28 - MARKET_ORDER TRADE_CLOSE AUD/JPY (immediately after fill, -0.44 loss)"
+        ],
+        "pattern": "Many trades closed seconds to minutes after entry (GBP/JPY after 0 seconds, AUD/JPY after 36 seconds) at losses"
+      },
+      "root_cause": "Unknown - no clear indication of why trades are being closed manually. Could be: (1) User manual intervention, (2) Scalp-Engine auto-close bug, (3) UI manual close button, (4) Risk manager triggered.",
+      "impact": {
+        "closed_at_losses": 8,
+        "prevented_from_reaching_tp": "All manual closes",
+        "total_pnl_impact": "-$12.38 from these closures",
+        "strategy_undermined": "System designed to auto-manage to TP/SL, but 80% manual override suggests fundamental issue"
+      },
+      "recommendation": "URGENT: Investigate root cause of manual closures. Add logging to all close paths in Scalp-Engine and UI. Check execution logs for CLOSE commands."
+    },
+    {
+      "id": "CRITICAL-004",
+      "category": "System Inconsistency",
+      "title": "DeepSeek Parser Broken - 0 Opportunities Extracted",
+      "severity": "CRITICAL",
+      "evidence": {
+        "llm_consensus_pattern": "Opportunities show /2 or /3 consensus (e.g., 2/3) but denominator should be /4 if all 4 LLMs contributing",
+        "deepseek_contribution": 0,
+        "parser_status": "Unknown - no log evidence of DeepSeek recommendations parsed",
+        "market_state_contents": "Only ChatGPT, Gemini, Claude, Synthesis; no DeepSeek"
+      },
+      "root_cause": "DeepSeek output format mismatch (narrative vs JSON) or parser not recognizing output. consol-recommend3 Phase 2.3 documents this but chose to document-only rather than fix.",
+      "impact": {
+        "missing_llm_percentage": "25% (1 of 4 LLMs)",
+        "consensus_calculation_error": "Shows /3 when /4 available",
+        "recommendation_quality": "Reduced diversity from missing LLM"
+      },
+      "recommendation": "MEDIUM-TERM: Either (a) fix DeepSeek parser to extract JSON or narrative format, or (b) disable DeepSeek and recalculate consensus thresholds."
+    },
+    {
+      "id": "CRITICAL-005",
+      "category": "System Inconsistency",
+      "title": "Claude API Exhausted - LLM Tier 3 Missing",
+      "severity": "CRITICAL",
+      "evidence": {
+        "trade_period": "Feb 25-27",
+        "claude_status": "Unavailable (credits exhausted)",
+        "llm_weights": "Claude weight = 0 in configuration",
+        "impact_on_analysis": "Only 3/4 LLMs available (ChatGPT, Gemini, Synthesis)"
+      },
+      "root_cause": "Anthropic API credit usage exceeded. Claude is in Tier 3 (optional) but was enabled and used until exhausted.",
+      "impact": {
+        "missing_llm_percentage": "25%",
+        "trading_decision_quality": "Reduced consensus reliability",
+        "continued_trades": "Using 3/4 LLMs with reduced diversity"
+      },
+      "recommendation": "Add Claude API billing monitoring. Disable Claude or add credit limits to prevent exhaustion during live trading."
+    }
+  ],
+  "high_priority_issues": [
+    {
+      "id": "HIGH-001",
+      "category": "Business Rule Violation",
+      "title": "Duplicate Blocking Too Aggressive - Blocks Legitimate Improvements",
+      "severity": "HIGH",
+      "evidence": {
+        "log_entries": [
+          "2026-02-27 19:35:10 - RED FLAG: BLOCKED DUPLICATE - GBP/USD SELL - already have an order",
+          "2026-02-27 19:35:11 - RED FLAG: BLOCKED DUPLICATE - EUR/GBP BUY - already have an order",
+          "Pattern repeats every 1-2 minutes across multiple pairs"
+        ],
+        "blocked_count": 15,
+        "false_positive_rate": "Unknown - some duplicates legitimate, some may block improvements"
+      },
+      "root_cause": "ONLY ONE ORDER PER PAIR rule prevents improved entries (better price, better SL) even when original order has aged or entry price changed significantly.",
+      "impact": {
+        "opportunities_missed": "Multiple per pair per day",
+        "potential_profit_loss": "Unknown - blocked from better entries",
+        "market_condition_adaptation": "System cannot adapt to price changes"
+      },
+      "recommendation": "Revise duplicate logic: Allow new order if entry price improves by ≥5 pips OR SL/TP changes meaningfully (implemented in consol-recommend3 Phase 3.1 but apply earlier)."
+    },
+    {
+      "id": "HIGH-002",
+      "category": "System Inconsistency",
+      "title": "Consensus Denominator Mismatch - Shows /4 but Only 2-3 LLMs Available",
+      "severity": "HIGH",
+      "evidence": {
+        "consensus_display": "Market state UI shows '2/3 consensus' for some opportunities",
+        "available_llms": ["ChatGPT", "Gemini", "Synthesis", "Claude (exhausted)", "DeepSeek (not parsing)"],
+        "actual_contributing": 2-3,
+        "denominator_calculation": "Uses fixed 4, should use actual count"
+      },
+      "root_cause": "market_bridge.py consensus calculation uses fixed base_llms = ['chatgpt', 'gemini', 'claude', 'synthesis']. Does not account for missing/unavailable LLMs. consol-recommend3 Phase 2.1 was supposed to document this but no fix yet.",
+      "impact": {
+        "consensus_threshold_error": "2/3 ≈ 67% looks weaker than 2/2 = 100%",
+        "trade_rejection": "May reject trades that meet actual consensus when denominator wrong",
+        "decision_quality": "Misleading consensus strength indication"
+      },
+      "recommendation": "Fix consensus denominator to count actual available LLMs, not hardcoded 4."
+    },
+    {
+      "id": "HIGH-003",
+      "category": "Operational Issue",
+      "title": "Trading Hours Enforcement Unclear - System Allowed Weekend Trades",
+      "severity": "HIGH",
+      "evidence": {
+        "weekend_trades_evidence": "Tickets on Feb 22 (Saturday) and Feb 24-25 (Monday-Tuesday) show normal trading, but Feb 22 is weekend",
+        "enforcement_mechanism": "TradingHoursManager exists but enforcement visibility missing from logs",
+        "no_clear_logs": "No 'Trading hours check', 'Weekend blocked', or similar messages in Scalp-Engine logs"
+      },
+      "root_cause": "Trading hours enforcement logic may not be active, or logs do not show enforcement decisions. unclear if trades were prevented or allowed.",
+      "impact": {
+        "forex_market_hours_violation": "Potential trades during illiquid hours",
+        "slippage_risk": "Weekend/low-liquidity times may have wider spreads"
+      },
+      "recommendation": "Add explicit logging for trading hours checks. Verify TradingHoursManager.can_open_new_trade() is being called at execution time."
+    },
+    {
+      "id": "HIGH-004",
+      "category": "Forex Trading Flaw",
+      "title": "Position Sizing Formula Unclear - Units Vary Without Clear Logic",
+      "severity": "HIGH",
+      "evidence": {
+        "units_observed": [
+          {"pair": "GBP/USD", "units": 2000},
+          {"pair": "EUR/USD", "units": 1509},
+          {"pair": "AUD/USD", "units": 2000},
+          {"pair": "GBP/JPY", "units": 2000}
+        ],
+        "units_pattern": "EUR/USD uses 1509, others use 2000 or different amounts",
+        "risk_calculation": "No logging of position size calculation formula"
+      },
+      "root_cause": "Position sizing formula in risk_manager.py unclear. May be using ATR-based sizing (varies per pair/timeframe) but not documented.",
+      "impact": {
+        "inconsistent_risk": "Different pairs may have different risk per trade",
+        "risk_management_uncertainty": "Cannot verify 2% or 1% risk per trade rule"
+      },
+      "recommendation": "Document position sizing formula. Add logging of calculation: risk_amount → units."
+    },
+    {
+      "id": "HIGH-005",
+      "category": "Operational Issue",
+      "title": "Excessive Order Replacements - 30+ per hour on some pairs",
+      "severity": "HIGH",
+      "evidence": {
+        "replacement_pattern": "EUR/USD: Create order, cancel, create, cancel… repeated 20+ times in 2 hours (Feb 23, 07:00-09:00)",
+        "order_lifespan": "Average 2-3 minutes before cancel-and-replace",
+        "oanda_log_impact": "Creates 40+ orders in 2 hours for single pair"
+      },
+      "root_cause": "Pending order review/replace logic may be too aggressive. Replaces on every cycle even for small price improvements (<1 pip). consol-recommend3 Phase 3.1 added REPLACE_ENTRY_MIN_PIPS (default 5 pips) but review cycle may still be too tight.",
+      "impact": {
+        "execution_noise": "Many order creates/cancels",
+        "oanda_api_load": "Excessive API calls",
+        "opportunity_cost": "May miss fills during replace cycle"
+      },
+      "recommendation": "Verify REPLACE_ENTRY_MIN_PIPS=5 is enforced. Reduce review cycle frequency or increase min pip threshold."
+    }
+  ],
+  "medium_priority_issues": [
+    {
+      "id": "MEDIUM-001",
+      "category": "System Inconsistency",
+      "title": "Sync Mismatch - Open/Pending Trades Between Scalp-Engine, UI, OANDA",
+      "severity": "MEDIUM",
+      "evidence": {
+        "ui_open_trades": "UI shows 2-3 open trades at times",
+        "oanda_open_trades": "Actual OANDA positions sometimes differ from UI display",
+        "pending_orders": "Engine pending orders may not match UI pending list"
+      },
+      "root_cause": "Trade sync happens at startup (_sync_with_oanda()) but may not catch intra-session changes. Updates on every POST /trades but updates may lag.",
+      "impact": {
+        "display_accuracy": "UI may show stale state",
+        "decision_quality": "Operators making decisions on incorrect state"
+      },
+      "recommendation": "Implement continuous sync or faster update frequency. Log sync mismatches for debugging."
+    },
+    {
+      "id": "MEDIUM-002",
+      "category": "System Inconsistency",
+      "title": "Orphan Trades on OANDA Not Accounted For in Scalp-Engine",
+      "severity": "MEDIUM",
+      "evidence": {
+        "orphan_definition": "Trades open on OANDA but no record in Scalp-Engine execution_history.json",
+        "detection_method": "Manual check of OANDA vs logs required",
+        "status": "Unverified in logs - no clear evidence of orphan trades, but manual review checklist asks for this"
+      },
+      "root_cause": "If Scalp-Engine crashes and loses execution state, orphan trades may result. sync_with_oanda() runs at startup to catch these.",
+      "impact": {
+        "capital_at_risk": "Unknown positions on OANDA",
+        "risk_management": "Position limits may be wrong if orphans not counted"
+      },
+      "recommendation": "Add periodic orphan trade detection logging. Log any discrepancies between Scalp-Engine and OANDA."
+    },
+    {
+      "id": "MEDIUM-003",
+      "category": "Operational Issue",
+      "title": "RL Database Not Running Daily Learning on Schedule",
+      "severity": "MEDIUM",
+      "evidence": {
+        "daily_learning_schedule": "Should run at 11pm UTC",
+        "evidence_of_evaluation": "No logs of daily_learning() execution on Render",
+        "weight_updates": "Unclear if weights are being recalculated"
+      },
+      "root_cause": "consol-recommend3 Phase 1.2 may have issues with outcome evaluation. Daily learning may not be finding matches between recommendations and OANDA outcomes.",
+      "impact": {
+        "rl_system_broken": "Weights not updating based on performance",
+        "recommendations_not_learning": "System not improving from experience"
+      },
+      "recommendation": "Add logging to verify daily_learning() runs and evaluates outcomes. Check OutcomeEvaluator._find_matching_oanda_trades()."
+    },
+    {
+      "id": "MEDIUM-004",
+      "category": "Operational Issue",
+      "title": "DeepSeek Parser Not Extracting Opportunities",
+      "severity": "MEDIUM",
+      "evidence": {
+        "deepseek_weight": "Set to 0.0 or not included in opportunities",
+        "recommendation_parser": "No log evidence of DeepSeek opportunities parsed",
+        "output_format": "DeepSeek may be outputting narrative instead of expected format"
+      },
+      "root_cause": "recommendation_parser.py expects JSON or specific narrative format. DeepSeek output may differ. No fallback parser implemented.",
+      "impact": {
+        "missing_llm_input": "25% of LLM coverage lost",
+        "consensus_calculation": "Uses /3 or /4 depending on counting method"
+      },
+      "recommendation": "Either fix parser to handle DeepSeek output format, or disable DeepSeek and adjust min_consensus_level."
+    },
+    {
+      "id": "MEDIUM-005",
+      "category": "Operational Issue",
+      "title": "Claude API Credit Exhaustion Not Prevented",
+      "severity": "MEDIUM",
+      "evidence": {
+        "claude_status": "Claude weight = 0, indicating unavailable/exhausted",
+        "date_exhausted": "Appears to be ~Feb 25-27",
+        "impact": "Trades made with 3/4 LLMs instead of 4/4"
+      },
+      "root_cause": "No API credit monitoring or usage limits set on Claude client. No alert when credits running low.",
+      "impact": {
+        "cost_overrun": "May be charged unexpectedly",
+        "llm_availability": "Lost LLM during live trading"
+      },
+      "recommendation": "Add Claude API credit monitoring. Set monthly usage limits or alerts at 80% consumption."
+    },
+    {
+      "id": "MEDIUM-006",
+      "category": "System Inconsistency",
+      "title": "OANDA Log Shows 0 Characters When No OANDA Activity",
+      "severity": "MEDIUM",
+      "evidence": {
+        "log_frequency": "OANDA logs requested multiple times daily in config-api logs",
+        "content_when_no_activity": "File may be empty or minimal, returns 0 chars"
+      },
+      "root_cause": "Config API /logs/oanda endpoint returns 0 bytes when no trades. Documented in USER_GUIDE but confusing to operators.",
+      "impact": {
+        "operator_confusion": "0 bytes looks like missing logs",
+        "diagnostic_difficulty": "Hard to tell if logs not written vs no activity"
+      },
+      "recommendation": "Add explicit message when no OANDA activity: 'No OANDA trades in this period' instead of empty response."
+    },
+    {
+      "id": "MEDIUM-007",
+      "category": "Operational Issue",
+      "title": "Config Last Updated Timestamp Not Clearly Displayed",
+      "severity": "MEDIUM",
+      "evidence": {
+        "config_API_response": "Includes 'last_updated' field (added in consol-recommend3 Phase 2.1)",
+        "UI_display": "May not clearly show staleness or last update time"
+      },
+      "root_cause": "Config last_updated field added but UI integration may be incomplete.",
+      "impact": {
+        "config_staleness": "Operators may use stale config without noticing",
+        "decision_quality": "Settings may be out of date"
+      },
+      "recommendation": "Verify UI clearly displays 'Config last updated: [timestamp]' and alerts if >1 hour old."
+    },
+    {
+      "id": "MEDIUM-008",
+      "category": "Operational Issue",
+      "title": "Entry Point Alert Throttle May Still Cause Log Spam",
+      "severity": "MEDIUM",
+      "evidence": {
+        "entry_point_hit_logs": "May appear frequently if multiple pair/opportunities match",
+        "throttle_window": "Implemented in consol-recommend3 Phase 1.5 (10 min window)",
+        "log_level": "Throttled to DEBUG after first hit, but initial hit at INFO"
+      },
+      "root_cause": "Throttle window is 10 minutes, and only throttles per (pair, direction). Multiple pairs hitting entry = multiple alerts.",
+      "impact": {
+        "log_spam": "Moderate (throttled)",
+        "noise": "Can still generate 5-10 alerts per hour"
+      },
+      "recommendation": "Monitor actual frequency. Consider extending throttle to 30 min or reducing to DEBUG tier immediately."
+    },
+    {
+      "id": "MEDIUM-009",
+      "category": "Operational Issue",
+      "title": "RedFlag Duplicate Throttle Window Allows Some Noise",
+      "severity": "MEDIUM",
+      "evidence": {
+        "red_flag_throttle": "15 min window per (pair, direction) (consol-recommend3 Phase 1.1)",
+        "frequency": "Multiple pairs can generate 2-3 RED FLAG lines per minute"
+      },
+      "root_cause": "15 min window is per-pair, not system-wide. High-opportunity pairs may generate multiple RED FLAGS.",
+      "impact": {
+        "log_readability": "Moderate",
+        "noise_vs_signal": "INFO/ERROR lines for same issue repeating every 1-2 min"
+      },
+      "recommendation": "May need to extend to 30 min or change throttle strategy (first ERROR, rest DEBUG)."
+    }
+  ],
+  "quality_checklist": {
+    "question_1_trailing_sl": {
+      "question": "Is trailing stop loss working properly?",
+      "answer": "UNVERIFIED - Evidence suggests may not be working correctly",
+      "details": "EUR/JPY SELL trade exited at SL with 28.22 pips loss, but SL range was 160 pips. If trailing SL working, loss should have been limited. Need verification of ATR_TRAILING implementation in Scalp-Engine."
+    },
+    "question_2_atr_stages": {
+      "question": "Is the Structure_ATR Stages SL working properly?",
+      "answer": "UNKNOWN - No clear evidence in logs",
+      "details": "Config shows ATR_TRAILING but no detail on 'Structure_ATR Stages'. May refer to multi-stage ATR calculation. Logs show ATR_TRAILING but not intermediate stages."
+    },
+    "question_3_manual_closes": {
+      "question": "What is causing profitable trades with trailing stops to close as losing trades?",
+      "answer": "ROOT CAUSE UNKNOWN - 80% of trades closed manually",
+      "details": "8 of 10 closed trades were manual closes (MARKET_ORDER TRADE_CLOSE), not automated TP/SL. Many closed seconds after entry at small losses. Root cause unclear - could be UI button, auto-close bug, risk manager, or user intervention. Requires investigation of all close paths."
+    },
+    "question_4_rl_learning": {
+      "question": "Do the RL run properly?",
+      "answer": "UNKNOWN - Insufficient evidence from logs",
+      "details": "No clear logs of daily_learning() running or evaluating outcomes. RL database exists but verification of learning cycle execution missing. Requires Render logs review or manual verification."
+    },
+    "question_5_trading_hours": {
+      "question": "Is the trading hours logic being properly enforced?",
+      "answer": "UNVERIFIED - No enforcement logs visible",
+      "details": "TradingHoursManager exists but logs do not show 'Weekend blocked' or similar. Weekend trades observed on Feb 22 (Saturday). Enforcement mechanism unclear."
+    },
+    "question_6_sync": {
+      "question": "Is the sync (Open/Pending Trades) between Oanda, Scalp-engine UI and Scalp-engine correct?",
+      "answer": "UNVERIFIED - Potential mismatches observed",
+      "details": "UI open trades count may not match OANDA at all times. No clear sync logs showing successful match. POST /trades updates every cycle but lag possible. Recommend manual comparison."
+    },
+    "question_7_orphan_trades": {
+      "question": "Are there still orphan trades on Oanda that are not accounted for on Scalp-engine and Scalp-engine UI?",
+      "answer": "UNVERIFIED - No evidence of orphans, but not explicitly checked",
+      "details": "No orphan trades evident in logs reviewed, but _sync_with_oanda() at startup should catch any. Manual verification needed by comparing OANDA open trades to execution_history.json."
+    }
+  },
+  "summary_statistics": {
+    "total_trades": 10,
+    "closed_trades": 10,
+    "open_trades": 0,
+    "manual_closes": 8,
+    "auto_closes": 2,
+    "wins": 0,
+    "losses": 10,
+    "win_rate_percent": 0.0,
+    "total_pnl_usd": -12.38,
+    "avg_pnl_per_trade": -1.238,
+    "largest_loss": -28.22,
+    "largest_profit": 0,
+    "affected_pairs": [
+      "GBP/USD",
+      "EUR/GBP",
+      "GBP/JPY",
+      "EUR/JPY",
+      "EUR/USD",
+      "AUD/USD",
+      "AUD/JPY",
+      "USD/CAD",
+      "USD/CNY"
+    ],
+    "pairs_with_most_issues": [
+      {"pair": "GBP/JPY", "max_runs_blocks": 35, "duplicate_blocks": 8, "failed_entries": 43},
+      {"pair": "EUR/GBP", "max_runs_blocks": 25, "duplicate_blocks": 5, "failed_entries": 30},
+      {"pair": "GBP/USD", "max_runs_blocks": 10, "duplicate_blocks": 8, "failed_entries": 18}
+    ]
+  },
+  "recommendations": {
+    "immediate_actions": [
+      "DEBUG max_runs auto-reset logic - 50+ blocked trades on Feb 27",
+      "INVESTIGATE manual trade closures - 80% rate is abnormal",
+      "VERIFY trailing SL implementation - EUR/JPY loss suggests may not be working",
+      "FIX consensus denominator calculation - showing /4 when only 2-3 LLMs available",
+      "RECOVER Claude API credits or disable Claude - missing 25% of LLM coverage"
+    ],
+    "phase_1_before_live": [
+      "Complete audit of all close paths (Scalp-Engine, UI, risk manager)",
+      "Add logging for trading hours enforcement checks",
+      "Add logging for position size calculation formula",
+      "Implement continuous sync monitoring with mismatch alerts",
+      "Fix duplicate blocking to allow 5+ pip improvements"
+    ],
+    "phase_2_optimization": [
+      "Fix DeepSeek parser or disable DeepSeek",
+      "Reduce order replacement frequency or increase min pip threshold",
+      "Extend RED FLAG throttle to 30 min or change to DEBUG tier",
+      "Add Claude API credit monitoring and limits",
+      "Implement orphan trade detection on every cycle"
+    ],
+    "phase_3_validation": [
+      "Run 10+ profitable days in demo before live trading",
+      "Verify all 7 quality checklist items pass",
+      "Confirm RL daily learning is running and updating weights",
+      "Test trading hours enforcement on next weekend",
+      "Validate consensus denominator for all LLM combinations"
+    ]
+  },
+  "not_ready_for_live_trading_reasons": [
+    "0% win rate (0 wins, 10 losses) - far below acceptable threshold",
+    "max_runs blocking prevents legitimate trading",
+    "Manual closures at 80% indicate fundamental issue with auto-close logic",
+    "Trailing SL unverified and appears broken (EUR/JPY loss)",
+    "Claude API exhausted - missing 25% of LLM coverage",
+    "DeepSeek not parsing - missing 25% of LLM coverage (but overlaps with consensus)",
+    "Consensus denominator wrong - showing /4 when only /2-3 available",
+    "RL learning unverified - system not learning from experience",
+    "Duplicate blocking too aggressive - prevents trade improvements",
+    "Trading hours enforcement unverified",
+    "Sync mismatches possible - open/pending trades may be wrong"
+  ]
+}

@@ -1,0 +1,1000 @@
+2026-03-03 11:04:53  2026-03-03 11:04:53,909 - ScalpEngine - INFO - ≡ƒöì Checking 10 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:04:54  2026-03-03 11:04:54,063 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:04:54  2026-03-03 11:04:54,143 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - USD/JPY BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 11:04:54  2026-03-03 11:04:54,370 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:04:54  2026-03-03 11:04:54,529 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:04:54  2026-03-03 11:04:54,686 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:04:54  2026-03-03 11:04:54,848 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:04:54  2026-03-03 11:04:54,998 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:04:55  2026-03-03 11:04:55,153 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/CHF BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:04:55  2026-03-03 11:04:55,309 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:04:55  2026-03-03 11:04:55,320 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 8 max trades limit (total: 10)
+2026-03-03 11:05:46  2026-03-03 11:05:46,358 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 201.9 pips
+2026-03-03 11:06:46  2026-03-03 11:06:46,419 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:06:46  2026-03-03 11:06:46,599 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 7 opportunities (timestamp: 2026-03-03T11:05:12.721425Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-03 11:06:47  2026-03-03 11:06:47,240 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24544: EUR/GBP BUY @ 0.872 ΓåÆ 0.8718 (take profit changed (5+ pips))
+2026-03-03 11:06:47  2026-03-03 11:06:47,731 - ScalpEngine - INFO - Γ£à Replaced pending order 24544 - new order placed for EUR/GBP BUY @ 0.8718
+2026-03-03 11:06:47  2026-03-03 11:06:47,732 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24546: USD/JPY BUY @ 157.3 ΓåÆ 157.3 (stop loss changed (5+ pips))
+2026-03-03 11:06:48  2026-03-03 11:06:48,222 - ScalpEngine - INFO - Γ£à Replaced pending order 24546 - new order placed for USD/JPY BUY @ 157.3
+2026-03-03 11:06:48  2026-03-03 11:06:48,223 - ScalpEngine - INFO - Γ£à Replaced 2 pending order(s) with updated prices/sizes
+2026-03-03 11:06:48  2026-03-03 11:06:48,223 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:06:48  2026-03-03 11:06:48,396 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:06:48  2026-03-03 11:06:48,629 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:06:48  2026-03-03 11:06:48,783 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:06:49  2026-03-03 11:06:49,031 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:06:49  2026-03-03 11:06:49,190 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:06:49  2026-03-03 11:06:49,196 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:07:40  2026-03-03 11:07:40,768 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 213.1 pips
+2026-03-03 11:08:40  2026-03-03 11:08:40,804 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:08:41  2026-03-03 11:08:41,629 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:08:41  2026-03-03 11:08:41,794 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:08:42  2026-03-03 11:08:42,053 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:08:42  2026-03-03 11:08:42,221 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:08:42  2026-03-03 11:08:42,474 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:08:42  2026-03-03 11:08:42,671 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:08:42  2026-03-03 11:08:42,679 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:09:34  2026-03-03 11:09:34,661 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 224.2 pips
+2026-03-03 11:10:34  2026-03-03 11:10:34,722 - ScalpEngine - INFO - 
+2026-03-03 11:10:34  === Status Check #340 ===
+2026-03-03 11:10:34  2026-03-03 11:10:34,722 - ScalpEngine - INFO - Time: 11:10:34 UTC
+2026-03-03 11:10:34  2026-03-03 11:10:34,722 - ScalpEngine - INFO - Mode: AUTO
+2026-03-03 11:10:34  2026-03-03 11:10:34,722 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-03 11:10:34  2026-03-03 11:10:34,722 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-03 11:10:34  2026-03-03 11:10:34,722 - ScalpEngine - INFO - Pending Orders: 2
+2026-03-03 11:10:34  2026-03-03 11:10:34,722 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:10:34  2026-03-03 11:10:34,911 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T11:05:12.721425Z, no change)
+2026-03-03 11:10:35  2026-03-03 11:10:35,060 - ScalpEngine - INFO - ≡ƒºá Market: BULLISH bias, HIGH_VOL volatility, 7 opportunities
+2026-03-03 11:10:35  2026-03-03 11:10:35,522 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:10:35  2026-03-03 11:10:35,670 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:10:35  2026-03-03 11:10:35,911 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:10:36  2026-03-03 11:10:36,070 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:10:36  2026-03-03 11:10:36,304 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:10:36  2026-03-03 11:10:36,483 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:10:36  2026-03-03 11:10:36,489 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:11:27  2026-03-03 11:11:27,349 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 226.8 pips
+2026-03-03 11:12:27  2026-03-03 11:12:27,409 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:12:28  2026-03-03 11:12:28,231 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:12:28  2026-03-03 11:12:28,379 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:12:28  2026-03-03 11:12:28,607 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:12:28  2026-03-03 11:12:28,770 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:12:28  2026-03-03 11:12:28,852 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - EUR/GBP BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 11:12:29  2026-03-03 11:12:29,007 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:12:29  2026-03-03 11:12:29,167 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:12:29  2026-03-03 11:12:29,173 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:13:20  2026-03-03 11:13:20,100 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 228.2 pips
+2026-03-03 11:14:20  2026-03-03 11:14:20,159 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:14:20  2026-03-03 11:14:20,975 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:14:21  2026-03-03 11:14:21,125 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:14:21  2026-03-03 11:14:21,359 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:14:21  2026-03-03 11:14:21,517 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:14:21  2026-03-03 11:14:21,755 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:14:21  2026-03-03 11:14:21,910 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:14:21  2026-03-03 11:14:21,916 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:15:14  2026-03-03 11:15:14,840 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 229.4 pips
+2026-03-03 11:16:14  2026-03-03 11:16:14,900 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:16:15  2026-03-03 11:16:15,696 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:16:15  2026-03-03 11:16:15,852 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:16:16  2026-03-03 11:16:16,113 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:16:16  2026-03-03 11:16:16,270 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:16:16  2026-03-03 11:16:16,511 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:16:16  2026-03-03 11:16:16,687 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:16:16  2026-03-03 11:16:16,693 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:17:07  2026-03-03 11:17:07,971 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 229.7 pips
+2026-03-03 11:18:08  2026-03-03 11:18:08,030 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:18:08  2026-03-03 11:18:08,828 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:18:08  2026-03-03 11:18:08,983 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:18:09  2026-03-03 11:18:09,212 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:18:09  2026-03-03 11:18:09,372 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:18:09  2026-03-03 11:18:09,609 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:18:09  2026-03-03 11:18:09,768 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:18:09  2026-03-03 11:18:09,774 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:19:00  2026-03-03 11:19:00,885 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 11:19:01  2026-03-03 11:19:01,038 - ScalpEngine - INFO - FT-DMI-EMA GBP/USD SHORT: Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:19:01  2026-03-03 11:19:01,716 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 232.1 pips
+2026-03-03 11:20:01  2026-03-03 11:20:01,780 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:20:01  2026-03-03 11:20:01,992 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T11:05:12.721425Z, no change)
+2026-03-03 11:20:02  2026-03-03 11:20:02,665 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:20:02  2026-03-03 11:20:02,824 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:20:03  2026-03-03 11:20:03,057 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:20:03  2026-03-03 11:20:03,215 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:20:03  2026-03-03 11:20:03,444 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:20:03  2026-03-03 11:20:03,601 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:20:03  2026-03-03 11:20:03,607 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:20:54  2026-03-03 11:20:54,754 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 11:20:54  2026-03-03 11:20:54,904 - ScalpEngine - INFO - FT-DMI-EMA GBP/USD SHORT: Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:20:55  2026-03-03 11:20:55,502 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 234.8 pips
+2026-03-03 11:21:55  2026-03-03 11:21:55,562 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:21:56  2026-03-03 11:21:56,357 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:21:56  2026-03-03 11:21:56,509 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:21:56  2026-03-03 11:21:56,750 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:21:56  2026-03-03 11:21:56,903 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:21:57  2026-03-03 11:21:57,136 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:21:57  2026-03-03 11:21:57,290 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:21:57  2026-03-03 11:21:57,296 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:22:48  2026-03-03 11:22:48,240 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 11:22:48  2026-03-03 11:22:48,392 - ScalpEngine - INFO - FT-DMI-EMA GBP/USD SHORT: Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:22:49  2026-03-03 11:22:49,024 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 229.0 pips
+2026-03-03 11:23:49  2026-03-03 11:23:49,084 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:23:49  2026-03-03 11:23:49,891 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:23:50  2026-03-03 11:23:50,039 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:23:50  2026-03-03 11:23:50,274 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:23:50  2026-03-03 11:23:50,434 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:23:50  2026-03-03 11:23:50,673 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:23:50  2026-03-03 11:23:50,828 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:23:50  2026-03-03 11:23:50,835 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:24:42  2026-03-03 11:24:42,224 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 220.2 pips
+2026-03-03 11:25:42  2026-03-03 11:25:42,284 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:25:43  2026-03-03 11:25:43,102 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:25:43  2026-03-03 11:25:43,260 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:25:43  2026-03-03 11:25:43,507 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:25:43  2026-03-03 11:25:43,668 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:25:43  2026-03-03 11:25:43,906 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:25:44  2026-03-03 11:25:44,074 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:25:44  2026-03-03 11:25:44,080 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:26:36  2026-03-03 11:26:36,377 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 223.6 pips
+2026-03-03 11:27:36  2026-03-03 11:27:36,438 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:27:37  2026-03-03 11:27:37,261 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:27:37  2026-03-03 11:27:37,454 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:27:37  2026-03-03 11:27:37,700 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:27:37  2026-03-03 11:27:37,860 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:27:38  2026-03-03 11:27:38,106 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:27:38  2026-03-03 11:27:38,273 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:27:38  2026-03-03 11:27:38,279 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:28:28  2026-03-03 11:28:28,637 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 11:28:28  2026-03-03 11:28:28,789 - ScalpEngine - INFO - FT-DMI-EMA GBP/USD SHORT: Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:28:29  2026-03-03 11:28:29,430 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 229.4 pips
+2026-03-03 11:29:29  2026-03-03 11:29:29,491 - ScalpEngine - INFO - 
+2026-03-03 11:29:29  === Status Check #350 ===
+2026-03-03 11:29:29  2026-03-03 11:29:29,491 - ScalpEngine - INFO - Time: 11:29:29 UTC
+2026-03-03 11:29:29  2026-03-03 11:29:29,491 - ScalpEngine - INFO - Mode: AUTO
+2026-03-03 11:29:29  2026-03-03 11:29:29,491 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-03 11:29:29  2026-03-03 11:29:29,491 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-03 11:29:29  2026-03-03 11:29:29,491 - ScalpEngine - INFO - Pending Orders: 2
+2026-03-03 11:29:29  2026-03-03 11:29:29,491 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:29:29  2026-03-03 11:29:29,680 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T11:05:12.721425Z, no change)
+2026-03-03 11:29:29  2026-03-03 11:29:29,844 - ScalpEngine - INFO - ≡ƒºá Market: BULLISH bias, HIGH_VOL volatility, 7 opportunities
+2026-03-03 11:29:30  2026-03-03 11:29:30,333 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:29:30  2026-03-03 11:29:30,493 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:29:30  2026-03-03 11:29:30,746 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:29:30  2026-03-03 11:29:30,921 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:29:31  2026-03-03 11:29:31,160 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:29:31  2026-03-03 11:29:31,326 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:29:31  2026-03-03 11:29:31,332 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:30:22  2026-03-03 11:30:22,643 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 2 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 11:30:22  2026-03-03 11:30:22,811 - ScalpEngine - INFO - FT-DMI-EMA GBP/USD SHORT: Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:30:23  2026-03-03 11:30:23,549 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 233.0 pips
+2026-03-03 11:31:23  2026-03-03 11:31:23,607 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:31:24  2026-03-03 11:31:24,451 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:31:24  2026-03-03 11:31:24,653 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:31:24  2026-03-03 11:31:24,927 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:31:25  2026-03-03 11:31:25,092 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:31:25  2026-03-03 11:31:25,340 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:31:25  2026-03-03 11:31:25,518 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:31:25  2026-03-03 11:31:25,523 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:32:16  2026-03-03 11:32:16,591 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 231.5 pips
+2026-03-03 11:33:16  2026-03-03 11:33:16,650 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:33:17  2026-03-03 11:33:17,569 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:33:17  2026-03-03 11:33:17,723 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:33:17  2026-03-03 11:33:17,966 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:33:18  2026-03-03 11:33:18,130 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:33:18  2026-03-03 11:33:18,370 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:33:18  2026-03-03 11:33:18,537 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:33:18  2026-03-03 11:33:18,548 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:34:10  2026-03-03 11:34:10,664 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 232.2 pips
+2026-03-03 11:35:10  2026-03-03 11:35:10,724 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:35:10  2026-03-03 11:35:10,801 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-03 11:35:11  2026-03-03 11:35:11,873 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:35:12  2026-03-03 11:35:12,042 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:35:12  2026-03-03 11:35:12,136 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - USD/JPY BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 11:35:12  2026-03-03 11:35:12,298 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:35:12  2026-03-03 11:35:12,475 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:35:12  2026-03-03 11:35:12,763 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:35:12  2026-03-03 11:35:12,933 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:35:12  2026-03-03 11:35:12,941 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:36:04  2026-03-03 11:36:04,028 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 229.7 pips
+2026-03-03 11:37:04  2026-03-03 11:37:04,088 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:37:04  2026-03-03 11:37:04,927 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:37:05  2026-03-03 11:37:05,079 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:37:05  2026-03-03 11:37:05,330 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:37:05  2026-03-03 11:37:05,491 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:37:05  2026-03-03 11:37:05,733 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:37:05  2026-03-03 11:37:05,905 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:37:05  2026-03-03 11:37:05,910 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:37:57  2026-03-03 11:37:57,852 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 222.6 pips
+2026-03-03 11:38:57  2026-03-03 11:38:57,912 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:38:58  2026-03-03 11:38:58,090 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T11:05:12.721425Z, no change)
+2026-03-03 11:38:58  2026-03-03 11:38:58,765 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:38:58  2026-03-03 11:38:58,932 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:38:59  2026-03-03 11:38:59,172 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:38:59  2026-03-03 11:38:59,341 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:38:59  2026-03-03 11:38:59,574 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:38:59  2026-03-03 11:38:59,751 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:38:59  2026-03-03 11:38:59,761 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:39:50  2026-03-03 11:39:50,860 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 213.1 pips
+2026-03-03 11:40:50  2026-03-03 11:40:50,920 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:40:51  2026-03-03 11:40:51,784 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:40:51  2026-03-03 11:40:51,942 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:40:52  2026-03-03 11:40:52,186 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:40:52  2026-03-03 11:40:52,346 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:40:52  2026-03-03 11:40:52,602 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:40:52  2026-03-03 11:40:52,782 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:40:52  2026-03-03 11:40:52,794 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:41:44  2026-03-03 11:41:44,756 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 211.1 pips
+2026-03-03 11:42:44  2026-03-03 11:42:44,817 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:42:45  2026-03-03 11:42:45,663 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:42:45  2026-03-03 11:42:45,849 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:42:46  2026-03-03 11:42:46,129 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:42:46  2026-03-03 11:42:46,300 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:42:46  2026-03-03 11:42:46,394 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - EUR/GBP BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 11:42:46  2026-03-03 11:42:46,565 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:42:46  2026-03-03 11:42:46,734 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:42:46  2026-03-03 11:42:46,743 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:43:39  2026-03-03 11:43:39,136 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 213.8 pips
+2026-03-03 11:44:39  2026-03-03 11:44:39,196 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:44:39  2026-03-03 11:44:39,996 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:44:40  2026-03-03 11:44:40,153 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:44:40  2026-03-03 11:44:40,405 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:44:40  2026-03-03 11:44:40,571 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:44:40  2026-03-03 11:44:40,824 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:44:40  2026-03-03 11:44:40,997 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:44:41  2026-03-03 11:44:41,003 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:45:32  2026-03-03 11:45:32,453 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 207.2 pips
+2026-03-03 11:46:32  2026-03-03 11:46:32,513 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:46:33  2026-03-03 11:46:33,336 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:46:33  2026-03-03 11:46:33,500 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:46:33  2026-03-03 11:46:33,746 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:46:33  2026-03-03 11:46:33,912 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:46:34  2026-03-03 11:46:34,166 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:46:34  2026-03-03 11:46:34,336 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:46:34  2026-03-03 11:46:34,342 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:47:26  2026-03-03 11:47:26,394 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 207.4 pips
+2026-03-03 11:48:26  2026-03-03 11:48:26,454 - ScalpEngine - INFO - 
+2026-03-03 11:48:26  === Status Check #360 ===
+2026-03-03 11:48:26  2026-03-03 11:48:26,455 - ScalpEngine - INFO - Time: 11:48:26 UTC
+2026-03-03 11:48:26  2026-03-03 11:48:26,455 - ScalpEngine - INFO - Mode: AUTO
+2026-03-03 11:48:26  2026-03-03 11:48:26,455 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-03 11:48:26  2026-03-03 11:48:26,455 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-03 11:48:26  2026-03-03 11:48:26,455 - ScalpEngine - INFO - Pending Orders: 2
+2026-03-03 11:48:26  2026-03-03 11:48:26,455 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:48:26  2026-03-03 11:48:26,628 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T11:05:12.721425Z, no change)
+2026-03-03 11:48:26  2026-03-03 11:48:26,786 - ScalpEngine - INFO - ≡ƒºá Market: BULLISH bias, HIGH_VOL volatility, 7 opportunities
+2026-03-03 11:48:27  2026-03-03 11:48:27,265 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:48:27  2026-03-03 11:48:27,426 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:48:27  2026-03-03 11:48:27,675 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:48:27  2026-03-03 11:48:27,841 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:48:28  2026-03-03 11:48:28,091 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:48:28  2026-03-03 11:48:28,258 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:48:28  2026-03-03 11:48:28,264 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:49:20  2026-03-03 11:49:20,100 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 198.4 pips
+2026-03-03 11:50:20  2026-03-03 11:50:20,160 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:50:20  2026-03-03 11:50:20,994 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:50:21  2026-03-03 11:50:21,158 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:50:21  2026-03-03 11:50:21,405 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:50:21  2026-03-03 11:50:21,577 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:50:21  2026-03-03 11:50:21,832 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:50:22  2026-03-03 11:50:22,008 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:50:22  2026-03-03 11:50:22,014 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:51:13  2026-03-03 11:51:13,477 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 197.1 pips
+2026-03-03 11:52:13  2026-03-03 11:52:13,534 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:52:14  2026-03-03 11:52:14,837 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:52:15  2026-03-03 11:52:15,005 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:52:15  2026-03-03 11:52:15,259 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:52:15  2026-03-03 11:52:15,434 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:52:15  2026-03-03 11:52:15,682 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:52:15  2026-03-03 11:52:15,850 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:52:15  2026-03-03 11:52:15,859 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:53:07  2026-03-03 11:53:07,970 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 198.3 pips
+2026-03-03 11:54:08  2026-03-03 11:54:08,030 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:54:08  2026-03-03 11:54:08,927 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:54:09  2026-03-03 11:54:09,090 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:54:09  2026-03-03 11:54:09,341 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:54:09  2026-03-03 11:54:09,521 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:54:09  2026-03-03 11:54:09,769 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:54:09  2026-03-03 11:54:09,932 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:54:09  2026-03-03 11:54:09,938 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:55:02  2026-03-03 11:55:02,452 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 198.3 pips
+2026-03-03 11:56:02  2026-03-03 11:56:02,513 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:56:03  2026-03-03 11:56:03,865 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:56:04  2026-03-03 11:56:04,021 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:56:04  2026-03-03 11:56:04,273 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:56:04  2026-03-03 11:56:04,439 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:56:04  2026-03-03 11:56:04,697 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:56:04  2026-03-03 11:56:04,861 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:56:04  2026-03-03 11:56:04,867 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:56:57  2026-03-03 11:56:57,108 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 205.6 pips
+2026-03-03 11:57:57  2026-03-03 11:57:57,168 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:57:57  2026-03-03 11:57:57,343 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T11:05:12.721425Z, no change)
+2026-03-03 11:57:58  2026-03-03 11:57:58,017 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:57:58  2026-03-03 11:57:58,173 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:57:58  2026-03-03 11:57:58,425 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:57:58  2026-03-03 11:57:58,591 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:57:58  2026-03-03 11:57:58,851 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:57:59  2026-03-03 11:57:59,032 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:57:59  2026-03-03 11:57:59,038 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 5 max trades limit (total: 7)
+2026-03-03 11:58:51  2026-03-03 11:58:51,125 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 208.7 pips
+2026-03-03 11:59:51  2026-03-03 11:59:51,186 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 11:59:51  2026-03-03 11:59:51,384 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 9 opportunities (timestamp: 2026-03-03T11:58:50.283343Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-03 11:59:52  2026-03-03 11:59:52,052 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24550: EUR/GBP BUY @ 0.8718 ΓåÆ 0.8718 (stop loss changed (5+ pips))
+2026-03-03 11:59:52  2026-03-03 11:59:52,529 - ScalpEngine - INFO - Γ£à Replaced pending order 24550 - new order placed for EUR/GBP BUY @ 0.8718
+2026-03-03 11:59:52  2026-03-03 11:59:52,529 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24552: USD/JPY BUY @ 157.3 ΓåÆ 157.4 (better entry price (better by 10.0 pips))
+2026-03-03 11:59:53  2026-03-03 11:59:53,017 - ScalpEngine - INFO - Γ£à Replaced pending order 24552 - new order placed for USD/JPY BUY @ 157.4
+2026-03-03 11:59:53  2026-03-03 11:59:53,017 - ScalpEngine - INFO - Γ£à Replaced 2 pending order(s) with updated prices/sizes
+2026-03-03 11:59:53  2026-03-03 11:59:53,017 - ScalpEngine - INFO - ≡ƒöì Checking 9 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 11:59:53  2026-03-03 11:59:53,182 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:59:53  2026-03-03 11:59:53,352 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:59:53  2026-03-03 11:59:53,539 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:59:53  2026-03-03 11:59:53,709 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:59:53  2026-03-03 11:59:53,953 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:59:54  2026-03-03 11:59:54,195 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:59:54  2026-03-03 11:59:54,363 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 11:59:54  2026-03-03 11:59:54,369 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 7 max trades limit (total: 9)
+2026-03-03 12:00:46  2026-03-03 12:00:46,821 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 209.1 pips
+2026-03-03 12:01:46  2026-03-03 12:01:46,882 - ScalpEngine - INFO - 
+2026-03-03 12:01:46  ≡ƒÄ» Starting hourly Fisher Transform scan (trading hours, Reversal Strategy)...
+2026-03-03 12:01:51  2026-03-03 12:01:51,312 - ScalpEngine - INFO - Γ£à Fisher opportunities sent to market-state-api
+2026-03-03 12:01:51  2026-03-03 12:01:51,313 - ScalpEngine - INFO - Γ£à Hourly Fisher scan complete: 0 opportunities
+2026-03-03 12:01:51  2026-03-03 12:01:51,313 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:01:52  2026-03-03 12:01:52,207 - ScalpEngine - INFO - ≡ƒöì Checking 9 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:01:52  2026-03-03 12:01:52,373 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:01:52  2026-03-03 12:01:52,548 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:01:52  2026-03-03 12:01:52,718 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:01:52  2026-03-03 12:01:52,876 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:01:53  2026-03-03 12:01:53,120 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:01:53  2026-03-03 12:01:53,366 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:01:53  2026-03-03 12:01:53,528 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:01:53  2026-03-03 12:01:53,534 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 7 max trades limit (total: 9)
+2026-03-03 12:02:46  2026-03-03 12:02:46,677 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 217.3 pips
+2026-03-03 12:03:46  2026-03-03 12:03:46,737 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:03:47  2026-03-03 12:03:47,745 - ScalpEngine - INFO - ≡ƒöì Checking 9 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:03:47  2026-03-03 12:03:47,908 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:03:48  2026-03-03 12:03:48,097 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:03:48  2026-03-03 12:03:48,295 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:03:48  2026-03-03 12:03:48,479 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:03:48  2026-03-03 12:03:48,746 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:03:49  2026-03-03 12:03:49,017 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:03:49  2026-03-03 12:03:49,195 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:03:49  2026-03-03 12:03:49,207 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 7 max trades limit (total: 9)
+2026-03-03 12:04:43  2026-03-03 12:04:43,339 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 217.4 pips
+2026-03-03 12:05:43  2026-03-03 12:05:43,400 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:05:43  2026-03-03 12:05:43,573 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 5 opportunities (timestamp: 2026-03-03T12:04:32.250020Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-03 12:05:44  2026-03-03 12:05:44,202 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24556: EUR/GBP BUY @ 0.8718 ΓåÆ 0.87 (better entry price (better by 18.0 pips))
+2026-03-03 12:05:44  2026-03-03 12:05:44,687 - ScalpEngine - INFO - Γ£à Replaced pending order 24556 - new order placed for EUR/GBP BUY @ 0.87
+2026-03-03 12:05:44  2026-03-03 12:05:44,688 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24558: USD/JPY BUY @ 157.4 ΓåÆ 157.1 (better entry price (better by 30.0 pips))
+2026-03-03 12:05:45  2026-03-03 12:05:45,157 - ScalpEngine - INFO - Γ£à Replaced pending order 24558 - new order placed for USD/JPY BUY @ 157.1
+2026-03-03 12:05:45  2026-03-03 12:05:45,158 - ScalpEngine - INFO - Γ£à Replaced 2 pending order(s) with updated prices/sizes
+2026-03-03 12:05:45  2026-03-03 12:05:45,158 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:05:45  2026-03-03 12:05:45,319 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:05:45  2026-03-03 12:05:45,488 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:05:45  2026-03-03 12:05:45,726 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:05:45  2026-03-03 12:05:45,807 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - USD/JPY BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 12:05:45  2026-03-03 12:05:45,807 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:06:37  2026-03-03 12:06:37,400 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 210.2 pips
+2026-03-03 12:07:37  2026-03-03 12:07:37,460 - ScalpEngine - INFO - 
+2026-03-03 12:07:37  === Status Check #370 ===
+2026-03-03 12:07:37  2026-03-03 12:07:37,460 - ScalpEngine - INFO - Time: 12:07:37 UTC
+2026-03-03 12:07:37  2026-03-03 12:07:37,461 - ScalpEngine - INFO - Mode: AUTO
+2026-03-03 12:07:37  2026-03-03 12:07:37,461 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-03 12:07:37  2026-03-03 12:07:37,461 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-03 12:07:37  2026-03-03 12:07:37,461 - ScalpEngine - INFO - Pending Orders: 2
+2026-03-03 12:07:37  2026-03-03 12:07:37,461 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:07:37  2026-03-03 12:07:37,627 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-03T12:04:32.250020Z, no change)
+2026-03-03 12:07:37  2026-03-03 12:07:37,767 - ScalpEngine - INFO - ≡ƒºá Market: BULLISH bias, HIGH_VOL volatility, 5 opportunities
+2026-03-03 12:07:38  2026-03-03 12:07:38,237 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:07:38  2026-03-03 12:07:38,400 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:07:38  2026-03-03 12:07:38,566 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:07:38  2026-03-03 12:07:38,806 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:07:38  2026-03-03 12:07:38,890 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:08:30  2026-03-03 12:08:30,416 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 208.0 pips
+2026-03-03 12:09:30  2026-03-03 12:09:30,476 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:09:31  2026-03-03 12:09:31,365 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:09:31  2026-03-03 12:09:31,533 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:09:31  2026-03-03 12:09:31,707 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:09:31  2026-03-03 12:09:31,954 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:09:32  2026-03-03 12:09:32,042 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:10:23  2026-03-03 12:10:23,207 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 198.9 pips
+2026-03-03 12:11:23  2026-03-03 12:11:23,267 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:11:24  2026-03-03 12:11:24,523 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:11:24  2026-03-03 12:11:24,678 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:11:24  2026-03-03 12:11:24,837 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:11:25  2026-03-03 12:11:25,072 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:11:25  2026-03-03 12:11:25,153 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:12:16  2026-03-03 12:12:16,567 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 195.1 pips
+2026-03-03 12:13:16  2026-03-03 12:13:16,627 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:13:17  2026-03-03 12:13:17,457 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:13:17  2026-03-03 12:13:17,616 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:13:17  2026-03-03 12:13:17,778 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:13:17  2026-03-03 12:13:17,860 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - EUR/GBP BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 12:13:18  2026-03-03 12:13:18,020 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:13:18  2026-03-03 12:13:18,101 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:14:10  2026-03-03 12:14:10,218 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 195.9 pips
+2026-03-03 12:15:10  2026-03-03 12:15:10,278 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:15:11  2026-03-03 12:15:11,111 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:15:11  2026-03-03 12:15:11,265 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:15:11  2026-03-03 12:15:11,430 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:15:11  2026-03-03 12:15:11,665 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:15:11  2026-03-03 12:15:11,747 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:16:10  2026-03-03 12:16:10,082 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 208.2 pips
+2026-03-03 12:17:10  2026-03-03 12:17:10,143 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:17:10  2026-03-03 12:17:10,351 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-03T12:04:32.250020Z, no change)
+2026-03-03 12:17:10  2026-03-03 12:17:10,993 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:17:11  2026-03-03 12:17:11,151 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:17:11  2026-03-03 12:17:11,368 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:17:11  2026-03-03 12:17:11,609 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:17:11  2026-03-03 12:17:11,697 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:18:05  2026-03-03 12:18:05,281 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 200.4 pips
+2026-03-03 12:19:05  2026-03-03 12:19:05,341 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:19:06  2026-03-03 12:19:06,209 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:19:06  2026-03-03 12:19:06,362 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:19:06  2026-03-03 12:19:06,529 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:19:06  2026-03-03 12:19:06,759 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:19:06  2026-03-03 12:19:06,843 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:19:57  2026-03-03 12:19:57,497 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 193.2 pips
+2026-03-03 12:20:57  2026-03-03 12:20:57,557 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:20:58  2026-03-03 12:20:58,392 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:20:58  2026-03-03 12:20:58,543 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:20:58  2026-03-03 12:20:58,711 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:20:58  2026-03-03 12:20:58,953 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:20:59  2026-03-03 12:20:59,036 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:21:51  2026-03-03 12:21:51,045 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 178.3 pips
+2026-03-03 12:22:51  2026-03-03 12:22:51,106 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:22:52  2026-03-03 12:22:52,020 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:22:52  2026-03-03 12:22:52,171 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:22:52  2026-03-03 12:22:52,376 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:22:52  2026-03-03 12:22:52,620 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:22:52  2026-03-03 12:22:52,701 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:23:50  2026-03-03 12:23:50,684 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 182.8 pips
+2026-03-03 12:24:50  2026-03-03 12:24:50,746 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:24:51  2026-03-03 12:24:51,621 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:24:51  2026-03-03 12:24:51,786 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:24:51  2026-03-03 12:24:51,964 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:24:52  2026-03-03 12:24:52,216 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:24:52  2026-03-03 12:24:52,307 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:25:50  2026-03-03 12:25:50,316 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 185.0 pips
+2026-03-03 12:26:50  2026-03-03 12:26:50,376 - ScalpEngine - INFO - 
+2026-03-03 12:26:50  === Status Check #380 ===
+2026-03-03 12:26:50  2026-03-03 12:26:50,376 - ScalpEngine - INFO - Time: 12:26:50 UTC
+2026-03-03 12:26:50  2026-03-03 12:26:50,376 - ScalpEngine - INFO - Mode: AUTO
+2026-03-03 12:26:50  2026-03-03 12:26:50,377 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-03 12:26:50  2026-03-03 12:26:50,377 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-03 12:26:50  2026-03-03 12:26:50,377 - ScalpEngine - INFO - Pending Orders: 2
+2026-03-03 12:26:50  2026-03-03 12:26:50,377 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:26:50  2026-03-03 12:26:50,608 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-03T12:04:32.250020Z, no change)
+2026-03-03 12:26:50  2026-03-03 12:26:50,845 - ScalpEngine - INFO - ≡ƒºá Market: BULLISH bias, HIGH_VOL volatility, 5 opportunities
+2026-03-03 12:26:51  2026-03-03 12:26:51,813 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:26:51  2026-03-03 12:26:51,967 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:26:52  2026-03-03 12:26:52,123 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:26:52  2026-03-03 12:26:52,359 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:26:52  2026-03-03 12:26:52,442 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:27:45  2026-03-03 12:27:45,963 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 183.3 pips
+2026-03-03 12:28:46  2026-03-03 12:28:46,023 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:28:46  2026-03-03 12:28:46,830 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:28:46  2026-03-03 12:28:46,986 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:28:47  2026-03-03 12:28:47,150 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:28:47  2026-03-03 12:28:47,377 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:28:47  2026-03-03 12:28:47,457 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:29:45  2026-03-03 12:29:45,483 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 192.3 pips
+2026-03-03 12:30:45  2026-03-03 12:30:45,538 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:30:46  2026-03-03 12:30:46,428 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:30:46  2026-03-03 12:30:46,592 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:30:46  2026-03-03 12:30:46,758 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:30:47  2026-03-03 12:30:47,006 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:30:47  2026-03-03 12:30:47,091 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:31:38  2026-03-03 12:31:38,367 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 192.4 pips
+2026-03-03 12:32:38  2026-03-03 12:32:38,426 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:32:39  2026-03-03 12:32:39,227 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:32:39  2026-03-03 12:32:39,379 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:32:39  2026-03-03 12:32:39,541 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:32:39  2026-03-03 12:32:39,786 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:32:39  2026-03-03 12:32:39,868 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:33:34  2026-03-03 12:33:34,839 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 181.8 pips
+2026-03-03 12:34:34  2026-03-03 12:34:34,899 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:34:35  2026-03-03 12:34:35,694 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:34:35  2026-03-03 12:34:35,844 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:34:36  2026-03-03 12:34:36,001 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:34:36  2026-03-03 12:34:36,232 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:34:36  2026-03-03 12:34:36,315 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:35:27  2026-03-03 12:35:27,475 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 190.3 pips
+2026-03-03 12:36:27  2026-03-03 12:36:27,533 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:36:27  2026-03-03 12:36:27,619 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-03 12:36:27  2026-03-03 12:36:27,733 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-03T12:04:32.250020Z, no change)
+2026-03-03 12:36:28  2026-03-03 12:36:28,373 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:36:28  2026-03-03 12:36:28,520 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:36:28  2026-03-03 12:36:28,682 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:36:28  2026-03-03 12:36:28,913 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:36:29  2026-03-03 12:36:29,006 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - USD/JPY BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 12:36:29  2026-03-03 12:36:29,006 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:37:21  2026-03-03 12:37:21,247 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 184.7 pips
+2026-03-03 12:38:21  2026-03-03 12:38:21,307 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:38:22  2026-03-03 12:38:22,219 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:38:22  2026-03-03 12:38:22,385 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:38:22  2026-03-03 12:38:22,554 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:38:22  2026-03-03 12:38:22,815 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:38:22  2026-03-03 12:38:22,899 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:39:15  2026-03-03 12:39:15,448 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 181.3 pips
+2026-03-03 12:40:15  2026-03-03 12:40:15,508 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:40:16  2026-03-03 12:40:16,385 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:40:16  2026-03-03 12:40:16,546 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:40:16  2026-03-03 12:40:16,709 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:40:16  2026-03-03 12:40:16,951 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:40:17  2026-03-03 12:40:17,034 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:41:09  2026-03-03 12:41:09,911 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 184.7 pips
+2026-03-03 12:42:09  2026-03-03 12:42:09,971 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:42:10  2026-03-03 12:42:10,787 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:42:10  2026-03-03 12:42:10,946 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:42:11  2026-03-03 12:42:11,544 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:42:11  2026-03-03 12:42:11,798 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:42:11  2026-03-03 12:42:11,881 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:43:03  2026-03-03 12:43:03,698 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 184.3 pips
+2026-03-03 12:44:03  2026-03-03 12:44:03,760 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:44:04  2026-03-03 12:44:04,558 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:44:04  2026-03-03 12:44:04,716 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:44:04  2026-03-03 12:44:04,891 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:44:04  2026-03-03 12:44:04,973 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - EUR/GBP BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 12:44:05  2026-03-03 12:44:05,130 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:44:05  2026-03-03 12:44:05,214 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:44:57  2026-03-03 12:44:57,980 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 185.2 pips
+2026-03-03 12:45:58  2026-03-03 12:45:58,039 - ScalpEngine - INFO - 
+2026-03-03 12:45:58  === Status Check #390 ===
+2026-03-03 12:45:58  2026-03-03 12:45:58,040 - ScalpEngine - INFO - Time: 12:45:58 UTC
+2026-03-03 12:45:58  2026-03-03 12:45:58,040 - ScalpEngine - INFO - Mode: AUTO
+2026-03-03 12:45:58  2026-03-03 12:45:58,040 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-03 12:45:58  2026-03-03 12:45:58,040 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-03 12:45:58  2026-03-03 12:45:58,040 - ScalpEngine - INFO - Pending Orders: 2
+2026-03-03 12:45:58  2026-03-03 12:45:58,040 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:45:58  2026-03-03 12:45:58,226 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-03T12:04:32.250020Z, no change)
+2026-03-03 12:45:58  2026-03-03 12:45:58,387 - ScalpEngine - INFO - ≡ƒºá Market: BULLISH bias, HIGH_VOL volatility, 5 opportunities
+2026-03-03 12:45:58  2026-03-03 12:45:58,866 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:45:59  2026-03-03 12:45:59,023 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:45:59  2026-03-03 12:45:59,184 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:45:59  2026-03-03 12:45:59,425 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:45:59  2026-03-03 12:45:59,508 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:46:52  2026-03-03 12:46:52,144 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 181.8 pips
+2026-03-03 12:47:52  2026-03-03 12:47:52,204 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:47:53  2026-03-03 12:47:53,076 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:47:53  2026-03-03 12:47:53,234 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:47:53  2026-03-03 12:47:53,393 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:47:53  2026-03-03 12:47:53,638 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:47:53  2026-03-03 12:47:53,723 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:48:45  2026-03-03 12:48:45,339 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 181.1 pips
+2026-03-03 12:49:45  2026-03-03 12:49:45,398 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:49:46  2026-03-03 12:49:46,204 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:49:46  2026-03-03 12:49:46,358 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:49:46  2026-03-03 12:49:46,519 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:49:46  2026-03-03 12:49:46,759 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:49:46  2026-03-03 12:49:46,844 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:50:38  2026-03-03 12:50:38,408 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 12:50:38  2026-03-03 12:50:38,568 - ScalpEngine - INFO - FT-DMI-EMA USD/CAD LONG: Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:50:39  2026-03-03 12:50:39,197 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 180.2 pips
+2026-03-03 12:51:39  2026-03-03 12:51:39,254 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:51:40  2026-03-03 12:51:40,082 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:51:40  2026-03-03 12:51:40,256 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:51:40  2026-03-03 12:51:40,414 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:51:40  2026-03-03 12:51:40,651 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:51:40  2026-03-03 12:51:40,733 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:52:31  2026-03-03 12:52:31,875 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 12:52:32  2026-03-03 12:52:32,029 - ScalpEngine - INFO - FT-DMI-EMA USD/CAD LONG: Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:52:32  2026-03-03 12:52:32,688 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 187.0 pips
+2026-03-03 12:53:32  2026-03-03 12:53:32,748 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:53:33  2026-03-03 12:53:33,545 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:53:33  2026-03-03 12:53:33,703 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:53:33  2026-03-03 12:53:33,863 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:53:34  2026-03-03 12:53:34,100 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:53:34  2026-03-03 12:53:34,189 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:54:25  2026-03-03 12:54:25,439 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 181.8 pips
+2026-03-03 12:55:25  2026-03-03 12:55:25,499 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:55:25  2026-03-03 12:55:25,681 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 5 opportunities (timestamp: 2026-03-03T12:04:32.250020Z, no change)
+2026-03-03 12:55:26  2026-03-03 12:55:26,289 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:55:26  2026-03-03 12:55:26,442 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:55:26  2026-03-03 12:55:26,606 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:55:26  2026-03-03 12:55:26,835 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:55:26  2026-03-03 12:55:26,915 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:56:18  2026-03-03 12:56:18,280 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 12:56:18  2026-03-03 12:56:18,437 - ScalpEngine - INFO - FT-DMI-EMA USD/CAD LONG: Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:56:19  2026-03-03 12:56:19,067 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 178.1 pips
+2026-03-03 12:57:19  2026-03-03 12:57:19,127 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:57:19  2026-03-03 12:57:19,950 - ScalpEngine - INFO - ≡ƒöì Checking 5 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:57:20  2026-03-03 12:57:20,097 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:57:20  2026-03-03 12:57:20,256 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:57:20  2026-03-03 12:57:20,490 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:57:20  2026-03-03 12:57:20,573 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 3 max trades limit (total: 5)
+2026-03-03 12:58:11  2026-03-03 12:58:11,764 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 173.8 pips
+2026-03-03 12:59:11  2026-03-03 12:59:11,823 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 12:59:12  2026-03-03 12:59:12,004 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 8 opportunities (timestamp: 2026-03-03T12:59:09.229512Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-03 12:59:12  2026-03-03 12:59:12,624 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24560: EUR/GBP BUY @ 0.87 ΓåÆ 0.8715 (better entry price (better by 15.0 pips))
+2026-03-03 12:59:13  2026-03-03 12:59:13,087 - ScalpEngine - INFO - Γ£à Replaced pending order 24560 - new order placed for EUR/GBP BUY @ 0.8715
+2026-03-03 12:59:13  2026-03-03 12:59:13,088 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24562: USD/JPY BUY @ 157.1 ΓåÆ 157.35 (better entry price (better by 25.0 pips))
+2026-03-03 12:59:13  2026-03-03 12:59:13,655 - ScalpEngine - INFO - Γ£à Replaced pending order 24562 - new order placed for USD/JPY BUY @ 157.35
+2026-03-03 12:59:13  2026-03-03 12:59:13,656 - ScalpEngine - INFO - Γ£à Replaced 2 pending order(s) with updated prices/sizes
+2026-03-03 12:59:13  2026-03-03 12:59:13,656 - ScalpEngine - INFO - ≡ƒöì Checking 8 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 12:59:13  2026-03-03 12:59:13,820 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:59:13  2026-03-03 12:59:13,998 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:59:14  2026-03-03 12:59:14,165 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:59:14  2026-03-03 12:59:14,331 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:59:14  2026-03-03 12:59:14,665 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:59:14  2026-03-03 12:59:14,827 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 12:59:14  2026-03-03 12:59:14,841 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 6 max trades limit (total: 8)
+2026-03-03 13:00:08  2026-03-03 13:00:08,174 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 174.5 pips
+2026-03-03 13:01:08  2026-03-03 13:01:08,234 - ScalpEngine - INFO - 
+2026-03-03 13:01:08  ≡ƒÄ» Starting hourly Fisher Transform scan (trading hours, Reversal Strategy)...
+2026-03-03 13:01:12  2026-03-03 13:01:12,590 - ScalpEngine - INFO - Γ£à Fisher opportunities sent to market-state-api
+2026-03-03 13:01:12  2026-03-03 13:01:12,591 - ScalpEngine - INFO - Γ£à Hourly Fisher scan complete: 0 opportunities
+2026-03-03 13:01:12  2026-03-03 13:01:12,591 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:01:13  2026-03-03 13:01:13,383 - ScalpEngine - INFO - ≡ƒöì Checking 8 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:01:13  2026-03-03 13:01:13,535 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:01:13  2026-03-03 13:01:13,696 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:01:13  2026-03-03 13:01:13,864 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:01:14  2026-03-03 13:01:14,019 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:01:14  2026-03-03 13:01:14,337 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:01:14  2026-03-03 13:01:14,492 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:01:14  2026-03-03 13:01:14,498 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 6 max trades limit (total: 8)
+2026-03-03 13:02:07  2026-03-03 13:02:07,875 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 177.2 pips
+2026-03-03 13:03:07  2026-03-03 13:03:07,938 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:03:08  2026-03-03 13:03:08,789 - ScalpEngine - INFO - ≡ƒöì Checking 8 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:03:08  2026-03-03 13:03:08,956 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:03:09  2026-03-03 13:03:09,136 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:03:09  2026-03-03 13:03:09,297 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped EUR/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:03:09  2026-03-03 13:03:09,462 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:03:09  2026-03-03 13:03:09,774 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:03:09  2026-03-03 13:03:09,933 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:03:09  2026-03-03 13:03:09,940 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 2 duplicates, 6 max trades limit (total: 8)
+2026-03-03 13:04:01  2026-03-03 13:04:01,738 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 185.6 pips
+2026-03-03 13:05:01  2026-03-03 13:05:01,799 - ScalpEngine - INFO - 
+2026-03-03 13:05:01  === Status Check #400 ===
+2026-03-03 13:05:01  2026-03-03 13:05:01,799 - ScalpEngine - INFO - Time: 13:05:01 UTC
+2026-03-03 13:05:01  2026-03-03 13:05:01,799 - ScalpEngine - INFO - Mode: AUTO
+2026-03-03 13:05:01  2026-03-03 13:05:01,799 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-03 13:05:01  2026-03-03 13:05:01,799 - ScalpEngine - INFO - Active Trades: 4/4
+2026-03-03 13:05:01  2026-03-03 13:05:01,799 - ScalpEngine - INFO - Pending Orders: 2
+2026-03-03 13:05:01  2026-03-03 13:05:01,799 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:05:02  2026-03-03 13:05:02,246 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 7 opportunities (timestamp: 2026-03-03T13:04:30.389670Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-03 13:05:02  2026-03-03 13:05:02,627 - ScalpEngine - INFO - ≡ƒºá Market: BULLISH bias, TRENDING volatility, 7 opportunities
+2026-03-03 13:05:03  2026-03-03 13:05:03,262 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24566: USD/JPY BUY @ 157.35 ΓåÆ 157.2 (better entry price (better by 15.0 pips))
+2026-03-03 13:05:03  2026-03-03 13:05:03,879 - ScalpEngine - INFO - Γ£à Replaced pending order 24566 - new order placed for USD/JPY BUY @ 157.2
+2026-03-03 13:05:03  2026-03-03 13:05:03,880 - ScalpEngine - INFO - Γ£à Replaced 1 pending order(s) with updated prices/sizes
+2026-03-03 13:05:03  2026-03-03 13:05:03,880 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:05:04  2026-03-03 13:05:04,050 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:05:04  2026-03-03 13:05:04,220 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:05:04  2026-03-03 13:05:04,457 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:05:04  2026-03-03 13:05:04,620 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:05:04  2026-03-03 13:05:04,801 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:05:04  2026-03-03 13:05:04,961 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:05:04  2026-03-03 13:05:04,967 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:05:56  2026-03-03 13:05:56,331 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 182.3 pips
+2026-03-03 13:06:56  2026-03-03 13:06:56,389 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:06:57  2026-03-03 13:06:57,246 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:06:57  2026-03-03 13:06:57,408 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:06:57  2026-03-03 13:06:57,569 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:06:57  2026-03-03 13:06:57,656 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - USD/JPY BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 13:06:57  2026-03-03 13:06:57,805 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:06:57  2026-03-03 13:06:57,960 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:06:58  2026-03-03 13:06:58,114 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:06:58  2026-03-03 13:06:58,278 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:06:58  2026-03-03 13:06:58,284 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:07:55  2026-03-03 13:07:55,620 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 179.7 pips
+2026-03-03 13:08:55  2026-03-03 13:08:55,679 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:08:56  2026-03-03 13:08:56,466 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:08:56  2026-03-03 13:08:56,632 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:08:56  2026-03-03 13:08:56,789 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:08:57  2026-03-03 13:08:57,036 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:08:57  2026-03-03 13:08:57,203 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:08:57  2026-03-03 13:08:57,366 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:08:57  2026-03-03 13:08:57,529 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:08:57  2026-03-03 13:08:57,535 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:09:54  2026-03-03 13:09:54,622 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 184.1 pips
+2026-03-03 13:10:54  2026-03-03 13:10:54,681 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:10:55  2026-03-03 13:10:55,604 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:10:55  2026-03-03 13:10:55,777 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:10:55  2026-03-03 13:10:55,973 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:10:56  2026-03-03 13:10:56,247 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:10:56  2026-03-03 13:10:56,419 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:10:56  2026-03-03 13:10:56,600 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:10:56  2026-03-03 13:10:56,785 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:10:56  2026-03-03 13:10:56,796 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:11:54  2026-03-03 13:11:54,184 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 183.9 pips
+2026-03-03 13:12:54  2026-03-03 13:12:54,244 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:12:55  2026-03-03 13:12:55,094 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:12:55  2026-03-03 13:12:55,259 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:12:55  2026-03-03 13:12:55,431 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:12:55  2026-03-03 13:12:55,684 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:12:55  2026-03-03 13:12:55,864 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:12:56  2026-03-03 13:12:56,040 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:12:56  2026-03-03 13:12:56,204 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:12:56  2026-03-03 13:12:56,210 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:13:53  2026-03-03 13:13:53,578 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 187.7 pips
+2026-03-03 13:14:53  2026-03-03 13:14:53,640 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:14:53  2026-03-03 13:14:53,819 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T13:04:30.389670Z, no change)
+2026-03-03 13:14:54  2026-03-03 13:14:54,501 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:14:54  2026-03-03 13:14:54,677 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:14:54  2026-03-03 13:14:54,849 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:14:55  2026-03-03 13:14:55,101 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:14:55  2026-03-03 13:14:55,275 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:14:55  2026-03-03 13:14:55,452 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:14:55  2026-03-03 13:14:55,616 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:14:55  2026-03-03 13:14:55,622 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:15:56  2026-03-03 13:15:56,060 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 194.0 pips
+2026-03-03 13:16:56  2026-03-03 13:16:56,119 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:16:56  2026-03-03 13:16:56,979 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:16:57  2026-03-03 13:16:57,140 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:16:57  2026-03-03 13:16:57,314 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:16:57  2026-03-03 13:16:57,560 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:16:57  2026-03-03 13:16:57,736 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:16:57  2026-03-03 13:16:57,904 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:16:58  2026-03-03 13:16:58,073 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:16:58  2026-03-03 13:16:58,079 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:17:58  2026-03-03 13:17:58,680 - ScalpEngine - INFO - ≡ƒôê Active: 4/4, Unrealized: 197.5 pips
+2026-03-03 13:18:58  2026-03-03 13:18:58,740 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:18:59  2026-03-03 13:18:59,620 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:18:59  2026-03-03 13:18:59,780 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:18:59  2026-03-03 13:18:59,946 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:19:00  2026-03-03 13:19:00,212 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:19:00  2026-03-03 13:19:00,383 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:19:00  2026-03-03 13:19:00,547 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:19:00  2026-03-03 13:19:00,726 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 2
+2026-03-03 13:19:00  2026-03-03 13:19:00,732 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:19:55  2026-03-03 13:19:55,049 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 2 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:19:55  2026-03-03 13:19:55,208 - ScalpEngine - INFO - FT-DMI-EMA GBP/USD SHORT: Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:19:56  2026-03-03 13:19:56,159 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 195.1 pips
+2026-03-03 13:20:56  2026-03-03 13:20:56,206 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:20:57  2026-03-03 13:20:57,053 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:20:57  2026-03-03 13:20:57,213 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:20:57  2026-03-03 13:20:57,402 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:20:57  2026-03-03 13:20:57,650 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:20:57  2026-03-03 13:20:57,839 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:20:58  2026-03-03 13:20:58,010 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:20:58  2026-03-03 13:20:58,189 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:20:58  2026-03-03 13:20:58,195 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:21:55  2026-03-03 13:21:55,541 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:21:55  2026-03-03 13:21:55,707 - ScalpEngine - INFO - FT-DMI-EMA GBP/USD SHORT: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:21:56  2026-03-03 13:21:56,517 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 199.8 pips
+2026-03-03 13:22:56  2026-03-03 13:22:56,553 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:22:57  2026-03-03 13:22:57,514 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:22:57  2026-03-03 13:22:57,695 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:22:57  2026-03-03 13:22:57,896 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:22:58  2026-03-03 13:22:58,164 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:22:58  2026-03-03 13:22:58,342 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:22:58  2026-03-03 13:22:58,518 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:22:58  2026-03-03 13:22:58,693 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:22:58  2026-03-03 13:22:58,699 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:23:54  2026-03-03 13:23:54,255 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 196.1 pips
+2026-03-03 13:24:54  2026-03-03 13:24:54,316 - ScalpEngine - INFO - 
+2026-03-03 13:24:54  === Status Check #410 ===
+2026-03-03 13:24:54  2026-03-03 13:24:54,316 - ScalpEngine - INFO - Time: 13:24:54 UTC
+2026-03-03 13:24:54  2026-03-03 13:24:54,316 - ScalpEngine - INFO - Mode: AUTO
+2026-03-03 13:24:54  2026-03-03 13:24:54,316 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-03 13:24:54  2026-03-03 13:24:54,316 - ScalpEngine - INFO - Active Trades: 5/4
+2026-03-03 13:24:54  2026-03-03 13:24:54,316 - ScalpEngine - INFO - Pending Orders: 2
+2026-03-03 13:24:54  2026-03-03 13:24:54,316 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:24:54  2026-03-03 13:24:54,506 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T13:04:30.389670Z, no change)
+2026-03-03 13:24:54  2026-03-03 13:24:54,676 - ScalpEngine - INFO - ≡ƒºá Market: BULLISH bias, TRENDING volatility, 7 opportunities
+2026-03-03 13:24:55  2026-03-03 13:24:55,192 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:24:55  2026-03-03 13:24:55,362 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:24:55  2026-03-03 13:24:55,536 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:24:55  2026-03-03 13:24:55,780 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:24:55  2026-03-03 13:24:55,951 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:24:56  2026-03-03 13:24:56,120 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:24:56  2026-03-03 13:24:56,295 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:24:56  2026-03-03 13:24:56,301 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:25:51  2026-03-03 13:25:51,711 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:25:51  2026-03-03 13:25:51,882 - ScalpEngine - INFO - FT-DMI-EMA GBP/USD SHORT: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:25:52  2026-03-03 13:25:52,746 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 195.9 pips
+2026-03-03 13:26:52  2026-03-03 13:26:52,806 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:26:53  2026-03-03 13:26:53,663 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:26:53  2026-03-03 13:26:53,828 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:26:53  2026-03-03 13:26:53,998 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:26:54  2026-03-03 13:26:54,251 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:26:54  2026-03-03 13:26:54,416 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:26:54  2026-03-03 13:26:54,580 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:26:54  2026-03-03 13:26:54,752 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:26:54  2026-03-03 13:26:54,758 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:27:49  2026-03-03 13:27:49,867 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 2 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:27:50  2026-03-03 13:27:50,028 - ScalpEngine - INFO - FT-DMI-EMA GBP/USD SHORT: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:27:50  2026-03-03 13:27:50,934 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 198.2 pips
+2026-03-03 13:28:50  2026-03-03 13:28:50,993 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:28:52  2026-03-03 13:28:52,331 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:28:52  2026-03-03 13:28:52,493 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:28:52  2026-03-03 13:28:52,675 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:28:52  2026-03-03 13:28:52,928 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:28:53  2026-03-03 13:28:53,095 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:28:53  2026-03-03 13:28:53,265 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:28:53  2026-03-03 13:28:53,439 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:28:53  2026-03-03 13:28:53,445 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:29:50  2026-03-03 13:29:50,517 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 198.8 pips
+2026-03-03 13:30:50  2026-03-03 13:30:50,577 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:30:51  2026-03-03 13:30:51,478 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:30:51  2026-03-03 13:30:51,636 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:30:51  2026-03-03 13:30:51,798 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:30:52  2026-03-03 13:30:52,050 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:30:52  2026-03-03 13:30:52,227 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:30:52  2026-03-03 13:30:52,389 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:30:52  2026-03-03 13:30:52,552 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:30:52  2026-03-03 13:30:52,558 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:31:47  2026-03-03 13:31:47,900 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 2 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:31:48  2026-03-03 13:31:48,055 - ScalpEngine - INFO - FT-DMI-EMA USD/CHF LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:31:48  2026-03-03 13:31:48,215 - ScalpEngine - INFO - FT-DMI-EMA USD/CAD LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:31:48  2026-03-03 13:31:48,949 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 199.1 pips
+2026-03-03 13:32:49  2026-03-03 13:32:49,009 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:32:49  2026-03-03 13:32:49,858 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:32:50  2026-03-03 13:32:50,015 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:32:50  2026-03-03 13:32:50,172 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:32:50  2026-03-03 13:32:50,417 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:32:50  2026-03-03 13:32:50,582 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:32:50  2026-03-03 13:32:50,747 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:32:50  2026-03-03 13:32:50,922 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:32:50  2026-03-03 13:32:50,928 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:33:46  2026-03-03 13:33:46,073 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:33:46  2026-03-03 13:33:46,224 - ScalpEngine - INFO - FT-DMI-EMA USD/CHF LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:33:46  2026-03-03 13:33:46,927 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 198.7 pips
+2026-03-03 13:34:46  2026-03-03 13:34:46,988 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:34:47  2026-03-03 13:34:47,177 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T13:04:30.389670Z, no change)
+2026-03-03 13:34:47  2026-03-03 13:34:47,876 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:34:48  2026-03-03 13:34:48,053 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:34:48  2026-03-03 13:34:48,211 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:34:48  2026-03-03 13:34:48,447 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:34:48  2026-03-03 13:34:48,611 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:34:48  2026-03-03 13:34:48,782 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:34:48  2026-03-03 13:34:48,950 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:34:48  2026-03-03 13:34:48,957 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:35:40  2026-03-03 13:35:40,583 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:35:40  2026-03-03 13:35:40,742 - ScalpEngine - INFO - FT-DMI-EMA USD/CHF LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:35:41  2026-03-03 13:35:41,746 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 201.4 pips
+2026-03-03 13:36:41  2026-03-03 13:36:41,807 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:36:41  2026-03-03 13:36:41,894 - ScalpEngine - WARNING - ΓÜá∩╕Å Only one required LLM (unusual) - verify config if unintended.
+2026-03-03 13:36:42  2026-03-03 13:36:42,712 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:36:42  2026-03-03 13:36:42,869 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:36:43  2026-03-03 13:36:43,030 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:36:43  2026-03-03 13:36:43,268 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:36:43  2026-03-03 13:36:43,434 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:36:43  2026-03-03 13:36:43,602 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:36:43  2026-03-03 13:36:43,772 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:36:43  2026-03-03 13:36:43,778 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:37:34  2026-03-03 13:37:34,031 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 2 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:37:34  2026-03-03 13:37:34,185 - ScalpEngine - INFO - FT-DMI-EMA USD/CHF LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:37:34  2026-03-03 13:37:34,347 - ScalpEngine - INFO - FT-DMI-EMA USD/CAD LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:37:34  2026-03-03 13:37:34,969 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 200.6 pips
+2026-03-03 13:38:35  2026-03-03 13:38:35,029 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:38:35  2026-03-03 13:38:35,923 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:38:36  2026-03-03 13:38:36,081 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:38:36  2026-03-03 13:38:36,244 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:38:36  2026-03-03 13:38:36,334 - ScalpEngine - ERROR - ≡ƒÜ¿ RED FLAG: BLOCKED DUPLICATE - USD/JPY BUY - already have an order for this pair (ONLY ONE ORDER PER PAIR ALLOWED)
+2026-03-03 13:38:36  2026-03-03 13:38:36,487 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:38:36  2026-03-03 13:38:36,656 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:38:36  2026-03-03 13:38:36,818 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:38:36  2026-03-03 13:38:36,988 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:38:36  2026-03-03 13:38:36,994 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:39:27  2026-03-03 13:39:27,747 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 2 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:39:27  2026-03-03 13:39:27,909 - ScalpEngine - INFO - FT-DMI-EMA USD/CHF LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:39:28  2026-03-03 13:39:28,061 - ScalpEngine - INFO - FT-DMI-EMA USD/CAD LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:39:28  2026-03-03 13:39:28,699 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 205.1 pips
+2026-03-03 13:40:28  2026-03-03 13:40:28,758 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:40:29  2026-03-03 13:40:29,597 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:40:29  2026-03-03 13:40:29,750 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:40:29  2026-03-03 13:40:29,911 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:40:30  2026-03-03 13:40:30,146 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:40:30  2026-03-03 13:40:30,320 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:40:30  2026-03-03 13:40:30,479 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:40:30  2026-03-03 13:40:30,639 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:40:30  2026-03-03 13:40:30,648 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:41:21  2026-03-03 13:41:21,810 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 2 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:41:21  2026-03-03 13:41:21,965 - ScalpEngine - INFO - FT-DMI-EMA USD/CHF LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:41:22  2026-03-03 13:41:22,149 - ScalpEngine - INFO - FT-DMI-EMA USD/CAD LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:41:22  2026-03-03 13:41:22,841 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 203.0 pips
+2026-03-03 13:42:22  2026-03-03 13:42:22,901 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:42:23  2026-03-03 13:42:23,748 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:42:23  2026-03-03 13:42:23,912 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:42:24  2026-03-03 13:42:24,071 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:42:24  2026-03-03 13:42:24,312 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:42:24  2026-03-03 13:42:24,474 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:42:24  2026-03-03 13:42:24,634 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:42:24  2026-03-03 13:42:24,794 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:42:24  2026-03-03 13:42:24,800 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:43:15  2026-03-03 13:43:15,569 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 2 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:43:15  2026-03-03 13:43:15,733 - ScalpEngine - INFO - FT-DMI-EMA USD/CHF LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:43:15  2026-03-03 13:43:15,884 - ScalpEngine - INFO - FT-DMI-EMA USD/CAD LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:43:16  2026-03-03 13:43:16,541 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 210.0 pips
+2026-03-03 13:44:16  2026-03-03 13:44:16,607 - ScalpEngine - INFO - 
+2026-03-03 13:44:16  === Status Check #420 ===
+2026-03-03 13:44:16  2026-03-03 13:44:16,608 - ScalpEngine - INFO - Time: 13:44:16 UTC
+2026-03-03 13:44:16  2026-03-03 13:44:16,609 - ScalpEngine - INFO - Mode: AUTO
+2026-03-03 13:44:16  2026-03-03 13:44:16,609 - ScalpEngine - INFO - Stop Loss Type: ATR_TRAILING
+2026-03-03 13:44:16  2026-03-03 13:44:16,612 - ScalpEngine - INFO - Active Trades: 5/4
+2026-03-03 13:44:16  2026-03-03 13:44:16,613 - ScalpEngine - INFO - Pending Orders: 2
+2026-03-03 13:44:16  2026-03-03 13:44:16,613 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:44:16  2026-03-03 13:44:16,978 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T13:04:30.389670Z, no change)
+2026-03-03 13:44:17  2026-03-03 13:44:17,302 - ScalpEngine - INFO - ≡ƒºá Market: BULLISH bias, TRENDING volatility, 7 opportunities
+2026-03-03 13:44:18  2026-03-03 13:44:18,632 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:44:18  2026-03-03 13:44:18,782 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:44:18  2026-03-03 13:44:18,946 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:44:19  2026-03-03 13:44:19,182 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:44:19  2026-03-03 13:44:19,338 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:44:19  2026-03-03 13:44:19,503 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:44:19  2026-03-03 13:44:19,659 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:44:19  2026-03-03 13:44:19,665 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:45:10  2026-03-03 13:45:10,351 - ScalpEngine - INFO - FT-DMI-EMA (AUTO): 1 setup(s) with 15m trigger met (max trades: 2, current: 0)
+2026-03-03 13:45:10  2026-03-03 13:45:10,507 - ScalpEngine - INFO - FT-DMI-EMA USD/CHF LONG: Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:45:11  2026-03-03 13:45:11,221 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 206.6 pips
+2026-03-03 13:46:11  2026-03-03 13:46:11,281 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:46:12  2026-03-03 13:46:12,191 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:46:12  2026-03-03 13:46:12,344 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:46:12  2026-03-03 13:46:12,505 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:46:12  2026-03-03 13:46:12,743 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:46:12  2026-03-03 13:46:12,902 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:46:13  2026-03-03 13:46:13,061 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:46:13  2026-03-03 13:46:13,236 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:46:13  2026-03-03 13:46:13,247 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:47:06  2026-03-03 13:47:06,151 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 204.0 pips
+2026-03-03 13:48:06  2026-03-03 13:48:06,212 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:48:07  2026-03-03 13:48:07,171 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:48:07  2026-03-03 13:48:07,331 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:48:07  2026-03-03 13:48:07,494 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:48:07  2026-03-03 13:48:07,747 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:48:07  2026-03-03 13:48:07,909 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:48:08  2026-03-03 13:48:08,081 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:48:08  2026-03-03 13:48:08,250 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:48:08  2026-03-03 13:48:08,255 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:49:00  2026-03-03 13:49:00,387 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 208.7 pips
+2026-03-03 13:50:00  2026-03-03 13:50:00,452 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:50:01  2026-03-03 13:50:01,911 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:50:02  2026-03-03 13:50:02,083 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:50:02  2026-03-03 13:50:02,273 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:50:02  2026-03-03 13:50:02,540 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:50:02  2026-03-03 13:50:02,737 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:50:02  2026-03-03 13:50:02,922 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:50:03  2026-03-03 13:50:03,101 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:50:03  2026-03-03 13:50:03,108 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:50:55  2026-03-03 13:50:55,397 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 195.9 pips
+2026-03-03 13:51:55  2026-03-03 13:51:55,457 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:51:56  2026-03-03 13:51:56,322 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:51:56  2026-03-03 13:51:56,485 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:51:56  2026-03-03 13:51:56,657 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:51:56  2026-03-03 13:51:56,900 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:51:57  2026-03-03 13:51:57,064 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:51:57  2026-03-03 13:51:57,231 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:51:57  2026-03-03 13:51:57,393 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:51:57  2026-03-03 13:51:57,401 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:52:49  2026-03-03 13:52:49,037 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 216.6 pips
+2026-03-03 13:53:49  2026-03-03 13:53:49,097 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:53:49  2026-03-03 13:53:49,294 - ScalpEngine - INFO - ≡ƒôè Market state checked from API: 7 opportunities (timestamp: 2026-03-03T13:04:30.389670Z, no change)
+2026-03-03 13:53:49  2026-03-03 13:53:49,984 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:53:50  2026-03-03 13:53:50,136 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:53:50  2026-03-03 13:53:50,301 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:53:50  2026-03-03 13:53:50,546 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:53:50  2026-03-03 13:53:50,707 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:53:50  2026-03-03 13:53:50,873 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:53:51  2026-03-03 13:53:51,042 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:53:51  2026-03-03 13:53:51,048 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:54:42  2026-03-03 13:54:42,487 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 214.5 pips
+2026-03-03 13:55:42  2026-03-03 13:55:42,546 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:55:43  2026-03-03 13:55:43,908 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:55:44  2026-03-03 13:55:44,064 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:55:44  2026-03-03 13:55:44,234 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:55:44  2026-03-03 13:55:44,500 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:55:44  2026-03-03 13:55:44,672 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:55:44  2026-03-03 13:55:44,857 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:55:45  2026-03-03 13:55:45,030 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:55:45  2026-03-03 13:55:45,041 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:56:37  2026-03-03 13:56:37,606 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 213.2 pips
+2026-03-03 13:57:37  2026-03-03 13:57:37,665 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:57:38  2026-03-03 13:57:38,770 - ScalpEngine - INFO - ≡ƒöì Checking 7 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:57:38  2026-03-03 13:57:38,925 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:57:39  2026-03-03 13:57:39,081 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:57:39  2026-03-03 13:57:39,367 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:57:39  2026-03-03 13:57:39,526 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:57:39  2026-03-03 13:57:39,685 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/ZAR BUY - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:57:39  2026-03-03 13:57:39,844 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (5/4) - in-memory: 5, OANDA: 3
+2026-03-03 13:57:39  2026-03-03 13:57:39,852 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 1 duplicates, 6 max trades limit (total: 7)
+2026-03-03 13:58:31  2026-03-03 13:58:31,910 - ScalpEngine - INFO - ≡ƒôê Active: 5/4, Unrealized: 214.6 pips
+2026-03-03 13:59:31  2026-03-03 13:59:31,970 - ScalpEngine - INFO - ≡ƒôí Attempting to load config from API: https://config-api-8n37.onrender.com/config
+2026-03-03 13:59:32  2026-03-03 13:59:32,167 - ScalpEngine - INFO - ≡ƒåò NEW market state detected from API: 9 opportunities (timestamp: 2026-03-03T13:59:13.800112Z, URL: https://market-state-api.onrender.com/market-state)
+2026-03-03 13:59:32  2026-03-03 13:59:32,887 - ScalpEngine - WARNING - ≡ƒöä Replacing pending order 24568: USD/JPY BUY @ 157.2 ΓåÆ 157.25 (better entry price (better by 5.0 pips))
+2026-03-03 13:59:33  2026-03-03 13:59:33,118 - ScalpEngine - WARNING - ΓÜá∩╕Å Replaced cancelled order 24568 but new order for USD/JPY was not placed (check above)
+2026-03-03 13:59:33  2026-03-03 13:59:33,119 - ScalpEngine - INFO - ≡ƒöì Checking 9 opportunities (Min Consensus: 2, Required LLMs: gemini)
+2026-03-03 13:59:33  2026-03-03 13:59:33,283 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:59:33  2026-03-03 13:59:33,445 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:59:33  2026-03-03 13:59:33,613 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/CHF BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:59:33  2026-03-03 13:59:33,778 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY BUY - Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:59:33  2026-03-03 13:59:33,936 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/AUD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:59:34  2026-03-03 13:59:34,098 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/USD SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:59:34  2026-03-03 13:59:34,259 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped USD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:59:34  2026-03-03 13:59:34,426 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped AUD/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:59:34  2026-03-03 13:59:34,584 - ScalpEngine - INFO - ΓÅ¡∩╕Å Skipped GBP/JPY SELL - Max trades limit reached (4/4) - in-memory: 4, OANDA: 3
+2026-03-03 13:59:34  2026-03-03 13:59:34,590 - ScalpEngine - INFO - ≡ƒôè Opportunity processing summary: 9 max trades limit (total: 9)

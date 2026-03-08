@@ -1,0 +1,23 @@
+# Requirements for Hugging Face Spaces
+gradio>=4.0.0
+python-dotenv>=1.0.0
+PyYAML>=6.0
+requests>=2.31.0
+feedparser>=6.0.10
+
+# Database
+gspread>=5.0.0  # Google Sheets support (preferred - easier setup)
+google-auth>=2.0.0  # Google authentication for Sheets API
+psycopg2-binary>=2.9.0  # PostgreSQL support (optional fallback)
+
+# Data & Analysis
+yfinance>=0.2.0
+
+# LLM Providers
+openai>=1.0.0
+anthropic>=0.18.0
+google-generativeai>=0.3.0
+
+# Scheduling
+schedule>=1.2.0
+

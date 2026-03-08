@@ -1,0 +1,370 @@
+#!/usr/bin/env python3
+"""
+Log Review Script - Analyze Trading Data from Backups
+
+Extracts and analyzes trading information from backup logs:
+- Scalp-Engine execution logs (trade entries, exits, SL updates)
+- OANDA trade execution (fills, prices, PnL)
+- Trade-Alerts analysis (opportunities, recommendations)
+
+Usage:
+    python log-review
+    python log-review --date 20260222
+    python log-review --summary
+    python log-review --trades
+"""
+
+import os
+import sys
+import json
+import re
+from pathlib import Path
+from datetime import datetime, timedelta
+from collections import defaultdict, Counter
+import argparse
+
+class LogReviewer:
+    """Analyze trading logs from backups"""
+
+    def __init__(self, base_dir=None):
+        if base_dir is None:
+            base_dir = Path(__file__).parent
+        else:
+            base_dir = Path(base_dir)
+
+        self.base_dir = base_dir
+        self.archive_dir = self.base_dir / "logs_archive"
+        self.trades = []
+        self.opportunities = []
+        self.errors = []
+
+    def get_latest_backups(self, date_str=None):
+        """Get the most recent backup files"""
+        if not self.archive_dir.exists():
+            print(f"ERROR: logs_archive directory not found at {self.archive_dir}")
+            return {}
+
+        backups = {
+            'scalp_engine': None,
+            'oanda': None,
+            'ui': None,
+            'trade_alerts': None
+        }
+
+        # Find Scalp-Engine logs
+        se_dir = self.archive_dir / "Scalp-Engine"
+        if se_dir.exists():
+            se_files = sorted(se_dir.glob("*scalp_engine*.log"), reverse=True)
+            if se_files:
+                backups['scalp_engine'] = se_files[0]
+
+            oanda_files = sorted(se_dir.glob("*oanda*.log"), reverse=True)
+            if oanda_files:
+                backups['oanda'] = oanda_files[0]
+
+            ui_files = sorted(se_dir.glob("*scalp_ui*.log"), reverse=True)
+            if ui_files:
+                backups['ui'] = ui_files[0]
+
+        # Find Trade-Alerts logs
+        ta_dir = self.archive_dir / "Trade-Alerts"
+        if ta_dir.exists():
+            ta_files = sorted(ta_dir.glob("*trade_alerts*.log"), reverse=True)
+            if ta_files:
+                backups['trade_alerts'] = ta_files[0]
+
+        return backups
+
+    def parse_scalp_engine_log(self, log_file):
+        """Extract trade entries, exits, and SL updates from Scalp-Engine log"""
+        trades = []
+
+        if not log_file or not log_file.exists():
+            return trades
+
+        try:
+            with open(log_file, 'r', encoding='utf-8', errors='replace') as f:
+                content = f.read()
+        except Exception as e:
+            self.errors.append(f"Failed to read {log_file}: {e}")
+            return trades
+
+        # Pattern: TRADE ENTRY | EUR/USD LONG @ 1.0850 SL: 1.0800 TP: 1.0900
+        entry_pattern = r'\|\s*TRADE ENTRY\s*\|\s*(\w+/\w+)\s+(LONG|SHORT)\s*@\s*([\d.]+)\s+SL:\s*([\d.]+)\s+TP:\s*([\d.]+)'
+        exit_pattern = r'\|\s*TRADE EXIT\s*\|\s*(\w+/\w+)\s+(?:LONG|SHORT)\s+closed at\s*([\d.]+)\s+(?:Profit|Loss):\s*([+-]?\d+)'
+        sl_update_pattern = r'\|\s*SL UPDATE\s*\|\s*(\w+/\w+)\s+SL updated from\s*([\d.]+)\s+to\s*([\d.]+)'
+
+        # Extract entries
+        for match in re.finditer(entry_pattern, content):
+            pair, direction, entry, sl, tp = match.groups()
+            trades.append({
+                'type': 'ENTRY',
+                'pair': pair,
+                'direction': direction,
+                'entry_price': float(entry),
+                'stop_loss': float(sl),
+                'take_profit': float(tp),
+                'timestamp': self._extract_timestamp_before(content, match.start())
+            })
+
+        # Extract exits
+        for match in re.finditer(exit_pattern, content):
+            pair, exit_price, pnl_pips = match.groups()
+            trades.append({
+                'type': 'EXIT',
+                'pair': pair,
+                'exit_price': float(exit_price),
+                'pnl_pips': int(pnl_pips),
+                'timestamp': self._extract_timestamp_before(content, match.start())
+            })
+
+        # Extract SL updates
+        for match in re.finditer(sl_update_pattern, content):
+            pair, old_sl, new_sl = match.groups()
+            trades.append({
+                'type': 'SL_UPDATE',
+                'pair': pair,
+                'old_sl': float(old_sl),
+                'new_sl': float(new_sl),
+                'timestamp': self._extract_timestamp_before(content, match.start())
+            })
+
+        return trades
+
+    def parse_oanda_log(self, log_file):
+        """Extract OANDA trade execution data"""
+        trades = []
+
+        if not log_file or not log_file.exists():
+            return trades
+
+        try:
+            with open(log_file, 'r', encoding='utf-8', errors='replace') as f:
+                lines = f.readlines()
+        except Exception as e:
+            self.errors.append(f"Failed to read {log_file}: {e}")
+            return trades
+
+        for line in lines:
+            if 'OANDA_TRADE' not in line:
+                continue
+
+            # Try to parse JSON data
+            try:
+                parts = line.split('|', 1)
+                if len(parts) == 2:
+                    json_str = parts[1].strip()
+                    data = json.loads(json_str)
+                    data['timestamp'] = self._extract_timestamp_from_line(line)
+                    trades.append(data)
+            except:
+                # Silently skip unparseable lines
+                pass
+
+        return trades
+
+    def parse_trade_alerts_log(self, log_file):
+        """Extract opportunities from Trade-Alerts log"""
+        opportunities = []
+
+        if not log_file or not log_file.exists():
+            return opportunities
+
+        try:
+            with open(log_file, 'r', encoding='utf-8', errors='replace') as f:
+                content = f.read()
+        except Exception as e:
+            self.errors.append(f"Failed to read {log_file}: {e}")
+            return opportunities
+
+        # Look for analysis results
+        analysis_pattern = r'Total Opportunities:\s*(\d+)'
+        consensus_pattern = r'Consensus for (\w+/\w+)\s+(BUY|SELL):\s*([\d.]+)/\d+'
+
+        for match in re.finditer(analysis_pattern, content):
+            count = int(match.group(1))
+            opportunities.append({
+                'type': 'ANALYSIS_CYCLE',
+                'total_opportunities': count,
+                'timestamp': self._extract_timestamp_before(content, match.start())
+            })
+
+        for match in re.finditer(consensus_pattern, content):
+            pair, direction, consensus = match.groups()
+            opportunities.append({
+                'type': 'CONSENSUS',
+                'pair': pair,
+                'direction': direction,
+                'consensus_level': float(consensus),
+                'timestamp': self._extract_timestamp_before(content, match.start())
+            })
+
+        return opportunities
+
+    def _extract_timestamp_from_line(self, line):
+        """Extract timestamp from start of log line"""
+        timestamp_pattern = r'(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})'
+        match = re.search(timestamp_pattern, line)
+        if match:
+            return match.group(1)
+        return None
+
+    def _extract_timestamp_before(self, content, position):
+        """Extract the most recent timestamp before a position in content"""
+        snippet = content[:position]
+        timestamp_pattern = r'(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})'
+        matches = re.findall(timestamp_pattern, snippet)
+        if matches:
+            return matches[-1]
+        return None
+
+    def analyze_trades(self):
+        """Analyze extracted trading data"""
+        if not self.trades:
+            return None
+
+        entries = [t for t in self.trades if t['type'] == 'ENTRY']
+        exits = [t for t in self.trades if t['type'] == 'EXIT']
+
+        if not entries:
+            return None
+
+        analysis = {
+            'total_entries': len(entries),
+            'total_exits': len(exits),
+            'pairs_traded': list(set(t['pair'] for t in entries)),
+            'entry_stats': {
+                'avg_entry_price': sum(t['entry_price'] for t in entries) / len(entries) if entries else 0,
+                'avg_stop_loss': sum(t['stop_loss'] for t in entries) / len(entries) if entries else 0,
+                'avg_take_profit': sum(t['take_profit'] for t in entries) / len(entries) if entries else 0,
+            }
+        }
+
+        if exits:
+            analysis['exit_stats'] = {
+                'avg_pnl_pips': sum(t['pnl_pips'] for t in exits) / len(exits),
+                'total_pnl_pips': sum(t['pnl_pips'] for t in exits),
+                'winning_trades': len([t for t in exits if t['pnl_pips'] > 0]),
+                'losing_trades': len([t for t in exits if t['pnl_pips'] < 0]),
+                'win_rate': len([t for t in exits if t['pnl_pips'] > 0]) / len(exits) * 100 if exits else 0
+            }
+
+        return analysis
+
+    def print_summary(self):
+        """Print summary of extracted data"""
+        print("\n" + "=" * 70)
+        print("LOG REVIEW SUMMARY")
+        print("=" * 70)
+
+        backups = self.get_latest_backups()
+
+        print("\nLatest Backup Files Found:")
+        for name, path in backups.items():
+            if path:
+                print(f"  {name:20} -> {path.name}")
+            else:
+                print(f"  {name:20} -> NOT FOUND")
+
+        # Parse all logs
+        if backups['scalp_engine']:
+            trades = self.parse_scalp_engine_log(backups['scalp_engine'])
+            print(f"\nScalp-Engine Log Events: {len(trades)} events")
+            if trades:
+                entries = [t for t in trades if t['type'] == 'ENTRY']
+                exits = [t for t in trades if t['type'] == 'EXIT']
+                sl_updates = [t for t in trades if t['type'] == 'SL_UPDATE']
+                print(f"  - Trade Entries: {len(entries)}")
+                print(f"  - Trade Exits: {len(exits)}")
+                print(f"  - SL Updates: {len(sl_updates)}")
+
+        if backups['oanda']:
+            oanda = self.parse_oanda_log(backups['oanda'])
+            print(f"\nOANDA Log Events: {len(oanda)} events")
+
+        if backups['trade_alerts']:
+            opps = self.parse_trade_alerts_log(backups['trade_alerts'])
+            print(f"\nTrade-Alerts Log Events: {len(opps)} events")
+
+        if self.errors:
+            print(f"\nWarnings/Errors: {len(self.errors)}")
+            for error in self.errors[:5]:
+                print(f"  - {error}")
+
+        print("\n" + "=" * 70)
+        print("Data successfully extracted from backup logs")
+        print("Use --trades to see detailed trade analysis")
+        print("=" * 70 + "\n")
+
+    def print_trades(self):
+        """Print detailed trade information"""
+        backups = self.get_latest_backups()
+
+        if not backups['scalp_engine']:
+            print("No Scalp-Engine logs found")
+            return
+
+        trades = self.parse_scalp_engine_log(backups['scalp_engine'])
+
+        print("\n" + "=" * 70)
+        print("TRADE ACTIVITY")
+        print("=" * 70)
+
+        entries = [t for t in trades if t['type'] == 'ENTRY']
+        print(f"\nTrade Entries ({len(entries)} total):")
+        print("-" * 70)
+
+        for i, trade in enumerate(entries, 1):
+            print(f"\n{i}. {trade['pair']} {trade['direction']}")
+            print(f"   Entry:  {trade['entry_price']:.5f}")
+            print(f"   SL:     {trade['stop_loss']:.5f}")
+            print(f"   TP:     {trade['take_profit']:.5f}")
+            if trade.get('timestamp'):
+                print(f"   Time:   {trade['timestamp']}")
+
+        exits = [t for t in trades if t['type'] == 'EXIT']
+        print(f"\n\nTrade Exits ({len(exits)} total):")
+        print("-" * 70)
+
+        for i, trade in enumerate(exits, 1):
+            pnl = trade['pnl_pips']
+            status = "WIN" if pnl > 0 else "LOSS"
+            print(f"\n{i}. {trade['pair']} - {status}: {pnl:+d} pips")
+            print(f"   Exit: {trade['exit_price']:.5f}")
+            if trade.get('timestamp'):
+                print(f"   Time: {trade['timestamp']}")
+
+        # Analysis
+        analysis = self.analyze_trades()
+        if analysis and analysis.get('exit_stats'):
+            stats = analysis['exit_stats']
+            print("\n\n" + "=" * 70)
+            print("PERFORMANCE SUMMARY")
+            print("=" * 70)
+            print(f"\nWin Rate: {stats['win_rate']:.1f}%")
+            print(f"Winning Trades: {stats['winning_trades']}")
+            print(f"Losing Trades: {stats['losing_trades']}")
+            print(f"Avg PnL: {stats['avg_pnl_pips']:.1f} pips")
+            print(f"Total PnL: {stats['total_pnl_pips']:.0f} pips")
+
+        print("\n" + "=" * 70 + "\n")
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Review trading logs from backups')
+    parser.add_argument('--date', help='Specific date to review (YYYYMMDD)')
+    parser.add_argument('--summary', action='store_true', help='Show summary only')
+    parser.add_argument('--trades', action='store_true', help='Show detailed trades')
+
+    args = parser.parse_args()
+
+    reviewer = LogReviewer()
+
+    if args.trades or not (args.summary):
+        reviewer.print_trades()
+    else:
+        reviewer.print_summary()
+
+
+if __name__ == '__main__':
+    main()

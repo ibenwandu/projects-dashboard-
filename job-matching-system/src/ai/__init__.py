@@ -1,0 +1,1 @@
+# AI components for job evaluation and resume generation

@@ -1,0 +1,367 @@
+#!/usr/bin/env python3
+"""
+Trading Analysis - Comprehensive analysis of OANDA trading performance
+
+Provides detailed analysis of trading habits, risk management, and patterns
+to help guide decisions about live trading migration.
+
+Usage:
+    python trading-analysis              # Show executive summary
+    python trading-analysis --detailed   # Show comprehensive analysis
+    python trading-analysis --risk       # Show risk management analysis
+    python trading-analysis --patterns   # Show trading patterns and correlations
+"""
+
+import os
+import sys
+import json
+import requests
+from datetime import datetime, timedelta
+from collections import defaultdict
+import argparse
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+OANDA_BASE_URL = "https://api-fxpractice.oanda.com"
+OANDA_ACCESS_TOKEN = os.getenv("OANDA_ACCESS_TOKEN")
+OANDA_ACCOUNT_ID = os.getenv("OANDA_ACCOUNT_ID")
+
+class TradingAnalyzer:
+    """Comprehensive trading analysis"""
+
+    def __init__(self):
+        if not OANDA_ACCESS_TOKEN or not OANDA_ACCOUNT_ID:
+            print("ERROR: OANDA credentials not set in .env")
+            sys.exit(1)
+
+        self.base_url = OANDA_BASE_URL
+        self.account_id = OANDA_ACCOUNT_ID
+        self.headers = {
+            "Authorization": f"Bearer {OANDA_ACCESS_TOKEN}",
+            "Content-Type": "application/json"
+        }
+        self.trades = []
+
+    def fetch_closed_trades(self):
+        """Fetch closed trades from OANDA"""
+        try:
+            url = f"{self.base_url}/v3/accounts/{self.account_id}/trades"
+            params = {
+                "state": "CLOSED",
+                "count": 500
+            }
+
+            response = requests.get(url, headers=self.headers, params=params)
+            response.raise_for_status()
+
+            data = response.json()
+            trades = data.get("trades", [])
+
+            for trade in trades:
+                initial_units = int(trade.get("initialUnits", 0))
+                self.trades.append({
+                    "id": trade.get("id"),
+                    "pair": trade.get("instrument"),
+                    "direction": "LONG" if initial_units > 0 else "SHORT",
+                    "entry_price": float(trade.get("openPrice", 0)),
+                    "exit_price": float(trade.get("closePrice", 0)),
+                    "units": abs(initial_units),
+                    "pnl": float(trade.get("financing", 0)) + float(trade.get("unrealizedPL", 0)) + float(trade.get("realizedPL", 0)),
+                    "opened_at": trade.get("openTime"),
+                    "closed_at": trade.get("closeTime"),
+                    "stop_loss": float(trade.get("stopLossOrder", {}).get("priceBound", 0)) if trade.get("stopLossOrder") else None,
+                    "take_profit": float(trade.get("takeProfitOrder", {}).get("priceBound", 0)) if trade.get("takeProfitOrder") else None,
+                })
+
+            return len(trades)
+
+        except Exception as e:
+            print(f"ERROR: Failed to fetch trades: {e}")
+            return 0
+
+    def calculate_pips(self, entry, exit, pair):
+        """Calculate pips difference"""
+        if not entry or not exit:
+            return 0
+        diff = abs(exit - entry)
+        if "JPY" in pair:
+            return diff * 100
+        else:
+            return diff * 10000
+
+    def calculate_risk_metrics(self):
+        """Calculate detailed risk metrics"""
+        if not self.trades:
+            return None
+
+        metrics = {
+            "total_trades": len(self.trades),
+            "avg_units": sum(t["units"] for t in self.trades) / len(self.trades),
+            "trades_with_sl": sum(1 for t in self.trades if t["stop_loss"]),
+            "trades_with_tp": sum(1 for t in self.trades if t["take_profit"]),
+            "sl_hit_trades": 0,
+            "tp_hit_trades": 0,
+            "orphaned_trades": sum(1 for t in self.trades if not t["stop_loss"] and not t["take_profit"]),
+            "avg_trade_duration_hours": 0,
+            "largest_loss": None,
+            "largest_win": None,
+            "max_consecutive_losses": 0,
+            "max_consecutive_wins": 0,
+        }
+
+        # Calculate SL/TP hits
+        for trade in self.trades:
+            if trade["stop_loss"]:
+                sl = trade["stop_loss"]
+                entry = trade["entry_price"]
+                exit_p = trade["exit_price"]
+
+                if trade["direction"] == "LONG":
+                    if exit_p <= sl + 0.0001:  # Account for float precision
+                        metrics["sl_hit_trades"] += 1
+                else:  # SHORT
+                    if exit_p >= sl - 0.0001:
+                        metrics["sl_hit_trades"] += 1
+
+            if trade["take_profit"]:
+                tp = trade["take_profit"]
+                exit_p = trade["exit_price"]
+
+                if trade["direction"] == "LONG":
+                    if exit_p >= tp - 0.0001:
+                        metrics["tp_hit_trades"] += 1
+                else:  # SHORT
+                    if exit_p <= tp + 0.0001:
+                        metrics["tp_hit_trades"] += 1
+
+        # Calculate trade durations
+        durations = []
+        for trade in self.trades:
+            try:
+                opened = datetime.fromisoformat(trade["opened_at"].replace("Z", "+00:00"))
+                closed = datetime.fromisoformat(trade["closed_at"].replace("Z", "+00:00"))
+                duration_hours = (closed - opened).total_seconds() / 3600
+                durations.append(duration_hours)
+            except:
+                pass
+
+        if durations:
+            metrics["avg_trade_duration_hours"] = sum(durations) / len(durations)
+
+        # Win/loss metrics
+        wins = [t for t in self.trades if t["pnl"] > 0]
+        losses = [t for t in self.trades if t["pnl"] < 0]
+
+        if wins:
+            metrics["largest_win"] = max(t["pnl"] for t in wins)
+        if losses:
+            metrics["largest_loss"] = min(t["pnl"] for t in losses)
+
+        # Consecutive wins/losses
+        current_streak = 1
+        for i, trade in enumerate(sorted(self.trades, key=lambda x: x["closed_at"])):
+            if i == 0:
+                continue
+            prev_trade = sorted(self.trades, key=lambda x: x["closed_at"])[i-1]
+
+            is_win = trade["pnl"] > 0
+            prev_is_win = prev_trade["pnl"] > 0
+
+            if is_win == prev_is_win:
+                current_streak += 1
+                if is_win:
+                    metrics["max_consecutive_wins"] = max(metrics["max_consecutive_wins"], current_streak)
+                else:
+                    metrics["max_consecutive_losses"] = max(metrics["max_consecutive_losses"], current_streak)
+            else:
+                current_streak = 1
+
+        return metrics
+
+    def analyze_by_pair(self):
+        """Analyze performance by trading pair"""
+        pair_analysis = defaultdict(lambda: {
+            "count": 0,
+            "wins": 0,
+            "losses": 0,
+            "pnl": 0,
+            "avg_pnl": 0,
+            "largest_win": 0,
+            "largest_loss": 0,
+            "total_units": 0,
+        })
+
+        for trade in self.trades:
+            pair = trade["pair"]
+            pair_analysis[pair]["count"] += 1
+            pair_analysis[pair]["pnl"] += trade["pnl"]
+            pair_analysis[pair]["total_units"] += trade["units"]
+
+            if trade["pnl"] > 0:
+                pair_analysis[pair]["wins"] += 1
+                pair_analysis[pair]["largest_win"] = max(pair_analysis[pair]["largest_win"], trade["pnl"])
+            else:
+                pair_analysis[pair]["losses"] += 1
+                pair_analysis[pair]["largest_loss"] = min(pair_analysis[pair]["largest_loss"], trade["pnl"])
+
+        for pair in pair_analysis:
+            count = pair_analysis[pair]["count"]
+            pair_analysis[pair]["avg_pnl"] = pair_analysis[pair]["pnl"] / count if count > 0 else 0
+            pair_analysis[pair]["win_rate"] = (pair_analysis[pair]["wins"] / count * 100) if count > 0 else 0
+
+        return dict(sorted(pair_analysis.items(), key=lambda x: x[1]["count"], reverse=True))
+
+    def print_executive_summary(self):
+        """Print executive summary for live trading decision"""
+        print("\n" + "=" * 80)
+        print("TRADING PERFORMANCE EXECUTIVE SUMMARY")
+        print("=" * 80)
+        print("\nAnalyzing", len(self.trades), "closed demo trades")
+
+        if not self.trades:
+            print("No trades found")
+            return
+
+        wins = [t for t in self.trades if t["pnl"] > 0]
+        losses = [t for t in self.trades if t["pnl"] < 0]
+        total_pnl = sum(t["pnl"] for t in self.trades)
+        win_rate = (len(wins) / len(self.trades) * 100) if self.trades else 0
+
+        print(f"\nOVERALL PERFORMANCE:")
+        print(f"  Win Rate: {win_rate:.1f}% ({len(wins)} wins, {len(losses)} losses)")
+        print(f"  Total P&L: ${total_pnl:.2f}")
+        print(f"  Average P&L per Trade: ${total_pnl / len(self.trades):.2f}")
+
+        if total_pnl < -1000:
+            print(f"\n  [WARNING] Significant losses detected. Consider review before live trading.")
+        elif total_pnl < 0:
+            print(f"\n  [CAUTION] Negative P&L in demo. Risk mitigation needed before live.")
+        else:
+            print(f"\n  [POSITIVE] Profitable in demo. Still assess risk management.")
+
+        print(f"\nRISK MANAGEMENT ASSESSMENT:")
+        metrics = self.calculate_risk_metrics()
+
+        if metrics["trades_with_sl"] == 0:
+            print(f"  CRITICAL: 0 trades have stop losses! NO PROTECTION against major losses.")
+        else:
+            print(f"  Stop Loss Coverage: {metrics['trades_with_sl']}/{metrics['total_trades']} trades ({metrics['trades_with_sl']/metrics['total_trades']*100:.1f}%)")
+            print(f"  SL Hit Frequency: {metrics['sl_hit_trades']} trades stopped out")
+
+        if metrics["trades_with_tp"] == 0:
+            print(f"  Take Profit: 0 defined (relying on manual close or exit signal)")
+        else:
+            print(f"  Take Profit Coverage: {metrics['trades_with_tp']}/{metrics['total_trades']} trades ({metrics['trades_with_tp']/metrics['total_trades']*100:.1f}%)")
+            print(f"  TP Hit Frequency: {metrics['tp_hit_trades']} trades took profit")
+
+        print(f"\n  Orphaned Trades: {metrics['orphaned_trades']} (no SL or TP)")
+        print(f"  Avg Position Size: {metrics['avg_units']:.0f} units")
+        print(f"  Avg Trade Duration: {metrics['avg_trade_duration_hours']:.1f} hours")
+
+        if metrics["largest_loss"] and abs(metrics["largest_loss"]) > 100:
+            print(f"\n  [ALERT] Largest single loss: ${metrics['largest_loss']:.2f}")
+            print(f"         This could exceed your $100 CAD initial investment on live!")
+
+        print(f"\nRECOMMENDATIONS FOR LIVE TRADING ($100 CAD):")
+        print(f"  1. Ensure ALL trades have stop losses (100% coverage)")
+        print(f"  2. Risk only $2-3 per trade (2-3% of $100)")
+        print(f"  3. Review pair selection - focus on your best performers")
+
+        best_pair = max(self.analyze_by_pair().items(), key=lambda x: x[1]["win_rate"] if x[1]["count"] > 5 else -1)
+        if best_pair[1]["count"] > 5:
+            print(f"  4. Start with {best_pair[0]} ({best_pair[1]['win_rate']:.0f}% win rate in demo)")
+
+        print("\n" + "=" * 80)
+
+    def print_detailed_analysis(self):
+        """Print comprehensive detailed analysis"""
+        print("\n" + "=" * 80)
+        print("DETAILED TRADING ANALYSIS")
+        print("=" * 80)
+
+        pair_analysis = self.analyze_by_pair()
+
+        print(f"\nPERFORMANCE BY PAIR:")
+        for pair, stats in pair_analysis.items():
+            print(f"\n  {pair}")
+            print(f"    Trades: {stats['count']}")
+            print(f"    Win Rate: {stats['win_rate']:.1f}% ({stats['wins']} wins, {stats['losses']} losses)")
+            print(f"    Total P&L: ${stats['pnl']:.2f}")
+            print(f"    Avg P&L: ${stats['avg_pnl']:.2f}")
+            print(f"    Largest Win: ${stats['largest_win']:.2f}")
+            print(f"    Largest Loss: ${stats['largest_loss']:.2f}")
+            print(f"    Total Units: {stats['total_units']}")
+
+        print("\n" + "=" * 80)
+
+    def print_risk_analysis(self):
+        """Print detailed risk management analysis"""
+        print("\n" + "=" * 80)
+        print("RISK MANAGEMENT ANALYSIS")
+        print("=" * 80)
+
+        metrics = self.calculate_risk_metrics()
+
+        print(f"\nPROTECTION COVERAGE:")
+        print(f"  Trades with Stop Loss: {metrics['trades_with_sl']}/{metrics['total_trades']} ({metrics['trades_with_sl']/metrics['total_trades']*100:.1f}%)")
+        print(f"  Trades with Take Profit: {metrics['trades_with_tp']}/{metrics['total_trades']} ({metrics['trades_with_tp']/metrics['total_trades']*100:.1f}%)")
+        print(f"  Unprotected Trades: {metrics['orphaned_trades']}")
+
+        print(f"\nPOSITION SIZING:")
+        print(f"  Average Units per Trade: {metrics['avg_units']:.0f}")
+        print(f"  Recommendation for $100: 1-5 micro lots")
+
+        print(f"\nTRADE TIMING:")
+        print(f"  Average Trade Duration: {metrics['avg_trade_duration_hours']:.2f} hours")
+        print(f"  Strategy Type: {'Scalping' if metrics['avg_trade_duration_hours'] < 4 else 'Swing' if metrics['avg_trade_duration_hours'] < 24 else 'Position'}")
+
+        print(f"\nSTREAK ANALYSIS:")
+        print(f"  Max Consecutive Wins: {metrics['max_consecutive_wins']}")
+        print(f"  Max Consecutive Losses: {metrics['max_consecutive_losses']}")
+
+        print(f"\nRISK TOLERANCE CHECK:")
+        if metrics['largest_loss']:
+            print(f"  Largest Drawdown: ${metrics['largest_loss']:.2f}")
+            if abs(metrics['largest_loss']) > 50:
+                print(f"  [WARNING] Single loss > $50. Not suitable for $100 account yet.")
+            else:
+                print(f"  [OK] Single loss < $50. Manageable for $100 account.")
+
+        print("\n" + "=" * 80)
+
+    def run(self):
+        """Execute the analyzer"""
+        trades_fetched = self.fetch_closed_trades()
+        if trades_fetched == 0:
+            print("No trades found")
+            return False
+        return True
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Comprehensive trading analysis")
+    parser.add_argument("--detailed", action="store_true", help="Show detailed analysis")
+    parser.add_argument("--risk", action="store_true", help="Show risk management analysis")
+    parser.add_argument("--patterns", action="store_true", help="Show patterns and correlations")
+
+    args = parser.parse_args()
+
+    analyzer = TradingAnalyzer()
+
+    if not analyzer.run():
+        return 1
+
+    if args.detailed:
+        analyzer.print_detailed_analysis()
+    elif args.risk:
+        analyzer.print_risk_analysis()
+    else:
+        analyzer.print_executive_summary()
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

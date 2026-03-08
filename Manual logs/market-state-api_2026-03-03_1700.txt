@@ -1,0 +1,1000 @@
+2026-03-03 17:59:10  2026-03-03 17:59:10,835 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 17:59:10] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 18:00:33  2026-03-03 18:00:33,490 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:00:33] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:00:38  2026-03-03 18:00:38,379 - src.market_state_api - INFO - Γ£à Merged Fisher opportunities: 0 opportunities
+2026-03-03 18:00:38  2026-03-03 18:00:38,379 - __main__ - INFO - Γ£à Fisher opportunities received: 0 opportunities
+2026-03-03 18:00:38  2026-03-03 18:00:38,379 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:00:38] "POST /fisher-opportunities HTTP/1.1" 200 -
+2026-03-03 18:00:38  2026-03-03 18:00:38,567 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:00:38] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:00:38  2026-03-03 18:00:38,644 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:00:38  2026-03-03 18:00:38,645 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:00:38  2026-03-03 18:00:38,645 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:00:38] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:00:38  2026-03-03 18:00:38,712 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:00:38  2026-03-03 18:00:38,712 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:00:38  2026-03-03 18:00:38,712 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:00:38] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:02:33  2026-03-03 18:02:33,765 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:02:33] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:02:33  2026-03-03 18:02:33,862 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:02:33  2026-03-03 18:02:33,863 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:02:33  2026-03-03 18:02:33,863 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:02:33] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:02:33  2026-03-03 18:02:33,939 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:02:33  2026-03-03 18:02:33,939 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:02:33  2026-03-03 18:02:33,939 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:02:33] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:03:45  2026-03-03 18:03:45,213 - src.market_state_api - INFO -    Preserved Fisher data: fisher_opportunities=0
+2026-03-03 18:03:45  2026-03-03 18:03:45,213 - src.market_state_api - INFO -    Preserved Fisher data: fisher_last_updated=2026-03-03T18:00:38.314007
+2026-03-03 18:03:45  2026-03-03 18:03:45,213 - src.market_state_api - INFO -    Preserved Fisher data: fisher_count=0
+2026-03-03 18:03:45  2026-03-03 18:03:45,213 - src.market_state_api - INFO -    Preserved Fisher data: fisher_analysis=28 pairs
+2026-03-03 18:03:45  2026-03-03 18:03:45,213 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_opportunities=0
+2026-03-03 18:03:45  2026-03-03 18:03:45,213 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_last_updated=2026-03-03T18:02:33.874375
+2026-03-03 18:03:45  2026-03-03 18:03:45,213 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_opportunities=0
+2026-03-03 18:03:45  2026-03-03 18:03:45,213 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_last_updated=2026-03-03T18:02:33.874387
+2026-03-03 18:03:45  2026-03-03 18:03:45,214 - src.market_state_api - INFO - Γ£à Market state saved to /var/data/market_state.json
+2026-03-03 18:03:45  2026-03-03 18:03:45,215 - src.market_state_api - INFO -    Bias: BULLISH, Regime: TRENDING, Pairs: ['GBP/USD', 'USD/CHF', 'EUR/USD', 'USD/ZAR', 'USD/MXN']
+2026-03-03 18:03:45  2026-03-03 18:03:45,215 - __main__ - INFO - Γ£à Market state received: BULLISH TRENDING - 5 pairs
+2026-03-03 18:03:45  2026-03-03 18:03:45,215 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 18:03:45] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 18:04:27  2026-03-03 18:04:27,684 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:04:27] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:04:27  2026-03-03 18:04:27,762 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:04:27  2026-03-03 18:04:27,762 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:04:27  2026-03-03 18:04:27,762 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:04:27] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:04:27  2026-03-03 18:04:27,839 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:04:27  2026-03-03 18:04:27,839 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:04:27  2026-03-03 18:04:27,839 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:04:27] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:06:21  2026-03-03 18:06:21,603 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:06:21] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:06:21  2026-03-03 18:06:21,710 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:06:21  2026-03-03 18:06:21,710 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:06:21  2026-03-03 18:06:21,711 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:06:21] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:06:21  2026-03-03 18:06:21,802 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:06:21  2026-03-03 18:06:21,803 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:06:21  2026-03-03 18:06:21,803 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:06:21] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:08:16  2026-03-03 18:08:16,404 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 18:08:16] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:08:16  2026-03-03 18:08:16,494 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:08:16  2026-03-03 18:08:16,494 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:08:16  2026-03-03 18:08:16,494 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:08:16] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:08:16  2026-03-03 18:08:16,571 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:08:16  2026-03-03 18:08:16,571 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:08:16  2026-03-03 18:08:16,571 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:08:16] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:09:19  2026-03-03 18:09:19,137 - src.market_state_api - INFO -    Preserved Fisher data: fisher_opportunities=0
+2026-03-03 18:09:19  2026-03-03 18:09:19,137 - src.market_state_api - INFO -    Preserved Fisher data: fisher_last_updated=2026-03-03T18:00:38.314007
+2026-03-03 18:09:19  2026-03-03 18:09:19,137 - src.market_state_api - INFO -    Preserved Fisher data: fisher_count=0
+2026-03-03 18:09:19  2026-03-03 18:09:19,137 - src.market_state_api - INFO -    Preserved Fisher data: fisher_analysis=28 pairs
+2026-03-03 18:09:19  2026-03-03 18:09:19,137 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_opportunities=0
+2026-03-03 18:09:19  2026-03-03 18:09:19,137 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_last_updated=2026-03-03T18:08:16.504176
+2026-03-03 18:09:19  2026-03-03 18:09:19,138 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_opportunities=0
+2026-03-03 18:09:19  2026-03-03 18:09:19,138 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_last_updated=2026-03-03T18:08:16.504188
+2026-03-03 18:09:19  2026-03-03 18:09:19,139 - src.market_state_api - INFO - Γ£à Market state saved to /var/data/market_state.json
+2026-03-03 18:09:19  2026-03-03 18:09:19,139 - src.market_state_api - INFO -    Bias: BULLISH, Regime: HIGH_VOL, Pairs: ['GBP/USD', 'USD/ZAR', 'EUR/USD', 'USD/JPY']
+2026-03-03 18:09:19  2026-03-03 18:09:19,139 - __main__ - INFO - Γ£à Market state received: BULLISH HIGH_VOL - 4 pairs
+2026-03-03 18:09:19  2026-03-03 18:09:19,139 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:09:19] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 18:10:10  2026-03-03 18:10:10,731 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:10:10] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:10:10  2026-03-03 18:10:10,816 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:10:10  2026-03-03 18:10:10,816 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:10:10  2026-03-03 18:10:10,816 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:10:10] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:10:10  2026-03-03 18:10:10,887 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:10:10  2026-03-03 18:10:10,887 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:10:10  2026-03-03 18:10:10,887 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:10:10] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:12:05  2026-03-03 18:12:05,547 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:12:05] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:12:05  2026-03-03 18:12:05,654 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:12:05  2026-03-03 18:12:05,654 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:12:05  2026-03-03 18:12:05,655 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:12:05] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:12:05  2026-03-03 18:12:05,748 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:12:05  2026-03-03 18:12:05,748 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:12:05  2026-03-03 18:12:05,748 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:12:05] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:13:59  2026-03-03 18:13:59,459 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:13:59] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:13:59  2026-03-03 18:13:59,537 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:13:59  2026-03-03 18:13:59,537 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:13:59  2026-03-03 18:13:59,537 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:13:59] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:13:59  2026-03-03 18:13:59,623 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:13:59  2026-03-03 18:13:59,623 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:13:59  2026-03-03 18:13:59,623 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:13:59] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:15:52  2026-03-03 18:15:52,755 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:15:52] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:15:52  2026-03-03 18:15:52,923 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:15:52  2026-03-03 18:15:52,923 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:15:52  2026-03-03 18:15:52,923 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:15:52] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:15:53  2026-03-03 18:15:53,053 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:15:53  2026-03-03 18:15:53,053 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:15:53  2026-03-03 18:15:53,054 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:15:53] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:17:47  2026-03-03 18:17:47,073 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:17:47] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:17:47  2026-03-03 18:17:47,158 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:17:47  2026-03-03 18:17:47,158 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:17:47  2026-03-03 18:17:47,158 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:17:47] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:17:47  2026-03-03 18:17:47,243 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:17:47  2026-03-03 18:17:47,243 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:17:47  2026-03-03 18:17:47,244 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:17:47] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:19:40  2026-03-03 18:19:40,751 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:19:40] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:19:40  2026-03-03 18:19:40,820 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:19:40  2026-03-03 18:19:40,820 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:19:40  2026-03-03 18:19:40,820 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:19:40] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:19:40  2026-03-03 18:19:40,913 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:19:40  2026-03-03 18:19:40,913 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:19:40  2026-03-03 18:19:40,913 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:19:40] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:21:34  2026-03-03 18:21:34,817 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:21:34] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:21:34  2026-03-03 18:21:34,913 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:21:34  2026-03-03 18:21:34,913 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:21:34  2026-03-03 18:21:34,913 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 18:21:34] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:21:34  2026-03-03 18:21:34,992 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:21:34  2026-03-03 18:21:34,993 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:21:34  2026-03-03 18:21:34,993 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:21:34] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:23:28  2026-03-03 18:23:28,107 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:23:28] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:23:28  2026-03-03 18:23:28,199 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:23:28  2026-03-03 18:23:28,199 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:23:28  2026-03-03 18:23:28,199 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:23:28] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:23:28  2026-03-03 18:23:28,271 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:23:28  2026-03-03 18:23:28,271 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:23:28  2026-03-03 18:23:28,271 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:23:28] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:25:22  2026-03-03 18:25:22,222 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:25:22] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:25:22  2026-03-03 18:25:22,332 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:25:22  2026-03-03 18:25:22,332 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:25:22  2026-03-03 18:25:22,333 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:25:22] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:25:22  2026-03-03 18:25:22,403 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:25:22  2026-03-03 18:25:22,403 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:25:22  2026-03-03 18:25:22,404 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:25:22] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:27:15  2026-03-03 18:27:15,421 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:27:15] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:27:15  2026-03-03 18:27:15,526 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:27:15  2026-03-03 18:27:15,526 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:27:15  2026-03-03 18:27:15,526 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:27:15] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:27:15  2026-03-03 18:27:15,604 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:27:15  2026-03-03 18:27:15,604 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:27:15  2026-03-03 18:27:15,604 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:27:15] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:29:11  2026-03-03 18:29:11,584 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:29:11] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:29:11  2026-03-03 18:29:11,709 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:29:11  2026-03-03 18:29:11,710 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:29:11  2026-03-03 18:29:11,710 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:29:11] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:29:11  2026-03-03 18:29:11,803 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:29:11  2026-03-03 18:29:11,803 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:29:11  2026-03-03 18:29:11,803 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:29:11] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:31:05  2026-03-03 18:31:05,895 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:31:05] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:31:05  2026-03-03 18:31:05,972 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:31:05  2026-03-03 18:31:05,972 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:31:05  2026-03-03 18:31:05,972 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:31:05] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:31:06  2026-03-03 18:31:06,066 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:31:06  2026-03-03 18:31:06,066 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:31:06  2026-03-03 18:31:06,066 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:31:06] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:33:00  2026-03-03 18:33:00,077 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:33:00] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:33:00  2026-03-03 18:33:00,173 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:33:00  2026-03-03 18:33:00,173 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:33:00  2026-03-03 18:33:00,173 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:33:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:33:00  2026-03-03 18:33:00,266 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:33:00  2026-03-03 18:33:00,266 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:33:00  2026-03-03 18:33:00,266 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:33:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:34:54  2026-03-03 18:34:54,305 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:34:54] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:34:54  2026-03-03 18:34:54,376 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:34:54  2026-03-03 18:34:54,376 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:34:54  2026-03-03 18:34:54,377 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:34:54] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:34:54  2026-03-03 18:34:54,542 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:34:54  2026-03-03 18:34:54,543 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:34:54  2026-03-03 18:34:54,543 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:34:54] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:36:48  2026-03-03 18:36:48,412 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:36:48] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:36:48  2026-03-03 18:36:48,501 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:36:48  2026-03-03 18:36:48,501 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:36:48  2026-03-03 18:36:48,501 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:36:48] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:36:48  2026-03-03 18:36:48,572 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:36:48  2026-03-03 18:36:48,572 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:36:48  2026-03-03 18:36:48,573 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:36:48] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:38:42  2026-03-03 18:38:42,277 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:38:42] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:38:42  2026-03-03 18:38:42,361 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:38:42  2026-03-03 18:38:42,371 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:38:42  2026-03-03 18:38:42,372 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:38:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:38:42  2026-03-03 18:38:42,478 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:38:42  2026-03-03 18:38:42,479 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:38:42  2026-03-03 18:38:42,479 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:38:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:40:36  2026-03-03 18:40:36,201 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 18:40:36] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:40:36  2026-03-03 18:40:36,306 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:40:36  2026-03-03 18:40:36,307 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:40:36  2026-03-03 18:40:36,307 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:40:36] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:40:36  2026-03-03 18:40:36,386 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:40:36  2026-03-03 18:40:36,386 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:40:36  2026-03-03 18:40:36,386 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 18:40:36] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:42:32  2026-03-03 18:42:32,566 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:42:32] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:42:32  2026-03-03 18:42:32,665 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:42:32  2026-03-03 18:42:32,666 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:42:32  2026-03-03 18:42:32,666 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:42:32] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:42:32  2026-03-03 18:42:32,749 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:42:32  2026-03-03 18:42:32,749 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:42:32  2026-03-03 18:42:32,749 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:42:32] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:44:28  2026-03-03 18:44:28,385 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:44:28] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:44:28  2026-03-03 18:44:28,487 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:44:28  2026-03-03 18:44:28,487 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:44:28  2026-03-03 18:44:28,487 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:44:28] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:44:28  2026-03-03 18:44:28,560 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:44:28  2026-03-03 18:44:28,560 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:44:28  2026-03-03 18:44:28,560 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:44:28] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:46:23  2026-03-03 18:46:23,518 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:46:23] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:46:23  2026-03-03 18:46:23,594 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:46:23  2026-03-03 18:46:23,594 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:46:23  2026-03-03 18:46:23,595 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:46:23] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:46:23  2026-03-03 18:46:23,689 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:46:23  2026-03-03 18:46:23,690 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:46:23  2026-03-03 18:46:23,692 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 18:46:23] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:48:17  2026-03-03 18:48:17,822 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:48:17] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:48:17  2026-03-03 18:48:17,928 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:48:17  2026-03-03 18:48:17,928 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:48:17  2026-03-03 18:48:17,929 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:48:17] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:48:18  2026-03-03 18:48:18,018 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:48:18  2026-03-03 18:48:18,019 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:48:18  2026-03-03 18:48:18,019 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:48:18] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:50:11  2026-03-03 18:50:11,518 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:50:11] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:50:11  2026-03-03 18:50:11,601 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:50:11  2026-03-03 18:50:11,601 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:50:11  2026-03-03 18:50:11,602 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:50:11] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:50:11  2026-03-03 18:50:11,671 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:50:11  2026-03-03 18:50:11,671 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:50:11  2026-03-03 18:50:11,671 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:50:11] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:52:04  2026-03-03 18:52:04,861 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:52:04] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:52:04  2026-03-03 18:52:04,974 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:52:04  2026-03-03 18:52:04,974 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:52:04  2026-03-03 18:52:04,974 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 18:52:04] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:52:05  2026-03-03 18:52:05,055 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:52:05  2026-03-03 18:52:05,055 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:52:05  2026-03-03 18:52:05,055 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 18:52:05] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:53:59  2026-03-03 18:53:59,909 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:53:59] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:54:00  2026-03-03 18:54:00,016 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:54:00  2026-03-03 18:54:00,016 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:54:00  2026-03-03 18:54:00,016 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:54:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:54:00  2026-03-03 18:54:00,108 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:54:00  2026-03-03 18:54:00,108 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:54:00  2026-03-03 18:54:00,108 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 18:54:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:55:53  2026-03-03 18:55:53,437 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:55:53] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:55:53  2026-03-03 18:55:53,530 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:55:53  2026-03-03 18:55:53,530 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:55:53  2026-03-03 18:55:53,531 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:55:53] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:55:53  2026-03-03 18:55:53,598 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:55:53  2026-03-03 18:55:53,598 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:55:53  2026-03-03 18:55:53,598 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 18:55:53] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:57:48  2026-03-03 18:57:48,750 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:57:48] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:57:48  2026-03-03 18:57:48,847 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:57:48  2026-03-03 18:57:48,847 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:57:48  2026-03-03 18:57:48,847 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:57:48] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:57:48  2026-03-03 18:57:48,931 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:57:48  2026-03-03 18:57:48,931 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:57:48  2026-03-03 18:57:48,931 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 18:57:48] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:59:02  2026-03-03 18:59:02,223 - src.market_state_api - INFO -    Preserved Fisher data: fisher_opportunities=0
+2026-03-03 18:59:02  2026-03-03 18:59:02,223 - src.market_state_api - INFO -    Preserved Fisher data: fisher_last_updated=2026-03-03T18:00:38.314007
+2026-03-03 18:59:02  2026-03-03 18:59:02,224 - src.market_state_api - INFO -    Preserved Fisher data: fisher_count=0
+2026-03-03 18:59:02  2026-03-03 18:59:02,224 - src.market_state_api - INFO -    Preserved Fisher data: fisher_analysis=28 pairs
+2026-03-03 18:59:02  2026-03-03 18:59:02,224 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_opportunities=0
+2026-03-03 18:59:02  2026-03-03 18:59:02,224 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_last_updated=2026-03-03T18:57:48.859600
+2026-03-03 18:59:02  2026-03-03 18:59:02,224 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_opportunities=0
+2026-03-03 18:59:02  2026-03-03 18:59:02,224 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_last_updated=2026-03-03T18:57:48.859615
+2026-03-03 18:59:02  2026-03-03 18:59:02,225 - src.market_state_api - INFO - Γ£à Market state saved to /var/data/market_state.json
+2026-03-03 18:59:02  2026-03-03 18:59:02,225 - src.market_state_api - INFO -    Bias: BULLISH, Regime: TRENDING, Pairs: ['GBP/USD', 'USD/CHF', 'USD/JPY', 'EUR/USD', 'USD/ZAR', 'USD/MXN']
+2026-03-03 18:59:02  2026-03-03 18:59:02,225 - __main__ - INFO - Γ£à Market state received: BULLISH TRENDING - 6 pairs
+2026-03-03 18:59:02  2026-03-03 18:59:02,225 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 18:59:02] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 18:59:43  2026-03-03 18:59:43,110 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:59:43] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 18:59:43  2026-03-03 18:59:43,204 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:59:43  2026-03-03 18:59:43,204 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:59:43  2026-03-03 18:59:43,204 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 18:59:43] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 18:59:43  2026-03-03 18:59:43,364 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 18:59:43  2026-03-03 18:59:43,364 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 18:59:43  2026-03-03 18:59:43,364 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 18:59:43] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:01:38  2026-03-03 19:01:38,571 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:01:38] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:01:42  2026-03-03 19:01:42,529 - src.market_state_api - INFO - Γ£à Merged Fisher opportunities: 0 opportunities
+2026-03-03 19:01:42  2026-03-03 19:01:42,529 - __main__ - INFO - Γ£à Fisher opportunities received: 0 opportunities
+2026-03-03 19:01:42  2026-03-03 19:01:42,530 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:01:42] "POST /fisher-opportunities HTTP/1.1" 200 -
+2026-03-03 19:01:42  2026-03-03 19:01:42,692 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:01:42] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:01:42  2026-03-03 19:01:42,766 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:01:42  2026-03-03 19:01:42,768 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:01:42  2026-03-03 19:01:42,769 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:01:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:01:42  2026-03-03 19:01:42,868 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:01:42  2026-03-03 19:01:42,872 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:01:42  2026-03-03 19:01:42,873 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:01:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:03:35  2026-03-03 19:03:35,791 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:03:35] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:03:35  2026-03-03 19:03:35,881 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:03:35  2026-03-03 19:03:35,881 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:03:35  2026-03-03 19:03:35,881 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:03:35] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:03:35  2026-03-03 19:03:35,985 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:03:35  2026-03-03 19:03:35,985 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:03:35  2026-03-03 19:03:35,985 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:03:35] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:04:32  2026-03-03 19:04:32,300 - src.market_state_api - INFO -    Preserved Fisher data: fisher_opportunities=0
+2026-03-03 19:04:32  2026-03-03 19:04:32,300 - src.market_state_api - INFO -    Preserved Fisher data: fisher_last_updated=2026-03-03T19:01:42.426956
+2026-03-03 19:04:32  2026-03-03 19:04:32,300 - src.market_state_api - INFO -    Preserved Fisher data: fisher_count=0
+2026-03-03 19:04:32  2026-03-03 19:04:32,300 - src.market_state_api - INFO -    Preserved Fisher data: fisher_analysis=28 pairs
+2026-03-03 19:04:32  2026-03-03 19:04:32,300 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_opportunities=0
+2026-03-03 19:04:32  2026-03-03 19:04:32,300 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_last_updated=2026-03-03T19:03:35.893466
+2026-03-03 19:04:32  2026-03-03 19:04:32,300 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_opportunities=0
+2026-03-03 19:04:32  2026-03-03 19:04:32,300 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_last_updated=2026-03-03T19:03:35.893480
+2026-03-03 19:04:32  2026-03-03 19:04:32,301 - src.market_state_api - INFO - Γ£à Market state saved to /var/data/market_state.json
+2026-03-03 19:04:32  2026-03-03 19:04:32,301 - src.market_state_api - INFO -    Bias: BULLISH, Regime: HIGH_VOL, Pairs: ['GBP/USD', 'AUD/JPY', 'USD/CHF', 'EUR/USD', 'USD/ZAR']
+2026-03-03 19:04:32  2026-03-03 19:04:32,302 - __main__ - INFO - Γ£à Market state received: BULLISH HIGH_VOL - 5 pairs
+2026-03-03 19:04:32  2026-03-03 19:04:32,302 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 19:04:32] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 19:05:29  2026-03-03 19:05:29,457 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 19:05:29] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:05:29  2026-03-03 19:05:29,550 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:05:29  2026-03-03 19:05:29,550 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:05:29  2026-03-03 19:05:29,551 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:05:29] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:05:29  2026-03-03 19:05:29,634 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:05:29  2026-03-03 19:05:29,634 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:05:29  2026-03-03 19:05:29,635 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:05:29] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:07:22  2026-03-03 19:07:22,720 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:07:22] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:07:22  2026-03-03 19:07:22,794 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:07:22  2026-03-03 19:07:22,794 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:07:22  2026-03-03 19:07:22,794 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:07:22] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:07:22  2026-03-03 19:07:22,873 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:07:22  2026-03-03 19:07:22,873 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:07:22  2026-03-03 19:07:22,873 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:07:22] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:09:16  2026-03-03 19:09:16,743 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:09:16] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:09:16  2026-03-03 19:09:16,844 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:09:16  2026-03-03 19:09:16,844 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:09:16  2026-03-03 19:09:16,844 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:09:16] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:09:16  2026-03-03 19:09:16,921 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:09:16  2026-03-03 19:09:16,921 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:09:16  2026-03-03 19:09:16,921 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:09:16] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:11:12  2026-03-03 19:11:12,113 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:11:12] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:11:12  2026-03-03 19:11:12,217 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:11:12  2026-03-03 19:11:12,218 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:11:12  2026-03-03 19:11:12,218 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:11:12] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:11:12  2026-03-03 19:11:12,291 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:11:12  2026-03-03 19:11:12,291 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:11:12  2026-03-03 19:11:12,291 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:11:12] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:13:07  2026-03-03 19:13:07,339 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:13:07] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:13:07  2026-03-03 19:13:07,493 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:13:07  2026-03-03 19:13:07,493 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:13:07  2026-03-03 19:13:07,494 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:13:07] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:13:07  2026-03-03 19:13:07,568 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:13:07  2026-03-03 19:13:07,568 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:13:07  2026-03-03 19:13:07,569 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:13:07] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:15:00  2026-03-03 19:15:00,798 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:15:00] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:15:00  2026-03-03 19:15:00,883 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:15:00  2026-03-03 19:15:00,883 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:15:00  2026-03-03 19:15:00,883 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:15:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:15:01  2026-03-03 19:15:01,001 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:15:01  2026-03-03 19:15:01,001 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:15:01  2026-03-03 19:15:01,001 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:15:01] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:16:55  2026-03-03 19:16:55,947 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:16:55] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:16:56  2026-03-03 19:16:56,053 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:16:56  2026-03-03 19:16:56,053 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:16:56  2026-03-03 19:16:56,053 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:16:56] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:16:56  2026-03-03 19:16:56,133 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:16:56  2026-03-03 19:16:56,133 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:16:56  2026-03-03 19:16:56,133 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:16:56] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:18:49  2026-03-03 19:18:49,296 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:18:49] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:18:49  2026-03-03 19:18:49,387 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:18:49  2026-03-03 19:18:49,387 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:18:49  2026-03-03 19:18:49,387 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:18:49] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:18:49  2026-03-03 19:18:49,474 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:18:49  2026-03-03 19:18:49,474 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:18:49  2026-03-03 19:18:49,474 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:18:49] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:20:42  2026-03-03 19:20:42,442 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:20:42] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:20:42  2026-03-03 19:20:42,549 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:20:42  2026-03-03 19:20:42,549 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:20:42  2026-03-03 19:20:42,550 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 19:20:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:20:42  2026-03-03 19:20:42,630 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:20:42  2026-03-03 19:20:42,630 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:20:42  2026-03-03 19:20:42,631 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:20:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:22:35  2026-03-03 19:22:35,875 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:22:35] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:22:36  2026-03-03 19:22:36,012 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:22:36  2026-03-03 19:22:36,012 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:22:36  2026-03-03 19:22:36,012 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 19:22:36] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:22:36  2026-03-03 19:22:36,114 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:22:36  2026-03-03 19:22:36,114 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:22:36  2026-03-03 19:22:36,114 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:22:36] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:24:30  2026-03-03 19:24:30,112 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:24:30] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:24:30  2026-03-03 19:24:30,192 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:24:30  2026-03-03 19:24:30,192 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:24:30  2026-03-03 19:24:30,192 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:24:30] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:24:30  2026-03-03 19:24:30,260 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:24:30  2026-03-03 19:24:30,260 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:24:30  2026-03-03 19:24:30,260 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:24:30] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:26:23  2026-03-03 19:26:23,729 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 19:26:23] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:26:23  2026-03-03 19:26:23,810 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:26:23  2026-03-03 19:26:23,810 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:26:23  2026-03-03 19:26:23,810 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 19:26:23] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:26:23  2026-03-03 19:26:23,900 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:26:23  2026-03-03 19:26:23,900 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:26:23  2026-03-03 19:26:23,901 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 19:26:23] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:28:18  2026-03-03 19:28:18,635 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:28:18] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:28:18  2026-03-03 19:28:18,725 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:28:18  2026-03-03 19:28:18,725 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:28:18  2026-03-03 19:28:18,726 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:28:18] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:28:18  2026-03-03 19:28:18,799 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:28:18  2026-03-03 19:28:18,799 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:28:18  2026-03-03 19:28:18,799 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:28:18] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:30:13  2026-03-03 19:30:13,058 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:30:13] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:30:13  2026-03-03 19:30:13,149 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:30:13  2026-03-03 19:30:13,150 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:30:13  2026-03-03 19:30:13,150 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:30:13] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:30:13  2026-03-03 19:30:13,223 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:30:13  2026-03-03 19:30:13,223 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:30:13  2026-03-03 19:30:13,223 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:30:13] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:32:06  2026-03-03 19:32:06,602 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:32:06] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:32:06  2026-03-03 19:32:06,703 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:32:06  2026-03-03 19:32:06,704 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:32:06  2026-03-03 19:32:06,704 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:32:06] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:32:06  2026-03-03 19:32:06,790 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:32:06  2026-03-03 19:32:06,790 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:32:06  2026-03-03 19:32:06,790 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:32:06] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:34:00  2026-03-03 19:34:00,507 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:34:00] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:34:00  2026-03-03 19:34:00,615 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:34:00  2026-03-03 19:34:00,615 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:34:00  2026-03-03 19:34:00,615 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 19:34:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:34:00  2026-03-03 19:34:00,705 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:34:00  2026-03-03 19:34:00,705 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:34:00  2026-03-03 19:34:00,706 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 19:34:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:35:54  2026-03-03 19:35:54,566 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:35:54] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:35:54  2026-03-03 19:35:54,657 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:35:54  2026-03-03 19:35:54,657 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:35:54  2026-03-03 19:35:54,658 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 19:35:54] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:35:54  2026-03-03 19:35:54,727 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:35:54  2026-03-03 19:35:54,727 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:35:54  2026-03-03 19:35:54,727 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:35:54] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:37:49  2026-03-03 19:37:49,578 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:37:49] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:37:49  2026-03-03 19:37:49,661 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:37:49  2026-03-03 19:37:49,661 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:37:49  2026-03-03 19:37:49,662 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:37:49] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:37:49  2026-03-03 19:37:49,733 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:37:49  2026-03-03 19:37:49,733 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:37:49  2026-03-03 19:37:49,733 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:37:49] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:39:44  2026-03-03 19:39:44,053 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:39:44] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:39:44  2026-03-03 19:39:44,147 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:39:44  2026-03-03 19:39:44,147 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:39:44  2026-03-03 19:39:44,147 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:39:44] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:39:44  2026-03-03 19:39:44,215 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:39:44  2026-03-03 19:39:44,215 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:39:44  2026-03-03 19:39:44,216 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:39:44] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:41:37  2026-03-03 19:41:37,440 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:41:37] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:41:37  2026-03-03 19:41:37,602 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:41:37  2026-03-03 19:41:37,602 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:41:37  2026-03-03 19:41:37,603 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:41:37] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:41:37  2026-03-03 19:41:37,780 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:41:37  2026-03-03 19:41:37,780 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:41:37  2026-03-03 19:41:37,780 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:41:37] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:43:32  2026-03-03 19:43:32,203 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:43:32] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:43:32  2026-03-03 19:43:32,291 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:43:32  2026-03-03 19:43:32,291 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:43:32  2026-03-03 19:43:32,291 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:43:32] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:43:32  2026-03-03 19:43:32,371 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:43:32  2026-03-03 19:43:32,371 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:43:32  2026-03-03 19:43:32,371 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:43:32] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:45:26  2026-03-03 19:45:26,479 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:45:26] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:45:26  2026-03-03 19:45:26,581 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:45:26  2026-03-03 19:45:26,581 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:45:26  2026-03-03 19:45:26,581 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:45:26] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:45:26  2026-03-03 19:45:26,662 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:45:26  2026-03-03 19:45:26,662 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:45:26  2026-03-03 19:45:26,662 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 19:45:26] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:47:19  2026-03-03 19:47:19,726 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:47:19] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:47:19  2026-03-03 19:47:19,808 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:47:19  2026-03-03 19:47:19,808 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:47:19  2026-03-03 19:47:19,809 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:47:19] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:47:19  2026-03-03 19:47:19,884 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:47:19  2026-03-03 19:47:19,884 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:47:19  2026-03-03 19:47:19,885 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:47:19] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:49:14  2026-03-03 19:49:14,076 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:49:14] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:49:14  2026-03-03 19:49:14,157 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:49:14  2026-03-03 19:49:14,157 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:49:14  2026-03-03 19:49:14,158 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 19:49:14] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:49:14  2026-03-03 19:49:14,256 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:49:14  2026-03-03 19:49:14,256 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:49:14  2026-03-03 19:49:14,257 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 19:49:14] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:51:09  2026-03-03 19:51:09,227 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 19:51:09] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:51:09  2026-03-03 19:51:09,315 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:51:09  2026-03-03 19:51:09,315 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:51:09  2026-03-03 19:51:09,316 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:51:09] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:51:09  2026-03-03 19:51:09,386 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:51:09  2026-03-03 19:51:09,386 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:51:09  2026-03-03 19:51:09,386 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:51:09] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:53:04  2026-03-03 19:53:04,546 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 19:53:04] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:53:04  2026-03-03 19:53:04,639 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:53:04  2026-03-03 19:53:04,639 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:53:04  2026-03-03 19:53:04,639 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:53:04] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:53:04  2026-03-03 19:53:04,706 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:53:04  2026-03-03 19:53:04,706 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:53:04  2026-03-03 19:53:04,706 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 19:53:04] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:54:59  2026-03-03 19:54:59,017 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 19:54:59] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:54:59  2026-03-03 19:54:59,107 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:54:59  2026-03-03 19:54:59,107 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:54:59  2026-03-03 19:54:59,108 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:54:59] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:54:59  2026-03-03 19:54:59,187 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:54:59  2026-03-03 19:54:59,188 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:54:59  2026-03-03 19:54:59,188 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:54:59] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:56:52  2026-03-03 19:56:52,831 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 19:56:52] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:56:52  2026-03-03 19:56:52,911 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:56:52  2026-03-03 19:56:52,911 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:56:52  2026-03-03 19:56:52,911 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 19:56:52] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:56:53  2026-03-03 19:56:53,001 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:56:53  2026-03-03 19:56:53,001 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:56:53  2026-03-03 19:56:53,001 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 19:56:53] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:58:46  2026-03-03 19:58:46,767 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:58:46] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 19:58:46  2026-03-03 19:58:46,864 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:58:46  2026-03-03 19:58:46,864 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:58:46  2026-03-03 19:58:46,864 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 19:58:46] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:58:46  2026-03-03 19:58:46,954 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 19:58:46  2026-03-03 19:58:46,954 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 19:58:46  2026-03-03 19:58:46,955 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:58:46] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 19:59:12  2026-03-03 19:59:12,770 - src.market_state_api - INFO -    Preserved Fisher data: fisher_opportunities=0
+2026-03-03 19:59:12  2026-03-03 19:59:12,770 - src.market_state_api - INFO -    Preserved Fisher data: fisher_last_updated=2026-03-03T19:01:42.426956
+2026-03-03 19:59:12  2026-03-03 19:59:12,770 - src.market_state_api - INFO -    Preserved Fisher data: fisher_count=0
+2026-03-03 19:59:12  2026-03-03 19:59:12,770 - src.market_state_api - INFO -    Preserved Fisher data: fisher_analysis=28 pairs
+2026-03-03 19:59:12  2026-03-03 19:59:12,770 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_opportunities=0
+2026-03-03 19:59:12  2026-03-03 19:59:12,770 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_last_updated=2026-03-03T19:58:46.874425
+2026-03-03 19:59:12  2026-03-03 19:59:12,770 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_opportunities=0
+2026-03-03 19:59:12  2026-03-03 19:59:12,770 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_last_updated=2026-03-03T19:58:46.874434
+2026-03-03 19:59:12  2026-03-03 19:59:12,772 - src.market_state_api - INFO - Γ£à Market state saved to /var/data/market_state.json
+2026-03-03 19:59:12  2026-03-03 19:59:12,772 - src.market_state_api - INFO -    Bias: BULLISH, Regime: TRENDING, Pairs: ['GBP/USD', 'USD/CHF', 'EUR/USD', 'USD/ZAR', 'USD/MXN']
+2026-03-03 19:59:12  2026-03-03 19:59:12,772 - __main__ - INFO - Γ£à Market state received: BULLISH TRENDING - 5 pairs
+2026-03-03 19:59:12  2026-03-03 19:59:12,772 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 19:59:12] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 20:00:40  2026-03-03 20:00:40,856 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:00:40] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:00:44  2026-03-03 20:00:44,789 - src.market_state_api - INFO - Γ£à Merged Fisher opportunities: 0 opportunities
+2026-03-03 20:00:44  2026-03-03 20:00:44,799 - __main__ - INFO - Γ£à Fisher opportunities received: 0 opportunities
+2026-03-03 20:00:44  2026-03-03 20:00:44,800 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:00:44] "POST /fisher-opportunities HTTP/1.1" 200 -
+2026-03-03 20:00:44  2026-03-03 20:00:44,951 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:00:44] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:00:45  2026-03-03 20:00:45,044 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:00:45  2026-03-03 20:00:45,044 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:00:45  2026-03-03 20:00:45,045 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:00:45] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:00:45  2026-03-03 20:00:45,127 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:00:45  2026-03-03 20:00:45,128 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:00:45  2026-03-03 20:00:45,129 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:00:45] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:02:38  2026-03-03 20:02:38,386 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:02:38] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:02:38  2026-03-03 20:02:38,481 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:02:38  2026-03-03 20:02:38,481 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:02:38  2026-03-03 20:02:38,484 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:02:38] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:02:38  2026-03-03 20:02:38,571 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:02:38  2026-03-03 20:02:38,571 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:02:38  2026-03-03 20:02:38,576 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:02:38] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:04:31  2026-03-03 20:04:31,662 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:04:31] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:04:31  2026-03-03 20:04:31,751 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:04:31  2026-03-03 20:04:31,751 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:04:31  2026-03-03 20:04:31,751 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:04:31] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:04:31  2026-03-03 20:04:31,842 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:04:31  2026-03-03 20:04:31,843 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:04:31  2026-03-03 20:04:31,843 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:04:31] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:04:37  2026-03-03 20:04:37,962 - src.market_state_api - INFO -    Preserved Fisher data: fisher_opportunities=0
+2026-03-03 20:04:37  2026-03-03 20:04:37,962 - src.market_state_api - INFO -    Preserved Fisher data: fisher_last_updated=2026-03-03T20:00:44.709448
+2026-03-03 20:04:37  2026-03-03 20:04:37,962 - src.market_state_api - INFO -    Preserved Fisher data: fisher_count=0
+2026-03-03 20:04:37  2026-03-03 20:04:37,962 - src.market_state_api - INFO -    Preserved Fisher data: fisher_analysis=28 pairs
+2026-03-03 20:04:37  2026-03-03 20:04:37,962 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_opportunities=0
+2026-03-03 20:04:37  2026-03-03 20:04:37,962 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_last_updated=2026-03-03T20:04:31.760667
+2026-03-03 20:04:37  2026-03-03 20:04:37,962 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_opportunities=0
+2026-03-03 20:04:37  2026-03-03 20:04:37,962 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_last_updated=2026-03-03T20:04:31.760683
+2026-03-03 20:04:37  2026-03-03 20:04:37,963 - src.market_state_api - INFO - Γ£à Market state saved to /var/data/market_state.json
+2026-03-03 20:04:37  2026-03-03 20:04:37,963 - src.market_state_api - INFO -    Bias: BULLISH, Regime: TRENDING, Pairs: ['GBP/USD', 'USD/CHF', 'USD/JPY', 'EUR/USD', 'GBP/JPY', 'NZD/USD', 'USD/ZAR']
+2026-03-03 20:04:37  2026-03-03 20:04:37,963 - __main__ - INFO - Γ£à Market state received: BULLISH TRENDING - 7 pairs
+2026-03-03 20:04:37  2026-03-03 20:04:37,963 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 20:04:37] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 20:06:25  2026-03-03 20:06:25,317 - werkzeug - INFO - 10.23.224.67 - - [03/Mar/2026 20:06:25] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:06:25  2026-03-03 20:06:25,410 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:06:25  2026-03-03 20:06:25,410 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:06:25  2026-03-03 20:06:25,411 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:06:25] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:06:25  2026-03-03 20:06:25,477 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:06:25  2026-03-03 20:06:25,477 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:06:25  2026-03-03 20:06:25,477 - werkzeug - INFO - 10.23.224.67 - - [03/Mar/2026 20:06:25] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:08:20  2026-03-03 20:08:20,427 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 20:08:20] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:08:20  2026-03-03 20:08:20,503 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:08:20  2026-03-03 20:08:20,503 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:08:20  2026-03-03 20:08:20,503 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 20:08:20] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:08:20  2026-03-03 20:08:20,589 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:08:20  2026-03-03 20:08:20,589 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:08:20  2026-03-03 20:08:20,589 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:08:20] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:10:16  2026-03-03 20:10:16,886 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:10:16] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:10:16  2026-03-03 20:10:16,977 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:10:16  2026-03-03 20:10:16,977 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:10:16  2026-03-03 20:10:16,977 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:10:16] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:10:17  2026-03-03 20:10:17,076 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:10:17  2026-03-03 20:10:17,076 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:10:17  2026-03-03 20:10:17,076 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:10:17] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:12:11  2026-03-03 20:12:11,922 - werkzeug - INFO - 10.23.224.67 - - [03/Mar/2026 20:12:11] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:12:12  2026-03-03 20:12:12,009 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:12:12  2026-03-03 20:12:12,009 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:12:12  2026-03-03 20:12:12,009 - werkzeug - INFO - 10.23.224.67 - - [03/Mar/2026 20:12:12] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:12:12  2026-03-03 20:12:12,077 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:12:12  2026-03-03 20:12:12,077 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:12:12  2026-03-03 20:12:12,078 - werkzeug - INFO - 10.23.224.67 - - [03/Mar/2026 20:12:12] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:14:06  2026-03-03 20:14:06,577 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 20:14:06] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:14:06  2026-03-03 20:14:06,672 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:14:06  2026-03-03 20:14:06,672 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:14:06  2026-03-03 20:14:06,673 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 20:14:06] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:14:06  2026-03-03 20:14:06,743 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:14:06  2026-03-03 20:14:06,743 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:14:06  2026-03-03 20:14:06,743 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 20:14:06] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:16:01  2026-03-03 20:16:01,718 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:16:01] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:16:01  2026-03-03 20:16:01,864 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:16:01  2026-03-03 20:16:01,864 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:16:01  2026-03-03 20:16:01,864 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 20:16:01] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:16:01  2026-03-03 20:16:01,963 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:16:01  2026-03-03 20:16:01,963 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:16:01  2026-03-03 20:16:01,963 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 20:16:01] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:18:09  2026-03-03 20:18:09,174 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:18:09] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:18:09  2026-03-03 20:18:09,281 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:18:09  2026-03-03 20:18:09,281 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:18:09  2026-03-03 20:18:09,281 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:18:09] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:18:09  2026-03-03 20:18:09,385 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:18:09  2026-03-03 20:18:09,385 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:18:09  2026-03-03 20:18:09,385 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:18:09] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:20:18  2026-03-03 20:20:18,331 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 20:20:18] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:20:18  2026-03-03 20:20:18,440 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:20:18  2026-03-03 20:20:18,440 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:20:18  2026-03-03 20:20:18,440 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:20:18] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:20:18  2026-03-03 20:20:18,533 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:20:18  2026-03-03 20:20:18,533 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:20:18  2026-03-03 20:20:18,533 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:20:18] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:22:13  2026-03-03 20:22:13,343 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:22:13] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:22:13  2026-03-03 20:22:13,421 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:22:13  2026-03-03 20:22:13,421 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:22:13  2026-03-03 20:22:13,421 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:22:13] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:22:13  2026-03-03 20:22:13,501 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:22:13  2026-03-03 20:22:13,501 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:22:13  2026-03-03 20:22:13,501 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:22:13] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:24:07  2026-03-03 20:24:07,969 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:24:07] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:24:08  2026-03-03 20:24:08,054 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:24:08  2026-03-03 20:24:08,054 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:24:08  2026-03-03 20:24:08,055 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:24:08] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:24:08  2026-03-03 20:24:08,135 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:24:08  2026-03-03 20:24:08,135 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:24:08  2026-03-03 20:24:08,135 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:24:08] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:26:02  2026-03-03 20:26:02,834 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:26:02] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:26:02  2026-03-03 20:26:02,917 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:26:02  2026-03-03 20:26:02,917 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:26:02  2026-03-03 20:26:02,917 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:26:02] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:26:03  2026-03-03 20:26:03,013 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:26:03  2026-03-03 20:26:03,014 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:26:03  2026-03-03 20:26:03,014 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:26:03] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:27:57  2026-03-03 20:27:57,578 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:27:57] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:27:57  2026-03-03 20:27:57,678 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:27:57  2026-03-03 20:27:57,678 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:27:57  2026-03-03 20:27:57,679 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:27:57] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:27:57  2026-03-03 20:27:57,747 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:27:57  2026-03-03 20:27:57,748 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:27:57  2026-03-03 20:27:57,748 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:27:57] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:29:52  2026-03-03 20:29:52,479 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 20:29:52] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:29:52  2026-03-03 20:29:52,581 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:29:52  2026-03-03 20:29:52,581 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:29:52  2026-03-03 20:29:52,581 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 20:29:52] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:29:52  2026-03-03 20:29:52,665 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:29:52  2026-03-03 20:29:52,665 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:29:52  2026-03-03 20:29:52,666 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 20:29:52] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:31:47  2026-03-03 20:31:47,883 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:31:47] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:31:47  2026-03-03 20:31:47,975 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:31:47  2026-03-03 20:31:47,975 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:31:47  2026-03-03 20:31:47,976 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:31:47] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:31:48  2026-03-03 20:31:48,055 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:31:48  2026-03-03 20:31:48,055 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:31:48  2026-03-03 20:31:48,055 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:31:48] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:33:42  2026-03-03 20:33:42,367 - werkzeug - INFO - 10.17.37.66 - - [03/Mar/2026 20:33:42] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:33:42  2026-03-03 20:33:42,444 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:33:42  2026-03-03 20:33:42,445 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:33:42  2026-03-03 20:33:42,446 - werkzeug - INFO - 10.17.37.66 - - [03/Mar/2026 20:33:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:33:42  2026-03-03 20:33:42,517 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:33:42  2026-03-03 20:33:42,521 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:33:42  2026-03-03 20:33:42,522 - werkzeug - INFO - 10.17.37.66 - - [03/Mar/2026 20:33:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:35:37  2026-03-03 20:35:37,593 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 20:35:37] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:35:37  2026-03-03 20:35:37,699 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:35:37  2026-03-03 20:35:37,699 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:35:37  2026-03-03 20:35:37,699 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:35:37] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:35:37  2026-03-03 20:35:37,785 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:35:37  2026-03-03 20:35:37,785 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:35:37  2026-03-03 20:35:37,785 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 20:35:37] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:37:32  2026-03-03 20:37:32,031 - werkzeug - INFO - 10.17.37.66 - - [03/Mar/2026 20:37:32] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:37:32  2026-03-03 20:37:32,135 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:37:32  2026-03-03 20:37:32,135 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:37:32  2026-03-03 20:37:32,135 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:37:32] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:37:32  2026-03-03 20:37:32,223 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:37:32  2026-03-03 20:37:32,223 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:37:32  2026-03-03 20:37:32,224 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:37:32] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:39:28  2026-03-03 20:39:28,444 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:39:28] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:39:28  2026-03-03 20:39:28,518 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:39:28  2026-03-03 20:39:28,518 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:39:28  2026-03-03 20:39:28,518 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:39:28] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:39:28  2026-03-03 20:39:28,612 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:39:28  2026-03-03 20:39:28,613 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:39:28  2026-03-03 20:39:28,613 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 20:39:28] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:41:23  2026-03-03 20:41:23,385 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:41:23] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:41:23  2026-03-03 20:41:23,476 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:41:23  2026-03-03 20:41:23,476 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:41:23  2026-03-03 20:41:23,476 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 20:41:23] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:41:23  2026-03-03 20:41:23,561 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:41:23  2026-03-03 20:41:23,561 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:41:23  2026-03-03 20:41:23,561 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:41:23] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:43:18  2026-03-03 20:43:18,880 - werkzeug - INFO - 10.17.37.66 - - [03/Mar/2026 20:43:18] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:43:18  2026-03-03 20:43:18,998 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:43:18  2026-03-03 20:43:18,998 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:43:18  2026-03-03 20:43:18,998 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 20:43:18] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:43:19  2026-03-03 20:43:19,089 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:43:19  2026-03-03 20:43:19,089 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:43:19  2026-03-03 20:43:19,090 - werkzeug - INFO - 10.17.37.66 - - [03/Mar/2026 20:43:19] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:45:14  2026-03-03 20:45:14,367 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:45:14] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:45:14  2026-03-03 20:45:14,451 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:45:14  2026-03-03 20:45:14,452 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:45:14  2026-03-03 20:45:14,452 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:45:14] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:45:14  2026-03-03 20:45:14,550 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:45:14  2026-03-03 20:45:14,550 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:45:14  2026-03-03 20:45:14,551 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:45:14] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:47:09  2026-03-03 20:47:09,322 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:47:09] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:47:09  2026-03-03 20:47:09,402 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:47:09  2026-03-03 20:47:09,402 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:47:09  2026-03-03 20:47:09,403 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:47:09] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:47:09  2026-03-03 20:47:09,495 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:47:09  2026-03-03 20:47:09,495 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:47:09  2026-03-03 20:47:09,496 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:47:09] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:49:04  2026-03-03 20:49:04,809 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:49:04] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:49:04  2026-03-03 20:49:04,897 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:49:04  2026-03-03 20:49:04,897 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:49:04  2026-03-03 20:49:04,897 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:49:04] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:49:04  2026-03-03 20:49:04,967 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:49:04  2026-03-03 20:49:04,967 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:49:04  2026-03-03 20:49:04,968 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:49:04] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:50:59  2026-03-03 20:50:59,334 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:50:59] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:50:59  2026-03-03 20:50:59,419 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:50:59  2026-03-03 20:50:59,419 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:50:59  2026-03-03 20:50:59,420 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:50:59] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:50:59  2026-03-03 20:50:59,487 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:50:59  2026-03-03 20:50:59,487 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:50:59  2026-03-03 20:50:59,488 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:50:59] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:53:02  2026-03-03 20:53:02,977 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:53:02] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:53:03  2026-03-03 20:53:03,072 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:53:03  2026-03-03 20:53:03,072 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:53:03  2026-03-03 20:53:03,072 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:53:03] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:53:03  2026-03-03 20:53:03,155 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:53:03  2026-03-03 20:53:03,155 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:53:03  2026-03-03 20:53:03,155 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:53:03] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:55:01  2026-03-03 20:55:01,244 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:55:01] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:55:01  2026-03-03 20:55:01,347 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:55:01  2026-03-03 20:55:01,347 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:55:01  2026-03-03 20:55:01,347 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:55:01] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:55:01  2026-03-03 20:55:01,435 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:55:01  2026-03-03 20:55:01,435 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:55:01  2026-03-03 20:55:01,435 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 20:55:01] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:56:56  2026-03-03 20:56:56,203 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 20:56:56] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:56:56  2026-03-03 20:56:56,287 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:56:56  2026-03-03 20:56:56,287 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:56:56  2026-03-03 20:56:56,287 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 20:56:56] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:56:56  2026-03-03 20:56:56,386 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:56:56  2026-03-03 20:56:56,386 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:56:56  2026-03-03 20:56:56,386 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 20:56:56] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:58:51  2026-03-03 20:58:51,233 - src.market_state_api - INFO -    Preserved Fisher data: fisher_opportunities=0
+2026-03-03 20:58:51  2026-03-03 20:58:51,233 - src.market_state_api - INFO -    Preserved Fisher data: fisher_last_updated=2026-03-03T20:00:44.709448
+2026-03-03 20:58:51  2026-03-03 20:58:51,233 - src.market_state_api - INFO -    Preserved Fisher data: fisher_count=0
+2026-03-03 20:58:51  2026-03-03 20:58:51,233 - src.market_state_api - INFO -    Preserved Fisher data: fisher_analysis=28 pairs
+2026-03-03 20:58:51  2026-03-03 20:58:51,233 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_opportunities=0
+2026-03-03 20:58:51  2026-03-03 20:58:51,233 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_last_updated=2026-03-03T20:56:56.298357
+2026-03-03 20:58:51  2026-03-03 20:58:51,233 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_opportunities=0
+2026-03-03 20:58:51  2026-03-03 20:58:51,233 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_last_updated=2026-03-03T20:56:56.298372
+2026-03-03 20:58:51  2026-03-03 20:58:51,235 - src.market_state_api - INFO - Γ£à Market state saved to /var/data/market_state.json
+2026-03-03 20:58:51  2026-03-03 20:58:51,235 - src.market_state_api - INFO -    Bias: BULLISH, Regime: TRENDING, Pairs: ['GBP/USD', 'USD/CHF', 'EUR/USD', 'NZD/USD', 'USD/ZAR', 'USD/MXN']
+2026-03-03 20:58:51  2026-03-03 20:58:51,235 - __main__ - INFO - Γ£à Market state received: BULLISH TRENDING - 6 pairs
+2026-03-03 20:58:51  2026-03-03 20:58:51,235 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:58:51] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 20:58:51  2026-03-03 20:58:51,936 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:58:51] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 20:58:52  2026-03-03 20:58:52,108 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:58:52  2026-03-03 20:58:52,108 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:58:52  2026-03-03 20:58:52,109 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 20:58:52] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 20:58:52  2026-03-03 20:58:52,238 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 20:58:52  2026-03-03 20:58:52,238 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 20:58:52  2026-03-03 20:58:52,238 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 20:58:52] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:01:05  2026-03-03 21:01:05,120 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:01:05] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:01:09  2026-03-03 21:01:09,179 - src.market_state_api - INFO - Γ£à Merged Fisher opportunities: 0 opportunities
+2026-03-03 21:01:09  2026-03-03 21:01:09,179 - __main__ - INFO - Γ£à Fisher opportunities received: 0 opportunities
+2026-03-03 21:01:09  2026-03-03 21:01:09,180 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:01:09] "POST /fisher-opportunities HTTP/1.1" 200 -
+2026-03-03 21:01:09  2026-03-03 21:01:09,371 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:01:09] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:01:09  2026-03-03 21:01:09,453 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:01:09  2026-03-03 21:01:09,453 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:01:09  2026-03-03 21:01:09,453 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:01:09] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:01:09  2026-03-03 21:01:09,534 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:01:09  2026-03-03 21:01:09,534 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:01:09  2026-03-03 21:01:09,534 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:01:09] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:03:08  2026-03-03 21:03:08,487 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:03:08] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:03:08  2026-03-03 21:03:08,557 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:03:08  2026-03-03 21:03:08,557 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:03:08  2026-03-03 21:03:08,558 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:03:08] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:03:08  2026-03-03 21:03:08,644 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:03:08  2026-03-03 21:03:08,644 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:03:08  2026-03-03 21:03:08,644 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 21:03:08] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:04:09  2026-03-03 21:04:09,808 - src.market_state_api - INFO -    Preserved Fisher data: fisher_opportunities=0
+2026-03-03 21:04:09  2026-03-03 21:04:09,808 - src.market_state_api - INFO -    Preserved Fisher data: fisher_last_updated=2026-03-03T21:01:09.091412
+2026-03-03 21:04:09  2026-03-03 21:04:09,808 - src.market_state_api - INFO -    Preserved Fisher data: fisher_count=0
+2026-03-03 21:04:09  2026-03-03 21:04:09,809 - src.market_state_api - INFO -    Preserved Fisher data: fisher_analysis=28 pairs
+2026-03-03 21:04:09  2026-03-03 21:04:09,809 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_opportunities=0
+2026-03-03 21:04:09  2026-03-03 21:04:09,809 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_last_updated=2026-03-03T21:03:08.569251
+2026-03-03 21:04:09  2026-03-03 21:04:09,809 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_opportunities=0
+2026-03-03 21:04:09  2026-03-03 21:04:09,809 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_last_updated=2026-03-03T21:03:08.569262
+2026-03-03 21:04:09  2026-03-03 21:04:09,810 - src.market_state_api - INFO - Γ£à Market state saved to /var/data/market_state.json
+2026-03-03 21:04:09  2026-03-03 21:04:09,810 - src.market_state_api - INFO -    Bias: BULLISH, Regime: TRENDING, Pairs: ['GBP/USD', 'USD/CHF', 'EUR/USD', 'GBP/JPY', 'USD/ZAR', 'USD/MXN']
+2026-03-03 21:04:09  2026-03-03 21:04:09,810 - __main__ - INFO - Γ£à Market state received: BULLISH TRENDING - 6 pairs
+2026-03-03 21:04:09  2026-03-03 21:04:09,810 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:04:09] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 21:05:01  2026-03-03 21:05:01,529 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:05:01] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:05:01  2026-03-03 21:05:01,636 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:05:01  2026-03-03 21:05:01,636 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:05:01  2026-03-03 21:05:01,636 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:05:01] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:05:01  2026-03-03 21:05:01,733 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:05:01  2026-03-03 21:05:01,733 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:05:01  2026-03-03 21:05:01,733 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:05:01] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:06:56  2026-03-03 21:06:56,267 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:06:56] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:06:56  2026-03-03 21:06:56,347 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:06:56  2026-03-03 21:06:56,347 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:06:56  2026-03-03 21:06:56,348 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:06:56] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:06:56  2026-03-03 21:06:56,423 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:06:56  2026-03-03 21:06:56,423 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:06:56  2026-03-03 21:06:56,424 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:06:56] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:08:50  2026-03-03 21:08:50,241 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:08:50] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:08:50  2026-03-03 21:08:50,315 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:08:50  2026-03-03 21:08:50,316 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:08:50  2026-03-03 21:08:50,316 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:08:50] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:08:50  2026-03-03 21:08:50,393 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:08:50  2026-03-03 21:08:50,393 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:08:50  2026-03-03 21:08:50,394 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:08:50] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:10:46  2026-03-03 21:10:46,686 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:10:46] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:10:46  2026-03-03 21:10:46,774 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:10:46  2026-03-03 21:10:46,774 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:10:46  2026-03-03 21:10:46,775 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:10:46] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:10:46  2026-03-03 21:10:46,869 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:10:46  2026-03-03 21:10:46,869 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:10:46  2026-03-03 21:10:46,870 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:10:46] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:12:42  2026-03-03 21:12:42,056 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:12:42] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:12:42  2026-03-03 21:12:42,147 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:12:42  2026-03-03 21:12:42,147 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:12:42  2026-03-03 21:12:42,147 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:12:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:12:42  2026-03-03 21:12:42,232 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:12:42  2026-03-03 21:12:42,232 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:12:42  2026-03-03 21:12:42,233 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:12:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:14:35  2026-03-03 21:14:35,772 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:14:35] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:14:35  2026-03-03 21:14:35,890 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:14:35  2026-03-03 21:14:35,890 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:14:35  2026-03-03 21:14:35,890 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:14:35] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:14:35  2026-03-03 21:14:35,994 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:14:35  2026-03-03 21:14:35,994 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:14:35  2026-03-03 21:14:35,995 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:14:35] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:16:31  2026-03-03 21:16:31,061 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:16:31] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:16:31  2026-03-03 21:16:31,133 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:16:31  2026-03-03 21:16:31,133 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:16:31  2026-03-03 21:16:31,133 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:16:31] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:16:31  2026-03-03 21:16:31,225 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:16:31  2026-03-03 21:16:31,225 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:16:31  2026-03-03 21:16:31,226 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:16:31] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:18:26  2026-03-03 21:18:26,451 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:18:26] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:18:26  2026-03-03 21:18:26,540 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:18:26  2026-03-03 21:18:26,540 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:18:26  2026-03-03 21:18:26,540 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:18:26] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:18:26  2026-03-03 21:18:26,631 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:18:26  2026-03-03 21:18:26,631 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:18:26  2026-03-03 21:18:26,631 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:18:26] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:20:23  2026-03-03 21:20:23,803 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:20:23] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:20:23  2026-03-03 21:20:23,931 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:20:23  2026-03-03 21:20:23,931 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:20:23  2026-03-03 21:20:23,931 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:20:23] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:20:24  2026-03-03 21:20:24,015 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:20:24  2026-03-03 21:20:24,015 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:20:24  2026-03-03 21:20:24,016 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:20:24] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:22:17  2026-03-03 21:22:17,902 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:22:17] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:22:17  2026-03-03 21:22:17,977 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:22:17  2026-03-03 21:22:17,977 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:22:17  2026-03-03 21:22:17,978 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:22:17] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:22:18  2026-03-03 21:22:18,076 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:22:18  2026-03-03 21:22:18,076 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:22:18  2026-03-03 21:22:18,076 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:22:18] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:24:12  2026-03-03 21:24:12,292 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:24:12] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:24:12  2026-03-03 21:24:12,372 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:24:12  2026-03-03 21:24:12,372 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:24:12  2026-03-03 21:24:12,373 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:24:12] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:24:12  2026-03-03 21:24:12,461 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:24:12  2026-03-03 21:24:12,461 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:24:12  2026-03-03 21:24:12,461 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:24:12] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:26:06  2026-03-03 21:26:06,426 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:26:06] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:26:06  2026-03-03 21:26:06,519 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:26:06  2026-03-03 21:26:06,519 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:26:06  2026-03-03 21:26:06,519 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:26:06] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:26:06  2026-03-03 21:26:06,692 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:26:06  2026-03-03 21:26:06,692 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:26:06  2026-03-03 21:26:06,693 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:26:06] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:28:00  2026-03-03 21:28:00,292 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:28:00] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:28:00  2026-03-03 21:28:00,425 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:28:00  2026-03-03 21:28:00,425 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:28:00  2026-03-03 21:28:00,425 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:28:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:28:00  2026-03-03 21:28:00,513 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:28:00  2026-03-03 21:28:00,513 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:28:00  2026-03-03 21:28:00,513 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:28:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:29:54  2026-03-03 21:29:54,962 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:29:54] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:29:55  2026-03-03 21:29:55,074 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:29:55  2026-03-03 21:29:55,074 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:29:55  2026-03-03 21:29:55,075 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:29:55] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:29:55  2026-03-03 21:29:55,151 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:29:55  2026-03-03 21:29:55,151 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:29:55  2026-03-03 21:29:55,151 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:29:55] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:31:51  2026-03-03 21:31:51,169 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:31:51] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:31:51  2026-03-03 21:31:51,242 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:31:51  2026-03-03 21:31:51,242 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:31:51  2026-03-03 21:31:51,242 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:31:51] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:31:51  2026-03-03 21:31:51,320 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:31:51  2026-03-03 21:31:51,320 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:31:51  2026-03-03 21:31:51,320 - werkzeug - INFO - 10.21.108.6 - - [03/Mar/2026 21:31:51] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:33:46  2026-03-03 21:33:46,185 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:33:46] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:33:46  2026-03-03 21:33:46,257 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:33:46  2026-03-03 21:33:46,257 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:33:46  2026-03-03 21:33:46,260 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:33:46] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:33:46  2026-03-03 21:33:46,368 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:33:46  2026-03-03 21:33:46,371 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:33:46  2026-03-03 21:33:46,372 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:33:46] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:35:41  2026-03-03 21:35:41,580 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:35:41] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:35:41  2026-03-03 21:35:41,669 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:35:41  2026-03-03 21:35:41,669 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:35:41  2026-03-03 21:35:41,670 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:35:41] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:35:41  2026-03-03 21:35:41,748 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:35:41  2026-03-03 21:35:41,748 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:35:41  2026-03-03 21:35:41,748 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:35:41] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:37:36  2026-03-03 21:37:36,820 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:37:36] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:37:36  2026-03-03 21:37:36,905 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:37:36  2026-03-03 21:37:36,905 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:37:36  2026-03-03 21:37:36,905 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:37:36] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:37:37  2026-03-03 21:37:37,006 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:37:37  2026-03-03 21:37:37,006 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:37:37  2026-03-03 21:37:37,006 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:37:37] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:39:31  2026-03-03 21:39:31,974 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:39:31] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:39:32  2026-03-03 21:39:32,086 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:39:32  2026-03-03 21:39:32,086 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:39:32  2026-03-03 21:39:32,086 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:39:32] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:39:32  2026-03-03 21:39:32,156 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:39:32  2026-03-03 21:39:32,156 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:39:32  2026-03-03 21:39:32,156 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:39:32] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:41:27  2026-03-03 21:41:27,146 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:41:27] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:41:27  2026-03-03 21:41:27,255 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:41:27  2026-03-03 21:41:27,255 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:41:27  2026-03-03 21:41:27,256 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:41:27] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:41:27  2026-03-03 21:41:27,322 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:41:27  2026-03-03 21:41:27,322 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:41:27  2026-03-03 21:41:27,323 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:41:27] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:43:22  2026-03-03 21:43:22,348 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:43:22] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:43:22  2026-03-03 21:43:22,436 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:43:22  2026-03-03 21:43:22,436 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:43:22  2026-03-03 21:43:22,437 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:43:22] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:43:22  2026-03-03 21:43:22,537 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:43:22  2026-03-03 21:43:22,537 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:43:22  2026-03-03 21:43:22,537 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:43:22] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:45:16  2026-03-03 21:45:16,604 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:45:16] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:45:16  2026-03-03 21:45:16,686 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:45:16  2026-03-03 21:45:16,686 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:45:16  2026-03-03 21:45:16,687 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:45:16] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:45:16  2026-03-03 21:45:16,768 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:45:16  2026-03-03 21:45:16,768 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:45:16  2026-03-03 21:45:16,768 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:45:16] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:47:11  2026-03-03 21:47:11,556 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:47:11] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:47:11  2026-03-03 21:47:11,673 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:47:11  2026-03-03 21:47:11,673 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:47:11  2026-03-03 21:47:11,673 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:47:11] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:47:11  2026-03-03 21:47:11,750 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:47:11  2026-03-03 21:47:11,750 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:47:11  2026-03-03 21:47:11,751 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:47:11] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:49:06  2026-03-03 21:49:06,052 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:49:06] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:49:06  2026-03-03 21:49:06,132 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:49:06  2026-03-03 21:49:06,132 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:49:06  2026-03-03 21:49:06,132 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:49:06] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:49:06  2026-03-03 21:49:06,234 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:49:06  2026-03-03 21:49:06,234 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:49:06  2026-03-03 21:49:06,234 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:49:06] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:51:00  2026-03-03 21:51:00,785 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:51:00] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:51:00  2026-03-03 21:51:00,863 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:51:00  2026-03-03 21:51:00,863 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:51:00  2026-03-03 21:51:00,864 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:51:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:51:00  2026-03-03 21:51:00,951 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:51:00  2026-03-03 21:51:00,951 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:51:00  2026-03-03 21:51:00,952 - werkzeug - INFO - 10.21.29.134 - - [03/Mar/2026 21:51:00] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:52:55  2026-03-03 21:52:55,034 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 21:52:55] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:52:55  2026-03-03 21:52:55,106 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:52:55  2026-03-03 21:52:55,106 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:52:55  2026-03-03 21:52:55,107 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 21:52:55] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:52:55  2026-03-03 21:52:55,201 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:52:55  2026-03-03 21:52:55,201 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:52:55  2026-03-03 21:52:55,201 - werkzeug - INFO - 10.18.227.195 - - [03/Mar/2026 21:52:55] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:54:48  2026-03-03 21:54:48,650 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:54:48] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:54:48  2026-03-03 21:54:48,748 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:54:48  2026-03-03 21:54:48,748 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:54:48  2026-03-03 21:54:48,749 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:54:48] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:54:48  2026-03-03 21:54:48,825 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:54:48  2026-03-03 21:54:48,825 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:54:48  2026-03-03 21:54:48,826 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:54:48] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:56:42  2026-03-03 21:56:42,515 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:56:42] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:56:42  2026-03-03 21:56:42,603 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:56:42  2026-03-03 21:56:42,603 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:56:42  2026-03-03 21:56:42,604 - werkzeug - INFO - 10.22.68.9 - - [03/Mar/2026 21:56:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:56:42  2026-03-03 21:56:42,677 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:56:42  2026-03-03 21:56:42,677 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:56:42  2026-03-03 21:56:42,677 - werkzeug - INFO - 10.21.72.137 - - [03/Mar/2026 21:56:42] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:58:29  2026-03-03 21:58:29,509 - src.market_state_api - INFO -    Preserved Fisher data: fisher_opportunities=0
+2026-03-03 21:58:29  2026-03-03 21:58:29,509 - src.market_state_api - INFO -    Preserved Fisher data: fisher_last_updated=2026-03-03T21:01:09.091412
+2026-03-03 21:58:29  2026-03-03 21:58:29,509 - src.market_state_api - INFO -    Preserved Fisher data: fisher_count=0
+2026-03-03 21:58:29  2026-03-03 21:58:29,509 - src.market_state_api - INFO -    Preserved Fisher data: fisher_analysis=28 pairs
+2026-03-03 21:58:29  2026-03-03 21:58:29,509 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_opportunities=0
+2026-03-03 21:58:29  2026-03-03 21:58:29,509 - src.market_state_api - INFO -    Preserved Fisher data: ft_dmi_ema_last_updated=2026-03-03T21:56:42.614018
+2026-03-03 21:58:29  2026-03-03 21:58:29,509 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_opportunities=0
+2026-03-03 21:58:29  2026-03-03 21:58:29,509 - src.market_state_api - INFO -    Preserved Fisher data: dmi_ema_last_updated=2026-03-03T21:56:42.614033
+2026-03-03 21:58:29  2026-03-03 21:58:29,510 - src.market_state_api - INFO - Γ£à Market state saved to /var/data/market_state.json
+2026-03-03 21:58:29  2026-03-03 21:58:29,510 - src.market_state_api - INFO -    Bias: BULLISH, Regime: TRENDING, Pairs: ['GBP/USD', 'USD/CHF', 'EUR/USD', 'AUD/USD', 'USD/ZAR', 'USD/MXN']
+2026-03-03 21:58:29  2026-03-03 21:58:29,510 - __main__ - INFO - Γ£à Market state received: BULLISH TRENDING - 6 pairs
+2026-03-03 21:58:29  2026-03-03 21:58:29,511 - werkzeug - INFO - 10.23.7.95 - - [03/Mar/2026 21:58:29] "POST /market-state HTTP/1.1" 200 -
+2026-03-03 21:58:40  2026-03-03 21:58:40,301 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:58:40] "GET /market-state HTTP/1.1" 200 -
+2026-03-03 21:58:40  2026-03-03 21:58:40,385 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:58:40  2026-03-03 21:58:40,385 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:58:40  2026-03-03 21:58:40,385 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:58:40] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -
+2026-03-03 21:58:40  2026-03-03 21:58:40,468 - src.market_state_api - INFO - Γ£à Merged FT-DMI-EMA: 0, DMI-EMA: 0 opportunities
+2026-03-03 21:58:40  2026-03-03 21:58:40,468 - __main__ - INFO - Γ£à FT-DMI-EMA opportunities received: 0 opportunities
+2026-03-03 21:58:40  2026-03-03 21:58:40,468 - werkzeug - INFO - 10.21.81.67 - - [03/Mar/2026 21:58:40] "POST /ft-dmi-ema-opportunities HTTP/1.1" 200 -

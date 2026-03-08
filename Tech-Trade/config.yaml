@@ -1,0 +1,68 @@
+# Tech-Trade Configuration
+
+# Data Source
+data_source:
+  provider: "dukascopy"
+  base_url: "https://www.dukascopy.com/datafeed"
+  
+# Currency Pairs to Analyze
+currency_pairs:
+  major:
+    - "EUR/USD"
+    - "GBP/USD"
+    - "USD/JPY"
+    - "USD/CHF"
+    - "AUD/USD"
+    - "USD/CAD"
+    - "NZD/USD"
+  
+  minor:
+    - "EUR/GBP"
+    - "EUR/JPY"
+    - "GBP/JPY"
+    - "AUD/JPY"
+    - "EUR/AUD"
+    - "EUR/CAD"
+    - "GBP/AUD"
+    - "GBP/CAD"
+    - "AUD/NZD"
+  
+  exotic:
+    - "USD/BRL"
+    - "USD/ZAR"
+    - "USD/TRY"
+    - "USD/MXN"
+    - "EUR/TRY"
+    - "GBP/ZAR"
+
+# Timeframes
+timeframes:
+  - "1DAY"    # Daily data
+  - "1WEEK"   # Weekly data
+
+# Historical Period
+historical_period:
+  years: 3  # Reduced from 5 to 3 years for better yfinance compatibility
+  start_date: null  # Auto-calculate: today - 3 years
+  end_date: null    # Auto: today
+
+# Pattern Detection
+pattern_detection:
+  correlation_threshold: 0.7      # Minimum correlation to consider
+  lookback_periods: 20            # Periods to analyze for patterns
+  min_pattern_occurrences: 10     # Minimum times pattern must occur
+  consistency_threshold: 0.6      # Minimum consistency across timeframes
+
+# Data Storage
+data_storage:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  patterns_dir: "data/patterns"
+  cache_duration_hours: 24        # Cache downloaded data for 24 hours
+
+# Analysis Settings
+analysis:
+  max_pairs_to_compare: 50        # Limit number of pair combinations
+  min_data_points: 100           # Minimum data points required
+  parallel_processing: true      # Use multiprocessing if available
+

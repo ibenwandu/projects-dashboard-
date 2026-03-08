@@ -1,0 +1,30 @@
+cd Indeed-jobs
+
+
+#1
+#You can run a 25-job batch with:
+python run_workflow.py --phase fetch
+
+#or the full pipeline:
+python run_workflow.py --phase all
+
+# To use a different size, pass it explicitly, e.g.:
+##--max-jobs 10 for a quick test
+##--max-jobs 50 (or higher) for a larger run
+
+python run_workflow.py --phase fetch --max-jobs 10
+
+
+
+#1+2. Script to run the job openings and rank them
+   python run_workflow.py --phase score
+
+
+#3. Script to generate custom resumes from approved list
+   python run_workflow.py --phase resumes
+
+
+#scripts to retrieve job vacancies from Indeed:
+
+
+

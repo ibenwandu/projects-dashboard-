@@ -1,0 +1,60 @@
+#Full run: 
+python run_workflow.py --phase all
+
+#Fetch only: 
+python run_workflow.py --phase fetch --max-jobs 10 (comment now says “10 jobs” to match)
+#Then: 
+python run_workflow.py --phase score
+
+#Resumes: add Job IDs to config/approved_jobs.txt, then 
+python run_workflow.py --phase resumes
+
+
+Added / clarified
+Note that the full run uses 25 jobs by default (not 10).
+--debug: use when fetch finds only 1 URL or all jobs are “blocked” (e.g. --phase fetch --max-jobs 10 --debug).
+--phase pdf: regenerate only PDFs from existing .md in output/resumes/ (e.g. after changing the template).
+--headless: run browser in background (commented, since it can increase blocks).
+--top-n: limit how many top jobs appear in the report (e.g. --top-n 15).
+
+CONVERT .MD TO .PDF
+
+Convert that single file (run from Linkedin-jobs):
+cd c:\Users\user\projects\personal\Linkedin-jobs
+python md_to_pdf_one.py processed/Data_Analyst_Bayshore_HealthCare.md
+
+
+Optional: specify the PDF path:
+python md_to_pdf_one.py processed/Business_Analyst_Galent.md --output output/resumes/Business_Analyst_Galent.pdf
+
+COVER LETTERS
+cover letter only:
+cd c:\Users\user\projects\personal\Linkedin-jobs
+python cover_letter_one.py output/10_Analyst__Data_Analytics___Modelling_Connor__Clark___Lunn_Infrastructure.md processed/Analyst__Data_Analytics___Modelling_Connor__Clark___Lunn_Infrastructure.md
+
+cover letter and pdf:
+python cover_letter_one.py output/10_Analyst__Data_Analytics___Modelling_Connor__Clark___Lunn_Infrastructure.md processed/Analyst__Data_Analytics___Modelling_Connor__Clark___Lunn_Infrastructure.md --pdf
+
+For only pdf
+python md_to_pdf_one.py processed/Analyst__Data_Analytics___Modelling_Connor__Clark___Lunn_Infrastructure_cover_letter.md
+
+cd c:\Users\user\projects\personal\Linkedin-jobs
+python md_to_pdf_one.py processed/BUSINESS_MANAGEMENT_ANALYST_City_of_Toronto_cover_letter.md
+
+To force the cover letter template for any file:
+python md_to_pdf_one.py processed/SomeFile.md --cover-letter
+
+
+With a custom output path:
+python cover_letter_one.py output/18_BUSINESS_MANAGEMENT_ANALYST_City_of_Toronto.md processed/BUSINESS_MANAGEMENT_ANALYST_City_of_Toronto.md --output processed/cover_letters/Business_Analyst_City_cover.md
+
+
+Cover letter + PDF:
+python cover_letter_one.py output/18_BUSINESS_MANAGEMENT_ANALYST_City_of_Toronto.md processed/BUSINESS_MANAGEMENT_ANALYST_City_of_Toronto.md --pdf
+
+cd c:\Users\user\projects\personal\Linkedin-jobs
+python cover_letter_one.py output/18_BUSINESS_MANAGEMENT_ANALYST_City_of_Toronto.md processed/BUSINESS_MANAGEMENT_ANALYST_City_of_Toronto.md --pdf
+
+
+Generic usage:
+python cover_letter_one.py <job-file.md> <resume-file.md> [--output path.md] [--pdf]

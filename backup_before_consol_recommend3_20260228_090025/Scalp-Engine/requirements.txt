@@ -1,0 +1,32 @@
+# Scalp-Engine Dependencies
+
+# OANDA API
+oandapyV20>=0.6.3
+requests>=2.31.0  # Required by oandapyV20
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Configuration
+python-dotenv>=1.0.0
+pyyaml>=6.0
+
+# Database (for RL integration)
+# sqlite3 is built-in to Python, no need to install
+
+# Market Data (for RL simulation)
+yfinance>=0.2.28
+
+# Logging
+colorlog>=6.7.0
+
+# Utilities
+pytz>=2023.3
+
+# UI
+streamlit>=1.28.0
+
+# API Server (for receiving market state from Trade-Alerts)
+flask>=3.0.0
+

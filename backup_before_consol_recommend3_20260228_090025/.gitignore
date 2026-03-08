@@ -1,0 +1,62 @@
+# Backup directories (use git history for recovery instead)
+backup_*/
+Scalp-Engine/backup_*/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+logs_archive/
+
+# Data
+data/
+*.db
+*.sqlite
+*.sqlite3# Market state (local)
+market_state.json# Scalp-Engine (if copied, ignore its local files)
+Scalp-Engine/.env
+Scalp-Engine/*.db
+Scalp-Engine/*.sqlite
+Scalp-Engine/scalping_rl.db
+Scalp-Engine/market_state.json
+Scalp-Engine/__pycache__/
+Scalp-Engine/**/__pycache__/

@@ -1,0 +1,209 @@
+#!/usr/bin/env python3
+"""
+Trade-Alerts Review - Analyze LLM recommendations and outcomes from RL database
+
+Examines the RL database to show what Trade-Alerts recommended, LLM consensus,
+and actual outcomes to compare with OANDA trade results.
+
+Usage:
+    python trade-alerts-review              # Show summary of recent analysis
+    python trade-alerts-review --detailed   # Show all recommendations with outcomes
+    python trade-alerts-review --llm-stats  # Show LLM performance stats
+"""
+
+import sqlite3
+import sys
+import argparse
+from pathlib import Path
+from datetime import datetime, timedelta
+from collections import defaultdict
+
+class TradeAlertsReviewer:
+    """Analyze Trade-Alerts RL database"""
+
+    def __init__(self):
+        db_path = Path(__file__).parent / "data" / "trade_alerts_rl.db"
+
+        if not db_path.exists():
+            print(f"ERROR: RL database not found at {db_path}")
+            sys.exit(1)
+
+        self.db_path = db_path
+        self.conn = sqlite3.connect(db_path)
+        self.conn.row_factory = sqlite3.Row
+
+    def get_recent_recommendations(self, days=7, limit=100):
+        """Get recent recommendations with outcomes"""
+        cursor = self.conn.cursor()
+
+        since = datetime.utcnow() - timedelta(days=days)
+
+        cursor.execute("""
+            SELECT
+                timestamp, llm_source, pair, direction,
+                entry_price, stop_loss, take_profit_1, take_profit_2,
+                position_size_pct, confidence, outcome, pnl_pips,
+                consensus_analysis
+            FROM recommendations
+            WHERE timestamp >= ?
+            ORDER BY timestamp DESC
+            LIMIT ?
+        """, (since.isoformat(), limit))
+
+        return cursor.fetchall()
+
+    def get_llm_performance(self):
+        """Get performance stats by LLM"""
+        cursor = self.conn.cursor()
+
+        cursor.execute("""
+            SELECT
+                llm_source,
+                COUNT(*) as total,
+                SUM(CASE WHEN outcome LIKE 'WIN%' THEN 1 ELSE 0 END) as wins,
+                SUM(CASE WHEN outcome = 'LOSS_SL' THEN 1 ELSE 0 END) as losses,
+                ROUND(AVG(CASE WHEN outcome IS NOT NULL THEN
+                    CASE WHEN outcome LIKE 'WIN%' THEN 1 ELSE 0 END
+                END) * 100, 1) as win_rate,
+                ROUND(AVG(pnl_pips), 2) as avg_pnl_pips,
+                ROUND(SUM(CASE WHEN pnl_pips > 0 THEN pnl_pips ELSE 0 END) /
+                      NULLIF(SUM(CASE WHEN pnl_pips < 0 THEN ABS(pnl_pips) ELSE 0 END), 0), 2) as profit_factor
+            FROM recommendations
+            WHERE outcome IS NOT NULL
+            GROUP BY llm_source
+            ORDER BY win_rate DESC
+        """)
+
+        return cursor.fetchall()
+
+    def get_consensus_analysis(self):
+        """Analyze consensus levels vs outcomes"""
+        cursor = self.conn.cursor()
+
+        cursor.execute("""
+            SELECT
+                pair, direction,
+                COUNT(*) as total_opportunities,
+                COUNT(CASE WHEN outcome LIKE 'WIN%' THEN 1 END) as wins,
+                ROUND(AVG(CASE WHEN outcome IS NOT NULL THEN
+                    CASE WHEN outcome LIKE 'WIN%' THEN 1 ELSE 0 END
+                END) * 100, 1) as win_rate,
+                ROUND(AVG(pnl_pips), 2) as avg_pnl
+            FROM recommendations
+            WHERE outcome IS NOT NULL
+            GROUP BY pair, direction
+            ORDER BY total_opportunities DESC
+            LIMIT 20
+        """)
+
+        return cursor.fetchall()
+
+    def print_summary(self):
+        """Print summary of recent recommendations"""
+        print("\n" + "=" * 80)
+        print("TRADE-ALERTS RECOMMENDATION ANALYSIS")
+        print("=" * 80)
+
+        # Overall stats
+        cursor = self.conn.cursor()
+        cursor.execute("""
+            SELECT
+                COUNT(*) as total,
+                COUNT(CASE WHEN outcome IS NOT NULL THEN 1 END) as evaluated,
+                COUNT(CASE WHEN outcome LIKE 'WIN%' THEN 1 END) as wins,
+                COUNT(CASE WHEN outcome = 'LOSS_SL' THEN 1 END) as losses,
+                ROUND(AVG(CASE WHEN outcome IS NOT NULL THEN
+                    CASE WHEN outcome LIKE 'WIN%' THEN 1 ELSE 0 END
+                END) * 100, 1) as win_rate,
+                ROUND(AVG(pnl_pips), 2) as avg_pnl
+            FROM recommendations
+        """)
+
+        row = cursor.fetchone()
+        print(f"\nAll-Time Stats:")
+        print(f"  Total Recommendations: {row['total']}")
+        print(f"  Evaluated: {row['evaluated']}")
+        print(f"  Wins: {row['wins']}")
+        print(f"  Losses: {row['losses']}")
+        print(f"  Win Rate: {row['win_rate']}%")
+        print(f"  Avg P&L: {row['avg_pnl']} pips")
+
+        # LLM Performance
+        print(f"\nLLM Performance Ranking:")
+        for llm in self.get_llm_performance():
+            print(f"  {llm['llm_source']:12} - {llm['total']} recs, {llm['win_rate']}% win rate, PF: {llm['profit_factor']}")
+
+        # Top pairs
+        print(f"\nTop Trading Pairs (by opportunity count):")
+        for pair_stat in self.get_consensus_analysis():
+            print(f"  {pair_stat['pair']:10} {pair_stat['direction']:5} - {pair_stat['total_opportunities']} opps, {pair_stat['win_rate']}% WR, {pair_stat['avg_pnl']}pips avg")
+
+        print("\n" + "=" * 80)
+
+    def print_detailed(self):
+        """Print detailed recommendations"""
+        print("\n" + "=" * 80)
+        print("RECENT RECOMMENDATIONS (Last 7 days)")
+        print("=" * 80)
+
+        recs = self.get_recent_recommendations(days=7, limit=50)
+
+        for i, rec in enumerate(recs, 1):
+            outcome = rec['outcome'] if rec['outcome'] else "PENDING"
+            pnl = f"{rec['pnl_pips']:+.0f}pips" if rec['pnl_pips'] else "N/A"
+
+            print(f"\n{i}. {rec['pair']} {rec['direction']}")
+            print(f"   Source: {rec['llm_source']}")
+            print(f"   Entry: {rec['entry_price']:.5f}, SL: {rec['stop_loss']:.5f}, TP: {rec['take_profit_1']:.5f}")
+            print(f"   Position: {rec['position_size_pct']}%, Confidence: {rec['confidence']}")
+            print(f"   Outcome: {outcome} ({pnl})")
+            print(f"   Time: {rec['timestamp'][:10]}")
+
+        print("\n" + "=" * 80)
+
+    def print_llm_stats(self):
+        """Print detailed LLM statistics"""
+        print("\n" + "=" * 80)
+        print("LLM PERFORMANCE STATISTICS")
+        print("=" * 80)
+
+        for llm in self.get_llm_performance():
+            print(f"\n{llm['llm_source'].upper()}")
+            print(f"  Total Recommendations: {llm['total']}")
+            print(f"  Wins: {llm['wins']}")
+            print(f"  Losses: {llm['losses']}")
+            print(f"  Win Rate: {llm['win_rate']}%")
+            print(f"  Avg P&L: {llm['avg_pnl_pips']} pips")
+            print(f"  Profit Factor: {llm['profit_factor']}")
+
+        print("\n" + "=" * 80)
+
+    def run(self):
+        """Execute the reviewer"""
+        return True
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Analyze Trade-Alerts recommendations and outcomes")
+    parser.add_argument("--detailed", action="store_true", help="Show detailed recommendations")
+    parser.add_argument("--llm-stats", action="store_true", help="Show LLM performance stats")
+
+    args = parser.parse_args()
+
+    reviewer = TradeAlertsReviewer()
+
+    if not reviewer.run():
+        return 1
+
+    if args.detailed:
+        reviewer.print_detailed()
+    elif args.llm_stats:
+        reviewer.print_llm_stats()
+    else:
+        reviewer.print_summary()
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

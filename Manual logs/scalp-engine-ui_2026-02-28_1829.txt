@@ -1,0 +1,14 @@
+[33mWARNING `nonInteractive` called after logging setup.[39m
+[31mERROR Unrecognized error: {}[39m
+[0m[1m[31merror[0m: Uncaught (in promise) ReferenceError: WebSocketStream is not defined
+        const stream = new WebSocketStream(
+[0m[31m                       ^[0m
+    at [0m[36mfile:///C:/Users/user/AppData/Local/Temp/deno-compile-render.exe/commands/services/tail.ts[0m:[0m[33m48[0m:[0m[33m24[0m
+    at async [0m[1m[3mhandleApiErrors[0m ([0m[36mfile:///C:/Users/user/AppData/Local/Temp/deno-compile-render.exe/api/error-handling.ts[0m:[0m[33m7[0m:[0m[33m12[0m)
+    at async [0m[36mfile:///C:/Users/user/AppData/Local/Temp/deno-compile-render.exe/commands/services/tail.ts[0m:[0m[33m34[0m:[0m[33m7[0m
+    at async [0m[1m[3mCommand.execute[0m ([0m[36mhttps://deno.land/x/cliffy@v0.25.6/command/command.ts[0m:[0m[33m1794[0m:[0m[33m7[0m)
+    at async [0m[1m[3mCommand.parseCommand[0m ([0m[36mhttps://deno.land/x/cliffy@v0.25.6/command/command.ts[0m:[0m[33m1639[0m:[0m[33m14[0m)
+    at async [0m[36mfile:///C:/Users/user/AppData/Local/Temp/deno-compile-render.exe/entry-point.ts[0m:[0m[33m3[0m:[0m[33m1[0m
+System.Management.Automation.RemoteException
+    [0m[33minfo:[0m new WebSocketStream() is an unstable API.
+    [0m[36mhint:[0m Run again with `--unstable-net` flag to enable this API.

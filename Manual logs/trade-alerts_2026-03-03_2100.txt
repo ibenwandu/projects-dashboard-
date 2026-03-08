@@ -1,0 +1,1000 @@
+2026-03-04 00:47:16    Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-03-04 00:47:17  Collecting pydantic-core==2.41.5 (from pydantic<3,>=1.9.0->anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:47:17    Using cached pydantic_core-2.41.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+2026-03-04 00:47:17  Collecting typing-inspection>=0.4.2 (from pydantic<3,>=1.9.0->anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:47:17    Using cached typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-03-04 00:47:17  Collecting tqdm>4 (from openai>=1.0.0->-r requirements.txt (line 22))
+2026-03-04 00:47:17    Using cached tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+2026-03-04 00:47:17  Collecting google-ai-generativelanguage==0.6.15 (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:17    Using cached google_ai_generativelanguage-0.6.15-py3-none-any.whl.metadata (5.7 kB)
+2026-03-04 00:47:17  Collecting google-api-core (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:17    Using cached google_api_core-2.30.0-py3-none-any.whl.metadata (3.1 kB)
+2026-03-04 00:47:17  Collecting google-auth>=2.15.0 (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:17    Using cached google_auth-2.48.0-py3-none-any.whl.metadata (6.2 kB)
+2026-03-04 00:47:17  Collecting protobuf (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:17    Using cached protobuf-7.34.0-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+2026-03-04 00:47:17  Collecting google-auth>=2.15.0 (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:17    Using cached google_auth-2.49.0.dev0-py3-none-any.whl.metadata (6.0 kB)
+2026-03-04 00:47:17  Collecting proto-plus<2.0.0dev,>=1.22.3 (from google-ai-generativelanguage==0.6.15->google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:17    Using cached proto_plus-1.27.1-py3-none-any.whl.metadata (2.2 kB)
+2026-03-04 00:47:17  Collecting protobuf (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:17    Using cached protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+2026-03-04 00:47:17  Collecting googleapis-common-protos<2.0.0,>=1.56.3 (from google-api-core->google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:17    Using cached googleapis_common_protos-1.72.0-py3-none-any.whl.metadata (9.4 kB)
+2026-03-04 00:47:18  Collecting grpcio<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:18    Using cached grpcio-1.78.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+2026-03-04 00:47:18  Collecting grpcio-status<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:47:18    Using cached grpcio_status-1.78.0-py3-none-any.whl.metadata (1.3 kB)
+2026-03-04 00:47:18  INFO: pip is looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+2026-03-04 00:47:18    Using cached grpcio_status-1.76.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:47:18    Using cached grpcio_status-1.75.1-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:47:18    Using cached grpcio_status-1.75.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:47:18    Using cached grpcio_status-1.74.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:47:18    Using cached grpcio_status-1.73.1-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:47:18    Using cached grpcio_status-1.73.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:47:18    Using cached grpcio_status-1.72.2-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:47:18  INFO: pip is still looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+2026-03-04 00:47:18    Using cached grpcio_status-1.72.1-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:47:18    Using cached grpcio_status-1.71.2-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:47:18  Collecting multitasking>=0.0.7 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:47:18    Using cached multitasking-0.0.12-py3-none-any.whl
+2026-03-04 00:47:18  Collecting platformdirs>=2.0.0 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:47:18    Using cached platformdirs-4.9.2-py3-none-any.whl.metadata (4.7 kB)
+2026-03-04 00:47:18  Collecting frozendict>=2.3.4 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:47:18    Using cached frozendict-2.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+2026-03-04 00:47:18  Collecting peewee>=3.16.2 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:47:18    Using cached peewee-4.0.1-py3-none-any.whl.metadata (8.5 kB)
+2026-03-04 00:47:18  Collecting beautifulsoup4>=4.11.1 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:47:18    Using cached beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-04 00:47:18  Collecting curl_cffi<0.14,>=0.7 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:47:18    Using cached curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+2026-03-04 00:47:19  Collecting websockets>=13.0 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:47:19    Using cached websockets-16.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+2026-03-04 00:47:19  Collecting python-dateutil>=2.8.2 (from pandas>=2.0.0->-r requirements.txt (line 27))
+2026-03-04 00:47:19    Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-03-04 00:47:19  Collecting tzdata>=2022.7 (from pandas>=2.0.0->-r requirements.txt (line 27))
+2026-03-04 00:47:19    Using cached tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-03-04 00:47:19  Collecting blinker>=1.9.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:47:19    Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2026-03-04 00:47:19  Collecting click>=8.1.3 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:47:19    Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-03-04 00:47:19  Collecting itsdangerous>=2.2.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:47:19    Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2026-03-04 00:47:19  Collecting jinja2>=3.1.2 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:47:19    Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-03-04 00:47:19  Collecting markupsafe>=2.1.1 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:47:19    Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-03-04 00:47:19  Collecting werkzeug>=3.1.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:47:19    Using cached werkzeug-3.1.6-py3-none-any.whl.metadata (4.0 kB)
+2026-03-04 00:47:19  Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.11.1->yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:47:19    Using cached soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-04 00:47:19  Collecting pycparser (from cffi>=1.12->cryptography<44->PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:47:19    Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-03-04 00:47:19  Collecting google-auth-httplib2<1.0.0,>=0.2.0 (from google-api-python-client>=1.12.5->PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:47:19    Using cached google_auth_httplib2-0.3.0-py3-none-any.whl.metadata (3.1 kB)
+2026-03-04 00:47:19  Collecting uritemplate<5,>=3.0.1 (from google-api-python-client>=1.12.5->PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:47:19    Using cached uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+2026-03-04 00:47:19  Collecting pyparsing<4,>=3.1 (from httplib2>=0.9.1->oauth2client>=4.1.3->-r requirements.txt (line 3))
+2026-03-04 00:47:19    Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+2026-03-04 00:47:19  Using cached PyDrive2-1.21.3-py3-none-any.whl (47 kB)
+2026-03-04 00:47:19  Using cached cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl (4.0 MB)
+2026-03-04 00:47:19  Using cached pyOpenSSL-24.2.1-py3-none-any.whl (58 kB)
+2026-03-04 00:47:19  Using cached oauth2client-4.1.3-py2.py3-none-any.whl (98 kB)
+2026-03-04 00:47:19  Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+2026-03-04 00:47:19  Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+2026-03-04 00:47:19  Using cached idna-3.11-py3-none-any.whl (71 kB)
+2026-03-04 00:47:19  Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-03-04 00:47:19  Using cached python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+2026-03-04 00:47:19  Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-03-04 00:47:19  Downloading pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+2026-03-04 00:47:19  Using cached colorlog-6.10.1-py3-none-any.whl (11 kB)
+2026-03-04 00:47:19  Using cached anthropic-0.84.0-py3-none-any.whl (455 kB)
+2026-03-04 00:47:19  Using cached anyio-4.12.1-py3-none-any.whl (113 kB)
+2026-03-04 00:47:19  Using cached distro-1.9.0-py3-none-any.whl (20 kB)
+2026-03-04 00:47:19  Using cached docstring_parser-0.17.0-py3-none-any.whl (36 kB)
+2026-03-04 00:47:19  Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-03-04 00:47:19  Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-03-04 00:47:19  Using cached jiter-0.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (362 kB)
+2026-03-04 00:47:19  Using cached pydantic-2.12.5-py3-none-any.whl (463 kB)
+2026-03-04 00:47:19  Using cached pydantic_core-2.41.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-03-04 00:47:19  Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-03-04 00:47:19  Using cached openai-2.24.0-py3-none-any.whl (1.1 MB)
+2026-03-04 00:47:19  Using cached google_generativeai-0.8.6-py3-none-any.whl (155 kB)
+2026-03-04 00:47:19  Using cached google_ai_generativelanguage-0.6.15-py3-none-any.whl (1.3 MB)
+2026-03-04 00:47:19  Using cached google_api_core-2.30.0-py3-none-any.whl (173 kB)
+2026-03-04 00:47:19  Using cached google_auth-2.49.0.dev0-py3-none-any.whl (236 kB)
+2026-03-04 00:47:19  Using cached googleapis_common_protos-1.72.0-py3-none-any.whl (297 kB)
+2026-03-04 00:47:19  Using cached grpcio-1.78.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.7 MB)
+2026-03-04 00:47:19  Using cached grpcio_status-1.71.2-py3-none-any.whl (14 kB)
+2026-03-04 00:47:19  Using cached proto_plus-1.27.1-py3-none-any.whl (50 kB)
+2026-03-04 00:47:19  Using cached protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl (320 kB)
+2026-03-04 00:47:19  Using cached yfinance-1.2.0-py2.py3-none-any.whl (130 kB)
+2026-03-04 00:47:19  Using cached curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+2026-03-04 00:47:19  Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-03-04 00:47:20  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+2026-03-04 00:47:20  Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+2026-03-04 00:47:20  Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-03-04 00:47:20  Using cached attrs-25.4.0-py3-none-any.whl (67 kB)
+2026-03-04 00:47:20  Using cached beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-04 00:47:20  Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2026-03-04 00:47:20  Using cached certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-03-04 00:47:20  Using cached cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
+2026-03-04 00:47:20  Using cached click-8.3.1-py3-none-any.whl (108 kB)
+2026-03-04 00:47:20  Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-03-04 00:47:20  Using cached frozendict-2.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (120 kB)
+2026-03-04 00:47:20  Using cached google_api_python_client-2.191.0-py3-none-any.whl (14.8 MB)
+2026-03-04 00:47:20  Using cached google_auth_httplib2-0.3.0-py3-none-any.whl (9.5 kB)
+2026-03-04 00:47:20  Using cached httplib2-0.31.2-py3-none-any.whl (91 kB)
+2026-03-04 00:47:20  Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-03-04 00:47:20  Using cached uritemplate-4.2.0-py3-none-any.whl (11 kB)
+2026-03-04 00:47:20  Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+2026-03-04 00:47:20  Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2026-03-04 00:47:20  Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-03-04 00:47:20  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-03-04 00:47:20  Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+2026-03-04 00:47:20  Using cached peewee-4.0.1-py3-none-any.whl (139 kB)
+2026-03-04 00:47:20  Using cached platformdirs-4.9.2-py3-none-any.whl (21 kB)
+2026-03-04 00:47:20  Using cached pyasn1-0.6.2-py3-none-any.whl (83 kB)
+2026-03-04 00:47:20  Using cached pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+2026-03-04 00:47:20  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-03-04 00:47:20  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-03-04 00:47:20  Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-03-04 00:47:20  Using cached rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+2026-03-04 00:47:20  Using cached rsa-4.9.1-py3-none-any.whl (34 kB)
+2026-03-04 00:47:20  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-03-04 00:47:20  Using cached soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-04 00:47:20  Using cached tqdm-4.67.3-py3-none-any.whl (78 kB)
+2026-03-04 00:47:20  Using cached typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-03-04 00:47:20  Using cached tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+2026-03-04 00:47:20  Using cached websockets-16.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (183 kB)
+2026-03-04 00:47:20  Using cached werkzeug-3.1.6-py3-none-any.whl (225 kB)
+2026-03-04 00:47:20  Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+2026-03-04 00:47:20  Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-03-04 00:47:20  Installing collected packages: pytz, peewee, oandapyV20, multitasking, websockets, urllib3, uritemplate, tzdata, typing-extensions, tqdm, soupsieve, sniffio, six, rpds-py, PyYAML, python-dotenv, pyparsing, pycparser, pyasn1, protobuf, platformdirs, numpy, markupsafe, jiter, itsdangerous, idna, h11, frozendict, docstring-parser, distro, colorlog, click, charset_normalizer, certifi, blinker, attrs, annotated-types, werkzeug, typing-inspection, rsa, requests, referencing, python-dateutil, pydantic-core, pyasn1-modules, proto-plus, jinja2, httplib2, httpcore, grpcio, googleapis-common-protos, exceptiongroup, cffi, beautifulsoup4, pydantic, pandas, oauth2client, jsonschema-specifications, grpcio-status, flask, curl_cffi, cryptography, anyio, yfinance, pyOpenSSL, jsonschema, httpx, google-auth, openai, google-auth-httplib2, google-api-core, anthropic, google-api-python-client, PyDrive2, google-ai-generativelanguage, google-generativeai
+2026-03-04 00:47:36  
+2026-03-04 00:47:36  Successfully installed PyDrive2-1.21.3 PyYAML-6.0.3 annotated-types-0.7.0 anthropic-0.84.0 anyio-4.12.1 attrs-25.4.0 beautifulsoup4-4.14.3 blinker-1.9.0 certifi-2026.2.25 cffi-2.0.0 charset_normalizer-3.4.4 click-8.3.1 colorlog-6.10.1 cryptography-43.0.3 curl_cffi-0.13.0 distro-1.9.0 docstring-parser-0.17.0 exceptiongroup-1.3.1 flask-3.1.3 frozendict-2.4.7 google-ai-generativelanguage-0.6.15 google-api-core-2.30.0 google-api-python-client-2.191.0 google-auth-2.49.0.dev0 google-auth-httplib2-0.3.0 google-generativeai-0.8.6 googleapis-common-protos-1.72.0 grpcio-1.78.0 grpcio-status-1.71.2 h11-0.16.0 httpcore-1.0.9 httplib2-0.31.2 httpx-0.28.1 idna-3.11 itsdangerous-2.2.0 jinja2-3.1.6 jiter-0.13.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markupsafe-3.0.3 multitasking-0.0.12 numpy-2.2.6 oandapyV20-0.7.2 oauth2client-4.1.3 openai-2.24.0 pandas-2.3.3 peewee-4.0.1 platformdirs-4.9.2 proto-plus-1.27.1 protobuf-5.29.6 pyOpenSSL-24.2.1 pyasn1-0.6.2 pyasn1-modules-0.4.2 pycparser-3.0 pydantic-2.12.5 pydantic-core-2.41.5 pyparsing-3.3.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 pytz-2026.1.post1 referencing-0.37.0 requests-2.32.5 rpds-py-0.30.0 rsa-4.9.1 six-1.17.0 sniffio-1.3.1 soupsieve-2.8.3 tqdm-4.67.3 typing-extensions-4.15.0 typing-inspection-0.4.2 tzdata-2025.3 uritemplate-4.2.0 urllib3-2.6.3 websockets-16.0 werkzeug-3.1.6 yfinance-1.2.0
+2026-03-04 00:47:43  ==> Uploading build...
+2026-03-04 00:48:30  ==> Uploaded in 10.9s. Compression took 36.0s
+2026-03-04 00:48:30  ==> Build successful ≡ƒÄë
+2026-03-04 00:48:37  ==> Deploying...
+2026-03-04 00:49:12  ==>(B Running 'python main.py'(B
+2026-03-04 00:49:13  ==> Your service is live ≡ƒÄë
+2026-03-04 00:49:13  /opt/render/project/src/.venv/lib/python3.10/site-packages/google/api_core/_python_version_support.py:275: FutureWarning: You are using a Python version (3.10.0) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+2026-03-04 00:49:13    warnings.warn(message, FutureWarning)
+2026-03-04 00:49:14  /opt/render/project/src/src/llm_analyzer.py:18: FutureWarning: 
+2026-03-04 00:49:14  
+2026-03-04 00:49:14  All support for the `google.generativeai` package has ended. It will no longer be receiving 
+2026-03-04 00:49:14  updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-03-04 00:49:14  See README for more details:
+2026-03-04 00:49:14  
+2026-03-04 00:49:14  https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-03-04 00:49:14  
+2026-03-04 00:49:14    from google import generativeai
+2026-03-04 00:49:21  2026-03-04 00:49:21 - trade_alerts - WARNING - Multi-agent system not available (agents not installed)
+2026-03-04 00:49:21  2026-03-04 00:49:21 - trade_alerts - INFO - Created temporary /var/data/credentials.json with secure permissions
+2026-03-04 00:49:21  2026-03-04 00:49:21 - trade_alerts - INFO - Γ£à OAuth2 authenticated using refresh token (in-memory)
+2026-03-04 00:49:21  2026-03-04 00:49:21 - trade_alerts - INFO - Γ£à Drive reader initialized for folder: 1xlsxAV7dim4NubUNK8f...
+2026-03-04 00:49:21  2026-03-04 00:49:21 - trade_alerts - INFO - Γ£à PriceMonitor: OANDA API initialized (primary source for live prices)
+2026-03-04 00:49:21  2026-03-04 00:49:21 - trade_alerts - INFO - Γ£à ChatGPT enabled (model: gpt-4o-mini)
+2026-03-04 00:49:21  2026-03-04 00:49:21 - trade_alerts - INFO - Γ£à Gemini enabled
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Γ£à Claude enabled
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Γ£à DeepSeek enabled (model: deepseek-chat)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Γ£à Gemini synthesizer enabled
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Γ£à Email sender initialized
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Γ£à PriceMonitor: OANDA API initialized (primary source for live prices)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - WARNING - Pushover not configured - alerts will not be sent
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - WARNING - Set PUSHOVER_API_TOKEN and PUSHOVER_USER_KEY in .env
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Analysis scheduled for: Every hour (00:00-23:00) (America/New_York)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒôª Using persistent disk for RL database: /var/data/trade_alerts_rl.db
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Γ£à PriceMonitor: OANDA API initialized (primary source for live prices)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Γ£à PriceMonitor: OANDA API initialized (primary source for live prices)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒôè Calculating LLM weights from database...
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    chatgpt: 48 evaluated recommendations (total: 67)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    gemini: 3272 evaluated recommendations (total: 3292)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    claude: 88 evaluated recommendations (total: 88)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    synthesis: 6566 evaluated recommendations (total: 6627)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    deepseek: 0 evaluated recommendations (total: 0)
+2026-03-04 00:49:22  ==>(B Downloading cache...(B
+2026-03-04 00:49:22  ==>(B Cloning from https://github.com/ibenwandu/Trade-Alerts(B
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    deepseek: Only 0 evaluated recommendations (need 5+) - using default 0.25
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒôè Calculated LLM weights: {'chatgpt': np.float64(0.20296234598558652), 'gemini': np.float64(0.2626649999427236), 'claude': np.float64(0.10503198885767914), 'synthesis': np.float64(0.27280102656556804), 'deepseek': np.float64(0.15653963864844275)}
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒôè Loaded LLM weights from database: {'chatgpt': np.float64(0.20296234598558652), 'gemini': np.float64(0.2626649999427236), 'claude': np.float64(0.10503198885767914), 'synthesis': np.float64(0.27280102656556804), 'deepseek': np.float64(0.15653963864844275)}
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Γ£à Trade Alert System initialized
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒºá RL System: Active
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ΓÜû∩╕Å  Current LLM Weights: chatgpt: 20%, gemini: 26%, claude: 11%, synthesis: 27%, deepseek: 16%
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒÜÇ Starting Trade Alert System...
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Press Ctrl+C to stop
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ΓÅ░ Next scheduled analysis: 2026-03-03 20:00 EST (EST/EDT)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒòÜ Daily learning: 11:00 PM UTC (updates weights)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - 
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒöä Entering main loop...
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒöä Loop check #1 - 19:49:22 EST
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒôè Calculating LLM weights from database...
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    chatgpt: 48 evaluated recommendations (total: 67)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    gemini: 3272 evaluated recommendations (total: 3292)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    claude: 88 evaluated recommendations (total: 88)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    synthesis: 6566 evaluated recommendations (total: 6627)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    deepseek: 0 evaluated recommendations (total: 0)
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO -    deepseek: Only 0 evaluated recommendations (need 5+) - using default 0.25
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒôè Calculated LLM weights: {'chatgpt': np.float64(0.20296234598558652), 'gemini': np.float64(0.2626649999427236), 'claude': np.float64(0.10503198885767914), 'synthesis': np.float64(0.27280102656556804), 'deepseek': np.float64(0.15653963864844275)}
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - ≡ƒôè Loaded LLM weights from database: {'chatgpt': np.float64(0.20296234598558652), 'gemini': np.float64(0.2626649999427236), 'claude': np.float64(0.10503198885767914), 'synthesis': np.float64(0.27280102656556804), 'deepseek': np.float64(0.15653963864844275)}
+2026-03-04 00:49:22  2026-03-04 00:49:22 - trade_alerts - INFO - Γ£à Main loop stabilized, analysis enabled for next iteration
+2026-03-04 00:49:25  ==>(B Checking out commit e45666d0775e4c15603e3d022be0125dbfcf1991 in branch main(B
+2026-03-04 00:49:30  ==>(B Downloaded 251MB in 2s. Extraction took 5s.(B
+2026-03-04 00:49:36  ==>(B Installing Python version 3.10.0...(B
+2026-03-04 00:49:43  ==>(B Using Python version 3.10.0 via environment variable PYTHON_VERSION(B
+2026-03-04 00:49:43  ==>(B Docs on specifying a Python version: https://render.com/docs/python-version(B
+2026-03-04 00:49:47  ==>(B Using Poetry version 2.1.3 (default)(B
+2026-03-04 00:49:47  ==>(B Docs on specifying a Poetry version: https://render.com/docs/poetry-version(B
+2026-03-04 00:49:47  ==>(B Running build command 'pip install --upgrade pip setuptools wheel
+2026-03-04 00:49:47  pip install -r requirements.txt
+2026-03-04 00:49:47  '...(B
+2026-03-04 00:49:47  Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (21.2.3)
+2026-03-04 00:49:48  Collecting pip
+2026-03-04 00:49:48    Using cached pip-26.0.1-py3-none-any.whl (1.8 MB)
+2026-03-04 00:49:48  Requirement already satisfied: setuptools in ./.venv/lib/python3.10/site-packages (57.4.0)
+2026-03-04 00:49:48  Collecting setuptools
+2026-03-04 00:49:48    Using cached setuptools-82.0.0-py3-none-any.whl (1.0 MB)
+2026-03-04 00:49:48  Collecting wheel
+2026-03-04 00:49:48    Using cached wheel-0.46.3-py3-none-any.whl (30 kB)
+2026-03-04 00:49:48  Collecting packaging>=24.0
+2026-03-04 00:49:48    Using cached packaging-26.0-py3-none-any.whl (74 kB)
+2026-03-04 00:49:48  Installing collected packages: packaging, wheel, setuptools, pip
+2026-03-04 00:49:49    Attempting uninstall: setuptools
+2026-03-04 00:49:49      Found existing installation: setuptools 57.4.0
+2026-03-04 00:49:49      Uninstalling setuptools-57.4.0:
+2026-03-04 00:49:49        Successfully uninstalled setuptools-57.4.0
+2026-03-04 00:49:49    Attempting uninstall: pip
+2026-03-04 00:49:49      Found existing installation: pip 21.2.3
+2026-03-04 00:49:49      Uninstalling pip-21.2.3:
+2026-03-04 00:49:49        Successfully uninstalled pip-21.2.3
+2026-03-04 00:49:50  Successfully installed packaging-26.0 pip-26.0.1 setuptools-82.0.0 wheel-0.46.3
+2026-03-04 00:49:51  Collecting PyDrive2>=1.17.0 (from -r requirements.txt (line 2))
+2026-03-04 00:49:51    Using cached PyDrive2-1.21.3-py3-none-any.whl.metadata (7.0 kB)
+2026-03-04 00:49:51  Collecting oauth2client>=4.1.3 (from -r requirements.txt (line 3))
+2026-03-04 00:49:51    Using cached oauth2client-4.1.3-py2.py3-none-any.whl.metadata (1.2 kB)
+2026-03-04 00:49:51  Collecting requests>=2.31.0 (from -r requirements.txt (line 6))
+2026-03-04 00:49:51    Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+2026-03-04 00:49:51  Collecting python-dotenv>=1.0.0 (from -r requirements.txt (line 9))
+2026-03-04 00:49:51    Using cached python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+2026-03-04 00:49:51  Collecting jsonschema>=4.20.0 (from -r requirements.txt (line 12))
+2026-03-04 00:49:51    Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-03-04 00:49:51  Collecting pytz>=2024.1 (from -r requirements.txt (line 15))
+2026-03-04 00:49:51    Using cached pytz-2026.1.post1-py2.py3-none-any.whl.metadata (22 kB)
+2026-03-04 00:49:51  Collecting colorlog>=6.8.0 (from -r requirements.txt (line 18))
+2026-03-04 00:49:51    Using cached colorlog-6.10.1-py3-none-any.whl.metadata (11 kB)
+2026-03-04 00:49:51  Collecting anthropic>=0.34.0 (from -r requirements.txt (line 21))
+2026-03-04 00:49:51    Using cached anthropic-0.84.0-py3-none-any.whl.metadata (3.0 kB)
+2026-03-04 00:49:51  Collecting openai>=1.0.0 (from -r requirements.txt (line 22))
+2026-03-04 00:49:51    Using cached openai-2.24.0-py3-none-any.whl.metadata (29 kB)
+2026-03-04 00:49:51  Collecting google-generativeai>=0.3.0 (from -r requirements.txt (line 23))
+2026-03-04 00:49:51    Using cached google_generativeai-0.8.6-py3-none-any.whl.metadata (3.9 kB)
+2026-03-04 00:49:52  Collecting yfinance>=0.2.35 (from -r requirements.txt (line 26))
+2026-03-04 00:49:52    Using cached yfinance-1.2.0-py2.py3-none-any.whl.metadata (6.1 kB)
+2026-03-04 00:49:52  Collecting pandas>=2.0.0 (from -r requirements.txt (line 27))
+2026-03-04 00:49:52    Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+2026-03-04 00:49:52  Collecting numpy>=1.24.0 (from -r requirements.txt (line 28))
+2026-03-04 00:49:52    Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+2026-03-04 00:49:52  Collecting oandapyV20>=0.6.3 (from -r requirements.txt (line 29))
+2026-03-04 00:49:52    Using cached oandapyv20-0.7.2-py3-none-any.whl
+2026-03-04 00:49:52  Collecting flask>=3.0.0 (from -r requirements.txt (line 31))
+2026-03-04 00:49:52    Using cached flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+2026-03-04 00:49:52  Collecting google-api-python-client>=1.12.5 (from PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:49:52    Using cached google_api_python_client-2.191.0-py3-none-any.whl.metadata (7.0 kB)
+2026-03-04 00:49:52  Collecting PyYAML>=3.0 (from PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:49:52    Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-03-04 00:49:52  Collecting cryptography<44 (from PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:49:52    Using cached cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (5.4 kB)
+2026-03-04 00:49:53  Collecting pyOpenSSL<=24.2.1,>=19.1.0 (from PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:49:53    Using cached pyOpenSSL-24.2.1-py3-none-any.whl.metadata (13 kB)
+2026-03-04 00:49:53  Collecting cffi>=1.12 (from cryptography<44->PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:49:53    Using cached cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-03-04 00:49:53  Collecting httplib2>=0.9.1 (from oauth2client>=4.1.3->-r requirements.txt (line 3))
+2026-03-04 00:49:53    Using cached httplib2-0.31.2-py3-none-any.whl.metadata (2.2 kB)
+2026-03-04 00:49:53  Collecting pyasn1>=0.1.7 (from oauth2client>=4.1.3->-r requirements.txt (line 3))
+2026-03-04 00:49:53    Using cached pyasn1-0.6.2-py3-none-any.whl.metadata (8.4 kB)
+2026-03-04 00:49:53  Collecting pyasn1-modules>=0.0.5 (from oauth2client>=4.1.3->-r requirements.txt (line 3))
+2026-03-04 00:49:53    Using cached pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+2026-03-04 00:49:53  Collecting rsa>=3.1.4 (from oauth2client>=4.1.3->-r requirements.txt (line 3))
+2026-03-04 00:49:53    Using cached rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+2026-03-04 00:49:53  Collecting six>=1.6.1 (from oauth2client>=4.1.3->-r requirements.txt (line 3))
+2026-03-04 00:49:53    Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-03-04 00:49:53  Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->-r requirements.txt (line 6))
+2026-03-04 00:49:53    Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+2026-03-04 00:49:53  Collecting idna<4,>=2.5 (from requests>=2.31.0->-r requirements.txt (line 6))
+2026-03-04 00:49:53    Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-03-04 00:49:53  Collecting urllib3<3,>=1.21.1 (from requests>=2.31.0->-r requirements.txt (line 6))
+2026-03-04 00:49:53    Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-03-04 00:49:53  Collecting certifi>=2017.4.17 (from requests>=2.31.0->-r requirements.txt (line 6))
+2026-03-04 00:49:53    Using cached certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+2026-03-04 00:49:53  Collecting attrs>=22.2.0 (from jsonschema>=4.20.0->-r requirements.txt (line 12))
+2026-03-04 00:49:53    Using cached attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2026-03-04 00:49:53  Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.20.0->-r requirements.txt (line 12))
+2026-03-04 00:49:53    Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-03-04 00:49:53  Collecting referencing>=0.28.4 (from jsonschema>=4.20.0->-r requirements.txt (line 12))
+2026-03-04 00:49:53    Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-03-04 00:49:54  Collecting rpds-py>=0.25.0 (from jsonschema>=4.20.0->-r requirements.txt (line 12))
+2026-03-04 00:49:54    Using cached rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-03-04 00:49:54  Collecting anyio<5,>=3.5.0 (from anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+2026-03-04 00:49:54  Collecting distro<2,>=1.7.0 (from anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+2026-03-04 00:49:54  Collecting docstring-parser<1,>=0.15 (from anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached docstring_parser-0.17.0-py3-none-any.whl.metadata (3.5 kB)
+2026-03-04 00:49:54  Collecting httpx<1,>=0.25.0 (from anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-03-04 00:49:54  Collecting jiter<1,>=0.4.0 (from anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached jiter-0.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+2026-03-04 00:49:54  Collecting pydantic<3,>=1.9.0 (from anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+2026-03-04 00:49:54  Collecting sniffio (from anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-03-04 00:49:54  Collecting typing-extensions<5,>=4.10 (from anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-03-04 00:49:54  Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.5.0->anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+2026-03-04 00:49:54  Collecting httpcore==1.* (from httpx<1,>=0.25.0->anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-03-04 00:49:54  Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.25.0->anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-03-04 00:49:54  Collecting annotated-types>=0.6.0 (from pydantic<3,>=1.9.0->anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:54    Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-03-04 00:49:55  Collecting pydantic-core==2.41.5 (from pydantic<3,>=1.9.0->anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:55    Using cached pydantic_core-2.41.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+2026-03-04 00:49:55  Collecting typing-inspection>=0.4.2 (from pydantic<3,>=1.9.0->anthropic>=0.34.0->-r requirements.txt (line 21))
+2026-03-04 00:49:55    Using cached typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-03-04 00:49:55  Collecting tqdm>4 (from openai>=1.0.0->-r requirements.txt (line 22))
+2026-03-04 00:49:55    Using cached tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+2026-03-04 00:49:55  Collecting google-ai-generativelanguage==0.6.15 (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:55    Using cached google_ai_generativelanguage-0.6.15-py3-none-any.whl.metadata (5.7 kB)
+2026-03-04 00:49:55  Collecting google-api-core (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:55    Using cached google_api_core-2.30.0-py3-none-any.whl.metadata (3.1 kB)
+2026-03-04 00:49:55  Collecting google-auth>=2.15.0 (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:55    Using cached google_auth-2.48.0-py3-none-any.whl.metadata (6.2 kB)
+2026-03-04 00:49:56  Collecting protobuf (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:56    Using cached protobuf-7.34.0-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+2026-03-04 00:49:56  Collecting google-auth>=2.15.0 (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:56    Using cached google_auth-2.49.0.dev0-py3-none-any.whl.metadata (6.0 kB)
+2026-03-04 00:49:56  Collecting proto-plus<2.0.0dev,>=1.22.3 (from google-ai-generativelanguage==0.6.15->google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:56    Using cached proto_plus-1.27.1-py3-none-any.whl.metadata (2.2 kB)
+2026-03-04 00:49:56  Collecting protobuf (from google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:56    Using cached protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+2026-03-04 00:49:56  Collecting googleapis-common-protos<2.0.0,>=1.56.3 (from google-api-core->google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:56    Using cached googleapis_common_protos-1.72.0-py3-none-any.whl.metadata (9.4 kB)
+2026-03-04 00:49:56  Collecting grpcio<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:56    Using cached grpcio-1.78.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+2026-03-04 00:49:56  Collecting grpcio-status<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.3.0->-r requirements.txt (line 23))
+2026-03-04 00:49:56    Using cached grpcio_status-1.78.0-py3-none-any.whl.metadata (1.3 kB)
+2026-03-04 00:49:57  INFO: pip is looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+2026-03-04 00:49:57    Using cached grpcio_status-1.76.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:49:57    Using cached grpcio_status-1.75.1-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:49:57    Using cached grpcio_status-1.75.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:49:57    Using cached grpcio_status-1.74.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:49:57    Using cached grpcio_status-1.73.1-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:49:57    Using cached grpcio_status-1.73.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:49:57    Using cached grpcio_status-1.72.2-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:49:57  INFO: pip is still looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+2026-03-04 00:49:57    Using cached grpcio_status-1.72.1-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:49:57    Using cached grpcio_status-1.71.2-py3-none-any.whl.metadata (1.1 kB)
+2026-03-04 00:49:57  Collecting multitasking>=0.0.7 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:49:57    Using cached multitasking-0.0.12-py3-none-any.whl
+2026-03-04 00:49:57  Collecting platformdirs>=2.0.0 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:49:57    Using cached platformdirs-4.9.2-py3-none-any.whl.metadata (4.7 kB)
+2026-03-04 00:49:57  Collecting frozendict>=2.3.4 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:49:57    Using cached frozendict-2.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+2026-03-04 00:49:57  Collecting peewee>=3.16.2 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:49:57    Using cached peewee-4.0.1-py3-none-any.whl.metadata (8.5 kB)
+2026-03-04 00:49:57  Collecting beautifulsoup4>=4.11.1 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:49:57    Using cached beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-04 00:49:57  Collecting curl_cffi<0.14,>=0.7 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:49:57    Using cached curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+2026-03-04 00:49:57  Collecting websockets>=13.0 (from yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:49:57    Using cached websockets-16.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+2026-03-04 00:49:57  Collecting python-dateutil>=2.8.2 (from pandas>=2.0.0->-r requirements.txt (line 27))
+2026-03-04 00:49:57    Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-03-04 00:49:57  Collecting tzdata>=2022.7 (from pandas>=2.0.0->-r requirements.txt (line 27))
+2026-03-04 00:49:57    Using cached tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-03-04 00:49:57  Collecting blinker>=1.9.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:49:57    Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2026-03-04 00:49:57  Collecting click>=8.1.3 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:49:57    Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-03-04 00:49:57  Collecting itsdangerous>=2.2.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:49:57    Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2026-03-04 00:49:57  Collecting jinja2>=3.1.2 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:49:57    Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-03-04 00:49:57  Collecting markupsafe>=2.1.1 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:49:57    Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-03-04 00:49:57  Collecting werkzeug>=3.1.0 (from flask>=3.0.0->-r requirements.txt (line 31))
+2026-03-04 00:49:57    Using cached werkzeug-3.1.6-py3-none-any.whl.metadata (4.0 kB)
+2026-03-04 00:49:57  Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.11.1->yfinance>=0.2.35->-r requirements.txt (line 26))
+2026-03-04 00:49:57    Using cached soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-04 00:49:57  Collecting pycparser (from cffi>=1.12->cryptography<44->PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:49:57    Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-03-04 00:49:58  Collecting google-auth-httplib2<1.0.0,>=0.2.0 (from google-api-python-client>=1.12.5->PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:49:58    Using cached google_auth_httplib2-0.3.0-py3-none-any.whl.metadata (3.1 kB)
+2026-03-04 00:49:58  Collecting uritemplate<5,>=3.0.1 (from google-api-python-client>=1.12.5->PyDrive2>=1.17.0->-r requirements.txt (line 2))
+2026-03-04 00:49:58    Using cached uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+2026-03-04 00:49:58  Collecting pyparsing<4,>=3.1 (from httplib2>=0.9.1->oauth2client>=4.1.3->-r requirements.txt (line 3))
+2026-03-04 00:49:58    Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+2026-03-04 00:49:58  Using cached PyDrive2-1.21.3-py3-none-any.whl (47 kB)
+2026-03-04 00:49:58  Using cached cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl (4.0 MB)
+2026-03-04 00:49:58  Using cached pyOpenSSL-24.2.1-py3-none-any.whl (58 kB)
+2026-03-04 00:49:58  Using cached oauth2client-4.1.3-py2.py3-none-any.whl (98 kB)
+2026-03-04 00:49:58  Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+2026-03-04 00:49:58  Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+2026-03-04 00:49:58  Using cached idna-3.11-py3-none-any.whl (71 kB)
+2026-03-04 00:49:58  Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-03-04 00:49:58  Using cached python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+2026-03-04 00:49:58  Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-03-04 00:49:58  Using cached pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+2026-03-04 00:49:58  Using cached colorlog-6.10.1-py3-none-any.whl (11 kB)
+2026-03-04 00:49:58  Using cached anthropic-0.84.0-py3-none-any.whl (455 kB)
+2026-03-04 00:49:58  Using cached anyio-4.12.1-py3-none-any.whl (113 kB)
+2026-03-04 00:49:58  Using cached distro-1.9.0-py3-none-any.whl (20 kB)
+2026-03-04 00:49:58  Using cached docstring_parser-0.17.0-py3-none-any.whl (36 kB)
+2026-03-04 00:49:58  Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-03-04 00:49:58  Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-03-04 00:49:58  Using cached jiter-0.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (362 kB)
+2026-03-04 00:49:58  Using cached pydantic-2.12.5-py3-none-any.whl (463 kB)
+2026-03-04 00:49:58  Using cached pydantic_core-2.41.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-03-04 00:49:58  Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-03-04 00:49:58  Using cached openai-2.24.0-py3-none-any.whl (1.1 MB)
+2026-03-04 00:49:58  Using cached google_generativeai-0.8.6-py3-none-any.whl (155 kB)
+2026-03-04 00:49:58  Using cached google_ai_generativelanguage-0.6.15-py3-none-any.whl (1.3 MB)
+2026-03-04 00:49:58  Using cached google_api_core-2.30.0-py3-none-any.whl (173 kB)
+2026-03-04 00:49:58  Using cached google_auth-2.49.0.dev0-py3-none-any.whl (236 kB)
+2026-03-04 00:49:58  Using cached googleapis_common_protos-1.72.0-py3-none-any.whl (297 kB)
+2026-03-04 00:49:58  Using cached grpcio-1.78.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.7 MB)
+2026-03-04 00:49:58  Using cached grpcio_status-1.71.2-py3-none-any.whl (14 kB)
+2026-03-04 00:49:58  Using cached proto_plus-1.27.1-py3-none-any.whl (50 kB)
+2026-03-04 00:49:58  Using cached protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl (320 kB)
+2026-03-04 00:49:58  Using cached yfinance-1.2.0-py2.py3-none-any.whl (130 kB)
+2026-03-04 00:49:58  Using cached curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+2026-03-04 00:49:58  Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-03-04 00:49:58  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+2026-03-04 00:49:58  Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+2026-03-04 00:49:58  Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-03-04 00:49:58  Using cached attrs-25.4.0-py3-none-any.whl (67 kB)
+2026-03-04 00:49:58  Using cached beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-04 00:49:58  Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2026-03-04 00:49:58  Using cached certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-03-04 00:49:58  Using cached cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
+2026-03-04 00:49:58  Using cached click-8.3.1-py3-none-any.whl (108 kB)
+2026-03-04 00:49:58  Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-03-04 00:49:58  Using cached frozendict-2.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (120 kB)
+2026-03-04 00:49:58  Using cached google_api_python_client-2.191.0-py3-none-any.whl (14.8 MB)
+2026-03-04 00:49:58  Using cached google_auth_httplib2-0.3.0-py3-none-any.whl (9.5 kB)
+2026-03-04 00:49:58  Using cached httplib2-0.31.2-py3-none-any.whl (91 kB)
+2026-03-04 00:49:58  Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-03-04 00:49:58  Using cached uritemplate-4.2.0-py3-none-any.whl (11 kB)
+2026-03-04 00:49:58  Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+2026-03-04 00:49:58  Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2026-03-04 00:49:58  Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-03-04 00:49:58  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-03-04 00:49:58  Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+2026-03-04 00:49:58  Using cached peewee-4.0.1-py3-none-any.whl (139 kB)
+2026-03-04 00:49:58  Using cached platformdirs-4.9.2-py3-none-any.whl (21 kB)
+2026-03-04 00:49:58  Using cached pyasn1-0.6.2-py3-none-any.whl (83 kB)
+2026-03-04 00:49:58  Using cached pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+2026-03-04 00:49:58  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-03-04 00:49:58  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-03-04 00:49:58  Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-03-04 00:49:58  Using cached rpds_py-0.30.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+2026-03-04 00:49:58  Using cached rsa-4.9.1-py3-none-any.whl (34 kB)
+2026-03-04 00:49:58  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-03-04 00:49:58  Using cached soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-04 00:49:58  Using cached tqdm-4.67.3-py3-none-any.whl (78 kB)
+2026-03-04 00:49:58  Using cached typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-03-04 00:49:58  Using cached tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+2026-03-04 00:49:58  Using cached websockets-16.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (183 kB)
+2026-03-04 00:49:58  Using cached werkzeug-3.1.6-py3-none-any.whl (225 kB)
+2026-03-04 00:49:58  Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+2026-03-04 00:49:58  Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-03-04 00:49:58  Installing collected packages: pytz, peewee, oandapyV20, multitasking, websockets, urllib3, uritemplate, tzdata, typing-extensions, tqdm, soupsieve, sniffio, six, rpds-py, PyYAML, python-dotenv, pyparsing, pycparser, pyasn1, protobuf, platformdirs, numpy, markupsafe, jiter, itsdangerous, idna, h11, frozendict, docstring-parser, distro, colorlog, click, charset_normalizer, certifi, blinker, attrs, annotated-types, werkzeug, typing-inspection, rsa, requests, referencing, python-dateutil, pydantic-core, pyasn1-modules, proto-plus, jinja2, httplib2, httpcore, grpcio, googleapis-common-protos, exceptiongroup, cffi, beautifulsoup4, pydantic, pandas, oauth2client, jsonschema-specifications, grpcio-status, flask, curl_cffi, cryptography, anyio, yfinance, pyOpenSSL, jsonschema, httpx, google-auth, openai, google-auth-httplib2, google-api-core, anthropic, google-api-python-client, PyDrive2, google-ai-generativelanguage, google-generativeai
+2026-03-04 00:50:12  
+2026-03-04 00:50:12  Successfully installed PyDrive2-1.21.3 PyYAML-6.0.3 annotated-types-0.7.0 anthropic-0.84.0 anyio-4.12.1 attrs-25.4.0 beautifulsoup4-4.14.3 blinker-1.9.0 certifi-2026.2.25 cffi-2.0.0 charset_normalizer-3.4.4 click-8.3.1 colorlog-6.10.1 cryptography-43.0.3 curl_cffi-0.13.0 distro-1.9.0 docstring-parser-0.17.0 exceptiongroup-1.3.1 flask-3.1.3 frozendict-2.4.7 google-ai-generativelanguage-0.6.15 google-api-core-2.30.0 google-api-python-client-2.191.0 google-auth-2.49.0.dev0 google-auth-httplib2-0.3.0 google-generativeai-0.8.6 googleapis-common-protos-1.72.0 grpcio-1.78.0 grpcio-status-1.71.2 h11-0.16.0 httpcore-1.0.9 httplib2-0.31.2 httpx-0.28.1 idna-3.11 itsdangerous-2.2.0 jinja2-3.1.6 jiter-0.13.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markupsafe-3.0.3 multitasking-0.0.12 numpy-2.2.6 oandapyV20-0.7.2 oauth2client-4.1.3 openai-2.24.0 pandas-2.3.3 peewee-4.0.1 platformdirs-4.9.2 proto-plus-1.27.1 protobuf-5.29.6 pyOpenSSL-24.2.1 pyasn1-0.6.2 pyasn1-modules-0.4.2 pycparser-3.0 pydantic-2.12.5 pydantic-core-2.41.5 pyparsing-3.3.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 pytz-2026.1.post1 referencing-0.37.0 requests-2.32.5 rpds-py-0.30.0 rsa-4.9.1 six-1.17.0 sniffio-1.3.1 soupsieve-2.8.3 tqdm-4.67.3 typing-extensions-4.15.0 typing-inspection-0.4.2 tzdata-2025.3 uritemplate-4.2.0 urllib3-2.6.3 websockets-16.0 werkzeug-3.1.6 yfinance-1.2.0
+2026-03-04 00:50:15  ==> Uploading build...
+2026-03-04 00:50:31  ==> Uploaded in 11.2s. Compression took 4.6s
+2026-03-04 00:50:31  ==> Build successful ≡ƒÄë
+2026-03-04 00:50:35  ==> Deploying...
+2026-03-04 00:51:17  ==> Your service is live ≡ƒÄë
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - ≡ƒôè Consensus for NZD/USD SELL: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for NZD/USD SELL:
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    consensus_level: 1
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - ≡ƒöì [MARKET-STATE-DEBUG] Writing 8 opportunities to market state:
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Opp #0: USD/ZAR BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Opp #1: GBP/USD BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Opp #2: USD/JPY BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Opp #3: USD/CHF BUY - consensus_level=3, llm_sources=['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Opp #4: EUR/USD SELL - consensus_level=2, llm_sources=['gemini', 'claude', 'synthesis']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Opp #5: GBP/USD SELL - consensus_level=2, llm_sources=['gemini', 'claude', 'synthesis']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Opp #6: USD/JPY SELL - consensus_level=1, llm_sources=['claude']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Opp #7: NZD/USD SELL - consensus_level=1, llm_sources=['claude']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - Attempting to export market state to /var/data/market_state.json
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - Γ£à Market State exported to /var/data/market_state.json
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Bias: BULLISH, Regime: HIGH_VOL, Pairs: ['USD/JPY', 'GBP/USD', 'USD/CHF', 'USD/ZAR', 'EUR/USD', 'NZD/USD']
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - Sending market state to API: https://market-state-api.onrender.com/market-state
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - Γ£à Market state sent to API successfully
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    API response: Market state saved successfully
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - Γ£à Market state exported for Scalp-Engine
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO -    Exported state: 8 opportunities, bias=BULLISH, regime=HIGH_VOL
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - Γ£à Full analysis workflow completed
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - Γ£à Analysis completed successfully at 20:01:05 EST
+2026-03-04 01:04:24  2026-03-04 01:04:24 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: NZD/USD SELL @ 0.58752 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:07:24  2026-03-04 01:07:24 - trade_alerts - INFO - 
+2026-03-04 01:07:24  === Status Check #10 ===
+2026-03-04 01:07:24  2026-03-04 01:07:24 - trade_alerts - INFO - Current time: 20:07:24 EST (EST/EDT)
+2026-03-04 01:07:24  2026-03-04 01:07:24 - trade_alerts - INFO - Active opportunities: 8
+2026-03-04 01:07:24  2026-03-04 01:07:24 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 11%, synthesis: 27%, deepseek: 16%
+2026-03-04 01:07:24  2026-03-04 01:07:24 - trade_alerts - INFO - Next analysis at: 21:00 EST (in 52 minutes)
+2026-03-04 01:08:24  2026-03-04 01:08:24 - trade_alerts - INFO - ≡ƒöä Loop check #11 - 20:08:24 EST
+2026-03-04 01:09:25  2026-03-04 01:09:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:09:25  2026-03-04 01:09:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.33 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:09:25  2026-03-04 01:09:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.6 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:09:25  2026-03-04 01:09:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/CHF BUY @ 0.78 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:09:25  2026-03-04 01:09:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD SELL @ 1.1605 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:09:25  2026-03-04 01:09:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 157.55 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:13:25  2026-03-04 01:13:25 - trade_alerts - INFO - ≡ƒöä Loop check #16 - 20:13:25 EST
+2026-03-04 01:14:25  2026-03-04 01:14:25 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: NZD/USD SELL @ 0.58752 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:17:26  2026-03-04 01:17:26 - trade_alerts - INFO - 
+2026-03-04 01:17:26  === Status Check #20 ===
+2026-03-04 01:17:26  2026-03-04 01:17:26 - trade_alerts - INFO - Current time: 20:17:26 EST (EST/EDT)
+2026-03-04 01:17:26  2026-03-04 01:17:26 - trade_alerts - INFO - Active opportunities: 8
+2026-03-04 01:17:26  2026-03-04 01:17:26 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 11%, synthesis: 27%, deepseek: 16%
+2026-03-04 01:17:26  2026-03-04 01:17:26 - trade_alerts - INFO - Next analysis at: 21:00 EST (in 42 minutes)
+2026-03-04 01:18:26  2026-03-04 01:18:26 - trade_alerts - INFO - ≡ƒöä Loop check #21 - 20:18:26 EST
+2026-03-04 01:19:26  2026-03-04 01:19:26 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:19:26  2026-03-04 01:19:26 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.33 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:19:26  2026-03-04 01:19:26 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.6 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:19:26  2026-03-04 01:19:26 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/CHF BUY @ 0.78 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:19:26  2026-03-04 01:19:26 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD SELL @ 1.1605 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:19:26  2026-03-04 01:19:26 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 157.55 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:23:27  2026-03-04 01:23:27 - trade_alerts - INFO - ≡ƒöä Loop check #26 - 20:23:27 EST
+2026-03-04 01:24:27  2026-03-04 01:24:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: NZD/USD SELL @ 0.58752 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:27:27  2026-03-04 01:27:27 - trade_alerts - INFO - 
+2026-03-04 01:27:27  === Status Check #30 ===
+2026-03-04 01:27:27  2026-03-04 01:27:27 - trade_alerts - INFO - Current time: 20:27:27 EST (EST/EDT)
+2026-03-04 01:27:27  2026-03-04 01:27:27 - trade_alerts - INFO - Active opportunities: 8
+2026-03-04 01:27:27  2026-03-04 01:27:27 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 11%, synthesis: 27%, deepseek: 16%
+2026-03-04 01:27:27  2026-03-04 01:27:27 - trade_alerts - INFO - Next analysis at: 21:00 EST (in 32 minutes)
+2026-03-04 01:28:27  2026-03-04 01:28:27 - trade_alerts - INFO - ≡ƒöä Loop check #31 - 20:28:27 EST
+2026-03-04 01:29:27  2026-03-04 01:29:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:29:27  2026-03-04 01:29:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.33 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:29:27  2026-03-04 01:29:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.6 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:29:27  2026-03-04 01:29:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/CHF BUY @ 0.78 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:29:27  2026-03-04 01:29:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD SELL @ 1.1605 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:29:27  2026-03-04 01:29:27 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 157.55 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:33:28  2026-03-04 01:33:28 - trade_alerts - INFO - ≡ƒöä Loop check #36 - 20:33:28 EST
+2026-03-04 01:34:28  2026-03-04 01:34:28 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: NZD/USD SELL @ 0.58752 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:37:28  2026-03-04 01:37:28 - trade_alerts - INFO - 
+2026-03-04 01:37:28  === Status Check #40 ===
+2026-03-04 01:37:28  2026-03-04 01:37:28 - trade_alerts - INFO - Current time: 20:37:28 EST (EST/EDT)
+2026-03-04 01:37:28  2026-03-04 01:37:28 - trade_alerts - INFO - Active opportunities: 8
+2026-03-04 01:37:28  2026-03-04 01:37:28 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 11%, synthesis: 27%, deepseek: 16%
+2026-03-04 01:37:28  2026-03-04 01:37:28 - trade_alerts - INFO - Next analysis at: 21:00 EST (in 22 minutes)
+2026-03-04 01:38:29  2026-03-04 01:38:29 - trade_alerts - INFO - ≡ƒöä Loop check #41 - 20:38:29 EST
+2026-03-04 01:39:29  2026-03-04 01:39:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:39:29  2026-03-04 01:39:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.33 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:39:29  2026-03-04 01:39:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.6 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:39:29  2026-03-04 01:39:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/CHF BUY @ 0.78 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:39:29  2026-03-04 01:39:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD SELL @ 1.1605 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:39:29  2026-03-04 01:39:29 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 157.55 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:43:29  2026-03-04 01:43:29 - trade_alerts - INFO - ≡ƒöä Loop check #46 - 20:43:29 EST
+2026-03-04 01:44:30  2026-03-04 01:44:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: NZD/USD SELL @ 0.58752 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:47:30  2026-03-04 01:47:30 - trade_alerts - INFO - 
+2026-03-04 01:47:30  === Status Check #50 ===
+2026-03-04 01:47:30  2026-03-04 01:47:30 - trade_alerts - INFO - Current time: 20:47:30 EST (EST/EDT)
+2026-03-04 01:47:30  2026-03-04 01:47:30 - trade_alerts - INFO - Active opportunities: 8
+2026-03-04 01:47:30  2026-03-04 01:47:30 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 26%, claude: 11%, synthesis: 27%, deepseek: 16%
+2026-03-04 01:47:30  2026-03-04 01:47:30 - trade_alerts - INFO - Next analysis at: 21:00 EST (in 12 minutes)
+2026-03-04 01:48:30  2026-03-04 01:48:30 - trade_alerts - INFO - ≡ƒöä Loop check #51 - 20:48:30 EST
+2026-03-04 01:49:30  2026-03-04 01:49:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:49:30  2026-03-04 01:49:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.33 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:49:30  2026-03-04 01:49:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.6 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:49:30  2026-03-04 01:49:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/CHF BUY @ 0.78 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:49:30  2026-03-04 01:49:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD SELL @ 1.1605 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:49:30  2026-03-04 01:49:30 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 157.55 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:51:31  2026-03-04 01:51:31 - trade_alerts - INFO - ≡ƒôè Calculating LLM weights from database...
+2026-03-04 01:51:31  2026-03-04 01:51:31 - trade_alerts - INFO -    chatgpt: 48 evaluated recommendations (total: 67)
+2026-03-04 01:51:31  2026-03-04 01:51:31 - trade_alerts - INFO -    gemini: 3272 evaluated recommendations (total: 3292)
+2026-03-04 01:51:31  2026-03-04 01:51:31 - trade_alerts - INFO -    claude: 88 evaluated recommendations (total: 88)
+2026-03-04 01:51:31  2026-03-04 01:51:31 - trade_alerts - INFO -    synthesis: 6566 evaluated recommendations (total: 6637)
+2026-03-04 01:51:31  2026-03-04 01:51:31 - trade_alerts - INFO -    deepseek: 0 evaluated recommendations (total: 0)
+2026-03-04 01:51:31  2026-03-04 01:51:31 - trade_alerts - INFO -    deepseek: Only 0 evaluated recommendations (need 5+) - using default 0.25
+2026-03-04 01:51:31  2026-03-04 01:51:31 - trade_alerts - INFO - ≡ƒôè Calculated LLM weights: {'chatgpt': np.float64(0.20296234598558652), 'gemini': np.float64(0.2626649999427236), 'claude': np.float64(0.10503198885767914), 'synthesis': np.float64(0.27280102656556804), 'deepseek': np.float64(0.15653963864844275)}
+2026-03-04 01:51:31  2026-03-04 01:51:31 - trade_alerts - INFO - ≡ƒôè Loaded LLM weights from database: {'chatgpt': np.float64(0.20296234598558652), 'gemini': np.float64(0.2626649999427236), 'claude': np.float64(0.10503198885767914), 'synthesis': np.float64(0.27280102656556804), 'deepseek': np.float64(0.15653963864844275)}
+2026-03-04 01:53:31  2026-03-04 01:53:31 - trade_alerts - INFO - ≡ƒöä Loop check #56 - 20:53:31 EST
+2026-03-04 01:54:31  2026-03-04 01:54:31 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: NZD/USD SELL @ 0.58752 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:55:31  2026-03-04 01:55:31 - trade_alerts - INFO - 
+2026-03-04 01:55:31  ================================================================================
+2026-03-04 01:55:31  2026-03-04 01:55:31 - trade_alerts - INFO - === Scheduled Analysis Time: 2026-03-03 20:55:31 EST (EST/EDT) ===
+2026-03-04 01:55:31  2026-03-04 01:55:31 - trade_alerts - INFO - ================================================================================
+2026-03-04 01:55:31  2026-03-04 01:55:31 - trade_alerts - INFO - Starting analysis workflow with RL integration...
+2026-03-04 01:55:31  2026-03-04 01:55:31 - trade_alerts - INFO - Step 1: Reading data from Google Drive...
+2026-03-04 01:55:45  2026-03-04 01:55:45 - trade_alerts - INFO - Found 3323 files in folder
+2026-03-04 01:55:46  2026-03-04 01:55:46 - trade_alerts - INFO - Downloaded forex_trends_summary_20260304_013340.txt
+2026-03-04 01:55:47  2026-03-04 01:55:47 - trade_alerts - INFO - Downloaded forex_trends_summary_20260304_003321.txt
+2026-03-04 01:55:48  2026-03-04 01:55:48 - trade_alerts - INFO - Downloaded forex_trends_summary_20260303_233303.txt
+2026-03-04 01:55:48  2026-03-04 01:55:48 - trade_alerts - INFO - Downloaded 3 files
+2026-03-04 01:55:48  2026-03-04 01:55:48 - trade_alerts - INFO - Step 2: Formatting data for LLMs...
+2026-03-04 01:55:48  2026-03-04 01:55:48 - trade_alerts - INFO - Step 3: Running LLM analysis...
+2026-03-04 01:55:48  2026-03-04 01:55:48 - trade_alerts - INFO - Starting LLM analysis at 2026-03-03 20:55:48 EST (EST/EDT)
+2026-03-04 01:55:48  2026-03-04 01:55:48 - trade_alerts - INFO - Running ChatGPT analysis...
+2026-03-04 01:56:15  2026-03-04 01:56:15 - trade_alerts - INFO - Γ£à ChatGPT analysis completed
+2026-03-04 01:56:15  2026-03-04 01:56:15 - trade_alerts - INFO - Running Gemini analysis...
+2026-03-04 01:56:15  2026-03-04 01:56:15 - trade_alerts - INFO - Available Gemini models: 32 found
+2026-03-04 01:56:15  2026-03-04 01:56:15 - trade_alerts - INFO - First 5: ['models/gemini-2.5-flash', 'models/gemini-2.5-pro', 'models/gemini-2.0-flash', 'models/gemini-2.0-flash-001', 'models/gemini-2.0-flash-exp-image-generation']
+2026-03-04 01:56:15  2026-03-04 01:56:15 - trade_alerts - INFO - Trying 5 Gemini models from available list...
+2026-03-04 01:56:17  2026-03-04 01:56:17 - trade_alerts - INFO - Γ£à Found working Gemini model: models/gemini-2.5-pro
+2026-03-04 01:57:03  2026-03-04 01:57:03 - trade_alerts - INFO - Γ£à Gemini analysis completed (model: models/gemini-2.5-pro)
+2026-03-04 01:57:03  2026-03-04 01:57:03 - trade_alerts - INFO - Running Claude analysis...
+2026-03-04 01:57:26  2026-03-04 01:57:26 - trade_alerts - INFO - Γ£à Claude analysis completed
+2026-03-04 01:57:26  2026-03-04 01:57:26 - trade_alerts - INFO - Running DeepSeek analysis...
+2026-03-04 01:58:23  2026-03-04 01:58:23 - trade_alerts - INFO - Γ£à DeepSeek analysis completed
+2026-03-04 01:58:23  2026-03-04 01:58:23 - trade_alerts - INFO - Completed 4/4 LLM analyses
+2026-03-04 01:58:23  2026-03-04 01:58:23 - trade_alerts - INFO - Γ£à CHATGPT analysis completed successfully
+2026-03-04 01:58:23  2026-03-04 01:58:23 - trade_alerts - INFO - Γ£à GEMINI analysis completed successfully
+2026-03-04 01:58:23  2026-03-04 01:58:23 - trade_alerts - INFO - Γ£à CLAUDE analysis completed successfully
+2026-03-04 01:58:23  2026-03-04 01:58:23 - trade_alerts - INFO - Γ£à DEEPSEEK analysis completed successfully
+2026-03-04 01:58:23  2026-03-04 01:58:23 - trade_alerts - INFO - Step 3.5: Fetching current live prices...
+2026-03-04 01:58:23  2026-03-04 01:58:23 - trade_alerts - INFO - Γ£à Fetched 26 current prices for synthesis
+2026-03-04 01:58:23  2026-03-04 01:58:23 - trade_alerts - INFO - Step 4: Synthesizing with Gemini...
+2026-03-04 01:58:26  2026-03-04 01:58:26 - trade_alerts - INFO - Γ£à Found working Gemini model for synthesis: models/gemini-2.5-pro
+2026-03-04 01:59:01  2026-03-04 01:59:01 - trade_alerts - INFO - Γ£à Gemini synthesis completed (model: models/gemini-2.5-pro)
+2026-03-04 01:59:01  2026-03-04 01:59:01 - trade_alerts - INFO - Step 5 (NEW): Enhancing recommendations with RL insights...
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO - ≡ƒôè Calculating LLM weights from database...
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO -    chatgpt: 48 evaluated recommendations (total: 67)
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO -    gemini: 3272 evaluated recommendations (total: 3292)
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO -    claude: 88 evaluated recommendations (total: 88)
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO -    synthesis: 6566 evaluated recommendations (total: 6637)
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO -    deepseek: 0 evaluated recommendations (total: 0)
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO -    deepseek: Only 0 evaluated recommendations (need 5+) - using default 0.25
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO - ≡ƒôè Calculated LLM weights: {'chatgpt': np.float64(0.20296234598558652), 'gemini': np.float64(0.2626649999427236), 'claude': np.float64(0.10503198885767914), 'synthesis': np.float64(0.27280102656556804), 'deepseek': np.float64(0.15653963864844275)}
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO - Step 6: Sending enhanced recommendations email...
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO - Preparing to send email to rockforexx@gmail.com...
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO - Email contains 4/3 LLM recommendations + Gemini final
+2026-03-04 01:59:07  2026-03-04 01:59:07 - trade_alerts - INFO - Connecting to SMTP server smtp.gmail.com:587...
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Email sent successfully to rockforexx@gmail.com
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO -    Subject: Forex Trading Recommendations - 2026-03-04 01:59
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Step 7 (NEW): Logging recommendations to RL database...
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - WARNING - No pattern matches found for CHATGPT. Text preview (first 500 chars): ### Trading Analysis and Recommendations (as of 2026-03-03)
+2026-03-04 01:59:08  
+2026-03-04 01:59:08  #### Overview
+2026-03-04 01:59:08  Current market conditions indicate a strengthening US Dollar, primarily influenced by geopolitical tensions and economic data releases. The GBP/USD has shown a downward trend due to rising geopolitical risks, while the USD/ZAR and USD/MXN have experienced upward momentum.
+2026-03-04 01:59:08  
+2026-03-04 01:59:08  #### Currency Pair Recommendations
+2026-03-04 01:59:08  
+2026-03-04 01:59:08  ---
+2026-03-04 01:59:08  
+2026-03-04 01:59:08  **1. Trade Recommendation: USD/ZAR**
+2026-03-04 01:59:08  - **Current Price:** 16.51536
+2026-03-04 01:59:08  - **TIMEFRAME CLASSIFICATION:** SWING
+2026-03-04 01:59:08  - **E
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - WARNING - No pattern matches found for GEMINI. Text preview (first 500 chars): Greetings,
+2026-03-04 01:59:08  
+2026-03-04 01:59:08  Here is my analysis of the foreign exchange market for March 3, 2026, based on the provided intelligence from your Google Drive folder and my own independent market research.
+2026-03-04 01:59:08  
+2026-03-04 01:59:08  The overriding theme in the market today is a significant **risk-off** sentiment, primarily driven by geopolitical tensions. This has led to a broad and powerful rally in the US Dollar as a primary safe-haven asset. Currencies sensitive to risk, such as the EUR, GBP, and commodity-linked dollars (AUD, NZD), are
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - WARNING - No pattern matches found for CLAUDE. Text preview (first 500 chars): # FOREX TRADING ANALYSIS
+2026-03-04 01:59:08  **Date: 2026-03-03 | Time: 20:55:48 EST**
+2026-03-04 01:59:08  
+2026-03-04 01:59:08  ---
+2026-03-04 01:59:08  
+2026-03-04 01:59:08  ## MARKET OVERVIEW & KEY FINDINGS
+2026-03-04 01:59:08  
+2026-03-04 01:59:08  ### From Google Drive Data Analysis (Historical - Generated 2026-03-03 23:33 UTC):
+2026-03-04 01:59:08  - **Top Trending Currencies**: USD/ZAR (+1.44%), USD/MXN (+0.96%), USD/CHF (+0.68%)
+2026-03-04 01:59:08  - **Declining Pairs**: EUR/USD (-0.79%), NZD/USD (-0.68%)
+2026-03-04 01:59:08  - **Primary Driver**: US Dollar strength amid geopolitical risk aversion (Middle East tensions)
+2026-03-04 01:59:08  - **Secondary Factor**: Eurozone inflation data disappointing EUR/GBP c
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: EURUSD SHORT @ 1.16 SL:1.165 TP1:1.15 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: AUDJPY LONG @ 110.7 SL:111.6 TP1:108.5 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: EURUSD SHORT @ 1.16 SL:1.165 TP1:1.15 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: AUDJPY SHORT @ 110.7 SL:111.6 TP1:108.5 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: USDZAR LONG @ 16.5 SL:16.25 TP1:16.85 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: EURUSD SHORT @ 1.16 SL:1.165 TP1:1.15 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: AUDJPY SHORT @ 110.7 SL:111.6 TP1:108.5 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: USDZAR LONG @ 16.5 SL:16.25 TP1:16.85 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: EURUSD SHORT @ 1.16 SL:1.165 TP1:1.15 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: AUDJPY SHORT @ 110.7 SL:111.6 TP1:108.5 TP2:None
+2026-03-04 01:59:08  2026-03-04 01:59:08 - trade_alerts - INFO - Γ£à Added recommendation: USDZAR LONG @ 16.5 SL:16.25 TP1:16.85 TP2:None
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for EURUSD: 1.15937 ΓåÆ 1.15938 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for AUDJPY: 110.50000 ΓåÆ 110.41550 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for EURUSD: 1.15937 ΓåÆ 1.15938 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for AUDJPY: 110.50000 ΓåÆ 110.41550 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/ZAR: Recommended=16.56032, Live=16.54502 (diff: 153.0 pips, 0.09%). Recommended price appears to be from historical data, not live market.
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDZAR: 16.56032 ΓåÆ 16.54502 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for EURUSD: 1.15937 ΓåÆ 1.15938 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for AUDJPY: 110.50000 ΓåÆ 110.41550 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/ZAR: Recommended=16.56032, Live=16.54502 (diff: 153.0 pips, 0.09%). Recommended price appears to be from historical data, not live market.
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDZAR: 16.56032 ΓåÆ 16.54502 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for EURUSD: 1.15937 ΓåÆ 1.15938 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for AUDJPY: 110.50000 ΓåÆ 110.41550 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - WARNING - ΓÜá∩╕Å  Current Price mismatch detected for USD/ZAR: Recommended=16.56032, Live=16.54502 (diff: 153.0 pips, 0.09%). Recommended price appears to be from historical data, not live market.
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöº Updated current_price for USDZAR: 16.56032 ΓåÆ 16.54502 (corrected from historical data)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Logged 4 recommendations for future learning (deduplicated: 7, unrealistic: 0)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Step 8: Extracting entry/exit points from all LLMs...
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Parsing CHATGPT recommendations...
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôï Parsed 3 opportunities from JSON code block
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Parsed CHATGPT: 3 opportunities, pairs: [USD/ZAR, GBP/USD, USD/JPY]
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Parsing GEMINI recommendations...
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôï Parsed 3 opportunities from MACHINE_READABLE JSON block
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Parsed GEMINI: 3 opportunities, pairs: [EUR/USD, GBP/USD, AUD/JPY]
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Parsing CLAUDE recommendations...
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôï Parsed 4 opportunities from JSON code block
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Parsed CLAUDE: 4 opportunities, pairs: [USD/ZAR, EUR/USD, GBP/USD, USD/JPY]
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Parsing DEEPSEEK recommendations...
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - WARNING - ΓÜá∩╕Å Parser found 0 pattern matches. Text preview (first 500 chars): ## **Forex Market Analysis & Trading Recommendations**
+2026-03-04 01:59:11  **Analysis Date: 2026-03-03 (EST)**
+2026-03-04 01:59:11  
+2026-03-04 01:59:11  ### **Executive Summary**
+2026-03-04 01:59:11  The market is dominated by a potent "risk-off" theme driven by escalating Middle East tensions, as highlighted in the Google Drive news reports. This has triggered a significant flight to safety, benefiting the US Dollar (USD) and Swiss Franc (CHF) while pressuring commodity and risk-sensitive currencies (EUR, AUD, NZD, ZAR, MXN). The Google Drive data from 23:33 EST showed USD/Z
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    DeepSeek: 0 opportunities parsed. If DeepSeek output format differs (narrative vs JSON), request MACHINE_READABLE JSON in the prompt or see Scalp-Engine USER_GUIDE ┬º13.
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Parsing SYNTHESIS recommendations...
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì Deduplication: Removed 9 duplicate(s) from 12 matches ΓåÆ 3 unique opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Parsed SYNTHESIS: 3 opportunities, pairs: [EUR/USD, AUD/JPY, USD/ZAR]
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - MarketBridge initialized with shared disk path: /var/data/market_state.json
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - MarketBridge API configured: https://market-state-api.onrender.com/market-state
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Merged opportunities: 9 unique pairs (from 13 total recommendations). Per-LLM: chatgpt: 2, claude: 4, gemini: 1, synthesis: 2
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Merged 9 unique opportunities from all LLMs
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Step 9 (NEW): Exporting market state for Scalp-Engine...
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - MarketBridge initialized with shared disk path: /var/data/market_state.json
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - MarketBridge API configured: https://market-state-api.onrender.com/market-state
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Global Bias (USD-Normalized): NEUTRAL (USD Bullish: 4, USD Bearish: 4, Non-USD: 1, Total: 9)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus calculation: 9 merged opportunities to analyze
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    chatgpt: 3 parsed opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    gemini: 3 parsed opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    claude: 4 parsed opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    synthesis: 3 parsed opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/ZAR BUY
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Input: pair='USD/ZAR', direction='BUY'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Normalized: pair_clean='USDZAR', pair_with_slash='USD/ZAR', direction_upper='BUY'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on USD/ZAR BUY (matched: USD/ZAR BUY)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/ZAR BUY:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base_llm_sources: ['chatgpt'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all sources: ['chatgpt', 'synthesis'] (count: 2)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus for USD/ZAR BUY: 1/4 (sources: ['chatgpt'], all sources: ['chatgpt', 'synthesis'])
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/ZAR BUY:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources: ['chatgpt', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources count: 2
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for GBP/USD SELL
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Input: pair='GBP/USD', direction='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Normalized: pair_clean='GBPUSD', pair_with_slash='GBP/USD', direction_upper='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on GBP/USD SELL (matched: GBP/USD SELL)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [gemini] MATCHED! Added to base_llm_sources. Current: ['chatgpt', 'gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [gemini] Added to sources. Current: ['chatgpt', 'gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on GBP/USD SELL (matched: GBP/USD SELL)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/USD SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base_llm_sources: ['chatgpt', 'gemini'] (count: 2)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all sources: ['chatgpt', 'gemini'] (count: 2)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 2/4
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/USD SELL: 2/4 (sources: ['chatgpt', 'gemini'], all sources: ['chatgpt', 'gemini'])
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/USD SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 2
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources: ['chatgpt', 'gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources count: 2
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt', 'gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/JPY BUY
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Input: pair='USD/JPY', direction='BUY'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Normalized: pair_clean='USDJPY', pair_with_slash='USD/JPY', direction_upper='BUY'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [chatgpt] MATCHED! Added to base_llm_sources. Current: ['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [chatgpt] Added to sources. Current: ['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: chatgpt agrees on USD/JPY BUY (matched: USD/JPY BUY)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/JPY BUY:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base_llm_sources: ['chatgpt'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all sources: ['chatgpt'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus for USD/JPY BUY: 1/4 (sources: ['chatgpt'], all sources: ['chatgpt'])
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/JPY BUY:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources: ['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for EUR/USD SELL
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Input: pair='EUR/USD', direction='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Normalized: pair_clean='EURUSD', pair_with_slash='EUR/USD', direction_upper='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [gemini] MATCHED! Added to base_llm_sources. Current: ['gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [gemini] Added to sources. Current: ['gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on EUR/USD SELL (matched: EUR/USD SELL)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for EUR/USD SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base_llm_sources: ['gemini'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all sources: ['gemini', 'synthesis'] (count: 2)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus for EUR/USD SELL: 1/4 (sources: ['gemini'], all sources: ['gemini', 'synthesis'])
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for EUR/USD SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources: ['gemini', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources count: 2
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for AUD/JPY SELL
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Input: pair='AUD/JPY', direction='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Normalized: pair_clean='AUDJPY', pair_with_slash='AUD/JPY', direction_upper='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [gemini] MATCHED! Added to base_llm_sources. Current: ['gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [gemini] Added to sources. Current: ['gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on AUD/JPY SELL (matched: AUD/JPY SELL)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î claude: NO MATCH found after checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for AUD/JPY SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base_llm_sources: ['gemini'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all sources: ['gemini', 'synthesis'] (count: 2)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus for AUD/JPY SELL: 1/4 (sources: ['gemini'], all sources: ['gemini', 'synthesis'])
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for AUD/JPY SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources: ['gemini', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources count: 2
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/ZAR SELL
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Input: pair='USD/ZAR', direction='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Normalized: pair_clean='USDZAR', pair_with_slash='USD/ZAR', direction_upper='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: claude agrees on USD/ZAR SELL (matched: USD/ZAR SELL)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/ZAR SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus for USD/ZAR SELL: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/ZAR SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for EUR/USD BUY
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Input: pair='EUR/USD', direction='BUY'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Normalized: pair_clean='EURUSD', pair_with_slash='EUR/USD', direction_upper='BUY'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: claude agrees on EUR/USD BUY (matched: EUR/USD BUY)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for EUR/USD BUY:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus for EUR/USD BUY: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for EUR/USD BUY:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for GBP/USD BUY
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Input: pair='GBP/USD', direction='BUY'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Normalized: pair_clean='GBPUSD', pair_with_slash='GBP/USD', direction_upper='BUY'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Target directions for matching: ['BUY', 'LONG']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: claude agrees on GBP/USD BUY (matched: GBP/USD BUY)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/USD BUY:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/USD BUY: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/USD BUY:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Starting consensus analysis for USD/JPY SELL
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Input: pair='USD/JPY', direction='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all_opportunities keys: ['chatgpt', 'gemini', 'claude', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Normalized: pair_clean='USDJPY', pair_with_slash='USD/JPY', direction_upper='SELL'
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Target directions for matching: ['SELL', 'SHORT']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ chatgpt: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î chatgpt: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ gemini: Checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î gemini: NO MATCH found after checking 3 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    ≡ƒöÄ claude: Checking 4 opportunities
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [claude] MATCHED! Added to base_llm_sources. Current: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ£à [claude] Added to sources. Current: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Consensus: claude agrees on USD/JPY SELL (matched: USD/JPY SELL)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for USD/JPY SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base_llm_sources: ['claude'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    all sources: ['claude'] (count: 1)
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1/4
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒôè Consensus for USD/JPY SELL: 1/4 (sources: ['claude'], all sources: ['claude'])
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for USD/JPY SELL:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    consensus_level: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources: ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    llm_sources count: 1
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒöì [MARKET-STATE-DEBUG] Writing 9 opportunities to market state:
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Opp #0: USD/ZAR BUY - consensus_level=1, llm_sources=['chatgpt', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Opp #1: GBP/USD SELL - consensus_level=2, llm_sources=['chatgpt', 'gemini']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Opp #2: USD/JPY BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Opp #3: EUR/USD SELL - consensus_level=1, llm_sources=['gemini', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Opp #4: AUD/JPY SELL - consensus_level=1, llm_sources=['gemini', 'synthesis']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Opp #5: USD/ZAR SELL - consensus_level=1, llm_sources=['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Opp #6: EUR/USD BUY - consensus_level=1, llm_sources=['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Opp #7: GBP/USD BUY - consensus_level=1, llm_sources=['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Opp #8: USD/JPY SELL - consensus_level=1, llm_sources=['claude']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Attempting to export market state to /var/data/market_state.json
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Market State exported to /var/data/market_state.json
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Bias: NEUTRAL, Regime: HIGH_VOL, Pairs: ['USD/JPY', 'GBP/USD', 'USD/ZAR', 'AUD/JPY', 'EUR/USD']
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Sending market state to API: https://market-state-api.onrender.com/market-state
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Market state sent to API successfully
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    API response: Market state saved successfully
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Market state exported for Scalp-Engine
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO -    Exported state: 9 opportunities, bias=NEUTRAL, regime=HIGH_VOL
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Full analysis workflow completed
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - Γ£à Analysis completed successfully at 20:55:31 EST
+2026-03-04 01:59:11  2026-03-04 01:59:11 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD SELL @ 1.333 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:59:12  2026-03-04 01:59:12 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR SELL @ 16.52 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 01:59:12  2026-03-04 01:59:12 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD BUY @ 1.159 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 02:00:12  2026-03-04 02:00:12 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/ZAR BUY @ 16.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 02:00:12  2026-03-04 02:00:12 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 157.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 02:00:12  2026-03-04 02:00:12 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/USD SELL @ 1.16 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-03-04 02:00:12  2026-03-04 02:00:12 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.333 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-03-04 02:00:12  2026-03-04 02:00:12 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 157.6 (INTRADAY, confidence: 0.75, ATR-based tolerance)

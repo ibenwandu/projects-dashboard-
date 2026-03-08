@@ -1,0 +1,5 @@
+client_config_backend: settings
+save_credentials: False
+get_refresh_token: True
+oauth_scope:
+  - https://www.googleapis.com/auth/drive

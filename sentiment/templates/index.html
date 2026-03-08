@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+    <h2>Watchlist</h2>
+    <button class="btn btn-primary" onclick="openAddModal()">+ Add Trade</button>
+</div>
+
+{% if trades %}
+<table>
+    <thead>
+        <tr>
+            <th>Asset</th>
+            <th>Direction</th>
+            <th>Bias Expectation</th>
+            <th>Sensitivity</th>
+            <th>Last Alert</th>
+            <th>Last Sentiment</th>
+            <th>Active Events</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for trade in trades %}
+        <tr>
+            <td><strong>{{ trade.asset }}</strong></td>
+            <td>
+                <span class="badge badge-{{ trade.trade_direction }}">
+                    {{ trade.trade_direction.upper() }}
+                </span>
+            </td>
+            <td>{{ trade.bias_expectation or '-' }}</td>
+            <td>
+                <span class="badge badge-{{ trade.sensitivity }}">
+                    {{ trade.sensitivity.upper() }}
+                </span>
+            </td>
+            <td>
+                {% if trade.last_alert_time %}
+                    {{ trade.last_alert_time[:16].replace('T', ' ') }}
+                {% else %}
+                    <span style="color: #9ca3af;">Never</span>
+                {% endif %}
+            </td>
+            <td>
+                {% if trade.last_sentiment %}
+                    <span style="font-weight: 600;">{{ trade.last_sentiment.upper() }}</span>
+                    {% if trade.last_sentiment_direction %}
+                        <span style="color: #6b7280;">({{ trade.last_sentiment_direction }})</span>
+                    {% endif %}
+                {% else %}
+                    <span style="color: #9ca3af;">-</span>
+                {% endif %}
+            </td>
+            <td>
+                {% if trade.active_events %}
+                    <span style="color: #ef4444; font-weight: 600;">{{ trade.active_events|length }} event(s)</span>
+                {% else %}
+                    <span style="color: #9ca3af;">None</span>
+                {% endif %}
+            </td>
+            <td>
+                <button class="btn btn-secondary" onclick="editTrade('{{ trade.asset }}')" style="padding: 6px 12px; font-size: 12px;">Edit</button>
+                <button class="btn btn-danger" onclick="deleteTrade('{{ trade.asset }}')" style="padding: 6px 12px; font-size: 12px;">Delete</button>
+            </td>
+        </tr>
+        {% if trade.notes %}
+        <tr>
+            <td colspan="8" style="color: #6b7280; font-size: 13px; padding-left: 30px;">
+                📝 {{ trade.notes }}
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<div style="text-align: center; padding: 60px 20px; color: #6b7280;">
+    <p style="font-size: 1.2em; margin-bottom: 20px;">No trades in watchlist</p>
+    <button class="btn btn-primary" onclick="openAddModal()">Add Your First Trade</button>
+</div>
+{% endif %}
+
+{% if recent_alerts %}
+<div style="margin-top: 40px;">
+    <h2>Recent Alerts (Last 24 Hours)</h2>
+    <table style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Asset</th>
+                <th>Sentiment</th>
+                <th>Confidence</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for alert in recent_alerts %}
+            <tr>
+                <td>{{ alert.created_at[:16].replace('T', ' ') }}</td>
+                <td><strong>{{ alert.asset }}</strong></td>
+                <td>
+                    <span style="font-weight: 600;">{{ alert.sentiment.upper() }}</span>
+                    {% if alert.sentiment_direction %}
+                        <span style="color: #6b7280;">({{ alert.sentiment_direction }})</span>
+                    {% endif %}
+                </td>
+                <td>{{ "%.0f"|format(alert.confidence * 100) if alert.confidence else '-' }}%</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+<!-- Add/Edit Modal -->
+<div id="tradeModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle">Add Trade to Watchlist</h2>
+            <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <form id="tradeForm" onsubmit="saveTrade(event)">
+            <input type="hidden" id="editAsset" name="asset">
+            
+            <div class="form-group">
+                <label for="asset">Forex Pair *</label>
+                <input type="text" id="asset" name="asset" placeholder="USD/CAD" required 
+                       pattern="[A-Za-z]{3}/[A-Za-z]{3}" style="text-transform: uppercase;"
+                       oninput="this.value = this.value.toUpperCase().replace(/[^A-Z\/]/g, '')"
+                       title="Enter currency pair in format: BASE/QUOTE (e.g., USD/CAD)">
+                <small style="color: #6b7280;">Format: BASE/QUOTE (e.g., USD/CAD, EUR/USD, GBP/USD)</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="trade_direction">Trade Direction *</label>
+                <select id="trade_direction" name="trade_direction" required>
+                    <option value="">Select...</option>
+                    <option value="long">Long</option>
+                    <option value="short">Short</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="bias_expectation">Bias Expectation</label>
+                <input type="text" id="bias_expectation" name="bias_expectation" 
+                       placeholder="e.g., Weak USD">
+            </div>
+            
+            <div class="form-group">
+                <label for="sensitivity">Sensitivity</label>
+                <select id="sensitivity" name="sensitivity">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <textarea id="notes" name="notes" placeholder="Optional notes about this trade"></textarea>
+            </div>
+            
+            <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 30px;">
+                <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save Trade</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+let editingAsset = null;
+
+function openAddModal() {
+    editingAsset = null;
+    document.getElementById('modalTitle').textContent = 'Add Trade to Watchlist';
+    document.getElementById('tradeForm').reset();
+    document.getElementById('editAsset').value = '';
+    document.getElementById('asset').disabled = false;
+    document.getElementById('tradeModal').style.display = 'block';
+}
+
+function editTrade(asset) {
+    editingAsset = asset;
+    document.getElementById('modalTitle').textContent = 'Edit Trade';
+    document.getElementById('editAsset').value = asset;
+    document.getElementById('asset').value = asset;
+    document.getElementById('asset').disabled = true;
+    
+    // Fetch trade details
+    fetch(`/api/trades`)
+        .then(r => r.json())
+        .then(trades => {
+            const trade = trades.find(t => t.asset === asset);
+            if (trade) {
+                document.getElementById('trade_direction').value = trade.trade_direction;
+                document.getElementById('bias_expectation').value = trade.bias_expectation || '';
+                document.getElementById('sensitivity').value = trade.sensitivity;
+                document.getElementById('notes').value = trade.notes || '';
+            }
+        });
+    
+    document.getElementById('tradeModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('tradeModal').style.display = 'none';
+    document.getElementById('tradeForm').reset();
+    editingAsset = null;
+}
+
+function saveTrade(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const asset = formData.get('asset').toUpperCase();
+    const data = {
+        asset: asset,
+        trade_direction: formData.get('trade_direction'),
+        bias_expectation: formData.get('bias_expectation'),
+        sensitivity: formData.get('sensitivity'),
+        notes: formData.get('notes')
+    };
+    
+    const url = editingAsset ? `/api/trades/${editingAsset}` : '/api/trades';
+    const method = editingAsset ? 'PUT' : 'POST';
+    
+    fetch(url, {
+        method: method,
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    })
+    .then(r => r.json())
+    .then(result => {
+        if (result.error) {
+            alert('Error: ' + result.error);
+        } else {
+            closeModal();
+            location.reload();
+        }
+    })
+    .catch(err => {
+        alert('Error: ' + err.message);
+    });
+}
+
+function deleteTrade(asset) {
+    if (!confirm(`Delete ${asset} from watchlist?`)) return;
+    
+    fetch(`/api/trades/${asset}`, {method: 'DELETE'})
+        .then(r => r.json())
+        .then(result => {
+            if (result.error) {
+                alert('Error: ' + result.error);
+            } else {
+                location.reload();
+            }
+        });
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('tradeModal');
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+</script>
+{% endblock %}
+

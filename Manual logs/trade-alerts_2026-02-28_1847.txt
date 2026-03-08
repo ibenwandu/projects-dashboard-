@@ -1,0 +1,100 @@
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO - Γ£à Consensus: gemini agrees on GBP/USD SELL (matched: GBP/USD SELL)
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    Γ¥î claude: No opportunities found (parser may have failed)
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    Γ¥î deepseek: No opportunities found (parser may have failed)
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO - ≡ƒôè [CONSENSUS-DEBUG] Consensus calculation complete for GBP/USD SELL:
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    base_llm_sources: ['gemini'] (count: 1)
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    all sources: ['gemini', 'synthesis'] (count: 2)
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    consensus_level: 1/4
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO - ≡ƒôè Consensus for GBP/USD SELL: 1/4 (sources: ['gemini'], all sources: ['gemini', 'synthesis'])
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO - ≡ƒöì [CONSENSUS-DEBUG] Enhanced opportunity for GBP/USD SELL:
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    consensus_level: 1
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    llm_sources: ['gemini', 'synthesis']
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    llm_sources count: 2
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    base LLMs in sources (excluding synthesis): ['gemini']
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO - ≡ƒöì [MARKET-STATE-DEBUG] Writing 6 opportunities to market state:
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    Opp #0: GBP/USD BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    Opp #1: USD/JPY BUY - consensus_level=1, llm_sources=['chatgpt']
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    Opp #2: EUR/GBP BUY - consensus_level=1, llm_sources=['chatgpt', 'synthesis']
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    Opp #3: GBP/JPY SELL - consensus_level=1, llm_sources=['gemini']
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    Opp #4: USD/JPY SELL - consensus_level=1, llm_sources=['gemini', 'synthesis']
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    Opp #5: GBP/USD SELL - consensus_level=1, llm_sources=['gemini', 'synthesis']
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO - Attempting to export market state to /var/data/market_state.json
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO - Γ£à Market State exported to /var/data/market_state.json
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO -    Bias: NEUTRAL, Regime: HIGH_VOL, Pairs: ['USD/JPY', 'GBP/USD', 'GBP/JPY', 'EUR/GBP']
+2026-02-28 23:03:40  2026-02-28 23:03:40 - trade_alerts - INFO - Sending market state to API: https://market-state-api.onrender.com/market-state
+2026-02-28 23:03:41  2026-02-28 23:03:41 - trade_alerts - INFO - Γ£à Market state sent to API successfully
+2026-02-28 23:03:41  2026-02-28 23:03:41 - trade_alerts - INFO -    API response: Market state saved successfully
+2026-02-28 23:03:41  2026-02-28 23:03:41 - trade_alerts - INFO - Γ£à Market state exported for Scalp-Engine
+2026-02-28 23:03:41  2026-02-28 23:03:41 - trade_alerts - INFO -    Exported state: 6 opportunities, bias=NEUTRAL, regime=HIGH_VOL
+2026-02-28 23:03:41  2026-02-28 23:03:41 - trade_alerts - INFO - Γ£à Full analysis workflow completed
+2026-02-28 23:03:41  2026-02-28 23:03:41 - trade_alerts - INFO - Γ£à Analysis completed successfully at 18:00:41 EST
+2026-02-28 23:03:41  2026-02-28 23:03:41 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 210.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:04:41  2026-02-28 23:04:41 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.3475 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:04:41  2026-02-28 23:04:41 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 156.25 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:04:41  2026-02-28 23:04:41 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/GBP BUY @ 0.8755 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:04:41  2026-02-28 23:04:41 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 156.2 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:07:41  2026-02-28 23:07:41 - trade_alerts - INFO - ≡ƒöä Loop check #466 - 18:07:41 EST
+2026-02-28 23:07:41  2026-02-28 23:07:41 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD SELL @ 1.349 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:11:42  2026-02-28 23:11:42 - trade_alerts - INFO - 
+2026-02-28 23:11:42  === Status Check #470 ===
+2026-02-28 23:11:42  2026-02-28 23:11:42 - trade_alerts - INFO - Current time: 18:11:42 EST (EST/EDT)
+2026-02-28 23:11:42  2026-02-28 23:11:42 - trade_alerts - INFO - Active opportunities: 6
+2026-02-28 23:11:42  2026-02-28 23:11:42 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 25%, claude: 12%, synthesis: 27%, deepseek: 15%
+2026-02-28 23:11:42  2026-02-28 23:11:42 - trade_alerts - INFO - Next analysis at: 19:00 EST (in 48 minutes)
+2026-02-28 23:12:42  2026-02-28 23:12:42 - trade_alerts - INFO - ≡ƒöä Loop check #471 - 18:12:42 EST
+2026-02-28 23:13:42  2026-02-28 23:13:42 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 210.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:14:42  2026-02-28 23:14:42 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.3475 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:14:42  2026-02-28 23:14:42 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 156.25 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:14:42  2026-02-28 23:14:42 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/GBP BUY @ 0.8755 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:14:42  2026-02-28 23:14:42 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 156.2 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:17:43  2026-02-28 23:17:43 - trade_alerts - INFO - ≡ƒöä Loop check #476 - 18:17:43 EST
+2026-02-28 23:17:43  2026-02-28 23:17:43 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD SELL @ 1.349 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:21:43  2026-02-28 23:21:43 - trade_alerts - INFO - 
+2026-02-28 23:21:43  === Status Check #480 ===
+2026-02-28 23:21:43  2026-02-28 23:21:43 - trade_alerts - INFO - Current time: 18:21:43 EST (EST/EDT)
+2026-02-28 23:21:43  2026-02-28 23:21:43 - trade_alerts - INFO - Active opportunities: 6
+2026-02-28 23:21:43  2026-02-28 23:21:43 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 25%, claude: 12%, synthesis: 27%, deepseek: 15%
+2026-02-28 23:21:43  2026-02-28 23:21:43 - trade_alerts - INFO - Next analysis at: 19:00 EST (in 38 minutes)
+2026-02-28 23:22:43  2026-02-28 23:22:43 - trade_alerts - INFO - ≡ƒöä Loop check #481 - 18:22:43 EST
+2026-02-28 23:23:44  2026-02-28 23:23:44 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 210.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:24:44  2026-02-28 23:24:44 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.3475 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:24:44  2026-02-28 23:24:44 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 156.25 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:24:44  2026-02-28 23:24:44 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/GBP BUY @ 0.8755 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:24:44  2026-02-28 23:24:44 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 156.2 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:27:44  2026-02-28 23:27:44 - trade_alerts - INFO - ≡ƒöä Loop check #486 - 18:27:44 EST
+2026-02-28 23:27:44  2026-02-28 23:27:44 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD SELL @ 1.349 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:31:45  2026-02-28 23:31:45 - trade_alerts - INFO - 
+2026-02-28 23:31:45  === Status Check #490 ===
+2026-02-28 23:31:45  2026-02-28 23:31:45 - trade_alerts - INFO - Current time: 18:31:45 EST (EST/EDT)
+2026-02-28 23:31:45  2026-02-28 23:31:45 - trade_alerts - INFO - Active opportunities: 6
+2026-02-28 23:31:45  2026-02-28 23:31:45 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 25%, claude: 12%, synthesis: 27%, deepseek: 15%
+2026-02-28 23:31:45  2026-02-28 23:31:45 - trade_alerts - INFO - Next analysis at: 19:00 EST (in 28 minutes)
+2026-02-28 23:32:45  2026-02-28 23:32:45 - trade_alerts - INFO - ≡ƒöä Loop check #491 - 18:32:45 EST
+2026-02-28 23:33:45  2026-02-28 23:33:45 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 210.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:34:45  2026-02-28 23:34:45 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.3475 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:34:45  2026-02-28 23:34:45 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 156.25 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:34:45  2026-02-28 23:34:45 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/GBP BUY @ 0.8755 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:34:45  2026-02-28 23:34:45 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 156.2 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:37:45  2026-02-28 23:37:45 - trade_alerts - INFO - ≡ƒöä Loop check #496 - 18:37:45 EST
+2026-02-28 23:37:45  2026-02-28 23:37:45 - trade_alerts - INFO - ≡ƒôè Calculating LLM weights from database...
+2026-02-28 23:37:46  2026-02-28 23:37:46 - trade_alerts - INFO -    chatgpt: 48 evaluated recommendations (total: 67)
+2026-02-28 23:37:46  2026-02-28 23:37:46 - trade_alerts - INFO -    gemini: 3030 evaluated recommendations (total: 3065)
+2026-02-28 23:37:46  2026-02-28 23:37:46 - trade_alerts - INFO -    claude: 73 evaluated recommendations (total: 73)
+2026-02-28 23:37:46  2026-02-28 23:37:46 - trade_alerts - INFO -    synthesis: 6017 evaluated recommendations (total: 6050)
+2026-02-28 23:37:46  2026-02-28 23:37:46 - trade_alerts - INFO -    deepseek: 0 evaluated recommendations (total: 0)
+2026-02-28 23:37:46  2026-02-28 23:37:46 - trade_alerts - INFO -    deepseek: Only 0 evaluated recommendations (need 5+) - using default 0.25
+2026-02-28 23:37:46  2026-02-28 23:37:46 - trade_alerts - INFO - ≡ƒôè Calculated LLM weights: {'chatgpt': np.float64(0.20077188966926746), 'gemini': np.float64(0.2509140988397514), 'claude': np.float64(0.12288780060054591), 'synthesis': np.float64(0.27057601487514044), 'deepseek': np.float64(0.15485019601529476)}
+2026-02-28 23:37:46  2026-02-28 23:37:46 - trade_alerts - INFO - ≡ƒôè Loaded LLM weights from database: {'chatgpt': np.float64(0.20077188966926746), 'gemini': np.float64(0.2509140988397514), 'claude': np.float64(0.12288780060054591), 'synthesis': np.float64(0.27057601487514044), 'deepseek': np.float64(0.15485019601529476)}
+2026-02-28 23:37:46  2026-02-28 23:37:46 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD SELL @ 1.349 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:41:46  2026-02-28 23:41:46 - trade_alerts - INFO - 
+2026-02-28 23:41:46  === Status Check #500 ===
+2026-02-28 23:41:46  2026-02-28 23:41:46 - trade_alerts - INFO - Current time: 18:41:46 EST (EST/EDT)
+2026-02-28 23:41:46  2026-02-28 23:41:46 - trade_alerts - INFO - Active opportunities: 6
+2026-02-28 23:41:46  2026-02-28 23:41:46 - trade_alerts - INFO - LLM Weights: chatgpt: 20%, gemini: 25%, claude: 12%, synthesis: 27%, deepseek: 15%
+2026-02-28 23:41:46  2026-02-28 23:41:46 - trade_alerts - INFO - Next analysis at: 19:00 EST (in 18 minutes)
+2026-02-28 23:42:47  2026-02-28 23:42:47 - trade_alerts - INFO - ≡ƒöä Loop check #501 - 18:42:47 EST
+2026-02-28 23:43:47  2026-02-28 23:43:47 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/JPY SELL @ 210.5 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:44:47  2026-02-28 23:44:47 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: GBP/USD BUY @ 1.3475 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:44:47  2026-02-28 23:44:47 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY BUY @ 156.25 (INTRADAY, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:44:47  2026-02-28 23:44:47 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: EUR/GBP BUY @ 0.8755 (SWING, confidence: 0.75, ATR-based tolerance)
+2026-02-28 23:44:47  2026-02-28 23:44:47 - trade_alerts - INFO - ≡ƒÜ¿ ENTRY POINT HIT: USD/JPY SELL @ 156.2 (SWING, confidence: 0.75, ATR-based tolerance)

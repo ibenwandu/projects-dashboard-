@@ -1,0 +1,66 @@
+# Environment variables
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Data files
+data/*.csv
+data/*.xlsx
+data/*.db
+data/*.sqlite
+*.h5
+*.pkl
+*.pickle
+
+# Logs
+logs/*.log
+*.log
+
+# Output files
+output/*.csv
+output/*.xlsx
+output/*.json
+output/*.png
+output/*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Model files
+*.joblib
+models/
+
+# API keys and secrets
+credentials.json
+token.json
+*.key
+*.pem
+
+
+
+
+
+
+

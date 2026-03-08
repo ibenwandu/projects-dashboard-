@@ -1,0 +1,43 @@
+{
+  "candidate_profile": {
+    "name": "Ibe Nwandu",
+    "title": "Senior Customer Experience Specialist, Business Systems Analyst, Project Manager",
+    "credentials": ["MBA Management Engineering", "PMP", "ITIL", "CSM - Certified Scrum Master"],
+    "years_of_experience": 10
+  },
+  "location": {
+    "weight": 0.30,
+    "preferred": ["Remote", "Hybrid"],
+    "acceptable": ["On_site", "Toronto", "GTA", "Ontario", "Canada"]
+  },
+  "salary": {
+    "weight": 0.30,
+    "currency": "CAD",
+    "minimum": 80000,
+    "target": 135000,
+    "note": "Based on 20+ years experience, MBA, PMP, ITIL, CSM credentials, and senior-level scope"
+  },
+  "role_types": {
+    "weight": 0.40,
+    "primary_targets": [
+      "Senior Customer Experience Analyst",
+      "Customer Experience Analyst",
+      "Senior Business Analyst",
+      "Business Analyst",
+      "Senior Data Analyst",
+      "Data Analyst",
+      "Project Manager",
+      "CX Transformation Lead"
+    ],
+    "secondary_targets": [
+      "Senior Delivery Manager",
+      "Operations Manager",
+      "Innovation Strategy Lead"
+    ]
+  },
+  "work_arrangement_preferences": {
+    "remote": true,
+    "hybrid": true,
+    "note": "Hybrid or Remote preferred; Open to Toronto/GTA location-based roles"
+  }
+}
