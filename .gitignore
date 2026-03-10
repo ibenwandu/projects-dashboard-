@@ -40,6 +40,9 @@ Trade-Alerts/.git/
 *.temp
 /temp/
 
+# Git worktrees (isolated workspaces)
+.worktrees/
+
 # Data files (optional, uncomment if needed)
 # *.db
 # *.sqlite
