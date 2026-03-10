@@ -39,14 +39,14 @@ Trade-Alerts serves as a **core 24/7 autonomous income generator** within the br
 ## Related Learning & Decisions
 
 ### Key Documentation
-- [[../../../../COMPREHENSIVE_SYSTEM_UNDERSTANDING.md]] - System architecture and vision
-- [[../../../../COMPREHENSIVE_TRADING_SYSTEMS_DOCUMENTATION.md]] - Technical implementation details
+- [[../../../COMPREHENSIVE_SYSTEM_UNDERSTANDING.md]] - System architecture and vision
+- [[../../../COMPREHENSIVE_TRADING_SYSTEMS_DOCUMENTATION.md]] - Technical implementation details
 - [[../Trading-Journal]] - Historical trading session notes and performance analysis
 
 ### Connected Projects
-- [[../../../../Fx-engine]] - Core FX trading engine
-- [[../../../../Scalp-Engine]] - Scalping strategy implementation
-- [[../../../../sentiment-monitor-git]] - Market sentiment analysis integration
+- [[../../../Fx-engine]] - Core FX trading engine
+- [[../../../Scalp-Engine]] - Scalping strategy implementation
+- [[../../../sentiment-monitor-git]] - Market sentiment analysis integration
 
 ## Next Milestone
 **Phase 1 Analysis Completion:**
@@ -84,6 +84,6 @@ Trade-Alerts serves as a **core 24/7 autonomous income generator** within the br
 - `.env` - Deployment credentials and API keys
 
 ## Links
-- [[../../../../COMPREHENSIVE_SYSTEM_UNDERSTANDING.md|System Understanding]] - Full trading system vision and architecture
-- [[../../../../CLAUDE_SESSION_LOG.md|Session Log]] - Recent work and decisions
-- [[../../../../TRADING_SYSTEM_IMPROVEMENT_PLAN.md|Improvement Plan]] - Strategic roadmap
+- [[../../../COMPREHENSIVE_SYSTEM_UNDERSTANDING.md|System Understanding]] - Full trading system vision and architecture
+- [[../../../CLAUDE_SESSION_LOG.md|Session Log]] - Recent work and decisions
+- [[../../../TRADING_SYSTEM_IMPROVEMENT_PLAN.md|Improvement Plan]] - Strategic roadmap
