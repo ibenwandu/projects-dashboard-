@@ -44,3 +44,25 @@ def test_validate_vault_path_requires_subdirs():
         is_valid, error = validate_vault_path(vault_path)
         assert not is_valid
         assert "required directories" in error.lower()
+
+def test_validate_vault_path_valid_vault():
+    """Should validate vault with all required directories"""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        vault_path = Path(tmpdir) / "valid_vault"
+        vault_path.mkdir()
+        (vault_path / "Projects").mkdir()
+        (vault_path / "Trading-Journal").mkdir()
+        (vault_path / "Ideas").mkdir()
+
+        is_valid, error = validate_vault_path(vault_path)
+        assert is_valid
+        assert error is None
+
+def test_get_vault_path_corrupted_json():
+    """Should fall back to default if config JSON is corrupted"""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        config_file = Path(tmpdir) / "vault_config.json"
+        config_file.write_text("{invalid json content")  # Corrupted JSON
+
+        path = get_vault_path(config_file=config_file)
+        assert path == Path.home() / "My Knowledge Base"
