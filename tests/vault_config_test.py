@@ -4,7 +4,7 @@ import tempfile
 from pathlib import Path
 import sys
 sys.path.insert(0, r'C:\Users\user\.claude\scripts')
-from vault_config import get_vault_path, save_vault_config
+from vault_config import get_vault_path, save_vault_config, validate_vault_path
 
 def test_get_vault_path_from_config():
     """Should read vault path from vault_config.json"""
@@ -34,3 +34,13 @@ def test_save_vault_config():
         assert config_file.exists()
         data = json.loads(config_file.read_text())
         assert data["vault_path"] == str(test_path)
+
+def test_validate_vault_path_requires_subdirs():
+    """Should fail if required subdirectories missing"""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        vault_path = Path(tmpdir) / "incomplete_vault"
+        vault_path.mkdir()  # Create vault but no subdirs
+
+        is_valid, error = validate_vault_path(vault_path)
+        assert not is_valid
+        assert "required directories" in error.lower()
