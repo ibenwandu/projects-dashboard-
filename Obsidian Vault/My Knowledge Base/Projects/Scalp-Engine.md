@@ -50,14 +50,14 @@ Scalp-Engine serves as the **execution engine** that transforms Trade-Alerts opp
 ## Related Learning & Decisions
 
 ### Key Documentation
-- [[../../../COMPREHENSIVE_SYSTEM_UNDERSTANDING.md]] - System architecture and vision
-- [[../../../COMPREHENSIVE_TRADING_SYSTEMS_DOCUMENTATION.md]] - Technical implementation details
-- [[../Trading-Journal]] - Historical trading session notes and performance analysis
+- [[../../../COMPREHENSIVE_SYSTEM_UNDERSTANDING.md|System Understanding]] - System architecture and vision
+- [[../../../COMPREHENSIVE_TRADING_SYSTEMS_DOCUMENTATION.md|Trading Documentation]] - Technical implementation details
+- [[../Trading-Journal/2026-03-09_to_2026-03-11_Phase1Testing|Trading Session]] - Historical trading session notes and performance analysis
 
 ### Connected Projects
-- [[../Projects/Trade-Alerts]] - Alert generation and delivery system
-- [[../../../Fx-engine]] - Core FX trading engine foundation
-- [[../../../sentiment-monitor-git]] - Market sentiment analysis integration
+- [[../Projects/Trade-Alerts|Trade-Alerts]] - Alert generation and delivery system
+- [[../../../Fx-engine|Fx-engine]] - Core FX trading engine foundation
+- [[../../../sentiment-monitor-git|Sentiment Monitor]] - Market sentiment analysis integration
 
 ## Next Milestone
 **Phase 1 Analysis Completion:**
@@ -76,7 +76,7 @@ Scalp-Engine serves as the **execution engine** that transforms Trade-Alerts opp
 - Set foundation for ongoing monitoring and trade execution validation
 - Identified Phase 1 dependencies with Trade-Alerts project
 
-### 2026-03-11: Phase 1 Analysis (Planned)
+### 2026-03-11: Context Preparation & System Restart
 - Phase 1 SL/TP log analysis to commence (coordinated analysis with Trade-Alerts)
 - Trade execution findings report to be generated
 - Position synchronization verification across projects
