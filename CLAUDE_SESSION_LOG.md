@@ -1,5 +1,135 @@
 # Root-Level Session Log
 
+## Session: 2026-03-10 — Phase 1 Testing Analysis & ATR/TP Investigation (IN PROGRESS)
+
+**Date**: March 10, 2026
+**Time**: Session start (time varies)
+**Duration**: ~2 hours
+**Type**: Phase 1 testing data analysis and investigation
+**Status**: 🟡 IN PROGRESS — Laptop restart pending
+
+### 🎯 Session Objective
+
+Review Phase 1 testing logs (Mar 9-11 still running), analyze why trades aren't closing at targets, and investigate ATR_TRAILING and TP calculation logic.
+
+### 📋 What We Worked On
+
+#### 1. Multi-Project Overview & Context Awareness
+- **Created**: Memory file at `C:\Users\user\.claude\projects\C--Users-user-projects-personal\memory\MEMORY.md`
+- **Purpose**: Track current date (Mar 10, 2026) and timeline awareness to prevent redundant questions
+- **Contents**:
+  - Phase 1 testing timeline (Mar 9-11)
+  - Known issues to monitor
+  - Key files for reference
+  - Session protocol reminders
+- **Impact**: Future sessions will reference this memory to avoid time-related questions
+
+#### 2. Log File Cleanup & Organization
+- **Archived**: 252 older log files (Mar 3-8) to `/c/Users/user/Desktop/Test/Manual logs Archive/`
+- **Archived**: 3 issue notes (.odt files from Mar 3-4)
+- **Result**: "Manual logs" folder now contains only 46 Phase 1 test files (Mar 9)
+- **Benefit**: Cleaner folder structure, easier to manage testing data
+
+#### 3. Phase 1 Testing Status Assessment
+- **Current Status**: 🔄 STILL RUNNING (Day 2 of 3 as of Mar 10)
+  - Mar 9: 24 hours complete ✅
+  - Mar 10: In progress today 🔄
+  - Mar 11: To be collected tomorrow ⏳
+- **Corrected Understanding**: Phase 1 is ongoing, not complete
+- **Issue**: User pointed out date-awareness requirement → created memory file
+
+#### 4. Phase 1 Mar 9 Data Analysis
+**Analysis Findings** (Day 1 only):
+- **Trades Opened**: 4 total (AUD/JPY BUY, GBP/JPY BUY, USD/CAD SELL, NZD/USD blocked)
+- **Trades Closed**: 0 (critical finding)
+- **SL/TP Coverage**: 100% (4/4 trades have both SL and TP defined) ✅
+- **Close at Target Rate**: 0% (0/4) ❌ — **CRITICAL FAILURE**
+  - Fails Phase 1 requirement of ≥90% close at SL/TP
+- **SL Violations**: 0 violations (ATR trailing kept positions safe) ✅
+
+**Critical Issue Identified**:
+Trades ARE being opened with proper SL and TP, but they're NOT CLOSING when targets are hit. All 4 positions held open through end of day with unrealized P&L.
+
+#### 5. ATR_TRAILING & TP Calculation Investigation (PARTIAL)
+**What We Found**:
+- Config values: `stop_loss_pips: 5`, `take_profit_pips: 8` (from config.yaml)
+- OANDA API calls verified: Using TakeProfitDetails and StopLossDetails correctly
+- Distance calculation: `distance = pips * pip_value` (0.0001 for normal, 0.01 for JPY)
+- Sample trade data: TP/SL prices ARE being set in OANDA orders
+  - Example: TP price "159.000" (AUD/JPY), SL price "156.800"
+  - Prices formatted correctly as strings for OANDA API
+
+**Investigation Status**: INCOMPLETE — Laptop restart required before full analysis
+- Did not complete: Root cause of why TP/SL prices aren't triggering trade closures
+- Did not check: Trailing stop override logic, database schema issues affecting closure
+- Next step: Full ATR_TRAILING analysis in next session
+
+### ✅ What Worked
+
+1. **Memory file creation** — Solved date-awareness problem for future sessions
+2. **Log archival** — Cleanup successful, folder much more organized
+3. **Phase 1 understanding** — Clarified that testing is still running (today is Day 2)
+4. **Partial TP/SL verification** — Confirmed values ARE being sent to OANDA API
+5. **Data extraction** — Successfully parsed OANDA transaction JSON structure
+
+### ❌ What Didn't Work / Blockers
+
+1. **Full analysis incomplete** — Agent rejected before completing ATR_TRAILING investigation
+2. **Laptop restart required** — Cannot continue investigation until after restart
+3. **Limited log data** — Only Day 1 (Mar 9) logs available; Days 2-3 still being generated
+
+### 🔍 Key Discoveries
+
+1. **Phase 1 is still running**: Today is Mar 10 (Day 2 of 3), not complete
+2. **Trades are opening but not closing**: 4 trades opened Mar 9, 0 closed
+   - SL/TP ARE defined correctly ✅
+   - Prices ARE sent to OANDA ✅
+   - But closure logic isn't working ❌
+3. **Date awareness critical**: User needed reminder that today = Mar 10, tests still running
+4. **Memory file essential**: Created to prevent future redundant time-based questions
+
+### 📊 Current Status
+
+| Component | Status | Notes |
+|-----------|--------|-------|
+| Phase 1 Testing | 🔄 Running | Day 2 of 3 (Mar 9-11) |
+| Mar 9 Data | ✅ Available | 46 log files, cleaned up |
+| ATR_TRAILING Analysis | ⏸️ Incomplete | Investigation interrupted by restart |
+| TP/SL Calculation | ⚠️ Partial | Values correct, closure logic unclear |
+| Trade Closure Logic | 🔴 Broken | 0 of 4 trades closed on Mar 9 |
+
+### 🚀 Next Steps for Future Sessions
+
+**IMMEDIATE (Next Session - Mar 10+)**:
+1. Resume full ATR_TRAILING investigation:
+   - Search codebase for ATR, trailing, dynamic SL logic
+   - Check for conflicts between static SL/TP and trailing implementations
+   - Investigate database schema issues affecting trade closure
+2. Analyze why TP/SL prices aren't triggering closures:
+   - Review OANDA API response handling
+   - Check if "distance" vs "price" parameterization is correct
+   - Look for any middleware blocking automatic closures
+3. Pull Mar 10-11 logs when available to see if trades eventually close
+
+**CRITICAL ISSUES TO RESOLVE**:
+- ❌ Trades not closing at TP/SL (0% closure rate on Mar 9)
+- ⚠️ ATR calculation possibly too wide (mentioned >20 pips, vs 5-8 configured)
+- 🔴 This blocks Phase 1 pass criteria (need ≥90% closure rate)
+
+**If Phase 1 Fails**:
+- Will need to fix TP/SL closure logic before re-running test
+- May need to adjust ATR multiplier or trailing stop parameters
+- Consider circuit breaker logic to prevent endless holding
+
+**References**:
+- Memory file: `C:\Users\user\.claude\projects\C--Users-user-projects-personal\memory\MEMORY.md`
+- Phase 1 logs: `/c/Users/user/Desktop/Test/Manual logs/` (cleaned, 46 files)
+- Archived logs: `/c/Users/user/Desktop/Test/Manual logs Archive/` (252 files, Mar 3-8)
+- Analysis output: `TRADING_SYSTEM_ANALYSIS_REPORT.md` (from previous session)
+- Suggestions: `suggestions_from_anthropic4.md` (2,500+ lines of analysis)
+
+---
+
 ## Session: 2026-03-09 — Comprehensive System Audit & Phase 1 Testing Setup
 
 **Date**: March 9, 2026
