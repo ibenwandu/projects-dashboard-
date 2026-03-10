@@ -101,7 +101,7 @@ Begin Phase 1 testing
 
         assert preview is not None
         assert "Would" in preview or "DRY RUN" in preview
-        print("✓ Dry-run preview generated")
+        print("[PASS] Dry-run preview generated")
 
         # Verify no actual changes from dry-run
         dashboard_mtime_before = dashboard_path.stat().st_mtime
@@ -120,13 +120,13 @@ Begin Phase 1 testing
         updated_proj = trade_alerts_file.read_text(encoding='utf-8')
         assert "Phase 1 Testing" in updated_proj
         assert "Manual close rate at 80%" in updated_proj
-        print("✓ Project file updated with status")
+        print("[PASS] Project file updated with status")
 
         # Check Dashboard updated with project info
         dashboard_updated = dashboard_path.read_text(encoding='utf-8')
         assert "Trade-Alerts" in dashboard_updated
         assert "Active Projects" in dashboard_updated
-        print("✓ Dashboard updated with project info")
+        print("[PASS] Dashboard updated with project info")
 
         # ===== READ CONTEXT FROM UPDATED VAULT =====
         context = read_vault_context(vault_path)
@@ -138,12 +138,12 @@ Begin Phase 1 testing
         assert len(blockers) > 0, f"Expected blockers, got: {blockers}"
         blocker_texts = [b[1] for b in blockers]
         assert any("Manual close" in b for b in blocker_texts), f"Expected 'Manual close' in blockers: {blocker_texts}"
-        print("✓ Context correctly reads blockers from updated vault")
+        print("[PASS] Context correctly reads blockers from updated vault")
 
         # ===== VERIFY CONTEXT FORMATTING =====
         formatted = format_context_for_display(context)
         assert "Trade-Alerts" in formatted
         assert "BLOCKERS" in formatted or "blockers" in formatted.lower()
-        print("✓ Context formatting works")
+        print("[PASS] Context formatting works")
 
-        print("\n✓✓✓ FULL INTEGRATION TEST PASSED ✓✓✓")
+        print("\n[PASS] FULL INTEGRATION TEST PASSED [PASS]")
