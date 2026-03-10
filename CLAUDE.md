@@ -205,20 +205,39 @@ This portfolio includes several active projects with interdependencies:
 
 ---
 
+## Automation Settings (Standard Operating Procedure)
+
+**These actions are automatic — DO NOT ask for confirmation or file paths:**
+- ✅ **Obsidian Dashboard Updates**: Auto-update every close-session-root
+  - File: `Obsidian Vault\My Knowledge Base\00-DASHBOARD.md`
+  - Action: Update project status, priorities, metrics, timestamp
+  - Frequency: End of every session (close-session-root process)
+- ✅ **MEMORY.md Updates**: Auto-update with findings and decisions
+- ✅ **Root CLAUDE_SESSION_LOG.md**: Auto-update with session documentation
+
+**These actions require explicit confirmation:**
+- ⚠️ **Git Commits**: Show message for approval before pushing
+- ⚠️ **Destructive Operations**: Confirm before running (reset, delete, etc.)
+- ⚠️ **Major Code Changes**: Confirm approach/plan before implementation
+
+---
+
 ## When Working with Ibe: Do's and Don'ts
 
 ### ✅ DO:
+- Execute automated procedures (MEMORY.md, CLAUDE_SESSION_LOG.md, Obsidian dashboard) without asking
 - Confirm before taking reversible actions (especially git operations)
 - Present options with clear recommendations
 - Use structured, professional communication
 - Reference specific file paths and line numbers
-- Ask clarifying questions when requirements are ambiguous
-- Validate assumptions before proceeding
+- Validate assumptions before proceeding (only when NOT in automation settings)
 - Document decisions in appropriate CLAUDE_SESSION_LOG.md files
 - Check project-specific CLAUDE.md files for unique rules
+- Remember and act on decisions documented in MEMORY.md (don't re-ask)
 
 ### ❌ DON'T:
-- Assume preferences without checking project-specific guidelines
+- Ask about file paths or automation decisions already documented in MEMORY.md or CLAUDE.md
+- Ask redundant questions about previously made decisions or preferences
 - Over-explain simple concepts
 - Provide vague or hedging responses
 - Skip confirmation on destructive operations
