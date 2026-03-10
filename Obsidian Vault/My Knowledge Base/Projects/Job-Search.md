@@ -83,25 +83,13 @@ Workflow will be re-enabled when:
 
 ## Key Components
 
-### Workflow Orchestration
-- **daily_workflow.py** — Main orchestrator, runs job discovery → analysis → customization → output
-- Scheduled execution (when enabled)
-- Error handling and logging
-
-### Configuration & Setup
-- **config/** directory — Search criteria, API keys, scoring rules
-- **search_config.json** — Job titles, locations, filters
-- **resume-pdf-template.html** — Customizable resume template
-
-### Job Analysis & Storage
-- **extracted-jobs/** — Raw job listings from API sources
-- **analysis/** — Scored and filtered job opportunities
-- **customized-resumes/** — Generated resume PDFs per job
-
-### Application Tracking
-- **approved_jobs.txt** — Pre-approved roles
-- **reported_job_ids.txt** — Flagged or reported listings
-- **jobs_combined.md** — Consolidated job summaries with links
+Core automation files handle:
+- **Workflow orchestration** — Job discovery → analysis → customization → output
+- **Configuration management** — Search criteria, API keys, scoring rules
+- **Job extraction** — Raw job listings from LinkedIn and Glassdoor sources
+- **Analysis tools** — Scoring, filtering, and relevance analysis
+- **Resume customization** — Generated resume PDFs tailored per opportunity
+- **Application tracking** — Status monitoring and job link consolidation
 
 ## Links
 
@@ -116,5 +104,12 @@ Workflow will be re-enabled when:
 - [[../Projects/Scalp-Engine]] — Concurrent trading system focus
 
 ---
+
+## Implementation Note
+
+**Note**: This project has two implementations (`job-search` and `job-search-monorepo`). Currently tracking primary implementation at `job-search-monorepo`.
+
+---
+
 *Last Updated: Mar 9, 2026*
-*Status: Paused (Intentional) · Next Review: TBD*
+*Status: Paused (Intentional) · Next Review: Pending market assessment or urgent job opportunity*
