@@ -9,11 +9,12 @@ Phase 1 TradingAgent monitors:
 
 import logging
 import os
+import time
 from typing import Tuple, Dict, Any
 from emy.agents.base_agent import EMySubAgent
 from emy.tools.api_client import OandaClient, RenderClient
 from emy.tools.file_ops import FileOpsTool
-from emy.tools.notification_tool import NotificationTool
+from emy.tools.notification_tool import PushoverNotifier
 
 logger = logging.getLogger('TradingAgent')
 
@@ -30,7 +31,7 @@ class TradingAgent(EMySubAgent):
         super().__init__('TradingAgent', 'claude-haiku-4-5-20251001')
         self.oanda_client = OandaClient()
         self.render_client = RenderClient()
-        self.notifier = NotificationTool()
+        self.notifier = PushoverNotifier()
         self.file_ops = FileOpsTool()
 
         # Database for risk validation and trade logging
@@ -39,6 +40,14 @@ class TradingAgent(EMySubAgent):
             self.db = EMyDatabase()
         else:
             self.db = db
+
+        # Initialize alert throttle state (60-second window per event type)
+        self.last_alert_time = {
+            'trade_executed': None,
+            'trade_rejected': None,
+            'daily_loss_75': None,
+            'daily_loss_100': None
+        }
 
     def run(self) -> Tuple[bool, Dict[str, Any]]:
         """Execute trading monitoring tasks."""
@@ -247,6 +256,31 @@ class TradingAgent(EMySubAgent):
         else:
             self.logger.error(f"[ERR] Trade execution failed: {symbol} {direction} {units}")
             return None
+
+    def should_send_alert(self, alert_type: str) -> bool:
+        """
+        Check if alert should be sent based on throttle window
+
+        Args:
+            alert_type: One of 'trade_executed', 'trade_rejected', 'daily_loss_75', 'daily_loss_100'
+
+        Returns:
+            True if alert should be sent (not in throttle window), False otherwise
+        """
+        # Check if throttling is disabled (testing)
+        if os.getenv('PUSHOVER_NO_THROTTLE', 'false').lower() == 'true':
+            return True
+
+        last_time = self.last_alert_time.get(alert_type)
+        if last_time is None:
+            return True  # First alert of this type
+
+        elapsed = time.time() - last_time
+        return elapsed >= 60  # Only send if 60+ seconds passed
+
+    def record_alert_sent(self, alert_type: str) -> None:
+        """Record that an alert was sent to update throttle window"""
+        self.last_alert_time[alert_type] = time.time()
 
     @staticmethod
     def _get_timestamp() -> str:
