@@ -409,7 +409,7 @@ class EMyDatabase:
                 trade_id TEXT UNIQUE,
                 account_id TEXT,
                 symbol TEXT NOT NULL,
-                units INTEGER NOT NULL,
+                units REAL NOT NULL,
                 direction TEXT NOT NULL,
                 entry_price REAL,
                 stop_loss REAL,
@@ -422,7 +422,7 @@ class EMyDatabase:
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
             """)
-            conn.commit()
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_oanda_trades_status ON oanda_trades(status)")
 
     def _create_oanda_limits_table(self):
         """Create table for tracking risk limits per day."""
@@ -430,7 +430,7 @@ class EMyDatabase:
             conn.execute("""
             CREATE TABLE IF NOT EXISTS oanda_limits (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                date TEXT NOT NULL,
+                date TEXT NOT NULL UNIQUE,
                 max_position_size INTEGER DEFAULT 10000,
                 max_daily_loss_usd REAL DEFAULT 100.0,
                 max_concurrent_positions INTEGER DEFAULT 5,
@@ -439,4 +439,4 @@ class EMyDatabase:
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
             """)
-            conn.commit()
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_oanda_limits_date ON oanda_limits(date)")
