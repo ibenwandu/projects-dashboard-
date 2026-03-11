@@ -2,7 +2,7 @@
 
 **A fully autonomous AI agent for managing trading systems, job search automation, and personal knowledge management.**
 
-![Status](https://img.shields.io/badge/status-production--ready-green) ![Phase](https://img.shields.io/badge/phase-5/5%20complete-brightgreen) ![Tests](https://img.shields.io/badge/tests-10/10%20passing-brightgreen)
+![Status](https://img.shields.io/badge/status-production--ready-green) ![Phase](https://img.shields.io/badge/phase-5/5%20complete-brightgreen) ![Tests](https://img.shields.io/badge/tests-15/15%20passing-brightgreen)
 
 ---
 
@@ -108,7 +108,7 @@ python emy.py ask "Check render service health"
 | trading_health_check | 15 minutes | Monitor account & services |
 | job_search_daily | Daily 9 AM | Search 4 platforms |
 | resume_tailor_approved | Daily 10 AM | Tailor top-scoring resumes |
-| obsidian_dashboard_update | Daily 8 PM | Update knowledge base |
+| obsidian_dashboard_update | **Every 60 minutes** | Update knowledge base (automated) |
 | memory_persist | 4 hours | Save findings to MEMORY.md |
 | skill_improvement_sweep | Daily 11 PM | Auto-improve underperforming skills |
 
@@ -284,6 +284,33 @@ Create `.emy_disabled` file to disable all scheduled tasks:
 ```bash
 touch .emy_disabled    # Disable
 rm .emy_disabled       # Enable
+```
+
+### Knowledge Management (Automated Obsidian Dashboard Updates)
+
+The KnowledgeAgent automatically updates your Obsidian Mission Control Dashboard **every 60 minutes** with:
+
+- **Emy Task Status** (Running/Stopped from Windows Task Scheduler)
+- **Last Run Time** (from database, within 24 hours)
+- **Next Scheduled Job** (from Task Scheduler)
+- **Recent Alerts Summary** (trade executions, rejections, warnings - last 24 hours)
+- **Critical Alerts** (daily loss 100%, API errors)
+
+**Features:**
+- ✅ Fully automated hourly updates (zero manual intervention)
+- ✅ Git auto-committed with descriptive messages (`auto: update Emy status [hourly]`)
+- ✅ Graceful handling if Obsidian file missing
+- ✅ Task Scheduler integration (reads actual task state)
+- ✅ Database querying (metrics from emy_tasks table)
+
+**Dashboard Location:**
+```
+../Obsidian Vault/My Knowledge Base/00-DASHBOARD.md
+```
+
+**Example Dashboard Row (Auto-Generated):**
+```markdown
+| Emy | Phase 1: Pushover Alerts | 🟢 RUNNING (14:32) | trading_health_check in 13min | ✅ Exec: 3 | Rej: 1 | Alerts: 4 |
 ```
 
 ---
@@ -506,4 +533,4 @@ Emy is production-ready with:
 ---
 
 **Last Updated:** March 10, 2026
-**Status:** Production Ready (All Tests Passing 10/10)
+**Status:** Production Ready (All Tests Passing 15/15 — 12 Unit + 3 Integration)
