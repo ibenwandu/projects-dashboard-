@@ -167,7 +167,7 @@ class TradingAgent(EMySubAgent):
             self.logger.error(f"Phase 1 log monitoring error: {e}")
             return {'status': 'error', 'reason': str(e)}
 
-    def _validate_trade(self, symbol: str, units: int, direction: str) -> Tuple[bool, str]:
+    def _validate_trade(self, symbol: str, units: int, direction: str = None) -> Tuple[bool, str]:
         """Validate trade against risk limits.
 
         Checks:
@@ -175,24 +175,45 @@ class TradingAgent(EMySubAgent):
         2. Daily loss does not exceed OANDA_MAX_DAILY_LOSS_USD
         3. Concurrent open positions do not exceed OANDA_MAX_CONCURRENT_POSITIONS
 
+        Sends Normal priority (0) Pushover alert when trade is rejected.
+
         Args:
             symbol: Instrument (e.g., 'EUR_USD')
             units: Number of units requested
-            direction: 'BUY' or 'SELL'
+            direction: 'BUY' or 'SELL' (optional)
 
         Returns:
             Tuple[bool, str]: (is_valid, reason)
                 is_valid=True if all checks pass, reason='OK'
                 is_valid=False if any check fails, reason contains rejection reason
         """
-        max_position = int(os.getenv('OANDA_MAX_POSITION_SIZE', '10000'))
+        # Get max position from db if available, otherwise from env
+        try:
+            max_position = self.db.get_max_position_size()
+        except (AttributeError, TypeError):
+            max_position = int(os.getenv('OANDA_MAX_POSITION_SIZE', '10000'))
+
         max_daily_loss = float(os.getenv('OANDA_MAX_DAILY_LOSS_USD', '100.0'))
         max_concurrent = int(os.getenv('OANDA_MAX_CONCURRENT_POSITIONS', '5'))
 
         # Check 1: Position size
         if units > max_position:
-            reason = f"Position size {units} exceeds limit {max_position}"
+            reason = f"Position size {units:,} exceeds limit {max_position:,}"
             self.db.log_trade_rejection(symbol, units, reason)
+
+            # Send alert (check throttle)
+            if self.should_send_alert('trade_rejected'):
+                message = (
+                    f"OANDA: {symbol} {units:,} REJECTED\n"
+                    f"Reason: {reason}"
+                )
+                self.notifier.send_alert(
+                    title="Trade Rejected",
+                    message=message,
+                    priority=0  # Normal
+                )
+                self.record_alert_sent('trade_rejected')
+
             return False, reason
 
         # Check 2: Daily loss
@@ -201,6 +222,20 @@ class TradingAgent(EMySubAgent):
         if daily_pnl < -max_daily_loss:
             reason = f"Daily loss ${abs(daily_pnl):.2f} exceeds limit ${max_daily_loss}"
             self.db.log_trade_rejection(symbol, units, reason)
+
+            # Send alert (check throttle)
+            if self.should_send_alert('trade_rejected'):
+                message = (
+                    f"OANDA: {symbol} {units:,} REJECTED\n"
+                    f"Reason: {reason}"
+                )
+                self.notifier.send_alert(
+                    title="Trade Rejected",
+                    message=message,
+                    priority=0  # Normal
+                )
+                self.record_alert_sent('trade_rejected')
+
             return False, reason
 
         # Check 3: Concurrent positions
@@ -208,6 +243,20 @@ class TradingAgent(EMySubAgent):
         if open_count >= max_concurrent:
             reason = f"Open positions {open_count} at limit {max_concurrent}"
             self.db.log_trade_rejection(symbol, units, reason)
+
+            # Send alert (check throttle)
+            if self.should_send_alert('trade_rejected'):
+                message = (
+                    f"OANDA: {symbol} {units:,} REJECTED\n"
+                    f"Reason: {reason}"
+                )
+                self.notifier.send_alert(
+                    title="Trade Rejected",
+                    message=message,
+                    priority=0  # Normal
+                )
+                self.record_alert_sent('trade_rejected')
+
             return False, reason
 
         return True, "OK"

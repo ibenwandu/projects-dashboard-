@@ -11,8 +11,10 @@ class TestTradingAgentAlerts:
         """Create TradingAgent with mocked notifier and db"""
         mock_db = MagicMock()
         # Mock database methods for validation
+        mock_db.get_max_position_size.return_value = 10000  # Max position size
         mock_db.get_daily_pnl.return_value = 0  # No daily loss
         mock_db.get_open_positions_count.return_value = 0  # No open positions
+        mock_db.update_daily_limits.return_value = None  # No-op
 
         agent = TradingAgent(db=mock_db)
         agent.notifier = MagicMock()
@@ -86,3 +88,27 @@ class TestTradingAgentAlerts:
 
         # Should not have incremented
         assert second_call_count == first_call_count
+
+    def test_validate_trade_rejection_sends_alert(self, agent):
+        """_validate_trade() sends Pushover alert on rejection"""
+        # Force rejection via position size limit
+        agent.db.get_max_position_size = MagicMock(return_value=10000)
+
+        # Try to execute with oversized position
+        is_valid, reason = agent._validate_trade(
+            symbol='EUR_USD',
+            units=15000  # Exceeds limit
+        )
+
+        assert is_valid is False
+        assert 'exceeds limit' in reason.lower()
+
+        # Verify alert was sent
+        agent.notifier.send_alert.assert_called_once()
+        call_args = agent.notifier.send_alert.call_args
+
+        # Check priority is Normal (0)
+        assert call_args[1]['priority'] == 0
+        # Check message mentions rejection
+        assert 'REJECTED' in call_args[1]['message']
+        assert '15000' in call_args[1]['message'] or '15,000' in call_args[1]['message']
