@@ -12,6 +12,7 @@ import logging
 import sqlite3
 import subprocess
 from datetime import datetime
+from pathlib import Path
 from typing import Tuple, Dict, Any, Optional
 
 from emy.agents.base_agent import EMySubAgent
@@ -315,4 +316,108 @@ class KnowledgeAgent(EMySubAgent):
 
         except Exception as e:
             logger.warning(f"Error checking critical alerts: {e}")
+            return False
+
+    def _format_dashboard_row(self, data: dict) -> str:
+        """
+        Format status data as markdown table row
+
+        Args:
+            data: dict with 'status', 'next_job', 'alerts', 'critical'
+
+        Returns:
+            Markdown table row string
+        """
+        status = data.get('status', 'UNKNOWN')
+        next_job = data.get('next_job', 'Unknown')
+        alerts = data.get('alerts', {})
+        is_critical = data.get('critical', False)
+
+        # Format status with emoji
+        if is_critical:
+            status_emoji = "🔴 CRITICAL"
+            status_cell = f"{status_emoji} | {status}"
+        else:
+            status_emoji = "🟢" if "Running" in status else "🟡"
+            status_cell = f"{status_emoji} {status}"
+
+        # Format progress cell with alert counts
+        exec_count = alerts.get('executions', 0)
+        rej_count = alerts.get('rejections', 0)
+        warn_count = alerts.get('warnings', 0)
+        total = alerts.get('total', 0)
+
+        if total > 0:
+            progress = f"✅ Exec: {exec_count} | Rej: {rej_count} | Alerts: {total}"
+        else:
+            progress = "✅ Running"
+
+        # Build row
+        row = f"| Emy | Phase 1: Pushover Alerts | {status_cell} | {next_job} | {progress} |"
+
+        return row
+
+    def _update_dashboard_table(self, markdown_content: str, new_row: str) -> str:
+        """
+        Update Emy row in Obsidian dashboard markdown
+
+        Args:
+            markdown_content: Full markdown file content
+            new_row: Formatted markdown table row to insert
+
+        Returns:
+            Updated markdown content
+        """
+        try:
+            # Find Emy row (contains "Emy" and "Phase")
+            lines = markdown_content.split('\n')
+            updated_lines = []
+            found_emy = False
+
+            for i, line in enumerate(lines):
+                # Check if this is the Emy row in the table
+                if '| Emy |' in line and 'Phase' in line:
+                    updated_lines.append(new_row)
+                    found_emy = True
+                    logger.info("Updated Emy dashboard row")
+                else:
+                    updated_lines.append(line)
+
+            if not found_emy:
+                logger.warning("Emy row not found in dashboard, appending new row")
+                # If not found, append before end of table
+                updated_lines.append(new_row)
+
+            return '\n'.join(updated_lines)
+
+        except Exception as e:
+            logger.error(f"Error updating dashboard table: {e}")
+            return markdown_content
+
+    def _load_obsidian_dashboard(self) -> str:
+        """Load Obsidian dashboard markdown file"""
+        try:
+            # Path to Obsidian vault (from user's structure)
+            dashboard_path = Path('../Obsidian Vault/My Knowledge Base/00-DASHBOARD.md')
+
+            if not dashboard_path.exists():
+                logger.warning(f"Dashboard file not found at {dashboard_path}")
+                return ""
+
+            return dashboard_path.read_text(encoding='utf-8')
+
+        except Exception as e:
+            logger.error(f"Error loading Obsidian dashboard: {e}")
+            return ""
+
+    def _save_obsidian_dashboard(self, content: str) -> bool:
+        """Save updated Obsidian dashboard markdown file"""
+        try:
+            dashboard_path = Path('../Obsidian Vault/My Knowledge Base/00-DASHBOARD.md')
+            dashboard_path.write_text(content, encoding='utf-8')
+            logger.info("Obsidian dashboard saved")
+            return True
+
+        except Exception as e:
+            logger.error(f"Error saving Obsidian dashboard: {e}")
             return False

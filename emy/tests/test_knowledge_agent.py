@@ -105,3 +105,36 @@ class TestKnowledgeAgentTaskScheduler:
             has_critical = agent._check_critical_alerts()
 
             assert isinstance(has_critical, bool)
+
+    def test_format_dashboard_row(self, agent):
+        """_format_dashboard_row formats status data as markdown table row"""
+        data = {
+            'status': 'Running (14:32)',
+            'next_job': 'trading_health_check (14:45)',
+            'alerts': {'executions': 3, 'rejections': 1, 'total': 4},
+            'critical': False
+        }
+
+        row = agent._format_dashboard_row(data)
+
+        assert '|' in row  # Markdown table format
+        assert 'Running' in row
+        assert '3' in row or '4' in row  # Alert counts
+
+    def test_update_dashboard_table_finds_emy_row(self, agent):
+        """_update_dashboard_table finds and updates Emy row in markdown"""
+        markdown_content = """
+| Project | Phase | Status | Next | Progress |
+|---------|-------|--------|------|----------|
+| Trade-Alerts | Phase 1 | RUNNING | Logs | SL/TP works |
+| Emy | Phase 1 | RUNNING | Monitor | Old data |
+| Scalp-Engine | Supporting | RUNNING | Health | Working |
+"""
+
+        new_row = "| Emy | Phase 1 | 🟢 RUNNING (14:32) | trading_check | ✅ Executions: 3 |"
+
+        updated = agent._update_dashboard_table(markdown_content, new_row)
+
+        assert updated is not None
+        assert '🟢 RUNNING (14:32)' in updated
+        assert 'Executions: 3' in updated
