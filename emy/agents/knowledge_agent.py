@@ -30,13 +30,13 @@ class KnowledgeAgent(EMySubAgent):
         self.file_ops = FileOpsTool()
 
     def run(self) -> Tuple[bool, Dict[str, Any]]:
-        """Execute knowledge management tasks."""
+        """Execute knowledge management tasks including dashboard update."""
         if self.check_disabled():
             self.logger.warning("KnowledgeAgent disabled")
             return (False, {'reason': 'disabled'})
 
         results = {
-            'obsidian_updated': False,
+            'dashboard_updated': False,
             'session_logged': False,
             'memory_persisted': False,
             'git_committed': False,
@@ -44,46 +44,66 @@ class KnowledgeAgent(EMySubAgent):
         }
 
         try:
-            # 1. Update Obsidian dashboard
-            if self._update_obsidian_dashboard():
-                results['obsidian_updated'] = True
-                self.logger.info("[KNOWLEDGE] Obsidian dashboard updated")
-            else:
-                self.logger.warning("[KNOWLEDGE] Obsidian dashboard update failed")
+            # ===== DASHBOARD UPDATE WORKFLOW =====
+            logger.info("[KNOWLEDGE] Starting hourly dashboard update")
 
-            # 2. Update session log
-            if self._append_session_log():
+            # 1. Collect status data
+            status_data = {
+                'status': self._get_emy_status(),
+                'last_run': self._get_last_run_time(),
+                'next_job': self._get_next_scheduled_job(),
+                'alerts': self._get_recent_alerts(),
+                'critical': self._check_critical_alerts()
+            }
+
+            # 2. Format dashboard row
+            formatted_status = f"{status_data['status'].get('status', 'UNKNOWN')} ({status_data['last_run']})"
+            formatted_row = self._format_dashboard_row({
+                'status': formatted_status,
+                'next_job': status_data['next_job'].get('time', 'Unknown'),
+                'alerts': status_data['alerts'],
+                'critical': status_data['critical']
+            })
+
+            # 3. Load, update, and save dashboard
+            dashboard_content = self._load_obsidian_dashboard()
+            if dashboard_content:
+                updated_content = self._update_dashboard_table(dashboard_content, formatted_row)
+                if self._save_obsidian_dashboard(updated_content):
+                    results['dashboard_updated'] = True
+                    logger.info("[KNOWLEDGE] Dashboard updated successfully")
+
+                    # 4. Commit changes
+                    if self._commit_dashboard_changes():
+                        results['git_committed'] = True
+                        logger.info("[KNOWLEDGE] Dashboard changes committed")
+                else:
+                    logger.warning("[KNOWLEDGE] Failed to save dashboard")
+            else:
+                logger.warning("[KNOWLEDGE] Failed to load dashboard")
+
+            # ===== EXISTING FUNCTIONALITY (from original) =====
+            # 5. Update session log (existing - call if method exists)
+            if hasattr(self, '_append_session_log') and self._append_session_log():
                 results['session_logged'] = True
-                self.logger.info("[KNOWLEDGE] Session log appended")
-            else:
-                self.logger.warning("[KNOWLEDGE] Session log append failed")
+                self.logger.info("[KNOWLEDGE] Session log updated")
 
-            # 3. Persist MEMORY.md
-            if self._update_memory():
+            # 6. Persist memory (existing - call if method exists)
+            if hasattr(self, '_update_memory') and self._update_memory():
                 results['memory_persisted'] = True
-                self.logger.info("[KNOWLEDGE] MEMORY.md persisted")
-            else:
-                self.logger.warning("[KNOWLEDGE] MEMORY.md persist failed")
-
-            # 4. Git commit if changes exist
-            if self._git_commit_updates():
-                results['git_committed'] = True
-                self.logger.info("[KNOWLEDGE] Changes committed to git")
-            else:
-                self.logger.debug("[KNOWLEDGE] No changes to commit")
+                self.logger.info("[KNOWLEDGE] Memory persisted")
 
             success = any([
-                results['obsidian_updated'],
+                results['dashboard_updated'],
                 results['session_logged'],
                 results['memory_persisted']
             ])
 
-        except Exception as e:
-            self.logger.error(f"[ERROR] Knowledge management failed: {e}")
-            return (False, {'error': str(e), 'results': results})
+            return (success, results)
 
-        self.logger.info(f"[RUN] KnowledgeAgent completed")
-        return (True, results)
+        except Exception as e:
+            logger.error(f"[ERROR] Knowledge management failed: {e}")
+            return (False, {'error': str(e), 'results': results})
 
     def _update_obsidian_dashboard(self) -> bool:
         """Update Obsidian 00-DASHBOARD.md with project metrics."""

@@ -158,3 +158,35 @@ class TestKnowledgeAgentTaskScheduler:
             success = agent._commit_dashboard_changes()
 
             assert success is False
+
+    def test_run_updates_dashboard_hourly(self, agent):
+        """KnowledgeAgent.run() executes full dashboard update workflow"""
+        with patch.object(agent.disable_guard, 'is_disabled', return_value=False), \
+             patch.object(agent, '_get_emy_status') as mock_status, \
+             patch.object(agent, '_get_last_run_time') as mock_last, \
+             patch.object(agent, '_get_recent_alerts') as mock_alerts, \
+             patch.object(agent, '_check_critical_alerts') as mock_critical, \
+             patch.object(agent, '_load_obsidian_dashboard') as mock_load, \
+             patch.object(agent, '_update_dashboard_table') as mock_update, \
+             patch.object(agent, '_save_obsidian_dashboard') as mock_save, \
+             patch.object(agent, '_commit_dashboard_changes') as mock_commit:
+
+            # Setup mocks
+            mock_status.return_value = {'status': 'Running', 'timestamp': '2026-03-10T14:32:00'}
+            mock_last.return_value = '14:32'
+            mock_alerts.return_value = {'executions': 3, 'rejections': 1, 'total': 4}
+            mock_critical.return_value = False
+            mock_load.return_value = "| Emy | Phase 1 | RUNNING | old | data |"
+            mock_update.return_value = "| Emy | Phase 1 | 🟢 RUNNING | updated | data |"
+            mock_save.return_value = True
+            mock_commit.return_value = True
+
+            # Run
+            success, result = agent.run()
+
+            # Verify all methods called
+            mock_status.assert_called_once()
+            mock_load.assert_called_once()
+            mock_update.assert_called_once()
+            mock_save.assert_called_once()
+            mock_commit.assert_called_once()
