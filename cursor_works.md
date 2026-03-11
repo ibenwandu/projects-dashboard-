@@ -50,6 +50,8 @@ When asked to **review the logs**, future sessions should perform checks like th
 - **Daily loss % (Part 18):** When `max_daily_loss_pct` set, opens blocked if daily loss ≥ that % of account; "Daily loss limit reached (X% >= Y% of account)".
 - **Risk-based position size (Part 18):** When balance and SL pips available, units from formula; optional config: `trading_phase`, `risk_percent_per_trade`, `account_balance_override`.
 - **ATR_Trailing conversion (Part 19):** Conversion only when profit >= max(trailing_activation_min_pips, trailing distance); default 100 pips when config missing. Log: "ATR Trailing: attempting conversion ... profit >= X.X pips (activation/distance), trailing distance=Y.Y pips". Initial trailing stop never below entry.
+- **DeepSeek parser (Part 23 Priority 1):** When reviewing logs, confirm DeepSeek extracts >0 opportunities (not "0 opportunities parsed"); DeepSeek appears in consensus; DeepSeek recommendations logged to RL database. Look for: "DeepSeek: X opportunities parsed" where X > 0; DeepSeek in market state; DeepSeek in consensus calculation.
+- **Logging improvements (Part 23 Priority 2):** When reviewing logs, confirm max_trades_limit warnings are throttled (first WARNING, subsequent DEBUG per 15 min window); trade close audit logs appear (`📋 Trade closed: {pair} {direction} exit_reason={reason} final_PnL={final_pnl}`); hourly open trades status logs appear (`📊 Open trades status (N open):` with ages and PnL). Look for: `⏭️ Skipped ... (throttled)` at DEBUG; `🔧 close_trade() called:` DEBUG logs; reduced max_trades_limit spam.
 
 ---
 
