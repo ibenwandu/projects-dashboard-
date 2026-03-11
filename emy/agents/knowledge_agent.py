@@ -9,6 +9,7 @@ Responsibilities:
 """
 
 import logging
+import sqlite3
 import subprocess
 from datetime import datetime
 from typing import Tuple, Dict, Any, Optional
@@ -202,3 +203,116 @@ class KnowledgeAgent(EMySubAgent):
         except Exception as e:
             logger.error(f"Error querying Task Scheduler: {e}")
             return {'status': 'UNKNOWN', 'timestamp': datetime.now().isoformat()}
+
+    def _get_last_run_time(self) -> str:
+        """Get timestamp of last Emy task execution"""
+        try:
+            db_path = 'emy/data/emy.db'
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            cursor.execute("""
+                SELECT MAX(created_at) FROM emy_tasks
+                WHERE domain IN ('trading', 'job_search', 'knowledge')
+                AND created_at > datetime('now', '-24 hours')
+            """)
+
+            result = cursor.fetchone()
+            conn.close()
+
+            if result and result[0]:
+                # Parse ISO timestamp and format for display
+                dt = datetime.fromisoformat(result[0])
+                return dt.strftime('%H:%M')
+            else:
+                return 'Unknown'
+
+        except Exception as e:
+            logger.warning(f"Error querying last run time: {e}")
+            return 'Unknown'
+
+    def _get_next_scheduled_job(self) -> dict:
+        """Get next scheduled job from Task Scheduler"""
+        try:
+            cmd = [
+                'powershell', '-Command',
+                'Get-ScheduledTask -TaskName "Emy Chief of Staff" | Get-ScheduledTaskInfo | Select-Object NextRunTime'
+            ]
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=5)
+
+            if result.returncode == 0 and 'NextRunTime' in result.stdout:
+                # Parse output (simplified - assumes standard format)
+                lines = result.stdout.strip().split('\n')
+                if len(lines) > 2:
+                    time_str = lines[2].strip()
+                    return {'job': 'Emy jobs', 'time': time_str}
+
+            return {'job': 'Unknown', 'time': 'Unknown'}
+
+        except Exception as e:
+            logger.warning(f"Error querying next job: {e}")
+            return {'job': 'Unknown', 'time': 'Unknown'}
+
+    def _get_recent_alerts(self) -> dict:
+        """Get summary of recent alerts (last 24 hours)"""
+        try:
+            db_path = 'emy/data/emy.db'
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            # Query alert counts
+            cursor.execute("""
+                SELECT action, COUNT(*) as count
+                FROM emy_tasks
+                WHERE action LIKE 'alert_%'
+                AND created_at > datetime('now', '-24 hours')
+                GROUP BY action
+            """)
+
+            results = cursor.fetchall()
+            conn.close()
+
+            summary = {
+                'executions': 0,
+                'rejections': 0,
+                'warnings': 0,
+                'total': 0
+            }
+
+            for action, count in results:
+                summary['total'] += count
+                if 'execution' in action:
+                    summary['executions'] += count
+                elif 'rejection' in action or 'rejected' in action:
+                    summary['rejections'] += count
+                elif 'warning' in action or 'loss' in action:
+                    summary['warnings'] += count
+
+            return summary
+
+        except Exception as e:
+            logger.warning(f"Error querying recent alerts: {e}")
+            return {'executions': 0, 'rejections': 0, 'warnings': 0, 'total': 0}
+
+    def _check_critical_alerts(self) -> bool:
+        """Check if any critical alerts exist (daily loss 100%, etc)"""
+        try:
+            db_path = 'emy/data/emy.db'
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            # Query for critical alerts in last 24 hours
+            cursor.execute("""
+                SELECT COUNT(*) FROM emy_tasks
+                WHERE (action LIKE '%daily_loss_100%' OR action LIKE '%CRITICAL%')
+                AND created_at > datetime('now', '-24 hours')
+            """)
+
+            result = cursor.fetchone()
+            conn.close()
+
+            return result[0] > 0 if result else False
+
+        except Exception as e:
+            logger.warning(f"Error checking critical alerts: {e}")
+            return False
