@@ -28,7 +28,7 @@ class OandaClient:
 
         # Build base URL
         if self.environment == 'live':
-            self.base_url = 'https://api-fxpractice.oanda.com/v3'
+            self.base_url = 'https://api-fxlive.oanda.com/v3'
         else:
             self.base_url = 'https://api-fxpractice.oanda.com/v3'
 
@@ -69,7 +69,17 @@ class OandaClient:
             return None
 
     def get_trade(self, trade_id: str) -> Optional[Dict]:
-        """Get details for a specific trade."""
+        """Get trade details by ID.
+
+        Args:
+            trade_id: OANDA trade ID (string)
+
+        Returns:
+            dict with trade details or None if not found
+        """
+        if not self.access_token or not self.account_id:
+            return None
+
         try:
             url = f"{self.base_url}/accounts/{self.account_id}/trades/{trade_id}"
             response = requests.get(url, headers=self.headers, timeout=10)
@@ -78,7 +88,7 @@ class OandaClient:
             else:
                 logger.error(f"OANDA get_trade failed: {response.status_code}")
                 return None
-        except Exception as e:
+        except requests.exceptions.RequestException as e:
             logger.error(f"OANDA get_trade error: {e}")
             return None
 
