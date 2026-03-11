@@ -9,19 +9,21 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 
 | Project | Phase | Status | Next Milestone | Progress |
 |---------|-------|--------|-----------------|-----------|
-| Trade-Alerts | Phase 1: SL/TP Verification | 🟡 Testing | Complete testing & deploy | 48+ hrs testing done |
-| Scalp-Engine | Supporting Trade-Alerts | 🟡 Testing | Integration with Trade-Alerts | Running on Render |
-| Job-Search | Automation | 🟢 Paused | Enabled when needed | Ready to activate |
+| Trade-Alerts | Phase 1: SL/TP Verification | 🔴 RUNNING (Day 2/3) | Collect Mar 11 logs & analyze | TP/SL confirmed working (18+ hr delays) |
+| Scalp-Engine | Supporting Trade-Alerts | 🟢 RUNNING | Monitor max_runs blocking | All phases deployed, Render live |
+| **Emy** | **Integration** | 🟡 SDK READY | **OANDA auth resolution** | **OandaClient upgraded to oandapyV20** |
+| Job-Search | Automation | 🔴 DISABLED | Re-enable decision | API credits preserved, ready to activate |
 | Currency-Trend-Tracker | Ideation | 🟡 Pending Research | Evaluate feasibility | Pending evaluation |
 | Recruiter-Email-Automation | Ideation | 🟡 Pending Research | Evaluate feasibility | Pending evaluation |
 
 ---
 
-## This Week's Priorities
+## Today's Priorities (Mar 10)
 
-1. **Complete Trade-Alerts Phase 1 Testing** - Verify SL/TP functionality and deploy to production
-2. **Scalp-Engine Integration** - Ensure seamless connection with Trade-Alerts system
-3. **Research Evaluation** - Assess Currency-Trend-Tracker and Recruiter-Email-Automation feasibility
+1. **[URGENT] Complete Phase 1 Testing (Mar 11)** - Collect final logs, analyze 48-hour closure rates
+2. **[HIGH] Investigate 18+ Hour Closure Delay** - Determine root cause of TP execution lag
+3. **[HIGH] Analyze Manual Closures** - Find what's triggering MARKET_ORDER_TRADE_CLOSE pattern
+4. **[MEDIUM] Job-Search Decision** - Re-enable or deprecate permanently
 
 ---
 
@@ -36,12 +38,14 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 
 ## Key Metrics
 
-- **Systems Running**: 2 (Trade-Alerts, Scalp-Engine)
-- **Systems in Testing**: 2
-- **Active Automations**: 1 (paused)
-- **Research Projects**: 2
+- **Systems Running**: 2 (Trade-Alerts Phase 1, Scalp-Engine)
+- **Systems Testing**: Phase 1: SL/TP verification (48-hour continuous, Mar 9-11)
+- **Active Automations**: 0 (job-search disabled for API preservation)
+- **Research Projects**: 2 (Currency-Trend, Recruiter-Email)
+- **Integration Status**: Emy SDK ready (oandapyV20), auth pending
+- **Critical Discovery**: ✅ TP/SL ARE working (with 18+ hour delays)
 
 ---
 
 ## Last Updated
-March 9, 2026 - 22:00 UTC
+March 10, 2026 23:35 - Session closure (Emy OANDA SDK integrated, Auth issue documented)
