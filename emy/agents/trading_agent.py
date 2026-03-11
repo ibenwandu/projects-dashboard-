@@ -252,6 +252,21 @@ class TradingAgent(EMySubAgent):
                 status='OPEN'
             )
             self.logger.info(f"[OK] Trade executed: {symbol} {direction} {units}")
+
+            # Send Pushover alert (check throttle first)
+            if self.should_send_alert('trade_executed'):
+                entry_price = result.get('price', '?')
+                message = (
+                    f"OANDA: {symbol} {direction} {units:,} @ {entry_price}\n"
+                    f"SL:{stop_loss} TP:{take_profit}"
+                )
+                self.notifier.send_alert(
+                    title="Trade Executed",
+                    message=message,
+                    priority=0  # Normal
+                )
+                self.record_alert_sent('trade_executed')
+
             return result
         else:
             self.logger.error(f"[ERR] Trade execution failed: {symbol} {direction} {units}")
