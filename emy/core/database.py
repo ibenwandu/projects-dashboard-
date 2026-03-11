@@ -454,14 +454,20 @@ class EMyDatabase:
             stop_loss: SL price
             take_profit: TP price
             status: Trade status (default 'OPEN')
+
+        Raises:
+            ValueError: If trade_id already exists in database
         """
-        with self.get_connection() as conn:
-            conn.execute("""
-            INSERT INTO oanda_trades
-            (trade_id, account_id, symbol, units, direction, entry_price, stop_loss, take_profit, status, opened_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
-            """, (trade_id, account_id, symbol, units, direction, entry_price, stop_loss, take_profit, status))
-            conn.commit()
+        try:
+            with self.get_connection() as conn:
+                conn.execute("""
+                INSERT INTO oanda_trades
+                (trade_id, account_id, symbol, units, direction, entry_price, stop_loss, take_profit, status, opened_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+                """, (trade_id, account_id, symbol, units, direction, entry_price, stop_loss, take_profit, status))
+                conn.commit()
+        except sqlite3.IntegrityError as e:
+            raise ValueError(f"Trade {trade_id} already logged or database error: {e}") from e
 
     def log_trade_rejection(self, symbol, units, reason):
         """Log a rejected trade attempt.
@@ -470,26 +476,38 @@ class EMyDatabase:
             symbol: Instrument (e.g., 'EUR_USD')
             units: Requested units
             reason: Why the trade was rejected
-        """
-        with self.get_connection() as conn:
-            conn.execute("""
-            INSERT INTO oanda_trades
-            (symbol, units, direction, status, reason_rejected, opened_at)
-            VALUES (?, ?, 'NONE', 'REJECTED', ?, CURRENT_TIMESTAMP)
-            """, (symbol, units, reason))
-            conn.commit()
 
-    def get_daily_pnl(self):
-        """Get total P&L for today (sum of closed trades).
+        Raises:
+            RuntimeError: If database error occurs during logging
+        """
+        try:
+            with self.get_connection() as conn:
+                conn.execute("""
+                INSERT INTO oanda_trades
+                (symbol, units, direction, status, reason_rejected, opened_at)
+                VALUES (?, ?, 'NONE', 'REJECTED', ?, CURRENT_TIMESTAMP)
+                """, (symbol, units, reason))
+                conn.commit()
+        except sqlite3.IntegrityError as e:
+            raise RuntimeError(f"Failed to log rejection for {symbol}: {e}") from e
+
+    def get_daily_pnl(self, date=None):
+        """Get total P&L for a specific date (default: today UTC).
+
+        Args:
+            date: YYYY-MM-DD format (default: today in UTC)
 
         Returns:
             float: Daily P&L in USD. Positive = profit, negative = loss
         """
+        if date is None:
+            date = datetime.utcnow().strftime('%Y-%m-%d')
+
         with self.get_connection() as conn:
             cursor = conn.execute("""
             SELECT COALESCE(SUM(pnl_usd), 0) as daily_pnl FROM oanda_trades
-            WHERE DATE(closed_at) = DATE('now') AND status = 'CLOSED'
-            """)
+            WHERE DATE(closed_at) = ? AND status = 'CLOSED'
+            """, (date,))
             result = cursor.fetchone()
             return result[0] if result else 0.0
 
@@ -507,13 +525,15 @@ class EMyDatabase:
             return result[0] if result else 0
 
     def update_daily_limits(self):
-        """Update daily limits tracking for today.
+        """Update daily limits tracking for today (call once at market close).
 
-        Calculates daily loss and open position count, then inserts/updates
-        the oanda_limits table record for today.
+        Calculates and persists daily loss and open position count.
+        Daily loss is calculated as max(0, -daily_pnl) to ensure losses are
+        represented as positive values only when there is an actual loss.
         """
-        today = datetime.now().strftime('%Y-%m-%d')
-        daily_loss = abs(self.get_daily_pnl())  # Absolute value for loss
+        today = datetime.utcnow().strftime('%Y-%m-%d')
+        daily_pnl = self.get_daily_pnl(date=today)
+        daily_loss = max(0, -daily_pnl)  # Convert negative P&L to positive loss only if loss
         open_count = self.get_open_positions_count()
 
         with self.get_connection() as conn:
