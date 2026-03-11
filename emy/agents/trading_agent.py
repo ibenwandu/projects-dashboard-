@@ -88,6 +88,48 @@ class TradingAgent(EMySubAgent):
             self.logger.error(f"OANDA monitoring error: {e}")
             results['oanda_monitor'] = {'error': str(e)}
 
+        # Update daily limits and check for loss alerts
+        self.db.update_daily_limits()
+        daily_loss = abs(self.db.get_daily_pnl())  # Absolute value for loss
+        max_daily_loss = self.db.get_max_daily_loss()
+
+        # Check for 100% loss (emergency)
+        if daily_loss >= max_daily_loss:
+            logger.critical(f"Daily loss limit hit: ${daily_loss:.2f} >= ${max_daily_loss:.2f}")
+
+            if self.should_send_alert('daily_loss_100'):
+                message = (
+                    f"OANDA STOP: Daily loss limit hit (${daily_loss:.2f})\n"
+                    f"Trading disabled until market open tomorrow (UTC)"
+                )
+                self.notifier.send_alert(
+                    title="OANDA Trading Disabled",
+                    message=message,
+                    priority=2,  # Emergency
+                    retry=300,   # Retry every 5 minutes
+                    expire=3600  # For 60 minutes
+                )
+                self.record_alert_sent('daily_loss_100')
+
+            # Disable trading
+            self._set_disabled(True)
+
+        # Check for 75% loss (warning)
+        elif daily_loss >= (max_daily_loss * 0.75):
+            logger.warning(f"Daily loss at 75%: ${daily_loss:.2f} / ${max_daily_loss:.2f}")
+
+            if self.should_send_alert('daily_loss_75'):
+                message = (
+                    f"OANDA Alert: Daily loss 75% (${daily_loss:.2f}/${max_daily_loss:.2f})\n"
+                    f"Monitor closely. Further losses will trigger emergency stop."
+                )
+                self.notifier.send_alert(
+                    title="Daily Loss Warning",
+                    message=message,
+                    priority=1  # High
+                )
+                self.record_alert_sent('daily_loss_75')
+
         self.logger.info(f"[RUN] TradingAgent completed: {success}")
         return (success, results)
 
@@ -345,6 +387,22 @@ class TradingAgent(EMySubAgent):
     def record_alert_sent(self, alert_type: str) -> None:
         """Record that an alert was sent to update throttle window"""
         self.last_alert_time[alert_type] = time.time()
+
+    def _set_disabled(self, disabled: bool):
+        """Set or clear the .emy_disabled kill switch"""
+        disabled_file = '.emy_disabled'
+        if disabled:
+            # Create file to disable trading
+            with open(disabled_file, 'w') as f:
+                f.write('disabled')
+            logger.critical(f"Trading disabled by emergency stop")
+        else:
+            # Remove file to enable trading
+            try:
+                os.remove(disabled_file)
+                logger.info(f"Trading re-enabled")
+            except FileNotFoundError:
+                pass
 
     @staticmethod
     def _get_timestamp() -> str:

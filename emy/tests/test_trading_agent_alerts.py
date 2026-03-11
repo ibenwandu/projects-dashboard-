@@ -13,6 +13,7 @@ class TestTradingAgentAlerts:
         # Mock database methods for validation
         mock_db.get_max_position_size.return_value = 10000  # Max position size
         mock_db.get_daily_pnl.return_value = 0  # No daily loss
+        mock_db.get_max_daily_loss.return_value = 100.0  # Max daily loss
         mock_db.get_open_positions_count.return_value = 0  # No open positions
         mock_db.update_daily_limits.return_value = None  # No-op
 
@@ -112,3 +113,39 @@ class TestTradingAgentAlerts:
         # Check message mentions rejection
         assert 'REJECTED' in call_args[1]['message']
         assert '15000' in call_args[1]['message'] or '15,000' in call_args[1]['message']
+
+    def test_daily_loss_75_sends_alert(self, agent):
+        """TradingAgent.run() sends High priority alert at 75% daily loss"""
+        # Simulate 75% daily loss
+        agent.db.get_daily_pnl.return_value = -75.0
+        agent.db.get_max_daily_loss.return_value = 100.0
+
+        agent.run()
+
+        # Check that High priority alert was sent
+        calls = [c for c in agent.notifier.send_alert.call_args_list
+                 if 'daily_loss' in str(c).lower() or '75' in str(c)]
+
+        assert len(calls) > 0
+        # Verify priority is High (1)
+        alert_call = calls[0]
+        assert alert_call[1]['priority'] == 1
+
+    def test_daily_loss_100_sends_emergency_alert(self, agent):
+        """TradingAgent.run() sends Emergency alert at 100% daily loss"""
+        # Simulate 100% daily loss
+        agent.db.get_daily_pnl.return_value = -100.0
+        agent.db.get_max_daily_loss.return_value = 100.0
+
+        agent.run()
+
+        # Check for Emergency alert
+        calls = [c for c in agent.notifier.send_alert.call_args_list
+                 if '100' in str(c) or 'STOP' in str(c) or 'disabled' in str(c).lower()]
+
+        assert len(calls) > 0
+        alert_call = calls[0]
+        # Verify priority is Emergency (2)
+        assert alert_call[1]['priority'] == 2
+        # Verify message mentions trading disabled
+        assert 'disabled' in alert_call[1]['message'].lower()
