@@ -4,8 +4,8 @@ import sys
 from pathlib import Path
 from unittest.mock import patch, MagicMock
 
-# Add emy to path
-sys.path.insert(0, str(Path(__file__).parent))
+# Add parent directory to path so emy module can be imported
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from emy.agents.trading_agent import TradingAgent
 from emy.core.database import EMyDatabase

@@ -1,4 +1,10 @@
 """Test OANDA CRUD methods."""
+import sys
+from pathlib import Path
+
+# Add parent directory to path so emy module can be imported
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from emy.core.database import EMyDatabase
 from datetime import datetime
 import os
