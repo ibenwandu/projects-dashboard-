@@ -138,3 +138,23 @@ class TestKnowledgeAgentTaskScheduler:
         assert updated is not None
         assert '🟢 RUNNING (14:32)' in updated
         assert 'Executions: 3' in updated
+
+    def test_commit_dashboard_changes(self, agent):
+        """_commit_dashboard_changes creates git commit for dashboard updates"""
+        with patch('subprocess.run') as mock_run:
+            mock_run.return_value = Mock(returncode=0)
+
+            success = agent._commit_dashboard_changes()
+
+            assert success is True
+            # Verify git add was called
+            assert any('add' in str(call) for call in mock_run.call_args_list)
+
+    def test_commit_handles_git_error(self, agent):
+        """_commit_dashboard_changes handles git failures gracefully"""
+        with patch('subprocess.run') as mock_run:
+            mock_run.return_value = Mock(returncode=1)
+
+            success = agent._commit_dashboard_changes()
+
+            assert success is False

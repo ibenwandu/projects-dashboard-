@@ -421,3 +421,44 @@ class KnowledgeAgent(EMySubAgent):
         except Exception as e:
             logger.error(f"Error saving Obsidian dashboard: {e}")
             return False
+
+    def _commit_dashboard_changes(self) -> bool:
+        """
+        Commit Obsidian dashboard changes to git
+
+        Returns:
+            True if commit successful, False otherwise
+        """
+        try:
+            # Stage the dashboard file
+            cmd_add = ['git', 'add', '../Obsidian Vault/My Knowledge Base/00-DASHBOARD.md']
+            result_add = subprocess.run(cmd_add, capture_output=True, text=True, timeout=5)
+
+            if result_add.returncode != 0:
+                logger.warning(f"Git add failed: {result_add.stderr}")
+                return False
+
+            # Create commit
+            cmd_commit = [
+                'git', 'commit',
+                '-m', 'auto: update Emy status [hourly]'
+            ]
+            result_commit = subprocess.run(cmd_commit, capture_output=True, text=True, timeout=5)
+
+            if result_commit.returncode == 0:
+                logger.info("Dashboard changes committed to git")
+                return True
+            elif 'nothing to commit' in result_commit.stdout or 'nothing to commit' in result_commit.stderr:
+                # No changes - not an error
+                logger.debug("No changes to commit")
+                return True
+            else:
+                logger.warning(f"Git commit failed: {result_commit.stderr}")
+                return False
+
+        except subprocess.TimeoutExpired:
+            logger.warning("Git commit timeout")
+            return False
+        except Exception as e:
+            logger.error(f"Error committing dashboard changes: {e}")
+            return False
