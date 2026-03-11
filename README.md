@@ -253,6 +253,30 @@ python emy.py status  # Shows live account equity, margin, open positions
 
 **Alerts:** Pushover notifications sent when trades execute or limits are violated.
 
+### Pushover Alerts Configuration
+
+Enable real-time notifications for trading events:
+
+```env
+# In emy/.env
+PUSHOVER_USER_KEY=<your_pushover_user_key>
+PUSHOVER_API_TOKEN=<your_pushover_api_token>
+PUSHOVER_ALERT_ENABLED=true
+```
+
+**Alert Types:**
+- **Trade Executed** (Normal priority) — Sent when trade executes with SL/TP
+- **Trade Rejected** (Normal priority) — Sent when position size/daily loss/concurrent limit exceeded
+- **Daily Loss 75%** (High priority) — Sent when daily loss reaches $75
+- **Daily Loss 100%** (Emergency priority) — Sent when daily loss hits $100, retries for 60 minutes
+
+**Throttling:**
+Alerts are throttled to prevent spam — only one alert per event type per 60 seconds. Disable throttling for testing:
+
+```env
+PUSHOVER_NO_THROTTLE=true  # Testing only
+```
+
 ### Emergency Kill-Switch
 
 Create `.emy_disabled` file to disable all scheduled tasks:

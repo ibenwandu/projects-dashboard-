@@ -110,6 +110,31 @@ PUSHOVER_API_TOKEN=your_api_token
    sqlite3 emy/data/emy.db "SELECT * FROM oanda_trades LIMIT 5;"
    ```
 
+## Pushover Alert Setup
+
+1. **Get Pushover credentials:**
+   - User Key: From https://pushover.net/
+   - API Token: Create application at https://pushover.net/apps/build
+
+2. **Configure emy/.env:**
+   ```
+   PUSHOVER_USER_KEY=<key>
+   PUSHOVER_API_TOKEN=<token>
+   PUSHOVER_ALERT_ENABLED=true
+   ```
+
+3. **Test alerts manually:**
+   ```bash
+   python -c "from emy.tools.notification_tool import PushoverNotifier; n = PushoverNotifier(); n.send_alert('Test', 'Pushover working', 0)"
+   ```
+
+4. **Monitor alerts in Pushover app while trading.**
+
+### Alert Types Explained
+- **Normal Priority (0)**: Trade execution and rejection alerts
+- **High Priority (1)**: Daily loss warning at 75%
+- **Emergency Priority (2)**: Daily loss limit hit at 100% (retries for 60 minutes)
+
 ---
 
 ## Step 3: Register Windows Task Scheduler
