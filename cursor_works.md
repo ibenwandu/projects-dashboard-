@@ -1973,6 +1973,24 @@ Review documents in Manual logs (`C:\Users\user\Desktop\Test\Manual logs`) for c
 
 **Next steps:** After verification confirms Priority 1 & 2 are working, proceed with Priority 3 (RL Monitoring).
 
+## Note for Future Log Reviews
+
+**When reviewing Manual logs (`C:\Users\user\Desktop\Test\Manual logs`), look for confirmation of Priority 1 & 2 fixes:**
+
+**Priority 1 (DeepSeek Parser) - Look for:**
+- `DeepSeek: X opportunities parsed` where X > 0 (not "0 opportunities parsed")
+- DeepSeek opportunities in market state exports
+- DeepSeek recommendations in RL database logs
+- Reduced or no "Parser found 0 pattern matches" warnings for DeepSeek
+- DeepSeek contributing to consensus (e.g., "deepseek: 1 parsed opportunities" in consensus calculation)
+
+**Priority 2 (Logging) - Look for:**
+- `⏭️ Skipped {pair} {direction} - {reason} (throttled)` at DEBUG level (not repeated WARNING)
+- `📋 Trade closed: {pair} {direction} exit_reason={reason} final_PnL={final_pnl}` audit logs
+- `📊 Open trades status (N open):` hourly logs showing open trades with ages and PnL
+- `🔧 close_trade() called: trade_id=...` DEBUG logs when trades close
+- Reduced max_trades_limit warnings (first at WARNING, subsequent at DEBUG per 15 min window)
+
 ## Files to Modify
 
 1. **`personal/Trade-Alerts/src/recommendation_parser.py`**
