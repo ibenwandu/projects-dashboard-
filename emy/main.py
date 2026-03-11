@@ -27,7 +27,7 @@ from emy.core.task_router import EMyTaskRouter
 from emy.core.skill_improver import EMySkillImprover
 from emy.scheduler.emy_scheduler import EMyScheduler
 from emy.agents.trading_agent import TradingAgent
-from emy.agents.job_search_agent import JobSearchAgent
+# from emy.agents.job_search_agent import JobSearchAgent  # DISABLED - missing dependencies
 from emy.agents.knowledge_agent import KnowledgeAgent
 from emy.agents.project_monitor_agent import ProjectMonitorAgent
 from emy.agents.research_agent import ResearchAgent
@@ -80,14 +80,14 @@ class EMyAgentLoop:
 
         # Register agents
         self.delegation_engine.register_agent('TradingAgent', TradingAgent)
-        self.delegation_engine.register_agent('JobSearchAgent', JobSearchAgent)
+        # self.delegation_engine.register_agent('JobSearchAgent', JobSearchAgent)  # DISABLED
         self.delegation_engine.register_agent('KnowledgeAgent', KnowledgeAgent)
         self.delegation_engine.register_agent('ProjectMonitorAgent', ProjectMonitorAgent)
         self.delegation_engine.register_agent('ResearchAgent', ResearchAgent)
 
-        # Register Phase 1 + Phase 2 + Phase 3 + Phase 4 jobs
+        # Register Phase 1 + Phase 2 (disabled) + Phase 3 + Phase 4 jobs
         self._register_phase1_jobs()
-        self._register_phase2_jobs()
+        # self._register_phase2_jobs()  # DISABLED - job search not available
         self._register_phase3_jobs()
         self._register_phase4_jobs()
 

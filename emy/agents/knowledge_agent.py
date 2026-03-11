@@ -65,22 +65,17 @@ class KnowledgeAgent(EMySubAgent):
                 'critical': status_data['critical']
             })
 
-            # 3. Load, update, and save dashboard
-            dashboard_content = self._load_obsidian_dashboard()
-            if dashboard_content:
-                updated_content = self._update_dashboard_table(dashboard_content, formatted_row)
-                if self._save_obsidian_dashboard(updated_content):
-                    results['dashboard_updated'] = True
-                    logger.info("[KNOWLEDGE] Dashboard updated successfully")
+            # 3. Update dashboard
+            if self._update_obsidian_dashboard():
+                results['dashboard_updated'] = True
+                logger.info("[KNOWLEDGE] Dashboard updated successfully")
 
-                    # 4. Commit changes
-                    if self._commit_dashboard_changes():
-                        results['git_committed'] = True
-                        logger.info("[KNOWLEDGE] Dashboard changes committed")
-                else:
-                    logger.warning("[KNOWLEDGE] Failed to save dashboard")
+                # 4. Commit changes
+                if self._commit_dashboard_changes():
+                    results['git_committed'] = True
+                    logger.info("[KNOWLEDGE] Dashboard changes committed")
             else:
-                logger.warning("[KNOWLEDGE] Failed to load dashboard")
+                logger.warning("[KNOWLEDGE] Failed to update dashboard")
 
             # ===== EXISTING FUNCTIONALITY (from original) =====
             # 5. Update session log (existing - call if method exists)
@@ -281,13 +276,12 @@ class KnowledgeAgent(EMySubAgent):
             conn = sqlite3.connect(db_path)
             cursor = conn.cursor()
 
-            # Query alert counts
+            # Query alert counts from task statuses
             cursor.execute("""
-                SELECT action, COUNT(*) as count
+                SELECT status, COUNT(*) as count
                 FROM emy_tasks
-                WHERE action LIKE 'alert_%'
-                AND created_at > datetime('now', '-24 hours')
-                GROUP BY action
+                WHERE created_at > datetime('now', '-24 hours')
+                GROUP BY status
             """)
 
             results = cursor.fetchall()
@@ -300,13 +294,13 @@ class KnowledgeAgent(EMySubAgent):
                 'total': 0
             }
 
-            for action, count in results:
+            for status, count in results:
                 summary['total'] += count
-                if 'execution' in action:
+                if status == 'completed':
                     summary['executions'] += count
-                elif 'rejection' in action or 'rejected' in action:
+                elif status == 'failed':
                     summary['rejections'] += count
-                elif 'warning' in action or 'loss' in action:
+                elif status == 'pending':
                     summary['warnings'] += count
 
             return summary
@@ -325,7 +319,7 @@ class KnowledgeAgent(EMySubAgent):
             # Query for critical alerts in last 24 hours
             cursor.execute("""
                 SELECT COUNT(*) FROM emy_tasks
-                WHERE (action LIKE '%daily_loss_100%' OR action LIKE '%CRITICAL%')
+                WHERE (description LIKE '%daily_loss%' OR description LIKE '%CRITICAL%' OR status = 'failed')
                 AND created_at > datetime('now', '-24 hours')
             """)
 

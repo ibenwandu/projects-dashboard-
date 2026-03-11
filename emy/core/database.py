@@ -524,6 +524,46 @@ class EMyDatabase:
             result = cursor.fetchone()
             return result[0] if result else 0
 
+    def get_max_daily_loss(self, date: str = None) -> float:
+        """Get max daily loss limit for a date (default: today).
+
+        Args:
+            date: YYYY-MM-DD format (default: today in UTC)
+
+        Returns:
+            float: Max daily loss in USD (default 100.0)
+        """
+        if date is None:
+            date = datetime.utcnow().strftime('%Y-%m-%d')
+
+        with self.get_connection() as conn:
+            cursor = conn.execute(
+                "SELECT max_daily_loss_usd FROM oanda_limits WHERE date = ?",
+                (date,)
+            )
+            row = cursor.fetchone()
+            return row['max_daily_loss_usd'] if row else 100.0  # Default to 100 USD
+
+    def get_max_position_size(self, date: str = None) -> int:
+        """Get max position size limit for a date (default: today).
+
+        Args:
+            date: YYYY-MM-DD format (default: today in UTC)
+
+        Returns:
+            int: Max position size in units (default 10000)
+        """
+        if date is None:
+            date = datetime.utcnow().strftime('%Y-%m-%d')
+
+        with self.get_connection() as conn:
+            cursor = conn.execute(
+                "SELECT max_position_size FROM oanda_limits WHERE date = ?",
+                (date,)
+            )
+            row = cursor.fetchone()
+            return row['max_position_size'] if row else 10000  # Default to 10000 units
+
     def update_daily_limits(self):
         """Update daily limits tracking for today (call once at market close).
 

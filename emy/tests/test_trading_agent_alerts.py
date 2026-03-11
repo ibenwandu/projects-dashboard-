@@ -19,6 +19,9 @@ class TestTradingAgentAlerts:
 
         agent = TradingAgent(db=mock_db)
         agent.notifier = MagicMock()
+        # Mock disable_guard to allow agent to run
+        agent.disable_guard = MagicMock()
+        agent.disable_guard.is_disabled.return_value = False
         return agent
 
     def test_execute_trade_sends_alert(self, agent):

@@ -99,3 +99,7 @@ class PushoverNotifier:
         except Exception as e:
             logger.error(f"Unexpected error sending Pushover alert: {e}")
             return False
+
+
+# Alias for compatibility
+NotificationTool = PushoverNotifier
