@@ -440,3 +440,93 @@ class EMyDatabase:
             )
             """)
             conn.execute("CREATE INDEX IF NOT EXISTS idx_oanda_limits_date ON oanda_limits(date)")
+
+    def log_oanda_trade(self, trade_id, account_id, symbol, units, direction, entry_price, stop_loss, take_profit, status='OPEN'):
+        """Log a trade to oanda_trades table.
+
+        Args:
+            trade_id: OANDA trade ID (string)
+            account_id: OANDA account ID
+            symbol: Instrument (e.g., 'EUR_USD')
+            units: Number of units (positive or negative)
+            direction: 'BUY' or 'SELL'
+            entry_price: Entry price
+            stop_loss: SL price
+            take_profit: TP price
+            status: Trade status (default 'OPEN')
+        """
+        with self.get_connection() as conn:
+            conn.execute("""
+            INSERT INTO oanda_trades
+            (trade_id, account_id, symbol, units, direction, entry_price, stop_loss, take_profit, status, opened_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+            """, (trade_id, account_id, symbol, units, direction, entry_price, stop_loss, take_profit, status))
+            conn.commit()
+
+    def log_trade_rejection(self, symbol, units, reason):
+        """Log a rejected trade attempt.
+
+        Args:
+            symbol: Instrument (e.g., 'EUR_USD')
+            units: Requested units
+            reason: Why the trade was rejected
+        """
+        with self.get_connection() as conn:
+            conn.execute("""
+            INSERT INTO oanda_trades
+            (symbol, units, direction, status, reason_rejected, opened_at)
+            VALUES (?, ?, 'NONE', 'REJECTED', ?, CURRENT_TIMESTAMP)
+            """, (symbol, units, reason))
+            conn.commit()
+
+    def get_daily_pnl(self):
+        """Get total P&L for today (sum of closed trades).
+
+        Returns:
+            float: Daily P&L in USD. Positive = profit, negative = loss
+        """
+        with self.get_connection() as conn:
+            cursor = conn.execute("""
+            SELECT COALESCE(SUM(pnl_usd), 0) as daily_pnl FROM oanda_trades
+            WHERE DATE(closed_at) = DATE('now') AND status = 'CLOSED'
+            """)
+            result = cursor.fetchone()
+            return result[0] if result else 0.0
+
+    def get_open_positions_count(self):
+        """Count open positions.
+
+        Returns:
+            int: Number of open trades
+        """
+        with self.get_connection() as conn:
+            cursor = conn.execute("""
+            SELECT COUNT(*) FROM oanda_trades WHERE status = 'OPEN'
+            """)
+            result = cursor.fetchone()
+            return result[0] if result else 0
+
+    def update_daily_limits(self):
+        """Update daily limits tracking for today.
+
+        Calculates daily loss and open position count, then inserts/updates
+        the oanda_limits table record for today.
+        """
+        today = datetime.now().strftime('%Y-%m-%d')
+        daily_loss = abs(self.get_daily_pnl())  # Absolute value for loss
+        open_count = self.get_open_positions_count()
+
+        with self.get_connection() as conn:
+            # Check if record exists for today
+            cursor = conn.execute("SELECT id FROM oanda_limits WHERE date = ?", (today,))
+            if cursor.fetchone():
+                conn.execute("""
+                UPDATE oanda_limits SET daily_loss_usd = ?, concurrent_open_count = ?
+                WHERE date = ?
+                """, (daily_loss, open_count, today))
+            else:
+                conn.execute("""
+                INSERT INTO oanda_limits (date, daily_loss_usd, concurrent_open_count)
+                VALUES (?, ?, ?)
+                """, (today, daily_loss, open_count))
+            conn.commit()
