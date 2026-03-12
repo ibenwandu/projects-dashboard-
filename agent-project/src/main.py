@@ -17,8 +17,8 @@ from .utils.logger import setup_logging
 from .utils.helpers import create_task, create_message
 from .communication.message_bus import MessageBus
 from .agents import (
-    PrimaryAgent, ResearchAgent, AnalysisAgent, 
-    WritingAgent, QualityControlAgent
+    PrimaryAgent, ResearchAgent, AnalysisAgent,
+    WritingAgent, QualityControlAgent, GeminiAgent
 )
 
 
@@ -122,7 +122,15 @@ class AgentEcosystem:
                 name=qc_config.get('name', 'Quality Control Agent'),
                 config=qc_config
             )
-        
+
+        # Initialize Gemini Agent
+        if sub_agents_config.get('gemini', {}).get('enabled', True):
+            gemini_config = get_agent_config('gemini')
+            self.sub_agents['gemini'] = GeminiAgent(
+                name=gemini_config.get('name', 'Gemini Agent'),
+                config=gemini_config
+            )
+
         self.logger.info(f"Initialized {len(self.sub_agents)} sub-agents")
     
     async def _register_sub_agents(self) -> None:
