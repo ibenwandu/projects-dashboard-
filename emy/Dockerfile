@@ -33,11 +33,13 @@ WORKDIR /app
 COPY --from=builder /opt/venv /opt/venv
 
 # Set environment variables
+# Note: ANTHROPIC_API_KEY and ANTHROPIC_MODEL are set via Render's Environment tab
+# (not hardcoded here for security)
 ENV PATH="/opt/venv/bin:$PATH" \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    EMY_API_URL="http://localhost:8000" \
-    EMY_LOG_LEVEL="INFO"
+    EMY_API_URL="${EMY_API_URL:-http://localhost:8000}" \
+    EMY_LOG_LEVEL="${EMY_LOG_LEVEL:-INFO}"
 
 # Create non-root user
 RUN useradd -m -u 1000 emy && \
