@@ -14,6 +14,7 @@ Architecture:
 import logging
 from typing import Any, Dict, Optional
 from langgraph.graph import StateGraph, END
+from emy.brain.router_agent import RouterAgent
 
 logger = logging.getLogger("EMyBrain")
 
@@ -43,6 +44,7 @@ class EMyBrain:
         """
         self.db = db
         self.memory_store = memory_store
+        self.router_agent = RouterAgent()
         self._graph = self._build_graph()
         logger.info("EMyBrain initialized")
 
@@ -68,18 +70,18 @@ class EMyBrain:
         return graph.compile()
 
     def _router_node(self, state: dict) -> dict:
-        """Placeholder router node.
+        """Route request to appropriate agent based on classification.
 
-        Tasks 2-4 will integrate RouterAgent, BrowserController, MemoryStore here.
+        Uses RouterAgent to classify the request and determine which domain agent
+        should handle it. Returns only the fields being updated.
 
         Args:
             state: Current workflow state dict
 
         Returns:
-            State updates (only return the fields you're modifying)
+            State updates with workflow_type, current_agent, step_count
         """
-        # Scaffold: just increment step count
-        return {"step_count": state.get("step_count", 0) + 1}
+        return self.router_agent.route(state)
 
     async def execute_workflow(self, workflow_id: str, request: dict) -> dict:
         """Execute a workflow end-to-end.

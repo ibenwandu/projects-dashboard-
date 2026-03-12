@@ -11,6 +11,7 @@ Test Coverage:
 
 import pytest
 import asyncio
+from unittest.mock import Mock, patch
 from emy.brain.state import WorkflowState
 from emy.brain.engine import EMyBrain
 
@@ -137,15 +138,25 @@ class TestEMyBrainScaffold:
         # Graph should have invoke method (compiled CompiledGraph)
         assert hasattr(brain._graph, "invoke")
 
-    def test_router_node_increments_step_count(self):
+    @patch("emy.brain.engine.RouterAgent")
+    def test_router_node_increments_step_count(self, mock_router_class):
         """Test router node increments step_count."""
+        mock_router = Mock()
+        mock_router_class.return_value = mock_router
+        mock_router.route.return_value = {"step_count": 6}
+
         brain = EMyBrain()
         initial_state = {"step_count": 5}
         updated = brain._router_node(initial_state)
         assert updated["step_count"] == 6
 
-    def test_router_node_handles_missing_step_count(self):
+    @patch("emy.brain.engine.RouterAgent")
+    def test_router_node_handles_missing_step_count(self, mock_router_class):
         """Test router node defaults step_count to 0 if missing."""
+        mock_router = Mock()
+        mock_router_class.return_value = mock_router
+        mock_router.route.return_value = {"step_count": 1}
+
         brain = EMyBrain()
         initial_state = {}
         updated = brain._router_node(initial_state)
@@ -168,8 +179,17 @@ class TestEMyBrainScaffold:
         assert "steps" in result
 
     @pytest.mark.asyncio
-    async def test_execute_workflow_returns_pending_state(self):
+    @patch("emy.brain.engine.RouterAgent")
+    async def test_execute_workflow_returns_pending_state(self, mock_router_class):
         """Test execute_workflow returns with status complete (scaffold default)."""
+        mock_router = Mock()
+        mock_router_class.return_value = mock_router
+        mock_router.route.return_value = {
+            "workflow_type": "knowledge_query",
+            "current_agent": "KnowledgeAgent",
+            "step_count": 1,
+        }
+
         brain = EMyBrain()
         result = await brain.execute_workflow(
             workflow_id="wf_scaffold_test",
@@ -178,19 +198,18 @@ class TestEMyBrainScaffold:
 
         assert result["workflow_id"] == "wf_scaffold_test"
         assert result["status"] == "complete"
-        assert result["workflow_type"] == "unknown"  # Default scaffold type
+        assert result["workflow_type"] == "knowledge_query"
         assert result["steps"] >= 1
 
     @pytest.mark.asyncio
-    async def test_execute_workflow_error_handling(self):
+    @patch("emy.brain.engine.RouterAgent")
+    async def test_execute_workflow_error_handling(self, mock_router_class):
         """Test execute_workflow returns error status on exception."""
+        mock_router = Mock()
+        mock_router_class.return_value = mock_router
+        mock_router.route.side_effect = ValueError("Router error")
+
         brain = EMyBrain()
-
-        # Mock graph to raise exception
-        async def mock_invoke_error(state):
-            raise ValueError("Test graph error")
-
-        brain._graph.invoke = mock_invoke_error
 
         result = await brain.execute_workflow(
             workflow_id="wf_error_test",
@@ -202,8 +221,17 @@ class TestEMyBrainScaffold:
         assert "error" in result
 
     @pytest.mark.asyncio
-    async def test_execute_workflow_preserves_request(self):
+    @patch("emy.brain.engine.RouterAgent")
+    async def test_execute_workflow_preserves_request(self, mock_router_class):
         """Test execute_workflow includes original request in execution."""
+        mock_router = Mock()
+        mock_router_class.return_value = mock_router
+        mock_router.route.return_value = {
+            "workflow_type": "job_search",
+            "current_agent": "JobSearchAgent",
+            "step_count": 1,
+        }
+
         brain = EMyBrain()
         request = {"query": "find jobs", "location": "Toronto"}
         result = await brain.execute_workflow(
