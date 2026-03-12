@@ -208,6 +208,11 @@ This portfolio includes several active projects with interdependencies:
 ## Automation Settings (Standard Operating Procedure)
 
 **These actions are automatic — DO NOT ask for confirmation or file paths:**
+- ✅ **SESSION_DECISIONS_SYSTEM**: Auto-load all prior decisions at session start, auto-capture all decisions at session end
+  - Location: `~/.claude/session-decisions/` (persistent home directory storage)
+  - Auto-load: Displays DECISION_INDEX.md and ACTIVE_PROJECTS.md at session start via /start-session skill
+  - Auto-capture: Timestamped decision files + JSON backup + git commit at session end via /close-session skill
+  - Frequency: Every session start and end (guaranteed context preservation across auto-compress events)
 - ✅ **Obsidian Dashboard Updates**: Auto-update every close-session-root
   - File: `Obsidian Vault\My Knowledge Base\00-DASHBOARD.md`
   - Action: Update project status, priorities, metrics, timestamp

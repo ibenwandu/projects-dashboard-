@@ -39,6 +39,7 @@ This file records interactions, plans, and fixes implemented across projects und
 When asked to **review the logs**, future sessions should perform checks like these (aligned with Manual logs and cross-touchpoint consistency):
 
 - **Max trades:** Never more open positions than UI `max_trades`; logs show "Open: X/Y, Pending: P" (not "Active: 6/4"); ERROR if OANDA > max_trades; BLOCKED when at limit.
+- **Consensus config:** `min_consensus_level` (and `required_llms`) is a **config/UI setting**, not a code constant. To change consensus behavior, update it via the Scalp-Engine UI / Config API only; do **not** hard‑code thresholds in engine logic.
 - **Trailing stop:** Trailing only activated when trade is in profit (≥1 pip), never in loss or before breakeven; look for "converted to trailing stop" only after profit; USER_GUIDE §17.
 - **Duplicate (pair, direction):** No multiple open or **pending** orders for same pair/direction on OANDA; final gate blocks with "BLOCKED DUPLICATE (final check)" or "BLOCKED DUPLICATE (final check – pending)"; has_existing_position and pre-open check include pending orders.
 - **No pending when pair has open:** Once a pair has an open position, no pending order (LIMIT/STOP) is allowed for that pair until the open is closed or cancelled. Block on place: "BLOCKED: {pair} already has an open position. No pending order allowed until that position is closed or cancelled." Final gate (before send): "🚫 BLOCKED (final check): {pair} already has an open position on OANDA. No pending order allowed until it is closed or cancelled." Replace-pending path: "🔄 Skipping replace for {pair} {direction}: pair has an open position. No pending allowed until it is closed or cancelled." On sync, cleanup cancels any pending order for a pair that has an open: "🧹 Cleaned up pending order: {pair} (pair has open position, no pending allowed)". Main loop skips opportunities for pairs with an open (DEBUG: "Skipped {pair} {direction} - pair already has an open position (no second open/pending allowed)").
@@ -2037,12 +2038,17 @@ After deploy:
 - max_trades_limit warnings throttled (15 min window)
 - **Commit:** `83b685b` (Trade-Alerts)
 
-**Priority 3 (RL Monitoring):** ⏸️ Pending verification
-- Will implement after Priority 1 & 2 are verified working
+**Priority 3 (RL Monitoring):** ✅ Implemented
+- Added explicit RL monitoring logs in `daily_learning.run_daily_learning()`:
+  - `LEARNING CYCLE START: Evaluating recommendations and updating LLM weights...`
+  - `WEIGHTS UPDATED: {llm}: {old_weight} -> {new_weight}`
+  - `LEARNING CYCLE COMPLETE: evaluated={evaluated_count}, total_evaluated={total_evaluated}, overall_win_rate={overall_win_rate}%`
+- Extended `RecommendationDatabase` with `get_latest_learning_checkpoint()` to read prior weights
+- Extended `learning_checkpoints` to persist `deepseek_weight` and included it in checkpoints
 
 **Priority 4 (Optimization):** ⏸️ Pending
 - Low priority; optional improvements
 
 ---
 
-*Part 23 last updated: Priority 1 & 2 implemented and committed; verification pending before Priority 3.*
+*Part 23 last updated: Priorities 1–3 implemented; Priority 1 verified in logs, Priority 2 logging deployed (awaiting more trade-close evidence), ready for future Priority 4 optimization.*
