@@ -316,6 +316,18 @@ class SQLiteStore:
         try:
             cursor = self.conn.cursor()
 
+            # Define allowed columns for validation
+            allowed_cols = {
+                "tasks_completed", "tasks_failed", "total_duration_seconds",
+                "avg_duration_seconds", "last_activity", "last_error", "status"
+            }
+
+            # Validate kwargs keys before building SQL
+            invalid = set(kwargs.keys()) - allowed_cols
+            if invalid:
+                logger.error(f"Invalid metric fields: {invalid}")
+                return False
+
             # Check if agent exists
             cursor.execute(
                 "SELECT agent_name FROM agent_metrics WHERE agent_name = ?",
@@ -345,6 +357,12 @@ class SQLiteStore:
                     "status": "active"
                 }
                 defaults.update(kwargs)
+
+                # Validate defaults keys before INSERT
+                invalid_defaults = set(defaults.keys()) - allowed_cols - {"agent_name"}
+                if invalid_defaults:
+                    logger.error(f"Invalid metric fields in defaults: {invalid_defaults}")
+                    return False
 
                 cols = ", ".join(defaults.keys())
                 placeholders = ", ".join(["?" for _ in defaults])
