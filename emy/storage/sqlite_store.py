@@ -47,7 +47,8 @@ class SQLiteStore:
             db_file = Path(self.db_path)
             db_file.parent.mkdir(parents=True, exist_ok=True)
 
-        self.conn = sqlite3.connect(self.db_path)
+        # Use check_same_thread=False for testing/multi-threaded environments
+        self.conn = sqlite3.connect(self.db_path, check_same_thread=False)
         self.conn.row_factory = sqlite3.Row  # Access columns by name
         self.conn.execute("PRAGMA foreign_keys = ON")
 
