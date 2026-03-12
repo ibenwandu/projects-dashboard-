@@ -1,6 +1,5 @@
-"""JobSearchBrainNode - async wrapper for Playwright-based job search."""
+"""JobSearchBrainNode - thread-based job search with Playwright."""
 
-import asyncio
 import logging
 from concurrent.futures import ThreadPoolExecutor
 from emy.brain.nodes.base_node import BaseDomainNode
@@ -44,9 +43,9 @@ class JobSearchBrainNode(BaseDomainNode):
         self._executor = ThreadPoolExecutor(max_workers=1)
 
     def execute(self, state: dict) -> dict:
-        """Synchronous entry point (called by LangGraph).
+        """Execute job search in thread pool.
 
-        Creates a new event loop and runs async logic.
+        Runs sync scraper in executor to avoid blocking the event loop.
 
         Args:
             state: Current workflow state dict
@@ -54,26 +53,11 @@ class JobSearchBrainNode(BaseDomainNode):
         Returns:
             State updates dict with step_count, execution_history, context
         """
-        loop = asyncio.new_event_loop()
-        try:
-            return loop.run_until_complete(self._async_execute(state))
-        finally:
-            loop.close()
-
-    async def _async_execute(self, state: dict) -> dict:
-        """Async execution: run sync scraper in thread pool.
-
-        Args:
-            state: Current workflow state dict
-
-        Returns:
-            State updates with job search results
-        """
         query = state.get("user_request", {}).get("query", "")
 
         try:
-            loop = asyncio.get_event_loop()
-            jobs = await loop.run_in_executor(self._executor, self._scrape_fn, query)
+            # Always run in executor to avoid Playwright async conflicts
+            jobs = self._executor.submit(self._scrape_fn, query).result(timeout=30)
         except Exception as e:
             logger.error(f"JobSearch scrape failed: {e}")
             jobs = []
@@ -85,7 +69,6 @@ class JobSearchBrainNode(BaseDomainNode):
             "agent": "JobSearchBrainNode",
         }
 
-        # Increment step count and append to history
         step = state.get("step_count", 0) + 1
         history = list(state.get("execution_history", []))
         history.append({
