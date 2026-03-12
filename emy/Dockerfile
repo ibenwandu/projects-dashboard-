@@ -55,7 +55,7 @@ RUN mkdir -p emy/data
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
-    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5).read()" || exit 1
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5).read()"
 
 # Default command: run API gateway server
 # Can be overridden to run CLI: docker run emy python emy.py ask "query"
