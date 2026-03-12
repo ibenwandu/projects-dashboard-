@@ -108,19 +108,19 @@ class EMyAPIClient:
         Returns:
             Workflow response dict or None if error
         """
+        # Parse input data if provided
+        parsed_input = None
+        if input_data:
+            try:
+                parsed_input = json.loads(input_data)
+            except json.JSONDecodeError as e:
+                click.secho(f'Error: Invalid JSON input: {str(e)}', fg='red', err=True)
+                return None
+
+        # Parse agents list
+        agent_list = [a.strip() for a in agents.split(',')]
+
         try:
-            # Parse input data if provided
-            parsed_input = None
-            if input_data:
-                try:
-                    parsed_input = json.loads(input_data)
-                except json.JSONDecodeError as e:
-                    self.console.print(f'[red]Error:[/red] Invalid JSON input: {str(e)}', file=sys.stderr)
-                    return None
-
-            # Parse agents list
-            agent_list = [a.strip() for a in agents.split(',')]
-
             url = f'{self.api_url}/workflows/execute'
             payload = {
                 'workflow_type': workflow_type,
@@ -136,7 +136,7 @@ class EMyAPIClient:
                 self._handle_response_error(response)
                 return None
 
-        except requests.exceptions.RequestException as e:
+        except (requests.exceptions.RequestException, OSError) as e:
             self._handle_error(e, 'execute workflow')
             return None
 
@@ -159,7 +159,7 @@ class EMyAPIClient:
                 self._handle_response_error(response)
                 return None
 
-        except requests.exceptions.RequestException as e:
+        except (requests.exceptions.RequestException, OSError) as e:
             self._handle_error(e, 'get workflow status')
             return None
 
@@ -184,7 +184,7 @@ class EMyAPIClient:
                 self._handle_response_error(response)
                 return None
 
-        except requests.exceptions.RequestException as e:
+        except (requests.exceptions.RequestException, OSError) as e:
             self._handle_error(e, 'list workflows')
             return None
 
@@ -204,7 +204,7 @@ class EMyAPIClient:
                 self._handle_response_error(response)
                 return None
 
-        except requests.exceptions.RequestException as e:
+        except (requests.exceptions.RequestException, OSError) as e:
             self._handle_error(e, 'get agents status')
             return None
 
@@ -224,7 +224,7 @@ class EMyAPIClient:
                 self._handle_response_error(response)
                 return None
 
-        except requests.exceptions.RequestException as e:
+        except (requests.exceptions.RequestException, OSError) as e:
             self._handle_error(e, 'health check')
             return None
 
@@ -264,21 +264,18 @@ def execute(workflow_type: str, agents: str, input: Optional[str], verbose: bool
     AGENTS: Comma-separated list of agents (e.g., 'KnowledgeAgent,TradingAgent')
     INPUT: Optional JSON input data (optional)
     """
-    try:
-        client = EMyAPIClient(verbose=verbose)
-        result = client.execute_workflow(workflow_type, agents, input)
+    # Client methods handle all exceptions and return None on error (error already displayed)
+    client = EMyAPIClient(verbose=verbose)
+    result = client.execute_workflow(workflow_type, agents, input)
 
-        if result:
-            click.secho('✓ Workflow created', fg='green')
-            click.echo(f"  ID: {result.get('workflow_id', 'N/A')}")
-            click.echo(f"  Status: {result.get('status', 'N/A')}")
-            created_at = result.get('created_at', '')
-            if created_at:
-                click.echo(f"  Created: {_format_timestamp(created_at)}")
-        else:
-            sys.exit(1)
-    except Exception as e:
-        click.secho(f'Error: {str(e)}', fg='red', err=True)
+    if result:
+        click.secho('✓ Workflow created', fg='green')
+        click.echo(f"  ID: {result.get('workflow_id', 'N/A')}")
+        click.echo(f"  Status: {result.get('status', 'N/A')}")
+        created_at = result.get('created_at', '')
+        if created_at:
+            click.echo(f"  Created: {_format_timestamp(created_at)}")
+    else:
         sys.exit(1)
 
 
@@ -290,45 +287,42 @@ def status(workflow_id: str, verbose: bool):
 
     WORKFLOW_ID: ID of the workflow to check
     """
-    try:
-        client = EMyAPIClient(verbose=verbose)
-        result = client.get_workflow_status(workflow_id)
+    # Client methods handle all exceptions and return None on error (error already displayed)
+    client = EMyAPIClient(verbose=verbose)
+    result = client.get_workflow_status(workflow_id)
 
-        if result:
-            # Create table for display
-            table = Table(title=f"Workflow: {workflow_id}", show_header=False, box=None)
-            table.add_column("Key", style="cyan")
-            table.add_column("Value", style="green")
+    if result:
+        # Create table for display
+        table = Table(title=f"Workflow: {workflow_id}", show_header=False, box=None)
+        table.add_column("Key", style="cyan")
+        table.add_column("Value", style="green")
 
-            table.add_row("Type", result.get('type', 'N/A'))
-            table.add_row("Status", result.get('status', 'N/A'))
+        table.add_row("Type", result.get('type', 'N/A'))
+        table.add_row("Status", result.get('status', 'N/A'))
 
-            created_at = result.get('created_at', '')
-            if created_at:
-                table.add_row("Created", _format_timestamp(created_at))
+        created_at = result.get('created_at', '')
+        if created_at:
+            table.add_row("Created", _format_timestamp(created_at))
 
-            updated_at = result.get('updated_at', '')
-            if updated_at:
-                table.add_row("Updated", _format_timestamp(updated_at))
+        updated_at = result.get('updated_at', '')
+        if updated_at:
+            table.add_row("Updated", _format_timestamp(updated_at))
 
-            input_data = result.get('input', '')
-            if input_data:
-                if isinstance(input_data, str) and len(input_data) > 50:
-                    input_data = input_data[:50] + '...'
-                table.add_row("Input", str(input_data))
+        input_data = result.get('input', '')
+        if input_data:
+            if isinstance(input_data, str) and len(input_data) > 50:
+                input_data = input_data[:50] + '...'
+            table.add_row("Input", str(input_data))
 
-            output_data = result.get('output', '')
-            if output_data:
-                if isinstance(output_data, str) and len(output_data) > 50:
-                    output_data = output_data[:50] + '...'
-                table.add_row("Output", str(output_data))
+        output_data = result.get('output', '')
+        if output_data:
+            if isinstance(output_data, str) and len(output_data) > 50:
+                output_data = output_data[:50] + '...'
+            table.add_row("Output", str(output_data))
 
-            console = Console()
-            console.print(table)
-        else:
-            sys.exit(1)
-    except Exception as e:
-        click.secho(f'Error: {str(e)}', fg='red', err=True)
+        console = Console()
+        console.print(table)
+    else:
         sys.exit(1)
 
 
@@ -341,41 +335,38 @@ def list(limit: int, offset: int, verbose: bool):
 
     Use --limit and --offset to paginate through results.
     """
-    try:
-        client = EMyAPIClient(verbose=verbose)
-        result = client.list_workflows(limit=limit, offset=offset)
+    # Client methods handle all exceptions and return None on error (error already displayed)
+    client = EMyAPIClient(verbose=verbose)
+    result = client.list_workflows(limit=limit, offset=offset)
 
-        if result:
-            workflows = result.get('workflows', [])
+    if result:
+        workflows = result.get('workflows', [])
 
-            if not workflows:
-                click.echo('No workflows found')
-                return
+        if not workflows:
+            click.echo('No workflows found')
+            return
 
-            # Create table
-            table = Table(title=f"Workflows (limit: {limit}, offset: {offset})")
-            table.add_column("ID", style="cyan")
-            table.add_column("Type", style="magenta")
-            table.add_column("Status", style="green")
-            table.add_column("Created", style="yellow")
+        # Create table
+        table = Table(title=f"Workflows (limit: {limit}, offset: {offset})")
+        table.add_column("ID", style="cyan")
+        table.add_column("Type", style="magenta")
+        table.add_column("Status", style="green")
+        table.add_column("Created", style="yellow")
 
-            for wf in workflows:
-                created_at = wf.get('created_at', '')
-                formatted_time = _format_timestamp(created_at) if created_at else 'N/A'
-                table.add_row(
-                    wf.get('workflow_id', 'N/A'),
-                    wf.get('type', 'N/A'),
-                    wf.get('status', 'N/A'),
-                    formatted_time
-                )
+        for wf in workflows:
+            created_at = wf.get('created_at', '')
+            formatted_time = _format_timestamp(created_at) if created_at else 'N/A'
+            table.add_row(
+                wf.get('workflow_id', 'N/A'),
+                wf.get('type', 'N/A'),
+                wf.get('status', 'N/A'),
+                formatted_time
+            )
 
-            console = Console()
-            console.print(table)
-            console.print(f"\n[dim]Total: {result.get('total', 'N/A')} workflows[/dim]")
-        else:
-            sys.exit(1)
-    except Exception as e:
-        click.secho(f'Error: {str(e)}', fg='red', err=True)
+        console = Console()
+        console.print(table)
+        console.print(f"\n[dim]Total: {result.get('total', 'N/A')} workflows[/dim]")
+    else:
         sys.exit(1)
 
 
@@ -383,42 +374,39 @@ def list(limit: int, offset: int, verbose: bool):
 @click.option('--verbose', is_flag=True, help='Show detailed error messages')
 def agents(verbose: bool):
     """View status of all agents."""
-    try:
-        client = EMyAPIClient(verbose=verbose)
-        result = client.get_agents_status()
+    # Client methods handle all exceptions and return None on error (error already displayed)
+    client = EMyAPIClient(verbose=verbose)
+    result = client.get_agents_status()
 
-        if result:
-            agent_list = result.get('agents', [])
+    if result:
+        agent_list = result.get('agents', [])
 
-            if not agent_list:
-                click.echo('No agents found')
-                return
+        if not agent_list:
+            click.echo('No agents found')
+            return
 
-            # Create table
-            table = Table(title="Agent Status")
-            table.add_column("Name", style="cyan")
-            table.add_column("Status", style="green")
-            table.add_column("Completed", style="yellow")
-            table.add_column("Failed", style="red")
-            table.add_column("Last Activity", style="magenta")
+        # Create table
+        table = Table(title="Agent Status")
+        table.add_column("Name", style="cyan")
+        table.add_column("Status", style="green")
+        table.add_column("Completed", style="yellow")
+        table.add_column("Failed", style="red")
+        table.add_column("Last Activity", style="magenta")
 
-            for agent in agent_list:
-                last_activity = agent.get('last_activity', '')
-                formatted_time = _format_timestamp(last_activity) if last_activity else 'N/A'
-                table.add_row(
-                    agent.get('agent_name', 'N/A'),
-                    agent.get('status', 'N/A'),
-                    str(agent.get('tasks_completed', 0)),
-                    str(agent.get('tasks_failed', 0)),
-                    formatted_time
-                )
+        for agent in agent_list:
+            last_activity = agent.get('last_activity', '')
+            formatted_time = _format_timestamp(last_activity) if last_activity else 'N/A'
+            table.add_row(
+                agent.get('agent_name', 'N/A'),
+                agent.get('status', 'N/A'),
+                str(agent.get('tasks_completed', 0)),
+                str(agent.get('tasks_failed', 0)),
+                formatted_time
+            )
 
-            console = Console()
-            console.print(table)
-        else:
-            sys.exit(1)
-    except Exception as e:
-        click.secho(f'Error: {str(e)}', fg='red', err=True)
+        console = Console()
+        console.print(table)
+    else:
         sys.exit(1)
 
 
@@ -426,23 +414,20 @@ def agents(verbose: bool):
 @click.option('--verbose', is_flag=True, help='Show detailed error messages')
 def health(verbose: bool):
     """Check Emy API server health."""
-    try:
-        client = EMyAPIClient(verbose=verbose)
-        result = client.health_check()
+    # Client methods handle all exceptions and return None on error (error already displayed)
+    client = EMyAPIClient(verbose=verbose)
+    result = client.health_check()
 
-        if result:
-            status_str = result.get('status', 'unknown').upper()
-            click.secho('✓ Server is healthy', fg='green')
-            click.echo(f"  Status: {status_str}")
+    if result:
+        status_str = result.get('status', 'unknown').upper()
+        click.secho('✓ Server is healthy', fg='green')
+        click.echo(f"  Status: {status_str}")
 
-            timestamp = result.get('timestamp', '')
-            if timestamp:
-                click.echo(f"  Checked at: {_format_timestamp(timestamp)}")
-        else:
-            click.secho('✗ Server offline', fg='red')
-            sys.exit(1)
-    except Exception as e:
-        click.secho(f'Error: {str(e)}', fg='red', err=True)
+        timestamp = result.get('timestamp', '')
+        if timestamp:
+            click.echo(f"  Checked at: {_format_timestamp(timestamp)}")
+    else:
+        click.secho('✗ Server offline', fg='red')
         sys.exit(1)
 
 
