@@ -42,7 +42,7 @@ ENV PATH="/opt/venv/bin:$PATH" \
 # Create non-root user
 RUN useradd -m -u 1000 emy && \
     mkdir -p /app /data && \
-    chown -R emy:emy /app /data
+    chown -R emy:emy /app /data /opt/venv
 
 # Copy application code
 COPY --chown=emy:emy . .
@@ -54,8 +54,8 @@ USER emy
 RUN mkdir -p emy/data
 
 # Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD python -c "import requests; requests.get('http://localhost:8000/health', timeout=5)"
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5).read()" || exit 1
 
 # Default command: run API gateway server
 # Can be overridden to run CLI: docker run emy python emy.py ask "query"
