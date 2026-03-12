@@ -50,88 +50,89 @@ class TradingAgent(EMySubAgent):
         }
 
     def run(self) -> Tuple[bool, Dict[str, Any]]:
-        """Execute trading monitoring tasks."""
-        if self.check_disabled():
-            self.logger.warning("TradingAgent disabled")
-            return (False, {'reason': 'disabled'})
+        """
+        Execute trading agent.
 
-        results = {
-            'render_health': self._monitor_render_health(),
-            'oanda_account': self._monitor_oanda_account(),
-            'phase1_logs': self._monitor_phase1_logs(),
-            'timestamp': self._get_timestamp()
-        }
+        Analyzes market conditions and generates trading signals using Claude.
+        Also monitors OANDA account for loss alerts.
 
-        success = all([
-            results['render_health'] is not None,
-            results['oanda_account'] is not None,
-        ])
-
-        # Monitor OANDA account and log to database
+        Returns:
+            (True, {"analysis": claude_analysis, "signals": [...], ...})
+        """
         try:
-            account = self.oanda_client.get_account_summary()
-            if account:
-                monitor_result = {
-                    'account_equity': account['equity'],
-                    'margin_available': account['margin_available'],
-                    'unrealized_pl': account['unrealized_pl']
-                }
-                self.db.log_task(
-                    source='trading_agent',
-                    domain='trading',
-                    task_type='monitor',
-                    description='OANDA account monitor'
-                )
-                self.logger.info(f"[OK] OANDA monitored: Equity ${account['equity']:.2f}")
-                results['oanda_monitor'] = monitor_result
+            if self.check_disabled():
+                self.logger.warning("TradingAgent disabled")
+                return (False, {'reason': 'disabled'})
+
+            # Update daily limits and check for loss alerts (critical monitoring)
+            self.db.update_daily_limits()
+            daily_loss = abs(self.db.get_daily_pnl())  # Absolute value for loss
+            max_daily_loss = self.db.get_max_daily_loss()
+
+            # Check for 100% loss (emergency)
+            if daily_loss >= max_daily_loss:
+                logger.critical(f"Daily loss limit hit: ${daily_loss:.2f} >= ${max_daily_loss:.2f}")
+
+                if self.should_send_alert('daily_loss_100'):
+                    message = (
+                        f"OANDA STOP: Daily loss limit hit (${daily_loss:.2f})\n"
+                        f"Trading disabled until market open tomorrow (UTC)"
+                    )
+                    self.notifier.send_alert(
+                        title="OANDA Trading Disabled",
+                        message=message,
+                        priority=2,  # Emergency
+                        retry=300,   # Retry every 5 minutes
+                        expire=3600  # For 60 minutes
+                    )
+                    self.record_alert_sent('daily_loss_100')
+
+                # Disable trading
+                self._set_disabled(True)
+
+            # Check for 75% loss (warning)
+            elif daily_loss >= (max_daily_loss * 0.75):
+                logger.warning(f"Daily loss at 75%: ${daily_loss:.2f} / ${max_daily_loss:.2f}")
+
+                if self.should_send_alert('daily_loss_75'):
+                    message = (
+                        f"OANDA Alert: Daily loss 75% (${daily_loss:.2f}/${max_daily_loss:.2f})\n"
+                        f"Monitor closely. Further losses will trigger emergency stop."
+                    )
+                    self.notifier.send_alert(
+                        title="Daily Loss Warning",
+                        message=message,
+                        priority=1  # High
+                    )
+                    self.record_alert_sent('daily_loss_75')
+
+            # Get market context
+            market_context = self._get_market_context()
+
+            # Build analysis prompt
+            prompt = self._build_analysis_prompt(market_context)
+
+            # Get Claude analysis
+            analysis = self._call_claude(prompt, max_tokens=1024)
+
+            # Parse signals from analysis
+            signals = self._extract_signals_from_analysis(analysis)
+
+            result = {
+                "analysis": analysis,
+                "signals": signals,
+                "market_context": market_context,
+                "timestamp": self._get_timestamp(),
+                "agent": self.agent_name
+            }
+
+            self.logger.info(f"Trading agent generated analysis ({len(analysis)} chars)")
+            return (True, result)
+
         except Exception as e:
-            self.logger.error(f"OANDA monitoring error: {e}")
-            results['oanda_monitor'] = {'error': str(e)}
-
-        # Update daily limits and check for loss alerts
-        self.db.update_daily_limits()
-        daily_loss = abs(self.db.get_daily_pnl())  # Absolute value for loss
-        max_daily_loss = self.db.get_max_daily_loss()
-
-        # Check for 100% loss (emergency)
-        if daily_loss >= max_daily_loss:
-            logger.critical(f"Daily loss limit hit: ${daily_loss:.2f} >= ${max_daily_loss:.2f}")
-
-            if self.should_send_alert('daily_loss_100'):
-                message = (
-                    f"OANDA STOP: Daily loss limit hit (${daily_loss:.2f})\n"
-                    f"Trading disabled until market open tomorrow (UTC)"
-                )
-                self.notifier.send_alert(
-                    title="OANDA Trading Disabled",
-                    message=message,
-                    priority=2,  # Emergency
-                    retry=300,   # Retry every 5 minutes
-                    expire=3600  # For 60 minutes
-                )
-                self.record_alert_sent('daily_loss_100')
-
-            # Disable trading
-            self._set_disabled(True)
-
-        # Check for 75% loss (warning)
-        elif daily_loss >= (max_daily_loss * 0.75):
-            logger.warning(f"Daily loss at 75%: ${daily_loss:.2f} / ${max_daily_loss:.2f}")
-
-            if self.should_send_alert('daily_loss_75'):
-                message = (
-                    f"OANDA Alert: Daily loss 75% (${daily_loss:.2f}/${max_daily_loss:.2f})\n"
-                    f"Monitor closely. Further losses will trigger emergency stop."
-                )
-                self.notifier.send_alert(
-                    title="Daily Loss Warning",
-                    message=message,
-                    priority=1  # High
-                )
-                self.record_alert_sent('daily_loss_75')
-
-        self.logger.info(f"[RUN] TradingAgent completed: {success}")
-        return (success, results)
+            error_msg = f"TradingAgent error: {e}"
+            self.logger.error(error_msg)
+            return (False, {"error": error_msg})
 
     def _monitor_render_health(self) -> Dict[str, Any]:
         """Monitor Render services health."""
@@ -403,6 +404,36 @@ class TradingAgent(EMySubAgent):
                 logger.info(f"Trading re-enabled")
             except FileNotFoundError:
                 pass
+
+    def _get_market_context(self) -> str:
+        """Get current market context (placeholder for Phase 3 OANDA integration)."""
+        return "Current market state: Ready for Phase 3 OANDA API integration..."
+
+    def _build_analysis_prompt(self, market_context: str) -> str:
+        """Build prompt for market analysis."""
+        prompt = f"""You are a professional forex trader analyzing markets.
+
+Market Context:
+{market_context}
+
+Provide:
+1. Market trend analysis (50 words)
+2. Key support/resistance levels
+3. Trading signals (BUY/SELL/HOLD for major pairs)
+4. Risk assessment
+
+Format each signal as: PAIR: SIGNAL (confidence %)"""
+
+        return prompt
+
+    def _extract_signals_from_analysis(self, analysis: str) -> list:
+        """Extract trading signals from Claude analysis."""
+        # Simple extraction: look for SIGNAL patterns
+        signals = []
+        for line in analysis.split('\n'):
+            if 'BUY' in line or 'SELL' in line or 'HOLD' in line:
+                signals.append(line.strip())
+        return signals if signals else ["Analysis available: see full response"]
 
     @staticmethod
     def _get_timestamp() -> str:

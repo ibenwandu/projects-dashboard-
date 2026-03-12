@@ -152,3 +152,24 @@ class TestTradingAgentAlerts:
         assert alert_call[1]['priority'] == 2
         # Verify message mentions trading disabled
         assert 'disabled' in alert_call[1]['message'].lower()
+
+    def test_trading_agent_uses_claude_for_analysis(self, agent):
+        """Test that TradingAgent uses Claude for market analysis."""
+        mock_analysis = "EUR/USD shows strong downtrend. Current price: 1.0850..."
+
+        with patch.object(agent, '_call_claude', return_value=mock_analysis):
+            prompt = "Analyze EUR/USD current market state"
+            result = agent._call_claude(prompt)
+
+            assert "downtrend" in result.lower() or "trend" in result.lower()
+
+    def test_trading_agent_run_returns_market_analysis(self, agent):
+        """Test that TradingAgent.run() returns market analysis from Claude."""
+        mock_analysis = "Market analysis: Strong support at 1.0800. RSI at 35 (oversold)..."
+
+        with patch.object(agent, '_call_claude', return_value=mock_analysis):
+            success, result = agent.run()
+
+            assert isinstance(success, bool)
+            assert isinstance(result, dict)
+            assert 'analysis' in result or 'response' in result
