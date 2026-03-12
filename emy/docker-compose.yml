@@ -1,0 +1,62 @@
+version: '3.9'
+
+services:
+  # ============================================================================
+  # Emy API Gateway Server
+  # ============================================================================
+  emy-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: emy-api
+    ports:
+      - "8000:8000"
+    environment:
+      - EMY_API_URL=http://emy-api:8000
+      - EMY_LOG_LEVEL=INFO
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - emy-data:/app/emy/data
+      - ./emy:/app/emy
+      - ./tests:/app/tests
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - emy-network
+    command: python -m uvicorn emy.gateway.api:app --host 0.0.0.0 --port 8000
+
+  # ============================================================================
+  # SQLite Web Inspector (optional - for database debugging)
+  # ============================================================================
+  sqlite-web:
+    image: coleifer/sqlite-web:latest
+    container_name: emy-sqlite-web
+    ports:
+      - "8081:8081"
+    volumes:
+      - emy-data:/data:ro
+    environment:
+      - SQLITE_DATABASE=/data/emy.db
+    networks:
+      - emy-network
+    depends_on:
+      - emy-api
+    command: sqlite_web /data/emy.db --host 0.0.0.0 --port 8081
+
+# ============================================================================
+# Volumes
+# ============================================================================
+volumes:
+  emy-data:
+    driver: local
+
+# ============================================================================
+# Networks
+# ============================================================================
+networks:
+  emy-network:
+    driver: bridge
