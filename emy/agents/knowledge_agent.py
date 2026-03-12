@@ -50,75 +50,56 @@ class KnowledgeAgent(EMySubAgent):
             return False
 
     def run(self) -> Tuple[bool, Dict[str, Any]]:
-        """Execute knowledge management tasks including dashboard update."""
-        if self.check_disabled():
-            self.logger.warning("KnowledgeAgent disabled")
-            return (False, {'reason': 'disabled'})
+        """
+        Execute knowledge agent.
 
-        results = {
-            'dashboard_updated': False,
-            'session_logged': False,
-            'memory_persisted': False,
-            'git_committed': False,
-            'timestamp': self._get_timestamp()
-        }
+        Generates knowledge base updates and documentation using Claude.
 
+        Returns:
+            (True, {"response": claude_response, "timestamp": ...})
+        """
         try:
-            # ===== DASHBOARD UPDATE WORKFLOW =====
-            logger.info("[KNOWLEDGE] Starting hourly dashboard update")
+            # Build context-aware prompt
+            prompt = self._build_knowledge_prompt()
 
-            # 1. Collect status data
-            status_data = {
-                'status': self._get_emy_status(),
-                'last_run': self._get_last_run_time(),
-                'next_job': self._get_next_scheduled_job(),
-                'alerts': self._get_recent_alerts(),
-                'critical': self._check_critical_alerts()
+            # Call Claude to generate response
+            response = self._call_claude(prompt, max_tokens=2048)
+
+            # Parse and store response
+            result = {
+                "response": response,
+                "timestamp": datetime.now().isoformat(),
+                "agent": self.agent_name
             }
 
-            # 2. Format dashboard row
-            formatted_status = f"{status_data['status'].get('status', 'UNKNOWN')} ({status_data['last_run']})"
-            formatted_row = self._format_dashboard_row({
-                'status': formatted_status,
-                'next_job': status_data['next_job'].get('time', 'Unknown'),
-                'alerts': status_data['alerts'],
-                'critical': status_data['critical']
-            })
-
-            # 3. Update dashboard
-            if self._update_obsidian_dashboard():
-                results['dashboard_updated'] = True
-                logger.info("[KNOWLEDGE] Dashboard updated successfully")
-
-                # 4. Commit changes
-                if self._commit_dashboard_changes():
-                    results['git_committed'] = True
-                    logger.info("[KNOWLEDGE] Dashboard changes committed")
-            else:
-                logger.warning("[KNOWLEDGE] Failed to update dashboard")
-
-            # ===== EXISTING FUNCTIONALITY (from original) =====
-            # 5. Update session log (existing - call if method exists)
-            if hasattr(self, '_append_session_log') and self._append_session_log():
-                results['session_logged'] = True
-                self.logger.info("[KNOWLEDGE] Session log updated")
-
-            # 6. Persist memory (existing - call if method exists)
-            if hasattr(self, '_update_memory') and self._update_memory():
-                results['memory_persisted'] = True
-                self.logger.info("[KNOWLEDGE] Memory persisted")
-
-            success = any([
-                results['dashboard_updated'],
-                results['session_logged'],
-                results['memory_persisted']
-            ])
-
-            return (success, results)
+            self.logger.info(f"Knowledge agent generated response ({len(response)} chars)")
+            return (True, result)
 
         except Exception as e:
-            logger.error(f"[ERROR] Knowledge management failed: {e}")
-            return (False, {'error': str(e), 'results': results})
+            error_msg = f"KnowledgeAgent error: {e}"
+            self.logger.error(error_msg)
+            return (False, {"error": error_msg})
+
+    def _build_knowledge_prompt(self) -> str:
+        """Build context-aware prompt for Claude."""
+        guidelines = self.global_guidelines or "No guidelines available"
+
+        prompt = f"""You are Ibe's AI Chief of Staff (Emy).
+
+Global Guidelines and Context:
+{guidelines[:1000]}
+
+Your role: Generate knowledge base updates, document decisions, and synthesize insights.
+
+Current request: Analyze and summarize Ibe's current status and provide next steps.
+
+Provide:
+1. Current status summary (50 words)
+2. Key insights and decisions
+3. Recommended next steps
+4. Documentation suggestions"""
+
+        return prompt
 
     def _update_obsidian_dashboard(self) -> bool:
         """Update Obsidian 00-DASHBOARD.md with project metrics."""

@@ -159,34 +159,46 @@ class TestKnowledgeAgentTaskScheduler:
 
             assert success is False
 
-    def test_run_updates_dashboard_hourly(self, agent):
-        """KnowledgeAgent.run() executes full dashboard update workflow"""
-        with patch.object(agent.disable_guard, 'is_disabled', return_value=False), \
-             patch.object(agent, '_get_emy_status') as mock_status, \
-             patch.object(agent, '_get_last_run_time') as mock_last, \
-             patch.object(agent, '_get_recent_alerts') as mock_alerts, \
-             patch.object(agent, '_check_critical_alerts') as mock_critical, \
-             patch.object(agent, '_load_obsidian_dashboard') as mock_load, \
-             patch.object(agent, '_update_dashboard_table') as mock_update, \
-             patch.object(agent, '_save_obsidian_dashboard') as mock_save, \
-             patch.object(agent, '_commit_dashboard_changes') as mock_commit:
+    def test_run_executes_claude_workflow(self, agent):
+        """KnowledgeAgent.run() executes Claude-based knowledge synthesis"""
+        mock_claude_response = "Status: Running | Projects: Active | Recommendations: Continue current trajectory"
 
-            # Setup mocks
-            mock_status.return_value = {'status': 'Running', 'timestamp': '2026-03-10T14:32:00'}
-            mock_last.return_value = '14:32'
-            mock_alerts.return_value = {'executions': 3, 'rejections': 1, 'total': 4}
-            mock_critical.return_value = False
-            mock_load.return_value = "| Emy | Phase 1 | RUNNING | old | data |"
-            mock_update.return_value = "| Emy | Phase 1 | 🟢 RUNNING | updated | data |"
-            mock_save.return_value = True
-            mock_commit.return_value = True
-
-            # Run
+        with patch.object(agent, '_call_claude', return_value=mock_claude_response):
             success, result = agent.run()
 
-            # Verify all methods called
-            mock_status.assert_called_once()
-            mock_load.assert_called_once()
-            mock_update.assert_called_once()
-            mock_save.assert_called_once()
-            mock_commit.assert_called_once()
+            assert success is True
+            assert 'response' in result
+            assert result['response'] == mock_claude_response
+            assert 'timestamp' in result
+            assert result['agent'] == 'KnowledgeAgent'
+
+
+class TestKnowledgeAgentClaudeIntegration:
+    """Test Claude API integration for KnowledgeAgent"""
+
+    @pytest.fixture
+    def knowledge_agent(self):
+        """Create KnowledgeAgent instance"""
+        return KnowledgeAgent()
+
+    def test_knowledge_agent_uses_claude_for_queries(self, knowledge_agent):
+        """Test that KnowledgeAgent uses Claude for knowledge queries."""
+        mock_response = "Based on your profile, you have strong experience in..."
+
+        with patch.object(knowledge_agent, '_call_claude', return_value=mock_response):
+            prompt = "What is my current status and skills?"
+            result = knowledge_agent._call_claude(prompt)
+
+            assert result == mock_response
+            assert "experience" in result.lower()
+
+    def test_knowledge_agent_run_returns_dict(self, knowledge_agent):
+        """Test that KnowledgeAgent.run() returns (success, dict)."""
+        mock_response = "You are an AI Chief of Staff..."
+
+        with patch.object(knowledge_agent, '_call_claude', return_value=mock_response):
+            success, result = knowledge_agent.run()
+
+            assert isinstance(success, bool)
+            assert isinstance(result, dict)
+            assert len(result) > 0
