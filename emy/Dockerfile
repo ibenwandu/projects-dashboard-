@@ -50,14 +50,6 @@ COPY --chown=emy:emy . .
 # Switch to non-root user
 USER emy
 
-# Create data directory for database
-RUN mkdir -p emy/data
-
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
-    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5).read()"
-
-# Default command: run API gateway server
-# Can be overridden to run CLI: docker run emy python emy.py ask "query"
+# Expose port and run server
 EXPOSE 8000
 CMD ["python", "-m", "uvicorn", "gateway.api:app", "--host", "0.0.0.0", "--port", "8000"]
