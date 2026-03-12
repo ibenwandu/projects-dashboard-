@@ -182,6 +182,20 @@ class EMyDatabase:
                 )
             """)
 
+            # Workflow context persistence (Phase 2 Brain)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS workflow_contexts (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    workflow_id TEXT NOT NULL,
+                    agent_name TEXT NOT NULL,
+                    step_number INTEGER NOT NULL,
+                    context_json TEXT NOT NULL,
+                    checkpoint_json TEXT,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (workflow_id) REFERENCES workflows(workflow_id)
+                )
+            """)
+
             conn.commit()
 
         # Create OANDA-specific tables
@@ -497,6 +511,74 @@ class EMyDatabase:
             import logging
             logger = logging.getLogger(__name__)
             logger.error(f"Error retrieving workflow: {e}")
+            return None
+
+    def save_workflow_context(self, workflow_id: str, agent_name: str, step_number: int,
+                             context_dict: dict, checkpoint_dict: Optional[dict] = None) -> None:
+        """Save workflow context at a given step for resumption.
+
+        Args:
+            workflow_id: Unique workflow identifier
+            agent_name: Name of agent executing this step
+            step_number: Current step number
+            context_dict: Context accumulated so far
+            checkpoint_dict: Optional checkpoint data for resumption
+        """
+        try:
+            import json
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                context_json = json.dumps(context_dict)
+                checkpoint_json = json.dumps(checkpoint_dict) if checkpoint_dict else None
+
+                cursor.execute("""
+                    INSERT INTO workflow_contexts
+                    (workflow_id, agent_name, step_number, context_json, checkpoint_json)
+                    VALUES (?, ?, ?, ?, ?)
+                """, (workflow_id, agent_name, step_number, context_json, checkpoint_json))
+                conn.commit()
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error saving workflow context for {workflow_id}: {e}")
+
+    def load_workflow_context(self, workflow_id: str) -> Optional[dict]:
+        """Load latest context for a workflow (for resumption).
+
+        Args:
+            workflow_id: Unique workflow identifier
+
+        Returns:
+            Latest context dict or None if not found
+        """
+        try:
+            import json
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT context_json, checkpoint_json, step_number, agent_name
+                    FROM workflow_contexts
+                    WHERE workflow_id = ?
+                    ORDER BY step_number DESC
+                    LIMIT 1
+                """, (workflow_id,))
+
+                row = cursor.fetchone()
+                if row:
+                    context = json.loads(row['context_json'])
+                    checkpoint = json.loads(row['checkpoint_json']) if row['checkpoint_json'] else None
+                    return {
+                        "context": context,
+                        "checkpoint": checkpoint,
+                        "step_number": row['step_number'],
+                        "agent_name": row['agent_name'],
+                    }
+                return None
+
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error loading workflow context for {workflow_id}: {e}")
             return None
 
     def _create_oanda_trades_table(self):
