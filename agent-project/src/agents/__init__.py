@@ -10,14 +10,16 @@ from .research_agent import ResearchAgent
 from .analysis_agent import AnalysisAgent
 from .writing_agent import WritingAgent
 from .quality_control_agent import QualityControlAgent
+from .gemini_agent import GeminiAgent
 
 __all__ = [
     'BaseAgent',
-    'PrimaryAgent', 
+    'PrimaryAgent',
     'ResearchAgent',
     'AnalysisAgent',
     'WritingAgent',
-    'QualityControlAgent'
+    'QualityControlAgent',
+    'GeminiAgent'
 ]
 
 __version__ = '1.0.0'
