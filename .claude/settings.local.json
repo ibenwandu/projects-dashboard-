@@ -65,7 +65,11 @@
       "Bash(find agent-project:*)",
       "WebFetch(domain:github.com)",
       "Bash(\\\\ export:*)",
-      "Bash(cd /c/Users/user/projects/personal/.worktrees/emy && mkdir -p emy/gateway emy/storage emy/cli emy/ui tests && touch emy/gateway/__init__.py emy/storage/__init__.py emy/cli/__init__.py emy/ui/__init__.py && echo \"Directories created successfully\")"
+      "Bash(cd /c/Users/user/projects/personal/.worktrees/emy && mkdir -p emy/gateway emy/storage emy/cli emy/ui tests && touch emy/gateway/__init__.py emy/storage/__init__.py emy/cli/__init__.py emy/ui/__init__.py && echo \"Directories created successfully\")",
+      "WebFetch(domain:cursor.com)",
+      "Bash(ls /c/Users/user/.claude/ 2>/dev/null && find /c/Users/user/.claude -name \"*.json\" -o -name \"*.mcp*\" 2>/dev/null | head -30)",
+      "Bash(find /c/Users/user/AppData/Roaming -name \"claude_desktop_config.json\" 2>/dev/null; find /c/Users/user -maxdepth 3 -name \"*mcp*\" -o -name \"*claude_desktop*\" 2>/dev/null | grep -v \".git\" | head -20)",
+      "Bash(find /c/Users/user/.claude/plugins/cache -name \"*.mcp.json\" -o -name \".mcp.json\" 2>/dev/null | head -10 | xargs -I{} cat {} 2>/dev/null | head -60)"
     ]
   }
 }
