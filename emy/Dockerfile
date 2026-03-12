@@ -22,6 +22,10 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
+# Install Playwright browsers and dependencies (Phase 2 Brain)
+RUN playwright install chromium && \
+    playwright install-deps chromium
+
 # ============================================================================
 # Stage 2: Runtime
 # ============================================================================
@@ -39,7 +43,8 @@ ENV PATH="/opt/venv/bin:$PATH" \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     EMY_API_URL="${EMY_API_URL:-http://localhost:8000}" \
-    EMY_LOG_LEVEL="${EMY_LOG_LEVEL:-INFO}"
+    EMY_LOG_LEVEL="${EMY_LOG_LEVEL:-INFO}" \
+    PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 
 # Create non-root user
 RUN useradd -m -u 1000 emy && \

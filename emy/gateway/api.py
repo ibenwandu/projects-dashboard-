@@ -8,15 +8,17 @@ Acts as a gateway to the main Emy agent loop and database.
 import os
 import uuid
 import logging
+import asyncio
 from datetime import datetime
 from typing import Optional, List, Dict, Any
 from pydantic import BaseModel
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, BackgroundTasks
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from emy.core.database import EMyDatabase
+from emy.brain.engine import EMyBrain
 
 logger = logging.getLogger('EmyGateway')
 
@@ -35,6 +37,64 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*'],
 )
+
+# ============================================================================
+# Brain Integration
+# ============================================================================
+
+# Global Brain instance (lazy-loaded on first use)
+_brain = None
+
+
+def get_brain() -> EMyBrain:
+    """Get or create the EMyBrain instance.
+
+    Uses lazy initialization to avoid startup delays.
+    """
+    global _brain
+    if _brain is None:
+        _brain = EMyBrain()
+        logger.info("EMyBrain initialized")
+    return _brain
+
+
+async def _run_brain_workflow(workflow_id: str, request: Dict[str, Any]) -> None:
+    """Run Brain workflow in background and persist results.
+
+    This function is called via BackgroundTasks and runs the workflow
+    asynchronously, updating the database with results when complete.
+
+    Args:
+        workflow_id: Unique workflow identifier
+        request: User request data
+    """
+    db = EMyDatabase()
+    try:
+        logger.info(f"Starting Brain workflow {workflow_id}")
+        brain = get_brain()
+        result = await brain.execute_workflow(workflow_id, request)
+
+        # Persist result to database
+        import json
+        output = json.dumps(result.get("output", {}))
+        status = result.get("status", "error")
+
+        db.store_workflow_output(
+            workflow_id=workflow_id,
+            workflow_type=request.get("workflow_type", "unknown"),
+            status=status,
+            output=output
+        )
+        logger.info(f"Brain workflow {workflow_id} completed with status={status}")
+
+    except Exception as e:
+        logger.error(f"Brain workflow {workflow_id} failed: {e}", exc_info=True)
+        db.store_workflow_output(
+            workflow_id=workflow_id,
+            workflow_type=request.get("workflow_type", "unknown"),
+            status="error",
+            output=str(e)
+        )
 
 # ============================================================================
 # Request/Response Models
@@ -144,14 +204,18 @@ async def health_check():
 
 
 @app.post('/workflows/execute', response_model=WorkflowResponse)
-async def execute_workflow(request: WorkflowExecuteRequest):
-    """Execute a new workflow and persist to database.
+async def execute_workflow(request: WorkflowExecuteRequest, background_tasks: BackgroundTasks):
+    """Execute a new workflow via Brain and persist to database.
+
+    Workflow execution happens asynchronously via BackgroundTasks.
+    This endpoint returns immediately with pending status.
 
     Args:
         request: Workflow execution request
+        background_tasks: FastAPI background tasks manager
 
     Returns:
-        Created workflow information
+        Created workflow information (status='pending')
     """
     import json
 
@@ -170,6 +234,17 @@ async def execute_workflow(request: WorkflowExecuteRequest):
         request.workflow_type,
         'pending',
         None  # No output yet
+    )
+
+    # Schedule Brain workflow execution in background
+    background_tasks.add_task(
+        _run_brain_workflow,
+        workflow_id=workflow_id,
+        request={
+            "workflow_type": request.workflow_type,
+            "agents": request.agents,
+            "input": request.input,
+        }
     )
 
     workflow = {
