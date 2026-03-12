@@ -1,6 +1,137 @@
 # Root-Level Session Log
 
-## Session: 2026-03-12 (Current) — Cursor MCP Status Verification (COMPLETE) ✅
+## Session: 2026-03-12 Evening — Emy Phase 2a Brain Implementation (COMPLETE) ✅
+
+**Date**: March 12, 2026
+**Time**: 4:55 PM - 5:15 PM EDT
+**Duration**: ~20 minutes
+**Type**: Implementation (TDD - Test-Driven Development)
+**Status**: ✅ COMPLETE — Phase 2a domain agent nodes fully implemented, all 35 tests passing, 226 total suite passing
+
+### 🎯 Session Objective
+Implement Phase 2a of Emy Brain: wire 5 domain agent nodes into LangGraph with conditional routing, following strict TDD methodology.
+
+### 📋 What Was Done
+
+#### Task 1: BaseDomainNode + 4 Adapters (18 tests ✅)
+- Created abstract `base_node.py` with BaseDomainNode interface
+- Implemented 4 adapter nodes: Knowledge, Trading, Research, ProjectMonitor
+- Pattern: Composition (wrap agents in nodes, don't subclass)
+- State handling: Return only modified fields (LangGraph merge semantics)
+- All 18 tests passing
+- **Commit**: `89a2331`
+
+#### Task 2: Conditional Routing (8 tests ✅)
+- Updated `engine.py._build_graph()` with full 8-node graph
+- Implemented conditional routing: workflow_type → correct domain node
+- **Critical insight**: Use lambda callables in add_node() to defer instantiation (prevents API auth errors at build time)
+- Graph topology: router → [5 domain nodes OR unknown_node] → complete_node → END
+- All 8 routing tests passing
+- **Commit**: `bbd5d27`
+
+#### Task 3: JobSearchBrainNode (8 tests ✅)
+- Created Playwright-based job search node
+- Design: Sync node using ThreadPoolExecutor (NOT async)
+- **Critical insight**: Use `executor.submit().result()` NOT `asyncio.new_event_loop()` to avoid event loop conflicts in async contexts
+- Stealth patterns inline (STEALTH_ARGS, STEALTH_INIT_SCRIPT, STEALTH_USER_AGENT)
+- Graceful error handling: returns jobs_found=0 on failure
+- All 8 tests passing
+- **Commit**: `bbd5d27`
+
+#### Task 4: Package Wiring + Acceptance (✅ All criteria met)
+- Updated `emy/brain/__init__.py` to export nodes package
+- Fixed event loop handling in JobSearchBrainNode
+- **Results**:
+  - 35 new tests passing (18 + 8 + 8 + 1)
+  - 226 total tests passing (no regressions)
+  - 9 node files created + 3 test files
+  - 8-node LangGraph topology proven
+- **Commit**: `20ffad8` + `a40b95e` (session log)
+
+### 📚 TDD Methodology Applied
+
+1. **RED**: Wrote all 35 tests first → verified they fail
+2. **GREEN**: Wrote minimal implementation → all tests pass
+3. **REFACTOR**: Cleaned code while maintaining green status
+
+### 🔧 Key Technical Decisions
+
+| Issue | Solution | Result |
+|-------|----------|--------|
+| Node instantiation at graph build time → API auth errors | Use lambda callables to defer instantiation | Graph builds cleanly, nodes created at runtime |
+| Playwright + asyncio conflicts in LangGraph context | `executor.submit().result()` instead of `asyncio.new_event_loop()` | Works in both sync/async contexts |
+| Complete node overwriting error status | Check current status, preserve error if set | Error workflows properly end with error status |
+| State merging in LangGraph | Return only modified fields, never full state | LangGraph merges updates correctly |
+
+### 📁 Files Created
+
+**9 node files**:
+- `emy/brain/nodes/__init__.py` (package)
+- `emy/brain/nodes/base_node.py` (abstract)
+- `emy/brain/nodes/knowledge_node.py`
+- `emy/brain/nodes/trading_node.py`
+- `emy/brain/nodes/research_node.py`
+- `emy/brain/nodes/project_monitor_node.py`
+- `emy/brain/nodes/job_search_node.py`
+- `emy/brain/nodes/complete_node.py`
+- `emy/brain/nodes/unknown_node.py`
+
+**3 test files**:
+- `emy/tests/test_brain_nodes_simple.py` (18 tests)
+- `emy/tests/test_brain_nodes_job_search.py` (8 tests)
+- `emy/tests/test_brain_graph_routing.py` (8 tests)
+
+**2 files modified**:
+- `emy/brain/engine.py` (full graph implementation)
+- `emy/brain/__init__.py` (nodes package export)
+
+**Documentation**:
+- `.worktrees/phase-2-brain/PHASE_2A_SESSION_LOG.md` (detailed session log)
+- `~/.claude/projects/.../memory/emy_phase_2a_complete.md` (technical reference)
+
+### ✅ Acceptance Criteria (ALL MET)
+
+- [x] 106+ tests passing (226 actual)
+- [x] `emy/brain/nodes/` package with 9 files
+- [x] 8-node LangGraph graph (router + 5 domain + complete + unknown)
+- [x] All 5 workflow types route to correct nodes
+- [x] JobSearchBrainNode returns jobs_found=0 gracefully
+- [x] Zero regressions in Phase 2 foundation tests
+
+### 🎁 Preserved for Next Session
+
+**Memory Files**:
+- `~/.claude/projects/.../memory/emy_phase_2a_complete.md` (full technical reference)
+- `~/.claude/projects/.../memory/MEMORY.md` (updated index)
+- Session decisions auto-captured by SESSION_DECISIONS_SYSTEM
+
+**Session Log**:
+- `.worktrees/phase-2-brain/PHASE_2A_SESSION_LOG.md` (resume instructions)
+
+**Git Commits** (all pushed):
+- `a40b95e` - docs: Phase 2a session log and documentation
+- `20ffad8` - feat(brain): Task 2a-4 - Wire nodes + complete (226 tests)
+- `bbd5d27` - feat(brain): Task 2a-2&3 - Routing + JobSearch (35 tests)
+- `89a2331` - feat(brain): Task 2a-1 - Base + 4 adapters (18 tests)
+
+### 🚀 Ready for Phase 2b
+
+- Graph architecture proven with 35 new tests
+- Routing infrastructure in place and tested
+- All existing agents can be added as nodes without architectural changes
+- ThreadPoolExecutor pattern proven for Playwright integration
+
+### ⏭️ Next Steps
+
+When resuming Phase 2b:
+1. `cd .worktrees/phase-2-brain`
+2. `pytest emy/tests/test_brain_nodes*.py -v` (verify foundation)
+3. Add additional domain agents to the 8-node graph
+4. No changes needed to core `engine.py` — new nodes auto-integrate
+
+---
+
+## Session: 2026-03-12 (Earlier) — Cursor MCP Status Verification (COMPLETE) ✅
 
 **Date**: March 12, 2026
 **Time**: ~Mid-Day
