@@ -18,12 +18,13 @@ import json
 import uuid
 import sqlite3
 from datetime import datetime, timezone
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional, Any, Callable
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException, Query, status
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, Response
+from starlette.requests import Request
 from pydantic import BaseModel, Field
 
 from emy.storage.sqlite_store import SQLiteStore
@@ -612,7 +613,7 @@ async def get_agent_status() -> AgentStatusResponse:
 # ============================================================================
 
 @app.middleware("http")
-async def log_requests(request, call_next):
+async def log_requests(request: Request, call_next: Callable) -> Response:
     """Log all HTTP requests."""
     logger.info(f"[HTTP] {request.method} {request.url.path}")
     response = await call_next(request)
@@ -625,7 +626,7 @@ async def log_requests(request, call_next):
 # ============================================================================
 
 @app.exception_handler(HTTPException)
-async def http_exception_handler(request, exc):
+async def http_exception_handler(request: Request, exc: HTTPException) -> JSONResponse:
     """Handle HTTPException with structured response."""
     return JSONResponse(
         status_code=exc.status_code,
@@ -637,7 +638,7 @@ async def http_exception_handler(request, exc):
 
 
 @app.exception_handler(ValueError)
-async def value_error_handler(request, exc):
+async def value_error_handler(request: Request, exc: ValueError) -> JSONResponse:
     """Handle ValueError with structured response."""
     return JSONResponse(
         status_code=status.HTTP_400_BAD_REQUEST,
@@ -653,7 +654,7 @@ async def value_error_handler(request, exc):
 # ============================================================================
 
 @app.get("/", tags=["System"])
-async def root():
+async def root() -> dict:
     """Root endpoint with API documentation link."""
     return {
         "message": "Emy Gateway API",
