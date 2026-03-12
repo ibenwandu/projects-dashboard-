@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+"""
+Test Script: Research Claude Releases and Email Results
+
+This script demonstrates Emy's capability to:
+1. Queue a research task via the agent ecosystem
+2. Process results through ResearchAgent
+3. Send output via email
+
+Prerequisites:
+- SENDER_EMAIL: Your email address
+- SENDER_PASSWORD: Your email password
+"""
+
+import asyncio
+import sys
+import smtplib
+import os
+from pathlib import Path
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# Add src to path (this is how the existing agents import each other)
+src_path = Path(__file__).parent / "src"
+sys.path.insert(0, str(src_path))
+
+# Now import from modules directly
+from main import AgentEcosystem
+from agents.base_agent import Task, TaskPriority
+
+
+async def send_email(recipient: str, subject: str, body: str) -> bool:
+    """
+    Send email using configured SMTP credentials.
+
+    Requires environment variables:
+    - SENDER_EMAIL: Your email address
+    - SENDER_PASSWORD: Your email password
+
+    Args:
+        recipient: Email address to send to
+        subject: Email subject
+        body: Email body (text)
+
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        # Get credentials from environment
+        sender_email = os.getenv("SENDER_EMAIL")
+        sender_password = os.getenv("SENDER_PASSWORD")
+
+        if not sender_email or not sender_password:
+            print("[WARN] Missing email credentials")
+            print("       Set SENDER_EMAIL and SENDER_PASSWORD environment variables")
+            return False
+
+        # Create message
+        message = MIMEMultipart("alternative")
+        message["Subject"] = subject
+        message["From"] = sender_email
+        message["To"] = recipient
+
+        # Add text part
+        part = MIMEText(body, "plain")
+        message.attach(part)
+
+        # Send via Gmail SMTP (using standard Gmail SMTP server)
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(sender_email, sender_password)
+            server.sendmail(sender_email, recipient, message.as_string())
+
+        print(f"[OK] Email sent to {recipient}")
+        return True
+
+    except Exception as e:
+        print(f"[FAIL] Email failed: {str(e)}")
+        return False
+
+
+async def test_research_and_email():
+    """
+    Main test: Queue research task and email results.
+    """
+    print("=" * 60)
+    print("Emy Research Test: Claude Releases")
+    print("=" * 60)
+
+    # Initialize ecosystem
+    print("\n[1/4] Initializing agent ecosystem...")
+    try:
+        ecosystem = AgentEcosystem()
+        await ecosystem.start()
+        print("[OK] Ecosystem started")
+    except Exception as e:
+        print(f"[FAIL] Failed to start ecosystem: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
+
+    # Create research task
+    print("\n[2/4] Creating research task...")
+    task = Task(
+        name="Research Claude Releases",
+        description="Research the top 5 Claude model releases from the last 1 week",
+        priority=TaskPriority.HIGH,
+        data={
+            "query": "Claude model releases last week 2026 top 5 latest versions",
+            "focus": [
+                "Release date",
+                "Model name and version",
+                "Key improvements/features",
+                "Availability",
+                "Performance metrics"
+            ]
+        }
+    )
+    print(f"[OK] Task created: {task.name}")
+    print(f"    Task ID: {task.id}")
+
+    # Execute research task
+    print("\n[3/4] Executing research task...")
+    try:
+        result = await ecosystem.execute_task(
+            task_description=task.description,
+            task_type="research"
+        )
+
+        if result.get("status") == "completed":
+            print("[OK] Research completed")
+            research_output = result.get("results", {})
+            print(f"    Result keys: {list(research_output.keys())}")
+        else:
+            print(f"[FAIL] Research failed: {result.get('error', 'Unknown error')}")
+            return False
+
+    except Exception as e:
+        print(f"[FAIL] Task execution failed: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
+
+    # Format and send email
+    print("\n[4/4] Sending results via email...")
+
+    # Format research results for email
+    email_subject = "Emy Research Report: Claude Releases (Last Week)"
+
+    email_body = f"""
+Emy Research Agent Report
+========================
+
+Task: Research Claude Model Releases
+
+Research Focus:
+- Time Period: Last 1 week
+- Number of Results: Top 5 releases
+- Metrics: Release date, version, improvements, availability
+
+Results:
+--------
+{str(research_output)}
+
+Task Details:
+- Task ID: {task.id}
+- Status: {result.get('status')}
+- Execution Time: {result.get('timestamp', 'Unknown')}
+
+Generated by: Emy Agent Ecosystem
+Report Date: {__import__('datetime').datetime.now().isoformat()}
+
+---
+This is an automated report from your Emy autonomous AI system.
+"""
+
+    email_sent = await send_email(
+        recipient="ibenwandu@gmail.com",
+        subject=email_subject,
+        body=email_body
+    )
+
+    # Summary
+    print("\n" + "=" * 60)
+    print("Test Summary")
+    print("=" * 60)
+    print(f"[OK] Ecosystem initialized")
+    print(f"[OK] Research task executed")
+    print(f"{'[OK]' if email_sent else '[FAIL]'} Email sent")
+    print("=" * 60)
+
+    return email_sent
+
+
+async def main():
+    """Run the test."""
+    try:
+        success = await test_research_and_email()
+        return 0 if success else 1
+    except Exception as e:
+        print(f"\n[FAIL] Test failed with error: {e}")
+        import traceback
+        traceback.print_exc()
+        return 1
+
+
+if __name__ == "__main__":
+    exit_code = asyncio.run(main())
+    sys.exit(exit_code)

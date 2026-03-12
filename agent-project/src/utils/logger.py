@@ -58,8 +58,7 @@ def setup_logging(config: Dict[str, Any] = None) -> None:
             level=log_level,
             rotation=rotation,
             retention='30 days',
-            compression='zip',
-            max_size=max_file_size
+            compression='zip'
         )
     
     logger.info("Logging setup completed")
@@ -108,8 +107,7 @@ def set_log_level(level: str) -> None:
             level=level,
             rotation=rotation,
             retention='30 days',
-            compression='zip',
-            max_size=max_file_size
+            compression='zip'
         )
     
     logger.info(f"Log level set to {level}")

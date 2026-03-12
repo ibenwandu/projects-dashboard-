@@ -12,11 +12,11 @@ from pathlib import Path
 
 from loguru import logger
 
-from .utils.config import load_config, get_agent_config
-from .utils.logger import setup_logging
-from .utils.helpers import create_task, create_message
-from .communication.message_bus import MessageBus
-from .agents import (
+from utils.config import load_config, get_agent_config
+from utils.logger import setup_logging
+from utils.helpers import create_task, create_message
+from communication.message_bus import MessageBus
+from agents import (
     PrimaryAgent, ResearchAgent, AnalysisAgent,
     WritingAgent, QualityControlAgent, GeminiAgent
 )
@@ -185,15 +185,15 @@ class AgentEcosystem:
     async def _create_workflow_for_task(self, task_description: str, task_type: str):
         """
         Create a workflow for the given task.
-        
+
         Args:
             task_description: Task description
             task_type: Type of task
-            
+
         Returns:
             Created workflow
         """
-        from .agents.primary_agent import WorkflowStep
+        from agents.primary_agent import WorkflowStep
         
         steps = []
         

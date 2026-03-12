@@ -1,0 +1,16 @@
+# SQLite database
+emy.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# API keys and secrets
+*.key
+*.pem
+credentials.json
+token.json
