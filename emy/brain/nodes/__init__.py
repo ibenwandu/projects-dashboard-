@@ -9,6 +9,7 @@ from emy.brain.nodes.knowledge_node import KnowledgeBrainNode
 from emy.brain.nodes.trading_node import TradingBrainNode
 from emy.brain.nodes.research_node import ResearchBrainNode
 from emy.brain.nodes.project_monitor_node import ProjectMonitorBrainNode
+from emy.brain.nodes.job_search_node import JobSearchBrainNode
 from emy.brain.nodes.complete_node import CompleteBrainNode
 from emy.brain.nodes.unknown_node import UnknownBrainNode
 
@@ -18,6 +19,7 @@ __all__ = [
     "TradingBrainNode",
     "ResearchBrainNode",
     "ProjectMonitorBrainNode",
+    "JobSearchBrainNode",
     "CompleteBrainNode",
     "UnknownBrainNode",
 ]

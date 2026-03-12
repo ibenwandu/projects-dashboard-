@@ -54,17 +54,60 @@ class EMyBrain:
         Returns:
             Compiled LangGraph for workflow execution
         """
+        from emy.brain.nodes import (
+            KnowledgeBrainNode,
+            TradingBrainNode,
+            ResearchBrainNode,
+            ProjectMonitorBrainNode,
+            JobSearchBrainNode,
+            CompleteBrainNode,
+            UnknownBrainNode,
+        )
+
         # State is a plain dict (LangGraph standard)
         graph = StateGraph(dict)
 
-        # Define nodes
+        # Register all nodes - use callables to defer instantiation
         graph.add_node("router", self._router_node)
+        graph.add_node("knowledge_node", lambda state: KnowledgeBrainNode().execute(state))
+        graph.add_node("trading_node", lambda state: TradingBrainNode().execute(state))
+        graph.add_node("research_node", lambda state: ResearchBrainNode().execute(state))
+        graph.add_node("project_monitor_node", lambda state: ProjectMonitorBrainNode().execute(state))
+        graph.add_node("job_search_node", lambda state: JobSearchBrainNode().execute(state))
+        graph.add_node("complete_node", lambda state: CompleteBrainNode().execute(state))
+        graph.add_node("unknown_node", lambda state: UnknownBrainNode().execute(state))
+
+        # Conditional routing function
+        def route_by_type(state: dict) -> str:
+            """Route request to appropriate node based on workflow_type."""
+            routing_map = {
+                "knowledge_query": "knowledge_node",
+                "trading": "trading_node",
+                "research": "research_node",
+                "project_monitor": "project_monitor_node",
+                "job_search": "job_search_node",
+            }
+            return routing_map.get(state.get("workflow_type", "unknown"), "unknown_node")
+
+        # Add conditional edges from router
+        graph.add_conditional_edges("router", route_by_type)
+
+        # All domain nodes route to complete_node
+        for node in [
+            "knowledge_node",
+            "trading_node",
+            "research_node",
+            "project_monitor_node",
+            "job_search_node",
+            "unknown_node",
+        ]:
+            graph.add_edge(node, "complete_node")
+
+        # complete_node → END
+        graph.add_edge("complete_node", END)
 
         # Set entry point
         graph.set_entry_point("router")
-
-        # Route from router to END (scaffold — Tasks 2-4 add more nodes)
-        graph.add_edge("router", END)
 
         # Compile
         return graph.compile()
