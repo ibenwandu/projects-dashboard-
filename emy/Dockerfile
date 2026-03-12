@@ -59,4 +59,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 # Default command: run API gateway server
 # Can be overridden to run CLI: docker run emy python emy.py ask "query"
 EXPOSE 8000
-CMD ["python", "-m", "uvicorn", "emy.gateway.api:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "-m", "uvicorn", "gateway.api:app", "--host", "0.0.0.0", "--port", "8000"]
