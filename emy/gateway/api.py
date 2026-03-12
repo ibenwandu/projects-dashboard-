@@ -16,6 +16,8 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
+from emy.core.database import EMyDatabase
+
 logger = logging.getLogger('EmyGateway')
 
 # Initialize FastAPI app
@@ -143,7 +145,7 @@ async def health_check():
 
 @app.post('/workflows/execute', response_model=WorkflowResponse)
 async def execute_workflow(request: WorkflowExecuteRequest):
-    """Execute a new workflow.
+    """Execute a new workflow and persist to database.
 
     Args:
         request: Workflow execution request
@@ -156,6 +158,20 @@ async def execute_workflow(request: WorkflowExecuteRequest):
     workflow_id = f'wf_{uuid.uuid4().hex[:8]}'
     now = datetime.now().isoformat()
 
+    # Get database instance
+    db = EMyDatabase()
+
+    # Prepare input data
+    input_data = json.dumps(request.input) if request.input else None
+
+    # Create workflow record in database with pending status
+    db.store_workflow_output(
+        workflow_id,
+        request.workflow_type,
+        'pending',
+        None  # No output yet
+    )
+
     workflow = {
         'workflow_id': workflow_id,
         'type': request.workflow_type,
@@ -163,10 +179,11 @@ async def execute_workflow(request: WorkflowExecuteRequest):
         'agents': request.agents,
         'created_at': now,
         'updated_at': now,
-        'input': json.dumps(request.input) if request.input else None,
+        'input': input_data,
         'output': None
     }
 
+    # Also keep in-memory for API compatibility
     _workflows[workflow_id] = workflow
 
     return WorkflowResponse(
@@ -175,14 +192,14 @@ async def execute_workflow(request: WorkflowExecuteRequest):
         status='pending',
         created_at=now,
         updated_at=now,
-        input=workflow['input'],
+        input=input_data,
         output=None
     )
 
 
 @app.get('/workflows/{workflow_id}', response_model=WorkflowResponse)
 async def get_workflow_status(workflow_id: str):
-    """Get status of a specific workflow.
+    """Get status of a specific workflow from database.
 
     Args:
         workflow_id: ID of the workflow
@@ -193,19 +210,35 @@ async def get_workflow_status(workflow_id: str):
     Raises:
         HTTPException: If workflow not found
     """
-    if workflow_id not in _workflows:
-        raise HTTPException(status_code=404, detail='Workflow not found')
+    # Try database first
+    db = EMyDatabase()
+    wf = db.get_workflow(workflow_id)
 
-    wf = _workflows[workflow_id]
-    return WorkflowResponse(
-        workflow_id=wf['workflow_id'],
-        type=wf['type'],
-        status=wf['status'],
-        created_at=wf['created_at'],
-        updated_at=wf.get('updated_at'),
-        input=wf.get('input'),
-        output=wf.get('output')
-    )
+    if wf:
+        return WorkflowResponse(
+            workflow_id=wf['workflow_id'],
+            type=wf['type'],
+            status=wf['status'],
+            created_at=wf['created_at'],
+            updated_at=wf.get('updated_at'),
+            input=wf.get('input'),
+            output=wf.get('output')
+        )
+
+    # Fall back to in-memory for backward compatibility
+    if workflow_id in _workflows:
+        wf = _workflows[workflow_id]
+        return WorkflowResponse(
+            workflow_id=wf['workflow_id'],
+            type=wf['type'],
+            status=wf['status'],
+            created_at=wf['created_at'],
+            updated_at=wf.get('updated_at'),
+            input=wf.get('input'),
+            output=wf.get('output')
+        )
+
+    raise HTTPException(status_code=404, detail='Workflow not found')
 
 
 @app.get('/workflows', response_model=WorkflowListResponse)

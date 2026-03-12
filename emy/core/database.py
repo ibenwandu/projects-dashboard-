@@ -169,6 +169,19 @@ class EMyDatabase:
                 )
             """)
 
+            # Workflow execution and output persistence
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS workflows (
+                    workflow_id TEXT PRIMARY KEY,
+                    type TEXT NOT NULL,  -- 'knowledge_query' | 'trading_analysis' | 'job_search' | etc
+                    status TEXT NOT NULL,  -- 'pending' | 'in_progress' | 'complete' | 'error'
+                    input TEXT,  -- Input data for the workflow
+                    output TEXT,  -- Output/result data
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            """)
+
             conn.commit()
 
         # Create OANDA-specific tables
@@ -399,6 +412,92 @@ class EMyDatabase:
             cursor.execute("SELECT value FROM config WHERE key = ?", (key,))
             row = cursor.fetchone()
             return row['value'] if row else default
+
+    def store_workflow_output(self, workflow_id: str, workflow_type: str,
+                            status: str, output: str) -> bool:
+        """
+        Store workflow output to database.
+
+        Args:
+            workflow_id: Unique workflow identifier
+            workflow_type: Type of workflow (knowledge, trading, job_search, etc.)
+            status: Workflow status (complete, error, etc.)
+            output: The workflow output/result
+
+        Returns:
+            True if stored successfully
+        """
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                now = datetime.now().isoformat()
+
+                # Try to update existing workflow first
+                cursor.execute("""
+                    SELECT workflow_id FROM workflows WHERE workflow_id = ?
+                """, (workflow_id,))
+
+                if cursor.fetchone():
+                    # Update existing
+                    cursor.execute("""
+                        UPDATE workflows
+                        SET status = ?, output = ?, updated_at = ?
+                        WHERE workflow_id = ?
+                    """, (status, output, now, workflow_id))
+                else:
+                    # Insert new
+                    cursor.execute("""
+                        INSERT INTO workflows
+                        (workflow_id, type, status, output, created_at, updated_at)
+                        VALUES (?, ?, ?, ?, ?, ?)
+                    """, (workflow_id, workflow_type, status, output, now, now))
+
+                conn.commit()
+                return True
+
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error storing workflow output: {e}")
+            return False
+
+    def get_workflow(self, workflow_id: str) -> Optional[Dict[str, Any]]:
+        """
+        Retrieve workflow from database.
+
+        Args:
+            workflow_id: Unique workflow identifier
+
+        Returns:
+            Workflow dict or None if not found
+        """
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT workflow_id, type, status, input, output, created_at, updated_at
+                    FROM workflows
+                    WHERE workflow_id = ?
+                """, (workflow_id,))
+
+                row = cursor.fetchone()
+                if row:
+                    return {
+                        "workflow_id": row['workflow_id'],
+                        "type": row['type'],
+                        "status": row['status'],
+                        "input": row['input'],
+                        "output": row['output'],
+                        "created_at": row['created_at'],
+                        "updated_at": row['updated_at']
+                    }
+                return None
+
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error retrieving workflow: {e}")
+            return None
 
     def _create_oanda_trades_table(self):
         """Create table for tracking OANDA trades."""
