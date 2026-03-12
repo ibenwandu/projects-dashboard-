@@ -7,7 +7,7 @@ All sub-agents inherit from EMySubAgent and implement run().
 import logging
 from abc import ABC, abstractmethod
 from typing import Tuple, Optional, Dict, Any
-from anthropic import Anthropic
+from anthropic import Anthropic, APIError, AuthenticationError, APIConnectionError
 from emy.core.disable_guard import EMyDisableGuard
 
 logger = logging.getLogger('EMySubAgent')
@@ -39,7 +39,8 @@ class EMySubAgent(ABC):
             The Claude response text
 
         Raises:
-            Exception: If API call fails
+            ValueError: If response structure is invalid
+            APIError: If API call fails
         """
         try:
             client = Anthropic()
@@ -50,11 +51,17 @@ class EMySubAgent(ABC):
                     {"role": "user", "content": prompt}
                 ]
             )
+            # Validate response structure before accessing content
+            if not message.content or not hasattr(message.content[0], 'text'):
+                raise ValueError(f"Invalid Claude response structure: {message.content}")
             response_text = message.content[0].text
             self.logger.debug(f"Claude response: {response_text[:100]}...")
             return response_text
-        except Exception as e:
+        except (APIError, AuthenticationError, APIConnectionError) as e:
             self.logger.error(f"Claude API error: {e}")
+            raise
+        except Exception as e:
+            self.logger.critical(f"Unexpected error calling Claude: {e}")
             raise
 
     @abstractmethod
