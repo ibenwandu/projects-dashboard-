@@ -1,5 +1,65 @@
 # Root-Level Session Log
 
+## Session: 2026-03-12 (Evening) — Cursor MCP Server: Research & Implementation Plan (COMPLETE) ✅
+
+**Date**: March 12, 2026
+**Time**: ~5:00 PM → ~6:30 PM EDT (approx)
+**Duration**: ~1.5 hours
+**Type**: Research, architecture design, implementation planning
+**Status**: ✅ COMPLETE — Plan documented, ready for implementation next session
+
+### 🎯 Session Objective
+Design a Cursor MCP server so Cursor's AI (code generation, refactoring, explanation) can be called as a native tool from within Claude Code — similar to how Pinecone, Firebase, and Playwright are available.
+
+### 📋 What Was Done
+
+#### 1. Research Cursor API Capabilities
+- ✅ Confirmed Cursor Cloud Agents API is official, documented (beta)
+- ✅ Identified 5 tool endpoints: POST agents, GET agent status, GET agents list, POST followup, artifact download
+- ✅ Confirmed Cursor Pro account has API key access (Cursor Dashboard → Settings → API Keys)
+- ✅ Identified async execution model (launch → poll → result)
+- ✅ Confirmed webhook support for status change events
+- ✅ Rejected reverse-engineering approach (fragile, breaks with updates)
+
+#### 2. Explored Codebase Patterns
+- ✅ Confirmed MCP config location: `~/.claude/mcp_servers.json`
+- ✅ Confirmed all existing MCP servers use stdio + npx transport (gemini, pinecone, firebase, playwright)
+- ✅ Identified `emy/tools/api_client.py` → `RenderClient` as reuse pattern (Bearer token + httpx)
+- ✅ Confirmed Python stack compatibility: httpx, python-dotenv already in Emy requirements
+
+#### 3. Created Implementation Plan
+- ✅ Plan file: `~/.claude/plans/harmonic-growing-hollerith.md`
+- ✅ Architecture: Python MCP server (stdio) → Cursor Cloud Agents API
+- ✅ 5 tools defined with full schema: launch, status, list, followup, download_artifact
+- ✅ Verification checklist defined
+- ✅ Risk matrix documented
+
+### 📦 Deliverables
+
+| Deliverable | Status | Location |
+|---|---|---|
+| Implementation Plan | ✅ Created | `~/.claude/plans/harmonic-growing-hollerith.md` |
+| Research Analysis | ✅ Complete | In plan file + session log |
+
+### 🔍 Key Decisions
+
+- **Architecture**: Python MCP server with stdio transport (matches existing config pattern)
+- **API**: Cursor Cloud Agents API (official, not reverse-engineered)
+- **Transport**: stdio (not HTTP) — consistent with all other MCP servers
+- **Tools**: 5 tools covering full lifecycle (launch → status → artifacts)
+- **Dependencies**: `mcp`, `httpx`, `python-dotenv` (all already in Emy stack)
+
+### ⚠️ Pre-conditions for Next Session (Implementation)
+1. **User must get `CURSOR_AGENTS_API_KEY`** from: Cursor Dashboard → Settings → API Keys
+2. **Bypass permissions mode required** (implementation session — multiple file creates + config edit)
+
+### 🎯 Next Steps
+1. Get `CURSOR_AGENTS_API_KEY` from Cursor Dashboard
+2. Start new session with bypass permissions
+3. Execute plan from `~/.claude/plans/harmonic-growing-hollerith.md`
+
+---
+
 ## Session: 2026-03-12 (Late Morning) — Emy OpenClaw Parity: Comprehensive Design (COMPLETE) ✅
 
 **Date**: March 12, 2026
