@@ -28,6 +28,26 @@ class KnowledgeAgent(EMySubAgent):
         """Initialize KnowledgeAgent."""
         super().__init__('KnowledgeAgent', 'claude-haiku-4-5-20251001')
         self.file_ops = FileOpsTool()
+        self.global_guidelines = None
+        self.load_global_guidelines()
+
+    def load_global_guidelines(self) -> bool:
+        """Load global CLAUDE.md guidelines for decision-making."""
+        try:
+            claude_path = 'C:\\Users\\user\\projects\\personal\\CLAUDE.md'
+
+            if self.file_ops.file_exists(claude_path):
+                with open(claude_path, 'r', encoding='utf-8') as f:
+                    self.global_guidelines = f.read()
+                self.logger.info(f"Loaded global CLAUDE.md guidelines ({len(self.global_guidelines)} chars)")
+                return True
+            else:
+                self.logger.warning(f"CLAUDE.md not found: {claude_path}")
+                return False
+
+        except Exception as e:
+            self.logger.error(f"Error loading CLAUDE.md: {e}")
+            return False
 
     def run(self) -> Tuple[bool, Dict[str, Any]]:
         """Execute knowledge management tasks including dashboard update."""
