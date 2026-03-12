@@ -10,6 +10,7 @@ Integrates with job-search-monorepo to:
 
 import logging
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Tuple, Dict, Any, List, Optional
 
@@ -46,80 +47,71 @@ class JobSearchAgent(EMySubAgent):
             self.logger.warning("job-search-monorepo not available - using mock mode")
 
     def run(self) -> Tuple[bool, Dict[str, Any]]:
-        """Execute daily job search pipeline."""
+        """
+        Execute job search agent.
+
+        Searches for job opportunities and evaluates matches using Claude.
+
+        Returns:
+            (True, {"matches": [...], "analysis": claude_response, ...})
+        """
         if self.check_disabled():
             self.logger.warning("JobSearchAgent disabled")
             return (False, {'reason': 'disabled'})
 
-        results = {
-            'jobs_found': 0,
-            'jobs_scored': 0,
-            'jobs_tailored': 0,
-            'applications_tracked': 0,
-            'by_track': {},
-            'timestamp': self._get_timestamp()
-        }
+        try:
+            # Search for jobs (stub for now - will be enhanced in Phase 3)
+            job_listings = self._search_jobs()
 
-        # Initialize track stats
-        for track in self.TRACKS:
-            results['by_track'][track] = {
-                'found': 0,
-                'scored': 0,
-                'applied': 0
+            # Evaluate matches with Claude
+            evaluation_prompt = self._build_evaluation_prompt(job_listings)
+            analysis = self._call_claude(evaluation_prompt, max_tokens=1024)
+
+            result = {
+                "jobs_found": len(job_listings),
+                "analysis": analysis,
+                "job_listings": job_listings,
+                "timestamp": datetime.now().isoformat(),
+                "agent": self.agent_name
             }
 
-        try:
-            # 1. Scrape jobs from all platforms
-            all_jobs = []
-            for platform in self.PLATFORMS:
-                jobs = self._scrape_jobs(platform)
-                all_jobs.extend(jobs)
-                self.logger.info(f"[SCRAPE] {platform}: {len(jobs)} jobs")
-            results['jobs_found'] = len(all_jobs)
-
-            # 2. Deduplicate
-            deduped = self._deduplicate_jobs(all_jobs)
-            self.logger.info(f"[DEDUP] {len(deduped)} unique jobs after deduplication")
-
-            # 3. Score jobs by relevance
-            scored_jobs = []
-            for job in deduped:
-                score = self._score_job(job)
-                if score is not None:
-                    job['score'] = score
-                    scored_jobs.append(job)
-                    results['jobs_scored'] += 1
-
-                    # Track by track
-                    track = job.get('track', 'unknown')
-                    if track in results['by_track']:
-                        results['by_track'][track]['scored'] += 1
-
-            self.logger.info(f"[SCORE] {len(scored_jobs)} jobs scored")
-
-            # 4. Tailor resumes for high-scoring jobs
-            for job in scored_jobs:
-                if job.get('score', 0) >= self.SCORE_THRESHOLD:
-                    tailored = self._tailor_resume(job)
-                    if tailored:
-                        results['jobs_tailored'] += 1
-                        track = job.get('track', 'unknown')
-                        if track in results['by_track']:
-                            results['by_track'][track]['applied'] += 1
-
-            # 5. Track all applications
-            for job in scored_jobs:
-                self._track_application(job)
-                results['applications_tracked'] += 1
-
-            success = results['jobs_found'] > 0
+            self.logger.info(f"Job search agent found {len(job_listings)} potential matches")
+            return self.report_result(True, result_json=str(result))
 
         except Exception as e:
-            self.logger.error(f"[ERROR] Job search pipeline failed: {e}")
-            return (False, {'error': str(e), 'results': results})
+            error_msg = f"JobSearchAgent error: {e}"
+            self.logger.error(error_msg)
+            return self.report_result(False, error=error_msg)
 
-        self.logger.info(f"[RUN] JobSearchAgent completed: {results['jobs_found']} jobs found")
-        return (True, results)
+    def _search_jobs(self) -> list:
+        """Search for job listings (placeholder for Phase 3 browser automation)."""
+        # This will be enhanced in Phase 3 with real LinkedIn/Indeed integration
+        return [
+            {"title": "Senior Customer Success Manager", "company": "TechCorp", "match": "high"},
+            {"title": "Operations Manager", "company": "SaaS Inc", "match": "medium"}
+        ]
+
+    def _build_evaluation_prompt(self, jobs: list) -> str:
+        """Build prompt for job evaluation."""
+        job_summary = '\n'.join([
+            f"- {j['title']} at {j['company']} (Estimated match: {j['match']})"
+            for j in jobs
+        ])
+
+        prompt = f"""You are an expert career advisor evaluating job opportunities.
+
+Potential Jobs:
+{job_summary}
+
+Evaluate these jobs for Ibe based on his background (strategic leader, CX specialist, operations expert).
+
+Provide:
+1. Top 3 matches with reasoning
+2. Overall job market assessment
+3. Recommended approach for each top match
+4. Timeline and priority ranking"""
+
+        return prompt
 
     def _scrape_jobs(self, platform: str) -> List[Dict[str, Any]]:
         """Scrape jobs from a platform."""
