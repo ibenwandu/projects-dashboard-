@@ -1,0 +1,127 @@
+[
+  {
+    "job": {
+      "url": "https://indeed.com/viewjob?jk=test1",
+      "platform": "indeed",
+      "job_id": "test1",
+      "fingerprint": "",
+      "title": "Senior Python Engineer",
+      "company": "Google",
+      "location": "Mountain View, CA",
+      "salary": "$180k - $220k",
+      "job_type": "Full-time",
+      "description": "Build scalable systems with Python and Go. Experience with Kubernetes required.",
+      "skills": [
+        "Python",
+        "Go",
+        "Kubernetes",
+        "Docker"
+      ],
+      "score": 0,
+      "reasoning": "",
+      "fetched_at": "2026-03-08T10:00:00Z"
+    },
+    "score": 95,
+    "reasoning": "Excellent match - all required skills, great salary, remote-friendly location"
+  },
+  {
+    "job": {
+      "url": "https://linkedin.com/jobs/view/test2",
+      "platform": "linkedin",
+      "job_id": "test2",
+      "fingerprint": "",
+      "title": "Full Stack Engineer",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "salary": "$160k - $200k",
+      "job_type": "Full-time",
+      "description": "Join our team to build products used by billions. Work with React, Python, and distributed systems.",
+      "skills": [
+        "Python",
+        "React",
+        "PostgreSQL",
+        "AWS"
+      ],
+      "score": 0,
+      "reasoning": "",
+      "fetched_at": "2026-03-08T10:05:00Z"
+    },
+    "score": 87,
+    "reasoning": "Strong match - good salary, relevant tech stack, well-known company"
+  },
+  {
+    "job": {
+      "url": "https://glassdoor.com/jobs/test3",
+      "platform": "glassdoor",
+      "job_id": "test3",
+      "fingerprint": "",
+      "title": "Data Engineer",
+      "company": "Netflix",
+      "location": "Los Gatos, CA",
+      "salary": "$150k - $190k",
+      "job_type": "Full-time",
+      "description": "Design and implement data pipelines for our streaming platform. Spark, Python, Scala experience required.",
+      "skills": [
+        "Python",
+        "Spark",
+        "Scala",
+        "SQL"
+      ],
+      "score": 0,
+      "reasoning": "",
+      "fetched_at": "2026-03-08T10:10:00Z"
+    },
+    "score": 78,
+    "reasoning": "Good match - competitive salary, but less familiar with Spark ecosystem"
+  },
+  {
+    "job": {
+      "url": "https://indeed.com/viewjob?jk=test4",
+      "platform": "indeed",
+      "job_id": "test4",
+      "fingerprint": "",
+      "title": "DevOps Engineer",
+      "company": "Amazon",
+      "location": "Seattle, WA",
+      "salary": "$140k - $180k",
+      "job_type": "Full-time",
+      "description": "Manage AWS infrastructure, CI/CD pipelines, and Kubernetes clusters for our services.",
+      "skills": [
+        "Kubernetes",
+        "Docker",
+        "AWS",
+        "Python"
+      ],
+      "score": 0,
+      "reasoning": "",
+      "fetched_at": "2026-03-08T10:15:00Z"
+    },
+    "score": 85,
+    "reasoning": "Strong match - DevOps skills align well, good salary range"
+  },
+  {
+    "job": {
+      "url": "https://linkedin.com/jobs/view/test5",
+      "platform": "linkedin",
+      "job_id": "test5",
+      "fingerprint": "",
+      "title": "ML Engineer",
+      "company": "OpenAI",
+      "location": "San Francisco, CA",
+      "salary": "$200k - $250k",
+      "job_type": "Full-time",
+      "description": "Work on cutting-edge AI models. Python, PyTorch, CUDA experience essential.",
+      "skills": [
+        "Python",
+        "PyTorch",
+        "CUDA",
+        "TensorFlow"
+      ],
+      "score": 0,
+      "reasoning": "",
+      "fetched_at": "2026-03-08T10:20:00Z"
+    },
+    "score": 92,
+    "reasoning": "Excellent match - cutting-edge role, highest salary, perfect skill alignment"
+  }
+]

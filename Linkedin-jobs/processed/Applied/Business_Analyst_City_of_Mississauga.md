@@ -29,10 +29,10 @@ Dynamic Senior Business Analyst with over 7 years of experience specializing in 
 *September 2025 – Present*  
 Ontario, Canada
 
-- Lead the development and implementation of digital transformation initiatives focused on healthcare improvement goals, ensuring alignment with operational and legislative requirements.
+- Lead the development and implementation of digital transformation initiatives focused on healthcare training goals, ensuring alignment with operational and legislative requirements.
 - Collaborate with stakeholders to analyze training needs and performance metrics, facilitating the design of future-focused training curricula.
-- Provide subject matter expertise and recommendations on process improvement strategies, resourcing, and risk mitigation to improve program outcomes.
-
+- Provide subject matter expertise and recommendations on training strategies, resourcing, and risk mitigation to improve program outcomes.
+- Developed and monitored dashboards in Power BI to track training effectiveness and compliance with certification requirements.
 
 ### ExpertEdge Consulting Group
 **Business Analyst**  

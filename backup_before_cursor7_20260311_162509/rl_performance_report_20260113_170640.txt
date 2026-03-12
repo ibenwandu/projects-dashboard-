@@ -1,0 +1,39 @@
+================================================================================
+RL SYSTEM PERFORMANCE REPORT
+================================================================================
+Generated: 2026-01-13T22:06:40.322574
+
+OVERALL STATISTICS:
+  Total Recommendations: 43
+  Evaluated: 32
+  Win Rate: 31.2%
+
+PER-LLM PERFORMANCE:
+  CHATGPT:
+    Total: 14 recommendations
+    Evaluated: 14
+    Win Rate: 28.6%
+    Avg PnL: -20.7 pips
+  GEMINI:
+    Total: 6 recommendations
+    Evaluated: 6
+    Win Rate: 50.0%
+    Avg PnL: 53.3 pips
+  CLAUDE:
+    Total: 7 recommendations
+    Evaluated: 7
+    Win Rate: 0.0%
+    Avg PnL: -670.7 pips
+  SYNTHESIS:
+    Total: 5 recommendations
+    Evaluated: 5
+    Win Rate: 60.0%
+    Avg PnL: 76.0 pips
+
+CURRENT LLM WEIGHTS:
+  synthesis: 39.0%
+  gemini: 34.8%
+  chatgpt: 22.6%
+  claude: 3.5%
+
+================================================================================

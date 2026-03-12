@@ -33,7 +33,7 @@ Ontario, Canada
 - Prepare detailed presentations, reports, and documentation to communicate strategies and performance metrics to stakeholders.
 - Collaborate with clinical and technology teams to gather and document business requirements for system enhancements.
 - Utilize MS Excel to analyze data and track KPIs, informing on operational efficiency and business performance.
-- Coordinate user testing session to validate system functionality and compatibility with business objectives.
+- Conduct user acceptance testing (UAT) to validate system functionality and compatibility with business objectives.
 
 ### ExpertEdge Consulting Group
 **Business Analyst**  

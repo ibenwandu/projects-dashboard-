@@ -1,0 +1,17 @@
+# Glassdoor-jobs-cs (Customer Success / CX / BD focus)
+
+# Full run:
+python run_workflow.py --phase all
+
+# Fetch only:
+python run_workflow.py --phase fetch --max-jobs 10
+python run_workflow.py --phase score
+
+# Resumes:
+python run_workflow.py --phase resumes
+
+# Regenerate PDFs:
+python run_workflow.py --phase pdf
+
+# Debug:
+python run_workflow.py --phase fetch --max-jobs 5 --debug

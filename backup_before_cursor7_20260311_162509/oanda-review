@@ -1,0 +1,239 @@
+#!/usr/bin/env python3
+"""
+OANDA Trade Review - Analyze real trading performance from OANDA API
+
+Pulls closed trades directly from OANDA account and provides comprehensive analysis.
+
+Usage:
+    python oanda-review              # Show all trades summary
+    python oanda-review --detailed   # Show detailed trade breakdown
+    python oanda-review --summary    # Quick performance summary
+"""
+
+import os
+import sys
+import json
+import requests
+from datetime import datetime, timedelta
+from collections import defaultdict
+import argparse
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+OANDA_BASE_URL = "https://api-fxpractice.oanda.com"  # Practice account
+OANDA_ACCESS_TOKEN = os.getenv("OANDA_ACCESS_TOKEN")
+OANDA_ACCOUNT_ID = os.getenv("OANDA_ACCOUNT_ID")
+
+class OANDAReviewer:
+    """Analyze trading performance from OANDA"""
+
+    def __init__(self):
+        if not OANDA_ACCESS_TOKEN or not OANDA_ACCOUNT_ID:
+            print("ERROR: OANDA_ACCESS_TOKEN or OANDA_ACCOUNT_ID not set in environment")
+            sys.exit(1)
+
+        self.base_url = OANDA_BASE_URL
+        self.account_id = OANDA_ACCOUNT_ID
+        self.headers = {
+            "Authorization": f"Bearer {OANDA_ACCESS_TOKEN}",
+            "Content-Type": "application/json"
+        }
+        self.trades = []
+
+    def fetch_closed_trades(self, days_back=30):
+        """Fetch closed trades from OANDA"""
+        try:
+            url = f"{self.base_url}/v3/accounts/{self.account_id}/trades"
+            params = {
+                "state": "CLOSED",
+                "count": 500  # Max 500 trades per request
+            }
+
+            print(f"Fetching closed trades from OANDA...")
+            response = requests.get(url, headers=self.headers, params=params)
+            response.raise_for_status()
+
+            data = response.json()
+            trades = data.get("trades", [])
+
+            print(f"Found {len(trades)} closed trades")
+
+            for trade in trades:
+                initial_units = int(trade.get("initialUnits", 0))
+                self.trades.append({
+                    "id": trade.get("id"),
+                    "pair": trade.get("instrument"),
+                    "direction": "LONG" if initial_units > 0 else "SHORT",
+                    "entry_price": float(trade.get("openPrice", 0)),
+                    "exit_price": float(trade.get("closePrice", 0)),
+                    "units": abs(initial_units),
+                    "pnl": float(trade.get("financing", 0)) + float(trade.get("unrealizedPL", 0)) + float(trade.get("realizedPL", 0)),
+                    "opened_at": trade.get("openTime"),
+                    "closed_at": trade.get("closeTime"),
+                    "stop_loss": float(trade.get("stopLossOrder", {}).get("priceBound", 0)) if trade.get("stopLossOrder") else None,
+                    "take_profit": float(trade.get("takeProfitOrder", {}).get("priceBound", 0)) if trade.get("takeProfitOrder") else None,
+                })
+
+            return len(trades)
+
+        except requests.exceptions.RequestException as e:
+            print(f"ERROR: Failed to fetch trades from OANDA: {e}")
+            return 0
+
+    def calculate_pips(self, entry, exit, pair):
+        """Calculate pips difference"""
+        if not entry or not exit:
+            return 0
+
+        diff = abs(exit - entry)
+
+        # JPY pairs use 2 decimal places, others use 4
+        if "JPY" in pair:
+            return diff * 100
+        else:
+            return diff * 10000
+
+    def analyze_trades(self):
+        """Analyze trading performance"""
+        if not self.trades:
+            return None
+
+        winning_trades = [t for t in self.trades if t["pnl"] > 0]
+        losing_trades = [t for t in self.trades if t["pnl"] < 0]
+        break_even_trades = [t for t in self.trades if t["pnl"] == 0]
+
+        total_pnl = sum(t["pnl"] for t in self.trades)
+        total_winning_pnl = sum(t["pnl"] for t in winning_trades)
+        total_losing_pnl = abs(sum(t["pnl"] for t in losing_trades))
+
+        # Calculate risk/reward metrics
+        pairs_traded = {}
+        for trade in self.trades:
+            pair = trade["pair"]
+            if pair not in pairs_traded:
+                pairs_traded[pair] = {"count": 0, "pnl": 0, "wins": 0}
+            pairs_traded[pair]["count"] += 1
+            pairs_traded[pair]["pnl"] += trade["pnl"]
+            if trade["pnl"] > 0:
+                pairs_traded[pair]["wins"] += 1
+
+        analysis = {
+            "total_trades": len(self.trades),
+            "winning_trades": len(winning_trades),
+            "losing_trades": len(losing_trades),
+            "break_even_trades": len(break_even_trades),
+            "win_rate": (len(winning_trades) / len(self.trades) * 100) if self.trades else 0,
+            "total_pnl": total_pnl,
+            "total_winning_pnl": total_winning_pnl,
+            "total_losing_pnl": total_losing_pnl,
+            "avg_pnl": total_pnl / len(self.trades) if self.trades else 0,
+            "profit_factor": total_winning_pnl / total_losing_pnl if total_losing_pnl > 0 else 0,
+            "avg_win": total_winning_pnl / len(winning_trades) if winning_trades else 0,
+            "avg_loss": total_losing_pnl / len(losing_trades) if losing_trades else 0,
+            "pairs_traded": pairs_traded
+        }
+
+        return analysis
+
+    def print_summary(self):
+        """Print trading summary"""
+        if not self.trades:
+            print("No closed trades found")
+            return
+
+        analysis = self.analyze_trades()
+
+        print("\n" + "=" * 70)
+        print("OANDA TRADING PERFORMANCE SUMMARY")
+        print("=" * 70)
+
+        print(f"\nTotal Trades: {analysis['total_trades']}")
+        print(f"  Winning: {analysis['winning_trades']}")
+        print(f"  Losing: {analysis['losing_trades']}")
+        print(f"  Break Even: {analysis['break_even_trades']}")
+
+        print(f"\nWin Rate: {analysis['win_rate']:.1f}%")
+        print(f"Total P&L: ${analysis['total_pnl']:.2f}")
+        print(f"Avg P&L per trade: ${analysis['avg_pnl']:.2f}")
+
+        if analysis['winning_trades'] > 0 or analysis['losing_trades'] > 0:
+            print(f"Avg Win: ${analysis['avg_win']:.2f}")
+            print(f"Avg Loss: ${analysis['avg_loss']:.2f}")
+            print(f"Profit Factor: {analysis['profit_factor']:.2f}")
+
+        print(f"\nPairs Traded:")
+        for pair, stats in sorted(analysis['pairs_traded'].items()):
+            win_pct = (stats['wins'] / stats['count'] * 100) if stats['count'] > 0 else 0
+            print(f"  {pair:10} - {stats['count']} trades, {win_pct:.0f}% win rate, ${stats['pnl']:.2f} P&L")
+
+        print("\n" + "=" * 70)
+
+    def print_detailed(self):
+        """Print detailed trade breakdown"""
+        if not self.trades:
+            print("No closed trades found")
+            return
+
+        print("\n" + "=" * 70)
+        print("DETAILED TRADE BREAKDOWN")
+        print("=" * 70)
+
+        sorted_trades = sorted(self.trades, key=lambda x: x["closed_at"], reverse=True)
+
+        for i, trade in enumerate(sorted_trades[:50], 1):  # Show last 50
+            pair = trade["pair"]
+            direction = trade["direction"]
+            entry = trade["entry_price"]
+            exit_price = trade["exit_price"]
+            pnl = trade["pnl"]
+            status = "WIN" if pnl > 0 else "LOSS" if pnl < 0 else "BREAK EVEN"
+
+            pips = self.calculate_pips(entry, exit_price, pair)
+
+            print(f"\n{i}. {pair} {direction}")
+            print(f"   Entry: {entry:.5f} | Exit: {exit_price:.5f}")
+            print(f"   P&L: ${pnl:.2f} ({pips:+.0f} pips) - {status}")
+            print(f"   Time: {trade['opened_at'][:10]} to {trade['closed_at'][:10]}")
+
+            if trade["stop_loss"]:
+                print(f"   SL: {trade['stop_loss']:.5f}")
+            if trade["take_profit"]:
+                print(f"   TP: {trade['take_profit']:.5f}")
+
+        print("\n" + "=" * 70)
+
+    def run(self):
+        """Execute the reviewer"""
+        trades_fetched = self.fetch_closed_trades()
+
+        if trades_fetched == 0:
+            print("No trades found or error fetching trades")
+            return False
+
+        return True
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Analyze OANDA trading performance")
+    parser.add_argument("--detailed", action="store_true", help="Show detailed trade breakdown")
+    parser.add_argument("--summary", action="store_true", help="Show summary only")
+
+    args = parser.parse_args()
+
+    reviewer = OANDAReviewer()
+
+    if not reviewer.run():
+        return 1
+
+    if args.detailed:
+        reviewer.print_detailed()
+    else:
+        reviewer.print_summary()
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

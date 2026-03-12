@@ -1,0 +1,31 @@
+# Google Drive Integration
+PyDrive2>=1.17.0
+oauth2client>=4.1.3
+
+# HTTP Requests
+requests>=2.31.0
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# JSON Handling
+jsonschema>=4.20.0
+
+# Date/Time
+pytz>=2024.1
+
+# Logging
+colorlog>=6.8.0
+
+# LLM APIs
+anthropic>=0.34.0  # Claude
+openai>=1.0.0      # ChatGPT
+google-generativeai>=0.3.0  # Gemini
+# Email: smtplib is built-in, no extra package needed
+# RL System
+yfinance>=0.2.35
+pandas>=2.0.0
+numpy>=1.24.0  # OANDA API (for live price fetching in PriceMonitor)
+oandapyV20>=0.6.3
+# Flask (for market state API server)
+flask>=3.0.0

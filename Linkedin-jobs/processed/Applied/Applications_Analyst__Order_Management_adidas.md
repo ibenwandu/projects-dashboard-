@@ -45,7 +45,8 @@ Ontario, Canada
 - Facilitate the end-to-end review of customer applications specific processes to optimize resources, time, and align with established company policies.
 - Provide team direction and prioritize workloads to ensure timely and accurate responses to business needs.
 - Collaborate with IT to support system upgrades; execute test scripts and validate functionality through UAT.
-- Analyze and monitor performance data to identify trends and initiate improvement actions
+- Analyze and monitor performance data to identify trends and initiate improvement actions, resulting in a **25% reduction in manual submission processes**.
+- Develop comprehensive training materials and lead specialized training sessions for application tools.
 
 ### ExpertEdge Consulting Group  
 **Business Analyst**  

@@ -1,0 +1,76 @@
+name: Deploy Scalp-Engine
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:  # Allow manual triggering
+  schedule:
+    # Run every hour to keep the service active
+    - cron: '0 * * * *'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Check Scalp-Engine
+      env:
+        OANDA_ACCESS_TOKEN: ${{ secrets.OANDA_ACCESS_TOKEN }}
+        OANDA_ACCOUNT_ID: ${{ secrets.OANDA_ACCOUNT_ID }}
+        OANDA_ENV: ${{ secrets.OANDA_ENV || 'practice' }}
+      run: |
+        python -c "import sys; sys.path.insert(0, '.'); from scalp_engine import ScalpEngine; print('✅ Scalp-Engine imports successfully')" || echo "⚠️ Scalp-Engine import check skipped (secrets may not be set)"
+    
+    - name: Check UI
+      run: |
+        python -c "import streamlit; print('✅ Streamlit available')" || echo "⚠️ Streamlit not available"
+        python -c "
+        import sys
+        import os
+        from pathlib import Path
+        sys.path.insert(0, '.')
+        sys.path.insert(0, str(Path('.').absolute() / 'src'))
+        # Mock environment variables for testing
+        os.environ.setdefault('MARKET_STATE_FILE_PATH', '/tmp/market_state.json')
+        try:
+            import scalp_ui
+            print('✅ UI imports successfully')
+        except ImportError as e:
+            print(f'⚠️ UI import failed: {e}')
+            sys.exit(0)  # Don't fail the workflow
+        " || echo "⚠️ UI import check completed with warnings"
+    
+    - name: Create deployment package
+      run: |
+        mkdir -p deploy
+        cp -r src deploy/
+        cp scalp_engine.py deploy/
+        cp scalp_ui.py deploy/
+        cp run_fisher_scan.py deploy/
+        cp config.yaml deploy/
+        cp requirements.txt deploy/
+        cp README.md deploy/
+        echo "✅ Deployment package created"
+    
+    - name: Upload deployment artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: scalp-engine-deployment
+        path: deploy/
+        retention-days: 7

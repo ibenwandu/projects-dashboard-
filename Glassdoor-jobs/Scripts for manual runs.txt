@@ -1,0 +1,19 @@
+# Full run (fetch + score + report, default 25 jobs):
+python run_workflow.py --phase all
+
+# Fetch only:
+python run_workflow.py --phase fetch --max-jobs 10
+# Then score + report:
+python run_workflow.py --phase score
+
+# Resumes: add Job IDs to config/approved_jobs.txt, then
+python run_workflow.py --phase resumes
+
+# Regenerate PDFs only:
+python run_workflow.py --phase pdf
+
+# Debug (when fetch finds 0 URLs or many blocked):
+python run_workflow.py --phase fetch --max-jobs 5 --debug
+
+# One-shot scrape only (no scoring):
+python main.py --max-jobs 10
