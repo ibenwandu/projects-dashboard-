@@ -1,0 +1,46 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info
+dist
+build
+.venv
+venv
+
+# Local development
+.env
+.env.local
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode
+.idea
+*.code-workspace
+
+# Testing
+.pytest_cache
+htmlcov
+.coverage
+
+# Node/JS
+node_modules
+package-lock.json
+yarn.lock
+
+# Other
+.claude
+.worktrees
+Obsidian Vault
+*.md
+tests/
+docs/
