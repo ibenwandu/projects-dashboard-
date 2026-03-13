@@ -36,6 +36,7 @@ COPY --from=builder /opt/venv /opt/venv
 # Note: ANTHROPIC_API_KEY and ANTHROPIC_MODEL are set via Render's Environment tab
 # (not hardcoded here for security)
 ENV PATH="/opt/venv/bin:$PATH" \
+    PYTHONPATH="/app:$PYTHONPATH" \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     EMY_API_URL="${EMY_API_URL:-http://localhost:8000}" \
