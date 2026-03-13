@@ -13,8 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements (from emy directory)
-COPY emy/requirements.txt .
+# Copy requirements (build context is emy/ directory)
+COPY requirements.txt .
 
 # Create virtual environment and install dependencies
 RUN python -m venv /opt/venv

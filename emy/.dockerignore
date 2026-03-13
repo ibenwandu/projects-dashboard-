@@ -1,8 +1,4 @@
-# Git
-.git
-.gitignore
-
-# Python
+# Python build artifacts
 __pycache__
 *.pyc
 *.pyo
@@ -13,11 +9,13 @@ dist
 build
 .venv
 venv
+.pytest_cache
+htmlcov
+.coverage
 
 # Local development
 .env
 .env.local
-emy.py
 .DS_Store
 *.swp
 *.swo
@@ -29,20 +27,10 @@ emy.py
 *.code-workspace
 
 # Testing
-.pytest_cache
-htmlcov
-.coverage
-
-# Node/JS
-node_modules
-package-lock.json
-yarn.lock
-
-# Other
-.claude
-.worktrees
-Obsidian Vault
-*.md
-!requirements.txt
 tests/
-docs/
+.pytest_cache
+
+# Development files
+__pycache__
+.mypy_cache
+.ruff_cache
