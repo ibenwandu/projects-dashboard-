@@ -7,19 +7,29 @@ Runs uvicorn server with proper module path setup.
 
 import sys
 import os
-from pathlib import Path
 
-# Ensure /app is in the Python path
-app_dir = Path("/app").resolve()
-if str(app_dir) not in sys.path:
-    sys.path.insert(0, str(app_dir))
+# Add /app to Python path FIRST, before any imports
+sys.path.insert(0, '/app')
 
-# Now run uvicorn
+# Debug: Show what's in /app before importing
+print(f"DEBUG: /app contents: {os.listdir('/app') if os.path.exists('/app') else 'N/A'}")
+if os.path.exists('/app/emy'):
+    print(f"DEBUG: /app/emy contents: {os.listdir('/app/emy')}")
+
+# Now import uvicorn
 import uvicorn
 
 if __name__ == "__main__":
-    from emy.gateway.api import app
+    # Import the app after path is set
+    try:
+        from emy.gateway.api import app
+        print("DEBUG: Successfully imported emy.gateway.api")
+    except ImportError as e:
+        print(f"ERROR: Could not import emy.gateway.api: {e}")
+        print(f"DEBUG: sys.path = {sys.path}")
+        raise
 
+    # Run uvicorn
     uvicorn.run(
         app,
         host="0.0.0.0",
