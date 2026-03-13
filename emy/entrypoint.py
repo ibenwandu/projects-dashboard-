@@ -18,8 +18,8 @@ if str(app_dir) not in sys.path:
 import uvicorn
 
 if __name__ == "__main__":
-    # Build context is emy/ directory, so modules are at /app/MODULE_NAME
-    from gateway.api import app
+    # Build context is repository root, so modules are at /app/emy/MODULE_NAME
+    from emy.gateway.api import app
 
     uvicorn.run(
         app,
