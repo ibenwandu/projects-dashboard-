@@ -55,4 +55,4 @@ USER emy
 
 # Expose port and run server
 EXPOSE 8000
-CMD ["python", "/app/emy/entrypoint.py"]
+CMD ["python", "/app/entrypoint.py"]
