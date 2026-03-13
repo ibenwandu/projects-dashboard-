@@ -65,103 +65,6 @@ Show more
 
 ---
 
-# Customer Success Manager (Toronto)
-
-- **Company:** Cohere
-- **Location:** Toronto, Ontario, Canada
-- **Salary:** 
-- **URL:** https://www.linkedin.com/jobs/view/4324402215
-
-## Skills / Keywords (prioritize these on your resume)
-
-*(none extracted)*
-
-## Full job description
-
-Who are we?
-
-Our mission is to scale intelligence to serve humanity. We’re training and deploying frontier models for developers and enterprises who are building AI systems to power magical experiences like content generation, semantic search, RAG, and agents. We believe that our work is instrumental to the widespread adoption of AI.
-
-We obsess over what we build. Each one of us is responsible for contributing to increasing the capabilities of our models and the value they drive for our customers. We like to work hard and move fast to do what’s best for our customers.
-
-Cohere is a team of researchers, engineers, designers, and more, who are passionate about their craft. Each person is one of the best in the world at what they do. We believe that a diverse range of perspectives is a requirement for building great products.
-
-Join us on our mission and shape the future!
-
-About The Company
-
-Cohere’s Customer Success team is committed to partnering with customers to unlock business value through the deployment of our advanced Language Learning Model (LLM). Our clients range from early-stage startups to established global enterprises, and we view every interaction as an opportunity to inspire and enhance their AI journey.
-
-About The Role
-
-We are seeking an experienced Customer Success Manager to join our dynamic team. In this role, you will engage with a diverse range of Enterprise customers, guiding them through complex implementations of Cohere's solutions to drive adoption and maximize value. You will work collaboratively with Sales, Product, Marketing, Partnerships, and Engineering teams to ensure exceptional outcomes for our customers.
-
-Key Responsibilities
-
-
-Deliver outstanding customer outcomes, demonstrated through successful product deployments, increased adoption, and high customer satisfaction levels.
-Define and manage structured onboarding and deployment projects for various Cohere products, ensuring seamless adoption and measurable success.
-Provide change management expertise to guide organizations through the adoption journey and maximize the impact of our solutions.
-Codify best practices, guides, and FAQs based on customer interactions.
-Gather customer feedback, identify trends, and communicate insights to internal stakeholders for product planning considerations.
-Collaborate with the Sales team for smooth handoffs between pre- and post-sale processes and for ongoing relationship management.
-Travel approximately 15% of the time to build strong customer relationships and understand their business goals.
-Create and execute customer success plans outlining goals, challenges, KPIs, and timelines.
-Advocate for customers internally, ensuring their needs are met within product development and organizational strategies.
-Identify and address at-risk renewals or user churn in collaboration with relevant internal teams.
-Foster customer advocacy and facilitate testimonials and case studies.
-
-
-Qualifications
-
-
-6+ years of experience in customer-facing roles, especially with C-level technical audiences in complex global organizations.
-Must be Fluent in French
-Proven experience leading complex implementations of Generative AI or traditional ML solutions, with a focus on measurable business outcomes.
-Exceptional presentation and communication skills, particularly when engaging with executives and leaders.
-Strong problem-solving abilities and adeptness at managing multiple projects with effective prioritization.
-A humble attitude with a desire to help others and a commitment to learning new knowledge to ensure team and customer success.
-A solid track record of delivering and scaling exceptional customer experiences.
-A personal commitment to fostering the safe and ethical evolution of AI.
-
-
-Preferred Qualifications
-
-
-8+ years of customer success or similar experience, preferably with a technical enterprise product.
-5+ years managing relationships with large, complex global organizations.
-Experience working with Global 1000 Enterprise customers and managing success programs.
-Strong relationship-building skills across matrixed organizations.
-Ability to proactively identify product pain points and customer needs.
-
-
-Join us at Cohere to drive AI adoption and business transformation while making a measurable impact on our clients’ success.
-
-If some of the above doesn’t line up perfectly with your experience, we still encourage you to apply!
-
-We value and celebrate diversity and strive to create an inclusive work environment for all. We welcome applicants from all backgrounds and are committed to providing equal opportunities. Should you require any accommodations during the recruitment process, please submit an Accommodations Request Form, and we will work together to meet your needs.
-
-Full-Time Employees At Cohere Enjoy These Perks
-
-🤝 An open and inclusive culture and work environment
-
-🧑‍💻 Work closely with a team on the cutting edge of AI research
-
-🍽 Weekly lunch stipend, in-office lunches & snacks
-
-🦷 Full health and dental benefits, including a separate budget to take care of your mental health
-
-🐣 100% Parental Leave top-up for up to 6 months
-
-🎨 Personal enrichment benefits towards arts and culture, fitness and well-being, quality time, and workspace improvement
-
-🏙 Remote-flexible, offices in Toronto, New York, San Francisco, London and Paris, as well as a co-working stipend
-
-✈️ 6 weeks of vacation (30 working days!)
-Show more
-
----
-
 # Customer Service Representative
 
 - **Company:** Hayward Holdings, Inc.
@@ -230,90 +133,6 @@ Education And Experience
 Minimum of 3–5 years of experience in customer service, technical support, or inside sales support roles.
 
 
-Show more
-
----
-
-# National Account Manager
-
-- **Company:** Tree of Life Canada
-- **Location:** Mississauga, Ontario, Canada
-- **Salary:** 
-- **URL:** https://www.linkedin.com/jobs/view/4338816943
-
-## Skills / Keywords (prioritize these on your resume)
-
-*(none extracted)*
-
-## Full job description
-
-Overview
-
-Tree of Life Canada ULC is an Employer who strives to provide an inclusive work environment that involves everyone and embraces the diverse talent of its people. We are committed to meeting the needs of persons with disabilities. If selected for an interview, we will be happy to work with you to ensure your interview is accessible and accommodation is provided. When your interview is being scheduled, please advise the Recruiter of how we might be able to support your participation.
-
-
-NOTE: Reference checks will be conducted for potential candidates and the information collected will be used in making the final hiring decision
-
-
-Primary Responsibilities
-
-The National Account Manager (NAM) is responsible for leading strategic customer relationships with major national retail partners that are critical to the company’s success. This role is responsible for leveraging joint business plans to drive sustained, profitable account performance, building strong internal and external relationships and executing strong sales fundamentals including promotional planning and on-shelf availability of products across the multiple of banners and regions. Success in this role directly supports revenue growth, market share expansion, and customer satisfaction. The NAM works cross-functionally to align internal teams with customer-specific strategies and is a key player in shaping the company’s retail presence across Canada. As with all positions at Tree of Life Canada we expect that all actions will be consistent with Tree of Life Canada’s Mission, Vision and Values.
-
-Essential Functions
-
-
-Strategic Account Ownership
-As primary point of contact and relationship manager, build and maintain strong, long-term relationships with key contacts at national retail accounts including sales and operations
-Lead Joint Business Planning (JBP), aligning customer, client and company strategies to meet volume, margin, and growth targets.
-Understand the retailer’s banner strategies, priorities, and regional variations. Own the country execution.
-Conduct regular business reviews and performance updates with retail partners and internal clients.
-Sales & Revenue Growth
-Own and deliver the sales forecast, revenue, and trade spend budget for each assigned national account
-Drive volume and distribution growth by protecting base business while identifying new business opportunities (channel strategies, improved shelf presence, off shelf merchandising etc.).
-Manage the customer P&L, including tracking and managing gross-to-net spending, ensuring trade promotions are efficient and aligned with ROI goals.
-Promotional Planning & Execution
-Partner with Brand team to develop national, regional or banner specific promotional and merchandising calendars
-Own the promotional planning and execution within assigned guardrails and investment budget
-Monitor performance of promotions and adjust strategies based on results – maximize investment & return
-Ensure flawless execution of account priorities working in coordination with field teams, brokers, and business partners.
-Forecasting & Financial Management
-Lead the monthly sales forecasting process in collaboration with demand planning and supply chain.
-Identify risks to inventory levels or supply continuity and proactively resolve with internal teams and customers.
-Monitor OTIF (on-time, in-full) performance and fill rates to meet customer expectations and minimize financial risks (fines)
-Monitor trade spend, evaluate ROI, and ensure promotional efficiency.
-Manage account-specific P&L including pricing strategy, trade funding, and promotional spend
-Data Analysis & Business Intelligence
-Analyze POS data, market share reports (e.g., Nielsen, IRI), and internal performance metrics to drive decisions.
-Monitor competitive activity, pricing trends, and category dynamics to identify risks and opportunities.
-Build customer presentations and scorecards to support category leadership and partnership development.
-Cross-functional Collaboration
-Thinking company first, function second, work collaboratively with:
-Field Sales & Operations, ensuring store level execution
-Marketing on customer-specific messaging and branding.
-Finance to manage pricing, trade spend, and customer profitability.
-Customer Service to ensure accurate and timely order fulfillment.
-Insights to align with shopper insights, trends and planogram strategies
-Supply Chain to best manage OTIF and inventory planning
-
-
-Support and participate in food safety programs including SQF (Safe Quality Food).
-
-Minimum Requirements, Qualifications, Additional Skills, Aptitude
-
-
-A minimum of 6-10 years Distributor or CPG experience including at least 3-5 years experience managing national or major regional retail accounts. Field experience is an asset.
-Bachelor’s Degree in Business, Marketing or related field
-Proficiency in Excel, PowerPoint, CRM platforms, and syndicated data tools (e.g., BI, IRI, Nielsen). SAP experience is an asset.
-Deep understanding of the Canadian grocery landscape, especially how national retailers operate.
-Proven track record in hitting sales targets, managing trade investment, driving profitable category growth, and building account-specific strategies.
-Excellent negotiation skills, sales planning and forecasting skills.
-Proven & tested ability to interpret & leverage syndicated data (Nielsen, IRI), POS data, and internal financial reports to develop customer specific strategies and tactical plans
-Excellent written, verbal and interpersonal communication are required to express analytics and deliver presentations to various levels within the organization and externally to clients and customers.
-Ability to manage multiple accounts, complex projects, and competing priorities in a fast-paced environment.
-Bilingual (English/French) is an asset
-
-
-The base compensation range for this role is $80,000 CAD - $120,000 CAD. Base pay is positioned within the range based on several factors including an individual’s knowledge, skills and experience with consideration given to internal equity. Base pay is one part of a comprehensive Total Reward program which also includes flexible and supportive benefits and other wellbeing programs. This role may also be eligible for an Annual Bonus based on a combination of enterprise and individual performance.
 Show more
 
 ---
@@ -566,12 +385,12 @@ Show more
 
 ---
 
-# Customer Success Leader
+# Strategic Customer Success Manager - Technical Account Management
 
-- **Company:** Float
+- **Company:** Zip
 - **Location:** Toronto, Ontario, Canada
 - **Salary:** 
-- **URL:** https://www.linkedin.com/jobs/view/4351884617
+- **URL:** https://www.linkedin.com/jobs/view/4358369615
 
 ## Skills / Keywords (prioritize these on your resume)
 
@@ -579,194 +398,72 @@ Show more
 
 ## Full job description
 
-About Float
+About Zip
 
-Float is on a mission to simplify finance for Canadian businesses, empowering them to eliminate complexity and unlock new opportunities. Through our innovative platform, Float enables businesses to streamline financial operations and optimize cash flow, so they can focus on what matters most: growth.
+Here at Zip, we're reimagining how modern businesses function in the age of AI. The simple task of buying software, services, or tools at work has become hopelessly complicated at even the most innovative companies in the world. Today, enterprises spend $120T+ per year globally (>30 times larger than annual consumer e-commerce spend) and rely on vendors more than ever before to run their businesses.
 
-As one of Canada’s fastest growing companies and top-rated startups in 2024 and 2023, Float is customer-obsessed, passionate and entrepreneurial, with a team that includes leaders from Uber, Shopify, Top Hat, TouchBistro, Bill, Stripe, and Ada.
+Our co-founders started Zip in 2020 to address this seemingly universal problem with a purpose-built procurement platform that provides a simple, consumer-grade user experience. Within the last 5 years, Zip has created a new category and developed the leading solution in this $50B+ TAM space. Today, the world’s leading companies like OpenAI, Snowflake, Anthropic, Coinbase, and JPMorgan Chase rely on Zip to manage billions of dollars in spend.
 
-At Float, everyone is an owner, bringing their unique perspective to our team and product. Your voice is important, and we take having a culture based on feedback seriously. We openly share our thoughts and differing opinions so we can continue to improve. We do our best to keep our decision-making decentralized so that all team members feel ownership in our success.
+We have a world-class team coming from category-defining companies like Airbnb, Meta, Stripe, Salesforce, Apple, and Google. With a $2.2 billion valuation and $370 million in funding from Y Combinator, Tiger Global, BOND, DST Global, and CRV, we’re focused on developing cutting-edge technology, expanding into new global markets, and—above all–driving incredible value for our customers. Join us!
 
-Our Product
+Your Role
 
-Float is Canada's complete business finance platform, combining modern financial services and software to help businesses spend, save, and grow. Trusted by 5000+ Canadian companies, Float provides high-limit corporate cards, automated expense management, next-day bill payments, high-yield accounts and fast, friendly support—all built in Canada, for Canada. Float is backed by world-class venture and fintech investors, including Growth Equity at Goldman Sachs Alternatives and OMERS Ventures, partners behind our $70 million Series B raise.
+We’re looking for a Strategic Customer Success Manager (equivalent to a Technical Account Manager) to manage our rapidly growing customer base across all industries and customer segments from Growth to Enterprise customers. As a CSM, you’ll be able to work directly with engineering and product while also working with a variety of stakeholders as customers. As every business can benefit from our platform, you’ll also get exposure to different types of companies and industries. You will advise customers on how to transform the way they manage B2B purchasing across their business, creating immediate value and efficiency for employees.
 
-Our team is a collection of ambitious, collaborative and mission-driven people from all walks of life but with one goal: helping Canadian companies not just survive but thrive. And we’re looking for bold innovators to help shape the future of business finance in Canada.
+You will manage a portfolio of clients across all types of clients and be responsible for driving customer success. This role is ideal for you if you enjoy building, creative problem solving, and want to work with a world class team and customers such as Coinbase, Snowflake, Toast, Northwestern Mutual, Notion, Canva, Samsara, Databricks, Miro, and many more.
 
-AI Use in Our Hiring Process
+You Will
 
-We use technology, including artificial intelligence (AI), to support parts of our hiring process. This may include AI-assisted scheduling and candidate communications, and AI-generated interview notes, guides or summaries to help our team focus on the conversation. All hiring decisions are made by our hiring team.
 
-About The Role
+Define customer business outcomes and partner with our customers to deliver those outcomes on a continuous basis.
+Act as a trusted procurement advisor and thought partner to continuously educate and enable our customers on Zip’s platform and procurement best practices.
+Identify champions and build relationships with key business stakeholders across Procurement, Finance, Legal, IT/Security, and Privacy/Compliance teams.
+Maintain high levels of customer engagement and satisfaction with a focus on customer adoption and loyalty.
+Manage customer health based on data-driven adoption metrics.
+Partner closely with product and engineering to translate business needs and requirements into new solutions for customers, while skillfully managing customer expectations.
+Train and empower customers to be product specialists to become increasingly self-sufficient for their organization.
+Partner with Sales to manage renewals to achieve target NRR.
+Continuously improve Customer Success assets and processes. We’re an early stage company, we want people who are excited to build and motivated to up-level the status quo!
 
-We’re looking for an outstanding Customer Success Leader to join Float and be a part of a team building the best corporate card and spend management platform in Canada. As Customer Success Leader, you will be responsible for overseeing our Customer Success strategy to enhance our onboarding processes, increase Total Payment Volume (TPV) from existing customers, and create recurring and predictable post-sale revenue. Your work will be instrumental in building and reshaping our post-sales organization, with a focus on strategy execution, team leadership, customer journey mapping, and playbook development.
 
-As the Customer Success Leader at Float, you will be responsible for:
 
+Qualifications
 
-Strategy Execution & Commercial Ownership: Execute and evolve Customer Success strategies that drive Net Revenue Retention through TPV growth, multi-product adoption, and long-term customer retention. Own the post-sale commercial motion, including renewals, expansions, and multi-product attach, in close partnership with Sales and RevOps. Ensure Customer Success directly contributes to revenue outcomes and predictable growth.
-Customer Growth, Retention & Adoption: Oversee the growth of key customer metrics, including spend penetration, incremental revenue, retention, and expansion. Drive increased adoption of core and emerging products (e.g., Prefunded Cards, Charge Card, USD, Yield Accounts, Reimbursements, and future offerings). Retain and expand key accounts through first-class service, proactive risk management, and strategic value realization.
-Voice of the Customer & Product Influence: Serve as the voice of the customer across the organization.
-Systematically collate, analyze, and synthesize customer feedback, requirements, and objections across segments.
-Translate individual CSM insights into strategic, data-backed themes that inform product prioritization, roadmap decisions, and go-to-market strategy.
-Partner closely with Product and Engineering to ensure customer needs are clearly articulated, prioritized, and reflected in product evolution.
-Operational Excellence & Scalable Playbooks: Design, own, and continuously improve post-sale playbooks that support efficient service across high-touch, mid-touch, and low-touch customer segments.
-Ensure playbooks are maintained, measurable, and usable for onboarding, training, and performance management.
-Identify and operationalize revenue opportunities for professional services and value-added engagements within Customer Success.
-Systematize best practices and own functional requirements for CS tools, systems, and workflows to enable scale and consistency.
-Talent Leadership & Team Development: Recruit, develop, and lead a high-performing Customer Success team. Foster a culture of ownership, urgency, continuous improvement, and measurable business impact. Build strong managers and ICs who can operate strategically with customers while executing consistently at scale.
-Capacity Planning & Resource Management: Own CS capacity planning in line with customer growth, segmentation, and service expectations. Forecast resource needs, model coverage scenarios, and proactively advocate for additional headcount or tooling where required to maintain customer experience and commercial outcomes.
-Cross-Functional Leadership & Alignment: Act as a senior cross-functional leader, collaborating with Product, Engineering, Marketing, Sales, and Finance to align on customer insights, product improvements, and growth initiatives. Ensure Customer Success is a proactive partner in shaping company strategy, not just a downstream executor.
 
-About You
+5+ years relevant work experience working in customer-facing customer success, account management or strategic consulting organisation. B2B SaaS experience in a high-paced environment is a benefit.
+Procurement experience (procurement, sourcing, or vendor management background) and / or familiarity with procurement technologies such as ERP (Netsuite, Coupa, etc.), HRIS (Workday etc.), CLM, GRC, JIRA, ServiceNow workflow management tools
+Excellent interpersonal skills and ability establish quick rapport and trust with customers
+Strong project management skills to manage a dynamic customer portfolio.
+Creative problem solver while being attentive to details
+Business process-oriented and ability to think about workflow efficiency (e.g. diagrams, conditionally based logic, etc.)
+Proactive team player that is able to identify process gaps and willing to jump in and help wherever needed (company, team, self mentality)
 
-Here’s what sets you up for success at Float:
 
 
-You Put Customers First, Always. You care deeply about delivering meaningful value. Whether you're building internal systems or customer-facing features, you're always thinking about how to make life better for our users.
-You Act Like an Owner. You take responsibility for outcomes, step up to challenges, and seek solutions proactively—doing what’s best for the business, not just your role.
-You Think Big and Move Fast. You’re energized by building from 0 to 1. You’re not afraid to challenge the status quo, experiment quickly, and learn as you go.
-You Constantly Learn and Grow. You’re hungry to improve your craft and open to feedback. You bring a growth mindset to everything you do.
-You Raise the Bar. You care about doing things well and efficiently. You balance speed with rigor and always look for ways to improve how we work.
-You Win as a Team. You’re a generous collaborator who values communication, context, and shared wins. You lift others up and help make the team stronger.
+Nice to Haves
 
 
-In addition to living our values...
+Experience with SaaS workflow management tools (low code / no code configuration)
+Procurement, legal, financial, or IT systems background (fluency or exposure)
+Experience working in a top tier consulting firm or have an MBA
 
 
-You’ve got the experience. To be successful in this role, we’re looking for 7+ years of leadership experience in Customer Success, Account Management, and Implementation within the startup, B2B, and/or fintech sectors. A deep understanding of financial services and accounting platforms is preferred.
-You’re an outstanding leader. You’re an adept leader known for starting from scratch, driving significant process changes, and building highly effective teams.
-Customer Obsession. You have a proven track record of exceeding customer expectations and fostering long-term relationships.
-You’re results-driven: You are known for setting ambitious goals and achieving them, managing priorities and deadlines effectively.
-You’re analytical and data driven. You leverage tools and data to inform strategies, understanding customer needs, market trends, and growth opportunities. You are comfortable preparing your own reports and love analyzing data to find insights.
-You’re proactive and collaborative. You excel in cross-functional environments, driving innovation and improvements through effective collaboration and strategic thinking. Your ability to collaborate effectively across different departments stands out. You bridge the gap between customer success, sales, marketing, and product teams, ensuring a constant feedback loop about what our customers think about our product.
 
+Perks & Benefits
 
-This May Not Be The Role For You If
+At Zip, we’re committed to providing our employees with everything they need to do their best work.
 
 
-You aren’t ready to be a player-coach
-You aren’t comfortable using data to make decisions
-You don’t have a track record of exceeding your targets
-You haven’t built high-performing teams
-You aren’t resilient
-You don’t love coaching and helping your team grow
-You aren’t comfortable with radical candor
-You aren’t resilient
-You have an ego
-You aren’t super passionate about helping Float build the best financial management platform in Canada
+📈 Start-up equity
+🦷 Full health, vision & dental coverage
+🚍 Commuter benefit
+🚠 Team building events & happy hours
+🌴 Flexible PTO
+💻 Apple equipment plus home office budget
 
 
-Why You Should Join
 
-
-Work at one of Canada's fastest-growing fintech companies
-Make a real impact in a high-autonomy, high-growth role
-Collaborate with an ambitious and supportive team
-Competitive compensation, equity options, and benefits
-Hybrid work model – we are based in Toronto with in-office days for connection and collaboration
-Enjoy catered team lunches every Tuesday, Wednesday and Thursday
-Bring your pup to our dog-friendly office
-Thrive in a high-trust, high-performance culture where your work truly matters
-
-
-In Short
-
-At Float, you’ll thrive if you’re bold, curious, and eager to make a real impact. We're building something special—and having a lot of fun along the way. If you’re excited to build, grow, and win together, we’d love to meet you.
-
-We’re committed to building a workplace that’s welcoming and accessible for everyone. If you need any accommodations during the hiring process or once you join Float, just let us know! You can reach out to Vic (victoria@floatfinancial.com), and we’ll work with you to make sure you have what you need to succeed.
-
-Compensation Range: CA$175K - CA$225K
-Show more
-
----
-
-# Solution Consultant
-
-- **Company:** Sage
-- **Location:** Toronto, Ontario, Canada
-- **Salary:** 
-- **URL:** https://www.linkedin.com/jobs/view/4356232592
-
-## Skills / Keywords (prioritize these on your resume)
-
-*(none extracted)*
-
-## Full job description
-
-Job Description
-
-Scaling Sage is our top strategic priority. As a Solution Consultant, you’ll act as a matchmaker connecting millions of small and medium-sized businesses to the software solutions that Sage offers. Working alongside Account Executives, you’ll uncover customer needs and demonstrate how our products can support their ambitions. Bring your technical know-how and solution-focused skillset to the table and get the chance to do your best work.
-
-Hybrid schedule — work from the office three days per week.
-
-You’ll represent software that combines decades of trusted expertise with modern tools like Sage Ai. Our software makes work easier and more efficient for our customers – that’s why they love it.
-
-Uncapped earnings
-
-Our compensation structure includes a base salary plus commission. We believe that if you put in the work, you should be rewarded for it.
-
-10 paid days for volunteering and learning:
-
-Through Sage Foundation, you can donate your skill-based support or manual labor to causes you care about 5 days per year. Another 5 days per year can be invested in engaging in learning opportunities that interest you, because we care about your development at Sage.
-
-Summary of your day-to-day:
-
-Your days will be a blend of digging into what prospects and customers need and crafting tailored demos that show how Sage can enable their success. You’ll also support sales on discovery calls and build compelling ROI cases. Your product expertise will make you a trusted advisor and give you an edge in designing solutions. Working cross-functionally, you’ll meet go-to-market plans, hit budget targets, represent Sage at industry events, grow pipelines, and strengthen customer relationships.
-
-Key performance metrics (KPMs):
-
-Everyone wants to know what’s expected of them, and they want to be supported in achieving those goals too. Growing Sage is our main focus, so you can expect to have plenty of resources enabling you to experience your best work yet. As a solutions consultant, your success will be shaped by:
-
-
-Average time for demos to convert to opportunities
-Total value of pipeline influence of deals progressed
-Average time to demo readiness
-Quality of customer engagement
-Percentage of CRM accuracy
-
-
-
-
-
-
-Qualifications:
-
-
-Demos must be completed in English, French speaking is preferred
-Experience within the HCM or payroll industry
-Proficient in accounting practice, financial systems, and technologies like XML
-Experience delivering value-add presentations and demos
-Skilled in solution-driven communication
-Strong cross-functional teamworking experience
-
-
-
-
-
-
-Plenty of perks:
-
-
-100% paid premiums for health, dental, and vision coverage.
-RRSP contribution match (100% up to 4%).
-35 days paid time off (11 paid holidays, 16 vacation days, 3 personal days, 5 sick days).
-18 weeks of paid parental leave for birth, adoption, or surrogacy offered 1 year after the start date.
-5 days paid yearly to volunteer (through Sage Foundation).
-$5,250 tuition reimbursement per calendar year starting 6 months after the hire date.
-Sage Wellness Rewards Program (annual fitness reimbursement).
-Library of on-demand career development options and ongoing training offerings.
-
-
-
-
-
-
-Who is Sage:  https://www.sage.com/en-us/company/about-sage/
-
-Life at Sage:  https://www.sage.com/en-us/company/careers/
-
-Our Values & Behaviors:  https://www.youtube.com/watch?app=desktop&v=vt5JXf-Gwno&feature=youtu.be
+We're looking to hire Zippers and that means hiring people who take ownership, communicate openly, have an underdog mindset, and are excited to increase the pace of innovation for every business in the world. We encourage all candidates to apply even if your experience doesn't exactly match up to our job description. We are committed to building a diverse and inclusive workspace where everyone (regardless of age, religion, ethnicity, gender, sexual orientation, and more) feels like they belong. We look forward to hearing from you!
 Show more
 
 ---
@@ -903,391 +600,6 @@ Show more
 
 ---
 
-# Key Account Manager
-
-- **Company:** RPC Company
-- **Location:** Toronto, Ontario, Canada
-- **Salary:** 
-- **URL:** https://www.linkedin.com/jobs/view/4366020323
-
-## Skills / Keywords (prioritize these on your resume)
-
-*(none extracted)*
-
-## Full job description
-
-Key Account Manager | Leadership & Strategic Execution
-
-This Key Account Manager will partner with Sales Teams to acquire high dollar, massive projects in the Toronto Area. Must have a construction background and the ability to bid very large projects. Candidates must possess experience with SalesForce.
-
-• Provides strategic leadership to managers and professional teams, with accountability for performance and results across multiple related teams
-
-• Develops and executes departmental plans aligned with business objectives, organizational priorities, and available resources
-
-• Applies deep understanding of key business drivers to maximize team performance and customer outcomes
-
-• Sets departmental priorities, allocates resources, and ensures alignment with annual operating plans and key account strategies
-
-• Identifies and resolves complex operational and organizational challenges by leveraging internal teams and external partners
-
-• Supports departmental success through strategic sponsorship and funding of projects, products, services, and technologies
-
-• Influences and persuades leaders, stakeholders, customers, and external partners to drive alignment, decision-making, and results
-
-Show more
-
----
-
-# Sr Specialist, Leadership Communications
-
-- **Company:** McCain Foods
-- **Location:** Toronto, Ontario, Canada
-- **Salary:** 
-- **URL:** https://www.linkedin.com/jobs/view/4366191841
-
-## Skills / Keywords (prioritize these on your resume)
-
-*(none extracted)*
-
-## Full job description
-
-Position Title: Sr Specialist, Leadership Communications
-
-Position Type: Regular - Full-Time
-
-Requisition ID: 40278
-
-Senior Specialist, Leadership Communications
-
-[Toronto, Ontario]
-
-Are you passionate about bringing stories to life through creative and digitally enabled communications? We’re seeking an agile and talented communicator to join our global leadership communications team and help us shape and elevate our content.
-
-About The Role.
-
-As a hands-on creative storyteller, you will play a pivotal role in bringing our global business strategy to life through executive voices and experiences.
-
-Reporting to the Director, Leadership Communications, you will play a crucial role in developing and executing strategic communications that amplify leader voices, shape organizational narratives, and strengthen stakeholder engagement. You will craft compelling messages across multiple platforms and ensure consistent, impactful communication that advances business objectives.
-
-You’ll be working with a team of passionate communicators with big ideas. From global events to communications campaigns, this varied role would suit a multi-disciplined self-starter keen to make their mark. Did we mention the free Fries?
-
-What You’ll Be Doing.
-
-Strategic Content
-
-
-Write, edit, and produce high-quality content for leader communications including speeches, scripts, presentations, emails, internal announcements, intranet stories, social content, podcasts and more.
-Identify and mine stories from across the global organization to advance our winning culture, deepen engagement and contribute to McCain’s reputation as a great place to work.
-Ensure all materials reflect the executive's authentic voice while maintaining professional standards and strategic intent.
-Provide counsel on communications strategies, anticipate issues and recommend proactive strategies to enhance leadership visibility and credibility.
-
-
-Stakeholder Engagement
-
-
-Work closely with business partners and subject matter experts to ensure the successful execution of communications deliverables.
-Manage workflow with executive offices, actively collaborating with Strategy & Transformation teams, HR Business Partners and the broader Global Leadership Communications team.
-Collaborate across the wider Global Internal Communications and Change Management team, as well as with external and regional communications teams.
-
-
-Execution Excellence
-
-
-Prepare leaders for speaking engagements, town halls and other high-visibility events, including global leader connects, employee all hands events, and other enterprise events.
-Ensure content is published and events are produced on time, as planned
-Actively track and report data on key metrics to gauge content, event and campaign success.  
-Conceptualize and design visually stunning graphics, presentations, and communication materials using Microsoft and AI tools.
-Drive efficiency, simplification and team cross-training to educate team members and support new ways of working.
-Produce events with planning, communications and flawless execution
-Handle multiple projects simultaneously, meeting deadlines and maintaining high quality, accuracy and creativity.
-Ad hoc deliverables to support Global HR and Communications goals
-
-
-What You’ll Need To Be Successful.
-
-
-Exceptional communication skills and strong business acumen.
-Experience supporting leaders with high degree of executive presence.
-Business or professional degree, MBA an asset.
-Bachelor’s degree in communications or a related field.
-PR Agency, CPG or Retail experience preferred.
-Excellent project management skills with high degree of agility.
-Highly organized with strong attention to detail.
-Positive, proactive, calm under pressure and able to adapt quickly.
-Ability to manage competing priorities under tight timelines.
-Highly creative mindset with a passion for pushing boundaries.
-Intellectual curiosity with a commitment to continuous improvement.
-Proficient in Microsoft, Adobe and AI Tools to bring content to life.
-
-
-About McCain.
-
-Click Here to learn more about McCain and how we provide you with opportunities to make an impact that matters.
-
-Leadership principles.
-
-At McCain, our leadership principles guide how we engage with customers, collaborate as a team, and achieve success. We focus on understanding customer needs, driving innovation, empowering people, and taking ownership to clear obstacles and deliver results.
-
-The McCain Experience.
-
-We are McCain. This statement is a testament to our collective strength and our individual value. Your contributions play a vital role in our success. Our winning culture is rooted in authenticity and trust, empowering us to bring out the best in one another. Here, you’ll find opportunities to learn, grow, and thrive. Join us and experience why we’re better together.
-
-Our purpose is grounded in building meaningful relationships. We’re big believers in the power of working together in person—it helps us stay connected, collaborate more effectively, and grow as a team. At the same time, we recognize the importance of flexibility. Most office-based roles follow a hybrid model, with the option to work remotely two days a week. There may be exceptions depending on the role and location, so we encourage you to speak with your recruiter for more details.
-
-Compensation Package: $58,800.00 - $78,500.00 40 CAD annually + Bonus Eligibility
-
-The above reflects the target compensation range for the position at the time of posting. Hiring compensation will be determined based on experience, skill set, education and training, and other organizational needs. This posting is for an existing vacancy.
-
-Benefits: At McCain, we’re on a mission to create a winning culture that puts employee safety and well-being at the heart of what we do, every day. We understand and appreciate that each person’s needs are unique and ensure our benefits & well-being programs reflect that. Employees are eligible for the following benefits: health coverage (medical, dental, vision, prescription drug), retirement savings benefits, and leave support including medical, family and bereavement. Well-being programs include vacation and holidays, company-supported volunteering time, and mental health resources. Coverages are aligned with country, provincial and state governing plans and can vary by work level, location and nature of the role. Additional benefit detail available during the application process.
-
-Your well-being matters to us, and we’re here to provide you with the necessary resources to support you in being your best self at work — and at home.
-
-McCain Foods is an equal opportunity employer. As a global family-owned company, we strive to be the employer of choice in the diverse communities around the world in which we live and work. We recognize that inclusion drives our creativity, resilience, and success and makes our business stronger. All qualified applicants will receive consideration for employment without regard to race, religion, color, national origin, sex, age, veteran status, disability, or any other protected characteristic under applicable law.
-
-McCain is an accessible employer. If you require an accommodation throughout the recruitment process (including alternate formats of materials or accessible meeting rooms), please let us know, and we will work with you to find appropriate solutions.
-
-Your privacy is important to us. By submitting personal data or information to us, you agree this will be handled in accordance with McCain’s Global Privacy Policy and Global Employee Privacy Policy, as applicable. McCain leverages AI in the hiring process, though all final decisions are made by humans. You can understand our approach to AI and how your personal information is being handled here.
-
-Job Family: Communications
-
-Location(s): CA - Canada : Ontario : Toronto || CA - Canada : Ontario : Bolton || CA - Canada : Ontario : Borden || CA - Canada : Ontario : Brampton || CA - Canada : Ontario : Dedicated Mississauga || CA - Canada : Ontario : Etobicoke || CA - Canada : Ontario : Forest || CA - Canada : Ontario : Guelph || CA - Canada : Ontario : Kingston || CA - Canada : Ontario : Kitchener || CA - Canada : Ontario : Lansdowne || CA - Canada : Ontario : London || CA - Canada : Ontario : Maidstone || CA - Canada : Ontario : Markham || CA - Canada : Ontario : Mississauga || CA - Canada : Ontario : Ottawa || CA - Canada : Ontario : Thunder Bay || CA - Canada : Ontario : Waterloo || CA - Canada : Ontario : Windsor || CA - Canada : Ontario : Woodstock
-
-Company: McCain Foods (Canada)
-Show more
-
----
-
-# Manager, Leadership Communications
-
-- **Company:** McCain Foods
-- **Location:** Toronto, Ontario, Canada
-- **Salary:** 
-- **URL:** https://www.linkedin.com/jobs/view/4366195777
-
-## Skills / Keywords (prioritize these on your resume)
-
-*(none extracted)*
-
-## Full job description
-
-Position Title: Manager, Leadership Communications
-
-Position Type: Regular - Full-Time
-
-Requisition ID: 40277
-
-Manager, Leadership Communications
-
-[Toronto, Ontario]
-
-Are you passionate about bringing stories to life through creative and digitally enabled communications? We’re seeking an agile and talented communicator to join our global leadership communications team and help us shape and elevate our content.
-
-About The Role.
-
-Calling all proactive, business-oriented and tech-savvy communicators!
-
-As a hands-on creative storyteller, you will play a pivotal role in bringing our global business strategy to life through executive voices and experiences.
-
-Reporting to the Director, Leadership Communications, you will help shape how leaders connect, inspire and engage employees, stakeholders and external audiences, globally. You will influence the voice of McCain at the highest levels—helping our senior leaders tell compelling stories that bring our leadership principles and corporate strategy to life.
-
-Working with a team of passionate communicators with big ideas, you will help elevate our brand and reputation through strategic storytelling, proactive engagement and close collaboration with leaders, business partners and subject matter experts to align messaging and support key initiatives. Did we mention the free Fries?
-
-What You’ll Be Doing.
-
-
-Provide counsel on communications, anticipate issues and recommend proactive strategies to enhance leadership visibility and credibility.
-Generate creative content and produce high-quality events for leaders including speeches, scripts, presentations, events, emails, internal announcements, intranet stories, social content, podcasts and more.
-Ensure all materials reflect the leader's authentic voice while maintaining professional standards and strategic intent.
-Create creative and compelling content to develop communications strategies that support business and leader objectives, working across functions and regions to ensure messaging is aligned and consistent.
-Translate complex business concepts into clear, compelling narratives for employees, shareholders, investors and external audiences.
-Deliver an always-on content engine the elevates McCain’s reputation and reinforces our winning culture through people and leader storytelling, highlighting key business developments, award wins and much more
-Identify and mine stories from across the global organization to advance our winning culture, deepen engagement and contribute to McCain’s reputation as a great place to work.
-Support thought leadership and leader storytelling, and provide strategic counsel on tone, cadence, and delivery.
-Continuously monitor sentiment and propose tactics to inspire, engage and energize McCainers.
-Stay up to date on industry trends, emerging technologies, and best practices to continually innovate communications.
-
-
-
-
-Stakeholder Engagement
-
-
-Work closely with business partners and subject matter experts to ensure the successful execution of communications deliverables.
-Manage workflow with executive offices, actively collaborating with Strategy & Transformation teams, HR Business Partners and the broader Global Leadership Communications team.
-Collaborate across the wider Global Internal Communications and Change Management team, as well as with external and regional communications teams.
-
-
-Execution Excellence
-
-
-Lead the end-to-end process, which includes the development and distribution of internal and external communications and events.
-Provide sound communications advice, and flawless execution of communication and events to target audiences.
-Ad hoc deliverables to support Global HR and Communications goals
-
-
-What You’ll Need To Be Successful.
-
-
-Exceptional communication skills and strong business acumen.
-Experience supporting leaders with high degree of executive presence.
-Business or professional degree, MBA an asset.
-Bachelor’s degree in communications or a related field.
-PR Agency, CPG or Retail experience preferred.
-Excellent project management skills.
-Diplomatic, proactive, agile and adaptable, with a positive demeanor.
-Highly organized with strong attention to detail.
-Ability to remain calm under pressure and balance multiple priorities.
-Comfortable working in fast-paced, and deadline-driven environment.
-Ability to manage competing priorities under tight timelines.
-Highly creative mindset with a passion for pushing boundaries.
-Intellectual curiosity with commitment to continuous improvement.
-Proficient in Microsoft, Adobe and AI Tools to bring content to life.
-
-
-About McCain.
-
-Click Here to learn more about McCain and how we provide you with opportunities to make an impact that matters.
-
-Leadership principles.
-
-At McCain, our leadership principles guide how we engage with customers, collaborate as a team, and achieve success. We focus on understanding customer needs, driving innovation, empowering people, and taking ownership to clear obstacles and deliver results.
-
-The McCain Experience.
-
-We are McCain. This statement is a testament to our collective strength and our individual value. Your contributions play a vital role in our success. Our winning culture is rooted in authenticity and trust, empowering us to bring out the best in one another. Here, you’ll find opportunities to learn, grow, and thrive. Join us and experience why we’re better together.
-
-Our purpose is grounded in building meaningful relationships. We’re big believers in the power of working together in person—it helps us stay connected, collaborate more effectively, and grow as a team. At the same time, we recognize the importance of flexibility. Most office-based roles follow a hybrid model, with the option to work remotely two days a week. There may be exceptions depending on the role and location, so we encourage you to speak with your recruiter for more details.
-
-Compensation Package: $97,500.00 - $130,000.00 . CAD annually + Bonus Eligibility
-
-The above reflects the target compensation range for the position at the time of posting. Hiring compensation will be determined based on experience, skill set, education and training, and other organizational needs. This posting is for an existing vacancy.
-
-Benefits: At McCain, we’re on a mission to create a winning culture that puts employee safety and well-being at the heart of what we do, every day. We understand and appreciate that each person’s needs are unique and ensure our benefits & well-being programs reflect that. Employees are eligible for the following benefits: health coverage (medical, dental, vision, prescription drug), retirement savings benefits, and leave support including medical, family and bereavement. Well-being programs include vacation and holidays, company-supported volunteering time, and mental health resources. Coverages are aligned with country, provincial and state governing plans and can vary by work level, location and nature of the role. Additional benefit detail available during the application process.
-
-Your well-being matters to us, and we’re here to provide you with the necessary resources to support you in being your best self at work — and at home.
-
-McCain Foods is an equal opportunity employer. As a global family-owned company, we strive to be the employer of choice in the diverse communities around the world in which we live and work. We recognize that inclusion drives our creativity, resilience, and success and makes our business stronger. All qualified applicants will receive consideration for employment without regard to race, religion, color, national origin, sex, age, veteran status, disability, or any other protected characteristic under applicable law.
-
-McCain is an accessible employer. If you require an accommodation throughout the recruitment process (including alternate formats of materials or accessible meeting rooms), please let us know, and we will work with you to find appropriate solutions.
-
-Your privacy is important to us. By submitting personal data or information to us, you agree this will be handled in accordance with McCain’s Global Privacy Policy and Global Employee Privacy Policy, as applicable. McCain leverages AI in the hiring process, though all final decisions are made by humans. You can understand our approach to AI and how your personal information is being handled here.
-
-Job Family: Communications
-
-Location(s): CA - Canada : Ontario : Toronto || CA - Canada : Ontario : Bolton || CA - Canada : Ontario : Borden || CA - Canada : Ontario : Brampton || CA - Canada : Ontario : Dedicated Mississauga || CA - Canada : Ontario : Etobicoke || CA - Canada : Ontario : Forest || CA - Canada : Ontario : Guelph || CA - Canada : Ontario : Kingston || CA - Canada : Ontario : Kitchener || CA - Canada : Ontario : Lansdowne || CA - Canada : Ontario : London || CA - Canada : Ontario : Maidstone || CA - Canada : Ontario : Markham || CA - Canada : Ontario : Mississauga || CA - Canada : Ontario : Ottawa || CA - Canada : Ontario : Thunder Bay || CA - Canada : Ontario : Waterloo || CA - Canada : Ontario : Windsor || CA - Canada : Ontario : Woodstock
-
-Company: McCain Foods (Canada)
-Show more
-
----
-
-# Event Manager
-
-- **Company:** Scotiabank
-- **Location:** Toronto, Ontario, Canada
-- **Salary:** 
-- **URL:** https://www.linkedin.com/jobs/view/4366509905
-
-## Skills / Keywords (prioritize these on your resume)
-
-*(none extracted)*
-
-## Full job description
-
-Requisition ID: 249201
-
-Join a purpose driven winning team, committed to results, in an inclusive and high-performing culture.
-
-Purpose
-
-Contributes to the overall success of the Lighthouse Event team ensuring specific team and individual goals, plans, and initiatives are executed/deliver support of the team’s business strategies and objectives.  Ensures all activities conducted are in compliance with governing regulations, internal policies, and procedures.  This role is responsible for supporting the planning and execution of events and conferences for Scotiabank stakeholders.  These events are highly visible and involve clients, business partners as well as senior-level executives.  The role involves managing components of the programs as assigned by the Senior Event Designer, onsite execution, partner relationships, sourcing internal and external vendors/suppliers, where applicable venue research & negotiations/contracting, and budget and cost management.  The role may lead the planning and execution of small-medium-size programs at the discretion of the Senior Manager.  The Individual must represent the organization with professionalism, courtesy, and integrity. 
-
-Is this role right for you? in this role, you will:
-
-
-Champions a customer focused culture to deepen client relationships and leverage broader Bank relationships, systems and knowledge. 
-Working in close collaboration with Senior Event Designer, accountable for the planning and execution of hhigh-quality client experiences through:
-Expertly and consistently managed events and conferences.
-Building deep, trusting relationships with business partners.  
-Planning and execution on assigned events and initiatives through to completion.
-Managing cost effectively, calibrating for the current economic climate, shareholder value, optics, and business line objectives, while still delivering a quality and forward-looking program. 
-Identifying risks to timelines and provides solutions to ensure all deliverables are met while managing client and team expectations with care and consideration. 
-Managing approved budgets until program completion, including working with the Manager, Financial & Operations Management (Events) to ensure event expenses are appropriately tracked, monitoring actual spend vs budget, identifying any risks and escalating as required; performs post event budget reconciliation within 60 days of event closing. 
-Manage event expenses, including verifying that invoices are aligned with cost estimates, obtaining the appropriate approvals for invoices, and submitting invoices and credit card expense reports in a timely manner.
-Ensures transparency as it relates to client expectations. 
-On a program-to-program basis, may negotiate venue contracts. Works with Marketing Operations team to ensure event compliance and regulatory requirements are met, including Third-Party Risk Management, Procurement, Vendor Onboarding, and Expense Policy. 
-Prepares all electronic and printed materials and collateral for events and conferences to ensure consistency and accuracy in messaging and branding and obtains necessary approvals before circulation or production; works collaboratively with creative and production services to ensure brand standards are met; and with marketing partners to ensure messaging is consistent with brand and business objectives. 
-Provides guidance and advice to clients on proper event logistics & details, based on objectives and program briefs. 
-
-
-Leads and manages all aspects of event execution, end-to-end, including: 
-
-
-Provides options for venue selection, including contract negotiation and site visits to ensure the quality and appropriateness of the site. 
-Manages relationships with partners, participants, external vendors, suppliers, and agencies, reviewing, managing, and reporting on event data.
-Providing on-site support for assigned events and attending other events as delegated by the Senior Event Designer. 
-Oversees the development of gift/giveaway options for events and ensures that items are ordered to meet required deadlines, quality standards, and regulatory requirements. 
-Proactively identifies opportunities to improve processes and works collaboratively with the team. 
-Maintain standardized event processes and procedures including but not limited to event documentation, standard templates, critical path (work-back schedule), RASI (Responsible, Accountable, Support, Informed document), project plans, function sheets, de-brief documents, post-event surveys, budget aapprovals and reconciliations, attendee tracking lists, and post-event reports. 
-Work within the preferred list of preferred vendors; identify potential vendors/suppliers where applicable. 
-Help to maintain the preferred venue database.   
-Responsible for the integrity and accuracy of event information on Aventri/STOVA, the event portal, and the Lighthouse Event Marketing shared drives. 
-Document, and reconcile event contracts, invoices, and expenses per the process identified and within the timeframe prescribed by operations. 
-Understand how the Bank’s risk appetite and risk culture should be considered in day-to-day activities and decisions. 
-Champions a high-performance environment and demonstrates a commitment to Scotiabank’s values: accountability, passion, integrity and respect. Delivers results in accordance with Scotiabank behavioural competencies. Creates an inclusive team culture and an environment where team members hear, share, and appreciate diverse perspectives. 
-Directs day-to-day activities in a manner consistent with the Bank’s risk culture and the relevant risk appetite statement and limits.  
-Actively pursues effective and efficient operations of his/her respective areas, while ensuring the adequacy, adherence to and effectiveness of day-to-day business controls to meet obligations with respect to operational risk, regulatory compliance risk, AML/ATF risk and conduct risk, including but not limited to responsibilities under the Operational Risk Management Framework, Regulatory Compliance Risk Management Framework, AML/ATF Global Handbook and the Guidelines for Business Conduct. 
-Education / Experience / Other Information (include only those that are specific to the role)
-This role will support programs according to the team assigned. There may be cases where the role manages and/or supports and/or contributes to programs outside of immediate coverage. This is at the discretion of the Senior Event Designer 
-This role may be required to manage budgets
-Depending on the number of events and time of year this role may manage/support/contribute to 10 or more events at any given time. Capacity and scope will be factors that contribute to the work assigned.  
-This role is responsible for ensuring alignment with third-party risk management, procurement, expense policy, enterprise risk, security, and compliance. 
-This role must act in accordance with the enterprise code of conduct. 
-Performance is assessed on the above-mentioned accountabilities and alignment with the Lighthouse Events mandate and objectives. Performance is based on results (the “what”) and key competencies that demonstrate “how” the individual delivers those results. 
-The role takes direction from the Senior Event Designer.  On a regular basis, the role must work with internal BNS and external clients, up to senior executive levels.  As such the role must be transparent with the project lead and the Senior Manager and request direction in situations that are outside the scope of the role 
-When applicable, the Individual works in tandem with the business lines to make decisions regarding the budget, theme, agenda, and location of events. 
-In troubleshooting situations/ on-site at a program, the individual must be comfortable in making decisions and taking accountability, as well as taking direction from the Senior Event Manager
-
-
-Skills
-
-Do you have the skills that will enable you to succeed in this role? We’d love to work with you if you have:
-
-
-5 years of work experience in event and project management in a similar capacity.
-Industry designation e.g., CMP or CSEP is helpful 
-Experience in the financial services industry as well as awareness of the financial services competitive marketplace and trends are an asset.  
-The ability to speak/write in French and/or Spanish is an asset. 
-Solid written communication skills and strong proficiency in MS Office and Adobe applications. 
-Extensive and current knowledge of event venues, entertainment options, and contacts in the GTA, North America, and internationally to meet constant demand from clients for new and unique event experiences. 
-Strong people skills and ability to work under pressure and with multiple timelines and priority clients. 
-Strong client service focus 
-Flexibility to work evenings and weekends. 
-Ability and flexibility to travel to off-site venues for site inspection and execution as necessary. 
-Expertise in MS Office Suite Excel, PowerPoint, Word, and MS Teams 
-Attention to detail and diligence with follow-up and follow-through. 
-The ability to problem solve under pressure (e.g., time constraints, demanding clients, and change in requirements) and strong problem-resolution skills are major requirements for success in this position
-
-
-Working Conditions
-
-
-Moderate travel domestically/internationally/globally depending on the portfolio.  
-Must have a valid passport. 
-The internal partners that the event team services are very demanding, resulting in a high-pressure environment fast-paced paced and has tight deadlines.  As well there are many last-minute requests, resulting in modifications to events that in turn require escalation to and support by the Senior Manager. 
-Significant evening and weekend work is required, with occasional single shifts of up to 20 hours.  Some travel is also required to execute certain programs.   
-This position is eligible for overtime. 
-
-
-Location(s): Canada : Ontario : Toronto
-
-Scotiabank is a leading bank in the Americas. Guided by our purpose: "for every future", we help our customers, their families and their communities achieve success through a broad range of advice, products and services, including personal and commercial banking, wealth management and private banking, corporate and investment banking, and capital markets.
-
-At Scotiabank, we value the unique skills and experiences each individual brings to the Bank, and are committed to creating and maintaining an inclusive and accessible environment for everyone. If you require accommodation (including, but not limited to, an accessible interview site, alternate format documents, ASL Interpreter, or Assistive Technology) during the recruitment and selection process, please let our Recruitment team know. If you require technical assistance, please click here. Candidates must apply directly online to be considered for this role. We thank all applicants for their interest in a career at Scotiabank; however, only those candidates who are selected for an interview will be contacted.
-Show more
-
----
-
 # OLB Operations Representative, Scotia iTRADE - Toronto, ON (12-month contract)
 
 - **Company:** Scotiabank
@@ -1357,6 +669,71 @@ Location(s): Canada : Ontario : Toronto
 Scotiabank is a leading bank in the Americas. Guided by our purpose: "for every future", we help our customers, their families and their communities achieve success through a broad range of advice, products and services, including personal and commercial banking, wealth management and private banking, corporate and investment banking, and capital markets.
 
 At Scotiabank, we value the unique skills and experiences each individual brings to the Bank, and are committed to creating and maintaining an inclusive and accessible environment for everyone. If you require accommodation (including, but not limited to, an accessible interview site, alternate format documents, ASL Interpreter, or Assistive Technology) during the recruitment and selection process, please let our Recruitment team know. If you require technical assistance, please click here. Candidates must apply directly online to be considered for this role. We thank all applicants for their interest in a career at Scotiabank; however, only those candidates who are selected for an interview will be contacted.
+Show more
+
+---
+
+# Business Relations Manager
+
+- **Company:** Grifols
+- **Location:** Toronto, Ontario, Canada
+- **Salary:** 
+- **URL:** https://www.linkedin.com/jobs/view/4366762581
+
+## Skills / Keywords (prioritize these on your resume)
+
+*(none extracted)*
+
+## Full job description
+
+table.MiTabla { max-width: 1020px;!important
+
+Would you like to join an international team working to improve the future of healthcare? Do you want to enhance the lives of millions of people? Grifols is a global healthcare company that since 1909 has been working to improve the health and well-being of people around the world. We are leaders in plasma-derived medicines and transfusion medicine and develop, produce and market innovative medicines, solutions and services in more than 110 countries and regions.
+
+Souhaitez-vous rejoindre une équipe internationale qui travaille à l'amélioration des soins de santé ? Voulez-vous améliorer la vie de millions de personnes ? Grifols est une entreprise mondiale de soins de santé qui, depuis 1909, travaille à l'amélioration de la santé et du bien-être des personnes dans le monde entier. Nous sommes leaders dans le domaine des médicaments dérivés du plasma et de la médecine transfusionnelle et nous développons, produisons et commercialisons des médicaments, des solutions et des services innovants dans plus de 110 pays et régions.
+
+The Business Relations Manager is a customer facing, field-based role in the Canada Commercial organization, reporting to the Deputy Director Business Relations, and playing a vital organizational role in ensuring fulfillment and ongoing success of Grifols' strategic collaborations in Canada. This role is responsible for managing Grifols' local brand reputation, connecting Canada's business strategy with the customer, and ultimately to ensure preference for Grifols' products and services in driving strong pull-through demand at regional and national levels. As a champion for compliant and ethical behaviour, this role will effectively demonstrate appropriate customer relationship management and stakeholder engagement across Grifols' customer base in transfusion medicine, hematology, immunology, neurology, pulmonology and critical care. With a focus on building strong customer advocates, this role will seek to understand and address diverse customer needs, exceeding customer expectations in response time and product knowledge, and driving long-term customer loyalty through credible interactions and effective face-to-face management of customer expectations. With excellent interpersonal skills, this role is responsible for fostering and maintaining strong team working collaboration, ensuring decision-making agreement and alignment with the Deputy Director Business Relations, and modeling persistence in the face of setback.
+
+This position has direct reporting to the Deputy Director Business Relations. This position is a field-based position and requires at least 75-85% travel with assigned territory coverage which may encompass more than one province. Ontario/Manitoba territory and located in South Western Ontario.
+
+Responsiblities Include But Are Not Limited To
+
+
+Build and develop deep, impactful relationships with Canadian key opinion leaders to secure and maintain strong brand recognition and preference for Grifols' products and services, driving strong pull-through demand for Grifols' products to achieve annual sales goals
+Develop annual territory plan, working with the Deputy Director Business Relations, to outline annual customer advocacy development goals, product branding objectives, and clearly defined measures of success for effective customer relationship management
+Support an effective and collaborative team environment by participating in regular team meetings and driving a culture of innovation, creativity, value and teamwork that effectively reflects Grifols' desired behaviours and attitudes
+Establish regular self-directed learning to enhance expertise and knowledge on Grifols' products, programs and services, as well as market knowledge expertise including blood operators, Canadian compliance, and local hospital policies and procedures as it pertains to Grifols' products and services
+Model leadership behaviours in alignment with Grifols' code of conduct, to preserve the identity that sets us apart by conducting day-to-day tasks, activities and customer interactions based on honesty, integrity and ethical values
+
+
+
+Skills/Qualifications/Education: (To perform this job successfully, an individual must be able to perform each essential duty satisfactorily. The requirements listed below are representative of the knowledge, skills, education, and/or ability required. Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions)
+
+
+University degree or equivalent
+At least 5 years of relevant experience in a biotech, pharmaceutical or regulated environment; with working knowledge of Canada's Blood Operators, and the plasma derived medicines industry in Canada
+Excellent customer relationship management and proven success in building customer advocates
+Superior knowledge of Canada business/industry regulations and Grifols' products and services
+Excellent communication skills, and ability to manage internal and external customer expectations
+Knowledge of performance evaluation metrics in a business setting and ability to adopt new tools/approaches for tracking
+Strongly collaborative
+Demonstrated flexibility for exploring alternative methods for goal achievement
+Strong business accumen with sound judgement
+Self-directed learner and highly motivated to be product and knowledge expert
+Ability to travel both in-province and out-of-province for ~75-85% of job requirement
+Depending on the area of assignment, directly related experience or a combination of directly related education and experience and/or competencies may be considered in place of the stated requirements. Candidate must have demonstrated leadership and team building skills and proven success in building customer advocates
+
+
+
+Work is performed in the field in physician and healthcare provider offices or local meeting locations. Frequently walks and stands in traveling to visit customers. Can sit for longer periods on flights. Repetitive hand movement of both hands with the ability to make fast, simple, repeated movements of the fingers, hands, and wrists. Occasionally bends and twists neck. Light to moderate lifting and carrying objects with a maximum lift of 25lbs. Frequently drives to site locations. Able to communicate information and ideas so others will understand; with the ability to listen to and understand information and ideas presented through spoken and written words and sentences. Interacts with others, relates information to diverse groups. Must work with diverse groups to communicate information to healthcare providers and healthcare professionals on Grifols' products and services
+
+Third Party Agency And Recruiter Notice
+
+Agencies that present a candidate to Grifols must have an active, nonexpired, Grifols Agency Master Services Agreement with the Grifols Talent Acquisition Department. Additionally, agencies may only submit candidates to positions that they have been engaged to work on by a Grifols Recruiter. All resumes must be sent to a Grifols Recruiter under these terms or they will be considered a Grifols candidate.
+
+Grifols provides equal employment opportunities to applicants and employees without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, protected veteran status, disability or any other characteristic or status protected by law. We will consider for employment all qualified Applicants in a manner consistent with the requirements of applicable state and local laws.
+
+
 Show more
 
 ---
@@ -1444,6 +821,259 @@ Show more
 
 ---
 
+# Scrum Master
+
+- **Company:** Scotiabank
+- **Location:** Toronto, Ontario, Canada
+- **Salary:** 
+- **URL:** https://www.linkedin.com/jobs/view/4367016200
+
+## Skills / Keywords (prioritize these on your resume)
+
+*(none extracted)*
+
+## Full job description
+
+Requisition ID: 249117
+
+Join a purpose driven winning team, committed to results, in an inclusive and high-performing culture.
+
+Scrum Master
+
+Scotiabank continues to be an industry leader for payments technology and innovation. We have a history of safely adopting new practices to better serve our customers. As we scale and evolve our teams, we are seeking individuals who are excited to shape the future of work and thrive in a fast-paced, agile environment. We value diverse perspectives and foster a culture of continuous learning, transparency, and meaningful collaboration within cross-functional communities.
+
+The Role
+
+We are looking for a driven and passionate Scrum Master to champion agile methodologies and build a culture of accountability and continuous improvement. You will work closely with engineering, product, design, and delivery teams to facilitate agile ceremonies, remove impediments, and ensure alignment around sprint goals and priorities. Your efforts will directly impact the way we deliver value to our customers and enable high-performing teams to thrive.
+
+Is this role right for you?
+
+Day-to-Day
+
+
+Be an empowering leader and enable your teams to be highly functioning, self-organizing, and continuously improving
+Facilitate key agile ceremonies including daily standups, sprint planning, reviews, and retrospectives
+Partner with Product Owners, Engineering Leads, and other stakeholders to define sprint goals, refine backlogs, and deliver on roadmaps
+Identify and remove blockers or obstacles that impact team productivity and delivery
+Oversee and manage program releases and implementations
+Foster transparency and collaboration across teams and stakeholders
+Support agile adoption and coach team members on Scrum practices and principles
+Track and report team progress through agile metrics and tools, and use data to drive continuous improvement
+Create a safe and inclusive team environment, encouraging experimentation, innovation, and open feedback
+Serves as a steward of team culture, environment, and engineering practices
+Comfortable to both encourage and challenge others to align behaviours towards our mindset
+Influence, question, and evaluate processes to determine opportunities for effectiveness
+Support release planning and coordinate with other Scrum Masters for cross-team initiatives
+Advocate for quality and predictability by encouraging test automation, definition of done compliance, and technical excellence
+Ability to come to office at least 3 days a week
+
+
+Culture & mindset
+
+
+Act as a steward of agile values, practices, and team health
+Comfortable with challenging the status quo and helping others evolve mindsets and behaviors
+Thrive in a fast-moving, team-based environment where experimentation is encouraged
+Passionate about empowering others and facilitating alignment toward shared goals
+
+
+Do you have the skills that will enable you to succeed in this role?
+
+
+Bachelor’s degree in Computer Science, Business, or related field (or equivalent practical experience)
+Certified Scrum Master (CSM), SAFe, or equivalent agile certification is an asset
+Desire and drive for innovation through problem solving, leveraging resourcefulness as a key skill; have a learning mindset while intrinsically motivated to learning new tools and techniques
+Intermediate to advanced level of experience as a Scrum Master or Agile Coach
+Deep understanding of Agile frameworks, especially Scrum and Kanban
+Strong facilitation skills with a proven ability to lead productive team ceremonies and retrospectives
+Excellent communication and interpersonal skills, with the ability to build relationships and influence without authority
+Experience working with cross-functional teams including engineering, product, and design
+Proficiency in agile tools such as Jira, Confluence, or similar
+Comfortable with continuously changing environments (examples: business priorities, new technologies)
+Exhibit a high degree of understanding risk management
+Leverage and understand the use of analytics to enable day-to-day conversations and decision making
+
+
+What's in it for you?
+
+
+Inclusive and collaborative working environment that encourages creativity, curiosity, and celebrates success
+Work with and learn from diverse industry leaders, who have hailed from top technology companies around the world
+Opportunity to impact high-priority initiatives and contribute to shaping how we work
+We hire you for your talent — not just a job — so you can grow with us. We’ll equip you for success not only in your role, but also in your career as a whole
+Dress codes: Business casual. Being appropriately comfortable and performance matters.
+Access to thousands of online and in-person courses so you can hone your current skills, or learn new ones
+A competitive rewards package that includes a base salary, a performance bonus, company matching programs, paid vacation, personal & sick days, medical, vision, and dental and much more!
+
+
+Location(s): Canada : Ontario : Toronto
+
+Scotiabank is a leading bank in the Americas. Guided by our purpose: "for every future", we help our customers, their families and their communities achieve success through a broad range of advice, products and services, including personal and commercial banking, wealth management and private banking, corporate and investment banking, and capital markets.
+
+At Scotiabank, we value the unique skills and experiences each individual brings to the Bank, and are committed to creating and maintaining an inclusive and accessible environment for everyone. If you require accommodation (including, but not limited to, an accessible interview site, alternate format documents, ASL Interpreter, or Assistive Technology) during the recruitment and selection process, please let our Recruitment team know. If you require technical assistance, please click here. Candidates must apply directly online to be considered for this role. We thank all applicants for their interest in a career at Scotiabank; however, only those candidates who are selected for an interview will be contacted.
+Show more
+
+---
+
+# Scrum Master
+
+- **Company:** Scotiabank
+- **Location:** Toronto, Ontario, Canada
+- **Salary:** 
+- **URL:** https://www.linkedin.com/jobs/view/4368295132
+
+## Skills / Keywords (prioritize these on your resume)
+
+*(none extracted)*
+
+## Full job description
+
+Requisition ID: 249785
+
+Join a purpose driven winning team, committed to results, in an inclusive and high-performing culture.
+
+The Team
+
+Scotiabank continues to be an industry leader for payments technology and innovation. We have a history of safely adopting new practices to better serve our customers. As we scale and evolve our teams, we are seeking individuals who are excited to shape the future of work and thrive in a fast-paced, agile environment. We value diverse perspectives and foster a culture of continuous learning, transparency, and meaningful collaboration within cross-functional communities.
+
+The Role
+
+We are looking for a driven and passionate Scrum Master to champion agile methodologies and build a culture of accountability and continuous improvement with our Global Payments Engineering team. You will work closely with engineering, product, design, and delivery teams to facilitate agile ceremonies, remove impediments, and ensure alignment around sprint goals and priorities. Your efforts will directly impact the way we deliver value to our customers and enable high-performing teams to thrive.
+
+Is this role right for you?
+
+
+Be an empowering leader and enable your teams to be highly functioning, self-organizing, and continuously improving
+Facilitate key agile ceremonies including daily standups, sprint planning, reviews, and retrospectives
+Partner with Product Owners, Engineering Leads, and other stakeholders to define sprint goals, refine backlogs, and deliver on roadmaps
+Identify and remove blockers or obstacles that impact team productivity and delivery
+Oversee and manage program releases and implementations
+Foster transparency and collaboration across teams and stakeholders
+Support agile adoption and coach team members on Scrum practices and principles
+Track and report team progress through agile metrics and tools, and use data to drive continuous improvement
+Create a safe and inclusive team environment, encouraging experimentation, innovation, and open feedback
+Serves as a steward of team culture, environment, and engineering practices
+Comfortable to both encourage and challenge others to align behaviours towards our mindset
+Influence, question, and evaluate processes to determine opportunities for effectiveness
+Ability to come to office at least 4 days a week
+Act as a steward of agile values, practices, and team health
+Comfortable with challenging the status quo and helping others evolve mindsets and behaviors
+Thrive in a fast-moving, team-based environment where experimentation is encouraged
+Passionate about empowering others and facilitating alignment toward shared goals
+
+
+Do you have the skills that will enable you to succeed in this role?
+
+
+5+ years of IT experience in the related field
+3+ years of People Management experience and/or leading large cross-functional/cross-regional teams on major organizational projects, preferably in an agile work environment
+Desire and drive for innovation through problem solving, leveraging resourcefulness as a key skill; have a learning mindset while intrinsically motivated to learning new tools and techniques
+Intermediate to advanced level of experience as a Scrum Master or Agile Coach
+Deep understanding of Agile frameworks, especially Scrum and Kanban
+Strong facilitation skills with a proven ability to lead productive team ceremonies and retrospectives
+Excellent communication and interpersonal skills, with the ability to build relationships and influence without authority
+Experience working with cross-functional teams including engineering, product, and design
+Proficiency in agile tools such as Jira, Confluence, or similar
+Certified Scrum Master (CSM), SAFe, or equivalent agile certification is an asset
+Comfortable with continuously changing environments (examples: business priorities, new technologies)
+Exhibit a high degree of understanding risk management
+Leverage and understand the use of analytics to enable day-to-day conversations and decision making
+
+
+What's in it for you?
+
+
+We have an inclusive and collaborative working environment that encourages creativity and curiosity and celebrates success
+We provide you with the tools and technology needed to create meaningful customer experiences
+You'll get to work with and learn from diverse industry leaders, who have hailed from top technology companies around the world
+We hire you for your talent — not just a job — so you can grow with us. We’ll equip you for success not only in your role, but also in your career as a whole
+Dress codes don't apply here: being comfortable does
+Access to thousands of online and in-person courses so you can hone your current skills, or learn new ones
+A competitive rewards package that includes a base salary, a performance bonus, company matching programs on pension and profit sharing, paid vacation, personal & sick days, medical, vision, and dental and much more
+
+
+Location(s): Canada : Ontario : Toronto
+
+Scotiabank is a leading bank in the Americas. Guided by our purpose: "for every future", we help our customers, their families and their communities achieve success through a broad range of advice, products and services, including personal and commercial banking, wealth management and private banking, corporate and investment banking, and capital markets.
+
+At Scotiabank, we value the unique skills and experiences each individual brings to the Bank, and are committed to creating and maintaining an inclusive and accessible environment for everyone. If you require accommodation (including, but not limited to, an accessible interview site, alternate format documents, ASL Interpreter, or Assistive Technology) during the recruitment and selection process, please let our Recruitment team know. If you require technical assistance, please click here. Candidates must apply directly online to be considered for this role. We thank all applicants for their interest in a career at Scotiabank; however, only those candidates who are selected for an interview will be contacted.
+Show more
+
+---
+
+# Senior Analyst, Strategy & Operations
+
+- **Company:** Scotiabank
+- **Location:** Toronto, Ontario, Canada
+- **Salary:** 
+- **URL:** https://www.linkedin.com/jobs/view/4370606419
+
+## Skills / Keywords (prioritize these on your resume)
+
+*(none extracted)*
+
+## Full job description
+
+Requisition ID: 250513
+
+Join a purpose driven winning team, committed to results, in an inclusive and high-performing culture.
+
+The Analyst, Strategy and Operations supports the Enterprise Data & AI Technology organization—one of Scotiabank’s flagship enterprise wide initiatives. This role is integral to ensuring the smooth operation of a complex, cross functional program that demands strong communication, rigorous financial oversight, effective and strategic planning, and disciplined execution. wide initiatives. This role is integral to ensuring the smooth operation of a complex, cross functional program that demands strong communication, rigorous financial oversight, effective
+
+Working closely with Senior Managers, the Analyst is responsible for the timely progression of tasks related to supporting Data & AI operations including vendor coordination, approvals, and invoice management. This role also supports workforce management task and onboarding of new hires to ensure a seamless experience. As a strategic operations partner, the Analyst coordinates activities across multiple internal teams, works and gathers inputs from stakeholders, and ensures processes advance efficiently. This role further ensures that all strategies, plans, and initiatives align with regulatory standards, financial controls, and internal policies.
+
+Is this role right for you? In this role, you will:
+
+
+Partner with cross‑functional teams to support contract negotiations, renewals, hiring pipeline management, and budget alignment.
+Maintain an accurate and up‑to‑date invoice tracking repository.
+Update invoice records with project details, payment status, and supporting documentation.
+Design and develop reporting dashboards and maintenance of SharePoint sites
+Support with hiring strategy and planning
+Support and maintain onboarding and offboarding processes for both full‑time employees and contractors.
+Support technology teams with equipment provisioning during onboarding and offboarding.
+Coordinates Data & AI initiatives e.g. Bank‑wide hackathons and related activities.
+Support internal audits, compliance activities, and workforce optimization efforts by delivering accurate and timely data.
+Perform ad hoc analyses and generate insights that inform strategic and operational decision‑making.
+Prepare and present findings and recommendations to senior leadership in a clear, concise, and compelling manner.
+
+
+Skills
+
+Do you have the skills that will enable you to succeed in this role? We'd love to work with you if you have:
+
+
+Bachelor’s / College degree in business, finance, or technology
+4yrs+ of professional experience across Project Management, Finance, Administrative, Operations, Contract Management, and Strategy within a technology-driven organization
+Strong communicator with a proven track record of clearly presenting insights and recommendations to a wide range of stakeholders, adept at tailoring messaging and delivery to suit different audiences
+Strong analytical, organizational, and problem-solving skills, with the ability to synthesize information and provide clear recommendations.
+Proven ability to work cross-functionally with diverse stakeholders, including Finance, Procurement, Human Resources, Technology leadership, and business teams.
+Strong sense of ownership, accountability, and initiative in driving technology optimization and operational improvements.
+Experience in event planning, employee engagement, process improvement, or operational efficiency initiatives is considered an asset.
+Results-oriented self-starter with a bias toward action, capable of navigating complex, large-scale organizations and fostering strong cross-functional partnerships; experienced in stakeholder engagement within matrixed environments
+Highly curious and eager to learn, bringing an adaptable and creative mindset to problem-solving
+
+
+What's in it for you?
+
+
+Diversity, Equity, Inclusion & Allyship - We strive to create an inclusive culture where every employee is empowered to reach their fullest potential, respected for who they are, and are embraced through bias-free practices and inclusive values across Scotiabank. We embrace diversity and provide opportunities for all employee to learn, grow & participate through our various Employee Resource Groups (ERGs) that span across diverse gender identities, ethnicity, race, age, ability & veterans.
+Accessibility and Workplace Accommodations - We value the unique skills and experiences each individual brings to the Bank, and are committed to creating and maintaining an inclusive and accessible environment for everyone. Scotiabank continues to locate, remove and prevent barriers so that we can build a diverse and inclusive environment while meeting accessibility requirements.
+Upskilling through online courses, cross-functional development opportunities, and tuition assistance.
+Competitive Rewards program including bonus, flexible vacation, personal, sick days and benefits will start on day one.
+Dynamic Ecosystem - Free tea & coffee, universal washrooms, and lots of space for team collaboration.
+Community Engagement - No matter where you choose to work from; we offer opportunities for community engagement & belonging with our various programs.
+
+
+Location(s): Canada : Ontario : Toronto
+
+Scotiabank is a leading bank in the Americas. Guided by our purpose: "for every future", we help our customers, their families and their communities achieve success through a broad range of advice, products and services, including personal and commercial banking, wealth management and private banking, corporate and investment banking, and capital markets.
+
+At Scotiabank, we value the unique skills and experiences each individual brings to the Bank, and are committed to creating and maintaining an inclusive and accessible environment for everyone. If you require accommodation (including, but not limited to, an accessible interview site, alternate format documents, ASL Interpreter, or Assistive Technology) during the recruitment and selection process, please let our Recruitment team know. If you require technical assistance, please click here. Candidates must apply directly online to be considered for this role. We thank all applicants for their interest in a career at Scotiabank; however, only those candidates who are selected for an interview will be contacted.
+Show more
+
+---
+
 # Customer Experience Associate - Bayview Village Centre, Willowdale (18.75 hours/weekly)
 
 - **Company:** Scotiabank
@@ -1513,109 +1143,6 @@ Location(s): Canada : Ontario : Toronto
 Scotiabank is a leading bank in the Americas. Guided by our purpose: "for every future", we help our customers, their families and their communities achieve success through a broad range of advice, products and services, including personal and commercial banking, wealth management and private banking, corporate and investment banking, and capital markets.
 
 At Scotiabank, we value the unique skills and experiences each individual brings to the Bank, and are committed to creating and maintaining an inclusive and accessible environment for everyone. If you require accommodation (including, but not limited to, an accessible interview site, alternate format documents, ASL Interpreter, or Assistive Technology) during the recruitment and selection process, please let our Recruitment team know. If you require technical assistance, please click here. Candidates must apply directly online to be considered for this role. We thank all applicants for their interest in a career at Scotiabank; however, only those candidates who are selected for an interview will be contacted.
-Show more
-
----
-
-# Chief Marketing Officer
-
-- **Company:** Pet Valu
-- **Location:** Markham, Ontario, Canada
-- **Salary:** 
-- **URL:** https://www.linkedin.com/jobs/view/4373010804
-
-## Skills / Keywords (prioritize these on your resume)
-
-*(none extracted)*
-
-## Full job description
-
-Location: Markham, Ontario
-
-Job Description
-
-The Chief Marketing Officer (CMO) is a key member of the Executive Leadership Team responsible for defining, elevating, and protecting the Pet Valu brand across Canada. This role sets the enterprise-wide marketing and leads the strategic planning, development, and execution of all brand, loyalty, customer engagement, and omnichannel initiatives.
-
-The CMO drives national brand awareness, customer acquisition, lifetime value, and revenue growth through data‑driven insight, compelling brand storytelling, and an integrated approach to the customer journey. The role oversees Marketing, Loyalty, and Customer Engagement/CRM functions, building a high‑performing team that partners closely with Merchandising, Retail Operations, Supply Chain, Digital/E-Commerce, IT, and Finance to support enterprise growth.
-
-
-
-
-Functional Responsibilities
-
-
-
-
-Brand, Marketing & Communications Leadership
-
-Set and execute the enterprise brand and marketing strategy that enhances national brand awareness & affinity and drives customer monthly trips and sales. Lead integrated marketing planning across paid, owned, digital, and instore channels to deliver cohesive brand experiences.‑store channels to deliver cohesive brand experiences.
-Oversee all creative, content, communications, events, and public relations to protect and advance brand reputation.
-
-
-
-
-Digital Commerce & Omnichannel Strategy
-
-Partner with Digital/E-Commerce & Customer Technology on Pet Valu’s omnichannel strategy, strengthening the customer journey across ecommerce, mobile app, digital storefronts, and instore experiences. commerce, mobile app, digital storefronts, and instore experiences.
-Commerce capabilities, including traffic acquisition, conversion optimization, product experience, and digital merchandising.
-
-
-
-
-Loyalty, CRM & Customer Lifecycle Optimization
-
-Lead the enterprise loyalty strategy, ensuring program growth, optimization, and differentiation.
-Use customer data, analytics, and segmentation to drive personalized marketing and measurable improvements in loyalty engagement, visit frequency, and lifetime value.
-Enhance CRM capabilities through advanced targeting, automation, and customer journey mapping.
-
-
-
-
-Performance, Analytics & Data-Led Decision Making
-
-Establish key KPIs across brand, digital commerce, loyalty, and customer engagement to monitor performance and drive accountability.
-Champion data-driven decision making, leveraging insights to optimize marketing investment, campaign performance, and customer experience outcomes.
-
-
-
-
-Budgeting, Governance & Vendor Partnerships
-
-Oversee the marketing budget, ensuring maximum impact and disciplined investment.
-Manage relationships with agencies and media partners to support scalable growth.
-
-
-
-
-Skills, Experience, Education, Certifications (List minimum required to enter the role.)
-
-Bachelor’s Degree in Marketing, Business, Digital Commerce, or a related field.
-Proven leadership experience in marketing within a retail, consumer goods, or omni‑channel environment.
-Expertise in brand strategy, customer insights, marketing communications, and loyalty engagement.
-Strong analytical, strategic planning, and decision‑making skills.
-Excellent presentation, negotiation, and stakeholder‑management capabilities.
-Demonstrated success building, developing, and leading large marketing teams.
-Ability to thrive in a fast‑paced, growth‑oriented organization.
-Passion for operations and recognized depth of marketing excellence.
-
-
-
-
-Competencies
-
-Business Acumen Knows how businesses work; knowledgeable in current and possible future policies, practices, trends, and information affecting his/her business and organization; knows the competition; is aware of how strategies and tactics work in the marketplace.
-Intellectual Horsepower Is bright and intelligent; deals with concepts and complexity comfortably; described as intellectually sharp, capable, and agile.
-Decision Quality Makes good decisions (without considering how much time it takes) based upon a mixture of analysis, wisdom, experience, and judgment; most of his/her solutions and suggestions turn out to be correct and accurate when judged over time; sought out by others for advice and solutions.
-Directing Others Is good at establishing clear directions; sets stretching objectives; distributes the workload appropriately; lays out work in a well-planned and organized manner; maintains two-way dialogue with others on work and results; brings out the best in people; is a clear communicator.
-Strategic Agility Sees ahead clearly; can anticipate future consequences and trends accurately; has broad knowledge and perspective; is future oriented; can articulately paint credible pictures and visions of possibilities and likelihoods; can create competitive and breakthrough strategies and plans.
-
-
-
-
-This posting is for an existing vacancy.
-
-As part of the application process, AI may be used to assist with screening, or assessing job applicants .
-
 Show more
 
 ---
@@ -1803,6 +1330,74 @@ If this feels like the right environment for you, we'd love to meet you and help
 Accessibility & AI Transparency
 
 Prophix promotes an accessible hiring process. If you need accommodation at any stage, we'll work with you. Some interviews may be recorded so our hiring team can review and assess responses fairly and consistently. As part of our commitment to Responsible AI, we use a small number of AI-supported tools to help with tasks like resume review, shortlisting, or creating interview summaries. AI is never used as the sole basis for hiring decisions, and your personal data is never used to train AI models. If you'd prefer not to take part in any AI-assisted step, just let us know and we'll be happy to accommodate.
+Show more
+
+---
+
+# Customer Success Manager
+
+- **Company:** Equifax
+- **Location:** Toronto, Ontario, Canada
+- **Salary:** 
+- **URL:** https://www.linkedin.com/jobs/view/4373619521
+
+## Skills / Keywords (prioritize these on your resume)
+
+*(none extracted)*
+
+## Full job description
+
+Synopsis of the Role
+
+The Customer Success Manager is responsible for optimizing the Customer Experience lifecycle, handling post-Sales Implementation program management and collaborating with the customer to ensure they are realizing expected value from EFX solutions, as well as driving adoption and retention.
+
+What You’ll Do
+
+
+Proactively drive adoption, usage, net retention, and renewals by optimizing customer experience for complex accounts
+Act as the connecting thread for internal teams with the customer across the customer journey
+Drive customer advocacy in resolving customer issues from acquisition to adoption to use to value realization
+Serve as a trusted adviser and advocate for clients
+Create customer success plan with each client
+Monitor and maintain customer health
+Educate clients on business value of solutions
+Aid customers in usage and value realization of solutions
+Partner with Account Executive(s) in preparing and conducting quarterly business reviews
+Drive customer advocacy within Equifax
+Utilize voice of the customer to inform product roadmaps
+Coordinate internal COE teams to benefit of customers
+Provide clients transparency on status of issues/requests
+Assist with resolution of customer support issues
+
+
+What Experience You Need
+
+
+5-7 years of sales experience in management consulting, customer success, account management, business development, or other client-facing role
+Bachelor's degree in related discipline or equivalent experience
+Experience promoting value through the customer experience
+Experience working with complex, multi-divisional, multi-geographical customers
+Ability to create structure in ambiguous situations and design effective processes and creatively solve problems
+Bias for action
+Experience working with cross-functional teams
+Exceptional ability to communicate and foster positive business relationships
+Ability to establish milestones and keep all team members on task; strong project management skills
+Self-driven and proactive
+
+
+What Could Set You Apart
+
+
+Knowledge of customer success processes
+Strong understanding of market segments and market data trends
+Accountability
+Bravery
+Curiosity
+Collaboration
+Ownership
+
+
+This is an existing role.
 Show more
 
 ---
@@ -2084,6 +1679,193 @@ Show more
 
 ---
 
+# Customer Success Executive
+
+- **Company:** ServiceNow
+- **Location:** Toronto, Ontario, Canada
+- **Salary:** 
+- **URL:** https://www.linkedin.com/jobs/view/4374774881
+
+## Skills / Keywords (prioritize these on your resume)
+
+*(none extracted)*
+
+## Full job description
+
+Company Description
+
+It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today — ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, including 85% of the Fortune 500®. Our intelligent cloud-based platform seamlessly connects people, systems, and processes to empower organizations to find smarter, faster, and better ways to work. But this is just the beginning of our journey. Join us as we pursue our purpose to make the world work better for everyone.
+
+Job Description
+
+The Customer Success Executive is accountable for the strategic leadership and execution of post-sales activities within our most valuable accounts. This position plays a crucial role in driving ServiceNow’s long-term value by accelerating customers’ journey to success, ensuring predictable renewals, and maximizing the impact of ServiceNow across their business transformation initiatives.
+
+As a trusted advisor, you’ll partner with C-level executives, guide seamless delivery of business transformation, and foster collaboration with ServiceNow’s teams and strategic partners.
+
+What You Get To Do In This Role
+
+
+Drive Post-Sales Success: Own and lead the customer’s post-sales transformation, aligning ServiceNow’s offerings to customer goals, and bringing relevant industry thought-leadership to the table. Foster strong relationships with C-Level executives to deliver on business outcomes.
+Collaborate Strategically: Partner with Account Executives to create and execute integrated pre- and post-sales strategies, delivering long-term value for both the customer and ServiceNow. Leverage the right resources at the right time to ensure success.
+Mitigate Risks and Drive Value: Proactively identify potential risks to success and work with the customer and internal teams to develop strategies to overcome them, ensuring a smooth path toward value realization.
+Focus on Key Performance Indicators (KPIs): Guide and inspire the Customer Success team to meet critical operational KPIs—adoption, technical health, renewals, customer satisfaction, and expansion. Work closely with customers to align their roadmap and drive new revenue opportunities.
+Foster Strategic Alignment: Build relationships with ServiceNow leaders and consistently incorporate customer feedback to drive continuous improvement. Align business transformation insights with organizational goals to ensure long-term success.
+Advocate for Innovation and Continuous Learning: As a strategic thought leader, drive innovative solutions for our customers, always looking for opportunities to help them achieve their long-term goals. Foster a culture of agility and calculated risk-taking within the team.
+Set Success Metrics and Milestones: Establish clear, measurable success metrics with the customer, and regularly review progress. Refine business transformation plans as needed to ensure milestones are met and value is realized.
+
+
+Qualifications
+
+The ideal candidate will have extensive experience leading large-scale digital business transformations, acting as a trusted advisor to both internal and C-level customer executives. You will be an expert in governance, strategy, and execution across cross-functional teams and have a track record of delivering scalable, repeatable success. Your passion for driving customer success at an enterprise scale and your ability to work in complex, dynamic environments will be key to your success in this role.
+
+To Be Successful In This Role, You Will Need
+
+
+Experience in leveraging or critically thinking about how to integrate AI into work processes, decision-making, or problem-solving. This may include using AI-powered tools, automating workflows, analyzing AI-driven insights, or exploring AI’s potential impact on the function or industry.
+Educational Background: BA/BS or equivalent required, Master’s degree preferred.
+Experience: A minimum of 12 years in a management consulting or leadership role at a top-tier consulting firm, solution consulting, or similar positions focused on technology-enabled business transformations (Digital/SaaS/Enterprise Software).
+Leadership Expertise: Demonstrated success in running large-scale, strategic accounts and exceeding business objectives. Proven track record in building and leading high-performing Customer Success or Consulting teams.
+Business Acumen: Strong experience in identifying and solving complex business problems and aligning solutions with customer business objectives.
+Cross-Functional Leadership: A history of working across multiple functions and driving alignment in large, matrixed environments.
+C-Level Relationships: Strong experience building relationships with C-level business leaders, including within some of the world’s largest enterprises.
+Adaptability: Ability to thrive in rapidly changing environments, adapting strategies to new challenges and opportunities.
+Execution Focus: Ability to create repeatable processes for scalable execution while maintaining a hands-on approach to ensure critical tasks are completed efficiently.
+Collaboration and Communication: Excellent communicator and influencer, with the ability to work effectively across a global organization and foster collaboration at all levels.
+Customer Focus: Deep understanding of customer needs, challenges, and motivations, with a keen ability to address concerns and ensure satisfaction.
+
+
+FD21
+
+Additional Information
+
+Work Personas
+
+We approach our distributed world of work with flexibility and trust. Work personas (flexible, remote, or required in office) are categories that are assigned to ServiceNow employees depending on the nature of their work. Learn more here.
+
+Equal Opportunity Employer
+
+ServiceNow is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, creed, religion, sex, sexual orientation, national origin or nationality, ancestry, age, disability, gender identity or expression, marital status, veteran status, or any other category protected by law. In addition, all qualified applicants with arrest or conviction records will be considered for employment in accordance with legal requirements.
+
+Accommodations
+
+We strive to create an accessible and inclusive experience for all candidates. If you require a reasonable accommodation to complete any part of the application process, or are unable to use this online application and need an alternative method to apply, please contact globaltalentss@servicenow.com for assistance.
+
+Export Control Regulations
+
+For positions requiring access to controlled technology subject to export control regulations, including the U.S. Export Administration Regulations (EAR), ServiceNow may be required to obtain export control approval from government authorities for certain individuals. All employment is contingent upon ServiceNow obtaining any export license or other approval that may be required by relevant export control authorities.
+
+From Fortune. ©2025 Fortune Media IP Limited. All rights reserved. Used under license.
+Show more
+
+---
+
+# Service Contract Support Specialist
+
+- **Company:** Honeywell
+- **Location:** Toronto, Ontario, Canada
+- **Salary:** 
+- **URL:** https://www.linkedin.com/jobs/view/4375088645
+
+## Skills / Keywords (prioritize these on your resume)
+
+*(none extracted)*
+
+## Full job description
+
+Job Description
+
+The Service Contract Support Specialist will have ownership of a designated service contract base and will be responsible for driving the renewal / escalation process for those contracts with business stakeholders. They will also have ownership for any changes occurring within the contract lifecycle, parts updates, change orders, cancellations, monitoring data quality.
+
+You will report to the HBS Services Operations Leader and work on a hybrid schedule out of your local Honeywell office.
+
+The Main Objectives Are
+
+
+Create and coordinate renewal / escalation process for assigned contract base, accurately and on time, to ensure proposals / renewal letters / escalation letters are sent to business stakeholders on time, following GDM Processes.
+Drive contract renewals correctly in CPQ with Operations and AMs, with all data and required documentation, to ensure no delays/errors are incurred during booking
+Ownership for any changes occurring within the contract lifecycle, add-deduct, cancellations, monitoring data quality. This will include the first year of newly booked contracts, which have been handed over from New Contract Proposal Team.
+
+
+Responsibilities
+
+KEY RESPONSIBILITIES
+
+
+Understand assigned contracts and build relationships with Honeywell personnel like Service Business Leaders and Field Service Supervisors.
+Proactively manage renewals and escalations, ensuring timely completion and compliance with deadlines.
+Maintain accurate records in NEX/CPQ, documenting all stages of the renewal/escalation process.
+Perform SMS Asset Validation and verify equipment maintenance schedule
+Provide regular updates on contract status and escalate issues that could impact the renewal/escalation processes.
+Validate customer POs against proposals and obtain necessary SEA approvals before proposal issuance.
+Prepare complete booking packages for financial recording in CPQ/NEX and SAP, ensuring proper documentation.
+Identify areas for improvement within the renewal/escalation process and assist in training new employees.
+Drive personal growth through regular meetings with management, utilizing Salesforce and Power BI dashboards for task tracking.
+Typically assigned to a particular region, handling # service contracts within the region.
+Working hours to support ‘normal working hours’ for region supported – shift hours may be required.
+Occasional estimation of renewal contracts.
+
+
+Benefits Of Working For Honeywell
+
+
+Benefits – Medical, Vision, Dental, Mental Health
+Paid Vacation
+Retirement Benefits (as per regional policy)
+Career Growth
+Professional Development
+
+
+Qualifications
+
+The annual base salary range for this position is $60,000 - $90,000. Please note that this salary information serves as a general guideline. Honeywell considers various factors when extending an offer, including but not limited to the scope and responsibilities of the position, the candidate's work experience, education and training, key skills, as well as market and business considerations.
+
+This position is for a current vacancy.
+
+YOU MUST HAVE
+
+
+5 or more years of work experience in service contract renewals in a relevant industry (preferably HVAC, automation, security, fire)
+5 or more years of work experience with MS Office Suite and performing data analysis using Excel.
+Completed post-secondary education in an administrative or technical field.
+
+
+WE VALUE
+
+
+Bachelors Degree or Equivalent - Administrative or technical; OR 5 years Honeywell / Services Experience
+Strong Math skills, including basic commercial awareness (booking margins, cash flow)
+Experience with NEX/Salesforce and SAP
+Able to forge strong internal business relationships and deliver on commitments.
+Relevant knowledge in HVAC, Building Automation, Security, Fire
+Demonstrates a strong commercial awareness.
+Excellent interpersonal skills as well as good verbal, written and presentation skills.
+Ability to multi-task and prioritize work.
+Self-motivated and able to work with minimum supervision.
+Demonstrates a high level of planning & organizational skills daily.
+Highly Customer Focused approach, demonstrating success through a ‘Voice of the Customer’ approach daily.
+Highly self-aware, recognizing the impact of approach and behaviors on peers, direct reports, customers and other internal and external contacts.
+Ability to work within a remote team and support each other when needed
+
+
+About Honeywell
+
+Honeywell International Inc. (Nasdaq: HON) invents and commercializes technologies that address some of the world’s most critical challenges around energy, safety, security, air travel, productivity, and global urbanization. We are a leading software-industrial company committed to introducing state of the art technology solutions to improve efficiency, productivity, sustainability, and safety in high growth businesses in broad-based, attractive industrial end markets. Our products and solutions enable a safer, more comfortable, and more productive world, enhancing the quality of life of people around the globe.
+
+THE BUSINESS UNIT
+
+Honeywell Building Automation (BA) is a leading global provider of products, software, solutions, and technologies that enable building owners and occupants to ensure their facilities are safe, energy efficient, sustainable, and productive. BA products and services include advanced software applications for building control and optimization; sensors, switches, control systems, and instruments for energy management; access control; video surveillance; fire products; and installation, maintenance, and upgrades of systems.
+
+Accommodation is available upon request for applicants with disabilities under the Ontario Human Rights Code.
+
+Honeywell is an equal opportunity employer. Qualified applicants will be considered without regard to age, race, creed, color, national origin, ancestry, marital status, affectional or sexual orientation, gender identity or expression, disability, nationality, sex, religion, or veteran status.
+
+About Us
+
+Honeywell helps organizations solve the world's most complex challenges in automation, the future of aviation and energy transition. As a trusted partner, we provide actionable solutions and innovation through our Aerospace Technologies, Building Automation, Energy and Sustainability Solutions, and Industrial Automation business segments – powered by our Honeywell Forge software – that help make the world smarter, safer and more sustainable.
+Show more
+
+---
+
 # Marketing Manager, Education
 
 - **Company:** Logitech
@@ -2200,6 +1982,73 @@ Show more
 - **Location:** Toronto, Ontario, Canada
 - **Salary:** 
 - **URL:** https://www.linkedin.com/jobs/view/4375146901
+
+## Skills / Keywords (prioritize these on your resume)
+
+*(none extracted)*
+
+## Full job description
+
+About Rippling
+
+Rippling is the first way for businesses to manage all of their HR & IT—payroll, benefits, computers, apps, and more—in one unified workforce platform.
+
+By connecting every business system to one source of truth for employee data, businesses can automate all of the manual work they normally need to do to make employee changes. Take onboarding, for example. With Rippling, you can just click a button and set up a new employees’ payroll, health insurance, work computer, and third-party apps—like Slack, Zoom, and Office 365—all within 90 seconds.
+
+Based in San Francisco, CA, Rippling has raised $1.2B from the world's top investors—including Kleiner Perkins, Founders Fund, Sequoia, Bedrock, and Greenoaks—and was named one of America's best startup employers by Forbes (#12 out of 500)
+
+About The Role
+
+Rippling is looking for a French speaking, customer-obsessed CSM (Internally titled: Technical Account Manager (TAM)) to join our Global TAM team in Canada! As part of our dedicated Technical Account Management organization, you will work closely with our rapidly scaling and maturing globally headquartered customers to understand their needs, demonstrate where Rippling can solve their problems, and help drive their adoption of Rippling’s product suite.
+
+You will own the key admin relationships, and be responsible for turning customers into long-term champions, developing account strategy, and enabling Rippling’s customers, all while providing an impeccable customer experience along the way. If you are a self-starter, find yourself constantly taking on new challenges, working feverishly until you find solutions, and pride yourself in providing an excellent customer experience, you're in the right place!
+
+Please note this role will be hybrid in our new downtown Toronto office, 3x a week.
+
+What You Will Do
+
+
+Ensure customer satisfaction for Rippling's North America based customers and take ownership of retaining a book of business
+Serve as a global Subject Matter Expert (SME) on the Technical Account Management team, providing support to US-based customers and Canada.
+Foster strong cross-functional partnerships and represent the Voice of the Customer for Canadian customer needs
+Drive increased adoption of key features, new product releases, and best practices
+Swiftly prioritize and resolve critical customer issues
+Serve as the dedicated Rippling liaison for customer questions, issues, or escalations, displaying a strong sense of urgency and advocacy to ensure prompt resolution
+Collaborate directly with customers to understand and optimize their HR, payroll, benefits administration, and IT workflows
+Master the full suite of Rippling products to provide comprehensive advice
+
+
+What You Will Need
+
+
+French speaking a huge plus!
+5+ years of work experience at a SaaS company in a customer-facing role
+Experience with payroll strongly preferred, bonus points for HRIS or other HR/HCM SaaS
+Excellent at time management, prioritising tasks, and adapting on a day-to-day basis
+Proven experience as an account manager with a scaled book of business
+Track record of building strong customer relationships
+Hunger to work extremely hard on a growing team
+Stellar written and verbal communication skills
+Flexibility with changing job duties and responsibilities
+Passion for enabling both customers and internal teams
+Interest in actively working with product and engineering team
+
+
+Additional Information
+
+Rippling is an equal opportunity employer. We are committed to building a diverse and inclusive workforce and do not discriminate based on race, religion, color, national origin, ancestry, physical disability, mental disability, medical condition, genetic information, marital status, sex, gender, gender identity, gender expression, age, sexual orientation, veteran or military status, or any other legally protected characteristics, Rippling is committed to providing reasonable accommodations for candidates with disabilities who need assistance during the hiring process. To request a reasonable accommodation, please email accomodations@rippling.com.
+
+Rippling highly values having employees working in-office to foster a collaborative work environment and company culture. For office-based employees (employees who live within a defined radius of a Rippling office), Rippling considers working in the office, at least three days a week under current policy, to be an essential function of the employee's role.
+Show more
+
+---
+
+# Customer Success Manager, Toronto Based
+
+- **Company:** Rippling
+- **Location:** Toronto, Ontario, Canada
+- **Salary:** 
+- **URL:** https://www.linkedin.com/jobs/view/4375160154
 
 ## Skills / Keywords (prioritize these on your resume)
 

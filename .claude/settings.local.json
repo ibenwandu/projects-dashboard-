@@ -69,7 +69,17 @@
       "WebFetch(domain:cursor.com)",
       "Bash(ls /c/Users/user/.claude/ 2>/dev/null && find /c/Users/user/.claude -name \"*.json\" -o -name \"*.mcp*\" 2>/dev/null | head -30)",
       "Bash(find /c/Users/user/AppData/Roaming -name \"claude_desktop_config.json\" 2>/dev/null; find /c/Users/user -maxdepth 3 -name \"*mcp*\" -o -name \"*claude_desktop*\" 2>/dev/null | grep -v \".git\" | head -20)",
-      "Bash(find /c/Users/user/.claude/plugins/cache -name \"*.mcp.json\" -o -name \".mcp.json\" 2>/dev/null | head -10 | xargs -I{} cat {} 2>/dev/null | head -60)"
+      "Bash(find /c/Users/user/.claude/plugins/cache -name \"*.mcp.json\" -o -name \".mcp.json\" 2>/dev/null | head -10 | xargs -I{} cat {} 2>/dev/null | head -60)",
+      "Bash(find /c/Users/user/.claude/plugins/cache -name \".mcp.json\" -path \"*/pinecone/*\" | head -1 | xargs cat 2>/dev/null; find /c/Users/user/.claude/plugins/cache -name \".mcp.json\" -path \"*/playwright/*\" | head -1 | xargs cat 2>/dev/null)",
+      "Bash(find /c/Users/user/projects/personal/emy -name \"gemini*\" -o -name \"*gemini*\" 2>/dev/null | grep -v __pycache__)",
+      "Bash(find /c/Users/user/projects/personal -name \"cursor*\" -o -name \"*cursor*\" 2>/dev/null | head -20)",
+      "Bash(cd /c/Users/user/projects/personal/cursor-mcp-server && CURSOR_AGENTS_API_KEY=\"crsr_f4c560519e7405503f0237dec0364c1ebb458df7de810477aa2faff4ef720ae2\" python main.py 2>&1 | head -50)",
+      "Bash(curl -s http://localhost:5000/health 2>/dev/null || echo \"Cursor MCP server not responding on localhost:5000\")",
+      "Bash(gh api:*)",
+      "Bash(find . -maxdepth 2 -name \"*.yaml\" -o -name \"*.yml\" -o -name \"render.json\" 2>/dev/null | grep -v \".worktree\" | head -10)",
+      "Bash(mv emy/.dockerignore .dockerignore 2>/dev/null; cat > .dockerignore <<'EOF'\n# Git\n.git\n.gitignore\n\n# Python\n__pycache__\n*.pyc\n*.pyo\n*.pyd\n.Python\n*.egg-info\ndist\nbuild\n.venv\nvenv\n\n# Local development\n.env\n.env.local\n.DS_Store\n*.swp\n*.swo\n*~\n\n# IDE\n.vscode\n.idea\n*.code-workspace\n\n# Testing\n.pytest_cache\nhtmlcov\n.coverage\n\n# Node/JS\nnode_modules\npackage-lock.json\nyarn.lock\n\n# Other\n.claude\n.worktrees\nObsidian Vault\n*.md\ntests/\ndocs/\nEOF\necho \"✓ Created .dockerignore at root\")",
+      "Bash(cd \"C:\\\\Users\\\\user\\\\projects\\\\personal\" && docker build -f Dockerfile -t emy:test . 2>&1 | tail -50)",
+      "Bash(cat > emy/requirements.txt <<'EOF'\n# Emy AI Chief of Staff - Production Requirements\n# Minimal, focused dependencies for runtime\n\n# Core API Framework\nfastapi==0.104.1\nuvicorn[standard]==0.24.0\npydantic==2.5.0\n\n# CLI & User Interface\nclick==8.1.7\nrich==13.7.0\n\n# External APIs & Data\npython-dotenv==1.0.0\nrequests==2.31.0\noandapyV20==0.7.2\n\n# LLM Integration\nanthropic>=0.32.1\nEOF\necho \"✓ Created minimal production requirements.txt\")"
     ]
   }
 }
