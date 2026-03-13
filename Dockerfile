@@ -50,6 +50,14 @@ RUN useradd -m -u 1000 emy && \
 # Copy application code
 COPY --chown=emy:emy . .
 
+# Debug: Show what was copied
+RUN echo "=== /app contents ===" && \
+    ls -la /app/ && \
+    echo "=== /app/emy contents ===" && \
+    ls -la /app/emy/ 2>&1 || echo "ERROR: /app/emy/ not found!" && \
+    echo "=== Python path ===" && \
+    python -c "import sys; print('\n'.join(sys.path))"
+
 # Switch to non-root user
 USER emy
 
