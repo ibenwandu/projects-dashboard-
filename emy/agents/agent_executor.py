@@ -13,6 +13,7 @@ import json
 from typing import Dict, Any, Tuple, Optional
 
 from emy.agents.knowledge_agent import KnowledgeAgent
+from emy.agents.trading_agent import TradingAgent
 
 logger = logging.getLogger('AgentExecutor')
 
@@ -20,8 +21,9 @@ logger = logging.getLogger('AgentExecutor')
 AGENT_MAP = {
     'knowledge_query': KnowledgeAgent,
     'knowledge_synthesis': KnowledgeAgent,
+    'trading_health': TradingAgent,
+    'trading_analysis': TradingAgent,
     # Future agents will be added here
-    # 'trading_analysis': TradingAgent,
     # 'job_search': JobSearchAgent,
 }
 
