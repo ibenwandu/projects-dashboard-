@@ -208,6 +208,12 @@ This portfolio includes several active projects with interdependencies:
 ## Automation Settings (Standard Operating Procedure)
 
 **These actions are automatic — DO NOT ask for confirmation or file paths:**
+- ✅ **SESSION_RECALL_PROTOCOL**: Multi-source context recovery at every session start
+  - Script: `~/.claude/recall-session.sh` (runs automatically at session start)
+  - Sources (in order): Git log → Project session logs → Service health checks → Decision index
+  - Purpose: Prevent context loss by recovering state from authoritative sources
+  - Enforcement: Invoked via `superpowers:session-recall` skill before any substantive work
+  - Result: Evidence-backed current status before user asks "what are we doing?"
 - ✅ **SESSION_DECISIONS_SYSTEM**: Auto-load all prior decisions at session start, auto-capture all decisions at session end
   - Location: `~/.claude/session-decisions/` (persistent home directory storage)
   - Auto-load: Displays DECISION_INDEX.md and ACTIVE_PROJECTS.md at session start via /start-session skill
@@ -230,6 +236,7 @@ This portfolio includes several active projects with interdependencies:
 ## When Working with Ibe: Do's and Don'ts
 
 ### ✅ DO:
+- **ALWAYS invoke session recall protocol at session start** — run recall-session.sh and read recent project logs before responding substantively
 - Execute automated procedures (MEMORY.md, CLAUDE_SESSION_LOG.md, Obsidian dashboard) without asking
 - Confirm before taking reversible actions (especially git operations)
 - Present options with clear recommendations
