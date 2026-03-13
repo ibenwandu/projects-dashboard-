@@ -1,7 +1,6 @@
 # Multi-stage Dockerfile for Emy AI Chief of Staff
 # Base: python:3.11-slim for compatibility and minimal size
-# NOTE: This Dockerfile is at emy/Dockerfile but uses repository root as build context
-# (configured in Render service settings)
+# NOTE: Build context is emy/ directory (configured in Render service settings)
 
 # ============================================================================
 # Stage 1: Build
@@ -15,8 +14,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements from emy/ (build context is repository root)
-COPY emy/requirements.txt .
+# Copy requirements (build context is emy/ directory)
+COPY requirements.txt .
 
 # Create virtual environment and install dependencies
 RUN python -m venv /opt/venv
@@ -50,9 +49,10 @@ RUN useradd -m -u 1000 emy && \
     chown -R emy:emy /app /data /opt/venv
 
 # Copy application code
-# Build context is repository root, so this copies the entire repo
-# Result: /app/emy/ directory exists with all modules
-COPY --chown=emy:emy . .
+# Build context is emy/ directory, so copy emy/ contents to /app/emy/
+# This ensures modules are at /app/emy/gateway/, /app/emy/core/, etc.
+# matching the codebase's import statements (from emy.gateway.api, etc.)
+COPY --chown=emy:emy . ./emy/
 
 # Switch to non-root user
 USER emy
