@@ -9,6 +9,22 @@ import sys
 import os
 from pathlib import Path
 
+# DIAGNOSTIC OUTPUT
+print("\n" + "="*60)
+print("ENTRYPOINT DIAGNOSTICS")
+print("="*60)
+print(f"Current directory: {os.getcwd()}")
+print(f"\n/app exists: {Path('/app').exists()}")
+print(f"/app/emy exists: {Path('/app/emy').exists()}")
+if Path('/app').exists():
+    print(f"\n/app contents: {list(Path('/app').iterdir())[:10]}")  # First 10 items
+if Path('/app/emy').exists():
+    print(f"/app/emy contents: {list(Path('/app/emy').iterdir())[:10]}")
+print(f"\nPython sys.path:")
+for p in sys.path:
+    print(f"  {p}")
+print("="*60 + "\n")
+
 # Ensure /app is in the Python path
 app_dir = Path("/app").resolve()
 if str(app_dir) not in sys.path:

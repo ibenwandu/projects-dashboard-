@@ -47,6 +47,10 @@ RUN useradd -m -u 1000 emy && \
     mkdir -p /app /data && \
     chown -R emy:emy /app /data /opt/venv
 
+# CACHE BUSTER - invalidate cached layers to force fresh build
+ARG BUILD_ID
+RUN echo "Build ID: ${BUILD_ID}"
+
 # Copy application code
 COPY --chown=emy:emy . .
 
