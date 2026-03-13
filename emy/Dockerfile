@@ -55,4 +55,4 @@ USER emy
 
 # Expose port and run server
 EXPOSE 8000
-CMD ["python", "-m", "uvicorn", "emy.gateway.api:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "/app/emy/entrypoint.py"]
