@@ -17,6 +17,7 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from emy.core.database import EMyDatabase
+from emy.agents.agent_executor import AgentExecutor
 
 logger = logging.getLogger('EmyGateway')
 
@@ -151,7 +152,7 @@ async def execute_workflow(request: WorkflowExecuteRequest):
         request: Workflow execution request
 
     Returns:
-        Created workflow information
+        Workflow information with real output from agent execution
     """
     import json
 
@@ -164,23 +165,34 @@ async def execute_workflow(request: WorkflowExecuteRequest):
     # Prepare input data
     input_data = json.dumps(request.input) if request.input else None
 
-    # Create workflow record in database with pending status
+    # Execute the workflow using AgentExecutor
+    logger.info(f"Executing workflow {workflow_id}: type={request.workflow_type}, agents={request.agents}")
+    success, output = AgentExecutor.execute(
+        request.workflow_type,
+        request.agents,
+        request.input or {}
+    )
+
+    # Determine final status
+    final_status = 'completed' if success else 'error'
+
+    # Store workflow output to database
     db.store_workflow_output(
         workflow_id,
         request.workflow_type,
-        'pending',
-        None  # No output yet
+        final_status,
+        output  # Real output from agent execution
     )
 
     workflow = {
         'workflow_id': workflow_id,
         'type': request.workflow_type,
-        'status': 'pending',
+        'status': final_status,
         'agents': request.agents,
         'created_at': now,
         'updated_at': now,
         'input': input_data,
-        'output': None
+        'output': output
     }
 
     # Also keep in-memory for API compatibility
@@ -189,11 +201,11 @@ async def execute_workflow(request: WorkflowExecuteRequest):
     return WorkflowResponse(
         workflow_id=workflow_id,
         type=request.workflow_type,
-        status='pending',
+        status=final_status,
         created_at=now,
         updated_at=now,
         input=input_data,
-        output=None
+        output=output
     )
 
 
