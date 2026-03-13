@@ -2,6 +2,71 @@
 
 ---
 
+## Session: Render Deployment - Docker Build Context Fix (2026-03-13)
+
+**Date**: March 13, 2026
+**Type**: Production Deployment & Root Cause Debugging
+**Status**: ✅ COMPLETE — Service live at https://emy-phase1a.onrender.com
+
+### Objective
+Deploy Emy Phase 1a API to Render production platform and resolve repeated deployment failures.
+
+### Root Cause Identified
+**Docker build context mismatch**: Render service configured to use `emy/Dockerfile` with `emy/` as build context, but codebase imports from `emy.gateway.api`, `emy.core.database`, etc.
+
+When build context is `emy/`:
+- `COPY . .` copies emy/ contents to `/app/gateway/`, `/app/core/`, etc. (NOT `/app/emy/...`)
+- Code imports `from emy.core.database` but emy/ doesn't exist at /app/emy/
+- Result: `ModuleNotFoundError: No module named 'emy'`
+
+### Solution Implemented
+**Updated `emy/Dockerfile` COPY command:**
+```dockerfile
+# Build context is emy/ directory
+COPY . ./emy/  # Creates /app/emy/ subdirectory with correct structure
+```
+
+**Result**: Modules at `/app/emy/gateway/`, `/app/emy/core/` match import statements
+
+### Debugging Process
+Followed systematic debugging methodology (superpowers:systematic-debugging):
+
+1. **Phase 1: Root Cause Investigation**
+   - Collected diagnostic logs from multiple deployment failures
+   - Analyzed Docker build output: "failed to calculate checksum of ref... /emy/requirements.txt: not found"
+   - This revealed actual build context was `emy/`, not repository root
+
+2. **Phase 2: Pattern Analysis**
+   - Compared working vs. broken module structures
+   - Identified: `COPY . ./emy/` creates correct structure
+
+3. **Phase 3: Hypothesis & Test**
+   - Hypothesis: "If COPY . ./emy/, then modules will be at /app/emy/"
+   - Test: Updated emy/Dockerfile, deployed
+   - Result: ✅ Service live on first correct hypothesis
+
+### Files Modified
+- `emy/Dockerfile` — Updated COPY command: `COPY . ./emy/`
+- `emy/entrypoint.py` — Correct imports: `from emy.gateway.api import app`
+
+### Key Metrics
+- **Deployment failures**: 6 attempts before success
+- **Time to resolution**: ~2 hours (systematic approach)
+- **Root cause**: Docker build context configuration
+- **Service status**: ✅ Live and responding
+
+### Lessons Documented
+Comprehensive lessons saved to memory:
+- [Emy Docker Deployment Lessons](../../../.claude/projects/C--Users-user-projects-personal/memory/emy_docker_deployment_lessons.md)
+
+Key takeaways:
+1. Docker build context = root for all COPY commands
+2. Dockerfile path in service config determines build context (can't override)
+3. Always verify build context from Docker logs: "transferring context:" line
+4. Test locally before deploying to Render
+
+---
+
 ## Session: Phase 1b Completion (2026-03-12)
 
 **Date**: March 12, 2026
