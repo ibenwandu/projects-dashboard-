@@ -2052,3 +2052,336 @@ After deploy:
 ---
 
 *Part 23 last updated: Priorities 1–3 implemented; Priority 1 verified in logs, Priority 2 logging deployed (awaiting more trade-close evidence), ready for future Priority 4 optimization.*
+
+---
+
+# Part 24: Duplicate USD/CHF Instances & Immediate Pending Cancellation After MARKET Open (Mar 13, 2026)
+
+---
+
+## Context
+
+- **User observation:** OANDA UI showed **multiple instances of the same pair** at the same time, specifically:
+  - A **USD/CHF open LONG** (88,679 units, FT-DMI-EMA activation, ATR trailing).
+  - A **USD/CHF pending LIMIT** (245,888 units).
+  - Additional examples with different unit sizes (e.g., 86,294 units AUD/USD, 2,000 units EUR/USD).
+- **Business rule:** For every pair, the system must have **only one instance at a time**, meaning:
+  - Either **one OPEN position** for the pair (any direction), or
+  - **One PENDING order** for the pair,
+  - But **never both open and pending** at the same time, and never multiple opens or multiple pendings.
+- Sources used:
+  - OANDA screenshots (USD/CHF chart + accounts/trades/positions/activity panels).
+  - Manual logs: `scalp-engine_2026-03-13_1100.txt`, `oanda_transactions_2026-03-13_*.json`, `trade-alerts_2026-03-12_2100.txt`, etc.
+  - Scalp-Engine code: `Scalp-Engine/auto_trader_core.py`, `Scalp-Engine/scalp_engine.py`, `Scalp-Engine/USER_GUIDE.md`.
+
+---
+
+## Analysis – Multiple USD/CHF Instances
+
+### 1. Existing rules in code (before this session)
+
+- **No pending when pair has open:**
+  - `PositionManager.has_open_position_for_pair(pair)` checks in-memory `active_trades` and OANDA `get_open_positions()`.
+  - `ScalpEngine._check_new_opportunities()` skips any opportunity for pairs where `has_open_position_for_pair(pair)` is `True`:
+    - DEBUG log: `"Skipped {pair} {direction} - pair already has an open position (no second open/pending allowed)"`.
+  - `PositionManager.open_trade()`:
+    - Early gate: if `directive.order_type in ('LIMIT', 'STOP')` and `has_open_position_for_pair(pair)` is `True`, it blocks with:
+      - `"🚫 BLOCKED: {pair} already has an open position. No pending order allowed until that position is closed or cancelled."`
+    - Final OANDA gate (before sending any order): again checks `get_open_positions()` and blocks placing a pending if any open exists for that pair (any direction).
+- **Single (pair, direction) and cleanup at sync:**
+  - `_cleanup_duplicate_positions_and_orders_on_oanda()` (called from `sync_with_oanda()`):
+    - Groups OANDA open positions by `(pair_norm, direction)` and:
+      - **Closes duplicates** (keeping one) for each `(pair, direction)`.
+    - Cancels any pending order for a pair that has an open position (no pending allowed while open).
+    - Groups pending orders by `(pair_norm, direction)` and cancels duplicates, keeping one.
+  - `ScalpEngine._monitor_positions()` and the main loop both call `position_manager.sync_with_oanda(market_state)` so cleanup runs **every check** (about once per minute).
+
+### 2. Root cause – Why open + pending still appeared
+
+- The USD/CHF example came from a **race window**:
+  - Timeline (from logs and transactions):
+    - Earlier: a USD/CHF **LIMIT** (245,888 units) was placed by the **LLM/consensus** path when no open existed for USD/CHF.
+    - Later: **FT-DMI-EMA activation** opened a **MARKET** USD/CHF LONG (88,679 units) when triggers were met:
+      - Log: `"FT-DMI-EMA (AUTO) USD/CHF LONG @ 0.788265 - order placed (15m trigger met)"`.
+    - Immediately after the market order filled on OANDA, the engine called `sync_with_oanda()` as usual, but if the OANDA API had not yet reflected the new open in `get_open_positions()`, the cleanup routine did **not** see USD/CHF as “pair with open,” so it did **not** cancel the 245,888 pending in that cycle.
+  - Effect:
+    - For a short period (until the next sync when OANDA clearly reports the new open), the account can show both:
+      - An **open** USD/CHF position (88,679 units), and
+      - A **pending** USD/CHF order (245,888 units).
+    - This violates the business rule, but only within a small timing window between order fill and OANDA’s API reporting the new state.
+
+### 3. Explanation for varying unit sizes
+
+- Units are **intentionally variable** and come from risk-based sizing plus consensus:
+  - In `PositionManager._create_trade_from_opportunity()`:
+    - Default base: `config.base_position_size` (e.g. 2,000, 5,000, etc.).
+    - **Risk-based formula** when balance and SL pips are available:
+      - `units ≈ (account_balance × risk_percent_per_trade) / (sl_pips × pip_size)`.
+      - Then multiplied by `consensus_multiplier[consensus_level]` (e.g. 0.5, 1.0, 1.5, 2.0).
+    - Otherwise: `units = base_position_size × consensus_multiplier`.
+- Consequences:
+  - FT-DMI-EMA and LLM paths both call `PositionManager.open_trade()`, but with **different entries/SLs/consensus** → different sizes.
+  - This explains why USD/CHF has 88,679 units in one trade and 245,888 units in another, and why EUR/USD and AUD/USD show other sizes (2,000; 86,294; etc.). This is **by design**, not a bug.
+  - The bug to fix is **not** unit variation, but the **simultaneous open + pending** for the same pair during the race window.
+
+---
+
+## Fix Implemented – Immediate Pending Cancellation After MARKET Open
+
+### Goal
+
+Ensure that **as soon as a MARKET trade successfully opens for a pair**, the engine **immediately cancels any OANDA pending orders for that pair**, closing the race window where open + pending can coexist.
+
+### Changes in `Scalp-Engine/auto_trader_core.py`
+
+**1. New helper: `PositionManager.cancel_all_pending_for_pair`**
+
+- Signature:
+  - `def cancel_all_pending_for_pair(self, pair: str, reason: str = "Cleanup: pair has open position - no pending allowed") -> int`
+- Behavior:
+  - Normalizes the pair via `normalize_pair`.
+  - Calls `self.executor.get_pending_orders()` and iterates all pending OANDA orders.
+  - For each order where the normalized instrument matches the pair:
+    - Calls `self.executor.cancel_order(order_id, reason)`.
+    - Removes the order from `active_trades` if present.
+    - Increments a `cancelled` counter.
+  - Logging:
+    - If `cancelled > 0`:
+      - INFO: `🧹 Cancelled {cancelled} pending order(s) for {pair} after market open (no pending allowed while pair has open position)`.
+    - If `cancelled == 0`:
+      - DEBUG: `No pending orders found to cancel for {pair} after market open`.
+    - On error:
+      - WARNING: `⚠️ Failed to cancel pending orders for {pair} after market open: {e}` (does **not** roll back the already-open MARKET trade).
+
+**2. Hooked into `PositionManager.open_trade()` after successful order placement**
+
+- In the `open_trade()` method, inside the block:
+  - `order_or_trade_id = self.executor.open_trade(trade)`
+  - `if order_or_trade_id:`
+- After removing the `_pending_{opp_id}` placeholder and **before** recording execution and updating `trade.state`:
+  - New logic:
+    - If `directive.order_type == 'MARKET'`:
+      - Call:
+        - `self.cancel_all_pending_for_pair(trade.pair, reason="Cleanup after MARKET open: pair has open position - no pending allowed")`
+- This ensures:
+  - Any existing **LIMIT/STOP** pending orders for the same pair are cancelled **immediately** after the MARKET order is accepted by OANDA.
+  - The fix applies uniformly to:
+    - LLM-based MARKET opportunities.
+    - FT-DMI-EMA activation MARKET orders.
+    - Fisher / DMI-EMA / HYBRID MACD-triggered MARKET opens.
+
+### Files touched in Trade-Alerts repo
+
+- `Scalp-Engine/auto_trader_core.py`:
+  - Added `cancel_all_pending_for_pair` method on `PositionManager`.
+  - Added call in `PositionManager.open_trade()` after successful MARKET opens.
+- `Scalp-Engine/suggestions from cursor7.md`:
+  - Minor formatting update (newline) so future sessions can append Priority 5+ items if desired.
+- `CLAUDE_SESSION_LOG.md`, `improvementplan.md`, `Phase1-Analysis-Report.md`, `market_state.json`:
+  - Updated with broader system state and Phase 1 testing context (not directly related to this fix but included in the same commit).
+
+### Commit
+
+- **Repo:** `personal/Trade-Alerts` (GitHub: `ibenwandu/Trade-Alerts`)
+- **Branch:** `main`
+- **Commit:** `6a450eb` — `Ensure pending orders are cancelled after market opens`
+- Pushed to `origin/main`.
+
+---
+
+## Verification Plan for Future Sessions
+
+When reviewing Manual logs for this behavior (see Part 37 “Log review checks”), confirm:
+
+- **After any MARKET open for a pair**, logs show:
+  - `✅ AUTO MODE: Created order/trade {id}: {pair} {direction} {units} units @ {entry} (state: OPEN)`
+  - Followed (within the same minute) by either:
+    - `🧹 Cancelled N pending order(s) for {pair} after market open (no pending allowed while pair has open position)` (N ≥ 1), or
+    - `No pending orders found to cancel for {pair} after market open` (DEBUG) if there were none.
+- **On OANDA (transactions + UI)**:
+  - For any pair with an open position, there are **no pending orders** for that pair immediately after the MARKET open, not just after the next 1-minute sync.
+- The existing **sync cleanup** still enforces:
+  - At most **one open** per `(pair, direction)`.
+  - At most **one pending** per `(pair, direction)`.
+  - **No pair** has both an open and a pending simultaneously; the new hook ensures this is true even inside the short timing window after a MARKET order is filled.
+
+---
+
+## References for Future Sessions
+
+- **Code paths:**
+  - `Scalp-Engine/auto_trader_core.py`
+    - `PositionManager.cancel_all_pending_for_pair()`
+    - `PositionManager.open_trade()` (MARKET open path and new cleanup call)
+    - `_cleanup_duplicate_positions_and_orders_on_oanda()` and `sync_with_oanda()`.
+  - `Scalp-Engine/scalp_engine.py`
+    - `_check_new_opportunities()` (duplicate/pending checks).
+    - `_monitor_positions()` (per-minute sync + cleanup).
+- **Manual logs:**
+  - `C:\Users\user\Desktop\Test\Manual logs\scalp-engine_YYYY-MM-DD_HHmm.txt`
+  - `oanda_transactions_YYYY-MM-DD_HHmm.json` for verifying USD/CHF and other pairs’ open vs pending states.
+- **Prior context:**
+  - Part 5 (EUR/USD ATR trailing + duplicate positions analysis).
+  - Part 6 (cursor5 implementation – pre-open OANDA checks, add-before-send, and pending-to-open sync).
+  - Part 23 (cursor7 DeepSeek parser + logging + RL monitoring).
+
+*Part 24 last updated: Mar 13, 2026 — Duplicate USD/CHF instances analyzed; race window identified; implemented immediate pending cancellation after MARKET open with commit `6a450eb` in Trade-Alerts.*
+
+---
+
+# Part 25: Configurable Required LLMs UI (Mar 13, 2026)
+
+---
+
+## Goal
+
+Restore a safe, configurable **"Required LLMs"** window in the Scalp-Engine UI so operators can choose which LLMs must participate in consensus, **without changing** the consensus formula or `min_consensus_level` semantics. Wrap this in a full Trade-Alerts backup for easy rollback.
+
+---
+
+## Backup Before Changes
+
+- **Backup folder:** `personal\backup_before_required_llms_20260313`  
+  (Created via `robocopy` from `personal\Trade-Alerts`, excluding `.git`, `__pycache__`, and similar; used as a rollback point if UI/config changes cause issues.)
+- **Scope:** Full Trade-Alerts tree (Scalp-Engine, Trade-Alerts root, src, UI, docs).
+- **Usage (if needed):** Stop services → replace current `Trade-Alerts` contents with the backup → restart.
+
+---
+
+## Design and Constraints
+
+- **Do not change:**
+  - Consensus **formula** (how `consensus_level` is computed from base LLMs).
+  - `min_consensus_level` semantics.
+  - `required_llms` **logic** in the engine (already implemented as a simple filter).
+  - `TradeConfig` constructor signature or `open_trade()` return type.
+- **Allowed/desired:**
+  - Expose `required_llms` as a **UI-configurable list**.
+  - Save/load `required_llms` alongside existing config (trading_mode, max_open_trades, min_consensus_level, etc.).
+  - Keep safe defaults when config or user input is missing.
+
+Engine side (pre-existing behavior, verified before changes):
+
+- `TradeConfig` in `auto_trader_core.py`:
+  - Field: `required_llms: List[str] = None`.
+  - `__post_init__` ensures a non-empty list:
+    - If `required_llms` is `None` or empty: set to `['gemini']` (default: require Gemini).
+- Opportunity validation in `PositionManager.risk_controller.validate_opportunity`:
+  - Enforces:
+    - `consensus_level >= min_consensus_level`.
+    - If `required_llms` is a non-empty list and any required LLM is present in `llm_sources`, trade is allowed.
+    - If **none** of the required LLMs appear in `llm_sources`, validation fails with:
+      - `"None of the required LLMs [...] are in consensus (sources: [...])"`.
+- Config load (`scalp_engine.py`):
+  - Reads `required_llms` from config API / file when present.
+  - Includes logging to show current `required_llms` and warn when only one LLM is required (unusual).
+
+Conclusion: the **engine already had correct required_llms behavior**; what was missing was a robust **UI** for setting it.
+
+---
+
+## Implementation – Scalp-Engine UI (`scalp_ui.py`)
+
+### 1. Rendering the Required LLMs window
+
+Location: `render_auto_trader_controls()` under the `"🎯 Consensus Filters"` section.
+
+Changes:
+
+- Previously this section only rendered:
+  - `Minimum Consensus Level` slider, and
+  - A static markdown line for “Required LLMs,” with **no controls**.
+- New implementation:
+  - Determine **available LLMs** and **weights**:
+    - Start with default list: `['chatgpt', 'gemini', 'claude', 'deepseek']`.
+    - Try `market_state = load_market_state()` and:
+      - If `market_state['llm_weights']` is a non-empty dict, use its keys as `available_llms`.
+      - Preserve `llm_weights` for display.
+  - Determine current required list:
+    - `current_required = config.get('required_llms')`.
+    - If missing or invalid, default to `['gemini']` (consistent with `TradeConfig.__post_init__`).
+  - For each LLM in `available_llms`:
+    - Render a checkbox:
+      - Label: `"{llm_name} (weight: 0.xx)"` if a numeric weight is available; otherwise just the name.
+      - Default checked state: `True` if `llm_name in current_required`.
+      - Key: `required_llm_{llm_name}`.
+    - Build `required_llms_selection` as the list of LLMs whose checkboxes are checked.
+
+### 2. Saving Required LLMs into config
+
+Location: same function, in the "Save Configuration" button handling.
+
+- When building `new_config`, added:
+  - `'required_llms': required_llms_selection if required_llms_selection else ['gemini'],`
+- Behavior:
+  - If the user selects **one or more** LLMs, that exact list is saved.
+  - If the user selects **none**, the config falls back to `['gemini']` rather than saving an empty list (which would disable the filter and break expectations).
+- All other fields (`min_consensus_level`, `base_position_size`, `max_open_trades`, etc.) remain unchanged.
+
+### 3. Defaults and safety
+
+- Defaults are now aligned everywhere:
+  - UI fallback for missing/empty `required_llms`: `['gemini']`.
+  - Engine fallback in `TradeConfig.__post_init__`: `['gemini']`.
+- The UI no longer leaves `required_llms` implicit; it always saves a non-empty list, making configuration more transparent and reducing silent drift.
+
+---
+
+## Verification Plan (for Future Sessions)
+
+After deploying these UI changes, use this checklist:
+
+1. **Config round-trip**
+   - In Scalp-Engine UI:
+     - Set `Required LLMs` to, for example, `chatgpt` and `gemini` only.
+     - Save configuration.
+   - In Config API or `auto_trader_config.json`, confirm:
+     - `"required_llms": ["chatgpt", "gemini"]` is present.
+   - Restart Scalp-Engine (if applicable) and look for startup logs:
+     - Should show `Required LLMs: chatgpt, gemini` in config summary.
+
+2. **Functional behavior with required LLMs**
+   - Scenario A (strict requirement):
+     - `min_consensus_level = 2`, `required_llms = ['gemini']`.
+     - An opportunity where only `claude` agrees should be **rejected** with a log reason mentioning required LLMs.
+   - Scenario B (looser requirement):
+     - `required_llms = ['claude']`.
+     - An opportunity where `claude` is in `llm_sources` and consensus ≥ min level should now pass (subject to all other checks).
+
+3. **No change to consensus formula**
+   - Verify log lines showing consensus as `X/available_llm_count` still behave as before (Part 18 & Part 23).
+   - Confirm that only the **filtering** based on `required_llms` has changed, not the underlying consensus math.
+
+4. **Failure/rollback**
+   - If behavior regresses (e.g., no trades open due to overly strict required_llms settings):
+     - Adjust via UI first (e.g., include more LLMs or reset to defaults).
+     - If code-level rollback is needed:
+       - Restore `personal\Trade-Alerts` from `backup_before_required_llms_20260313`.
+
+---
+
+## References
+
+- **UI file:** `Scalp-Engine/scalp_ui.py`
+  - `render_auto_trader_controls()` → "🎯 Consensus Filters" section → Required LLMs checkboxes.
+  - Save handler for "💾 Save Configuration".
+- **Engine behavior:**
+  - `Scalp-Engine/auto_trader_core.py`
+    - `TradeConfig.__post_init__` (default `required_llms`).
+    - Opportunity validation function enforcing required_llms.
+  - `Scalp-Engine/scalp_engine.py`
+    - Config load / logging of `required_llms`.
+- **Docs:**
+  - `Scalp-Engine/USER_GUIDE.md` sections on consensus, `min_consensus_level`, and `required_llms` (see §5 / §12+).
+
+*Part 25 last updated: Mar 13, 2026 — Added configurable Required LLMs UI (checkboxes per LLM, persisted to config), wired to existing engine required_llms behavior, and took backup `backup_before_required_llms_20260313` for rollback.*
+
+---
+
+## Next Steps Reminder (Future Session)
+
+- After enough new Manual logs accumulate **post-commit** `fb2d8b1` (DeepSeek parser fix) and the later UI/config changes, explicitly verify that **DeepSeek is still contributing parsed opportunities and RL data**:
+  - In `trade-alerts_*.txt`: look for `Parsed DEEPSEEK: X opportunities` and `DeepSeek: X opportunities parsed` with **X > 0** (not stuck at 0).
+  - In `market-state-api_*.txt` and `scalp-engine_*.txt`: confirm DeepSeek appears in `llm_sources` and consensus debug logs (`base_llm_sources` includes `deepseek` for at least some pairs).
+  - In RL / learning logs: confirm DeepSeek’s evaluated recommendation count and weight are increasing over time (no regression to 0 opportunities / default weight).
+- If any regression is detected (DeepSeek back to 0 parsed opportunities), compare current `src/recommendation_parser.py` Pattern Set 10 and `_get_deepseek_prompt()` in `src/llm_analyzer.py` against the versions from commit `fb2d8b1` and use existing backups (`backup_before_cursor7_20260311_162509`, `backup_before_required_llms_20260313`) for targeted rollback.

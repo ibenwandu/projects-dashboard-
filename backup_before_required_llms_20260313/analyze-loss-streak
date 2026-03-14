@@ -1,0 +1,299 @@
+#!/usr/bin/env python3
+"""
+Analyze Loss Streak - Deep investigation of the 102-loss streak
+
+Identifies when the worst consecutive losses occurred and analyzes:
+- What pairs were being traded
+- Market conditions during the streak
+- Time patterns and clustering
+- Whether it was a specific pair or all pairs losing
+"""
+
+import os
+import sys
+import requests
+from datetime import datetime, timedelta
+from collections import defaultdict
+import argparse
+from dotenv import load_dotenv
+
+load_dotenv()
+
+OANDA_BASE_URL = "https://api-fxpractice.oanda.com"
+OANDA_ACCESS_TOKEN = os.getenv("OANDA_ACCESS_TOKEN")
+OANDA_ACCOUNT_ID = os.getenv("OANDA_ACCOUNT_ID")
+
+class LossStreakAnalyzer:
+    """Analyze the 102-loss streak in detail"""
+
+    def __init__(self):
+        if not OANDA_ACCESS_TOKEN or not OANDA_ACCOUNT_ID:
+            print("ERROR: OANDA credentials not set")
+            sys.exit(1)
+
+        self.base_url = OANDA_BASE_URL
+        self.account_id = OANDA_ACCOUNT_ID
+        self.headers = {
+            "Authorization": f"Bearer {OANDA_ACCESS_TOKEN}",
+            "Content-Type": "application/json"
+        }
+        self.trades = []
+
+    def fetch_closed_trades(self):
+        """Fetch all closed trades"""
+        try:
+            url = f"{self.base_url}/v3/accounts/{self.account_id}/trades"
+            params = {"state": "CLOSED", "count": 500}
+
+            response = requests.get(url, headers=self.headers, params=params)
+            response.raise_for_status()
+
+            data = response.json()
+            trades = data.get("trades", [])
+
+            for trade in trades:
+                initial_units = int(trade.get("initialUnits", 0))
+                self.trades.append({
+                    "id": trade.get("id"),
+                    "pair": trade.get("instrument"),
+                    "direction": "LONG" if initial_units > 0 else "SHORT",
+                    "entry_price": float(trade.get("openPrice", 0)),
+                    "exit_price": float(trade.get("closePrice", 0)),
+                    "pnl": float(trade.get("financing", 0)) + float(trade.get("unrealizedPL", 0)) + float(trade.get("realizedPL", 0)),
+                    "opened_at": trade.get("openTime"),
+                    "closed_at": trade.get("closeTime"),
+                })
+
+            return len(trades)
+
+        except Exception as e:
+            print(f"ERROR: Failed to fetch trades: {e}")
+            return 0
+
+    def find_loss_streaks(self):
+        """Find all consecutive loss streaks"""
+        # Sort trades by close time
+        sorted_trades = sorted(self.trades, key=lambda x: x["closed_at"])
+
+        streaks = []
+        current_streak = []
+        current_streak_start = None
+
+        for i, trade in enumerate(sorted_trades):
+            is_loss = trade["pnl"] < 0
+
+            if is_loss:
+                if not current_streak:
+                    current_streak_start = i
+                current_streak.append((i, trade))
+            else:
+                if current_streak:
+                    streaks.append({
+                        "start_idx": current_streak_start,
+                        "length": len(current_streak),
+                        "trades": current_streak,
+                        "total_loss": sum(t[1]["pnl"] for t in current_streak),
+                    })
+                    current_streak = []
+                    current_streak_start = None
+
+        if current_streak:
+            streaks.append({
+                "start_idx": current_streak_start,
+                "length": len(current_streak),
+                "trades": current_streak,
+                "total_loss": sum(t[1]["pnl"] for t in current_streak),
+            })
+
+        return sorted(streaks, key=lambda x: x["length"], reverse=True)
+
+    def analyze_streak(self, streak):
+        """Analyze a specific loss streak"""
+        trades = [t[1] for t in streak["trades"]]
+
+        # Time analysis
+        start_time = trades[0]["closed_at"]
+        end_time = trades[-1]["closed_at"]
+
+        try:
+            start = datetime.fromisoformat(start_time.replace("Z", "+00:00"))
+            end = datetime.fromisoformat(end_time.replace("Z", "+00:00"))
+            duration_hours = (end - start).total_seconds() / 3600
+            duration_days = duration_hours / 24
+        except:
+            duration_hours = 0
+            duration_days = 0
+
+        # Pair analysis
+        pair_stats = defaultdict(lambda: {"count": 0, "loss": 0, "largest": 0})
+        for trade in trades:
+            pair = trade["pair"]
+            pair_stats[pair]["count"] += 1
+            pair_stats[pair]["loss"] += trade["pnl"]
+            pair_stats[pair]["largest"] = min(pair_stats[pair]["largest"], trade["pnl"])
+
+        # Direction analysis
+        longs = sum(1 for t in trades if t["direction"] == "LONG")
+        shorts = sum(1 for t in trades if t["direction"] == "SHORT")
+
+        return {
+            "length": streak["length"],
+            "total_loss": streak["total_loss"],
+            "start_time": start_time,
+            "end_time": end_time,
+            "duration_hours": duration_hours,
+            "duration_days": duration_days,
+            "pair_stats": dict(pair_stats),
+            "longs": longs,
+            "shorts": shorts,
+            "avg_loss_per_trade": streak["total_loss"] / streak["length"],
+        }
+
+    def print_streak_summary(self):
+        """Print summary of all loss streaks"""
+        print("\n" + "=" * 90)
+        print("LOSS STREAK ANALYSIS - All Consecutive Loss Sequences")
+        print("=" * 90)
+
+        streaks = self.find_loss_streaks()
+
+        print(f"\nTotal loss streaks found: {len(streaks)}")
+        print(f"Longest streak: {streaks[0]['length']} losses" if streaks else "None")
+
+        print("\nTop 10 Loss Streaks:")
+        for i, streak in enumerate(streaks[:10], 1):
+            analysis = self.analyze_streak(streak)
+            print(f"\n{i}. Length: {analysis['length']} consecutive losses")
+            print(f"   Total Loss: ${analysis['total_loss']:.2f}")
+            print(f"   Duration: {analysis['duration_days']:.1f} days ({analysis['duration_hours']:.1f} hours)")
+            print(f"   Date Range: {analysis['start_time'][:10]} to {analysis['end_time'][:10]}")
+            print(f"   Avg Loss/Trade: ${analysis['avg_loss_per_trade']:.2f}")
+            print(f"   Directions: {analysis['longs']} LONG, {analysis['shorts']} SHORT")
+            print(f"   Pairs involved: {len(analysis['pair_stats'])}")
+
+            for pair, stats in sorted(analysis['pair_stats'].items(), key=lambda x: x[1]["count"], reverse=True)[:5]:
+                print(f"      {pair}: {stats['count']} losses, ${stats['loss']:.2f} total, worst: ${stats['largest']:.2f}")
+
+        print("\n" + "=" * 90)
+
+    def print_102_streak_detailed(self):
+        """Print detailed analysis of the 102-loss streak"""
+        streaks = self.find_loss_streaks()
+
+        if not streaks or streaks[0]["length"] < 102:
+            print("\nERROR: Could not find 102-loss streak")
+            return
+
+        streak = streaks[0]
+        analysis = self.analyze_streak(streak)
+
+        print("\n" + "=" * 90)
+        print("DETAILED ANALYSIS: 102-LOSS STREAK")
+        print("=" * 90)
+
+        print(f"\nStreak Details:")
+        print(f"  Consecutive Losses: {analysis['length']}")
+        print(f"  Total Loss Amount: ${analysis['total_loss']:.2f}")
+        print(f"  Average Loss per Trade: ${analysis['avg_loss_per_trade']:.2f}")
+
+        print(f"\nTimeframe:")
+        print(f"  Start: {analysis['start_time']}")
+        print(f"  End: {analysis['end_time']}")
+        print(f"  Duration: {analysis['duration_days']:.2f} days ({analysis['duration_hours']:.1f} hours)")
+
+        print(f"\nDirection Analysis:")
+        print(f"  Long Trades: {analysis['longs']}")
+        print(f"  Short Trades: {analysis['shorts']}")
+
+        print(f"\nPairs Involved ({len(analysis['pair_stats'])} pairs):")
+        for pair, stats in sorted(analysis['pair_stats'].items(), key=lambda x: x[1]["count"], reverse=True):
+            loss_pct = (stats["loss"] / analysis["total_loss"] * 100) if analysis["total_loss"] != 0 else 0
+            print(f"  {pair:12} - {stats['count']:3} losses, ${stats['loss']:8.2f} ({loss_pct:5.1f}%), worst: ${stats['largest']:8.2f}")
+
+        # Show first and last 10 trades in the streak
+        trades_in_streak = [t[1] for t in streak["trades"]]
+
+        print(f"\nFirst 10 Trades in Streak:")
+        for i, trade in enumerate(trades_in_streak[:10], 1):
+            print(f"  {i:3}. {trade['closed_at'][:10]} {trade['pair']:12} {trade['direction']:5} PnL: ${trade['pnl']:8.2f}")
+
+        print(f"\nLast 10 Trades in Streak:")
+        for i, trade in enumerate(trades_in_streak[-10:], len(trades_in_streak) - 9):
+            print(f"  {i:3}. {trade['closed_at'][:10]} {trade['pair']:12} {trade['direction']:5} PnL: ${trade['pnl']:8.2f}")
+
+        # Analyze if there was a pattern
+        print(f"\nPattern Analysis:")
+
+        # Check if one pair dominated
+        dominant_pair = max(analysis['pair_stats'].items(), key=lambda x: x[1]["count"])
+        pct_dominant = (dominant_pair[1]["count"] / analysis['length'] * 100)
+        print(f"  Dominant Pair: {dominant_pair[0]} ({dominant_pair[1]['count']} of {analysis['length']} trades, {pct_dominant:.1f}%)")
+
+        # Check direction bias
+        long_pct = (analysis['longs'] / analysis['length'] * 100) if analysis['length'] > 0 else 0
+        short_pct = (analysis['shorts'] / analysis['length'] * 100) if analysis['length'] > 0 else 0
+        print(f"  Direction Bias: {long_pct:.1f}% LONG, {short_pct:.1f}% SHORT")
+
+        # Check if all losses were similar magnitude
+        losses = [t["pnl"] for t in trades_in_streak]
+        avg_loss = sum(losses) / len(losses)
+        largest_loss = min(losses)
+        print(f"  Loss Range: Smallest: ${max(losses):.2f}, Largest: ${largest_loss:.2f}")
+        print(f"  Average Loss: ${avg_loss:.2f}")
+
+        print(f"\nWhat Happened During This Period:")
+        print(f"  - The system took {analysis['length']} consecutive losing trades")
+        print(f"  - Over {analysis['duration_days']:.1f} days of trading")
+        print(f"  - Average loss of ${avg_loss:.2f} per trade")
+        print(f"  - Dominant pair: {dominant_pair[0]} ({pct_dominant:.1f}% of trades)")
+        print(f"  - This suggests: ", end="")
+
+        if pct_dominant > 80:
+            print(f"One pair ({dominant_pair[0]}) was repeatedly traded in wrong direction")
+        elif long_pct > 80 or short_pct > 80:
+            print(f"Market moved against one direction ({'LONG' if long_pct > 80 else 'SHORT'}) repeatedly")
+        else:
+            print("System had systematic issues across multiple pairs and directions")
+
+        print(f"\nLikely Causes:")
+        print(f"  1. Trade-Alerts recommendations were inaccurate during this period")
+        print(f"  2. Market regime changed (trending vs ranging) - system didn't adapt")
+        print(f"  3. Volatility spiked - stop losses not tight enough")
+        print(f"  4. Specific pair ({dominant_pair[0]}) had anomalous behavior")
+        print(f"  5. LLM output was influenced by stale data or poor analysis")
+
+        print("\n" + "=" * 90)
+
+    def run(self):
+        """Execute the analyzer"""
+        trades_fetched = self.fetch_closed_trades()
+        if trades_fetched == 0:
+            print("No trades found")
+            return False
+        return True
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Analyze loss streaks")
+    parser.add_argument("--summary", action="store_true", help="Show summary of all loss streaks")
+    parser.add_argument("--detailed", action="store_true", help="Show detailed 102-loss streak analysis")
+
+    args = parser.parse_args()
+
+    analyzer = LossStreakAnalyzer()
+
+    if not analyzer.run():
+        return 1
+
+    if args.summary:
+        analyzer.print_streak_summary()
+    else:
+        # Default: show 102-loss streak analysis
+        analyzer.print_102_streak_detailed()
+        print("\nFor summary of all loss streaks, use: python analyze-loss-streak --summary")
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

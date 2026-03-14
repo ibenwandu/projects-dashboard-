@@ -1,0 +1,79 @@
+# Scalp-Engine Configuration
+
+# Trading Pairs
+pairs:
+  primary:
+    - "EUR/USD"
+    - "USD/JPY"
+    - "USD/CAD"
+  secondary:
+    - "GBP/USD"
+    - "AUD/USD"
+
+# Timeframes
+timeframes:
+  bias: "15m"      # For trend bias
+  setup: "5m"      # For setup identification
+  entry: "1m"      # For entry signals
+
+# EMA Ribbon Parameters
+indicators:
+  ema_periods: [9, 21, 50]
+  vwap_lookback: 20  # For VWAP calculation (if used)
+  
+# Signal Logic
+signals:
+  pullback_zone_pct: 0.3  # Percentage of 9-21 EMA zone to trigger entry
+  min_trend_strength: 0.5  # Minimum EMA separation for valid trend
+  
+# Risk Management
+risk:
+  risk_per_trade_pct: 0.5
+  daily_max_loss_pct: 2.0
+  stop_loss_pips: 5
+  take_profit_pips: 8
+  max_consecutive_losses: 3
+  position_sizing_method: "fixed_risk"  # or "kelly", "fixed_fractional"
+  
+# Execution
+execution:
+  mode: "manual"  # OPTIONS: "manual" or "auto"
+  max_spread_pips: 1.5
+  order_timeout_seconds: 5
+  max_orders_per_minute: 10
+  
+# Trading Sessions (EST)
+sessions:
+  london_open:
+    start: "03:00"
+    end: "05:00"
+    enabled: true
+  london_ny_overlap:
+    start: "08:00"
+    end: "11:00"
+    enabled: true
+  ny_open:
+    start: "09:30"
+    end: "10:30"
+    enabled: true
+    
+# Regime-Based Logic
+regimes:
+  TRENDING:
+    strategy: "ema_pullback"
+    min_confidence: 0.7
+  RANGING:
+    strategy: "bollinger_bands"  # Future implementation
+    min_confidence: 0.6
+  HIGH_VOL:
+    strategy: "ema_pullback"
+    min_confidence: 0.8
+    reduce_position_size: true
+    
+# RL Integration
+rl:
+  enabled: true
+  db_path: "scalping_rl.db"  # Path to RL database (will be set to /var/data/scalping_rl.db on Render)
+  track_setups: true
+  optimize_thresholds: true
+
