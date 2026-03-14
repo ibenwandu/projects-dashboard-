@@ -9,7 +9,7 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 
 | Project | Phase | Status | Next Milestone | Progress |
 |---------|-------|--------|-----------------|-----------|
-| **Emy** | **Phase 1b: Agents + OANDA** | ✅ **COMPLETE (Mar 13)** | **Phase 2a: Autonomous Monitoring** | **Tasks 1-2 Complete: KnowledgeAgent (Claude API), TradingAgent (OANDA). All integration tests passing. PR merged to master. Deployed to Render.** |
+| **Emy** | **Phase 2C: AlertManager Integration** | ✅ **COMPLETE (Mar 14)** | **Phase 3: Multi-Agent Orchestration** | **Phase 2C Complete: AlertManager wired into TradingAgent. 21/21 tests passing. Throttle logic centralized, all alerts database-persisted. Phase 2D deferred (ResearchAgent has no alerts yet).** |
 | Trade-Alerts | Phase 1: SL/TP Verification | ✅ COMPLETE (Mar 9-11) | Execute analysis plan, fix consensus config | TP/SL working; phase 1 data ready; plan created (buzzing-plotting-robin.md) |
 | Scalp-Engine | Supporting Trade-Alerts | 🟢 RUNNING | Monitor max_runs blocking | All phases deployed, Render live, monitored by Emy |
 | **Cursor-MCP-Server** | **Planning** | 🟡 PLAN READY (Mar 12) | Implementation (next session) | **Research complete, architecture designed, 5 tools defined. Plan file: harmonic-growing-hollerith.md. Requires API key + bypass mode for implementation.** |
@@ -22,19 +22,18 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 
 ## Today's Priorities (Mar 14)
 
-### Completed This Session (Mar 13)
-1. **[COMPLETE]** ✅ **Phase 1b Task 1: KnowledgeAgent Claude Integration** - Real Claude API responses, integration tests passing
-2. **[COMPLETE]** ✅ **Phase 1b Task 2A: TradingAgent OANDA Connection** - OANDA data flowing, positions visible
-3. **[COMPLETE]** ✅ **Phase 1b Integration Tests** - Full E2E tests passing, agents responding in real-time
-4. **[COMPLETE]** ✅ **Phase 1b Deployment** - All endpoints live on Render, verified and monitored
+### Completed This Session (Mar 14)
+1. **[COMPLETE]** ✅ **Phase 2C: AlertManager into TradingAgent** - TDD cycle (RED→GREEN), 21/21 tests passing, zero regressions
+2. **[COMPLETE]** ✅ **Throttle Logic Centralization** - Removed manual dict/methods, wired 4 alert locations to AlertManager.send()
+3. **[COMPLETE]** ✅ **Test Suite Update** - Rewrote throttle tests, updated alert fixtures, full regression suite passing
+4. **[COMPLETE]** ✅ **Phase 2D Decision** - Evaluated ResearchAgent, deferred (no current alerts), Phase 2 substantially complete
 
 ### Next Actions
-5. **[NEXT]** Phase 1b Task 2B: Persist Trading Agent output to SQLite
-6. **[NEXT]** Phase 1b Task 3: Workflow output persistence and retrieval
-7. **[NEXT]** Phase 1b Task 4: Final integration verification and health monitoring
-8. **[NEXT]** Execute Trade-Alerts Phase 1 Analysis - Quantitative analysis from plan file (buzzing-plotting-robin.md)
-9. **[NEXT]** Fix Trade-Alerts Consensus Config - Use Scalp-Engine UI: `min_consensus_level=1`, `required_llms=['chatgpt','gemini']`
-10. **[NEXT]** Execute Cursor MCP Implementation - Create Python MCP server, register in Claude Code config
+5. **[NEXT]** **Phase 3: Multi-Agent Orchestration** - LangGraph wiring across all agents
+6. **[NEXT]** Execute Trade-Alerts Phase 1 Analysis - Quantitative analysis from plan file (buzzing-plotting-robin.md)
+7. **[NEXT]** Fix Trade-Alerts Consensus Config - Use Scalp-Engine UI: `min_consensus_level=1`, `required_llms=['chatgpt','gemini']`
+8. **[NEXT]** Execute Cursor MCP Implementation - Create Python MCP server, register in Claude Code config
+9. **[NEXT]** Optional: Wire AlertManager into other agents as needed (when they have alerts)
 
 ---
 
@@ -51,8 +50,8 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 
 - **Systems Running**: 3 (Trade-Alerts, Scalp-Engine, Emy 24/7)
 - **Emy Agents**: 6 active (Trading, Knowledge, ProjectMonitor, Research, Gemini, Analysis)
-- **Emy Phase**: 1b COMPLETE (KnowledgeAgent + TradingAgent + Integration Tests)
-- **Emy Status**: ✅ **PHASE 1b LIVE ON RENDER** (emy-phase1a.onrender.com) + GEMINI + CLAUDE.md + OANDA, all endpoints verified, running autonomously
+- **Emy Phase**: 2C COMPLETE (AlertManager → TradingAgent, centralized throttling)
+- **Emy Status**: ✅ **PHASE 2C COMPLETE** (AlertManager integration, 21/21 tests, zero regressions, ready for Phase 3)
 - **GeminiAgent**: ✅ READY (8 capabilities), integration test passed, committed to GitHub
 - **CLAUDE.md Integration**: ✅ ENABLED - KnowledgeAgent loads 12,378-char guidelines at startup
 - **Active Automations**: 0 (job-search disabled for API preservation)
@@ -63,4 +62,4 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 ---
 
 ## Last Updated
-**March 14, 2026, 11:45 AM EDT** - **EMY PHASE 1b COMPLETE**: KnowledgeAgent Claude API integration complete. TradingAgent OANDA connection complete. All integration tests passing. Deployed to Render and verified live. Next: Complete Task 2B output persistence, Task 3 workflow persistence, Task 4 final verification. Also pending: Trade-Alerts Phase 1 analysis execution and consensus config fix via Scalp-Engine UI.
+**March 14, 2026, 2:45 PM EDT** - **EMY PHASE 2C COMPLETE**: AlertManager wired into TradingAgent via strict TDD cycle. 21/21 tests passing, zero regressions. Throttle logic centralized, all alerts database-persisted and badge-trackable. Phase 2D evaluated and deferred (ResearchAgent has no alerts). Pattern proven and ready for Phase 3. Next: Phase 3 Multi-Agent Orchestration, Trade-Alerts Phase 1 analysis, Consensus config fix.
