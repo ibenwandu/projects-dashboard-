@@ -14,6 +14,7 @@ from typing import Dict, Any, Tuple, Optional
 
 from emy.agents.knowledge_agent import KnowledgeAgent
 from emy.agents.trading_agent import TradingAgent
+from emy.agents.research_agent import ResearchAgent
 
 logger = logging.getLogger('AgentExecutor')
 
@@ -23,6 +24,8 @@ AGENT_MAP = {
     'knowledge_synthesis': KnowledgeAgent,
     'trading_health': TradingAgent,
     'trading_analysis': TradingAgent,
+    'research_query': ResearchAgent,
+    'research_evaluation': ResearchAgent,
     # Future agents will be added here
     # 'job_search': JobSearchAgent,
 }

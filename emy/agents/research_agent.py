@@ -1,160 +1,71 @@
 """
-ResearchAgent - evaluates new projects for feasibility.
+ResearchAgent - evaluates new projects and topics for feasibility.
 
-Analyzes project requirements, identifies technical risks, and recommends priority.
-Used for evaluating Currency-Trend-Tracker, Recruiter-Email-Automation, etc.
+Provides AI-powered analysis via Claude API.
 """
 
 import logging
+from datetime import datetime
 from typing import Tuple, Dict, Any
+
+from emy.agents.base_agent import EMySubAgent
 
 logger = logging.getLogger('ResearchAgent')
 
 
-class ResearchAgent:
-    """Agent for researching and evaluating new projects."""
+class ResearchAgent(EMySubAgent):
+    """Agent for researching and evaluating projects and topics."""
 
     def __init__(self):
-        """Initialize research agent."""
-        self.logger = logging.getLogger('ResearchAgent')
+        """Initialize ResearchAgent."""
+        super().__init__('ResearchAgent', 'claude-haiku-4-5-20251001')
 
-    def run(self, task_id: int = None, project_name: str = None) -> Tuple[bool, Dict[str, Any]]:
+    def run(self) -> Tuple[bool, Dict[str, Any]]:
         """
-        Research and evaluate a project.
+        Execute research agent.
 
-        Args:
-            task_id: Associated task ID in database
-            project_name: Name of project to research
+        Analyzes research topics and generates feasibility analysis using Claude.
 
         Returns:
-            (success, results) tuple
+            (True, {"response": analysis, "timestamp": iso_time, "agent": "ResearchAgent"})
+            (False, {"error": error_message})
         """
         try:
-            self.logger.info(f"[RUN] ResearchAgent starting for project: {project_name}")
+            if self.check_disabled():
+                self.logger.warning("ResearchAgent disabled")
+                return (False, {'reason': 'disabled'})
 
-            # Check disable guard
-            from emy.core.disable_guard import EMyDisableGuard
-            disable_guard = EMyDisableGuard()
-            if disable_guard.is_disabled():
-                return False, {'error': 'Emy disabled'}
+            # Build research prompt
+            prompt = self._build_research_prompt()
 
-            if not project_name:
-                return False, {'error': 'project_name required'}
+            # Get Claude analysis
+            response = self._call_claude(prompt, max_tokens=2048)
 
-            results = {
-                'timestamp': self._get_timestamp(),
-                'project': project_name,
-                'feasibility_score': 0.0,
-                'estimated_effort_hours': 0,
-                'key_dependencies': [],
-                'technical_risks': [],
-                'recommendation': 'pending'
+            result = {
+                "response": response,
+                "timestamp": datetime.now().isoformat(),
+                "agent": self.agent_name
             }
 
-            # Analyze project
-            analysis = self._analyze_project(project_name)
-            if not analysis:
-                return False, {'error': f'Failed to analyze {project_name}'}
-
-            results.update(analysis)
-
-            # Calculate feasibility score
-            results['feasibility_score'] = self._calculate_feasibility(analysis)
-
-            # Make recommendation
-            if results['feasibility_score'] >= 0.75:
-                results['recommendation'] = 'high_priority'
-            elif results['feasibility_score'] >= 0.50:
-                results['recommendation'] = 'medium_priority'
-            else:
-                results['recommendation'] = 'low_priority'
-
-            self.logger.info(
-                f"[RUN] ResearchAgent completed: "
-                f"{project_name} → {results['recommendation']} "
-                f"(score: {results['feasibility_score']:.1%})"
-            )
-            return True, results
+            self.logger.info(f"ResearchAgent completed ({len(response)} chars)")
+            return (True, result)
 
         except Exception as e:
-            self.logger.error(f"[RUN] ResearchAgent error: {e}")
-            return False, {'error': str(e)}
+            error_msg = f"ResearchAgent error: {e}"
+            self.logger.error(error_msg)
+            return (False, {"error": error_msg})
 
-    def _analyze_project(self, project_name: str) -> Dict[str, Any]:
-        """Analyze project for feasibility."""
-        try:
-            # Map known projects to their analysis
-            projects_db = {
-                'currency_trend_tracker': {
-                    'description': 'Real-time currency trend analysis with ML predictions',
-                    'key_dependencies': ['pandas', 'scikit-learn', 'OANDA API'],
-                    'technical_risks': [
-                        'API rate limiting',
-                        'Model retraining overhead',
-                        'Data quality issues'
-                    ],
-                    'estimated_effort_hours': 80,
-                    'current_status': 'concept'
-                },
-                'recruiter_email_automation': {
-                    'description': 'Automated email outreach to recruiters',
-                    'key_dependencies': ['smtplib', 'Anthropic API', 'Gmail API'],
-                    'technical_risks': [
-                        'Email deliverability',
-                        'Anti-spam detection',
-                        'Personalization quality'
-                    ],
-                    'estimated_effort_hours': 40,
-                    'current_status': 'concept'
-                }
-            }
+    def _build_research_prompt(self) -> str:
+        """Build research analysis prompt."""
+        return """You are Ibe's AI Chief of Staff (Emy).
 
-            normalized_name = project_name.lower().replace('-', '_')
-            analysis = projects_db.get(normalized_name)
+Your role: Evaluate projects, research topics, and provide feasibility analysis.
 
-            if not analysis:
-                # Generic analysis for unknown projects
-                analysis = {
-                    'description': f'Project: {project_name}',
-                    'key_dependencies': ['TBD'],
-                    'technical_risks': ['Unknown scope', 'Undefined requirements'],
-                    'estimated_effort_hours': 100,
-                    'current_status': 'unanalyzed'
-                }
+Current request: Analyze the current Emy project portfolio and identify:
+1. Top research priorities (2-3 items)
+2. Technical feasibility assessment for each
+3. Estimated complexity (Low/Medium/High)
+4. Key risks and dependencies
+5. Recommended next steps
 
-            return analysis
-
-        except Exception as e:
-            self.logger.error(f"[ANALYZE] Error analyzing {project_name}: {e}")
-            return None
-
-    def _calculate_feasibility(self, analysis: Dict[str, Any]) -> float:
-        """Calculate feasibility score (0.0-1.0)."""
-        try:
-            score = 0.5  # Base score
-
-            # Adjust based on effort (lower effort = higher score)
-            effort = analysis.get('estimated_effort_hours', 100)
-            if effort < 40:
-                score += 0.3
-            elif effort < 80:
-                score += 0.15
-            else:
-                score -= 0.1
-
-            # Adjust based on risks (fewer/lower risks = higher score)
-            risks = analysis.get('technical_risks', [])
-            risk_penalty = len(risks) * 0.05
-            score -= risk_penalty
-
-            # Clamp to [0.0, 1.0]
-            return max(0.0, min(1.0, score))
-
-        except Exception as e:
-            self.logger.error(f"[CALC] Error calculating feasibility: {e}")
-            return 0.5
-
-    def _get_timestamp(self) -> str:
-        """Get current ISO timestamp."""
-        from datetime import datetime
-        return datetime.now().isoformat()
+Provide concise, actionable analysis in 200-300 words or less."""
