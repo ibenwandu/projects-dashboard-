@@ -38,6 +38,7 @@ class TradingAgent(EMySubAgent):
         if db is None:
             from emy.core.database import EMyDatabase
             self.db = EMyDatabase()
+            self.db.initialize_schema()
         else:
             self.db = db
 
