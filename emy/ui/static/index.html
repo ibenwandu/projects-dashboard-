@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emy Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1 class="title">Emy</h1>
+                <span class="status-indicator" id="statusDot" title="API Status"></span>
+                <span class="status-text" id="statusText">Connecting...</span>
+            </div>
+            <div class="header-right">
+                <span class="agent-badge" id="agentCount">0 agents</span>
+            </div>
+        </header>
+
+        <!-- Main Query Section -->
+        <section class="query-section">
+            <label for="queryInput" class="query-label">What do you need?</label>
+            <textarea
+                id="queryInput"
+                class="query-input"
+                placeholder="e.g. 'Check my trading health' or 'What's in my knowledge base?'"
+                rows="4"
+            ></textarea>
+
+            <div class="control-row">
+                <div class="workflow-selector">
+                    <label for="workflowSelect">Agent:</label>
+                    <select id="workflowSelect" class="workflow-dropdown">
+                        <option value="trading_health:TradingAgent">Trading Health</option>
+                        <option value="trading_analysis:TradingAgent">Trading Analysis</option>
+                        <option value="knowledge_query:KnowledgeAgent">Knowledge Query</option>
+                        <option value="knowledge_synthesis:KnowledgeAgent">Knowledge Synthesis</option>
+                        <option value="research_query:ResearchAgent">Research Query</option>
+                        <option value="research_evaluation:ResearchAgent">Research Evaluation</option>
+                    </select>
+                </div>
+                <button id="submitBtn" class="submit-btn">Send</button>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section class="result-section">
+            <div class="result-header">
+                <h2>Result</h2>
+                <span class="result-time" id="resultTime"></span>
+            </div>
+            <div class="result-content" id="resultContent">
+                <p class="placeholder">Results will appear here</p>
+            </div>
+        </section>
+
+        <!-- Loading Spinner -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+            <p>Executing workflow...</p>
+        </div>
+
+        <!-- Recent Queries Section -->
+        <section class="history-section">
+            <h2>Recent Queries</h2>
+            <div class="history-list" id="historyList">
+                <p class="placeholder">No queries yet</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

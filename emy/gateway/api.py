@@ -15,7 +15,8 @@ from pydantic import BaseModel
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
 from emy.core.database import EMyDatabase
@@ -43,6 +44,32 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*'],
 )
+
+# ============================================================================
+# Static Files (Dashboard UI)
+# ============================================================================
+
+# Determine static files directory
+static_dir = os.path.join(os.path.dirname(__file__), '..', 'ui', 'static')
+
+# Root endpoint - serve dashboard HTML
+@app.get("/")
+async def root():
+    """Serve dashboard at root URL."""
+    index_path = os.path.join(static_dir, 'index.html')
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+    return {"message": "Dashboard not available"}
+
+# Backwards-compatible /ui/ alias
+@app.get("/ui/")
+async def ui_redirect():
+    """Redirect /ui/ to root for backwards compatibility."""
+    return RedirectResponse(url="/")
+
+# Mount static assets (CSS, JS) at /static/
+if os.path.exists(static_dir):
+    app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
 # ============================================================================
 # Request/Response Models
