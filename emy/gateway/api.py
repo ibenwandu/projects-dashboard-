@@ -10,14 +10,21 @@ import uuid
 import logging
 from datetime import datetime
 from typing import Optional, List, Dict, Any
+from pathlib import Path
 from pydantic import BaseModel
 
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from emy.core.database import EMyDatabase
 from emy.agents.agent_executor import AgentExecutor
+
+# Load environment variables from .env file
+env_path = Path(__file__).parent.parent / '.env'
+if env_path.exists():
+    load_dotenv(env_path)
 
 logger = logging.getLogger('EmyGateway')
 
