@@ -34,15 +34,34 @@ class KnowledgeAgent(EMySubAgent):
     def load_global_guidelines(self) -> bool:
         """Load global CLAUDE.md guidelines for decision-making."""
         try:
-            claude_path = 'C:\\Users\\user\\projects\\personal\\CLAUDE.md'
+            from pathlib import Path
 
-            if self.file_ops.file_exists(claude_path):
+            # Try multiple possible locations
+            possible_paths = [
+                # Local development
+                Path('CLAUDE.md'),
+                Path('../CLAUDE.md'),
+                Path('../../CLAUDE.md'),
+                # Absolute paths
+                Path('/app/CLAUDE.md'),
+                Path('/app/emy/CLAUDE.md'),
+                # Windows development
+                Path('C:/Users/user/projects/personal/CLAUDE.md'),
+            ]
+
+            claude_path = None
+            for path in possible_paths:
+                if path.exists():
+                    claude_path = path
+                    break
+
+            if claude_path and claude_path.exists():
                 with open(claude_path, 'r', encoding='utf-8') as f:
                     self.global_guidelines = f.read()
-                self.logger.info(f"Loaded global CLAUDE.md guidelines ({len(self.global_guidelines)} chars)")
+                self.logger.info(f"Loaded global CLAUDE.md guidelines from {claude_path} ({len(self.global_guidelines)} chars)")
                 return True
             else:
-                self.logger.warning(f"CLAUDE.md not found: {claude_path}")
+                self.logger.warning("CLAUDE.md not found in any location. Using default behavior.")
                 return False
 
         except Exception as e:

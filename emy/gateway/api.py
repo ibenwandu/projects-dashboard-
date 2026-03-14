@@ -354,8 +354,16 @@ async def general_exception_handler(request, exc):
 
 @app.on_event('startup')
 async def startup_event():
-    """Log server startup."""
+    """Initialize database and log server startup."""
     logger.info('Emy API Gateway starting...')
+
+    # Initialize database schema on startup
+    try:
+        db = EMyDatabase()
+        db.initialize_schema()
+        logger.info('Database schema initialized successfully')
+    except Exception as e:
+        logger.error(f'Failed to initialize database: {e}')
 
 
 @app.on_event('shutdown')
