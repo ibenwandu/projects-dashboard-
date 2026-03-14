@@ -9,17 +9,31 @@ import sys
 import os
 from pathlib import Path
 
-# Ensure /app is in the Python path
+# Dockerfile copies emy/ contents to /app/emy/
+# So Python path should include /app to find the emy package
 app_dir = Path("/app").resolve()
 if str(app_dir) not in sys.path:
     sys.path.insert(0, str(app_dir))
+
+# For local development, also support running from within emy/ directory
+local_dir = Path(".").resolve()
+if str(local_dir) not in sys.path:
+    sys.path.insert(0, str(local_dir))
+
+# Load environment variables from .env file (local only)
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent / '.env'
+    if env_path.exists():
+        load_dotenv(env_path)
+except Exception:
+    pass  # .env loading is optional
 
 # Now run uvicorn
 import uvicorn
 
 if __name__ == "__main__":
-    # Build context is emy/ directory, COPY . ./emy/ creates /app/emy/
-    # So modules are at /app/emy/MODULE_NAME
+    # Import after path is set up
     from emy.gateway.api import app
 
     uvicorn.run(
