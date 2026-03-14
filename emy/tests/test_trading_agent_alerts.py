@@ -18,7 +18,13 @@ class TestTradingAgentAlerts:
         mock_db.update_daily_limits.return_value = None  # No-op
 
         agent = TradingAgent(db=mock_db)
-        agent.notifier = MagicMock()
+
+        # Mock notifier and sync to alert_manager
+        mock_notifier = MagicMock()
+        mock_notifier.send_alert.return_value = True
+        agent.notifier = mock_notifier
+        agent.alert_manager.notifier = mock_notifier  # Keep in sync
+
         # Mock disable_guard to allow agent to run
         agent.disable_guard = MagicMock()
         agent.disable_guard.is_disabled.return_value = False

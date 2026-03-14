@@ -9,12 +9,12 @@ Phase 1 TradingAgent monitors:
 
 import logging
 import os
-import time
 from typing import Tuple, Dict, Any
 from emy.agents.base_agent import EMySubAgent
 from emy.tools.api_client import OandaClient, RenderClient
 from emy.tools.file_ops import FileOpsTool
 from emy.tools.notification_tool import PushoverNotifier
+from emy.core.alert_manager import AlertManager
 
 logger = logging.getLogger('TradingAgent')
 
@@ -42,13 +42,8 @@ class TradingAgent(EMySubAgent):
         else:
             self.db = db
 
-        # Initialize alert throttle state (60-second window per event type)
-        self.last_alert_time = {
-            'trade_executed': None,
-            'trade_rejected': None,
-            'daily_loss_75': None,
-            'daily_loss_100': None
-        }
+        # Initialize AlertManager for centralized throttling and persistence
+        self.alert_manager = AlertManager(notifier=self.notifier, db=self.db)
 
     def run(self) -> Tuple[bool, Dict[str, Any]]:
         """
@@ -74,19 +69,16 @@ class TradingAgent(EMySubAgent):
             if daily_loss >= max_daily_loss:
                 logger.critical(f"Daily loss limit hit: ${daily_loss:.2f} >= ${max_daily_loss:.2f}")
 
-                if self.should_send_alert('daily_loss_100'):
-                    message = (
-                        f"OANDA STOP: Daily loss limit hit (${daily_loss:.2f})\n"
-                        f"Trading disabled until market open tomorrow (UTC)"
-                    )
-                    self.notifier.send_alert(
-                        title="OANDA Trading Disabled",
-                        message=message,
-                        priority=2,  # Emergency
-                        retry=300,   # Retry every 5 minutes
-                        expire=3600  # For 60 minutes
-                    )
-                    self.record_alert_sent('daily_loss_100')
+                message = (
+                    f"OANDA STOP: Daily loss limit hit (${daily_loss:.2f})\n"
+                    f"Trading disabled until market open tomorrow (UTC)"
+                )
+                self.alert_manager.send(
+                    'daily_loss_100',
+                    title="OANDA Trading Disabled",
+                    message=message,
+                    priority=2  # Emergency
+                )
 
                 # Disable trading
                 self._set_disabled(True)
@@ -95,17 +87,16 @@ class TradingAgent(EMySubAgent):
             elif daily_loss >= (max_daily_loss * 0.75):
                 logger.warning(f"Daily loss at 75%: ${daily_loss:.2f} / ${max_daily_loss:.2f}")
 
-                if self.should_send_alert('daily_loss_75'):
-                    message = (
-                        f"OANDA Alert: Daily loss 75% (${daily_loss:.2f}/${max_daily_loss:.2f})\n"
-                        f"Monitor closely. Further losses will trigger emergency stop."
-                    )
-                    self.notifier.send_alert(
-                        title="Daily Loss Warning",
-                        message=message,
-                        priority=1  # High
-                    )
-                    self.record_alert_sent('daily_loss_75')
+                message = (
+                    f"OANDA Alert: Daily loss 75% (${daily_loss:.2f}/${max_daily_loss:.2f})\n"
+                    f"Monitor closely. Further losses will trigger emergency stop."
+                )
+                self.alert_manager.send(
+                    'daily_loss_75',
+                    title="Daily Loss Warning",
+                    message=message,
+                    priority=1  # High
+                )
 
             # Get market context
             market_context = self._get_market_context()
@@ -245,18 +236,17 @@ class TradingAgent(EMySubAgent):
             reason = f"Position size {units:,} exceeds limit {max_position:,}"
             self.db.log_trade_rejection(symbol, units, reason)
 
-            # Send alert (check throttle)
-            if self.should_send_alert('trade_rejected'):
-                message = (
-                    f"OANDA: {symbol} {units:,} REJECTED\n"
-                    f"Reason: {reason}"
-                )
-                self.notifier.send_alert(
-                    title="Trade Rejected",
-                    message=message,
-                    priority=0  # Normal
-                )
-                self.record_alert_sent('trade_rejected')
+            # Send alert via AlertManager
+            message = (
+                f"OANDA: {symbol} {units:,} REJECTED\n"
+                f"Reason: {reason}"
+            )
+            self.alert_manager.send(
+                'trade_rejected',
+                title="Trade Rejected",
+                message=message,
+                priority=0  # Normal
+            )
 
             return False, reason
 
@@ -267,18 +257,17 @@ class TradingAgent(EMySubAgent):
             reason = f"Daily loss ${abs(daily_pnl):.2f} exceeds limit ${max_daily_loss}"
             self.db.log_trade_rejection(symbol, units, reason)
 
-            # Send alert (check throttle)
-            if self.should_send_alert('trade_rejected'):
-                message = (
-                    f"OANDA: {symbol} {units:,} REJECTED\n"
-                    f"Reason: {reason}"
-                )
-                self.notifier.send_alert(
-                    title="Trade Rejected",
-                    message=message,
-                    priority=0  # Normal
-                )
-                self.record_alert_sent('trade_rejected')
+            # Send alert via AlertManager
+            message = (
+                f"OANDA: {symbol} {units:,} REJECTED\n"
+                f"Reason: {reason}"
+            )
+            self.alert_manager.send(
+                'trade_rejected',
+                title="Trade Rejected",
+                message=message,
+                priority=0  # Normal
+            )
 
             return False, reason
 
@@ -288,18 +277,17 @@ class TradingAgent(EMySubAgent):
             reason = f"Open positions {open_count} at limit {max_concurrent}"
             self.db.log_trade_rejection(symbol, units, reason)
 
-            # Send alert (check throttle)
-            if self.should_send_alert('trade_rejected'):
-                message = (
-                    f"OANDA: {symbol} {units:,} REJECTED\n"
-                    f"Reason: {reason}"
-                )
-                self.notifier.send_alert(
-                    title="Trade Rejected",
-                    message=message,
-                    priority=0  # Normal
-                )
-                self.record_alert_sent('trade_rejected')
+            # Send alert via AlertManager
+            message = (
+                f"OANDA: {symbol} {units:,} REJECTED\n"
+                f"Reason: {reason}"
+            )
+            self.alert_manager.send(
+                'trade_rejected',
+                title="Trade Rejected",
+                message=message,
+                priority=0  # Normal
+            )
 
             return False, reason
 
@@ -346,49 +334,24 @@ class TradingAgent(EMySubAgent):
             )
             self.logger.info(f"[OK] Trade executed: {symbol} {direction} {units}")
 
-            # Send Pushover alert (check throttle first)
-            if self.should_send_alert('trade_executed'):
-                entry_price = result.get('price', '?')
-                message = (
-                    f"OANDA: {symbol} {direction} {units:,} @ {entry_price}\n"
-                    f"SL:{stop_loss} TP:{take_profit}"
-                )
-                self.notifier.send_alert(
-                    title="Trade Executed",
-                    message=message,
-                    priority=0  # Normal
-                )
-                self.record_alert_sent('trade_executed')
+            # Send alert via AlertManager
+            entry_price = result.get('price', '?')
+            message = (
+                f"OANDA: {symbol} {direction} {units:,} @ {entry_price}\n"
+                f"SL:{stop_loss} TP:{take_profit}"
+            )
+            self.alert_manager.send(
+                'trade_executed',
+                title="Trade Executed",
+                message=message,
+                priority=0  # Normal
+            )
 
             return result
         else:
             self.logger.error(f"[ERR] Trade execution failed: {symbol} {direction} {units}")
             return None
 
-    def should_send_alert(self, alert_type: str) -> bool:
-        """
-        Check if alert should be sent based on throttle window
-
-        Args:
-            alert_type: One of 'trade_executed', 'trade_rejected', 'daily_loss_75', 'daily_loss_100'
-
-        Returns:
-            True if alert should be sent (not in throttle window), False otherwise
-        """
-        # Check if throttling is disabled (testing)
-        if os.getenv('PUSHOVER_NO_THROTTLE', 'false').lower() == 'true':
-            return True
-
-        last_time = self.last_alert_time.get(alert_type)
-        if last_time is None:
-            return True  # First alert of this type
-
-        elapsed = time.time() - last_time
-        return elapsed >= 60  # Only send if 60+ seconds passed
-
-    def record_alert_sent(self, alert_type: str) -> None:
-        """Record that an alert was sent to update throttle window"""
-        self.last_alert_time[alert_type] = time.time()
 
     def _set_disabled(self, disabled: bool):
         """Set or clear the .emy_disabled kill switch"""
