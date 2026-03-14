@@ -182,6 +182,19 @@ class EMyDatabase:
                 )
             """)
 
+            # Alert history for badge tracking and persistence
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS alert_history (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    alert_type TEXT NOT NULL,
+                    title TEXT NOT NULL,
+                    message TEXT NOT NULL,
+                    priority INTEGER DEFAULT 0,
+                    sent_at TEXT NOT NULL,
+                    read_at TEXT DEFAULT NULL
+                )
+            """)
+
             conn.commit()
 
         # Create OANDA-specific tables
@@ -689,3 +702,82 @@ class EMyDatabase:
                 VALUES (?, ?, ?)
                 """, (today, daily_loss, open_count))
             conn.commit()
+
+    def log_alert(self, alert_type: str, title: str, message: str,
+                  priority: int = 0) -> int:
+        """
+        Insert sent alert to history. Return row id.
+
+        Args:
+            alert_type: Type of alert (e.g., 'trade_opened')
+            title: Alert title
+            message: Alert message
+            priority: Alert priority (0=Normal, 1=High, 2=Emergency)
+
+        Returns:
+            Row ID of inserted alert
+        """
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            now = datetime.now().isoformat()
+            cursor.execute("""
+                INSERT INTO alert_history (alert_type, title, message, priority, sent_at)
+                VALUES (?, ?, ?, ?, ?)
+            """, (alert_type, title, message, priority, now))
+            conn.commit()
+            return cursor.lastrowid
+
+    def get_unread_alerts(self, alert_type: Optional[str] = None) -> List[Dict[str, Any]]:
+        """
+        Return unread alerts, optionally filtered by type.
+
+        Args:
+            alert_type: Optional filter by alert type. None returns all unread.
+
+        Returns:
+            List of alert records with unread (read_at IS NULL)
+        """
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            if alert_type:
+                cursor.execute("""
+                    SELECT * FROM alert_history
+                    WHERE alert_type = ? AND read_at IS NULL
+                    ORDER BY sent_at DESC
+                """, (alert_type,))
+            else:
+                cursor.execute("""
+                    SELECT * FROM alert_history
+                    WHERE read_at IS NULL
+                    ORDER BY sent_at DESC
+                """)
+            rows = cursor.fetchall()
+            return [dict(row) for row in rows]
+
+    def mark_alerts_read(self, alert_type: Optional[str] = None) -> int:
+        """
+        Set read_at for unread alerts. Return count updated.
+
+        Args:
+            alert_type: Optional filter by alert type. None marks all read.
+
+        Returns:
+            Count of alerts marked as read
+        """
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            now = datetime.now().isoformat()
+            if alert_type:
+                cursor.execute("""
+                    UPDATE alert_history
+                    SET read_at = ?
+                    WHERE alert_type = ? AND read_at IS NULL
+                """, (now, alert_type))
+            else:
+                cursor.execute("""
+                    UPDATE alert_history
+                    SET read_at = ?
+                    WHERE read_at IS NULL
+                """, (now,))
+            conn.commit()
+            return cursor.rowcount
