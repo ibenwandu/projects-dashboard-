@@ -2,6 +2,85 @@
 
 ---
 
+## Session: Phase 2C - AlertManager Integration (2026-03-14)
+
+**Date**: March 14, 2026
+**Type**: Feature Implementation (TDD)
+**Status**: ✅ COMPLETE — Phase 2C delivered, all tests passing
+
+### Objective
+Wire AlertManager into TradingAgent using strict test-driven development. Complete Phase 2C of multi-phase AlertManager rollout.
+
+### Implementation Details
+
+**Phase 2C: TradingAgent AlertManager Integration**
+
+**RED Phase** (Write Failing Tests):
+- Rewrote `emy/tests/test_trading_agent_throttle.py`
+- Created 3 integration tests verifying AlertManager wiring
+- All 3 tests failed initially (alert_manager attribute didn't exist)
+
+**GREEN Phase** (Implement):
+- Imported AlertManager in TradingAgent.__init__
+- Initialized `self.alert_manager = AlertManager(notifier=self.notifier, db=self.db)`
+- Removed manual throttle logic:
+  - `self.last_alert_time` dict (deleted)
+  - `should_send_alert()` method (deleted)
+  - `record_alert_sent()` method (deleted)
+  - `import time` (no longer needed)
+- Wired 4 alert locations to `alert_manager.send()`:
+  - `daily_loss_100` (emergency, priority=2)
+  - `daily_loss_75` (warning, priority=1)
+  - `trade_rejected` (×3 validation checks, normal, priority=0)
+  - `trade_executed` (normal, priority=0)
+- Updated test fixture in `test_trading_agent_alerts.py` to sync mock notifier
+
+**Verification**:
+- 3 integration tests: PASS
+- 7 existing alert tests: PASS (no regressions)
+- 11 AlertManager unit tests: PASS
+- **Total**: 21/21 tests passing
+
+### Files Modified
+- `emy/agents/trading_agent.py` — AlertManager integration
+- `emy/tests/test_trading_agent_throttle.py` — Rewritten
+- `emy/tests/test_trading_agent_alerts.py` — Updated fixture
+
+### Architecture Impact
+- **Before**: Throttle logic scattered in TradingAgent, manual dict tracking
+- **After**: Centralized in AlertManager, database persistence, badge-trackable
+- **Pattern**: Proven and reusable for other agents
+
+### Phase 2D Decision
+- **Evaluated**: Wiring AlertManager into ResearchAgent
+- **Finding**: ResearchAgent has no current alert points
+- **Decision**: Skip Phase 2D; defer until ResearchAgent needs alerts
+- **Rationale**: Avoid adding code with no immediate use case
+- **Result**: Phase 2 substantially complete after Phase 2C
+
+### Testing & Quality
+- **TDD Cycle**: Strict adherence to RED → GREEN → REFACTOR
+- **Code Coverage**: All alert paths covered by tests
+- **Regression Tests**: All existing tests pass
+- **Clean Code**: Manual throttle methods removed, ~70 lines of duplication eliminated
+
+### Commit Information
+- **Commit**: `e1fc3f2`
+- **Message**: "feat: Phase 2C - Wire AlertManager into TradingAgent"
+- **Changes**: 88 insertions, 159 deletions
+
+### Memory & Documentation
+- Created: `emy_phase_2c_complete.md` (detailed phase summary)
+- Updated: MEMORY.md index
+- Updated: CLAUDE_SESSION_LOG.md (root)
+
+### Next Steps
+1. **Phase 3**: Multi-agent orchestration with LangGraph
+2. **Phase 2 Extensions**: Wire AlertManager into other agents as needed (when they have alerts)
+3. **Testing**: Continue TDD pattern for all future features
+
+---
+
 ## Session: Render Deployment - Docker Build Context Fix (2026-03-13)
 
 **Date**: March 13, 2026
