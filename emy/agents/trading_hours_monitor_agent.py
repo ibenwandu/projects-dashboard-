@@ -117,20 +117,63 @@ class TradingHoursMonitorAgent(EMySubAgent):
         """Check compliance status of a single trade.
 
         Args:
-            trade (dict): Trade object from OANDA with keys: trade_id, symbol, units, entry_price
-            current_time: Current UTC time
+            trade (dict): Trade object from OANDA with keys: id, instrument, direction,
+                         currentUnits, unrealizedPL, pricingStatus
+            current_time: Current UTC time for compliance check
 
         Returns:
             dict: Compliance status with keys:
                 - trade_id (str): The trade ID
+                - pair (str): The trading pair (instrument)
                 - compliant (bool): True if trade is compliant with trading hours rules
-                - reason (str): Explanation of compliance status
-
-        Raises:
-            NotImplementedError: This method will be implemented in Task 5
+                - close_reason (str or None): Reason trade should be closed (or None if compliant)
+                - profit_pips (float): Unrealized profit in pips
+                - pricingStatus (str): Trade status (OPEN, TRAILING, AT_BREAKEVEN)
         """
-        # To be implemented in Task 5
-        raise NotImplementedError("_check_compliance_status() to be implemented in Task 5")
+        trade_id = trade.get("id")
+        pair = trade.get("instrument")
+        pricingStatus = trade.get("pricingStatus")
+
+        # Calculate unrealized profit in pips
+        # Standard pip value: 0.0001 for most pairs
+        unrealized_pl = trade.get("unrealizedPL", 0.0)
+        current_units = trade.get("currentUnits", 1)
+        profit_pips = unrealized_pl / (abs(current_units) * 0.0001) if current_units != 0 else 0.0
+
+        # Default: compliant (if TradingHoursManager not available, assume trade is compliant)
+        should_close = False
+        close_reason = None
+
+        # Check compliance using TradingHoursManager if available
+        if self.trading_hours_manager:
+            try:
+                direction = trade.get("direction", "UNKNOWN")
+                should_close, close_reason = self.trading_hours_manager.should_close_trade(
+                    now_utc=current_time,
+                    profit_pips=profit_pips,
+                    trade_direction=direction
+                )
+            except Exception as e:
+                logger.warning(f"[TradingHoursMonitorAgent] Error checking compliance for {trade_id}: {e}")
+                should_close = False  # Default to compliant on error
+
+        # Convert should_close to compliant (opposite)
+        compliant = not should_close
+
+        result = {
+            "trade_id": trade_id,
+            "pair": pair,
+            "compliant": compliant,
+            "close_reason": close_reason if not compliant else None,
+            "profit_pips": profit_pips,
+            "pricingStatus": pricingStatus
+        }
+
+        # Log for audit trail
+        if not compliant:
+            logger.info(f"[TradingHoursMonitorAgent] Trade {trade_id} ({pair}) non-compliant: {close_reason}")
+
+        return result
 
     def _enforce_compliance(self, enforcement_time: str) -> Dict:
         """Enforce trading hours compliance by closing non-compliant trades.
