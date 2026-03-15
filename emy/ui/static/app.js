@@ -301,19 +301,30 @@ async function submitComparison(query) {
         const duration = ((Date.now() - startTime) / 1000).toFixed(1);
 
         // Display comparison results - with proper unescaping
-        let output1 = String(result1.output || '');
-        let output2 = String(result2.output || '');
+        let output1 = (result1.output || '');
+        let output2 = (result2.output || '');
 
-        // Unescape double-encoded strings
-        try {
-            output1 = JSON.parse(output1);
-        } catch (e) {}
-        output1 = String(output1).replace(/\\n/g, '\n').replace(/\\t/g, '\t').replace(/\\\\/g, '\\').replace(/^["\\]+|["\\]+$/g, '');
+        // Ensure they're strings, parse JSON if needed, then unescape
+        function cleanOutput(output) {
+            if (!output) return '';
+            let text = '' + output;  // Force string conversion
+            // Try JSON parse
+            try {
+                const parsed = JSON.parse(text);
+                text = '' + parsed;
+            } catch (e) {
+                // Not JSON, use as-is
+            }
+            // Unescape sequences
+            text = text.replace(/\\n/g, '\n')
+                      .replace(/\\t/g, '\t')
+                      .replace(/\\\\/g, '\\')
+                      .replace(/^["\\]+|["\\]+$/g, '');
+            return text;
+        }
 
-        try {
-            output2 = JSON.parse(output2);
-        } catch (e) {}
-        output2 = String(output2).replace(/\\n/g, '\n').replace(/\\t/g, '\t').replace(/\\\\/g, '\\').replace(/^["\\]+|["\\]+$/g, '');
+        output1 = cleanOutput(output1);
+        output2 = cleanOutput(output2);
 
         compareContent1.innerHTML = `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${escapeHtml(output1)}</div>`;
         compareContent2.innerHTML = `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${escapeHtml(output2)}</div>`;
