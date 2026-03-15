@@ -25,6 +25,7 @@ import json
 from emy.core.database import EMyDatabase
 from emy.core.metrics import collect_metrics
 from emy.agents.agent_executor import AgentExecutor
+from emy.brain.agent_selector import AgentSelector
 
 # Load environment variables from .env file
 env_path = Path(__file__).parent.parent / '.env'
@@ -32,6 +33,9 @@ if env_path.exists():
     load_dotenv(env_path)
 
 logger = logging.getLogger('EmyGateway')
+
+# Initialize agent selector
+selector = AgentSelector()
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -90,8 +94,16 @@ connected_clients = set()
 class WorkflowExecuteRequest(BaseModel):
     """Request to execute a workflow."""
     workflow_type: str
-    agents: List[str]
+    agents: Optional[List[str]] = None
     input: Optional[Dict[str, Any]] = None
+    agent_selection: Optional[str] = None  # 'auto' for intelligent selection, or agent list
+
+
+class AgentSelectionRequest(BaseModel):
+    """Request for intelligent agent selection."""
+    task: Dict[str, Any]
+    mode: str = 'auto'  # 'auto' or 'explicit'
+    agents: Optional[List[str]] = None  # For explicit mode
 
 
 class WorkflowResponse(BaseModel):
@@ -279,6 +291,10 @@ async def execute_workflow(request: WorkflowExecuteRequest):
     Supports both local execution (AgentExecutor) and remote (Brain service via HTTP).
     Uses Brain service if BRAIN_SERVICE_URL environment variable is set.
 
+    Supports intelligent agent selection via agent_selection parameter:
+    - 'auto': Automatically select agents based on workflow_type and input
+    - List of agent names: Use explicit agents
+
     Args:
         request: Workflow execution request
 
@@ -292,6 +308,20 @@ async def execute_workflow(request: WorkflowExecuteRequest):
 
     # Get database instance
     db = EMyDatabase()
+
+    # Auto-select agents if needed
+    agents = request.agents
+    if not agents or (request.agent_selection == 'auto'):
+        logger.info(f"Auto-selecting agents for workflow {workflow_id}")
+        task = {
+            'type': request.workflow_type,
+            'input': request.input if request.input else {}
+        }
+        agents = selector.select_agents(task, mode='auto')
+        logger.info(f"Selected agents: {agents}")
+
+    if not agents:
+        raise HTTPException(status_code=400, detail="No valid agents available for workflow")
 
     # Prepare input data
     input_data = json.dumps(request.input) if request.input else None
@@ -496,6 +526,65 @@ async def get_agents_status():
     """
     agents_list = list(_agents.values())
     return AgentsListResponse(agents=agents_list)
+
+
+@app.post('/agents/select')
+async def select_agents(request: AgentSelectionRequest):
+    """Intelligently select agents for a task.
+
+    Uses the AgentSelector to automatically choose the best agents
+    based on task type, input text, and required capabilities.
+
+    Args:
+        request: AgentSelectionRequest with task and selection mode
+
+    Returns:
+        Dict with selected agents and explanation
+    """
+    try:
+        agents = selector.select_agents(
+            request.task,
+            mode=request.mode,
+            agents=request.agents
+        )
+
+        return {
+            'selected_agents': agents,
+            'mode': request.mode,
+            'task_type': request.task.get('type'),
+            'count': len(agents)
+        }
+    except Exception as e:
+        logger.error(f"Error selecting agents: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get('/agents/capabilities/{agent_name}')
+async def get_agent_capabilities(agent_name: str):
+    """Get capabilities for a specific agent.
+
+    Args:
+        agent_name: Name of the agent
+
+    Returns:
+        Dict with capabilities list
+    """
+    try:
+        if not selector.is_valid_agent(agent_name):
+            raise HTTPException(status_code=404, detail=f"Agent {agent_name} not found")
+
+        capabilities = selector.get_agent_capabilities(agent_name)
+
+        return {
+            'agent': agent_name,
+            'capabilities': capabilities,
+            'count': len(capabilities)
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting agent capabilities: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # ============================================================================
