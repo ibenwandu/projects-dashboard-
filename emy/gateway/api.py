@@ -289,20 +289,18 @@ async def get_workflow_status(workflow_id: str):
 
 @app.get('/workflows', response_model=WorkflowListResponse)
 async def list_workflows(limit: int = Query(10, ge=1, le=100), offset: int = Query(0, ge=0)):
-    """List workflows with pagination.
+    """List workflows with pagination, reading from database.
 
     Args:
         limit: Number of results to return (1-100)
         offset: Number of results to skip
 
     Returns:
-        Paginated list of workflows
+        Paginated list of workflows with input/output
     """
-    all_workflows = list(_workflows.values())
-    total = len(all_workflows)
-
-    # Apply pagination
-    paginated = all_workflows[offset:offset + limit]
+    db = EMyDatabase()
+    workflows = db.get_workflows(limit=limit, offset=offset)
+    total = db.count_workflows()
 
     workflows_data = [
         {
@@ -310,9 +308,11 @@ async def list_workflows(limit: int = Query(10, ge=1, le=100), offset: int = Que
             'type': wf['type'],
             'status': wf['status'],
             'created_at': wf['created_at'],
-            'updated_at': wf.get('updated_at')
+            'updated_at': wf.get('updated_at'),
+            'input': wf.get('input'),
+            'output': wf.get('output')
         }
-        for wf in paginated
+        for wf in workflows
     ]
 
     return WorkflowListResponse(

@@ -33,27 +33,51 @@
             <div class="control-row">
                 <div class="workflow-selector">
                     <label for="workflowSelect">Agent:</label>
-                    <select id="workflowSelect" class="workflow-dropdown">
-                        <option value="trading_health:TradingAgent">Trading Health</option>
-                        <option value="trading_analysis:TradingAgent">Trading Analysis</option>
-                        <option value="knowledge_query:KnowledgeAgent">Knowledge Query</option>
-                        <option value="knowledge_synthesis:KnowledgeAgent">Knowledge Synthesis</option>
-                        <option value="research_query:ResearchAgent">Research Query</option>
-                        <option value="research_evaluation:ResearchAgent">Research Evaluation</option>
-                    </select>
+                    <select id="workflowSelect" class="workflow-dropdown"></select>
                 </div>
+                <label class="compare-toggle">
+                    <input type="checkbox" id="compareMode"> Compare agents
+                </label>
                 <button id="submitBtn" class="submit-btn">Send</button>
+            </div>
+
+            <div id="compareAgentRow" class="control-row" style="display:none">
+                <div class="workflow-selector">
+                    <label for="workflowSelect2">Compare with:</label>
+                    <select id="workflowSelect2" class="workflow-dropdown"></select>
+                </div>
             </div>
         </section>
 
         <!-- Result Section -->
         <section class="result-section">
             <div class="result-header">
-                <h2>Result</h2>
-                <span class="result-time" id="resultTime"></span>
+                <div>
+                    <h2>Result</h2>
+                    <span class="result-time" id="resultTime"></span>
+                </div>
+                <div class="result-actions" id="resultActions" style="display:none">
+                    <button class="export-btn" id="exportBtn" title="Download as JSON">⬇ Export</button>
+                    <button class="copy-btn" id="copyBtn" title="Copy to clipboard">⎘ Copy</button>
+                </div>
             </div>
             <div class="result-content" id="resultContent">
                 <p class="placeholder">Results will appear here</p>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="comparison-section" id="comparisonSection" style="display:none">
+            <h2>Comparison</h2>
+            <div class="comparison-grid">
+                <div class="comparison-panel">
+                    <div class="comparison-header"><span id="compareLabel1">Agent 1</span></div>
+                    <div class="comparison-content" id="compareContent1"></div>
+                </div>
+                <div class="comparison-panel">
+                    <div class="comparison-header"><span id="compareLabel2">Agent 2</span></div>
+                    <div class="comparison-content" id="compareContent2"></div>
+                </div>
             </div>
         </section>
 

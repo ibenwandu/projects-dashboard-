@@ -512,6 +512,53 @@ class EMyDatabase:
             logger.error(f"Error retrieving workflow: {e}")
             return None
 
+    def get_workflows(self, limit: int = 10, offset: int = 0) -> List[Dict[str, Any]]:
+        """
+        List workflows with pagination, newest first.
+
+        Args:
+            limit: Number of results to return (1-100)
+            offset: Number of results to skip
+
+        Returns:
+            List of workflow dicts
+        """
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT workflow_id, type, status, input, output, created_at, updated_at
+                    FROM workflows
+                    ORDER BY created_at DESC
+                    LIMIT ? OFFSET ?
+                """, (limit, offset))
+                rows = cursor.fetchall()
+                return [dict(row) for row in rows]
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error listing workflows: {e}")
+            return []
+
+    def count_workflows(self) -> int:
+        """
+        Return total count of workflows.
+
+        Returns:
+            Total workflow count
+        """
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute("SELECT COUNT(*) as cnt FROM workflows")
+                row = cursor.fetchone()
+                return row['cnt'] if row else 0
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error counting workflows: {e}")
+            return 0
+
     def _create_oanda_trades_table(self):
         """Create table for tracking OANDA trades."""
         with self.get_connection() as conn:
