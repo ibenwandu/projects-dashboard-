@@ -771,7 +771,7 @@ def update_dashboard():
     """Main function to update dashboard"""
     try:
         # Load data
-        with open(DATA_FILE, 'r') as f:
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
         # Generate HTML components
