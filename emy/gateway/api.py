@@ -8,6 +8,7 @@ Acts as a gateway to the main Emy agent loop and database.
 import os
 import uuid
 import logging
+import httpx
 from datetime import datetime
 from typing import Optional, List, Dict, Any
 from pathlib import Path
@@ -182,6 +183,9 @@ async def health_check():
 async def execute_workflow(request: WorkflowExecuteRequest):
     """Execute a new workflow and persist to database.
 
+    Supports both local execution (AgentExecutor) and remote (Brain service via HTTP).
+    Uses Brain service if BRAIN_SERVICE_URL environment variable is set.
+
     Args:
         request: Workflow execution request
 
@@ -199,19 +203,79 @@ async def execute_workflow(request: WorkflowExecuteRequest):
     # Prepare input data
     input_data = json.dumps(request.input) if request.input else None
 
-    # Execute the workflow using AgentExecutor
-    logger.info(f"Executing workflow {workflow_id}: type={request.workflow_type}, agents={request.agents}")
-    success, output = AgentExecutor.execute(
-        request.workflow_type,
-        request.agents,
-        request.input or {}
-    )
+    # Check if Brain service is available (Render deployment)
+    brain_service_url = os.getenv('BRAIN_SERVICE_URL')
 
-    # Determine final status
-    final_status = 'completed' if success else 'error'
+    if brain_service_url:
+        # Remote execution via Brain service
+        logger.info(f"Executing workflow {workflow_id} via Brain service at {brain_service_url}")
+        try:
+            async with httpx.AsyncClient(timeout=300.0) as client:
+                # Convert agents list to agent_groups format for Brain service
+                agent_groups = [[agent] for agent in request.agents]
 
-    # Ensure output is a string (not a parsed object)
-    output_str = str(output) if output else None
+                brain_request = {
+                    "workflow_type": request.workflow_type,
+                    "agent_groups": agent_groups,
+                    "input": request.input or {}
+                }
+
+                response = await client.post(
+                    f"{brain_service_url}/jobs",
+                    json=brain_request
+                )
+
+                if response.status_code != 200:
+                    logger.error(f"Brain service error: {response.status_code} - {response.text}")
+                    final_status = 'error'
+                    output_str = f"Brain service error: {response.status_code}"
+                else:
+                    brain_response = response.json()
+                    job_id = brain_response.get('job_id')
+
+                    # Poll for job completion (with timeout)
+                    max_polls = 60  # 5 minutes with 5-second polls
+                    poll_count = 0
+
+                    while poll_count < max_polls:
+                        status_response = await client.get(
+                            f"{brain_service_url}/jobs/{job_id}/status"
+                        )
+
+                        if status_response.status_code == 200:
+                            status_data = status_response.json()
+                            if status_data.get('status') in ['completed', 'error']:
+                                final_status = status_data.get('status', 'error')
+                                output_str = status_data.get('output', '')
+                                break
+
+                        # Wait before next poll
+                        import asyncio
+                        await asyncio.sleep(5)
+                        poll_count += 1
+                    else:
+                        # Timeout
+                        final_status = 'error'
+                        output_str = "Brain service job execution timeout"
+
+        except httpx.ConnectError as e:
+            logger.error(f"Failed to connect to Brain service: {e}")
+            final_status = 'error'
+            output_str = f"Brain service connection error: {str(e)}"
+        except Exception as e:
+            logger.error(f"Brain service execution error: {e}")
+            final_status = 'error'
+            output_str = f"Brain service error: {str(e)}"
+    else:
+        # Local execution (development mode)
+        logger.info(f"Executing workflow {workflow_id}: type={request.workflow_type}, agents={request.agents}")
+        success, output = AgentExecutor.execute(
+            request.workflow_type,
+            request.agents,
+            request.input or {}
+        )
+        final_status = 'completed' if success else 'error'
+        output_str = str(output) if output else None
 
     # Store workflow output to database
     db.store_workflow_output(
