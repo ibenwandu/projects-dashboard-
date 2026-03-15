@@ -277,12 +277,13 @@ async def execute_workflow(request: WorkflowExecuteRequest):
         final_status = 'completed' if success else 'error'
         output_str = str(output) if output else None
 
-    # Store workflow output to database
+    # Store workflow output to database (with input data)
     db.store_workflow_output(
         workflow_id,
         request.workflow_type,
         final_status,
-        output_str  # Real output from agent execution
+        output_str,  # Real output from agent execution
+        input_data  # Input data passed to workflow
     )
 
     workflow = {

@@ -427,7 +427,7 @@ class EMyDatabase:
             return row['value'] if row else default
 
     def store_workflow_output(self, workflow_id: str, workflow_type: str,
-                            status: str, output: str) -> bool:
+                            status: str, output: str, input_data: str = None) -> bool:
         """
         Store workflow output to database.
 
@@ -436,6 +436,7 @@ class EMyDatabase:
             workflow_type: Type of workflow (knowledge, trading, job_search, etc.)
             status: Workflow status (complete, error, etc.)
             output: The workflow output/result
+            input_data: Optional input data for the workflow
 
         Returns:
             True if stored successfully
@@ -461,9 +462,9 @@ class EMyDatabase:
                     # Insert new
                     cursor.execute("""
                         INSERT INTO workflows
-                        (workflow_id, type, status, output, created_at, updated_at)
-                        VALUES (?, ?, ?, ?, ?, ?)
-                    """, (workflow_id, workflow_type, status, output, now, now))
+                        (workflow_id, type, status, input, output, created_at, updated_at)
+                        VALUES (?, ?, ?, ?, ?, ?, ?)
+                    """, (workflow_id, workflow_type, status, input_data, output, now, now))
 
                 conn.commit()
                 return True
