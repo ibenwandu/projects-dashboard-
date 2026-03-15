@@ -209,21 +209,22 @@ class EmailParser:
         """Log received email in database.
 
         Args:
-            email: Parsed email dict
-            status: Email status ('received', 'processed')
+            email: Parsed email dict with sender, subject, email_id
+            status: Email status ('received', 'processed', 'failed')
         """
         try:
             self._db.execute("""
                 INSERT INTO email_log
-                (email_id, direction, sender, subject, status, created_at, updated_at)
-                VALUES (?, ?, ?, ?, ?, datetime('now'), datetime('now'))
+                (email_id, direction, sender, recipient, subject, status, attempt_count, created_at, updated_at)
+                VALUES (?, ?, ?, ?, ?, ?, 0, datetime('now'), datetime('now'))
             """, (
                 email.get('email_id', ''),
                 'inbound',
                 email.get('sender', ''),
+                email.get('sender', ''),
                 email.get('subject', ''),
                 status
             ))
-            logger.info(f'Logged email {email.get("email_id")} with status {status}')
+            logger.info(f'Logged inbound email from {email.get("sender", "Unknown")} with status {status}')
         except Exception as e:
-            logger.error(f'Error logging email: {e}')
+            logger.error(f'Failed to log email to database: {e}')
