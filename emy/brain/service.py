@@ -9,10 +9,12 @@ from datetime import datetime
 from typing import Dict, Any, Optional, List
 from pydantic import BaseModel, field_validator, model_validator
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from emy.brain.config import BRAIN_PORT, BRAIN_HOST, QUEUE_POLL_INTERVAL
+from emy.brain.rate_limit import rate_limiter
 from emy.brain.queue import JobQueue, Job
 from emy.brain.graph import execute_workflow
 from emy.brain.state import create_initial_state, create_initial_state_with_groups
@@ -38,6 +40,25 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*'],
 )
+
+
+@app.middleware("http")
+async def rate_limit_middleware(request: Request, call_next):
+    """Apply rate limiting to all HTTP requests."""
+    # Get client IP address
+    client_ip = request.client.host if request.client else "unknown"
+
+    # Check rate limit
+    if not rate_limiter.is_allowed(client_ip):
+        return JSONResponse(
+            status_code=429,
+            content={"detail": "Too many requests. Rate limited."}
+        )
+
+    # Process request normally
+    response = await call_next(request)
+    return response
+
 
 # Initialize job queue (use in-memory for testing)
 import os
