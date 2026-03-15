@@ -16,6 +16,7 @@ from emy.brain.config import BRAIN_PORT, BRAIN_HOST, QUEUE_POLL_INTERVAL
 from emy.brain.queue import JobQueue, Job
 from emy.brain.graph import execute_workflow
 from emy.brain.state import create_initial_state, create_initial_state_with_groups
+from emy.brain.checkpoint import checkpoint_manager
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -184,6 +185,47 @@ async def get_job_status(job_id: str):
     )
 
 
+@app.post('/jobs/{job_id}/resume', response_model=JobResponse)
+async def resume_job(job_id: str):
+    """Resume a failed job from its last checkpoint.
+
+    Args:
+        job_id: Job ID to resume
+
+    Returns:
+        Job response with pending status
+
+    Raises:
+        HTTPException: 404 if no checkpoint found
+    """
+    # Load checkpoint
+    state = checkpoint_manager.load_checkpoint(job_id)
+
+    if not state:
+        raise HTTPException(status_code=404, detail=f"No checkpoint for job {job_id}")
+
+    # Create new job with resumed state
+    job_data = {
+        "job_id": job_id,
+        "workflow_type": state.workflow_type,
+        "agents": state.agents,
+        "agent_groups": state.agent_groups,
+        "input": state.input
+    }
+
+    job = Job(**job_data)
+    await job_queue.submit(job)
+
+    logger.info(f"Resumed job {job_id} from checkpoint (group {state.current_group_index})")
+
+    return JobResponse(
+        job_id=job_id,
+        workflow_type=state.workflow_type,
+        status='pending',
+        created_at=datetime.now().isoformat()
+    )
+
+
 # ============================================================================
 # Background Job Executor
 # ============================================================================
@@ -237,11 +279,19 @@ async def job_executor():
                         'error': result.error
                     }
                     await job_queue.mark_complete(job_id, output_dict)
+
+                    # Delete checkpoint after success
+                    checkpoint_manager.delete_checkpoint(job_id)
+
                     logger.info(f'Job {job_id} completed')
 
                 except Exception as e:
                     error_msg = f'Workflow execution failed: {str(e)}'
                     logger.error(error_msg)
+
+                    # Save checkpoint for resumption
+                    checkpoint_manager.save_checkpoint(job_id, state)
+
                     await job_queue.mark_failed(job_id, error_msg)
 
             else:
