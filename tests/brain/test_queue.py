@@ -130,3 +130,21 @@ async def test_get_result(queue):
     result = await queue.get_result("test-007")
     assert result is not None
     assert result["analysis"] == "Market healthy"
+
+
+@pytest.mark.asyncio
+async def test_queue_persist_agent_groups(queue):
+    """Test that queue persists and retrieves agent_groups."""
+    job = Job(
+        job_id="test_groups_001",
+        workflow_type="market_analysis",
+        agents=[],
+        agent_groups=[["TradingAgent", "ResearchAgent"], ["KnowledgeAgent"]],
+        input={"query": "Test"}
+    )
+
+    await queue.submit(job)
+
+    # Retrieve next job
+    next_job = await queue.get_next()
+    assert next_job["agent_groups"] == [["TradingAgent", "ResearchAgent"], ["KnowledgeAgent"]]

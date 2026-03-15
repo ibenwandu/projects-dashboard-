@@ -2,8 +2,8 @@
 import asyncio
 import json
 import sqlite3
-from dataclasses import dataclass, asdict
-from typing import Any, Dict, Optional
+from dataclasses import dataclass, field, asdict
+from typing import Any, Dict, List, Optional
 from datetime import datetime
 from pathlib import Path
 
@@ -13,8 +13,9 @@ class Job:
     """Job submission request."""
     job_id: str
     workflow_type: str
-    agents: list
-    input: Dict[str, Any]
+    agents: List[str] = field(default_factory=list)
+    agent_groups: List[List[str]] = field(default_factory=list)
+    input: Dict[str, Any] = field(default_factory=dict)
 
 
 class JobQueue:
@@ -46,6 +47,7 @@ class JobQueue:
                 job_id TEXT PRIMARY KEY,
                 workflow_type TEXT NOT NULL,
                 agents TEXT NOT NULL,
+                agent_groups TEXT,
                 input TEXT,
                 output TEXT,
                 status TEXT DEFAULT 'pending',
@@ -98,26 +100,28 @@ class JobQueue:
             Job ID
         """
         loop = asyncio.get_event_loop()
+        agent_groups_json = json.dumps(job.agent_groups) if job.agent_groups else "[]"
         await loop.run_in_executor(
             None,
             self._insert_job,
             job.job_id,
             job.workflow_type,
             json.dumps(job.agents),
+            agent_groups_json,
             json.dumps(job.input)
         )
         return job.job_id
 
-    def _insert_job(self, job_id: str, workflow_type: str, agents_json: str, input_json: str):
+    def _insert_job(self, job_id: str, workflow_type: str, agents_json: str, agent_groups_json: str, input_json: str):
         """Insert job into database."""
         conn = self._get_connection()
         cursor = conn.cursor()
         now = datetime.now().isoformat()
 
         cursor.execute("""
-            INSERT INTO jobs (job_id, workflow_type, agents, input, status, created_at)
-            VALUES (?, ?, ?, ?, 'pending', ?)
-        """, (job_id, workflow_type, agents_json, input_json, now))
+            INSERT INTO jobs (job_id, workflow_type, agents, agent_groups, input, status, created_at)
+            VALUES (?, ?, ?, ?, ?, 'pending', ?)
+        """, (job_id, workflow_type, agents_json, agent_groups_json, input_json, now))
 
         conn.commit()
 
@@ -162,7 +166,7 @@ class JobQueue:
         cursor = conn.cursor()
 
         cursor.execute("""
-            SELECT job_id, workflow_type, agents, input, status, created_at
+            SELECT job_id, workflow_type, agents, agent_groups, input, status, created_at
             FROM jobs
             WHERE status = 'pending'
             ORDER BY created_at ASC
@@ -177,8 +181,9 @@ class JobQueue:
         return {
             "job_id": row["job_id"],
             "workflow_type": row["workflow_type"],
-            "agents": json.loads(row["agents"]),
-            "input": json.loads(row["input"]),
+            "agents": json.loads(row["agents"]) if row["agents"] else [],
+            "agent_groups": json.loads(row["agent_groups"]) if row["agent_groups"] else [],
+            "input": json.loads(row["input"]) if row["input"] else {},
             "status": row["status"],
             "created_at": row["created_at"]
         }
