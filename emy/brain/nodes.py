@@ -24,27 +24,33 @@ AGENT_REGISTRY = {
 
 async def router_node(state: EMyState) -> EMyState:
     """
-    Route workflow to appropriate agent.
+    Route workflow to next agent group or individual agent.
 
-    Selects the first agent in the agents list and sets it as current_agent.
+    If agent_groups is set, route to group executor. Otherwise use agents list (backward compat).
 
     Args:
         state: Current EMyState
 
     Returns:
-        Updated state with current_agent set
+        Updated state with routing decision made
     """
-    if state.agents and len(state.agents) > 0:
+    # Check if using agent groups
+    if state.agent_groups and state.current_group_index < len(state.agent_groups):
+        current_group = state.agent_groups[state.current_group_index]
+        logger.info(f"Routing to agent group {state.current_group_index}: {current_group}")
+        state.messages.append({
+            "agent": "Router",
+            "message": f"Routing to group {state.current_group_index}: {current_group}"
+        })
+    elif state.agents and len(state.agents) > 0:
+        # Backward compatibility: single agent mode
         next_agent = state.agents[0]
         state.current_agent = next_agent
-
-        # Add routing message to audit trail
+        logger.info(f"Routing to agent {next_agent} (backward compat mode)")
         state.messages.append({
             "agent": "Router",
             "message": f"Routing to {next_agent}"
         })
-
-        logger.info(f"Routing workflow {state.workflow_id} to {next_agent}")
     else:
         logger.warning(f"No agents specified for workflow {state.workflow_id}")
 
@@ -128,3 +134,35 @@ def create_agent_node(agent_name: str):
         return state
 
     return agent_node
+
+
+def create_agent_group_node():
+    """
+    Create a LangGraph node for executing an agent group in parallel.
+
+    Returns:
+        Async function that executes the current group and updates state
+    """
+    async def agent_group_node(state: EMyState) -> EMyState:
+        """
+        Execute all agents in current group in parallel.
+        """
+        from emy.brain.executor import execute_agent_group_parallel
+
+        if not state.agent_groups or state.current_group_index >= len(state.agent_groups):
+            logger.info(f"No more agent groups to execute")
+            return state
+
+        logger.info(f"Executing agent group {state.current_group_index}")
+
+        try:
+            result = await execute_agent_group_parallel(state)
+            result.status = "completed"
+            return result
+        except Exception as e:
+            state.error = f"Agent group execution failed: {str(e)}"
+            state.status = "failed"
+            logger.exception(f"Agent group execution error")
+            return state
+
+    return agent_group_node

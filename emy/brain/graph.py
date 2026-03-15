@@ -1,62 +1,67 @@
 """LangGraph state graph for Emy Brain."""
 from langgraph.graph import StateGraph, END
 from emy.brain.state import EMyState
-from emy.brain.nodes import router_node, create_agent_node, AGENT_REGISTRY
+from emy.brain.nodes import router_node, create_agent_node, create_agent_group_node, AGENT_REGISTRY
 import logging
 
 logger = logging.getLogger('EMyBrain.Graph')
 
 
-def route_to_agent(state: EMyState) -> str:
-    """
-    Determine which agent to route to based on current_agent in state.
-
-    Args:
-        state: Current EMyState
-
-    Returns:
-        Agent name or END
-    """
-    if state.current_agent and state.current_agent in AGENT_REGISTRY:
-        return state.current_agent
-    return END
-
-
 def build_graph():
     """
-    Build the LangGraph state graph.
+    Build LangGraph with support for both single-agent and multi-agent modes.
 
-    Creates a graph with:
-    - Router node that directs workflow to appropriate agent
-    - Agent nodes for each registered agent
-    - Conditional edges based on agent selection
-
-    Returns:
-        Compiled LangGraph StateGraph
+    Single-agent mode: router → agent → END
+    Multi-agent mode: router → agent_group_executor → router (loop) → ... → END
     """
-    graph = StateGraph(EMyState)
+    workflow = StateGraph(EMyState)
 
     # Add router node
-    graph.add_node("router", router_node)
+    workflow.add_node("router", router_node)
 
-    # Add agent nodes for each registered agent
+    # Add agent group executor (for parallel execution)
+    workflow.add_node("agent_group_executor", create_agent_group_node())
+
+    # Add individual agent nodes (for backward compatibility)
     for agent_name in AGENT_REGISTRY.keys():
-        agent_node = create_agent_node(agent_name)
-        graph.add_node(agent_name, agent_node)
+        workflow.add_node(agent_name, create_agent_node(agent_name))
 
-    # Set entry point to router
-    graph.set_entry_point("router")
+    # Define routing logic after router
+    def route_after_router(state: EMyState) -> str:
+        if state.agent_groups:
+            return "agent_group_executor"
+        elif state.current_agent:
+            return state.current_agent
+        else:
+            return END
 
-    # Add conditional edge from router to agents based on current_agent
-    graph.add_conditional_edges("router", route_to_agent)
+    workflow.add_conditional_edges("router", route_after_router, {
+        "agent_group_executor": "agent_group_executor",
+        **{agent_name: agent_name for agent_name in AGENT_REGISTRY.keys()},
+        END: END
+    })
 
-    # Set finish point (any agent → END)
+    # Define routing logic after group execution
+    def route_after_group_execution(state: EMyState) -> str:
+        if state.agent_groups and state.current_group_index < len(state.agent_groups):
+            return "router"  # Execute next group
+        else:
+            return END  # All groups complete
+
+    workflow.add_conditional_edges("agent_group_executor", route_after_group_execution, {
+        "router": "router",
+        END: END
+    })
+
+    # Individual agents go to END (backward compat)
     for agent_name in AGENT_REGISTRY.keys():
-        graph.add_edge(agent_name, END)
+        workflow.add_edge(agent_name, END)
 
-    # Compile the graph
-    compiled_graph = graph.compile()
-    logger.info(f"LangGraph compiled with {len(AGENT_REGISTRY)} agent nodes")
+    # Set entry point
+    workflow.set_entry_point("router")
+
+    compiled_graph = workflow.compile()
+    logger.info(f"LangGraph compiled with {len(AGENT_REGISTRY)} agent nodes and group executor")
 
     return compiled_graph
 
@@ -84,6 +89,9 @@ async def execute_workflow(state: EMyState) -> EMyState:
             "workflow_type": state.workflow_type,
             "agents": state.agents,
             "current_agent": state.current_agent,
+            "agent_groups": state.agent_groups,
+            "current_group_index": state.current_group_index,
+            "agents_executing": state.agents_executing,
             "input": state.input,
             "results": state.results,
             "messages": state.messages,
@@ -104,6 +112,9 @@ async def execute_workflow(state: EMyState) -> EMyState:
             workflow_type=output.get("workflow_type"),
             agents=output.get("agents", []),
             current_agent=output.get("current_agent"),
+            agent_groups=output.get("agent_groups", []),
+            current_group_index=output.get("current_group_index", 0),
+            agents_executing=output.get("agents_executing", []),
             input=output.get("input", {}),
             results=output.get("results", {}),
             messages=output.get("messages", []),

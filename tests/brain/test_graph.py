@@ -48,3 +48,26 @@ async def test_workflow_updates_state_with_messages():
     assert len(result.messages) > initial_messages
     # Should have router message
     assert any("Router" in msg.get("agent", "") for msg in result.messages)
+
+
+@pytest.mark.asyncio
+async def test_graph_with_agent_groups_executes_parallel():
+    """Test that graph supports agent groups and executes them."""
+    from emy.brain.state import create_initial_state_with_groups
+
+    state = create_initial_state_with_groups(
+        workflow_type="market_analysis",
+        agent_groups=[
+            ["TradingAgent"],
+            ["KnowledgeAgent"]
+        ],
+        input={"query": "Check market"}
+    )
+
+    graph = build_graph()
+    result = await execute_workflow(state)
+
+    # Both groups should have executed
+    assert result.current_group_index == 2  # Both groups processed
+    assert "TradingAgent" in result.results
+    assert "KnowledgeAgent" in result.results
