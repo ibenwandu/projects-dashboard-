@@ -300,13 +300,26 @@ async function submitComparison(query) {
         ]);
         const duration = ((Date.now() - startTime) / 1000).toFixed(1);
 
-        // Display comparison results
-        compareContent1.innerHTML = formatWorkflowOutput(
-            tryParseJSON(result1.output), type1
-        );
-        compareContent2.innerHTML = formatWorkflowOutput(
-            tryParseJSON(result2.output), type2
-        );
+        // Display comparison results - with proper unescaping
+        let output1 = result1.output;
+        let output2 = result2.output;
+
+        // Unescape double-encoded strings
+        if (typeof output1 === 'string') {
+            try {
+                output1 = JSON.parse(output1);
+            } catch (e) {}
+            output1 = output1.replace(/\\n/g, '\n').replace(/\\t/g, '\t').replace(/\\\\/g, '\\').replace(/^["\\]+|["\\]+$/g, '');
+        }
+        if (typeof output2 === 'string') {
+            try {
+                output2 = JSON.parse(output2);
+            } catch (e) {}
+            output2 = output2.replace(/\\n/g, '\n').replace(/\\t/g, '\t').replace(/\\\\/g, '\\').replace(/^["\\]+|["\\]+$/g, '');
+        }
+
+        compareContent1.innerHTML = `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${escapeHtml(output1)}</div>`;
+        compareContent2.innerHTML = `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${escapeHtml(output2)}</div>`;
 
         resultTime.textContent = `⏱ ${duration}s`;
 
