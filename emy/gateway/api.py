@@ -210,12 +210,15 @@ async def execute_workflow(request: WorkflowExecuteRequest):
     # Determine final status
     final_status = 'completed' if success else 'error'
 
+    # Ensure output is a string (not a parsed object)
+    output_str = str(output) if output else None
+
     # Store workflow output to database
     db.store_workflow_output(
         workflow_id,
         request.workflow_type,
         final_status,
-        output  # Real output from agent execution
+        output_str  # Real output from agent execution
     )
 
     workflow = {
@@ -226,7 +229,7 @@ async def execute_workflow(request: WorkflowExecuteRequest):
         'created_at': now,
         'updated_at': now,
         'input': input_data,
-        'output': output
+        'output': output_str
     }
 
     # Also keep in-memory for API compatibility
@@ -239,7 +242,7 @@ async def execute_workflow(request: WorkflowExecuteRequest):
         created_at=now,
         updated_at=now,
         input=input_data,
-        output=output
+        output=output_str
     )
 
 
@@ -261,6 +264,8 @@ async def get_workflow_status(workflow_id: str):
     wf = db.get_workflow(workflow_id)
 
     if wf:
+        # Ensure output is a string
+        output_val = str(wf.get('output')) if wf.get('output') else None
         return WorkflowResponse(
             workflow_id=wf['workflow_id'],
             type=wf['type'],
@@ -268,12 +273,13 @@ async def get_workflow_status(workflow_id: str):
             created_at=wf['created_at'],
             updated_at=wf.get('updated_at'),
             input=wf.get('input'),
-            output=wf.get('output')
+            output=output_val
         )
 
     # Fall back to in-memory for backward compatibility
     if workflow_id in _workflows:
         wf = _workflows[workflow_id]
+        output_val = str(wf.get('output')) if wf.get('output') else None
         return WorkflowResponse(
             workflow_id=wf['workflow_id'],
             type=wf['type'],
@@ -281,7 +287,7 @@ async def get_workflow_status(workflow_id: str):
             created_at=wf['created_at'],
             updated_at=wf.get('updated_at'),
             input=wf.get('input'),
-            output=wf.get('output')
+            output=output_val
         )
 
     raise HTTPException(status_code=404, detail='Workflow not found')
@@ -310,7 +316,7 @@ async def list_workflows(limit: int = Query(10, ge=1, le=100), offset: int = Que
             'created_at': wf['created_at'],
             'updated_at': wf.get('updated_at'),
             'input': wf.get('input'),
-            'output': wf.get('output')
+            'output': str(wf.get('output')) if wf.get('output') else None
         }
         for wf in workflows
     ]
