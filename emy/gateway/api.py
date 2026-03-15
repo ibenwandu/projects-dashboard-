@@ -15,10 +15,12 @@ from pathlib import Path
 from pydantic import BaseModel
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse, FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+import asyncio
+import json
 
 from emy.core.database import EMyDatabase
 from emy.core.metrics import collect_metrics
@@ -72,6 +74,13 @@ async def ui_redirect():
 # Mount static assets (CSS, JS) at /static/
 if os.path.exists(static_dir):
     app.mount("/static", StaticFiles(directory=static_dir), name="static")
+
+# ============================================================================
+# WebSocket Management
+# ============================================================================
+
+# Global set of connected WebSocket clients
+connected_clients = set()
 
 # ============================================================================
 # Request/Response Models
@@ -185,6 +194,69 @@ async def get_metrics():
     except Exception as e:
         logger.error(f"Error collecting metrics: {e}")
         raise HTTPException(status_code=500, detail="Failed to collect metrics")
+
+
+@app.websocket("/ws/metrics")
+async def websocket_metrics(websocket: WebSocket):
+    """WebSocket endpoint for real-time metrics"""
+    await websocket.accept()
+    connected_clients.add(websocket)
+
+    try:
+        # Send initial system metrics immediately
+        metrics = collect_metrics()
+        await websocket.send_json({
+            "event": "system_metrics",
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "data": {
+                "response_time_ms": metrics.system.response_time_ms,
+                "db_usage_percentage": metrics.system.db_usage_percentage,
+                "status": metrics.system.status
+            }
+        })
+
+        # Send system metrics every 30 seconds
+        while True:
+            await asyncio.sleep(30)
+            metrics = collect_metrics()
+            await websocket.send_json({
+                "event": "system_metrics",
+                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "data": {
+                    "response_time_ms": metrics.system.response_time_ms,
+                    "db_usage_percentage": metrics.system.db_usage_percentage,
+                    "status": metrics.system.status
+                }
+            })
+
+    except WebSocketDisconnect:
+        connected_clients.discard(websocket)
+        logger.info("WebSocket client disconnected")
+    except Exception as e:
+        logger.error(f"WebSocket error: {e}")
+        if websocket in connected_clients:
+            connected_clients.discard(websocket)
+
+
+async def broadcast_metric_event(event: str, data: dict):
+    """Broadcast metric event to all connected WebSocket clients"""
+    message = {
+        "event": event,
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "data": data
+    }
+
+    disconnected = []
+    for client in connected_clients:
+        try:
+            await client.send_json(message)
+        except Exception as e:
+            logger.error(f"Failed to send WebSocket message: {e}")
+            disconnected.append(client)
+
+    # Remove disconnected clients
+    for client in disconnected:
+        connected_clients.discard(client)
 
 
 @app.get('/health', response_model=HealthResponse)
