@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <!-- WebSocket Status Indicator (top right) -->
+    <div class="ws-status" id="wsStatus">🟡 Connecting...</div>
+
     <div class="container">
         <!-- Header -->
         <header class="header">
@@ -86,6 +89,40 @@
             <div class="spinner"></div>
             <p>Executing workflow...</p>
         </div>
+
+        <!-- Job Detail View (updated in real-time) -->
+        <section class="job-detail" id="jobDetail" style="display:none">
+            <div class="job-header">
+                <h3 id="jobTitle">Job Details</h3>
+                <span class="status-badge" id="jobStatus">pending</span>
+            </div>
+
+            <!-- Agent Execution Timeline -->
+            <div class="agent-timeline">
+                <div class="timeline-label">Executing Agents:</div>
+                <div class="executing-agents" id="executingAgents"></div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="jobProgress" style="width:0%"></div>
+            </div>
+
+            <!-- Job Error -->
+            <div class="job-error" id="jobError" style="display:none;"></div>
+
+            <!-- Job Log -->
+            <div class="job-log" id="jobLog">
+                <div class="log-header">Execution Log:</div>
+                <div class="log-entries" id="logEntries"></div>
+            </div>
+
+            <!-- Results -->
+            <div class="job-results" id="jobResults" style="display:none">
+                <div class="results-header">Results:</div>
+                <pre id="resultsContent"></pre>
+            </div>
+        </section>
 
         <!-- Recent Queries Section -->
         <section class="history-section">
