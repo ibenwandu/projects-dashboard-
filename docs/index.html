@@ -1,22 +1,4 @@
-#!/usr/bin/env python3
-"""
-Update mission control dashboard from dashboard_data.json
-Regenerates mission_control.html with current data
-"""
-
-import json
-import os
-from datetime import datetime
-from pathlib import Path
-
-# Paths
-SCRIPT_DIR = Path(__file__).parent
-DATA_FILE = SCRIPT_DIR / 'dashboard_data.json'
-HTML_FILE_ROOT = SCRIPT_DIR / 'mission_control.html'
-HTML_FILE_DOCS = SCRIPT_DIR / 'docs' / 'index.html'
-
-# Static HTML template - CSS and JS are fixed
-HTML_TEMPLATE = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -565,7 +547,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
         <!-- VISION BANNER -->
         <div class="vision-banner">
             <div class="vision-label">Vision</div>
-            <div class="vision-text">VISION_TEXT</div>
+            <div class="vision-text">Building a 24/7 autonomous organization that brings value and financial rewards</div>
         </div>
 
         <!-- HEADER -->
@@ -577,7 +559,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
                     <span>Agents Active</span>
                 </div>
                 <div class="clock" id="clock">--:-- --</div>
-                <div class="last-event-badge" id="lastEvent">Last Event: LASTEVENTH</div>
+                <div class="last-event-badge" id="lastEvent">Last Event: Mar 15 Â· 17:30 EDT</div>
             </div>
         </div>
 
@@ -585,22 +567,22 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
         <div class="metrics-row">
             <div class="metric-card">
                 <div class="metric-label">Systems Running</div>
-                <div class="metric-value" id="systemsCount">SYSTEMS</div>
+                <div class="metric-value" id="systemsCount">3</div>
                 <div class="metric-tooltip">Trade-Alerts, Scalp-Engine, Emy</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Emy Agents</div>
-                <div class="metric-value" id="agentsCount">AGENTS</div>
+                <div class="metric-value" id="agentsCount">6</div>
                 <div class="metric-tooltip">Trading, Knowledge, Monitor, Research, Gemini, Analysis</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Scheduled Jobs</div>
-                <div class="metric-value" id="jobsCount">JOBS</div>
+                <div class="metric-value" id="jobsCount">6</div>
                 <div class="metric-tooltip">15m, 1h, 4h, 24h intervals</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Active Automations</div>
-                <div class="metric-value" id="automationsCount">AUTOMATIONS</div>
+                <div class="metric-value" id="automationsCount">0</div>
                 <div class="metric-tooltip">Job-search paused (API preservation)</div>
             </div>
         </div>
@@ -618,7 +600,102 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
         <div class="main-layout">
             <!-- PROJECTS GRID (LEFT) -->
             <div class="projects-grid" id="projectsGrid">
-PROJECTS_HTML
+            <div class="project-card pj-g" data-status="live">
+                <div class="project-header">
+                    <div class="project-name">Emy</div>
+                    <div class="status-pill live">LIVE</div>
+                </div>
+                <div class="project-phase">→ Phase 3 Week 3 Production</div>
+                <div class="project-description">Autonomous AI Chief of Staff â€” 5 agents, 11 skills, real-time orchestration</div>
+                <div class="project-milestone">
+                    <div class="milestone-label">Next Milestone</div>
+                    <div>OpenClaw parity verification</div>
+                </div>
+            </div>
+            <div class="project-card pj-g" data-status="complete">
+                <div class="project-header">
+                    <div class="project-name">Trade-Alerts</div>
+                    <div class="status-pill complete">COMPLETE</div>
+                </div>
+                <div class="project-phase">→ Phase 1: SL/TP Verified</div>
+                <div class="project-description">LLM-based trading system with multiple consensus analysis</div>
+                <div class="project-milestone">
+                    <div class="milestone-label">Next Milestone</div>
+                    <div>Phase 1 data analysis</div>
+                </div>
+            </div>
+            <div class="project-card pj-g" data-status="running">
+                <div class="project-header">
+                    <div class="project-name">Scalp-Engine</div>
+                    <div class="status-pill running">RUNNING</div>
+                </div>
+                <div class="project-phase">→ Supporting Trade-Alerts</div>
+                <div class="project-description">Execution engine with OANDA integration and automated SL/TP</div>
+                <div class="project-milestone">
+                    <div class="milestone-label">Next Milestone</div>
+                    <div>Performance analysis</div>
+                </div>
+            </div>
+            <div class="project-card pj-b" data-status="configured">
+                <div class="project-header">
+                    <div class="project-name">Cursor-MCP-Server</div>
+                    <div class="status-pill configured">CONFIGURED</div>
+                </div>
+                <div class="project-phase">→ Awaiting restart</div>
+                <div class="project-description">Cursor Cloud Agents API as native MCP tools</div>
+                <div class="project-milestone">
+                    <div class="milestone-label">Next Milestone</div>
+                    <div>Local deployment</div>
+                </div>
+            </div>
+            <div class="project-card pj-g" data-status="ready">
+                <div class="project-header">
+                    <div class="project-name">GeminiAgent</div>
+                    <div class="status-pill ready">READY</div>
+                </div>
+                <div class="project-phase">→ Integration complete</div>
+                <div class="project-description">Gemini integration into Emy orchestration layer</div>
+                <div class="project-milestone">
+                    <div class="milestone-label">Next Milestone</div>
+                    <div>Production testing</div>
+                </div>
+            </div>
+            <div class="project-card pj-r" data-status="disabled">
+                <div class="project-header">
+                    <div class="project-name">Job-Search</div>
+                    <div class="status-pill disabled">DISABLED</div>
+                </div>
+                <div class="project-phase">→ API preservation</div>
+                <div class="project-description">Automated job discovery and application workflow</div>
+                <div class="project-milestone">
+                    <div class="milestone-label">Next Milestone</div>
+                    <div>Resume when credits available</div>
+                </div>
+            </div>
+            <div class="project-card pj-a" data-status="pending">
+                <div class="project-header">
+                    <div class="project-name">Currency-Trend-Tracker</div>
+                    <div class="status-pill pending">PENDING</div>
+                </div>
+                <div class="project-phase">→ Ideation</div>
+                <div class="project-description">Real-time currency trend analysis system</div>
+                <div class="project-milestone">
+                    <div class="milestone-label">Next Milestone</div>
+                    <div>Requirements gathering</div>
+                </div>
+            </div>
+            <div class="project-card pj-a" data-status="pending">
+                <div class="project-header">
+                    <div class="project-name">Recruiter-Email-Auto</div>
+                    <div class="status-pill pending">PENDING</div>
+                </div>
+                <div class="project-phase">→ Ideation</div>
+                <div class="project-description">Automated recruiter outreach and response system</div>
+                <div class="project-milestone">
+                    <div class="milestone-label">Next Milestone</div>
+                    <div>Requirements gathering</div>
+                </div>
+            </div>
             </div>
 
             <!-- SIDEBAR (RIGHT) -->
@@ -627,7 +704,51 @@ PROJECTS_HTML
                 <div class="sidebar-panel">
                     <div class="sidebar-title">📋 Priorities</div>
                     <div id="prioritiesList">
-PRIORITIES_HTML
+                    <div class="priority-item">
+                        <div class="priority-num">#1â€“17</div>
+                        <div style="flex: 1;">
+                            <div class="priority-text">Emy Phase 3 deployment & production optimization</div>
+                            <div style="margin-top: 4px;">
+                                <span class="priority-status priority-complete">✓ Done</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-num">#18</div>
+                        <div style="flex: 1;">
+                            <div class="priority-text">OpenClaw parity design review</div>
+                            <div style="margin-top: 4px;">
+                                <span class="priority-status priority-active">› Active</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-num">#19</div>
+                        <div style="flex: 1;">
+                            <div class="priority-text">Trade-Alerts Phase 1 data analysis</div>
+                            <div style="margin-top: 4px;">
+                                <span class="priority-status priority-pending">○ Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-num">#20</div>
+                        <div style="flex: 1;">
+                            <div class="priority-text">Cursor-MCP local deployment</div>
+                            <div style="margin-top: 4px;">
+                                <span class="priority-status priority-pending">○ Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-num">#21</div>
+                        <div style="flex: 1;">
+                            <div class="priority-text">Currency-Trend-Tracker scoping</div>
+                            <div style="margin-top: 4px;">
+                                <span class="priority-status priority-pending">○ Pending</span>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
 
@@ -635,7 +756,62 @@ PRIORITIES_HTML
                 <div class="sidebar-panel">
                     <div class="sidebar-title">🟢 System Status</div>
                     <div id="statusList">
-STATUS_HTML
+                    <div class="status-row">
+                        <div class="status-name">Emy Gateway</div>
+                        <div class="status-value">
+                            <span>Live</span>
+                            <div class="status-indicator green"></div>
+                        </div>
+                    </div>
+                    <div class="status-row">
+                        <div class="status-name">Emy Brain</div>
+                        <div class="status-value">
+                            <span>Live</span>
+                            <div class="status-indicator green"></div>
+                        </div>
+                    </div>
+                    <div class="status-row">
+                        <div class="status-name">Trade-Alerts</div>
+                        <div class="status-value">
+                            <span>Running</span>
+                            <div class="status-indicator green"></div>
+                        </div>
+                    </div>
+                    <div class="status-row">
+                        <div class="status-name">Scalp-Engine</div>
+                        <div class="status-value">
+                            <span>Running</span>
+                            <div class="status-indicator green"></div>
+                        </div>
+                    </div>
+                    <div class="status-row">
+                        <div class="status-name">Job-Search</div>
+                        <div class="status-value">
+                            <span>Disabled</span>
+                            <div class="status-indicator red"></div>
+                        </div>
+                    </div>
+                    <div class="status-row">
+                        <div class="status-name">Cursor-MCP</div>
+                        <div class="status-value">
+                            <span>Configured</span>
+                            <div class="status-indicator amber"></div>
+                        </div>
+                    </div>
+                    <div class="status-row">
+                        <div class="status-name">Rate Limit</div>
+                        <div class="status-value">
+                            <span>Normal</span>
+                            <div class="status-indicator green"></div>
+                        </div>
+                    </div>
+                    <div class="status-row">
+                        <div class="status-name">Budget</div>
+                        <div class="status-value">
+                            <span>Healthy</span>
+                            <div class="status-indicator green"></div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -644,9 +820,9 @@ STATUS_HTML
         <!-- LOG BAR -->
         <div class="log-bar">
             <div class="log-message">
-                <span class="log-timestamp" id="logTimestamp">LOGTIMESTAMP</span>
+                <span class="log-timestamp" id="logTimestamp">Mar 15 Â· 17:30 EDT</span>
                 <span> — </span>
-                <span id="logMessage">LOGMESSAGE</span>
+                <span id="logMessage">Mar 15 Â· 17:30 EDT â€” Emy production deployment complete. Both services live on Render.</span>
             </div>
         </div>
     </div>
@@ -691,126 +867,3 @@ STATUS_HTML
     </script>
 </body>
 </html>
-'''
-
-
-def generate_projects_html(projects):
-    """Generate project cards HTML"""
-    html = ""
-    for project in projects:
-        status_key = project['status'].lower().replace(' ', '').replace('/', '')
-        html += f'''            <div class="project-card {project['color']}" data-status="{status_key}">
-                <div class="project-header">
-                    <div class="project-name">{project['name']}</div>
-                    <div class="status-pill {status_key}">{project['status']}</div>
-                </div>
-                <div class="project-phase">→ {project['phase']}</div>
-                <div class="project-description">{project['description']}</div>
-                <div class="project-milestone">
-                    <div class="milestone-label">Next Milestone</div>
-                    <div>{project['nextMilestone']}</div>
-                </div>
-            </div>
-'''
-    return html.rstrip()
-
-
-def generate_priorities_html(priorities):
-    """Generate priorities list HTML"""
-    html = ""
-    for p in priorities:
-        status_class = f"priority-{p['status']}"
-        status_text = "✓ Done" if p['status'] == 'complete' else ("› Active" if p['status'] == 'active' else "○ Pending")
-        html += f'''                    <div class="priority-item">
-                        <div class="priority-num">#{p['num']}</div>
-                        <div style="flex: 1;">
-                            <div class="priority-text">{p['text']}</div>
-                            <div style="margin-top: 4px;">
-                                <span class="priority-status {status_class}">{status_text}</span>
-                            </div>
-                        </div>
-                    </div>
-'''
-    return html.rstrip()
-
-
-def generate_status_html(statuses):
-    """Generate system status HTML"""
-    html = ""
-    for s in statuses:
-        html += f'''                    <div class="status-row">
-                        <div class="status-name">{s['name']}</div>
-                        <div class="status-value">
-                            <span>{s['value']}</span>
-                            <div class="status-indicator {s['status']}"></div>
-                        </div>
-                    </div>
-'''
-    return html.rstrip()
-
-
-def update_dashboard():
-    """Main function to update dashboard"""
-    try:
-        # Load data
-        with open(DATA_FILE, 'r') as f:
-            data = json.load(f)
-
-        # Generate HTML components
-        projects_html = generate_projects_html(data['projects'])
-        priorities_html = generate_priorities_html(data['priorities'])
-        status_html = generate_status_html(data['systemStatus'])
-
-        # Format timestamps
-        last_event = data['metadata']['lastSession']
-        log_timestamp = last_event
-        log_message = data['logMessage']
-
-        # Prepare template replacements
-        vision = data.get('vision', 'Building autonomous systems with AI')
-        replacements = {
-            'VISION_TEXT': vision,
-            'LASTEVENTH': last_event,
-            'SYSTEMS': str(data['metrics']['systemsRunning']),
-            'AGENTS': str(data['metrics']['eachAgents']),
-            'JOBS': str(data['metrics']['scheduledJobs']),
-            'AUTOMATIONS': str(data['metrics']['activeAutomations']),
-            'PROJECTS_HTML': projects_html,
-            'PRIORITIES_HTML': priorities_html,
-            'STATUS_HTML': status_html,
-            'LOGTIMESTAMP': log_timestamp,
-            'LOGMESSAGE': log_message,
-        }
-
-        # Generate HTML
-        html_content = HTML_TEMPLATE
-        for key, value in replacements.items():
-            html_content = html_content.replace(key, value)
-
-        # Create docs folder if it doesn't exist
-        HTML_FILE_DOCS.parent.mkdir(parents=True, exist_ok=True)
-
-        # Write HTML to both locations
-        with open(HTML_FILE_ROOT, 'w', encoding='utf-8') as f:
-            f.write(html_content)
-
-        with open(HTML_FILE_DOCS, 'w', encoding='utf-8') as f:
-            f.write(html_content)
-
-        print("[OK] Dashboard updated: " + str(HTML_FILE_ROOT))
-        print("[OK] GitHub Pages updated: " + str(HTML_FILE_DOCS))
-        print("  Last updated: " + datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-        print("  Projects: " + str(len(data['projects'])))
-        print("  Priorities: " + str(len(data['priorities'])))
-
-        return True
-
-    except Exception as e:
-        print("[ERROR] Error updating dashboard: " + str(e))
-        import traceback
-        traceback.print_exc()
-        return False
-
-
-if __name__ == '__main__':
-    update_dashboard()
