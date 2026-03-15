@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "lastUpdated": "2026-03-15T17:30:00Z",
+    "lastSession": "Mar 15 · 17:30 EDT",
+    "title": "Mission Control"
+  },
+  "vision": "Building a 24/7 autonomous organization that brings value and financial rewards",
+  "metrics": {
+    "systemsRunning": 3,
+    "eachAgents": 6,
+    "scheduledJobs": 6,
+    "activeAutomations": 0
+  },
+  "projects": [
+    {
+      "id": "emy",
+      "name": "Emy",
+      "color": "pj-g",
+      "status": "LIVE",
+      "phase": "Phase 3 Week 3 Production",
+      "nextMilestone": "OpenClaw parity verification",
+      "description": "Autonomous AI Chief of Staff — 5 agents, 11 skills, real-time orchestration"
+    },
+    {
+      "id": "trade-alerts",
+      "name": "Trade-Alerts",
+      "color": "pj-g",
+      "status": "COMPLETE",
+      "phase": "Phase 1: SL/TP Verified",
+      "nextMilestone": "Phase 1 data analysis",
+      "description": "LLM-based trading system with multiple consensus analysis"
+    },
+    {
+      "id": "scalp-engine",
+      "name": "Scalp-Engine",
+      "color": "pj-g",
+      "status": "RUNNING",
+      "phase": "Supporting Trade-Alerts",
+      "nextMilestone": "Performance analysis",
+      "description": "Execution engine with OANDA integration and automated SL/TP"
+    },
+    {
+      "id": "cursor-mcp",
+      "name": "Cursor-MCP-Server",
+      "color": "pj-b",
+      "status": "CONFIGURED",
+      "phase": "Awaiting restart",
+      "nextMilestone": "Local deployment",
+      "description": "Cursor Cloud Agents API as native MCP tools"
+    },
+    {
+      "id": "gemini-agent",
+      "name": "GeminiAgent",
+      "color": "pj-g",
+      "status": "READY",
+      "phase": "Integration complete",
+      "nextMilestone": "Production testing",
+      "description": "Gemini integration into Emy orchestration layer"
+    },
+    {
+      "id": "job-search",
+      "name": "Job-Search",
+      "color": "pj-r",
+      "status": "DISABLED",
+      "phase": "API preservation",
+      "nextMilestone": "Resume when credits available",
+      "description": "Automated job discovery and application workflow"
+    },
+    {
+      "id": "currency-tracker",
+      "name": "Currency-Trend-Tracker",
+      "color": "pj-a",
+      "status": "PENDING",
+      "phase": "Ideation",
+      "nextMilestone": "Requirements gathering",
+      "description": "Real-time currency trend analysis system"
+    },
+    {
+      "id": "recruiter-email",
+      "name": "Recruiter-Email-Auto",
+      "color": "pj-a",
+      "status": "PENDING",
+      "phase": "Ideation",
+      "nextMilestone": "Requirements gathering",
+      "description": "Automated recruiter outreach and response system"
+    }
+  ],
+  "priorities": [
+    { "num": "1–17", "text": "Emy Phase 3 deployment & production optimization", "status": "complete" },
+    { "num": "18", "text": "OpenClaw parity design review", "status": "active" },
+    { "num": "19", "text": "Trade-Alerts Phase 1 data analysis", "status": "pending" },
+    { "num": "20", "text": "Cursor-MCP local deployment", "status": "pending" },
+    { "num": "21", "text": "Currency-Trend-Tracker scoping", "status": "pending" }
+  ],
+  "systemStatus": [
+    { "name": "Emy Gateway", "status": "green", "value": "Live" },
+    { "name": "Emy Brain", "status": "green", "value": "Live" },
+    { "name": "Trade-Alerts", "status": "green", "value": "Running" },
+    { "name": "Scalp-Engine", "status": "green", "value": "Running" },
+    { "name": "Job-Search", "status": "red", "value": "Disabled" },
+    { "name": "Cursor-MCP", "status": "amber", "value": "Configured" },
+    { "name": "Rate Limit", "status": "green", "value": "Normal" },
+    { "name": "Budget", "status": "green", "value": "Healthy" }
+  ],
+  "logMessage": "Mar 15 · 17:30 EDT — Emy production deployment complete. Both services live on Render."
+}
