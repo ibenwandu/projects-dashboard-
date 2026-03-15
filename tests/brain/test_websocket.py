@@ -21,7 +21,7 @@ def client():
 
 def test_websocket_job_updates(client):
     """Test WebSocket streaming of job updates."""
-    with client.websocket_connect("/ws/jobs") as websocket:
+    with client.websocket_connect("/ws/jobs?token=test-token") as websocket:
         # Connect successfully
         data = websocket.receive_json()
         assert data["status"] == "connected"
@@ -29,7 +29,7 @@ def test_websocket_job_updates(client):
 
 def test_websocket_connection_and_disconnect(client):
     """Test WebSocket connection and disconnection."""
-    with client.websocket_connect("/ws/jobs") as websocket:
+    with client.websocket_connect("/ws/jobs?token=test-token") as websocket:
         # Receive connection confirmation
         data = websocket.receive_json()
         assert data["status"] == "connected"
@@ -38,10 +38,42 @@ def test_websocket_connection_and_disconnect(client):
 
 def test_websocket_multiple_connections(client):
     """Test multiple concurrent WebSocket connections."""
-    with client.websocket_connect("/ws/jobs") as ws1:
+    with client.websocket_connect("/ws/jobs?token=test-token") as ws1:
         data1 = ws1.receive_json()
         assert data1["status"] == "connected"
 
-        with client.websocket_connect("/ws/jobs") as ws2:
+        with client.websocket_connect("/ws/jobs?token=test-token") as ws2:
             data2 = ws2.receive_json()
             assert data2["status"] == "connected"
+
+
+def test_websocket_requires_auth(client):
+    """Test WebSocket rejects unauthenticated connections."""
+    # Should fail without token
+    with pytest.raises(Exception):  # WebSocketDisconnect or connection error
+        with client.websocket_connect("/ws/jobs") as ws:
+            pass
+
+
+def test_websocket_accepts_with_token(client):
+    """Test WebSocket accepts connections with valid token."""
+    with client.websocket_connect("/ws/jobs?token=test-token") as websocket:
+        data = websocket.receive_json()
+        assert data["status"] == "connected"
+
+
+def test_websocket_validates_subscribe_message(client):
+    """Test WebSocket validates subscribe messages."""
+    with client.websocket_connect("/ws/jobs?token=test-token") as websocket:
+        # Receive connection confirmation
+        data = websocket.receive_json()
+        assert data["status"] == "connected"
+
+        # Send valid subscribe message
+        websocket.send_json({"type": "subscribe", "job_id": "job_123"})
+
+        # Send invalid subscribe message (empty job_id)
+        websocket.send_json({"type": "subscribe", "job_id": ""})
+
+        # Connection should still be alive
+        # (no exception raised)

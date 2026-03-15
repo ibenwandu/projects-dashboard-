@@ -17,5 +17,8 @@ QUEUE_POLL_INTERVAL = int(os.getenv("QUEUE_POLL_INTERVAL", "5"))
 # Agent timeouts (seconds)
 AGENT_TIMEOUT = int(os.getenv("AGENT_TIMEOUT", "300"))
 
+# WebSocket connection limits
+MAX_WS_CONNECTIONS = int(os.getenv("MAX_WS_CONNECTIONS", "100"))
+
 # LangGraph
 LANGGRAPH_DEBUG = os.getenv("LANGGRAPH_DEBUG", "false").lower() == "true"

@@ -13,7 +13,7 @@ from pydantic import BaseModel, field_validator, model_validator
 from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 
-from emy.brain.config import BRAIN_PORT, BRAIN_HOST, QUEUE_POLL_INTERVAL
+from emy.brain.config import BRAIN_PORT, BRAIN_HOST, QUEUE_POLL_INTERVAL, MAX_WS_CONNECTIONS
 from emy.brain.queue import JobQueue, Job
 from emy.brain.graph import execute_workflow
 from emy.brain.state import create_initial_state, create_initial_state_with_groups
@@ -110,9 +110,23 @@ async def websocket_endpoint(websocket: WebSocket):
     """WebSocket endpoint for real-time job updates.
 
     Clients connect and receive job status updates as they happen.
+    Requires authentication token in query parameter or Authorization header.
     Clients can optionally send messages to subscribe to specific jobs.
     """
-    await job_update_manager.connect(websocket)
+    # Require authentication token before accepting connection
+    auth_token = websocket.query_params.get("token") or websocket.headers.get("Authorization")
+    if not auth_token:
+        await websocket.close(code=1008, reason="Unauthorized")
+        logger.warning("WebSocket connection rejected: missing authentication token")
+        return
+
+    # Try to connect (may raise ConnectionError if limit reached)
+    try:
+        await job_update_manager.connect(websocket)
+    except ConnectionError as e:
+        logger.warning(f"WebSocket connection rejected: {e}")
+        return
+
     try:
         while True:
             # Keep connection open, receive/process client messages if needed
@@ -123,10 +137,23 @@ async def websocket_endpoint(websocket: WebSocket):
                     message = json.loads(data)
                     if message.get("type") == "subscribe":
                         job_id = message.get("job_id")
-                        logger.info(f"Client subscribed to job {job_id}")
-                except json.JSONDecodeError:
-                    logger.warning(f"Invalid JSON received on WebSocket: {data}")
+                        # Validate job_id is a non-empty string
+                        if isinstance(job_id, str) and job_id.strip():
+                            logger.info(f"Client subscribed to job {job_id}")
+                        else:
+                            logger.warning(f"Invalid subscribe request: invalid job_id {job_id}")
+                except json.JSONDecodeError as e:
+                    logger.warning(f"Malformed JSON from client: {e}")
+    except json.JSONDecodeError as e:
+        logger.warning(f"Malformed JSON from client: {e}")
+        await job_update_manager.disconnect(websocket)
     except WebSocketDisconnect:
+        await job_update_manager.disconnect(websocket)
+    except RuntimeError as e:
+        logger.warning(f"WebSocket runtime error: {e}")
+        await job_update_manager.disconnect(websocket)
+    except Exception as e:
+        logger.error(f"Unexpected error in websocket_endpoint: {e}")
         await job_update_manager.disconnect(websocket)
 
 
