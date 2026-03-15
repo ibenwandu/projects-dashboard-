@@ -1,5 +1,6 @@
 """Emy Brain configuration."""
 import os
+import logging
 from pathlib import Path
 
 # Service settings
@@ -19,3 +20,8 @@ AGENT_TIMEOUT = int(os.getenv("AGENT_TIMEOUT", "300"))
 
 # LangGraph
 LANGGRAPH_DEBUG = os.getenv("LANGGRAPH_DEBUG", "false").lower() == "true"
+
+# Logging Configuration
+LOG_LEVEL_STR = os.getenv("LOG_LEVEL", "INFO")
+LOG_LEVEL = getattr(logging, LOG_LEVEL_STR, logging.INFO)
+LOG_FILE = os.getenv("LOG_FILE", None)

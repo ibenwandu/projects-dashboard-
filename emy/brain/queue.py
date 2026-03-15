@@ -1,11 +1,14 @@
 """Async job queue for Emy Brain with SQLite persistence."""
 import asyncio
 import json
+import logging
 import sqlite3
 from dataclasses import dataclass, field, asdict
 from typing import Any, Dict, List, Optional
 from datetime import datetime
 from pathlib import Path
+
+logger = logging.getLogger('EMyBrain.Queue')
 
 
 @dataclass

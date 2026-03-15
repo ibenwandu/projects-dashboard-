@@ -17,9 +17,10 @@ from emy.brain.queue import JobQueue, Job
 from emy.brain.graph import execute_workflow
 from emy.brain.state import create_initial_state, create_initial_state_with_groups
 from emy.brain.checkpoint import checkpoint_manager
+from emy.brain.logging_config import setup_logging
 
-# Setup logging
-logging.basicConfig(level=logging.INFO)
+# Setup structured logging
+setup_logging(log_level=logging.INFO)
 logger = logging.getLogger('EMyBrain.Service')
 
 # Initialize FastAPI app
