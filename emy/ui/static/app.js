@@ -300,40 +300,54 @@ async function submitComparison(query) {
         ]);
         const duration = ((Date.now() - startTime) / 1000).toFixed(1);
 
-        // Display comparison results - with proper unescaping
-        let output1 = (result1.output || '');
-        let output2 = (result2.output || '');
-        console.log('Result1:', result1, 'Output1 type:', typeof output1, 'Output1:', output1);
-        console.log('Result2:', result2, 'Output2 type:', typeof output2, 'Output2:', output2);
-
-        // Ensure they're strings, parse JSON if needed, then unescape
-        function cleanOutput(output) {
+        // Helper: safely convert any value to a displayable string
+        function getOutputAsString(output) {
             if (!output) return '';
-            let text = '' + output;  // Force string conversion
-            // Try JSON parse
-            try {
-                const parsed = JSON.parse(text);
-                text = '' + parsed;
-            } catch (e) {
-                // Not JSON, use as-is
+            // If it's already a string, return it
+            if (typeof output === 'string') return output;
+            // If it's an object, try to serialize it
+            if (typeof output === 'object') {
+                try {
+                    return JSON.stringify(output);
+                } catch (e) {
+                    return String(output);
+                }
             }
-            // Ensure text is a string before calling replace
-            if (typeof text !== 'string') {
-                text = '' + text;
-            }
-            // Unescape sequences
-            text = text.replace(/\\n/g, '\n')
-                      .replace(/\\t/g, '\t')
-                      .replace(/\\\\/g, '\\')
-                      .replace(/^["\\]+|["\\]+$/g, '');
-            return text;
+            return String(output);
         }
 
-        output1 = cleanOutput(output1);
-        output2 = cleanOutput(output2);
+        let output1Str = getOutputAsString(result1.output);
+        let output2Str = getOutputAsString(result2.output);
 
-        compareContent1.innerHTML = `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${escapeHtml(output1)}</div>`;
-        compareContent2.innerHTML = `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${escapeHtml(output2)}</div>`;
+        // Helper: parse and display output
+        function formatOutput(outputStr) {
+            if (!outputStr) return '(No output)';
+
+            // Try to parse as JSON
+            let data = outputStr;
+            try {
+                data = JSON.parse(outputStr);
+            } catch (e) {
+                // Not JSON, treat as plain text
+            }
+
+            // If it's an object, format it
+            if (typeof data === 'object') {
+                try {
+                    return JSON.stringify(data, null, 2);
+                } catch (e) {
+                    return String(data);
+                }
+            }
+
+            return String(data);
+        }
+
+        const output1Html = escapeHtml(formatOutput(output1Str));
+        const output2Html = escapeHtml(formatOutput(output2Str));
+
+        compareContent1.innerHTML = `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${output1Html}</div>`;
+        compareContent2.innerHTML = `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${output2Html}</div>`;
 
         resultTime.textContent = `⏱ ${duration}s`;
 
