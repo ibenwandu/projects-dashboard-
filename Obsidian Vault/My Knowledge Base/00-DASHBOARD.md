@@ -9,7 +9,7 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 
 | Project | Phase | Status | Next Milestone | Progress |
 |---------|-------|--------|-----------------|-----------|
-| **Emy** | **Phase 3 Week 3: Staging LIVE** | ✅ **LIVE ON RENDER (Mar 15, 11:54 AM)** | **OpenClaw Parity Review + Weeks 4-8 Planning** | **Both services deployed and live: emy-brain (orchestration) + emy-phase1a (gateway). End-to-end workflow execution verified (Gateway → Brain communication working). Health checks passing, logs clean, persistent disks configured. Ready for agent wiring and feature testing.** |
+| **Emy** | **Phase 3 Week 3: PRODUCTION READY** | ✅ **PRODUCTION LIVE (Mar 15, 5:30 PM)** | **Week 4-8: JobSearchAgent + Browser Automation** | **PRODUCTION DEPLOYED: Both services live (emy-phase1a Gateway + emy-brain Brain). All 3 agents enabled and tested (Trading, Research, Knowledge). Database persistence verified. Health checks passing. Production docs created (PRODUCTION_DEPLOYMENT.md, EMY_OPERATIONS_MANUAL.md). Budget controls active ($10/day Claude API). Ready for 24/7 autonomous operation.** |
 | Trade-Alerts | Phase 1: SL/TP Verification | ✅ COMPLETE (Mar 9-11) | Execute analysis plan, fix consensus config | TP/SL working; phase 1 data ready; plan created (buzzing-plotting-robin.md) |
 | Scalp-Engine | Supporting Trade-Alerts | 🟢 RUNNING | Monitor max_runs blocking | All phases deployed, Render live, monitored by Emy |
 | **Cursor-MCP-Server** | **Configuration** | ✅ **CONFIGURED (Mar 15)** | Test & verify tools after Claude Code restart | **Full implementation complete (Mar 12); configuration issue fixed (Mar 15). Cursor-agents added to C:\Users\user\.claude.json. 5 tools ready: launch_cursor_agent, get_agent_status, list_agents, send_followup, download_artifact. Next: Restart Claude Code → verify /mcp shows ✓ connected → test tools.** |
@@ -41,7 +41,7 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 
 4. **[COMPLETE]** ✅ **Branch Pushed** - `phase-3-brain` ready for PR
 
-### This Session (Mar 15, 9:15 AM - 11:54 AM)
+### This Session (Mar 15, 9:15 AM - 5:30 PM PRODUCTION DEPLOYMENT)
 5. **[COMPLETE]** ✅ **Local Verification** - Started Brain service on localhost:8001, verified health (200 OK), job submission, status retrieval, WebSocket, rate limiting. 66/66 tests passing.
 6. **[COMPLETE]** ✅ **Architecture Design** - Designed two-service architecture (Gateway + Brain) matching OpenClaw design. Documented in render.yaml and RENDER_DEPLOYMENT.md.
 7. **[COMPLETE]** ✅ **Render Configuration** - Created render.yaml with complete infrastructure definition, environment variables, persistent disks, CORS config, both services configured.
@@ -51,7 +51,11 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 11. **[COMPLETE]** ✅ **Dependency Troubleshooting** - Resolved anthropic==0.32.1 conflict, oandapyV20>=0.7.5 error, pydantic compilation issue. Root cause: version constraints in root requirements.txt. Fixed via version updates and dependency consolidation (commits 691c509, 466cceb, 13e1834, 87a57c4).
 12. **[COMPLETE]** ✅ **Render Staging Deployment** - Created emy-brain service on Render, configured all environment variables, added persistent disk, enabled CORS. Both services live: emy-brain (11:54 AM) + emy-phase1a (confirmed healthy).
 13. **[COMPLETE]** ✅ **End-to-End Verification** - Gateway health check: 200 OK. Workflow execution through Gateway: 200 OK, latency ~6s, polling working. Infrastructure validated.
-14. **[NEXT]** **OpenClaw Parity Review** - Assess gaps, plan Weeks 4-8 (JobSearchAgent, browser automation)
+14. **[COMPLETE]** ✅ **Re-enable Agents** - Removed two .emy_disabled kill-switch files (root + emy/). TradingAgent now enabled and providing market analysis.
+15. **[COMPLETE]** ✅ **Fix Workflow Retrieval** - Added input parameter to database storage. GET /workflows/{id} now returns complete workflow data (was returning 404).
+16. **[COMPLETE]** ✅ **Test All Agents** - Verified 3 agents working: TradingAgent (market analysis), ResearchAgent (project evaluation), KnowledgeAgent (knowledge queries).
+17. **[COMPLETE]** ✅ **Production Deployment** - Created PRODUCTION_DEPLOYMENT.md (readiness checklist, API ref, monitoring, troubleshooting). Created EMY_OPERATIONS_MANUAL.md (daily ops, manual workflows, emergency procedures). Committed docs and pushed to master.
+18. **[NEXT]** **OpenClaw Parity Review** - Assess gaps, plan Weeks 4-8 (JobSearchAgent, browser automation)
 15. **[DEFERRED]** Execute Trade-Alerts Phase 1 Analysis - Plan exists (buzzing-plotting-robin.md), execute when Emy Render is stable
 16. **[DEFERRED]** Fix Trade-Alerts Consensus Config - Plan exists, execute when ready
 
@@ -86,10 +90,10 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 ---
 
 ## Last Updated
-**March 15, 2026, 11:54 AM EDT** - **EMY PHASE 3 STAGING DEPLOYMENT COMPLETE (LIVE)**:
-- **Emy**: Phase 3 Week 3 COMPLETE & LIVE (8 tasks, 40/40 tests). Render staging deployment succeeded (11:54 AM). Both services active: emy-brain (orchestration) at https://emy-brain.onrender.com, emy-phase1a (gateway) at https://emy-phase1a.onrender.com. End-to-end workflow execution verified.
-- **Deployment**: Fixed 4 dependency issues (anthropic==0.32.1, oandapyV20 versions, pydantic compilation, langgraph/langsmith missing). All dependencies resolved with flexible version constraints.
-- **Architecture**: Two-service design live. Gateway (port 8000) → Brain (port 8001) via https URL. Fallback to local AgentExecutor for development. CORS configured for security.
-- **Verification**: Health checks passing (200 OK), logs clean, job queue initialized, executor started, persistent disks working. End-to-end latency ~6s (job polling).
-- **Immediate Next**: OpenClaw parity review, plan Weeks 4-8 (JobSearchAgent, browser automation). Monitor logs for 24-48 hours before feature testing.
+**March 15, 2026, 5:30 PM EDT** - **EMY PRODUCTION DEPLOYMENT COMPLETE**:
+- **Emy Production Status**: Phase 3 Week 3 COMPLETE & PRODUCTION LIVE. Both services deployed on Render: emy-phase1a (Gateway, port 8000), emy-brain (Brain, port 8001). All 3 agents enabled and tested (TradingAgent, ResearchAgent, KnowledgeAgent). End-to-end workflow execution verified.
+- **Production Readiness**: All issues fixed (agents re-enabled, database workflow retrieval working). Documentation complete: PRODUCTION_DEPLOYMENT.md (readiness checklist, API reference, monitoring), EMY_OPERATIONS_MANUAL.md (daily operations, emergency procedures). Budget controls active ($10/day Claude API limit).
+- **Agent Capabilities**: TradingAgent provides market analysis with forex signals. ResearchAgent evaluates project feasibility. KnowledgeAgent queries knowledge base and synthesizes insights. All agents healthy and operational.
+- **Infrastructure**: Two-service architecture (Gateway → Brain via HTTPS). Persistent SQLite databases on /data mounts (2GB each). Rate limiting active (100 req/min per IP). CORS configured. Render auto-scaling enabled.
+- **Next Phase**: Weeks 4-8 development (JobSearchAgent, browser automation, email integration). Monitor logs for 24-48 hours. Execute OpenClaw parity review to identify feature gaps.
 - **Root Session**: Documented in ./CLAUDE_SESSION_LOG.md, Obsidian dashboard updated, all changes committed.
