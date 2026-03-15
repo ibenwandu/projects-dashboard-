@@ -7,7 +7,7 @@ import asyncio
 import logging
 from datetime import datetime
 from typing import Dict, Any, Optional, List
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator, model_validator
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,7 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from emy.brain.config import BRAIN_PORT, BRAIN_HOST, QUEUE_POLL_INTERVAL
 from emy.brain.queue import JobQueue, Job
 from emy.brain.graph import execute_workflow
-from emy.brain.state import create_initial_state
+from emy.brain.state import create_initial_state, create_initial_state_with_groups
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -51,10 +51,20 @@ job_executor_task = None
 # ============================================================================
 
 class JobSubmitRequest(BaseModel):
-    """Request to submit a job."""
+    """Request to submit a job (supports both single agent and agent groups)."""
     workflow_type: str
-    agents: List[str]
+    agents: Optional[List[str]] = None  # Backward compat: single-agent mode
+    agent_groups: Optional[List[List[str]]] = None  # Multi-agent mode with grouping
     input: Optional[Dict[str, Any]] = None
+
+    @model_validator(mode='after')
+    def check_agent_specification(self):
+        """Ensure either agents or agent_groups is specified, but not both."""
+        if not self.agents and not self.agent_groups:
+            raise ValueError('Either agents or agent_groups must be specified')
+        if self.agents and self.agent_groups:
+            raise ValueError('Cannot specify both agents and agent_groups')
+        return self
 
 
 class JobResponse(BaseModel):
@@ -98,29 +108,45 @@ async def submit_job(request: JobSubmitRequest):
     """
     Submit a new job for execution.
 
-    Args:
-        request: Job submission request
-
-    Returns:
-        Job information with ID and status
+    Supports both:
+    - Single agent: agents=["TradingAgent"]
+    - Agent groups: agent_groups=[["TradingAgent", "ResearchAgent"], ["KnowledgeAgent"]]
     """
     import uuid
 
-    # Create job
     job_id = f"job_{uuid.uuid4().hex[:8]}"
-    job = Job(
-        job_id=job_id,
-        workflow_type=request.workflow_type,
-        agents=request.agents,
-        input=request.input or {}
-    )
 
-    # Submit to queue
-    submitted_id = await job_queue.submit(job)
-    logger.info(f"Job {job_id} submitted for workflow {request.workflow_type}")
+    # Determine how to create state
+    if request.agent_groups:
+        state = create_initial_state_with_groups(
+            workflow_type=request.workflow_type,
+            agent_groups=request.agent_groups,
+            input=request.input or {},
+            workflow_id=job_id
+        )
+    else:
+        state = create_initial_state(
+            workflow_type=request.workflow_type,
+            agents=request.agents or [],
+            input=request.input or {},
+            workflow_id=job_id
+        )
+
+    # Store in queue
+    job_data = {
+        "job_id": job_id,
+        "workflow_type": request.workflow_type,
+        "agents": request.agents or [],
+        "input": request.input or {}
+    }
+
+    job = Job(**job_data)
+    await job_queue.submit(job)
+
+    logger.info(f"Job {job_id} submitted with {'agent_groups' if request.agent_groups else 'single agent'}")
 
     return JobResponse(
-        job_id=submitted_id,
+        job_id=job_id,
         workflow_type=request.workflow_type,
         status='pending',
         created_at=datetime.now().isoformat()

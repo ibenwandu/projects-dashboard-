@@ -63,3 +63,21 @@ def test_get_job_status(client):
     data = status_response.json()
     assert data["job_id"] == job_id
     assert "status" in data
+
+
+def test_submit_job_with_agent_groups(client):
+    """Test submitting a job with agent groups."""
+    job_data = {
+        "workflow_type": "market_analysis",
+        "agent_groups": [
+            ["TradingAgent", "ResearchAgent"],
+            ["KnowledgeAgent"]
+        ],
+        "input": {"query": "Analyze EUR/USD"}
+    }
+
+    response = client.post("/jobs", json=job_data)
+    assert response.status_code == 200
+    data = response.json()
+    assert "job_id" in data
+    assert data["workflow_type"] == "market_analysis"
