@@ -374,3 +374,121 @@ class TestTradingHoursMonitorAgent:
         assert result["trades_closed"] == 1
         assert result["total_pnl"] == 45.0
         assert len(result["closed_trades"]) == 1
+
+    @pytest.mark.asyncio
+    async def test_monitor_compliance_violations_detected(self, agent):
+        """Test monitoring detects violations without closing."""
+        trades = [
+            {
+                "id": "111",
+                "instrument": "EUR/USD",
+                "direction": "BUY",
+                "currentUnits": 100,
+                "unrealizedPL": 45.0,
+                "pricingStatus": "OPEN"
+            },
+            {
+                "id": "222",
+                "instrument": "GBP/USD",
+                "direction": "SELL",
+                "currentUnits": 50,
+                "unrealizedPL": -20.0,
+                "pricingStatus": "OPEN"
+            },
+            {
+                "id": "333",
+                "instrument": "USD/JPY",
+                "direction": "BUY",
+                "currentUnits": 200,
+                "unrealizedPL": 10.0,
+                "pricingStatus": "OPEN"
+            }
+        ]
+
+        compliance = {
+            "111": {
+                "trade_id": "111",
+                "pair": "EUR/USD",
+                "compliant": False,
+                "close_reason": "FRIDAY_HARD_CLOSE",
+                "profit_pips": 4500.0,
+                "pricingStatus": "OPEN"
+            },
+            "222": {
+                "trade_id": "222",
+                "pair": "GBP/USD",
+                "compliant": False,
+                "close_reason": "RUNNER_DEADLINE",
+                "profit_pips": -4000.0,
+                "pricingStatus": "OPEN"
+            },
+            "333": {
+                "trade_id": "333",
+                "pair": "USD/JPY",
+                "compliant": True,
+                "close_reason": None,
+                "profit_pips": 1000.0,
+                "pricingStatus": "OPEN"
+            }
+        }
+
+        with patch.object(agent, '_get_open_trades', return_value=trades):
+            with patch.object(agent, '_check_compliance_status', side_effect=lambda t, ct: compliance[t["id"]]):
+                with patch.object(agent.db, 'execute'):
+                    with patch.object(agent, '_send_pushover_alert'):
+                        result = await agent._monitor_compliance()
+
+        assert result["trades_checked"] == 3
+        assert result["violations_detected"] == 2
+        assert result["critical"] is True
+        assert result["alert_sent"] is True
+        assert len(result["violations"]) == 2
+        assert result["violations"][0]["pair"] == "EUR/USD"
+        assert result["violations"][1]["pair"] == "GBP/USD"
+
+    @pytest.mark.asyncio
+    async def test_monitor_compliance_no_violations(self, agent):
+        """Test monitoring with all trades compliant."""
+        trades = [
+            {
+                "id": "111",
+                "instrument": "EUR/USD",
+                "direction": "BUY",
+                "currentUnits": 100,
+                "unrealizedPL": 45.0,
+                "pricingStatus": "OPEN"
+            }
+        ]
+
+        compliance = {
+            "111": {
+                "trade_id": "111",
+                "pair": "EUR/USD",
+                "compliant": True,
+                "close_reason": None,
+                "profit_pips": 4500.0,
+                "pricingStatus": "OPEN"
+            }
+        }
+
+        with patch.object(agent, '_get_open_trades', return_value=trades):
+            with patch.object(agent, '_check_compliance_status', side_effect=lambda t, ct: compliance[t["id"]]):
+                with patch.object(agent.db, 'execute'):
+                    result = await agent._monitor_compliance()
+
+        assert result["trades_checked"] == 1
+        assert result["violations_detected"] == 0
+        assert result["critical"] is False
+        assert result["alert_sent"] is False
+        assert len(result["violations"]) == 0
+
+    @pytest.mark.asyncio
+    async def test_monitor_compliance_api_error(self, agent):
+        """Test monitoring handles API errors gracefully."""
+        with patch.object(agent, '_get_open_trades', side_effect=Exception("API Error")):
+            with patch.object(agent.db, 'execute'):
+                result = await agent._monitor_compliance()
+
+        assert result["error"] is not None
+        assert "API Error" in result["error"]
+        assert result["trades_checked"] == 0

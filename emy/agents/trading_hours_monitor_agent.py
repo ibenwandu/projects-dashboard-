@@ -346,17 +346,101 @@ class TradingHoursMonitorAgent(EMySubAgent):
         # Placeholder for actual Pushover client implementation
         logger.info(f"[TradingHoursMonitorAgent] [{severity.upper()}] {message}")
 
-    def _monitor_compliance(self) -> Dict:
-        """Monitor compliance without taking enforcement action.
+    async def _monitor_compliance(self) -> Dict:
+        """Monitor compliance without closing trades.
+
+        Detects trading hours violations and alerts if critical, but does not take enforcement action.
 
         Returns:
-            dict: Report with keys:
-                - violations_detected (list): List of non-compliant trades
-                - total_violations (int): Count of violations found
-                - timestamp (str): When the check was performed
-
-        Raises:
-            NotImplementedError: This method will be implemented in Task 7
+            dict: Monitoring report with keys:
+                - report_type (str): Always "trading_hours_monitoring"
+                - timestamp (str): ISO8601 datetime
+                - trades_checked (int): Total trades checked
+                - violations_detected (int): Count of violations
+                - violations (list): Details of non-compliant trades
+                - critical (bool): True if violations exist
+                - alert_sent (bool): Whether alert was sent
+                - error (str or None): Error message if monitoring failed
         """
-        # To be implemented in Task 7
-        raise NotImplementedError("_monitor_compliance() to be implemented in Task 7")
+        import json
+
+        report = {
+            "report_type": "trading_hours_monitoring",
+            "timestamp": datetime.now(pytz.UTC).isoformat(),
+            "trades_checked": 0,
+            "violations_detected": 0,
+            "violations": [],
+            "critical": False,
+            "alert_sent": False,
+            "error": None
+        }
+
+        try:
+            # Step 1: Fetch all open trades
+            open_trades = self._get_open_trades()
+            report["trades_checked"] = len(open_trades)
+
+            if not open_trades:
+                logger.info(f"[TradingHoursMonitorAgent] Monitoring: 0 trades to monitor")
+                return report
+
+            # Step 2: Check compliance for each trade
+            current_time = datetime.now(pytz.UTC)
+            violations_list = []
+
+            for trade in open_trades:
+                compliance = self._check_compliance_status(trade, current_time)
+
+                if not compliance["compliant"]:
+                    violations_list.append({
+                        "trade_id": compliance["trade_id"],
+                        "pair": compliance["pair"],
+                        "pricingStatus": compliance["pricingStatus"],
+                        "violation_reason": compliance["close_reason"],
+                        "profit_pips": compliance["profit_pips"]
+                    })
+
+            report["violations"] = violations_list
+            report["violations_detected"] = len(violations_list)
+            report["critical"] = len(violations_list) > 0
+
+            # Step 3: Alert if critical violations detected (but don't close)
+            if report["critical"]:
+                try:
+                    # Build alert message
+                    violation_details = ", ".join([f"{v['pair']}: {v['violation_reason']}" for v in violations_list])
+                    alert_message = f"Trading Hours Monitoring: {report['violations_detected']} violations detected ({violation_details})"
+
+                    self._send_pushover_alert("high", alert_message)
+                    report["alert_sent"] = True
+                    logger.warning(f"[TradingHoursMonitorAgent] Monitoring alert sent: {alert_message}")
+                except Exception as e:
+                    logger.error(f"[TradingHoursMonitorAgent] Alert error during monitoring: {e}")
+
+            # Step 4: Store report in database
+            try:
+                self.db.execute(
+                    """
+                    INSERT INTO monitoring_reports
+                    (report_type, timestamp, enforcement_action, findings, critical, data_sources)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        report["report_type"],
+                        report["timestamp"],
+                        False,
+                        json.dumps(violations_list),
+                        report["critical"],
+                        json.dumps({"source": "OANDA", "trades_checked": report["trades_checked"]})
+                    )
+                )
+            except Exception as e:
+                logger.error(f"[TradingHoursMonitorAgent] Database error during monitoring: {e}")
+
+            logger.info(f"[TradingHoursMonitorAgent] Monitoring complete: {report['violations_detected']} violations detected")
+            return report
+
+        except Exception as e:
+            logger.error(f"[TradingHoursMonitorAgent] Monitoring error: {e}")
+            report["error"] = str(e)
+            return report
