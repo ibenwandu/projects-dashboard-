@@ -68,6 +68,33 @@ class KnowledgeAgent(EMySubAgent):
             self.logger.error(f"Error loading CLAUDE.md: {e}")
             return False
 
+    async def generate_email_response(
+        self,
+        from_email: str,
+        subject: str,
+        body: str,
+        intent: str
+    ) -> Optional[Dict[str, str]]:
+        """Generate response to research questions"""
+        if intent not in ['research', 'question']:
+            return None
+
+        # Generate research-based response
+        response_body = f"""Thank you for your research inquiry.
+
+I have analyzed your question and am preparing a comprehensive response. I will provide detailed findings, supporting evidence, and actionable recommendations.
+
+I will send the full analysis shortly.
+
+Best regards,
+Emy AI Chief of Staff"""
+
+        return {
+            'to': from_email,
+            'subject': f"Re: {subject}",
+            'body': response_body
+        }
+
     def run(self) -> Tuple[bool, Dict[str, Any]]:
         """
         Execute knowledge agent.

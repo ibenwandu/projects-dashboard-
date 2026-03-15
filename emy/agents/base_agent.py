@@ -78,6 +78,29 @@ class EMySubAgent(ABC):
         """
         pass
 
+    async def generate_email_response(
+        self,
+        from_email: str,
+        subject: str,
+        body: str,
+        intent: str
+    ) -> Optional[Dict[str, str]]:
+        """
+        Generate contextual response to incoming email.
+
+        Args:
+            from_email: Sender's email address
+            subject: Email subject
+            body: Email body
+            intent: Classified email intent
+
+        Returns:
+            Dict with 'to', 'subject', 'body' keys, or None to skip response
+        """
+        # Default implementation - subclasses override
+        self.logger.info(f"Base agent: would respond to {from_email} regarding {intent}")
+        return None
+
     def report_result(self, success: bool, result_json: str = None, error: str = None):
         """
         Report agent execution result.

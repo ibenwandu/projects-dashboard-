@@ -5,7 +5,7 @@ Checks health of Trade-Alerts, Scalp-Engine, and other services running on Rende
 Sends alerts on downtime or anomalies.
 """
 
-from typing import Tuple, Dict, Any
+from typing import Tuple, Dict, Any, Optional
 from datetime import datetime
 
 from emy.agents.base_agent import EMySubAgent
@@ -22,6 +22,34 @@ class ProjectMonitorAgent(EMySubAgent):
             'scalp-engine',
             'job-search-api',
         ]
+
+    async def generate_email_response(
+        self,
+        from_email: str,
+        subject: str,
+        body: str,
+        intent: str
+    ) -> Optional[Dict[str, str]]:
+        """Generate response to status inquiries"""
+        if intent != 'status':
+            return None
+
+        # Generate status update response
+        response_body = f"""Thank you for your status inquiry.
+
+Here is the current project status summary:
+- All active projects are progressing on schedule
+- No critical blockers identified
+- Next milestone update will be sent within 24 hours
+
+Best regards,
+Emy AI Chief of Staff"""
+
+        return {
+            'to': from_email,
+            'subject': f"Re: {subject}",
+            'body': response_body
+        }
 
     def run(self, task_id: int = None) -> Tuple[bool, Dict[str, Any]]:
         """

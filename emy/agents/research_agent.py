@@ -6,7 +6,7 @@ Provides AI-powered analysis via Claude API.
 
 import logging
 from datetime import datetime
-from typing import Tuple, Dict, Any
+from typing import Tuple, Dict, Any, Optional
 
 from emy.agents.base_agent import EMySubAgent
 
@@ -102,6 +102,33 @@ class ResearchAgent(EMySubAgent):
             "Schedule stakeholder discussion",
             "Develop implementation timeline"
         ]
+
+    async def generate_email_response(
+        self,
+        from_email: str,
+        subject: str,
+        body: str,
+        intent: str
+    ) -> Dict:
+        """Generate response to feedback on feasibility assessment"""
+        if intent != 'feedback':
+            return None
+
+        # Generate thank you response with next steps
+        response_body = f"""Thank you for your feedback on the feasibility assessment.
+
+I appreciate your insights and am ready to evaluate additional opportunities or provide further analysis on any aspects you'd like to explore.
+
+Please let me know how I can assist you further.
+
+Best regards,
+Emy AI Chief of Staff"""
+
+        return {
+            'to': from_email,
+            'subject': f"Re: {subject}",
+            'body': response_body
+        }
 
     def _build_research_prompt(self) -> str:
         """Build research analysis prompt."""
