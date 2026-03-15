@@ -10,6 +10,8 @@ TradingHoursManager) are being respected. It can run in two modes:
 
 import logging
 from typing import Dict, List
+from datetime import datetime
+import pytz
 from anthropic import Anthropic
 from emy.agents.base_agent import EMySubAgent
 from emy.tools.api_client import OandaClient
@@ -175,23 +177,174 @@ class TradingHoursMonitorAgent(EMySubAgent):
 
         return result
 
-    def _enforce_compliance(self, enforcement_time: str) -> Dict:
+    async def _enforce_compliance(self, enforcement_time: str = "21:30 Friday") -> Dict:
         """Enforce trading hours compliance by closing non-compliant trades.
 
         Args:
-            enforcement_time (str): Enforcement time descriptor (e.g., "21:30 Friday" or "23:00 Mon-Thu")
+            enforcement_time (str): Enforcement window descriptor (e.g., "21:30 Friday")
 
         Returns:
-            dict: Report with keys:
-                - closed_trades (list): List of closed trade IDs
-                - total_pnl (float): Total realized P&L from closures
-                - errors (list): Any errors encountered during enforcement
-
-        Raises:
-            NotImplementedError: This method will be implemented in Task 6
+            dict: Enforcement report with keys:
+                - report_type (str): Always "trading_hours_enforcement"
+                - timestamp (str): ISO8601 timestamp
+                - enforcement_time (str): Enforcement window descriptor
+                - trades_checked (int): Total trades checked
+                - trades_closed (int): Number of trades closed
+                - total_pnl (float): Total P&L from closures
+                - closed_trades (list): List of closed trade details
+                - alert_sent (bool): Whether Pushover alert was sent
+                - error (str or None): Error message if enforcement failed
         """
-        # To be implemented in Task 6
-        raise NotImplementedError("_enforce_compliance() to be implemented in Task 6")
+        report = {
+            "report_type": "trading_hours_enforcement",
+            "timestamp": datetime.now(pytz.UTC).isoformat(),
+            "enforcement_time": enforcement_time,
+            "trades_checked": 0,
+            "trades_closed": 0,
+            "total_pnl": 0.0,
+            "closed_trades": [],
+            "alert_sent": False,
+            "error": None
+        }
+
+        try:
+            # Step 1: Fetch all open trades
+            open_trades = self._get_open_trades()
+            report["trades_checked"] = len(open_trades)
+
+            if not open_trades:
+                logger.info(f"[TradingHoursMonitorAgent] Enforcement {enforcement_time}: 0 trades to check")
+                return report
+
+            # Step 2: Check compliance for each trade and close non-compliant ones
+            current_time = datetime.now(pytz.UTC)
+            closed_trades_list = []
+
+            for trade in open_trades:
+                compliance = self._check_compliance_status(trade, current_time)
+
+                if not compliance["compliant"]:
+                    # Step 3: Close non-compliant trade
+                    close_result = self.oanda_client.close_trade(
+                        trade_id=trade["id"],
+                        reason=f"Trading hours enforcement: {compliance['close_reason']}"
+                    )
+
+                    if close_result["success"]:
+                        report["trades_closed"] += 1
+                        realized_pnl = close_result.get("realized_pnl", 0.0)
+                        report["total_pnl"] += realized_pnl
+
+                        # Step 4: Store enforcement audit record
+                        try:
+                            self.db.execute(
+                                """
+                                INSERT INTO enforcement_audit
+                                (timestamp, trade_id, pair, direction, entry_price, close_price,
+                                 realized_pnl, closure_reason, closed_by)
+                                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                """,
+                                (
+                                    report["timestamp"],
+                                    trade["id"],
+                                    trade.get("instrument"),
+                                    trade.get("direction"),
+                                    None,  # entry_price would come from trade object
+                                    None,  # close_price would come from close_result
+                                    realized_pnl,
+                                    compliance["close_reason"],
+                                    "Emy"
+                                )
+                            )
+                        except Exception as db_error:
+                            logger.error(f"[TradingHoursMonitorAgent] Database error for trade {trade['id']}: {db_error}")
+
+                        closed_trades_list.append({
+                            "trade_id": trade["id"],
+                            "pair": trade.get("instrument"),
+                            "direction": trade.get("direction"),
+                            "realized_pnl": realized_pnl,
+                            "closure_reason": compliance["close_reason"]
+                        })
+
+                        logger.info(f"[TradingHoursMonitorAgent] Closed trade {trade['id']} ({trade.get('instrument')}): ${realized_pnl:.2f}")
+                    else:
+                        logger.warning(f"[TradingHoursMonitorAgent] Failed to close trade {trade['id']}: {close_result.get('error')}")
+
+            report["closed_trades"] = closed_trades_list
+
+            # Step 5: Use Claude to analyze closure summary
+            if closed_trades_list:
+                claude_analysis = None
+                try:
+                    closure_summary = f"Closed {len(closed_trades_list)} trades. Total P&L: ${report['total_pnl']:.2f}. "
+                    closure_summary += ", ".join(
+                        [f"{t['pair']}: {'+'if t['realized_pnl'] >= 0 else ''}${t['realized_pnl']:.2f}" for t in closed_trades_list]
+                    )
+
+                    claude_response = self.claude_client.messages.create(
+                        model="claude-3-5-haiku-20241022",
+                        max_tokens=200,
+                        messages=[{
+                            "role": "user",
+                            "content": f"Summarize this trading enforcement: {closure_summary}"
+                        }]
+                    )
+                    claude_analysis = claude_response.content[0].text
+                    logger.info(f"[TradingHoursMonitorAgent] Claude analysis: {claude_analysis}")
+                except Exception as e:
+                    logger.error(f"[TradingHoursMonitorAgent] Claude analysis error: {e}")
+
+                # Step 6: Send Pushover alert
+                try:
+                    alert_message = f"Trading Hours Enforcement {enforcement_time}: Closed {len(closed_trades_list)} trades. Total P&L: ${report['total_pnl']:.2f}"
+                    self._send_pushover_alert("critical", alert_message)
+                    report["alert_sent"] = True
+                    logger.info(f"[TradingHoursMonitorAgent] Critical alert sent: {alert_message}")
+                except Exception as e:
+                    logger.error(f"[TradingHoursMonitorAgent] Alert error: {e}")
+
+            # Step 7: Store report in database
+            try:
+                self.db.execute(
+                    """
+                    INSERT INTO monitoring_reports
+                    (report_type, timestamp, enforcement_action, trades_affected, total_pnl, critical)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        report["report_type"],
+                        report["timestamp"],
+                        True,
+                        str(closed_trades_list),
+                        report["total_pnl"],
+                        report["alert_sent"]
+                    )
+                )
+            except Exception as e:
+                logger.error(f"[TradingHoursMonitorAgent] Error storing report: {e}")
+
+            logger.info(f"[TradingHoursMonitorAgent] Enforcement complete: {report['trades_closed']} closed, ${report['total_pnl']:.2f} P&L")
+            return report
+
+        except Exception as e:
+            logger.error(f"[TradingHoursMonitorAgent] Enforcement error: {e}")
+            report["error"] = str(e)
+            return report
+
+    def _send_pushover_alert(self, severity: str, message: str) -> None:
+        """Send alert via Pushover.
+
+        Args:
+            severity (str): Alert severity ("critical", "warning", "info")
+            message (str): Alert message content
+
+        Note:
+            This is a placeholder implementation. In production, this would integrate
+            with the Pushover API using an app token and user key from configuration.
+        """
+        # Placeholder for actual Pushover client implementation
+        logger.info(f"[TradingHoursMonitorAgent] [{severity.upper()}] {message}")
 
     def _monitor_compliance(self) -> Dict:
         """Monitor compliance without taking enforcement action.

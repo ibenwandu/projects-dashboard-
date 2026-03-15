@@ -183,3 +183,194 @@ class TestTradingHoursMonitorAgent:
         assert result["close_reason"] is None
         assert result["profit_pips"] == 5000.0  # 100.0 / (200 * 0.0001)
         assert result["pricingStatus"] == "TRAILING"
+
+    @pytest.mark.asyncio
+    async def test_enforce_compliance_success(self, agent):
+        """Test enforcement successfully closes non-compliant trades."""
+        # Mock trades: 3 trades, 2 non-compliant
+        trades = [
+            {
+                "id": "111",
+                "instrument": "EUR/USD",
+                "direction": "BUY",
+                "currentUnits": 100,
+                "unrealizedPL": 45.0,
+                "pricingStatus": "OPEN"
+            },
+            {
+                "id": "222",
+                "instrument": "GBP/USD",
+                "direction": "SELL",
+                "currentUnits": 50,
+                "unrealizedPL": -20.0,
+                "pricingStatus": "OPEN"
+            },
+            {
+                "id": "333",
+                "instrument": "USD/JPY",
+                "direction": "BUY",
+                "currentUnits": 200,
+                "unrealizedPL": 10.0,
+                "pricingStatus": "OPEN"
+            }
+        ]
+
+        # Compliance status: trades 111, 222 non-compliant
+        compliance_map = {
+            "111": {
+                "trade_id": "111",
+                "pair": "EUR/USD",
+                "compliant": False,
+                "close_reason": "FRIDAY_HARD_CLOSE",
+                "profit_pips": 4500.0,
+                "pricingStatus": "OPEN"
+            },
+            "222": {
+                "trade_id": "222",
+                "pair": "GBP/USD",
+                "compliant": False,
+                "close_reason": "RUNNER_DEADLINE_23:00",
+                "profit_pips": -4000.0,
+                "pricingStatus": "OPEN"
+            },
+            "333": {
+                "trade_id": "333",
+                "pair": "USD/JPY",
+                "compliant": True,
+                "close_reason": None,
+                "profit_pips": 1000.0,
+                "pricingStatus": "OPEN"
+            }
+        }
+
+        # Close results
+        close_results = {
+            "111": {"success": True, "trade_id": "111", "realized_pnl": 45.0, "error": None},
+            "222": {"success": True, "trade_id": "222", "realized_pnl": -20.0, "error": None}
+        }
+
+        def get_compliance(trade, current_time):
+            return compliance_map[trade["id"]]
+
+        def close_trade(trade_id, **kwargs):
+            return close_results[trade_id]
+
+        with patch.object(agent, '_get_open_trades', return_value=trades):
+            with patch.object(agent, '_check_compliance_status', side_effect=get_compliance):
+                with patch.object(agent.oanda_client, 'close_trade', side_effect=close_trade):
+                    with patch.object(agent.db, 'execute'):
+                        with patch.object(agent.db, 'query_one', return_value=(1,)):
+                            with patch.object(agent.claude_client.messages, 'create') as mock_claude:
+                                mock_claude.return_value = Mock(content=[Mock(text="Enforcement summary: 2 trades closed.")])
+                                with patch.object(agent, '_send_pushover_alert'):
+                                    result = await agent._enforce_compliance(enforcement_time="21:30 Friday")
+
+        assert result["trades_checked"] == 3
+        assert result["trades_closed"] == 2
+        assert result["total_pnl"] == 25.0
+        assert result["alert_sent"] is True
+        assert len(result["closed_trades"]) == 2
+        assert result["closed_trades"][0]["pair"] == "EUR/USD"
+        assert result["closed_trades"][1]["pair"] == "GBP/USD"
+
+    @pytest.mark.asyncio
+    async def test_enforce_compliance_no_violations(self, agent):
+        """Test enforcement when all trades are compliant."""
+        trades = [
+            {
+                "id": "111",
+                "instrument": "EUR/USD",
+                "direction": "BUY",
+                "currentUnits": 100,
+                "unrealizedPL": 45.0,
+                "pricingStatus": "OPEN"
+            }
+        ]
+
+        compliance_map = {
+            "111": {
+                "trade_id": "111",
+                "pair": "EUR/USD",
+                "compliant": True,
+                "close_reason": None,
+                "profit_pips": 4500.0,
+                "pricingStatus": "OPEN"
+            }
+        }
+
+        with patch.object(agent, '_get_open_trades', return_value=trades):
+            with patch.object(agent, '_check_compliance_status', side_effect=lambda t, ct: compliance_map[t["id"]]):
+                with patch.object(agent.db, 'execute'):
+                    result = await agent._enforce_compliance()
+
+        assert result["trades_checked"] == 1
+        assert result["trades_closed"] == 0
+        assert result["alert_sent"] is False
+        assert len(result["closed_trades"]) == 0
+
+    @pytest.mark.asyncio
+    async def test_enforce_compliance_partial_failure(self, agent):
+        """Test enforcement when some closures fail."""
+        trades = [
+            {
+                "id": "111",
+                "instrument": "EUR/USD",
+                "direction": "BUY",
+                "currentUnits": 100,
+                "unrealizedPL": 45.0,
+                "pricingStatus": "OPEN"
+            },
+            {
+                "id": "222",
+                "instrument": "GBP/USD",
+                "direction": "SELL",
+                "currentUnits": 50,
+                "unrealizedPL": -20.0,
+                "pricingStatus": "OPEN"
+            }
+        ]
+
+        compliance_map = {
+            "111": {
+                "trade_id": "111",
+                "pair": "EUR/USD",
+                "compliant": False,
+                "close_reason": "FRIDAY_HARD_CLOSE",
+                "profit_pips": 4500.0,
+                "pricingStatus": "OPEN"
+            },
+            "222": {
+                "trade_id": "222",
+                "pair": "GBP/USD",
+                "compliant": False,
+                "close_reason": "RUNNER_DEADLINE",
+                "profit_pips": -4000.0,
+                "pricingStatus": "OPEN"
+            }
+        }
+
+        close_results = {
+            "111": {"success": True, "trade_id": "111", "realized_pnl": 45.0, "error": None},
+            "222": {"success": False, "trade_id": "222", "realized_pnl": None, "error": "Trade not found"}
+        }
+
+        def get_compliance(trade, current_time):
+            return compliance_map[trade["id"]]
+
+        def close_trade(trade_id, **kwargs):
+            return close_results[trade_id]
+
+        with patch.object(agent, '_get_open_trades', return_value=trades):
+            with patch.object(agent, '_check_compliance_status', side_effect=get_compliance):
+                with patch.object(agent.oanda_client, 'close_trade', side_effect=close_trade):
+                    with patch.object(agent.db, 'execute'):
+                        with patch.object(agent.db, 'query_one', return_value=(1,)):
+                            with patch.object(agent.claude_client.messages, 'create') as mock_claude:
+                                mock_claude.return_value = Mock(content=[Mock(text="Enforcement summary.")])
+                                with patch.object(agent, '_send_pushover_alert'):
+                                    result = await agent._enforce_compliance()
+
+        assert result["trades_checked"] == 2
+        assert result["trades_closed"] == 1
+        assert result["total_pnl"] == 45.0
+        assert len(result["closed_trades"]) == 1
