@@ -588,6 +588,120 @@ async def get_agent_capabilities(agent_name: str):
 
 
 # ============================================================================
+# Email Processing Endpoints
+# ============================================================================
+
+
+@app.post('/emails/process')
+async def process_emails():
+    """Manually trigger email processing from Gmail inbox.
+
+    Checks inbox for unread emails, parses them, classifies intent,
+    and routes to appropriate agents.
+
+    Returns:
+        Dict with processing status and counts
+    """
+    try:
+        from emy.tools.email_parser import EmailParser
+
+        parser = EmailParser()
+        db = EMyDatabase()
+
+        # Check inbox for unread emails
+        emails = await parser.check_inbox()
+        processed_count = 0
+        failed_count = 0
+
+        for email_msg in emails:
+            try:
+                # Parse email
+                email = await parser.parse_email(email_msg['id'])
+                if not email:
+                    failed_count += 1
+                    continue
+
+                # Classify intent
+                intent = await parser.classify_intent(email)
+                email['intent'] = intent
+
+                # Route to agent
+                agent_name = await parser.route_to_agent(email)
+                email['agent'] = agent_name
+
+                # Log email in database
+                await parser.log_email(email, 'processed')
+                processed_count += 1
+
+                logger.info(f"Processed email from {email['sender']} with intent {intent}")
+
+            except Exception as e:
+                logger.error(f"Error processing email {email_msg.get('id')}: {e}")
+                failed_count += 1
+
+        return {
+            'status': 'success',
+            'processed_count': processed_count,
+            'failed_count': failed_count,
+            'total_emails': len(emails)
+        }
+
+    except Exception as e:
+        logger.error(f"Error in email processing endpoint: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get('/emails/status')
+async def get_email_status():
+    """Get email processing status from last 24 hours.
+
+    Returns:
+        Dict with email statistics
+    """
+    try:
+        db = EMyDatabase()
+
+        # Query email statistics from last 24 hours
+        result = db.query("""
+            SELECT
+                COUNT(*) as total_emails,
+                SUM(CASE WHEN direction = 'outbound' THEN 1 ELSE 0 END) as sent_count,
+                SUM(CASE WHEN direction = 'inbound' THEN 1 ELSE 0 END) as received_count,
+                SUM(CASE WHEN status = 'failed' THEN 1 ELSE 0 END) as failed_count
+            FROM email_log
+            WHERE created_at >= datetime('now', '-24 hours')
+        """)
+
+        if result:
+            row = result[0]
+            return {
+                'status': 'success',
+                'period': '24_hours',
+                'total_emails': row[0] or 0,
+                'sent_count': row[1] or 0,
+                'received_count': row[2] or 0,
+                'failed_count': row[3] or 0,
+                'success_rate': round(
+                    ((row[0] or 1) - (row[3] or 0)) / (row[0] or 1) * 100, 2
+                ) if row[0] else 0
+            }
+        else:
+            return {
+                'status': 'success',
+                'period': '24_hours',
+                'total_emails': 0,
+                'sent_count': 0,
+                'received_count': 0,
+                'failed_count': 0,
+                'success_rate': 100.0
+            }
+
+    except Exception as e:
+        logger.error(f"Error getting email status: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# ============================================================================
 # Error Handlers
 # ============================================================================
 
