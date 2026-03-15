@@ -35,6 +35,35 @@ class EMyDatabase:
         if directory:
             Path(directory).mkdir(parents=True, exist_ok=True)
 
+    def execute(self, query: str, params: tuple = ()) -> None:
+        """
+        Execute a query without returning results.
+
+        Args:
+            query: SQL query to execute
+            params: Query parameters
+        """
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(query, params)
+            conn.commit()
+
+    def query_one(self, query: str, params: tuple = ()) -> Optional[tuple]:
+        """
+        Execute a query and return the first result.
+
+        Args:
+            query: SQL query to execute
+            params: Query parameters
+
+        Returns:
+            First row as tuple, or None if no results
+        """
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(query, params)
+            return cursor.fetchone()
+
     @contextmanager
     def get_connection(self):
         """Context manager for database connection."""
@@ -53,6 +82,17 @@ class EMyDatabase:
         """Create all tables if they don't exist."""
         with self.get_connection() as conn:
             cursor = conn.cursor()
+
+            # Agent budget tracking
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS agent_budget (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    agent_name TEXT NOT NULL,
+                    date DATE NOT NULL,
+                    spent_today REAL DEFAULT 0.0,
+                    UNIQUE(agent_name, date)
+                )
+            """)
 
             # Emy tasks (main task queue and history)
             cursor.execute("""
