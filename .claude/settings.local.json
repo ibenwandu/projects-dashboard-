@@ -80,7 +80,8 @@
       "Bash(mv emy/.dockerignore .dockerignore 2>/dev/null; cat > .dockerignore <<'EOF'\n# Git\n.git\n.gitignore\n\n# Python\n__pycache__\n*.pyc\n*.pyo\n*.pyd\n.Python\n*.egg-info\ndist\nbuild\n.venv\nvenv\n\n# Local development\n.env\n.env.local\n.DS_Store\n*.swp\n*.swo\n*~\n\n# IDE\n.vscode\n.idea\n*.code-workspace\n\n# Testing\n.pytest_cache\nhtmlcov\n.coverage\n\n# Node/JS\nnode_modules\npackage-lock.json\nyarn.lock\n\n# Other\n.claude\n.worktrees\nObsidian Vault\n*.md\ntests/\ndocs/\nEOF\necho \"✓ Created .dockerignore at root\")",
       "Bash(cd \"C:\\\\Users\\\\user\\\\projects\\\\personal\" && docker build -f Dockerfile -t emy:test . 2>&1 | tail -50)",
       "Bash(cat > emy/requirements.txt <<'EOF'\n# Emy AI Chief of Staff - Production Requirements\n# Minimal, focused dependencies for runtime\n\n# Core API Framework\nfastapi==0.104.1\nuvicorn[standard]==0.24.0\npydantic==2.5.0\n\n# CLI & User Interface\nclick==8.1.7\nrich==13.7.0\n\n# External APIs & Data\npython-dotenv==1.0.0\nrequests==2.31.0\noandapyV20==0.7.2\n\n# LLM Integration\nanthropic>=0.32.1\nEOF\necho \"✓ Created minimal production requirements.txt\")",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate"
     ]
   }
 }

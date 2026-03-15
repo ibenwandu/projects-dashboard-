@@ -498,6 +498,20 @@
             font-weight: bold;
         }
 
+        .last-updated {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.9em;
+            color: #00aa66;
+            text-align: center;
+        }
+
+        .updated-timestamp {
+            font-weight: bold;
+            color: #00ff88;
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
             .main-layout {
@@ -526,7 +540,7 @@
                 width: 100%;
             }
 
-            .clock, .last-event-badge, .agents-indicator {
+            .clock, .last-event-badge, .agents-indicator, .last-updated {
                 width: 100%;
                 justify-content: center;
             }
@@ -559,6 +573,10 @@
                     <span>Agents Active</span>
                 </div>
                 <div class="clock" id="clock">--:-- --</div>
+                <div class="last-updated">
+                    <span class="updated-label">Updated</span>
+                    <span class="updated-timestamp">Mar 15 Â· 17:30 EDT</span>
+                </div>
                 <div class="last-event-badge" id="lastEvent">Last Event: Mar 15 Â· 17:30 EDT</div>
             </div>
         </div>

@@ -22,9 +22,13 @@ from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 import json
 
-from emy.core.database import EMyDatabase
-from emy.core.metrics import collect_metrics
-from emy.agents.agent_executor import AgentExecutor
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+from core.database import EMyDatabase
+from core.metrics import collect_metrics
+from agents.agent_executor import AgentExecutor
 
 # Load environment variables from .env file
 env_path = Path(__file__).parent.parent / '.env'

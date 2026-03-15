@@ -516,6 +516,20 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
             font-weight: bold;
         }
 
+        .last-updated {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.9em;
+            color: #00aa66;
+            text-align: center;
+        }
+
+        .updated-timestamp {
+            font-weight: bold;
+            color: #00ff88;
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
             .main-layout {
@@ -544,7 +558,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
                 width: 100%;
             }
 
-            .clock, .last-event-badge, .agents-indicator {
+            .clock, .last-event-badge, .agents-indicator, .last-updated {
                 width: 100%;
                 justify-content: center;
             }
@@ -577,6 +591,10 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
                     <span>Agents Active</span>
                 </div>
                 <div class="clock" id="clock">--:-- --</div>
+                <div class="last-updated">
+                    <span class="updated-label">Updated</span>
+                    <span class="updated-timestamp">LAST_SESSION</span>
+                </div>
                 <div class="last-event-badge" id="lastEvent">Last Event: LASTEVENTH</div>
             </div>
         </div>
@@ -771,6 +789,7 @@ def update_dashboard():
         replacements = {
             'VISION_TEXT': vision,
             'LASTEVENTH': last_event,
+            'LAST_SESSION': last_event,
             'SYSTEMS': str(data['metrics']['systemsRunning']),
             'AGENTS': str(data['metrics']['eachAgents']),
             'JOBS': str(data['metrics']['scheduledJobs']),
