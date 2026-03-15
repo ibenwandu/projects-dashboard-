@@ -137,6 +137,7 @@ async def submit_job(request: JobSubmitRequest):
         "job_id": job_id,
         "workflow_type": request.workflow_type,
         "agents": request.agents or [],
+        "agent_groups": request.agent_groups or [],
         "input": request.input or {}
     }
 
@@ -208,12 +209,20 @@ async def job_executor():
                 await job_queue.mark_executing(job_id)
 
                 # Create state from job data
-                state = create_initial_state(
-                    workflow_type=job_data['workflow_type'],
-                    agents=job_data['agents'],
-                    input=job_data['input'],
-                    workflow_id=job_id
-                )
+                if job_data.get('agent_groups'):
+                    state = create_initial_state_with_groups(
+                        workflow_type=job_data['workflow_type'],
+                        agent_groups=job_data['agent_groups'],
+                        input=job_data['input'],
+                        workflow_id=job_id
+                    )
+                else:
+                    state = create_initial_state(
+                        workflow_type=job_data['workflow_type'],
+                        agents=job_data['agents'],
+                        input=job_data['input'],
+                        workflow_id=job_id
+                    )
 
                 # Execute workflow
                 try:
