@@ -14,9 +14,9 @@
         <div class="tooltip" id="tooltip"></div>
 
         <!-- HEADER -->
-        <div class="header">
+        <header class="header">
             <div>
-                <div class="eyebrow"><span class="pulse"></span>All agents active — autonomous mode</div>
+                <div class="eyebrow"><span class="pulse" aria-hidden="true"></span>All agents active — autonomous mode</div>
                 <div class="title">Emy Dashboard</div>
                 <div class="subtitle">// Real-time agent monitoring · 24/7 autonomous operation</div>
             </div>
@@ -25,7 +25,7 @@
                 <div class="clock-label">LIVE · EDT</div>
                 <div class="updated-badge" id="update-badge">● Initializing...</div>
             </div>
-        </div>
+        </header>
 
         <!-- METRICS ROW -->
         <div class="metrics-row">
@@ -55,7 +55,7 @@
         <div class="main-grid">
             <div>
                 <!-- AGENT STATUS SECTION -->
-                <div class="section-label">Active Agents <span style="color:var(--muted);margin-left:4px">(3)</span></div>
+                <div class="section-label">Active Agents <span style="color:var(--muted);margin-left:4px" id="agent-count"></span></div>
                 <div class="agents-stack" id="agents-stack">
                     <!-- Populated by JavaScript -->
                 </div>
@@ -74,7 +74,7 @@
 
         <!-- RECENT WORKFLOWS -->
         <div style="margin-top: 20px;">
-            <div class="section-label">Recent Executions <span style="color:var(--muted);margin-left:4px" id="workflow-count">(0)</span></div>
+            <div class="section-label">Recent Executions <span style="color:var(--muted);margin-left:4px" id="workflow-count"></span></div>
             <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:300px;">
                 <table style="width:100%;border-collapse:collapse;">
                     <thead>
@@ -96,7 +96,7 @@
         <!-- ACTIVITY LOG -->
         <div style="margin-top: 20px;">
             <div class="log-bar">
-                <span class="log-tag" id="log-tag">●</span>
+                <span class="log-tag" id="log-tag" aria-hidden="true">●</span>
                 <div class="log-text">Activity log will display real-time events here</div>
             </div>
             <div id="activity-log" style="margin-top:10px;max-height:200px;overflow-y:auto;">
