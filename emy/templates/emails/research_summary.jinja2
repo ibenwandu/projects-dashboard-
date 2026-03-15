@@ -1,0 +1,36 @@
+Dear {{ recipient_name }},
+
+Please find below a comprehensive research summary on {{ topic }}.
+
+**Research Overview:**
+{{ findings }}
+
+**Key Insights:**
+{% for insight in insights %}
+- {{ insight }}
+{% endfor %}
+
+**Detailed Findings:**
+{% for finding in detailed_findings %}
+{{ loop.index }}. {{ finding }}
+{% endfor %}
+
+**Strategic Recommendations:**
+{% for recommendation in recommendations %}
+- {{ recommendation }}
+{% endfor %}
+
+**Source Quality Metrics:**
+- Total sources reviewed: {{ source_count }}
+- High-confidence sources: {{ high_confidence_sources }}
+- Research confidence: High
+
+**Next Steps:**
+- Review recommendations with stakeholders
+- Schedule implementation planning session
+- Assign action owners for each recommendation
+
+Thank you for engaging Emy for this research initiative. We're available for follow-up questions and deeper analysis on any aspect of these findings.
+
+Best regards,
+Emy AI Chief of Staff

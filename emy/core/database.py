@@ -235,6 +235,33 @@ class EMyDatabase:
                 )
             """)
 
+            # Email log for audit trail
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS email_log (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    email_id TEXT UNIQUE NOT NULL,
+                    direction TEXT NOT NULL,
+                    sender TEXT,
+                    recipient TEXT NOT NULL,
+                    subject TEXT NOT NULL,
+                    status TEXT NOT NULL,
+                    attempt_count INTEGER DEFAULT 0,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    error_message TEXT,
+                    response_email_id TEXT
+                )
+            """)
+
+            # Create indexes for email_log
+            cursor.execute("""
+                CREATE INDEX IF NOT EXISTS idx_email_recipient ON email_log(recipient)
+            """)
+
+            cursor.execute("""
+                CREATE INDEX IF NOT EXISTS idx_email_created ON email_log(created_at)
+            """)
+
             conn.commit()
 
         # Create OANDA-specific tables
@@ -869,3 +896,56 @@ class EMyDatabase:
                 """, (now,))
             conn.commit()
             return cursor.rowcount
+
+    def log_email(self, email_id: str, direction: str, recipient: str, subject: str,
+                  status: str = 'sent', sender: str = None, attempt_count: int = 0,
+                  error_message: str = None, response_email_id: str = None) -> int:
+        """
+        Log an email send/receive event to email_log table.
+
+        Args:
+            email_id: Unique email identifier
+            direction: 'outbound' or 'inbound'
+            recipient: Recipient email address
+            subject: Email subject
+            status: Email status (default 'sent')
+            sender: Sender email address (for inbound)
+            attempt_count: Number of send attempts
+            error_message: Error message if failed
+            response_email_id: If response to another email, its ID
+
+        Returns:
+            Row ID of inserted email log
+        """
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            now = datetime.now().isoformat()
+            cursor.execute("""
+                INSERT INTO email_log
+                (email_id, direction, sender, recipient, subject, status, attempt_count,
+                 created_at, updated_at, error_message, response_email_id)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (email_id, direction, sender, recipient, subject, status, attempt_count,
+                  now, now, error_message, response_email_id))
+            conn.commit()
+            return cursor.lastrowid
+
+    def update_email_log(self, email_id: str, status: str, attempt_count: int = None,
+                        error_message: str = None):
+        """
+        Update email log entry status and attempt count.
+
+        Args:
+            email_id: Email identifier
+            status: New status
+            attempt_count: Updated attempt count
+            error_message: Error message if any
+        """
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            now = datetime.now().isoformat()
+            cursor.execute("""
+                UPDATE email_log
+                SET status = ?, updated_at = ?, attempt_count = ?, error_message = ?
+                WHERE email_id = ?
+            """, (status, now, attempt_count, error_message, email_id))

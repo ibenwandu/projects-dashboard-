@@ -1,0 +1,24 @@
+Dear {{ recipient_name }},
+
+Thank you for your interest in the {{ opportunity }} opportunity.
+
+Based on our comprehensive analysis, here is the feasibility assessment:
+
+**Assessment:** {{ assessment }}
+
+**Key Findings:**
+- Market readiness: High potential for market traction
+- Risk factors: Moderate complexity in implementation
+- Timeline feasibility: Achievable within standard deployment window
+
+**Recommendation:** {{ recommendation }}
+
+**Next Steps:**
+{% for step in next_steps %}
+{{ loop.index }}. {{ step }}
+{% endfor %}
+
+We are excited about this opportunity and ready to move forward. Please let us know if you have any questions or require additional analysis.
+
+Best regards,
+Emy AI Chief of Staff

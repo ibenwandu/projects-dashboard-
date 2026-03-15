@@ -1,0 +1,40 @@
+Dear {{ recipient_name }},
+
+Here is your daily project status digest for {{ date }}.
+
+**Project Summary:**
+{{ summary }}
+
+**Active Tasks:** {{ active_task_count }}
+{% for task in active_tasks %}
+- [{{ task.priority }}] {{ task.title }} ({{ task.status }})
+{% endfor %}
+
+**Completed Today:** {{ completed_count }}
+{% for item in completed_items %}
+- {{ item }}
+{% endfor %}
+
+**Blockers & Issues:** {{ blocker_count }}
+{% if blockers %}
+{% for blocker in blockers %}
+- {{ blocker.title }}: {{ blocker.description }}
+{% endfor %}
+{% else %}
+- No critical blockers reported
+{% endif %}
+
+**Metrics:**
+- Completion rate: {{ completion_rate }}%
+- Team capacity: {{ team_capacity }}%
+- Health status: {{ health_status }}
+
+**Next Day Focus:**
+{% for focus in next_day_focus %}
+{{ loop.index }}. {{ focus }}
+{% endfor %}
+
+Please reply with any questions or additional context needed.
+
+Best regards,
+Emy AI Chief of Staff
