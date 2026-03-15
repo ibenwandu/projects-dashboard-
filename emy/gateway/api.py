@@ -22,13 +22,9 @@ from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 import json
 
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-
-from core.database import EMyDatabase
-from core.metrics import collect_metrics
-from agents.agent_executor import AgentExecutor
+from emy.core.database import EMyDatabase
+from emy.core.metrics import collect_metrics
+from emy.agents.agent_executor import AgentExecutor
 
 # Load environment variables from .env file
 env_path = Path(__file__).parent.parent / '.env'
@@ -58,7 +54,7 @@ app.add_middleware(
 # ============================================================================
 
 # Determine static files directory
-static_dir = os.path.join(os.path.dirname(__file__), '..', 'ui', 'static')
+static_dir = os.path.join(os.path.dirname(__file__), '..', 'static')
 
 # Root endpoint - serve dashboard HTML
 @app.get("/")
