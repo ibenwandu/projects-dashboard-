@@ -445,6 +445,15 @@ function formatWorkflowOutput(data, workflowType) {
         return `<p>${escapeHtml(data.message)}</p>`;
     }
 
+    // Handle string data (markdown text)
+    if (typeof data === 'string') {
+        // If it looks like markdown, display with proper formatting
+        if (data.startsWith('#')) {
+            return `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px;">${escapeHtml(data)}</div>`;
+        }
+        return `<p>${escapeHtml(data)}</p>`;
+    }
+
     // Default: pretty-print JSON
     if (typeof data === 'object') {
         return `<pre>${escapeHtml(JSON.stringify(data, null, 2))}</pre>`;
