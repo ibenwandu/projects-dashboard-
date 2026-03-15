@@ -303,6 +303,8 @@ async function submitComparison(query) {
         // Display comparison results - with proper unescaping
         let output1 = (result1.output || '');
         let output2 = (result2.output || '');
+        console.log('Result1:', result1, 'Output1 type:', typeof output1, 'Output1:', output1);
+        console.log('Result2:', result2, 'Output2 type:', typeof output2, 'Output2:', output2);
 
         // Ensure they're strings, parse JSON if needed, then unescape
         function cleanOutput(output) {
@@ -314,6 +316,10 @@ async function submitComparison(query) {
                 text = '' + parsed;
             } catch (e) {
                 // Not JSON, use as-is
+            }
+            // Ensure text is a string before calling replace
+            if (typeof text !== 'string') {
+                text = '' + text;
             }
             // Unescape sequences
             text = text.replace(/\\n/g, '\n')
