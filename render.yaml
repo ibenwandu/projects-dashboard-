@@ -81,6 +81,49 @@ services:
       mountPath: /data
       sizeGB: 2
 
+  # ============================================================================
+  # EMY CELERY BEAT - Email Polling Scheduler (NEW - Week 7)
+  # ============================================================================
+  - type: background
+    name: emy-celery-beat
+    env: python
+    plan: standard
+    region: ohio
+    buildCommand: pip install -r emy/requirements.txt
+    startCommand: celery -A emy.config.celery_config beat --loglevel=info
+    envVars:
+      - key: REDIS_URL
+        scope: secret
+      - key: DATABASE_URL
+        scope: secret
+      - key: ANTHROPIC_API_KEY
+        scope: secret
+      - key: GMAIL_CREDENTIALS_JSON
+        scope: secret
+    autoDeploy: true
+
+  # ============================================================================
+  # EMY CELERY WORKER - Email Polling Task Executor (NEW - Week 7)
+  # ============================================================================
+  - type: background
+    name: emy-celery-worker
+    env: python
+    plan: standard
+    region: ohio
+    numInstances: 2
+    buildCommand: pip install -r emy/requirements.txt
+    startCommand: celery -A emy.config.celery_config worker --loglevel=info --concurrency=4
+    envVars:
+      - key: REDIS_URL
+        scope: secret
+      - key: DATABASE_URL
+        scope: secret
+      - key: ANTHROPIC_API_KEY
+        scope: secret
+      - key: GMAIL_CREDENTIALS_JSON
+        scope: secret
+    autoDeploy: true
+
 databases:
   - name: emy-db
     plan: standard

@@ -9,7 +9,7 @@ import os
 import uuid
 import logging
 import httpx
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional, List, Dict, Any
 from pathlib import Path
 from pydantic import BaseModel
@@ -699,6 +699,102 @@ async def get_email_status():
     except Exception as e:
         logger.error(f"Error getting email status: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get('/emails/polling-status')
+async def get_polling_status():
+    """
+    Get email polling status and metrics.
+
+    Returns:
+        {
+            'status': 'active' | 'inactive' | 'error' | 'no_data',
+            'last_check': '2026-03-16T10:30:00Z',
+            'email_count': 5,
+            'next_check': '2026-03-16T10:40:00Z',
+            'uptime': '2h 15m',
+            'error_message': null
+        }
+    """
+    db = EMyDatabase()
+
+    try:
+        # Get last polling event
+        result = db.query_all(
+            "SELECT status, email_count, timestamp FROM polling_log ORDER BY timestamp DESC LIMIT 1"
+        )
+        last_event = result[0] if result else None
+
+        if not last_event:
+            return {
+                'status': 'no_data',
+                'last_check': None,
+                'email_count': 0,
+                'next_check': (datetime.utcnow() + timedelta(minutes=10)).isoformat() + 'Z',
+                'error_message': 'No polling events recorded yet'
+            }
+
+        last_status, email_count, timestamp = last_event
+        last_check = datetime.fromisoformat(timestamp) if isinstance(timestamp, str) else timestamp
+        next_check = last_check + timedelta(minutes=10)
+
+        # Calculate uptime
+        first_event_result = db.query_all("SELECT MIN(timestamp) FROM polling_log")
+        first_event = first_event_result[0][0] if first_event_result and first_event_result[0] else None
+
+        uptime = None
+        if first_event:
+            first_time = datetime.fromisoformat(first_event) if isinstance(first_event, str) else first_event
+            uptime = str(datetime.utcnow() - first_time).split('.')[0]
+
+        return {
+            'status': 'active' if last_status == 'success' else 'error',
+            'last_check': last_check.isoformat() + 'Z',
+            'email_count': email_count or 0,
+            'next_check': next_check.isoformat() + 'Z',
+            'uptime': uptime if uptime else 'unknown',
+            'error_message': None if last_status == 'success' else f"Last status: {last_status}"
+        }
+
+    except Exception as e:
+        logger.error(f"Error getting polling status: {e}")
+        return {
+            'status': 'error',
+            'error_message': str(e),
+            'last_check': None,
+            'next_check': None,
+            'email_count': 0
+        }
+
+
+@app.post('/emails/trigger-polling')
+async def trigger_polling_manually():
+    """
+    Manually trigger email polling (for testing/debugging).
+
+    Returns:
+        {
+            'status': 'triggered' | 'error',
+            'message': str,
+            'processed': int
+        }
+    """
+    try:
+        from emy.tasks.email_polling_task import check_inbox_periodically
+        result = check_inbox_periodically()
+
+        return {
+            'status': 'triggered',
+            'message': f"Polling triggered - {result.get('processed', 0)} emails processed",
+            'processed': result.get('processed', 0)
+        }
+    except Exception as e:
+        logger.error(f"Error triggering polling: {e}")
+        return {
+            'status': 'error',
+            'message': f"Failed to trigger polling: {str(e)}",
+            'processed': 0
+        }
 
 
 # ============================================================================

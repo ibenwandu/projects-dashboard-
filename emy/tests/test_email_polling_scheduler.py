@@ -47,3 +47,37 @@ def test_polling_task_rate_limiting(mock_parser_class, mock_redis, mock_log_even
         # Should return rate_limited status
         assert result['status'] == 'rate_limited'
         assert result['processed'] == 0
+
+
+@pytest.mark.asyncio
+async def test_polling_task_production_environment():
+    """Test polling task configuration for production (Render)"""
+    from emy.config.celery_config import celery_app
+
+    # Verify Celery config has correct schedule
+    schedule = celery_app.conf.beat_schedule
+    assert 'check-inbox-every-10-minutes' in schedule
+
+    # Verify 10-minute interval
+    task_config = schedule['check-inbox-every-10-minutes']
+    assert task_config['schedule'] == 10.0 * 60  # 600 seconds
+
+    # Verify rate limiting configured
+    rate_limits = celery_app.conf.task_rate_limit
+    assert 'emy.tasks.email_polling_task.check_inbox_periodically' in rate_limits
+
+
+@pytest.mark.asyncio
+async def test_polling_status_endpoint():
+    """Test /emails/polling-status endpoint"""
+    from fastapi.testclient import TestClient
+    from emy.gateway.api import app
+
+    client = TestClient(app)
+    response = client.get('/emails/polling-status')
+
+    assert response.status_code == 200
+    data = response.json()
+    assert 'status' in data
+    assert 'last_check' in data or data['status'] == 'no_data'
+    assert 'email_count' in data

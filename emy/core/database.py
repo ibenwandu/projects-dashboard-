@@ -64,6 +64,22 @@ class EMyDatabase:
             cursor.execute(query, params)
             return cursor.fetchone()
 
+    def query_all(self, query: str, params: tuple = ()) -> List[tuple]:
+        """
+        Execute a query and return all results.
+
+        Args:
+            query: SQL query to execute
+            params: Query parameters
+
+        Returns:
+            List of rows as tuples, or empty list if no results
+        """
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(query, params)
+            return cursor.fetchall()
+
     @contextmanager
     def get_connection(self):
         """Context manager for database connection."""
