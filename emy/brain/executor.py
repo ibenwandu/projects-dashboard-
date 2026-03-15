@@ -2,7 +2,7 @@
 
 import asyncio
 import logging
-from typing import Type
+from typing import Type, Tuple, Dict, Any
 from emy.brain.state import EMyState
 from emy.agents.base_agent import EMySubAgent
 from emy.brain.nodes import AGENT_REGISTRY
@@ -36,8 +36,20 @@ async def execute_agent_group_parallel(state: EMyState) -> EMyState:
         task = execute_single_agent(agent_name, state)
         tasks.append(task)
 
-    # Run all tasks concurrently
-    results = await asyncio.gather(*tasks, return_exceptions=True)
+    # Run all tasks concurrently with timeout protection
+    try:
+        results = await asyncio.wait_for(
+            asyncio.gather(*tasks, return_exceptions=True),
+            timeout=300  # 5 minutes per group
+        )
+    except asyncio.TimeoutError:
+        logger.error(f"Agent group {state.current_group_index} execution timed out")
+        state.status = "timeout"
+        state.messages.append({
+            "agent": "Executor",
+            "message": f"Group timed out after 300s"
+        })
+        return state
 
     # Merge results into state
     for agent_name, result in zip(current_group, results):
@@ -64,7 +76,7 @@ async def execute_agent_group_parallel(state: EMyState) -> EMyState:
     return state
 
 
-async def execute_single_agent(agent_name: str, state: EMyState) -> tuple:
+async def execute_single_agent(agent_name: str, state: EMyState) -> Tuple[bool, Dict[str, Any]]:
     """
     Execute a single agent asynchronously.
 
@@ -83,7 +95,7 @@ async def execute_single_agent(agent_name: str, state: EMyState) -> tuple:
 
     logger.info(f"Starting agent {agent_name}")
 
-    # Run agent (blocking call, but executed in parallel via asyncio.gather)
-    success, output = agent.run()
+    # Run agent in thread pool to prevent blocking event loop
+    success, output = await asyncio.to_thread(agent.run)
 
     return (success, output)

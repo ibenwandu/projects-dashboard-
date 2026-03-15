@@ -53,3 +53,39 @@ async def test_execute_multiple_groups_sequentially():
     assert state.current_group_index == 2
     assert "KnowledgeAgent" in state.results
     assert "ResearchAgent" in state.results
+
+
+@pytest.mark.asyncio
+async def test_agent_invalid_name_returns_error_in_results():
+    """Test that invalid agent name results in error stored in state."""
+    state = create_initial_state_with_groups(
+        workflow_type="test",
+        agent_groups=[["NonExistentAgent"]],
+        input={"query": "Test"}
+    )
+
+    result = await execute_agent_group_parallel(state)
+
+    # Error should be caught and stored in results
+    assert "NonExistentAgent" in result.results
+    assert "error" in result.results["NonExistentAgent"]
+    assert "not found in registry" in result.results["NonExistentAgent"]["error"]
+
+
+@pytest.mark.asyncio
+async def test_invalid_group_index_returns_early():
+    """Test that invalid group index returns early."""
+    state = create_initial_state_with_groups(
+        workflow_type="test",
+        agent_groups=[["TradingAgent"]],
+        input={"query": "Test"}
+    )
+
+    # Set index beyond groups
+    state.current_group_index = 99
+
+    result = await execute_agent_group_parallel(state)
+
+    # Should return unchanged state
+    assert result.current_group_index == 99
+    assert len(result.results) == 0
