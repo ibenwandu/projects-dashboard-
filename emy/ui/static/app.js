@@ -447,19 +447,23 @@ function formatWorkflowOutput(data, workflowType) {
 
     // Handle string data (markdown text)
     if (typeof data === 'string') {
-        // If string starts with escaped quote, it's double-encoded JSON - unescape it
         let text = data;
-        if (data.startsWith('\\"') || data.startsWith('"')) {
+
+        // Try to parse as JSON if it looks like a JSON string
+        if (data.startsWith('"') || data.startsWith('\\"')) {
             try {
-                // Remove outer quotes and unescape
                 text = JSON.parse(data);
             } catch (e) {
-                // If parsing fails, use as-is
+                // If parsing fails, strip quotes manually
+                text = data.replace(/^["\\]+/, '').replace(/["\\]+$/, '');
             }
         }
 
-        // If it looks like markdown, display with proper formatting
-        if (text.startsWith('#')) {
+        // Strip any remaining leading/trailing quotes/backslashes
+        text = text.replace(/^["\\]+/, '').replace(/["\\]+$/, '');
+
+        // If it looks like markdown or structured text, display with proper formatting
+        if (text.startsWith('#') || text.includes('##') || text.includes('|')) {
             return `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${escapeHtml(text)}</div>`;
         }
         return `<p>${escapeHtml(text)}</p>`;
