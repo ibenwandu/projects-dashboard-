@@ -294,6 +294,52 @@ class EMyDatabase:
                 CREATE INDEX IF NOT EXISTS idx_polling_timestamp ON polling_log(timestamp)
             """)
 
+            # Monitoring Reports Table
+            cursor.execute('''CREATE TABLE IF NOT EXISTS monitoring_reports (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                report_type TEXT NOT NULL,
+                timestamp DATETIME NOT NULL,
+                period_start DATETIME,
+                period_end DATETIME,
+                enforcement_action BOOLEAN DEFAULT 0,
+                trades_affected TEXT,
+                total_pnl REAL,
+                findings TEXT,
+                analysis TEXT,
+                recommendations TEXT,
+                critical BOOLEAN DEFAULT 0,
+                alert_message TEXT,
+                data_sources TEXT,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+            )''')
+
+            cursor.execute('''CREATE INDEX IF NOT EXISTS idx_monitoring_timestamp
+                             ON monitoring_reports(timestamp DESC)''')
+            cursor.execute('''CREATE INDEX IF NOT EXISTS idx_monitoring_type
+                             ON monitoring_reports(report_type)''')
+
+            # Enforcement Audit Table
+            cursor.execute('''CREATE TABLE IF NOT EXISTS enforcement_audit (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                timestamp DATETIME NOT NULL,
+                trade_id TEXT NOT NULL,
+                pair TEXT NOT NULL,
+                direction TEXT NOT NULL,
+                entry_price REAL,
+                close_price REAL,
+                realized_pnl REAL,
+                closure_reason TEXT NOT NULL,
+                closed_by TEXT DEFAULT 'Emy',
+                report_id INTEGER,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (report_id) REFERENCES monitoring_reports(id)
+            )''')
+
+            cursor.execute('''CREATE INDEX IF NOT EXISTS idx_audit_timestamp
+                             ON enforcement_audit(timestamp DESC)''')
+            cursor.execute('''CREATE INDEX IF NOT EXISTS idx_audit_pair
+                             ON enforcement_audit(pair)''')
+
             conn.commit()
 
         # Create OANDA-specific tables
