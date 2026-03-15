@@ -5,26 +5,23 @@ Checks health of Trade-Alerts, Scalp-Engine, and other services running on Rende
 Sends alerts on downtime or anomalies.
 """
 
-import logging
 from typing import Tuple, Dict, Any
 from datetime import datetime
 
-logger = logging.getLogger('ProjectMonitor')
+from emy.agents.base_agent import EMySubAgent
 
 
-class ProjectMonitorAgent:
+class ProjectMonitorAgent(EMySubAgent):
     """Agent for monitoring Render services and project health."""
 
     def __init__(self):
         """Initialize project monitor agent."""
-        self.logger = logging.getLogger('ProjectMonitor')
+        super().__init__('ProjectMonitor', 'claude-haiku-4-5-20251001')
         self.services = [
             'trade-alerts',
             'scalp-engine',
             'job-search-api',
         ]
-        from emy.tools.email_tool import EmailClient
-        self.email_client = EmailClient()
 
     def run(self, task_id: int = None) -> Tuple[bool, Dict[str, Any]]:
         """
@@ -140,6 +137,16 @@ class ProjectMonitorAgent:
         Returns:
             True if send succeeded, False otherwise
         """
+        # Validate required fields
+        recipient_email = recipient_email.strip() if recipient_email else ''
+        if not recipient_email:
+            self.logger.warning("Cannot send status digest: missing recipient email")
+            return False
+
+        if not projects:
+            self.logger.warning("Cannot send status digest: no projects provided")
+            return False
+
         context = {
             'recipient_name': recipient_name,
             'date': datetime.now().strftime('%Y-%m-%d'),

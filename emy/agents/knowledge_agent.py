@@ -344,6 +344,20 @@ Provide:
         Returns:
             True if send succeeded, False otherwise
         """
+        # Validate required fields
+        recipient_email = recipient_email.strip() if recipient_email else ''
+        if not recipient_email:
+            self.logger.warning("Cannot send research summary: missing recipient email")
+            return False
+
+        if not topic or not findings:
+            self.logger.warning("Cannot send research summary: missing topic or findings")
+            return False
+
+        if not insights or len(insights) == 0:
+            self.logger.warning("Cannot send research summary: missing insights")
+            return False
+
         if recommendations is None:
             recommendations = ['Further investigation recommended']
 

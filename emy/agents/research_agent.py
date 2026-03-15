@@ -66,6 +66,16 @@ class ResearchAgent(EMySubAgent):
         Returns:
             True if send succeeded, False otherwise
         """
+        # Validate required fields
+        recipient_email = opportunity.get('email', '').strip()
+        if not recipient_email:
+            self.logger.warning(f"Cannot send feasibility assessment: missing email in opportunity")
+            return False
+
+        if not assessment or not recommendation:
+            self.logger.warning("Cannot send feasibility assessment: missing assessment or recommendation")
+            return False
+
         context = {
             'recipient_name': opportunity.get('contact_name', 'Valued Contact'),
             'opportunity': opportunity.get('title', 'Opportunity'),
@@ -77,7 +87,7 @@ class ResearchAgent(EMySubAgent):
         html_body = await self.email_client.render_template('emails/feasibility_assessment.jinja2', context)
 
         result = await self.email_client.send(
-            to=opportunity.get('email', ''),
+            to=recipient_email,
             subject=f"Feasibility Assessment: {opportunity.get('title', 'Opportunity')}",
             body=html_body,
             html=True
