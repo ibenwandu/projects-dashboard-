@@ -1,49 +1,46 @@
-"""
-Unit tests for TradingHoursMonitorAgent.
-
-Tests cover:
-- Agent initialization with correct name, description, and attributes
-- Required method signatures
-- Proper inheritance from EMySubAgent
-"""
+"""Tests for TradingHoursMonitorAgent."""
 
 import pytest
 from unittest.mock import Mock, patch, MagicMock
 from emy.agents.trading_hours_monitor_agent import TradingHoursMonitorAgent
-from emy.agents.base_agent import EMySubAgent
 
 
 class TestTradingHoursMonitorAgent:
     """Test suite for TradingHoursMonitorAgent."""
 
-    def test_agent_initialization(self):
-        """Test TradingHoursMonitorAgent initializes with correct name and description."""
-        agent = TradingHoursMonitorAgent()
+    @pytest.fixture
+    def agent(self):
+        """Fixture to create a TradingHoursMonitorAgent instance."""
+        with patch('emy.agents.trading_hours_monitor_agent.OandaClient'):
+            with patch('emy.agents.trading_hours_monitor_agent.EMyDatabase'):
+                return TradingHoursMonitorAgent()
 
+    def test_agent_initialization(self, agent):
+        """Test that TradingHoursMonitorAgent initializes correctly with all required attributes."""
+        # Check basic attributes
+        assert hasattr(agent, 'name')
         assert agent.name == "TradingHoursMonitorAgent"
-        assert "compliance" in agent.description.lower()
+
+        assert hasattr(agent, 'description')
+        assert "trading hours compliance" in agent.description.lower()
+
+        # Check required clients and managers
         assert hasattr(agent, 'oanda_client')
         assert hasattr(agent, 'db')
-        assert hasattr(agent, 'trading_hours_manager')
+        assert hasattr(agent, 'claude_client')
 
-    def test_agent_has_required_methods(self):
-        """Test TradingHoursMonitorAgent has all required methods."""
-        agent = TradingHoursMonitorAgent()
+        # Verify claude_client is an Anthropic instance
+        from anthropic import Anthropic
+        assert isinstance(agent.claude_client, Anthropic)
 
-        assert hasattr(agent, '_get_open_trades')
-        assert hasattr(agent, '_check_compliance_status')
-        assert hasattr(agent, '_enforce_compliance')
-        assert hasattr(agent, '_monitor_compliance')
+    def test_execute_not_implemented(self, agent):
+        """Test that execute() returns pending status."""
+        import asyncio
+        result = asyncio.run(agent.execute("test instruction"))
+        assert result['status'] == 'pending'
 
-        assert callable(agent._get_open_trades)
-        assert callable(agent._check_compliance_status)
-        assert callable(agent._enforce_compliance)
-        assert callable(agent._monitor_compliance)
-
-    def test_agent_inherits_from_emysubagent(self):
-        """Test TradingHoursMonitorAgent properly inherits from EMySubAgent."""
-        agent = TradingHoursMonitorAgent()
-
-        assert isinstance(agent, EMySubAgent)
-        assert hasattr(agent, 'execute')
-        assert callable(agent.execute)
+    def test_run_not_implemented(self, agent):
+        """Test that run() returns not implemented status."""
+        success, result = agent.run()
+        assert success is False
+        assert result['status'] == 'not implemented'

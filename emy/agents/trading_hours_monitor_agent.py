@@ -10,6 +10,7 @@ TradingHoursManager) are being respected. It can run in two modes:
 
 import logging
 from typing import Dict, List
+from anthropic import Anthropic
 from emy.agents.base_agent import EMySubAgent
 from emy.tools.api_client import OandaClient
 from emy.core.database import EMyDatabase
@@ -43,6 +44,10 @@ class TradingHoursMonitorAgent(EMySubAgent):
 
         # Initialize database for storing reports and audit records
         self.db = EMyDatabase()
+
+        # Initialize Claude client for compliance analysis (Haiku for routine analysis)
+        self.claude_client = Anthropic()
+        logger.info(f"[TradingHoursMonitorAgent] Claude client initialized")
 
         # Import TradingHoursManager from Scalp-Engine
         try:
