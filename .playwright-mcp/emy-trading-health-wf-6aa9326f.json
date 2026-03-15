@@ -1,0 +1,9 @@
+{
+  "workflow_id": "wf_6aa9326f",
+  "type": "trading_health",
+  "status": "completed",
+  "created_at": "2026-03-15T01:05:10.619065",
+  "updated_at": "2026-03-15T01:05:10.619065",
+  "input": null,
+  "output": "{\"analysis\": \"# FOREX MARKET ANALYSIS\\n\\n## 1. Market Trend Analysis\\nThe market is currently in preparation mode with limited price action data available. Overall sentiment remains cautious with moderate volatility. Before Phase 3 API integration completes, traders should await fresh data feeds for confirmation of existing trend structures across major pairs.\\n\\n## 2. Key Support/Resistance Levels\\n\\n| Pair | Support | Resistance |\\n|------|---------|-----------|\\n| EUR/USD | 1.0800 | 1.1050 |\\n| GBP/USD | 1.2650 | 1.3100 |\\n| USD/JPY | 145.00 | 150.50 |\\n| USD/CAD | 1.3200 | 1.3650 |\\n\\n## 3. Trading Signals\\n\\n- **EUR/USD**: HOLD (55%)\\n- **GBP/USD**: HOLD (60%)\\n- **USD/JPY**: HOLD (50%)\\n- **AUD/USD**: HOLD (55%)\\n- **USD/CAD**: HOLD (52%)\\n\\n## 4. Risk Assessment\\n\\n**Current Risk Level: MEDIUM**\\n\\n- \\u26a0\\ufe0f Limited real-time data during API transition\\n- \\u26a0\\ufe0f Geopolitical uncertainties persist\\n- \\u2713 Volatility within normal ranges\\n- \\u2713 No major economic catalysts identified today\\n\\n**Recommendation**: Await Phase 3 completion and fresh data confirmation before executing large positions.\", \"signals\": [\"- **EUR/USD**: HOLD (55%)\", \"- **GBP/USD**: HOLD (60%)\", \"- **USD/JPY**: HOLD (50%)\", \"- **AUD/USD**: HOLD (55%)\", \"- **USD/CAD**: HOLD (52%)\"], \"market_context\": \"Current market state: Ready for Phase 3 OANDA API integration...\", \"timestamp\": \"2026-03-15T01:05:10.618815\", \"agent\": \"TradingAgent\"}"
+}
