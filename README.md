@@ -37,6 +37,22 @@ Emy is an autonomous multi-agent system that runs 24/7, handling:
 
 ---
 
+## 📊 Mission Control Dashboard
+
+**Live status dashboard accessible from anywhere:**
+
+📱 **https://ibenwandu.github.io/projects-dashboard-/**
+
+- ✅ Real-time system status and metrics
+- ✅ Expandable project cards with progress tracking
+- ✅ Mobile-responsive design (works on phone, tablet, desktop)
+- ✅ Auto-updates when you close development sessions
+- ✅ Embed in documentation or share with stakeholders
+
+**Mobile Access**: Scan QR code or copy URL to phone browser
+
+---
+
 ## Quick Start
 
 ### Installation
