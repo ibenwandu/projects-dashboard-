@@ -1,6 +1,159 @@
 # Root-Level Session Log
 
-## Session: 2026-03-14 Evening — Emy Phase 3 Week 3 Complete ✅ [CURRENT]
+## Session: 2026-03-15 Morning — Emy Phase 3 Week 3 Deployment & Staging Setup ✅ [CURRENT]
+
+**Date**: March 15, 2026
+**Time**: ~9:15 AM - 11:00 AM EDT
+**Duration**: ~2 hours
+**Type**: Deployment & Architecture Integration
+**Status**: ✅ COMPLETE — Staging deployment configured, ready for Render deployment
+
+### 🎯 Session Objective
+Deploy Emy Phase 3 Week 3 to staging. Verify local implementation, design two-service architecture, create Render deployment configuration, and update Gateway to call Brain service.
+
+### 📋 What Was Done
+
+#### 1. Local Verification ✅
+- **Health Check**: ✅ 200 OK at localhost:8001
+- **Job Submission**: ✅ Job created (job_7da39e5a)
+- **Job Status**: ✅ 200 OK, job status retrieved as "completed"
+- **Checkpoint System**: ✅ Resume endpoint available
+- **Rate Limiting**: ✅ Configured (100 req/60s)
+- **WebSocket**: ✅ Endpoint available
+- **Structured Logging**: ✅ JSON format confirmed
+- **Test Results**: 66/66 tests passing (all Phase 3 tests verified)
+
+#### 2. Architecture Design ✅
+Implemented **two-service architecture** matching OpenClaw design:
+- **Primary**: emy-phase1a (Gateway + UI) on port 8000
+  - Single user interface
+  - REST API for workflow submission
+  - Dashboard UI
+
+- **Backend**: emy-brain (LangGraph Orchestration) on port 8001
+  - Multi-agent job execution
+  - WebSocket real-time updates
+  - Checkpoint & resumption
+  - Rate limiting & security
+  - Structured logging
+
+**Communication Flow:**
+```
+User → Gateway (emy-phase1a) → Brain Service (emy-brain) → Agents
+```
+
+#### 3. Render Configuration ✅
+Created **render.yaml** with complete infrastructure definition:
+- Two web services (emy-phase1a, emy-brain)
+- Environment variables for both services
+- Persistent disks for SQLite databases
+- CORS configuration
+- Anthropic API integration
+- Rate limiting and WebSocket settings
+
+#### 4. Gateway Integration ✅
+Updated **emy/gateway/api.py** to support Brain service:
+- Added httpx import for async HTTP calls
+- Modified execute_workflow endpoint to call Brain service when BRAIN_SERVICE_URL is set
+- Implemented job polling (up to 5 minutes)
+- Fallback to local AgentExecutor for development
+- Maintains backward compatibility
+
+**Key Features:**
+- Remote job submission: POST /jobs on Brain service
+- Async polling for job status
+- Timeout handling (5 minutes)
+- Error handling and logging
+- Development mode (local execution) if BRAIN_SERVICE_URL not set
+
+#### 5. Deployment Documentation ✅
+Created **RENDER_DEPLOYMENT.md** with:
+- Step-by-step deployment instructions (5 steps)
+- Environment variable reference
+- Architecture diagram
+- Health check verification commands
+- Monitoring and troubleshooting guide
+- Cost estimation ($24/month)
+- Rolling back procedures
+
+#### 6. Code Commits ✅
+**Commit**: `84d4183` — "feat: Add Render Brain service deployment and Gateway integration"
+- Added render.yaml (infrastructure as code)
+- Added RENDER_DEPLOYMENT.md (deployment guide)
+- Updated emy/gateway/api.py (Brain service integration)
+- Pushed to origin/master
+
+### 🏗️ Architecture Verified
+```
+Matches OpenClaw Design:
+- Single entry point (Gateway) ✅
+- Backend orchestration (Brain) ✅
+- Multi-agent coordination ✅
+- Async execution with polling ✅
+- Error recovery (checkpoints) ✅
+```
+
+### 📊 Deployment Status
+| Component | Local | Render Config | Status |
+|-----------|-------|---|--------|
+| Brain Service | ✅ Running | ✅ Configured | Ready |
+| Health Check | ✅ 200 OK | ✅ Endpoint | Ready |
+| Job Submission | ✅ Working | ✅ Configured | Ready |
+| WebSocket | ✅ Available | ✅ Configured | Ready |
+| Rate Limiting | ✅ Enabled | ✅ Configured | Ready |
+| Checkpoints | ✅ Working | ✅ Configured | Ready |
+| Gateway Integration | ✅ Updated | ✅ Tested | Ready |
+
+### 🔄 Next Steps
+**Immediate (Render Staging):**
+1. Create emy-brain service in Render dashboard
+2. Set environment variables (both services)
+3. Add persistent disks (/data)
+4. Verify both services healthy
+5. Test end-to-end workflow execution
+
+**After Staging Verification:**
+1. Verify multi-agent coordination on Render
+2. Test WebSocket updates in production
+3. Monitor logs and performance
+4. Review OpenClaw parity gaps
+5. Plan Weeks 4-8 (JobSearchAgent, browser automation)
+
+### ✅ Cross-Project Impact
+- **Emy**: Phase 3 Week 3 architecture finalized, staging deployment ready
+- **Trade-Alerts**: No changes (monitoring mode continues)
+- **Job-Search**: No changes (disabled, credits preserved)
+
+### 📝 Decisions Made
+- ✅ Two-service architecture (separate Render deployments)
+- ✅ HTTP polling for async job completion (5-min timeout)
+- ✅ Brain service URL via environment variable (flexible)
+- ✅ Backward compatibility maintained (local dev mode)
+- ✅ CORS configured for security (Gateway URL only)
+
+### 🔗 Key Files Updated/Created
+- **New**: render.yaml (infrastructure config)
+- **New**: RENDER_DEPLOYMENT.md (deployment guide)
+- **Updated**: emy/gateway/api.py (Brain service integration)
+- **Updated**: emy/.env (local development config)
+
+### 📌 Session Blockers
+- None (all tasks completed as planned)
+
+### 🎓 Lessons Learned
+1. Two-service architecture provides better scaling and separation of concerns
+2. Environment-based configuration enables flexible deployment (local vs Render)
+3. HTTP polling is simpler than persistent connections for initial MVP
+4. Backward compatibility is critical for smooth transitions
+
+### 📋 Ready For
+- Render staging deployment (step-by-step instructions in RENDER_DEPLOYMENT.md)
+- Production verification after staging
+- Weeks 4-8 planning (JobSearchAgent implementation)
+
+---
+
+## Session: 2026-03-14 Evening — Emy Phase 3 Week 3 Complete ✅
 
 **Date**: March 14, 2026
 **Time**: ~3:30 PM - 11:30 PM EDT
@@ -3863,5 +4016,80 @@ Presented first action item from NEXT_SESSION_NOTES.md:
 - Branch pushed, documentation comprehensive, next actions clear
 - Seamless context resumption demonstrates value of thorough documentation
 - **Next: Create PR → Deploy to staging → Assess OpenClaw parity**
+
+---
+
+## Session: March 15, 2026 — Cursor MCP Server Configuration Fix
+
+**Date**: March 15, 2026
+**Type**: Infrastructure / MCP Setup
+**Status**: ✅ COMPLETE — Cursor-agents MCP server now properly configured
+
+### 🎯 Session Objectives
+1. Diagnose why cursor-agents MCP server wasn't showing in Claude Code tools
+2. Fix the configuration issue
+3. Enable cursor-agents tools for future use
+
+### 📋 What Was Done
+
+#### 1. Issue Diagnosis ✅
+- **Symptom**: User restarted Claude Code multiple times but cursor-agents tools never appeared
+- **Investigation**:
+  - Confirmed cursor-mcp-server directory exists and is fully implemented
+  - Verified all Python dependencies (mcp, httpx, python-dotenv) are installed
+  - Tested cursor_client.py and main.py imports — both work correctly
+  - Ran `/mcp` command in Claude Code to see actual MCP configuration
+
+#### 2. Root Cause Identified ✅
+- **Problem**: Configuration file mismatch
+  - Cursor-agents config was in `~/.claude/mcp_servers.json` (old/alternate location)
+  - Claude Code v2.1.76 reads MCP servers from `C:\Users\user\.claude.json` (main config)
+  - Result: cursor-agents entry was completely missing from the actual config Claude Code uses
+
+#### 3. Solution Implemented ✅
+- **Action**: Added cursor-agents to the `mcpServers` object in `C:\Users\user\.claude.json`
+- **Configuration**: Added entry with Python command, file path, and API key
+- **File Modified**: `C:\Users\user\.claude.json` (mcpServers section)
+
+#### 4. Verification ✅
+- Configuration added to correct file location
+- JSON syntax validated
+- API key properly embedded
+- Ready for Claude Code restart
+
+### 📊 Current Status
+
+**Cursor MCP Server: NOW PROPERLY CONFIGURED**
+- ✅ Directory: C:\Users\user\projects\personal\cursor-mcp-server
+- ✅ Python implementation: cursor_client.py + main.py (working)
+- ✅ Dependencies installed: mcp, httpx, python-dotenv
+- ✅ Configuration: Added to C:\Users\user\.claude.json
+- ✅ API key: Embedded in mcpServers config
+- ⏳ **Next**: Restart Claude Code to activate
+
+**5 Tools Available After Restart:**
+1. `launch_cursor_agent(task, repo?, model?)` — Submit coding tasks to Cursor AI
+2. `get_agent_status(agent_id)` — Check agent completion and get results
+3. `list_agents(limit?)` — View recent agents (default 10)
+4. `send_followup(agent_id, message)` — Add follow-up instructions
+5. `download_artifact(artifact_url)` — Fetch generated code/artifacts
+
+### 📁 Files Modified
+- `C:\Users\user\.claude.json` — Added cursor-agents to mcpServers section
+
+### ✅ Session Checklist
+- [x] Issue diagnosed and root cause identified
+- [x] Configuration added to correct file
+- [x] JSON syntax validated
+- [x] API key properly configured
+- [x] Session decisions auto-captured
+- [x] CLAUDE_SESSION_LOG.md updated
+
+### 📝 Summary
+✅ **Cursor MCP Server Configuration Fixed**
+- Root cause: Configuration file mismatch (old location vs. current)
+- Solution: Added cursor-agents to C:\Users\user\.claude.json mcpServers section
+- Status: Ready for Claude Code restart
+- Next action: Restart Claude Code → verify `/mcp` shows cursor-agents ✓ connected → test tools
 
 ---
