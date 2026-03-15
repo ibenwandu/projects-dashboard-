@@ -1,6 +1,6 @@
 """Tests for LangGraph state schema."""
 from typing import Any, Dict, List
-from emy.brain.state import EMyState, create_initial_state
+from emy.brain.state import EMyState, create_initial_state, create_initial_state_with_groups
 import pytest
 
 
@@ -72,3 +72,23 @@ def test_state_add_message():
 
     assert len(state.messages) == 1
     assert state.messages[0]["agent"] == "Router"
+
+
+def test_state_with_agent_groups():
+    """Test that state supports agent groups."""
+    state = create_initial_state_with_groups(
+        workflow_type="market_analysis",
+        agent_groups=[
+            ["TradingAgent", "ResearchAgent"],  # Group 1: run in parallel
+            ["KnowledgeAgent"]  # Group 2: run sequentially after Group 1
+        ],
+        input={"query": "Analyze EUR/USD"}
+    )
+
+    assert state.agent_groups == [
+        ["TradingAgent", "ResearchAgent"],
+        ["KnowledgeAgent"]
+    ]
+    assert state.agents == ["TradingAgent", "ResearchAgent", "KnowledgeAgent"]  # Flat list for backward compat
+    assert state.current_group_index == 0
+    assert state.agents_executing == []  # Track which agents are currently running

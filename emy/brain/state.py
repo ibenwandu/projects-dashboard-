@@ -30,6 +30,9 @@ class EMyState:
     # Agent coordination
     agents: List[str]  # List of agent names that can be used
     current_agent: Optional[str] = None  # Which agent is currently processing
+    agent_groups: List[List[str]] = field(default_factory=list)  # Agent groups for parallel execution
+    current_group_index: int = 0  # Which group is currently executing
+    agents_executing: List[str] = field(default_factory=list)  # Agents currently running in current group
 
     # User input and context
     input: Dict[str, Any] = field(default_factory=dict)  # Original user input
@@ -91,3 +94,39 @@ def create_initial_state(
         error=None,
         error_context={}
     )
+
+
+def create_initial_state_with_groups(
+    workflow_type: str,
+    agent_groups: List[List[str]],
+    input: Dict[str, Any],
+    workflow_id: Optional[str] = None
+) -> EMyState:
+    """
+    Create initial state with agent grouping for parallel execution.
+
+    Args:
+        workflow_type: Type of workflow
+        agent_groups: List of agent groups (each group runs in parallel, groups run sequentially)
+        input: User input data
+        workflow_id: Optional workflow ID
+
+    Returns:
+        Initial EMyState with agent_groups set and flat agents list for backward compatibility
+    """
+    # Flatten groups into single agents list (backward compatibility)
+    flat_agents = [agent for group in agent_groups for agent in group]
+
+    state = create_initial_state(
+        workflow_type=workflow_type,
+        agents=flat_agents,
+        input=input,
+        workflow_id=workflow_id
+    )
+
+    # Add grouping fields
+    state.agent_groups = agent_groups
+    state.current_group_index = 0
+    state.agents_executing = []
+
+    return state
