@@ -449,21 +449,27 @@ function formatWorkflowOutput(data, workflowType) {
     if (typeof data === 'string') {
         let text = data;
 
-        // Try to parse as JSON if it looks like a JSON string
-        if (data.startsWith('"') || data.startsWith('\\"')) {
+        // Try to parse as JSON, handling double-encoding
+        let parseAttempts = 0;
+        while ((text.startsWith('"') || text.startsWith('\\"')) && parseAttempts < 3) {
             try {
-                text = JSON.parse(data);
+                text = JSON.parse(text);
+                parseAttempts++;
             } catch (e) {
-                // If parsing fails, strip quotes manually
-                text = data.replace(/^["\\]+/, '').replace(/["\\]+$/, '');
+                // If parsing fails, strip outer quotes
+                text = text.replace(/^["\\]/, '').replace(/["\\]$/, '');
+                break;
             }
         }
 
-        // Strip any remaining leading/trailing quotes/backslashes
+        // Unescape common escape sequences if still present
+        text = text.replace(/\\n/g, '\n').replace(/\\t/g, '\t').replace(/\\\\/g, '\\');
+
+        // Strip any remaining leading/trailing quotes
         text = text.replace(/^["\\]+/, '').replace(/["\\]+$/, '');
 
         // If it looks like markdown or structured text, display with proper formatting
-        if (text.startsWith('#') || text.includes('##') || text.includes('|')) {
+        if (text.trim().startsWith('#') || text.includes('##') || text.includes('|')) {
             return `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${escapeHtml(text)}</div>`;
         }
         return `<p>${escapeHtml(text)}</p>`;
