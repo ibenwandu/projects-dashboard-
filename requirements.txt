@@ -4,4 +4,7 @@ oandapyV20==0.7.2
 fastapi==0.104.1
 uvicorn==0.24.0
 pydantic>=2.8
+anthropic
+langgraph
+langsmith
 # Note: anthropic and other Emy-specific deps are in emy/requirements.txt
