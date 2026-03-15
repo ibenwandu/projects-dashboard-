@@ -81,6 +81,51 @@
             </div>
         </section>
 
+        <!-- WebSocket Status Indicator (top right) -->
+        <div class="ws-status" id="wsStatus">🟡 Connecting...</div>
+
+        <!-- Job History with Real-Time Updates -->
+        <section class="job-history">
+            <h3>Active & Recent Jobs</h3>
+            <div id="jobsList" class="jobs-list">
+                <!-- Jobs rendered here with WebSocket updates -->
+            </div>
+        </section>
+
+        <!-- Job Detail View (updated in real-time) -->
+        <section class="job-detail" id="jobDetail" style="display:none">
+            <div class="job-header">
+                <h3 id="jobTitle">Job Details</h3>
+                <span class="status-badge" id="jobStatus">pending</span>
+            </div>
+
+            <!-- Agent Execution Timeline -->
+            <div class="agent-timeline">
+                <div class="timeline-label">Executing Agents:</div>
+                <div class="executing-agents" id="executingAgents"></div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="jobProgress" style="width:0%"></div>
+            </div>
+
+            <!-- Job Error (if failed) -->
+            <div class="job-error" id="jobError" style="display:none;color:red;"></div>
+
+            <!-- Real-time Messages/Log -->
+            <div class="job-log" id="jobLog">
+                <div class="log-header">Execution Log:</div>
+                <div class="log-entries" id="logEntries"></div>
+            </div>
+
+            <!-- Results (updated as agents complete) -->
+            <div class="job-results" id="jobResults" style="display:none">
+                <div class="results-header">Results:</div>
+                <pre id="resultsContent"></pre>
+            </div>
+        </section>
+
         <!-- Loading Spinner -->
         <div class="loading-overlay" id="loadingOverlay">
             <div class="spinner"></div>

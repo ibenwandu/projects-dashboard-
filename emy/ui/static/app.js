@@ -4,6 +4,110 @@ const API_BASE = '';  // Relative URLs (same domain)
 const HISTORY_REFRESH_INTERVAL = 30000;  // 30 seconds
 const HEALTH_CHECK_INTERVAL = 60000;  // 60 seconds
 
+// ============================================================================
+// WebSocket Connection for Real-Time Job Updates
+// ============================================================================
+
+let ws = null;
+let jobUpdateHandlers = {};  // Map job_id → update callback
+
+function connectWebSocket() {
+    // Determine WebSocket URL based on current location
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsUrl = `${protocol}//${window.location.host}/ws/jobs?token=dashboard-client`;
+
+    ws = new WebSocket(wsUrl);
+
+    ws.onopen = () => {
+        console.log('[WebSocket] Connected to job updates');
+        const wsStatusEl = document.getElementById('wsStatus');
+        if (wsStatusEl) wsStatusEl.textContent = '🟢 Live';
+    };
+
+    ws.onmessage = (event) => {
+        const message = JSON.parse(event.data);
+
+        if (message.type === 'job_update') {
+            const jobId = message.job_id;
+
+            // Update job in local cache if handler exists
+            if (jobId in jobUpdateHandlers) {
+                jobUpdateHandlers[jobId](message);
+            }
+
+            // Update UI
+            updateJobStatus(jobId, message);
+        }
+    };
+
+    ws.onerror = (error) => {
+        console.error('[WebSocket] Error:', error);
+        const wsStatusEl = document.getElementById('wsStatus');
+        if (wsStatusEl) wsStatusEl.textContent = '🔴 Disconnected';
+    };
+
+    ws.onclose = () => {
+        console.log('[WebSocket] Disconnected');
+        const wsStatusEl = document.getElementById('wsStatus');
+        if (wsStatusEl) wsStatusEl.textContent = '🟡 Reconnecting...';
+        // Attempt reconnect in 3 seconds
+        setTimeout(connectWebSocket, 3000);
+    };
+}
+
+function updateJobStatus(jobId, update) {
+    // Find job element by data-job-id
+    const jobElement = document.querySelector(`[data-job-id="${jobId}"]`);
+    if (!jobElement) return;
+
+    // Update status badge
+    const statusBadge = jobElement.querySelector('.status-badge');
+    if (statusBadge && update.status) {
+        statusBadge.textContent = update.status;
+        statusBadge.className = `status-badge status-${update.status}`;
+    }
+
+    // Update agent execution visualization
+    if (update.agents_executing && update.agents_executing.length > 0) {
+        const agentsDiv = jobElement.querySelector('.executing-agents');
+        if (agentsDiv) {
+            agentsDiv.innerHTML = update.agents_executing
+                .map(a => `<span class="agent-badge">${a}</span>`)
+                .join('');
+        }
+    }
+
+    // Update progress bar
+    if (update.current_group_index !== undefined) {
+        const progress = jobElement.querySelector('.progress-bar');
+        if (progress) {
+            // Assume at most 3 groups (can be dynamic from total_groups if sent)
+            const totalGroups = update.total_groups || 3;
+            const percent = Math.round((update.current_group_index / totalGroups) * 100);
+            progress.style.width = `${percent}%`;
+            progress.textContent = `${percent}%`;
+        }
+    }
+
+    // Update error message if failed
+    if (update.error) {
+        const errorDiv = jobElement.querySelector('.job-error');
+        if (errorDiv) {
+            errorDiv.textContent = update.error;
+            errorDiv.style.display = 'block';
+        }
+    }
+
+    // Show results if available
+    if (update.results) {
+        const resultsDiv = jobElement.querySelector('.job-results');
+        if (resultsDiv) {
+            resultsDiv.innerHTML = `<pre>${JSON.stringify(update.results, null, 2)}</pre>`;
+            resultsDiv.style.display = 'block';
+        }
+    }
+}
+
 // Workflow mapping: agentName -> [[workflowType, label], ...]
 const WORKFLOW_MAP = {
     'TradingAgent': [
@@ -573,6 +677,9 @@ copyBtn.addEventListener('click', copyResult);
  * Initialize dashboard on page load
  */
 async function initialize() {
+    // Connect WebSocket for real-time updates
+    connectWebSocket();
+
     // Check health and load initial data
     await checkHealth();
     await loadAgents();
