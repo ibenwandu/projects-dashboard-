@@ -44,6 +44,13 @@ class JobQueue:
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
 
+        # Enable foreign keys
+        cursor.execute("PRAGMA foreign_keys = ON")
+
+        # Enable WAL mode for concurrent access (file-based only)
+        if self.db_path != ":memory:":
+            cursor.execute("PRAGMA journal_mode = WAL")
+
         # Jobs table
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS jobs (
@@ -78,18 +85,28 @@ class JobQueue:
         """)
 
         conn.commit()
+        logger.info("Database initialized with transaction support (implicit transactions enabled, foreign keys enabled)")
 
     def _get_connection(self):
-        """Get database connection."""
+        """Get database connection with PRAGMA settings."""
         if self.db_path == ":memory:":
             # For in-memory, use shared class-level connection
             if JobQueue._memory_conn is None:
                 JobQueue._memory_conn = sqlite3.connect(":memory:", check_same_thread=False)
                 JobQueue._memory_conn.row_factory = sqlite3.Row
+                # Set PRAGMA settings on first use
+                cursor = JobQueue._memory_conn.cursor()
+                cursor.execute("PRAGMA foreign_keys = ON")
+                JobQueue._memory_conn.commit()
             return JobQueue._memory_conn
         else:
             conn = sqlite3.connect(str(self.db_path))
             conn.row_factory = sqlite3.Row
+            # Set PRAGMA settings for file-based connection
+            cursor = conn.cursor()
+            cursor.execute("PRAGMA foreign_keys = ON")
+            cursor.execute("PRAGMA journal_mode = WAL")
+            conn.commit()
             return conn
 
     async def submit(self, job: Job) -> str:
@@ -116,17 +133,27 @@ class JobQueue:
         return job.job_id
 
     def _insert_job(self, job_id: str, workflow_type: str, agents_json: str, agent_groups_json: str, input_json: str):
-        """Insert job into database."""
+        """Insert job into database with transaction safety."""
         conn = self._get_connection()
         cursor = conn.cursor()
         now = datetime.now().isoformat()
 
-        cursor.execute("""
-            INSERT INTO jobs (job_id, workflow_type, agents, agent_groups, input, status, created_at)
-            VALUES (?, ?, ?, ?, ?, 'pending', ?)
-        """, (job_id, workflow_type, agents_json, agent_groups_json, input_json, now))
+        try:
+            # SQLite uses implicit transactions; statements are auto-wrapped
+            cursor.execute("""
+                INSERT INTO jobs (job_id, workflow_type, agents, agent_groups, input, status, created_at)
+                VALUES (?, ?, ?, ?, ?, 'pending', ?)
+            """, (job_id, workflow_type, agents_json, agent_groups_json, input_json, now))
 
-        conn.commit()
+            # Commit transaction
+            conn.commit()
+            logger.info(f"Job {job_id} submitted in transaction")
+
+        except Exception as e:
+            # Rollback on error
+            conn.rollback()
+            logger.error(f"Failed to submit job {job_id}: {str(e)}")
+            raise
 
     async def get_status(self, job_id: str) -> str:
         """
@@ -213,18 +240,28 @@ class JobQueue:
         )
 
     def _complete_job(self, job_id: str, result_json: str):
-        """Mark job complete in database."""
+        """Mark job complete in database with transaction safety."""
         conn = self._get_connection()
         cursor = conn.cursor()
         now = datetime.now().isoformat()
 
-        cursor.execute("""
-            UPDATE jobs
-            SET status = 'completed', output = ?, completed_at = ?
-            WHERE job_id = ?
-        """, (result_json, now, job_id))
+        try:
+            # SQLite uses implicit transactions; statements are auto-wrapped
+            cursor.execute("""
+                UPDATE jobs
+                SET status = 'completed', output = ?, completed_at = ?
+                WHERE job_id = ?
+            """, (result_json, now, job_id))
 
-        conn.commit()
+            # Commit transaction
+            conn.commit()
+            logger.info(f"Job {job_id} marked as completed")
+
+        except Exception as e:
+            # Rollback on error
+            conn.rollback()
+            logger.error(f"Failed to mark job {job_id} complete: {str(e)}")
+            raise
 
     async def mark_failed(self, job_id: str, error: str):
         """
@@ -238,18 +275,28 @@ class JobQueue:
         await loop.run_in_executor(None, self._fail_job, job_id, error)
 
     def _fail_job(self, job_id: str, error: str):
-        """Mark job failed in database."""
+        """Mark job failed in database with transaction safety."""
         conn = self._get_connection()
         cursor = conn.cursor()
         now = datetime.now().isoformat()
 
-        cursor.execute("""
-            UPDATE jobs
-            SET status = 'failed', error = ?, completed_at = ?
-            WHERE job_id = ?
-        """, (error, now, job_id))
+        try:
+            # SQLite uses implicit transactions; statements are auto-wrapped
+            cursor.execute("""
+                UPDATE jobs
+                SET status = 'failed', error = ?, completed_at = ?
+                WHERE job_id = ?
+            """, (error, now, job_id))
 
-        conn.commit()
+            # Commit transaction
+            conn.commit()
+            logger.info(f"Job {job_id} marked as failed")
+
+        except Exception as e:
+            # Rollback on error
+            conn.rollback()
+            logger.error(f"Failed to mark job {job_id} failed: {str(e)}")
+            raise
 
     async def get_result(self, job_id: str) -> Optional[Dict[str, Any]]:
         """
@@ -279,18 +326,28 @@ class JobQueue:
         return json.loads(row["output"])
 
     def _update_status(self, job_id: str, status: str):
-        """Update job status in database."""
+        """Update job status in database with transaction safety."""
         conn = self._get_connection()
         cursor = conn.cursor()
         now = datetime.now().isoformat()
 
-        cursor.execute("""
-            UPDATE jobs
-            SET status = ?, started_at = COALESCE(started_at, ?)
-            WHERE job_id = ?
-        """, (status, now if status == "executing" else None, job_id))
+        try:
+            # SQLite uses implicit transactions; statements are auto-wrapped
+            cursor.execute("""
+                UPDATE jobs
+                SET status = ?, started_at = COALESCE(started_at, ?)
+                WHERE job_id = ?
+            """, (status, now if status == "executing" else None, job_id))
 
-        conn.commit()
+            # Commit transaction
+            conn.commit()
+            logger.info(f"Job {job_id} marked as {status}")
+
+        except Exception as e:
+            # Rollback on error
+            conn.rollback()
+            logger.error(f"Failed to update job {job_id} status to {status}: {str(e)}")
+            raise
 
     def _clear_jobs(self):
         """Clear all jobs from database (for testing)."""
