@@ -61,14 +61,14 @@ def test_metrics_api_returns_all_data():
 
 def test_dashboard_css_loads():
     """Test that CSS file is served correctly"""
-    response = client.get("/static/style.css")
+    response = client.get("/static/dashboard.css")
     assert response.status_code == 200
     assert response.headers["content-type"].startswith("text/css")
     assert "--bg:" in response.text or "var(--bg)" in response.text or "background" in response.text
 
 def test_dashboard_js_loads():
     """Test that JS file is served correctly"""
-    response = client.get("/static/app.js")
+    response = client.get("/static/dashboard.js")
     assert response.status_code == 200
     assert "javascript" in response.headers["content-type"]
     assert "connectWebSocket" in response.text or "updateMetrics" in response.text or "fetch" in response.text
@@ -94,11 +94,11 @@ def test_all_dashboard_components_together():
     assert html_response.status_code == 200
 
     # 2. CSS loads
-    css_response = client.get("/static/style.css")
+    css_response = client.get("/static/dashboard.css")
     assert css_response.status_code == 200
 
     # 3. JS loads
-    js_response = client.get("/static/app.js")
+    js_response = client.get("/static/dashboard.js")
     assert js_response.status_code == 200
 
     # 4. Metrics API works
