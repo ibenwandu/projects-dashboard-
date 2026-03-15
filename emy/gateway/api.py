@@ -21,6 +21,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
 from emy.core.database import EMyDatabase
+from emy.core.metrics import collect_metrics
 from emy.agents.agent_executor import AgentExecutor
 
 # Load environment variables from .env file
@@ -173,6 +174,17 @@ async def dashboard():
     if not dashboard_path.exists():
         raise HTTPException(status_code=404, detail="Dashboard not found")
     return FileResponse(dashboard_path, media_type="text/html")
+
+
+@app.get('/api/metrics')
+async def get_metrics():
+    """Get all dashboard metrics"""
+    try:
+        metrics = collect_metrics()
+        return metrics.dict()
+    except Exception as e:
+        logger.error(f"Error collecting metrics: {e}")
+        raise HTTPException(status_code=500, detail="Failed to collect metrics")
 
 
 @app.get('/health', response_model=HealthResponse)
