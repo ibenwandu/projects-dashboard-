@@ -4,18 +4,20 @@ Provides REST API for job submission, status tracking, and workflow execution.
 Runs as separate service from Phase 1a gateway (port 8001 vs 8000).
 """
 import asyncio
+import json
 import logging
 from datetime import datetime
 from typing import Dict, Any, Optional, List
 from pydantic import BaseModel, field_validator, model_validator
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 
 from emy.brain.config import BRAIN_PORT, BRAIN_HOST, QUEUE_POLL_INTERVAL
 from emy.brain.queue import JobQueue, Job
 from emy.brain.graph import execute_workflow
 from emy.brain.state import create_initial_state, create_initial_state_with_groups
+from emy.brain.websocket import job_update_manager
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -101,6 +103,31 @@ async def health_check():
         status='ok',
         timestamp=datetime.now().isoformat()
     )
+
+
+@app.websocket('/ws/jobs')
+async def websocket_endpoint(websocket: WebSocket):
+    """WebSocket endpoint for real-time job updates.
+
+    Clients connect and receive job status updates as they happen.
+    Clients can optionally send messages to subscribe to specific jobs.
+    """
+    await job_update_manager.connect(websocket)
+    try:
+        while True:
+            # Keep connection open, receive/process client messages if needed
+            data = await websocket.receive_text()
+            # Handle client messages (e.g., subscribe to specific job)
+            if data:
+                try:
+                    message = json.loads(data)
+                    if message.get("type") == "subscribe":
+                        job_id = message.get("job_id")
+                        logger.info(f"Client subscribed to job {job_id}")
+                except json.JSONDecodeError:
+                    logger.warning(f"Invalid JSON received on WebSocket: {data}")
+    except WebSocketDisconnect:
+        await job_update_manager.disconnect(websocket)
 
 
 @app.post('/jobs', response_model=JobResponse)
@@ -208,6 +235,12 @@ async def job_executor():
                 # Mark as executing
                 await job_queue.mark_executing(job_id)
 
+                # Broadcast job started update
+                await job_update_manager.broadcast_job_update(
+                    job_id,
+                    {"status": "executing", "message": f"Job {job_id} started"}
+                )
+
                 # Create state from job data
                 if job_data.get('agent_groups'):
                     state = create_initial_state_with_groups(
@@ -239,10 +272,27 @@ async def job_executor():
                     await job_queue.mark_complete(job_id, output_dict)
                     logger.info(f'Job {job_id} completed')
 
+                    # Broadcast job state update
+                    await job_update_manager.broadcast_job_state(
+                        job_id,
+                        {
+                            "status": result.status,
+                            "results": result.results,
+                            "messages": result.messages,
+                            "error": result.error
+                        }
+                    )
+
                 except Exception as e:
                     error_msg = f'Workflow execution failed: {str(e)}'
                     logger.error(error_msg)
                     await job_queue.mark_failed(job_id, error_msg)
+
+                    # Broadcast job failure update
+                    await job_update_manager.broadcast_job_update(
+                        job_id,
+                        {"status": "failed", "error": error_msg}
+                    )
 
             else:
                 # No jobs, sleep briefly
