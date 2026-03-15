@@ -149,6 +149,29 @@ class OandaClient:
             logger.error(f"[OandaClient] execute_trade error: {e}")
             return None
 
+    def get_trades(self) -> List[Dict]:
+        """Get list of all open trades with full details from OANDA API.
+
+        Returns:
+            list of dicts with full OANDA trade object details including:
+            - id, instrument, initialUnits, currentUnits, openTime
+            - pricingStatus, unrealizedPL, takeProfitOnFill, stopLossOnFill
+            - clientExtensions (optional)
+            Returns empty list if query fails or no open trades
+        """
+        if not self.client:
+            return []
+
+        try:
+            r = trades.OpenTrades(accountID=self.account_id)
+            self.client.request(r)
+
+            trade_list = r.response.get('trades', [])
+            return trade_list  # Return full OANDA trade objects
+        except Exception as e:
+            logger.error(f"[OandaClient] get_trades error: {e}")
+            return []
+
     def get_open_trades(self) -> List[Dict]:
         """Get list of open trades.
 

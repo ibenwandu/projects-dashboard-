@@ -44,3 +44,67 @@ class TestTradingHoursMonitorAgent:
         success, result = agent.run()
         assert success is False
         assert result['status'] == 'not implemented'
+
+    def test_get_open_trades_success(self, agent):
+        """Test _get_open_trades() returns list of open trades."""
+        # Mock OandaClient.get_trades() to return 3 trades
+        mock_trades = [
+            {
+                "id": "123456",
+                "instrument": "EUR/USD",
+                "initialUnits": 100,
+                "currentUnits": 100,
+                "openTime": "2026-03-15T14:00:00Z",
+                "pricingStatus": "OPEN",
+                "unrealizedPL": 45.50,
+                "takeProfitOnFill": {"price": "1.1050"},
+                "stopLossOnFill": {"price": "1.0950"}
+            },
+            {
+                "id": "123457",
+                "instrument": "GBP/USD",
+                "initialUnits": 50,
+                "currentUnits": 50,
+                "openTime": "2026-03-15T15:00:00Z",
+                "pricingStatus": "TRAILING",
+                "unrealizedPL": 25.00,
+                "takeProfitOnFill": {"price": "1.3200"},
+                "stopLossOnFill": {"price": "1.2900"}
+            },
+            {
+                "id": "123458",
+                "instrument": "USD/JPY",
+                "initialUnits": 200,
+                "currentUnits": 200,
+                "openTime": "2026-03-15T16:00:00Z",
+                "pricingStatus": "AT_BREAKEVEN",
+                "unrealizedPL": 0.0,
+                "takeProfitOnFill": {"price": "150.50"},
+                "stopLossOnFill": {"price": "149.50"}
+            }
+        ]
+
+        with patch.object(agent.oanda_client, 'get_trades', return_value=mock_trades):
+            trades = agent._get_open_trades()
+
+        assert len(trades) == 3
+        assert trades[0]["id"] == "123456"
+        assert trades[0]["instrument"] == "EUR/USD"
+        assert all("id" in t for t in trades)
+        assert all("instrument" in t for t in trades)
+        assert all("currentUnits" in t for t in trades)
+        assert all("pricingStatus" in t for t in trades)
+
+    def test_get_open_trades_empty(self, agent):
+        """Test _get_open_trades() returns empty list when no trades open."""
+        with patch.object(agent.oanda_client, 'get_trades', return_value=[]):
+            trades = agent._get_open_trades()
+
+        assert trades == []
+
+    def test_get_open_trades_api_error(self, agent):
+        """Test _get_open_trades() handles API errors gracefully."""
+        with patch.object(agent.oanda_client, 'get_trades', side_effect=Exception("API Error")):
+            trades = agent._get_open_trades()
+
+        assert trades == []

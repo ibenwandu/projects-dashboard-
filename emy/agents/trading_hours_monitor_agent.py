@@ -88,13 +88,30 @@ class TradingHoursMonitorAgent(EMySubAgent):
         """Fetch all open trades from OANDA API.
 
         Returns:
-            list: List of open trade dictionaries with keys: trade_id, symbol, units, entry_price
+            list: List of open trade dictionaries with keys:
+                - id, instrument, initialUnits, currentUnits, openTime
+                - pricingStatus, unrealizedPL, takeProfitOnFill, stopLossOnFill
+                - clientExtensions (optional)
 
-        Raises:
-            NotImplementedError: This method will be implemented in Task 4
+        Returns empty list if no trades open or on API error.
         """
-        # To be implemented in Task 4
-        raise NotImplementedError("_get_open_trades() to be implemented in Task 4")
+        try:
+            trades = self.oanda_client.get_trades()
+
+            if not trades:
+                logger.info("[TradingHoursMonitorAgent] No open trades")
+                return []
+
+            # Filter to active trades only (OPEN, TRAILING, AT_BREAKEVEN)
+            active_states = ["OPEN", "TRAILING", "AT_BREAKEVEN"]
+            active_trades = [t for t in trades if t.get("pricingStatus") in active_states]
+
+            logger.info(f"[TradingHoursMonitorAgent] Found {len(active_trades)} open trades")
+            return active_trades
+
+        except Exception as e:
+            logger.error(f"[TradingHoursMonitorAgent] Error fetching open trades: {e}")
+            return []
 
     def _check_compliance_status(self, trade: Dict, current_time) -> Dict:
         """Check compliance status of a single trade.
