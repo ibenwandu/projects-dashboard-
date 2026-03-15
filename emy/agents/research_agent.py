@@ -55,6 +55,44 @@ class ResearchAgent(EMySubAgent):
             self.logger.error(error_msg)
             return (False, {"error": error_msg})
 
+    async def send_feasibility_assessment(self, opportunity: dict, assessment: str, recommendation: str) -> bool:
+        """Send feasibility assessment email.
+
+        Args:
+            opportunity: Dict with 'contact_name', 'title', 'email'
+            assessment: Assessment text
+            recommendation: Recommendation text
+
+        Returns:
+            True if send succeeded, False otherwise
+        """
+        context = {
+            'recipient_name': opportunity.get('contact_name', 'Valued Contact'),
+            'opportunity': opportunity.get('title', 'Opportunity'),
+            'assessment': assessment,
+            'recommendation': recommendation,
+            'next_steps': self._generate_next_steps(opportunity)
+        }
+
+        html_body = await self.email_client.render_template('emails/feasibility_assessment.jinja2', context)
+
+        result = await self.email_client.send(
+            to=opportunity.get('email', ''),
+            subject=f"Feasibility Assessment: {opportunity.get('title', 'Opportunity')}",
+            body=html_body,
+            html=True
+        )
+
+        return result
+
+    def _generate_next_steps(self, opportunity: dict) -> list:
+        """Generate next steps based on opportunity."""
+        return [
+            "Review detailed market analysis",
+            "Schedule stakeholder discussion",
+            "Develop implementation timeline"
+        ]
+
     def _build_research_prompt(self) -> str:
         """Build research analysis prompt."""
         return """You are Ibe's AI Chief of Staff (Emy).

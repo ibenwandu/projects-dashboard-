@@ -9,6 +9,7 @@ from abc import ABC, abstractmethod
 from typing import Tuple, Optional, Dict, Any
 from anthropic import Anthropic, APIError, AuthenticationError, APIConnectionError
 from emy.core.disable_guard import EMyDisableGuard
+from emy.tools.email_tool import EmailClient
 
 logger = logging.getLogger('EMySubAgent')
 
@@ -22,6 +23,7 @@ class EMySubAgent(ABC):
         self.model = model
         self.disable_guard = EMyDisableGuard()
         self.logger = logging.getLogger(agent_name)
+        self.email_client = EmailClient()
 
     def check_disabled(self) -> bool:
         """Check if Emy is disabled."""

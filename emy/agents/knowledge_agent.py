@@ -329,6 +329,45 @@ Provide:
             logger.warning(f"Error querying recent alerts: {e}")
             return {'executions': 0, 'rejections': 0, 'warnings': 0, 'total': 0}
 
+    async def send_research_summary(self, recipient_email: str, topic: str, findings: str, insights: list, recommendations: list = None, source_count: int = 5, high_confidence_sources: int = 3) -> bool:
+        """Send research summary email.
+
+        Args:
+            recipient_email: Email recipient address
+            topic: Research topic
+            findings: Main findings text
+            insights: List of key insights
+            recommendations: List of recommendations (optional)
+            source_count: Number of sources reviewed
+            high_confidence_sources: Number of high-confidence sources
+
+        Returns:
+            True if send succeeded, False otherwise
+        """
+        if recommendations is None:
+            recommendations = ['Further investigation recommended']
+
+        context = {
+            'recipient_name': recipient_email.split('@')[0].title(),
+            'topic': topic,
+            'findings': findings,
+            'insights': insights,
+            'recommendations': recommendations,
+            'source_count': source_count,
+            'high_confidence_sources': high_confidence_sources
+        }
+
+        html_body = await self.email_client.render_template('emails/research_summary.jinja2', context)
+
+        result = await self.email_client.send(
+            to=recipient_email,
+            subject=f"Research Summary: {topic}",
+            body=html_body,
+            html=True
+        )
+
+        return result
+
     def _check_critical_alerts(self) -> bool:
         """Check if any critical alerts exist (daily loss 100%, etc)"""
         try:

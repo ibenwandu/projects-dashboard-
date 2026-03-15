@@ -7,6 +7,7 @@ Sends alerts on downtime or anomalies.
 
 import logging
 from typing import Tuple, Dict, Any
+from datetime import datetime
 
 logger = logging.getLogger('ProjectMonitor')
 
@@ -22,6 +23,8 @@ class ProjectMonitorAgent:
             'scalp-engine',
             'job-search-api',
         ]
+        from emy.tools.email_tool import EmailClient
+        self.email_client = EmailClient()
 
     def run(self, task_id: int = None) -> Tuple[bool, Dict[str, Any]]:
         """
@@ -125,6 +128,64 @@ class ProjectMonitorAgent:
 
         except Exception as e:
             self.logger.error(f"[ALERT] Error sending alert: {e}")
+
+    async def send_daily_status_digest(self, recipient_email: str, recipient_name: str, projects: list) -> bool:
+        """Send daily project status digest.
+
+        Args:
+            recipient_email: Email recipient address
+            recipient_name: Name of recipient
+            projects: List of projects with status
+
+        Returns:
+            True if send succeeded, False otherwise
+        """
+        context = {
+            'recipient_name': recipient_name,
+            'date': datetime.now().strftime('%Y-%m-%d'),
+            'summary': self._generate_summary(projects),
+            'metrics': self._extract_metrics(projects),
+            'actions_required': self._identify_actions(projects),
+            'upcoming_milestones': self._get_milestones(projects)
+        }
+
+        html_body = await self.email_client.render_template('emails/daily_digest.jinja2', context)
+
+        result = await self.email_client.send(
+            to=recipient_email,
+            subject=f"Daily Project Status Digest - {datetime.now().strftime('%Y-%m-%d')}",
+            body=html_body,
+            html=True
+        )
+
+        return result
+
+    def _generate_summary(self, projects: list) -> str:
+        """Generate summary of project status."""
+        on_track = sum(1 for p in projects if p.get('status') == 'On Track')
+        return f"{on_track}/{len(projects)} projects on track"
+
+    def _extract_metrics(self, projects: list) -> list:
+        """Extract metrics from projects."""
+        return [
+            {'name': p.get('name', 'Project'), 'value': f"{p.get('progress', 0)}% complete"}
+            for p in projects
+        ]
+
+    def _identify_actions(self, projects: list) -> list:
+        """Identify required actions based on project status."""
+        actions = []
+        for p in projects:
+            if p.get('status') != 'On Track':
+                actions.append(f"Review {p.get('name')} - Status: {p.get('status')}")
+        return actions
+
+    def _get_milestones(self, projects: list) -> list:
+        """Get upcoming milestones."""
+        return [
+            {'date': '2026-03-20', 'description': 'Weekly checkpoint'},
+            {'date': '2026-03-31', 'description': 'Monthly review'}
+        ]
 
     def _get_timestamp(self) -> str:
         """Get current ISO timestamp."""
