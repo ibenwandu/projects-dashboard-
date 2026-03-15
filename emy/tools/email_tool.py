@@ -3,6 +3,7 @@
 import os
 import asyncio
 import json
+import logging
 from typing import Optional
 from pathlib import Path
 from datetime import datetime
@@ -16,6 +17,8 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 from emy.core.database import EMyDatabase
+
+logger = logging.getLogger(__name__)
 
 
 class EmailClient:
@@ -45,9 +48,9 @@ class EmailClient:
                 )
                 self._service = build('gmail', 'v1', credentials=creds, cache_discovery=False)
             else:
-                print("Warning: GMAIL_CREDENTIALS_JSON not set, Gmail features will be unavailable")
+                logger.warning("GMAIL_CREDENTIALS_JSON not set, Gmail features will be unavailable")
         except Exception as e:
-            print(f"Warning: Gmail service initialization failed: {e}")
+            logger.error(f"Gmail service initialization failed: {e}")
             self._service = None
 
     def _initialize_templates(self):
@@ -62,7 +65,7 @@ class EmailClient:
                 autoescape=select_autoescape(['html', 'xml'])
             )
         except Exception as e:
-            print(f"Warning: Jinja2 template initialization failed: {e}")
+            logger.error(f"Jinja2 environment initialization failed: {e}")
             self._jinja_env = None
 
     async def render_template(self, template_name: str, context: dict) -> str:
@@ -83,7 +86,7 @@ class EmailClient:
             template = self._jinja_env.get_template(template_name)
             return template.render(**context)
         except Exception as e:
-            print(f"Error rendering template {template_name}: {e}")
+            logger.error(f"Template rendering failed for '{template_name}': {e}")
             raise
 
     async def send(
@@ -161,7 +164,7 @@ class EmailClient:
                 attempt_count=1
             )
         except Exception as e:
-            print(f"Error logging successful send: {e}")
+            logger.error(f"Failed to log successful email send: {e}")
 
     async def _log_failure(self, email_id: str, recipient: str, subject: str,
                            error_msg: str, attempt_count: int):
@@ -181,7 +184,7 @@ class EmailClient:
             await self._alert_after_failure(email_id, recipient, subject, error_msg)
 
         except Exception as e:
-            print(f"Error logging failed send: {e}")
+            logger.error(f"Failed to log email failure: {e}")
 
     async def _alert_after_failure(self, email_id: str, recipient: str,
                                    subject: str, error_msg: str):
@@ -198,4 +201,4 @@ class EmailClient:
             )
 
         except Exception as e:
-            print(f"Error creating alert: {e}")
+            logger.error(f"Failed to create alert notification: {e}")
