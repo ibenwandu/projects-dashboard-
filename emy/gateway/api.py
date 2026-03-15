@@ -166,6 +166,15 @@ _agents: Dict[str, Dict[str, Any]] = {
 # ============================================================================
 
 
+@app.get('/dashboard')
+async def dashboard():
+    """Serve the interactive dashboard UI"""
+    dashboard_path = Path(__file__).parent.parent / "templates" / "dashboard.html"
+    if not dashboard_path.exists():
+        raise HTTPException(status_code=404, detail="Dashboard not found")
+    return FileResponse(dashboard_path, media_type="text/html")
+
+
 @app.get('/health', response_model=HealthResponse)
 async def health_check():
     """Health check endpoint.
