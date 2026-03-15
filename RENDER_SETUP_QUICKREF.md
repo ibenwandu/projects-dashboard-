@@ -15,7 +15,7 @@ Deploy Emy Phase 3 Week 3 to Render staging:
 3. Configure:
    - **Name**: `emy-brain`
    - **Environment**: Python
-   - **Build Command**: `pip install -r requirements.txt`
+   - **Build Command**: `pip install -r emy/requirements.txt`
    - **Start Command**: `python -m emy.brain.service`
    - **Plan**: Standard ($12/month)
    - **Region**: Same as emy-phase1a (probably us-east-1 or us-west-1)

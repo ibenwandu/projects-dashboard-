@@ -6,7 +6,7 @@ services:
     name: emy-phase1a
     env: python
     plan: standard
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r emy/requirements.txt
     startCommand: python -m emy.gateway.service
     envVars:
       - key: GATEWAY_PORT
@@ -33,7 +33,7 @@ services:
     name: emy-brain
     env: python
     plan: standard
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r emy/requirements.txt
     startCommand: python -m emy.brain.service
     envVars:
       - key: BRAIN_HOST
