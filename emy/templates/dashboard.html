@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emy Dashboard</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mc">
+        <div class="grid-bg"></div>
+        <div class="scan"></div>
+        <div class="tooltip" id="tooltip"></div>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div>
+                <div class="eyebrow"><span class="pulse"></span>All agents active — autonomous mode</div>
+                <div class="title">Emy Dashboard</div>
+                <div class="subtitle">// Real-time agent monitoring · 24/7 autonomous operation</div>
+            </div>
+            <div style="text-align:right">
+                <div class="clock" id="clock">--:--:--</div>
+                <div class="clock-label">LIVE · EDT</div>
+                <div class="updated-badge" id="update-badge">● Initializing...</div>
+            </div>
+        </div>
+
+        <!-- METRICS ROW -->
+        <div class="metrics-row">
+            <div class="metric-card mc-g" data-tip="Workflows executing + agent activity">
+                <div class="metric-num" id="metric-real-time">0</div>
+                <div class="metric-label">Real-time Activity</div>
+                <div class="metric-detail" id="metric-real-time-detail">0 workflows, 0 agents active</div>
+            </div>
+            <div class="metric-card mc-b" data-tip="Workflows completed + running + failed">
+                <div class="metric-num" id="metric-workflows">0</div>
+                <div class="metric-label">Workflow Tracking</div>
+                <div class="metric-detail" id="metric-workflows-detail">Completed: 0 | Failed: 0</div>
+            </div>
+            <div class="metric-card mc-a" data-tip="Daily Claude API budget usage">
+                <div class="metric-num" id="metric-budget">$0.00</div>
+                <div class="metric-label">Daily Budget</div>
+                <div class="metric-detail" id="metric-budget-detail">0% consumed | $10.00 remaining</div>
+            </div>
+            <div class="metric-card mc-r" data-tip="System health and response time">
+                <div class="metric-num" id="metric-health">0ms</div>
+                <div class="metric-label">System Health</div>
+                <div class="metric-detail" id="metric-health-detail">Status: Loading...</div>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-grid">
+            <div>
+                <!-- AGENT STATUS SECTION -->
+                <div class="section-label">Active Agents <span style="color:var(--muted);margin-left:4px">(3)</span></div>
+                <div class="agents-stack" id="agents-stack">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL: SYSTEM METRICS -->
+            <div class="right-col">
+                <div class="panel">
+                    <div class="section-label">System Status</div>
+                    <div id="system-metrics-panel">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RECENT WORKFLOWS -->
+        <div style="margin-top: 20px;">
+            <div class="section-label">Recent Executions <span style="color:var(--muted);margin-left:4px" id="workflow-count">(0)</span></div>
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:300px;">
+                <table style="width:100%;border-collapse:collapse;">
+                    <thead>
+                        <tr style="border-bottom:1px solid var(--border);">
+                            <th style="text-align:left;padding:10px;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;">Time</th>
+                            <th style="text-align:left;padding:10px;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;">Type</th>
+                            <th style="text-align:left;padding:10px;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;">Agent</th>
+                            <th style="text-align:left;padding:10px;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;">Status</th>
+                            <th style="text-align:left;padding:10px;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;">Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody id="workflows-tbody">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ACTIVITY LOG -->
+        <div style="margin-top: 20px;">
+            <div class="log-bar">
+                <span class="log-tag" id="log-tag">●</span>
+                <div class="log-text">Activity log will display real-time events here</div>
+            </div>
+            <div id="activity-log" style="margin-top:10px;max-height:200px;overflow-y:auto;">
+                <!-- Activity entries added dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>
