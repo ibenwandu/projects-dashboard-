@@ -19,9 +19,11 @@ try:
     import oandapyV20.endpoints.orders as orders
     import oandapyV20.endpoints.pricing as pricing
     from oandapyV20.contrib.requests import MarketOrderRequest, TakeProfitDetails, StopLossDetails
+    from oandapyV20.exceptions import V20Error
     OANDAPYV20_AVAILABLE = True
 except ImportError:
     OANDAPYV20_AVAILABLE = False
+    V20Error = None
 
 logger = logging.getLogger('APIClient')
 
@@ -174,8 +176,98 @@ class OandaClient:
 
     def list_open_trades(self) -> Optional[List[Dict]]:
         """Get list of open trades (alias for get_open_trades, for backward compatibility)."""
-        trades = self.get_open_trades()
-        return trades if trades else None
+        trade_list = self.get_open_trades()
+        return trade_list if trade_list else None
+
+    def close_trade(self, trade_id: str, reason: str = None) -> Dict:
+        """Close an open trade at market price.
+
+        Args:
+            trade_id: OANDA trade ID (string)
+            reason: Optional reason for closure (for audit logging)
+
+        Returns:
+            dict with keys:
+                - success (bool): True if closure succeeded
+                - trade_id (str): The trade ID that was closed
+                - realized_pnl (float or None): Realized profit/loss if successful
+                - error (str or None): Error message if closure failed
+
+        Examples:
+            >>> result = client.close_trade("123456", reason="End of trading hours")
+            >>> if result["success"]:
+            ...     print(f"Trade closed with P&L: ${result['realized_pnl']:.2f}")
+            ... else:
+            ...     print(f"Failed to close trade: {result['error']}")
+        """
+        if not self.client:
+            logger.error("[OandaClient] Client not initialized")
+            return {
+                "success": False,
+                "trade_id": trade_id,
+                "realized_pnl": None,
+                "error": "Client not initialized"
+            }
+
+        # Validate trade_id is a string
+        if not isinstance(trade_id, str):
+            logger.error(f"[OandaClient] trade_id must be string, got {type(trade_id)}")
+            return {
+                "success": False,
+                "trade_id": str(trade_id),
+                "realized_pnl": None,
+                "error": "trade_id must be string"
+            }
+
+        try:
+            # Close the trade by creating a market order at FOK (fill or kill)
+            # This sends a PATCH to /v3/accounts/{accountID}/trades/{tradeID}/orders
+            r = trades.TradeClose(accountID=self.account_id, tradeID=trade_id)
+            self.client.request(r)
+
+            # Extract realized PL from response
+            response = r.response
+            realized_pnl = None
+
+            # Try to get realized_pnl from orderFillTransaction
+            if 'orderFillTransaction' in response:
+                realized_pnl_str = response['orderFillTransaction'].get('realizedPL', '0')
+                try:
+                    realized_pnl = float(realized_pnl_str)
+                except (ValueError, TypeError):
+                    realized_pnl = 0.0
+
+            # Log closure with reason if provided
+            if reason:
+                logger.info(f"[OandaClient] Trade {trade_id} closed: {reason} | P&L: ${realized_pnl:.2f}")
+            else:
+                logger.info(f"[OandaClient] Trade {trade_id} closed | P&L: ${realized_pnl:.2f}")
+
+            return {
+                "success": True,
+                "trade_id": trade_id,
+                "realized_pnl": realized_pnl,
+                "error": None
+            }
+
+        except Exception as e:
+            # Parse error details from exception
+            error_msg = str(e)
+
+            # Check for specific OANDA error codes
+            if "404" in error_msg or "not found" in error_msg.lower():
+                error_msg = "Trade not found"
+            elif "400" in error_msg or "already closed" in error_msg.lower():
+                error_msg = "Trade already closed"
+
+            logger.error(f"[OandaClient] close_trade error for {trade_id}: {e}")
+
+            return {
+                "success": False,
+                "trade_id": trade_id,
+                "realized_pnl": None,
+                "error": error_msg
+            }
 
 
 class RenderClient:
