@@ -262,6 +262,22 @@ class EMyDatabase:
                 CREATE INDEX IF NOT EXISTS idx_email_created ON email_log(created_at)
             """)
 
+            # Email polling log for monitoring inbox polling
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS polling_log (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    status TEXT NOT NULL,
+                    email_count INTEGER DEFAULT 0,
+                    error_message TEXT,
+                    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    CHECK (status IN ('success', 'error', 'rate_limited'))
+                )
+            """)
+
+            cursor.execute("""
+                CREATE INDEX IF NOT EXISTS idx_polling_timestamp ON polling_log(timestamp)
+            """)
+
             conn.commit()
 
         # Create OANDA-specific tables
