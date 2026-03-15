@@ -447,11 +447,22 @@ function formatWorkflowOutput(data, workflowType) {
 
     // Handle string data (markdown text)
     if (typeof data === 'string') {
-        // If it looks like markdown, display with proper formatting
-        if (data.startsWith('#')) {
-            return `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px;">${escapeHtml(data)}</div>`;
+        // If string starts with escaped quote, it's double-encoded JSON - unescape it
+        let text = data;
+        if (data.startsWith('\\"') || data.startsWith('"')) {
+            try {
+                // Remove outer quotes and unescape
+                text = JSON.parse(data);
+            } catch (e) {
+                // If parsing fails, use as-is
+            }
         }
-        return `<p>${escapeHtml(data)}</p>`;
+
+        // If it looks like markdown, display with proper formatting
+        if (text.startsWith('#')) {
+            return `<div style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6;">${escapeHtml(text)}</div>`;
+        }
+        return `<p>${escapeHtml(text)}</p>`;
     }
 
     // Default: pretty-print JSON
