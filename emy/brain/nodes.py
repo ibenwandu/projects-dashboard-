@@ -100,6 +100,7 @@ def create_agent_node(agent_name: str):
             # Store result
             if success:
                 state.results[agent_name] = output
+                state.status = "completed"
                 state.messages.append({
                     "agent": agent_name,
                     "message": f"Execution completed successfully"
@@ -108,6 +109,7 @@ def create_agent_node(agent_name: str):
             else:
                 state.error = f"Agent {agent_name} failed"
                 state.results[agent_name] = output
+                state.status = "failed"
                 state.messages.append({
                     "agent": agent_name,
                     "message": f"Execution failed: {output}"
