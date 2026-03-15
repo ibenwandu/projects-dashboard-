@@ -86,6 +86,10 @@ def create_agent_node(agent_name: str):
             logger.error(error_msg)
             state.error = error_msg
             state.status = "failed"
+            state.messages.append({
+                "agent": agent_name,
+                "message": error_msg
+            })
             return state
 
         try:
@@ -146,6 +150,9 @@ def create_agent_group_node():
     async def agent_group_node(state: EMyState) -> EMyState:
         """
         Execute all agents in current group in parallel.
+
+        Calls execute_agent_group_parallel() which handles concurrent execution
+        and group index increment. Updates state with results and messages.
         """
         from emy.brain.executor import execute_agent_group_parallel
 
