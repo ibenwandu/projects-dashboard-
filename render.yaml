@@ -27,14 +27,14 @@ services:
       sizeGB: 1
 
   # ============================================================================
-  # EMY BRAIN SERVICE (NEW - Phase 3 Week 3)
+  # EMY BRAIN SERVICE (Phase 3 Week 3 + Integrated Monitoring)
   # ============================================================================
   - type: web
     name: emy-brain
     env: python
     plan: standard
     buildCommand: pip install -r emy/requirements.txt
-    startCommand: python -m emy.brain.service
+    startCommand: sh -c "python -m emy.brain.service &" && celery -A emy.config.celery_config beat --loglevel=info
     envVars:
       - key: BRAIN_HOST
         value: 0.0.0.0
@@ -76,8 +76,6 @@ services:
         value: claude-sonnet-4-6
       - key: EMY_OPUS_MODEL
         value: claude-opus-4-6
-      - key: REDIS_URL
-        scope: secret
       - key: DATABASE_URL
         scope: secret
       - key: OANDA_ACCESS_TOKEN
@@ -92,44 +90,17 @@ services:
       sizeGB: 2
 
   # ============================================================================
-  # EMY SCHEDULER - Celery Beat + Worker (Email Polling + Monitoring Tasks)
-  # ============================================================================
-  - type: background
-    name: emy-scheduler
-    env: python
-    plan: standard
-    buildCommand: pip install -r emy/requirements.txt
-    startCommand: sh -c "celery -A emy.config.celery_config beat --loglevel=info &" && wait
-    envVars:
-      - key: REDIS_URL
-        scope: secret
-      - key: DATABASE_URL
-        scope: secret
-      - key: ANTHROPIC_API_KEY
-        scope: secret
-      - key: GMAIL_CREDENTIALS_JSON
-        scope: secret
-      - key: OANDA_ACCESS_TOKEN
-        scope: secret
-      - key: OANDA_ACCOUNT_ID
-        scope: secret
-      - key: OANDA_ENV
-        value: practice
-    autoDeploy: true
-
-  # ============================================================================
-  # EMY WORKER - Task Executor (Email Polling + Monitoring Tasks)
+  # EMY CELERY WORKER - Task Executor (Monitoring + Email Polling Tasks)
+  # (Scheduler runs integrated in emy-brain)
   # ============================================================================
   - type: background
     name: emy-worker
     env: python
-    plan: standard
-    numInstances: 2
+    plan: starter
+    numInstances: 1
     buildCommand: pip install -r emy/requirements.txt
     startCommand: celery -A emy.config.celery_config worker --loglevel=info --concurrency=4
     envVars:
-      - key: REDIS_URL
-        scope: secret
       - key: DATABASE_URL
         scope: secret
       - key: ANTHROPIC_API_KEY
@@ -146,7 +117,4 @@ services:
 
 databases:
   - name: emy-db
-    plan: standard
-  - name: emy-redis
-    engine: redis
     plan: standard

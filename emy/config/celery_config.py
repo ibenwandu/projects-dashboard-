@@ -2,11 +2,14 @@ from celery import Celery
 from celery.schedules import crontab
 import os
 
-# Initialize Celery app
+# Initialize Celery app with database-backed broker (no Redis needed)
+# Broker: SQLAlchemy (using DATABASE_URL)
+# Backend: Database (task results stored in DB)
+database_url = os.getenv('DATABASE_URL', 'sqlite:///emy.db')
 celery_app = Celery(
     'emy',
-    broker=os.getenv('REDIS_URL', 'redis://localhost:6379/0'),
-    backend=os.getenv('REDIS_URL', 'redis://localhost:6379/0')
+    broker=f'{database_url}',
+    backend=f'{database_url}'
 )
 
 # Celery Beat schedule - monitoring tasks and email polling
