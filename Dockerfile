@@ -1,5 +1,6 @@
 # Multi-stage Dockerfile for Emy AI Chief of Staff
 # Base: python:3.11-slim for compatibility and minimal size
+# Force rebuild to ensure static files are included
 
 # ============================================================================
 # Stage 1: Build
