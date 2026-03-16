@@ -57,39 +57,37 @@ app.add_middleware(
 # Static Files (Dashboard UI)
 # ============================================================================
 
-# Determine static files directory - try multiple locations for robustness
-api_dir = os.path.dirname(__file__)
-static_candidates = [
-    os.path.join(api_dir, '..', 'static'),  # /app/emy/static (copied files)
-    os.path.join(api_dir, '..', 'ui', 'static'),  # /app/emy/ui/static (original location)
-]
-
-static_dir = None
-for candidate in static_candidates:
-    if os.path.exists(candidate) and os.path.isdir(candidate):
-        static_dir = candidate
-        logger.info(f"Found static directory at: {static_dir}")
-        break
-
-if not static_dir:
-    logger.warning(f"No static directory found. Searched: {static_candidates}")
-    static_dir = static_candidates[0]  # Default to primary location
-
-logger.info(f"Using static_dir: {static_dir}")
-
 # Root endpoint - serve dashboard HTML
 @app.get("/")
 async def root():
     """Serve dashboard at root URL."""
-    index_path = os.path.join(static_dir, 'index.html')
-    logger.info(f"Dashboard request - checking: {index_path}")
+    # Try multiple locations for the static files
+    api_dir = os.path.dirname(__file__)
+    static_candidates = [
+        os.path.join(api_dir, '..', 'static'),  # /app/emy/static
+        os.path.join(api_dir, '..', 'ui', 'static'),  # /app/emy/ui/static
+    ]
 
-    if os.path.exists(index_path):
-        logger.info(f"Serving dashboard from: {index_path}")
-        return FileResponse(index_path)
+    for static_dir in static_candidates:
+        index_path = os.path.join(static_dir, 'index.html')
+        if os.path.exists(index_path):
+            logger.info(f"Serving dashboard from: {index_path}")
+            return FileResponse(index_path)
 
-    logger.error(f"Dashboard not found at: {index_path}")
-    return {"message": "Dashboard not available"}
+    # If we get here, no index.html was found
+    logger.error(f"Dashboard index.html not found in any location: {static_candidates}")
+    debug_info = {
+        "candidates": static_candidates,
+        "api_dir": api_dir,
+    }
+    for candidate in static_candidates:
+        debug_info[f"{candidate}_exists"] = os.path.exists(candidate)
+        if os.path.exists(candidate):
+            try:
+                debug_info[f"{candidate}_contents"] = os.listdir(candidate)
+            except Exception as e:
+                debug_info[f"{candidate}_error"] = str(e)
+    return {"message": "Dashboard not available", "debug": debug_info}
 
 # Backwards-compatible /ui/ alias
 @app.get("/ui/")
