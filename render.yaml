@@ -76,21 +76,30 @@ services:
         value: claude-sonnet-4-6
       - key: EMY_OPUS_MODEL
         value: claude-opus-4-6
+      - key: REDIS_URL
+        scope: secret
+      - key: DATABASE_URL
+        scope: secret
+      - key: OANDA_ACCESS_TOKEN
+        scope: secret
+      - key: OANDA_ACCOUNT_ID
+        scope: secret
+      - key: OANDA_ENV
+        value: practice
     disk:
       name: emy-brain-data
       mountPath: /data
       sizeGB: 2
 
   # ============================================================================
-  # EMY CELERY BEAT - Email Polling Scheduler (NEW - Week 7)
+  # EMY SCHEDULER - Celery Beat + Worker (Email Polling + Monitoring Tasks)
   # ============================================================================
   - type: background
-    name: emy-celery-beat
+    name: emy-scheduler
     env: python
     plan: standard
-    region: ohio
     buildCommand: pip install -r emy/requirements.txt
-    startCommand: celery -A emy.config.celery_config beat --loglevel=info
+    startCommand: sh -c "celery -A emy.config.celery_config beat --loglevel=info &" && wait
     envVars:
       - key: REDIS_URL
         scope: secret
@@ -100,16 +109,21 @@ services:
         scope: secret
       - key: GMAIL_CREDENTIALS_JSON
         scope: secret
+      - key: OANDA_ACCESS_TOKEN
+        scope: secret
+      - key: OANDA_ACCOUNT_ID
+        scope: secret
+      - key: OANDA_ENV
+        value: practice
     autoDeploy: true
 
   # ============================================================================
-  # EMY CELERY WORKER - Email Polling Task Executor (NEW - Week 7)
+  # EMY WORKER - Task Executor (Email Polling + Monitoring Tasks)
   # ============================================================================
   - type: background
-    name: emy-celery-worker
+    name: emy-worker
     env: python
     plan: standard
-    region: ohio
     numInstances: 2
     buildCommand: pip install -r emy/requirements.txt
     startCommand: celery -A emy.config.celery_config worker --loglevel=info --concurrency=4
@@ -122,8 +136,17 @@ services:
         scope: secret
       - key: GMAIL_CREDENTIALS_JSON
         scope: secret
+      - key: OANDA_ACCESS_TOKEN
+        scope: secret
+      - key: OANDA_ACCOUNT_ID
+        scope: secret
+      - key: OANDA_ENV
+        value: practice
     autoDeploy: true
 
 databases:
   - name: emy-db
+    plan: standard
+  - name: emy-redis
+    engine: redis
     plan: standard
