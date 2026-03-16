@@ -65,9 +65,16 @@ static_dir = os.path.join(os.path.dirname(__file__), '..', 'static')
 async def root():
     """Serve dashboard at root URL."""
     index_path = os.path.join(static_dir, 'index.html')
+    logger.info(f"Dashboard request - checking: {index_path}")
+    logger.info(f"Static dir exists: {os.path.exists(static_dir)}")
+    logger.info(f"Index file exists: {os.path.exists(index_path)}")
+
     if os.path.exists(index_path):
+        logger.info(f"Serving dashboard from: {index_path}")
         return FileResponse(index_path)
-    return {"message": "Dashboard not available"}
+
+    logger.error(f"Dashboard not found at: {index_path}")
+    return {"message": "Dashboard not available", "debug": {"static_dir": static_dir, "index_path": index_path}}
 
 # Backwards-compatible /ui/ alias
 @app.get("/ui/")
