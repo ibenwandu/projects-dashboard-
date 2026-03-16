@@ -89,31 +89,6 @@ services:
       mountPath: /data
       sizeGB: 2
 
-  # ============================================================================
-  # EMY CELERY WORKER - Task Executor (Monitoring + Email Polling Tasks)
-  # (Scheduler runs integrated in emy-brain)
-  # ============================================================================
-  - type: background
-    name: emy-worker
-    env: python
-    plan: starter
-    numInstances: 1
-    buildCommand: pip install -r emy/requirements.txt
-    startCommand: celery -A emy.config.celery_config worker --loglevel=info --concurrency=4
-    envVars:
-      - key: DATABASE_URL
-        scope: secret
-      - key: ANTHROPIC_API_KEY
-        scope: secret
-      - key: GMAIL_CREDENTIALS_JSON
-        scope: secret
-      - key: OANDA_ACCESS_TOKEN
-        scope: secret
-      - key: OANDA_ACCOUNT_ID
-        scope: secret
-      - key: OANDA_ENV
-        value: practice
-    autoDeploy: true
 
 databases:
   - name: emy-db

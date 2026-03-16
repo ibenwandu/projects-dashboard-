@@ -2,22 +2,16 @@ from celery import Celery
 from celery.schedules import crontab
 import os
 
-# Initialize Celery app with SQLAlchemy database-backed broker
-# Broker: SQLAlchemy (converts DATABASE_URL to sqla+postgresql://)
-# Backend: Database (task results stored in DB)
-database_url = os.getenv('DATABASE_URL', 'sqlite:///emy.db')
+# Initialize Celery app with in-memory broker (no external dependencies)
+# Tasks execute synchronously in the same process (emy-brain)
+# No separate worker service needed
+celery_app = Celery('emy')
 
-# Convert DATABASE_URL to SQLAlchemy broker format
-if database_url.startswith('postgresql://'):
-    broker_url = database_url.replace('postgresql://', 'sqlalchemy+postgresql://', 1)
-else:
-    broker_url = f'sqlalchemy+{database_url}'
-
-celery_app = Celery(
-    'emy',
-    broker=broker_url,
-    backend=broker_url
-)
+# In-memory broker for local task scheduling
+celery_app.conf.broker_url = 'memory://'
+celery_app.conf.result_backend = 'cache+memory://'
+celery_app.conf.task_always_eager = True  # Execute tasks immediately, synchronously
+celery_app.conf.task_eager_propagates = True  # Propagate exceptions
 
 # Celery Beat schedule - monitoring tasks and email polling
 celery_app.conf.beat_schedule = {
