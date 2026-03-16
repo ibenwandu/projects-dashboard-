@@ -7,7 +7,7 @@ services:
     env: python
     plan: standard
     buildCommand: pip install -r emy/requirements.txt
-    startCommand: python -m emy.gateway.service
+    startCommand: python entrypoint.py
     envVars:
       - key: GATEWAY_PORT
         value: 8000
