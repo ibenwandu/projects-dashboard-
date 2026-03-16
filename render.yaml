@@ -34,7 +34,7 @@ services:
     env: python
     plan: standard
     buildCommand: pip install -r emy/requirements.txt
-    startCommand: sh -c "python -m emy.brain.service &" && celery -A emy.config.celery_config beat --loglevel=info
+    startCommand: python -m emy.brain.service
     envVars:
       - key: BRAIN_HOST
         value: 0.0.0.0
@@ -88,6 +88,37 @@ services:
       name: emy-brain-data
       mountPath: /data
       sizeGB: 2
+
+  # ============================================================================
+  # EMY SCHEDULER SERVICE (Celery Beat - Task Scheduling)
+  # ============================================================================
+  - type: background_worker
+    name: emy-scheduler
+    env: python
+    plan: starter
+    buildCommand: pip install -r emy/requirements.txt
+    startCommand: celery -A emy.config.celery_config beat --loglevel=info
+    envVars:
+      - key: ENV
+        value: production
+      - key: BRAIN_SERVICE_URL
+        value: https://emy-brain.onrender.com
+      - key: ANTHROPIC_API_KEY
+        scope: secret
+      - key: OANDA_ACCESS_TOKEN
+        scope: secret
+      - key: OANDA_ACCOUNT_ID
+        scope: secret
+      - key: OANDA_ENV
+        value: practice
+      - key: DATABASE_URL
+        scope: secret
+      - key: LOG_LEVEL
+        value: INFO
+    disk:
+      name: emy-scheduler-data
+      mountPath: /data
+      sizeGB: 1
 
 
 databases:
