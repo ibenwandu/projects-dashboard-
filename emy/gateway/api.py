@@ -57,11 +57,25 @@ app.add_middleware(
 # Static Files (Dashboard UI)
 # ============================================================================
 
-# Determine static files directory
-static_dir = os.path.join(os.path.dirname(__file__), '..', 'static')
-logger.info(f"API module location: {__file__}")
-logger.info(f"Current working directory: {os.getcwd()}")
-logger.info(f"Calculated static_dir: {static_dir}")
+# Determine static files directory - try multiple locations for robustness
+api_dir = os.path.dirname(__file__)
+static_candidates = [
+    os.path.join(api_dir, '..', 'static'),  # /app/emy/static (copied files)
+    os.path.join(api_dir, '..', 'ui', 'static'),  # /app/emy/ui/static (original location)
+]
+
+static_dir = None
+for candidate in static_candidates:
+    if os.path.exists(candidate) and os.path.isdir(candidate):
+        static_dir = candidate
+        logger.info(f"Found static directory at: {static_dir}")
+        break
+
+if not static_dir:
+    logger.warning(f"No static directory found. Searched: {static_candidates}")
+    static_dir = static_candidates[0]  # Default to primary location
+
+logger.info(f"Using static_dir: {static_dir}")
 
 # Root endpoint - serve dashboard HTML
 @app.get("/")
@@ -69,33 +83,13 @@ async def root():
     """Serve dashboard at root URL."""
     index_path = os.path.join(static_dir, 'index.html')
     logger.info(f"Dashboard request - checking: {index_path}")
-    logger.info(f"Static dir: {static_dir}")
-    logger.info(f"Static dir exists: {os.path.exists(static_dir)}")
-    logger.info(f"Index file exists: {os.path.exists(index_path)}")
-
-    # List directory contents for debugging
-    if os.path.exists(static_dir):
-        try:
-            contents = os.listdir(static_dir)
-            logger.info(f"Static dir contents: {contents}")
-        except Exception as e:
-            logger.error(f"Could not list static dir: {e}")
 
     if os.path.exists(index_path):
         logger.info(f"Serving dashboard from: {index_path}")
         return FileResponse(index_path)
 
     logger.error(f"Dashboard not found at: {index_path}")
-    # More detailed debug info
-    debug_info = {
-        "static_dir": static_dir,
-        "index_path": index_path,
-        "static_dir_exists": os.path.exists(static_dir),
-        "index_file_exists": os.path.exists(index_path),
-        "api_file": __file__,
-        "api_dir": os.path.dirname(__file__),
-    }
-    return {"message": "Dashboard not available", "debug": debug_info}
+    return {"message": "Dashboard not available"}
 
 # Backwards-compatible /ui/ alias
 @app.get("/ui/")
