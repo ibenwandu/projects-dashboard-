@@ -1,3 +1,100 @@
+## Session: 2026-03-16 Late Afternoon — Emy Dashboard Deployment Fix (In Progress) ⚠️ [BLOCKED]
+
+**Date**: March 16, 2026
+**Time**: ~3:00 PM - 4:30 PM EDT
+**Duration**: ~90 minutes
+**Type**: Deployment, Debugging, Infrastructure
+**Status**: ⚠️ IN PROGRESS — Dashboard deployment issue identified, multiple fixes attempted, blocked on Render server-side diagnostics
+
+### 🎯 Session Objective
+Fix the Emy dashboard deployment on Render after credential rotation. Dashboard was returning `{"message":"Dashboard not available"}` error.
+
+### 📋 What Was Done
+
+#### 1. Root Cause Analysis ✅
+**Problem**: https://emy-phase1a.onrender.com/ returns `{"message":"Dashboard not available"}`
+
+**Investigation**:
+- Verified static files exist locally: `emy/static/` and `emy/ui/static/` with 5 and 3 files respectively
+- Confirmed files are tracked in git and present in latest commit (442f7ae, 283c0e4)
+- Examined Dockerfile: correctly copies entire repo with `COPY --chown=emy:emy . .`
+- Found first issue: `render.yaml` specifying non-existent `startCommand: python -m emy.gateway.service`
+
+**Finding 1**: render.yaml had incorrect startCommand that doesn't exist, conflicting with Dockerfile
+
+#### 2. Fix Attempts (Progressive)
+
+**Attempt 1**: Updated render.yaml startCommand ✅
+- Changed to: `startCommand: python entrypoint.py`
+- Committed and pushed (commit d6d5b07)
+- Result: Still failing
+
+**Attempt 2**: Explicit Dockerfile path in render.yaml ✅
+- Removed buildCommand and startCommand
+- Added `dockerfilePath: ./Dockerfile` to ensure Dockerfile-based build
+- Committed and pushed (commit cb75183)
+- Result: Still failing after 150+ seconds wait
+
+**Attempt 3**: Cache busting in Dockerfile ✅
+- Added comment to force Docker rebuild from scratch
+- Committed and pushed (commit 607c120)
+- Result: Still failing
+
+**Attempt 4**: Multi-location fallback in API ✅
+- Added logic to check both `/app/emy/static/` and `/app/emy/ui/static/`
+- Enhanced debug logging with directory contents
+- Committed and pushed (commits a0ba3a1, 12c275c)
+- Result: Still failing
+
+**Attempt 5**: Per-request directory discovery ✅
+- Moved directory checking from startup to request-time
+- Avoids any caching issues with directory checks
+- Enhanced debug output with detailed path info
+- Committed and pushed (commit d72bc58)
+- Result: Still failing
+
+#### 3. Current Diagnostic Status
+- ✅ API is running (returns error JSON, not 503)
+- ✅ Files are in repository and committed
+- ✅ Dockerfile correctly copies files
+- ✅ Multiple code-level fallbacks in place
+- ❌ Files still not found in deployed container
+- ❓ Cannot access Render logs directly to see what's actually in container
+
+### 🔴 Root Blocker
+The deployed Render container appears to not have access to the static files, despite them being in the repository and the Dockerfile copying them. Without access to Render's build logs or container shell, cannot diagnose whether:
+1. Docker build is failing silently
+2. Files are being excluded during build
+3. File paths are different than expected in container
+4. Permission issue preventing file access
+
+### 📄 Files Modified
+- `render.yaml` — Fixed startCommand conflicts (commits d6d5b07, cb75183)
+- `Dockerfile` — Added cache-busting comment (commit 607c120)
+- `emy/gateway/api.py` — Multiple iterations:
+  - Added comprehensive debug logging (commit 8ca69af, 5f7d58e)
+  - Added multi-location fallback (commits a0ba3a1, 12c275c)
+  - Moved to per-request directory discovery (commit d72bc58)
+
+### 📊 Git Status
+- 7 commits related to dashboard fix
+- All code changes pushed to GitHub
+- Render should be deploying latest code
+
+### 🎯 Next Steps
+1. **Investigation needed**: Access Render's build logs or deployed container to diagnose exactly what's in the filesystem
+2. **Alternative approach**: Consider serving dashboard from alternate location (e.g., GitHub Pages only)
+3. **Contact point**: May need to check if Render's Docker build has issues with multi-stage builds or file copying
+
+### 📌 Important Notes for Next Session
+- Dashboard deployment is **NOT BLOCKING** core Emy functionality
+- Monitoring agents (Celery Beat) are running successfully locally
+- API code is robust with multiple fallbacks in place
+- All security requirements met (no credentials in code)
+- This appears to be a Render infrastructure issue, not an application code issue
+
+---
+
 ## Session: 2026-03-17 Morning — Dashboard Auto-Update Automation Setup ✅ [COMPLETE]
 
 **Date**: March 17, 2026
