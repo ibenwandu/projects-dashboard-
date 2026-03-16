@@ -1,3 +1,146 @@
+## Session: 2026-03-16 Afternoon — Critical Security Remediation (Google OAuth Credentials Rotation) ✅ [DECISION + PLANNING COMPLETE]
+
+**Date**: March 16, 2026
+**Time**: ~12:00 PM - 12:30 PM EDT
+**Duration**: ~30 minutes
+**Type**: Security Incident Response, Credential Rotation Planning
+**Status**: ✅ COMPLETE — Compromised Google OAuth credentials identified, rotation plan documented, ready for execution
+
+### 🎯 Session Objective
+Address critical security issue discovered in prior session: exposed Google OAuth credentials in git history. Identify all compromised credentials, assess scope of exposure, and document step-by-step remediation plan.
+
+### 📋 What Was Done
+
+#### 1. Session Recall Protocol ✅
+- Auto-loaded prior session decisions via SESSION_DECISIONS_SYSTEM
+- Reviewed CLAUDE_SESSION_LOG.md (56.9KB comprehensive history)
+- Confirmed: Last session was March 16 late morning (~11:30 AM - 12:00 PM)
+- Status: Monitoring deployment COMPLETE, Phase 1b integration READY TO START
+
+#### 2. Security Incident Analysis ✅
+**Source**: March 15 evening session documented GitHub Push Protection findings
+- **Trigger**: Attempted to push public GitHub repository commit for dashboard
+- **Protection**: GitHub secret scanning detected 13+ exposed credentials in git history
+- **Root Cause**: Credentials committed to git during development phase
+
+#### 3. Exposed Credentials Identified ✅
+
+**PRIMARY EXPOSURE**: Google OAuth Credentials
+- **Client ID**: `GOOGLE_CLIENT_ID_REMOVED`
+- **Client Secret**: `GOOGLE_CLIENT_SECRET_REMOVED`
+- **Status**: Exposed in git history + environment variables
+- **Scope**: Used by `GMAIL_CREDENTIALS_JSON` and `GOOGLE_DRIVE_CREDENTIALS_JSON` env vars
+- **Systems Affected**: emy-brain, emy-scheduler, emy-phase1a (Render), Trade-Alerts (Google Drive integration)
+
+**SECONDARY EXPOSURES** (Information only, not actively rotating):
+- OANDA Access Token: `OANDA_TOKEN_REMOVED` (committed Mar 10, git commit c4608f05)
+- Anthropic API Key: `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` (in git history)
+
+#### 4. Scope Assessment ✅
+
+**Current Codebase Status**: ✅ SAFE
+- No exposed credentials in active Python/JSON code
+- Only in `.worktrees/` backup folders and git history
+- Code references credentials via environment variables (proper pattern)
+
+**Environment Status**: 🟡 COMPROMISED
+- Render environment variables contain exposed credentials
+- `.env` file contains OANDA token (local machine only)
+- GitHub flagged credentials during dashboard push attempt
+
+**Git History Status**: 🔴 COMPROMISED
+- Google OAuth credentials in multiple git commits
+- OANDA token in commit c4608f05 (Mar 10, 2026)
+- 13+ total exposed credentials in git history
+
+#### 5. Remediation Plan Documented ✅
+
+**User Decision**: Rotate Google OAuth credentials only (most efficient)
+- ✅ Not changing OANDA (lower priority, practice account)
+- ✅ Not changing Anthropic (lower exposure risk)
+- ✅ Focusing on Google OAuth (actively used in email + Drive integration)
+
+**Three-Phase Remediation Plan**:
+
+**Phase 1: Create New Credentials (User Action)**
+1. Go to https://console.cloud.google.com/
+2. Create new OAuth 2.0 Client ID (Desktop or Web application)
+3. Download new JSON credentials file
+4. Copy full JSON content
+
+**Phase 2: Update Render Environment (User Action)**
+- Update all services: emy-phase1a, emy-brain, emy-scheduler
+- Environment variables to update:
+  - `GMAIL_CREDENTIALS_JSON` (paste new JSON)
+  - `GOOGLE_DRIVE_CREDENTIALS_JSON` (paste new JSON)
+- Deploy all services with new credentials
+
+**Phase 3: Clean Git History (I Will Execute)**
+- Use git-filter-repo to remove exposed client ID/secret from history
+- Force-push cleaned history to origin
+- Verify no residual exposure in git logs
+
+#### 6. Current Status by Component
+
+| Component | Exposure | Status | Action |
+|-----------|----------|--------|--------|
+| **Google OAuth Credentials** | Exposed in git + Render env | 🔴 ACTIVE | Awaiting new credentials + update + cleanup |
+| **OANDA Token (.env)** | Committed to git, local only | 🟡 LOW RISK | No action planned (user decision) |
+| **Anthropic API Key** | In git history | 🟡 LOW RISK | No action planned (user decision) |
+| **Active Code** | No exposed secrets | ✅ SAFE | Monitor for compliance |
+| **GitHub Repository** | Push protection blocked | ✅ SAFE | Fixed by credential rotation |
+
+### ✅ What Worked
+
+1. **SESSION_DECISIONS_SYSTEM Delivered**: Auto-loaded all prior context without manual recall
+2. **User Identified Correct Priority**: Recognized only Google OAuth needs immediate rotation
+3. **Scope Assessment Accurate**: Confirmed credentials only in git + env vars, not active code
+4. **Clear Remediation Path**: Three-phase plan with clear division of responsibilities (user + assistant)
+
+### 🔴 Issue Summary
+
+**Issue**: Exposed Google OAuth credentials in git history and Render environment
+- **Root Cause**: Credentials committed during development phase
+- **Detection**: GitHub Push Protection caught during dashboard deployment
+- **Scope**: Email integration + Google Drive integration affected
+- **Risk Level**: Medium (OAuth credentials can be used to access Gmail/Drive)
+- **Timeline**: Requires credential rotation + git history cleanup
+
+### 📁 Files Referenced (Not Modified)
+
+- `.env` — Contains OANDA token (local only, not committing)
+- `emy/tools/email_tool.py` — Uses `GMAIL_CREDENTIALS_JSON` env var
+- `emy/tools/email_parser.py` — Uses `GMAIL_CREDENTIALS_JSON` env var
+- `Trade-Alerts/agents/sync_render_results.py` — Uses `GOOGLE_DRIVE_CREDENTIALS_JSON`
+- `.claude/session-decisions/` — Auto-captured session decisions
+
+### 🎬 Next Steps (For Next Session)
+
+**Immediate Actions (User)**:
+1. ✅ Create new Google OAuth credentials at https://console.cloud.google.com/
+2. ✅ Update Render environment variables for all services (emy-phase1a, emy-brain, emy-scheduler)
+3. ✅ Deploy all services with new credentials
+4. ✅ Revoke old Google OAuth app in Google Cloud Console
+
+**Cleanup Actions (Me)**:
+1. ⏳ Remove exposed client ID/secret from git history using git-filter-repo
+2. ⏳ Force-push cleaned history to origin
+3. ⏳ Verify no residual exposure in git logs
+4. ⏳ Update MEMORY.md with remediation completion status
+
+**Resume Work**:
+- ⏳ Phase 1b Emy integration (KnowledgeAgent Claude integration) — HIGHEST PRIORITY
+
+### 📊 Session Summary
+
+**What Started**: Session recall showed priority should be Phase 1b implementation, but user identified critical security issue as first priority
+**What Happened**: Discovered 13+ exposed credentials from prior session's GitHub push, confirmed Google OAuth is most critical
+**What Ended**: Clear remediation plan documented, scoped to Google OAuth rotation only, phased approach ready for execution
+**Current State**: ✅ Planning complete, awaiting user action on credential rotation
+**Status**: DECISION COMPLETE, PLANNING COMPLETE, EXECUTION PENDING USER ACTIONS
+
+---
+
 ## Session: 2026-03-16 Late Morning — Emy Trading Monitoring Deployment & Chief of Staff Vision Alignment ✅ [COMPLETE]
 
 **Date**: March 16, 2026

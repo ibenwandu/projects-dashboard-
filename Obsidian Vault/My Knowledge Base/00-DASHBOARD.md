@@ -1,5 +1,7 @@
 # 🎯 Mission Control Dashboard
 
+**Last Updated**: March 16, 2026 · 12:30 PM EDT (Security Remediation Planning)
+
 ## Vision
 Building a 24/7 autonomous organization that brings value and financial rewards
 
@@ -20,7 +22,36 @@ Building a 24/7 autonomous organization that brings value and financial rewards
 
 ---
 
-## Today's Priorities (Mar 16 - Monitoring Deployment & Strategic Planning)
+## Today's Priorities (Mar 16 - Critical Security + Phase 1b Integration)
+
+### Afternoon Session (Mar 16, 12:00 PM - 12:30 PM SECURITY REMEDIATION)
+**🔴 CRITICAL: Exposed Google OAuth Credentials Identified & Remediation Planned**
+
+26. **[COMPLETE]** ✅ **Session Recall Protocol** - Auto-loaded prior decisions, reviewed 56.9KB CLAUDE_SESSION_LOG
+27. **[COMPLETE]** ✅ **Security Incident Assessment** - Identified 13+ exposed credentials from Mar 15 GitHub push attempt
+28. **[COMPLETE]** ✅ **Exposed Credentials Documented**:
+    - **Google OAuth Client ID**: `GOOGLE_CLIENT_ID_REMOVED`
+    - **Google OAuth Client Secret**: `GOOGLE_CLIENT_SECRET_REMOVED`
+    - **Status**: In git history + Render environment variables
+    - **Scope**: email_tool.py, email_parser.py, Google Drive integration
+    - **Risk**: Active credentials, can access Gmail/Drive if compromised
+29. **[COMPLETE]** ✅ **Remediation Plan Documented** - Three-phase approach:
+    - Phase 1: User creates new Google OAuth credentials
+    - Phase 2: User updates Render environment variables for emy-phase1a, emy-brain, emy-scheduler
+    - Phase 3: I remove exposed credentials from git history + force-push cleanup
+30. **[COMPLETE]** ✅ **Scope Assessment** - Confirmed only Google OAuth needs immediate rotation (OANDA + Anthropic deferred)
+31. **[PENDING]** ⏳ **User Actions Needed**:
+    - [ ] Create new Google OAuth credentials at https://console.cloud.google.com/
+    - [ ] Update Render environment variables (all services)
+    - [ ] Revoke old Google OAuth app
+32. **[PENDING]** ⏳ **My Cleanup Actions** (after user updates):
+    - [ ] Remove exposed client ID/secret from git history
+    - [ ] Force-push cleaned history
+    - [ ] Verify no residual exposure
+
+---
+
+## Previous Session Summary (Mar 16 - Monitoring Deployment & Strategic Planning)
 
 ### Completed in Previous Session (Mar 14 — 8 hours)
 1. **[COMPLETE]** ✅ **Phase 3 Week 3: All 8 Tasks** - Subagent-driven development, 40 tests passing, zero failures
