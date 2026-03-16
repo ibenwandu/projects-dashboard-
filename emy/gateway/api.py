@@ -59,6 +59,9 @@ app.add_middleware(
 
 # Determine static files directory
 static_dir = os.path.join(os.path.dirname(__file__), '..', 'static')
+logger.info(f"API module location: {__file__}")
+logger.info(f"Current working directory: {os.getcwd()}")
+logger.info(f"Calculated static_dir: {static_dir}")
 
 # Root endpoint - serve dashboard HTML
 @app.get("/")
