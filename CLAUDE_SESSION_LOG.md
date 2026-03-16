@@ -1,3 +1,64 @@
+## Session: 2026-03-17 Morning — Dashboard Auto-Update Automation Setup ✅ [COMPLETE]
+
+**Date**: March 17, 2026
+**Time**: ~12:00 PM - 12:30 PM EDT
+**Duration**: ~30 minutes
+**Type**: Infrastructure Automation, Close-Session Workflow Enhancement
+**Status**: ✅ COMPLETE — Dashboard automation fully integrated into `/close-session` workflow
+
+### 🎯 Session Objective
+Investigate and fix why the dashboard wasn't auto-updating after `/close-session` runs, then implement permanent automation solution.
+
+### 📋 What Was Done
+
+#### 1. Root Cause Analysis ✅
+**Problem**: Dashboard hadn't been updated for over 24 hours (last update: Mar 15, 5:30 PM EDT)
+**Investigation**:
+- Traced `/close-session.md` workflow
+- Discovered dashboard auto-update step was MANUAL only, no automation
+- `update_dashboard.py` script existed but was never called by close-session
+
+**Finding**: The `/close-session` script included step 3 ("Update Obsidian Dashboard") but only with MANUAL instructions—no automated call to regenerate HTML files
+
+#### 2. Immediate Dashboard Refresh ✅
+- Updated `dashboard_data.json` with March 16 8:30 PM credential rotation completion timestamp
+- Executed `python update_dashboard.py` to regenerate both HTML dashboards
+- Both mission_control.html and docs/index.html now reflect credential rotation completion
+
+#### 3. Permanent Automation Fix ✅
+**Modified `/close-session.md` workflow**:
+- **Step 3**: Split "Update Dashboard" into 3a (update JSON) and 3b (update markdown)
+- **Step 4 (NEW, AUTOMATED)**: Added `python update_dashboard.py` execution
+  - Reads updated dashboard_data.json
+  - Regenerates mission_control.html (root)
+  - Regenerates docs/index.html (GitHub Pages)
+  - Updates all timestamps automatically
+- **Step 6 Checklist**: Updated to explicitly track dashboard update steps
+
+**Result**: Dashboard will now auto-update whenever `/close-session` is run (just like all other repositories)
+
+### ✅ What Worked
+1. **Script-driven discovery**: Finding close-session.md revealed the missing automation immediately
+2. **Non-invasive fix**: Just added a single Python call to auto-regenerate—no code changes needed
+3. **Comprehensive workflow**: Automation now covers both JSON source and markdown display
+
+### ❌ Issues Encountered
+1. **Communication misunderstanding** (RESOLVED): User correctly pointed out I kept referring to `close-session-root` when they use `/close-session`. Fixed understanding and focused investigation on actual workflow they use.
+2. **User frustration** (ACKNOWLEDGED): User had to explain three times that they use `/close-session`, not `/close-session-root`. Appropriate feedback given.
+
+### 📄 Files Modified
+- `/c/Users/user/.claude/commands/close-session.md` — Added automated step 4 for dashboard HTML regeneration
+- `C:\Users\user\projects\personal\dashboard_data.json` — Updated with Mar 16 8:30 PM credential rotation timestamp
+- `C:\Users\user\projects\personal\mission_control.html` — Regenerated with updated timestamp
+- `C:\Users\user\projects\personal\docs\index.html` — Regenerated with updated timestamp
+
+### 🎯 Next Steps
+1. All dashboard automation now integrated into `/close-session`
+2. When user runs `/close-session` in future sessions, dashboard will auto-update
+3. No manual steps required beyond updating dashboard_data.json with session info
+
+---
+
 ## Session: 2026-03-16 Evening — Credential Rotation Execution ✅ [COMPLETE]
 
 **Date**: March 16, 2026
