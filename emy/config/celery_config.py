@@ -56,6 +56,9 @@ celery_app.conf.beat_schedule = {
     },
 }
 
+# Auto-discover task modules (avoid circular imports)
+celery_app.autodiscover_tasks(['emy.tasks'])
+
 # Task routing and rate limiting
 celery_app.conf.update(
     task_serializer='json',
@@ -68,6 +71,7 @@ celery_app.conf.update(
     task_soft_time_limit=25 * 60,  # 25 minutes soft limit
     worker_prefetch_multiplier=4,
     worker_max_tasks_per_child=100,
+    include=['emy.tasks.monitoring_tasks', 'emy.tasks.email_polling_task'],  # Explicit task registration
 )
 
 # Rate limiting per IP/worker
