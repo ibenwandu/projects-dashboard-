@@ -56,9 +56,6 @@ celery_app.conf.beat_schedule = {
     },
 }
 
-# Auto-discover task modules (avoid circular imports)
-celery_app.autodiscover_tasks(['emy.tasks'])
-
 # Task routing and rate limiting
 celery_app.conf.update(
     task_serializer='json',
@@ -71,10 +68,25 @@ celery_app.conf.update(
     task_soft_time_limit=25 * 60,  # 25 minutes soft limit
     worker_prefetch_multiplier=4,
     worker_max_tasks_per_child=100,
-    include=['emy.tasks.monitoring_tasks', 'emy.tasks.email_polling_task'],  # Explicit task registration
 )
 
 # Rate limiting per IP/worker
 celery_app.conf.task_rate_limit = {
     'emy.tasks.email_polling_task.check_inbox_periodically': '10/h',  # Max 10 times per hour
 }
+
+# Import task modules AFTER app configuration to register @shared_task decorators
+# This must happen after celery_app is fully configured to avoid circular imports
+def _register_tasks():
+    """Late import of task modules to register @shared_task decorated functions."""
+    try:
+        # Import monitoring tasks - these register with @shared_task decorators
+        from emy.tasks import monitoring_tasks as _  # noqa: F401
+        # Import email polling task
+        from emy.tasks import email_polling_task as _  # noqa: F401
+    except ImportError as e:
+        import logging
+        logging.warning(f"Could not import task modules: {e}")
+
+# Call task registration function
+_register_tasks()
