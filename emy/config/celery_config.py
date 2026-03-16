@@ -9,9 +9,9 @@ database_url = os.getenv('DATABASE_URL', 'sqlite:///emy.db')
 
 # Convert DATABASE_URL to SQLAlchemy broker format
 if database_url.startswith('postgresql://'):
-    broker_url = database_url.replace('postgresql://', 'sqla+postgresql://', 1)
+    broker_url = database_url.replace('postgresql://', 'sqlalchemy+postgresql://', 1)
 else:
-    broker_url = f'sqla+{database_url}'
+    broker_url = f'sqlalchemy+{database_url}'
 
 celery_app = Celery(
     'emy',
