@@ -2,7 +2,7 @@
 
 This file records interactions, plans, and fixes implemented across projects under the personal folder so future sessions have context.
 
-**Last updated:** Part 25 (Mar 17, 2026) — Config-API logs now include Min Consensus/Required LLMs/client IP for config changes.
+**Last updated:** Part 26 (Mar 17, 2026) — Added Scalp-Engine execution guardrail to block orders when entry price is too far from live OANDA prices, plus full Trade-Alerts backup for rollback.
 
 **Quick reference — Parts:**
 
@@ -33,6 +33,7 @@ This file records interactions, plans, and fixes implemented across projects und
 | 23 | Manual logs analysis + DeepSeek parser fix + logging | Manual logs review (Mar 9-11): DeepSeek parser failure (0 opportunities parsed), RL learning blocked (0 evaluated recommendations), missing trade close logs, excessive max_trades_limit warnings. Plan: suggestions from cursor7.md. Priority 1: Fix DeepSeek parser (Pattern Set 10, MACHINE_READABLE JSON request, enhanced extraction) - COMPLETE. Priority 2: Improve logging (trade close audit logs, ATR trailing logs verified, max_trades_limit throttle) - COMPLETE. Backup: backup_before_cursor7_20260311_162509. Commits: fb2d8b1 (Priority 1), 83b685b (Priority 2). Verification pending before Priority 3. |
 | 24 | Google Drive token + ATR trailing default | Resolved `invalid_grant` and “Drive reader not enabled” by generating a new Google Drive refresh token with the same desktop OAuth client as Render, and by aligning `GOOGLE_DRIVE_CREDENTIALS_JSON` (client_id/client_secret/auth_uri) between local script and Render env. Also lowered ATR_TRAILING fallback activation from 100 pips to 40 pips when `trailing_activation_min_pips` is unset, and updated scalp-engine weekend cleanup to sync with OANDA before closing trades and log open-trade counts. |
 | 25 | Consensus config change logging | `config_api_server.update_config()` now logs every config save with `Min Consensus`, `Required LLMs`, and the client IP, so future sessions can see exactly when and from where consensus settings (e.g. `min_consensus_level` flipping 2→1) were changed. |
+| 26 | Scalp-Engine execution guardrail + backup | Created `backup_before_execution_guard_20260317_rollback` snapshot of the entire Trade-Alerts repo, then updated Scalp-Engine `TradeExecutor.open_trade` to call OANDA `get_current_price()` and *skip* placing any order when the intended entry price is more than 10 pips or 0.10% away from the current mid price (logs `price_mismatch` and leaves `_last_reject_reason` set for diagnostics). |
 
 ---
 
