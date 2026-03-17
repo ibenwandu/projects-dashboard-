@@ -45,7 +45,7 @@ class ProfitabilityAgent(EMySubAgent):
 
         logger.info(f"[ProfitabilityAgent] Initialized: {self.name}")
 
-    async def execute(self, instruction: str = None, **kwargs):
+    def execute(self, instruction: str = None, **kwargs):
         """Execute profitability analysis.
 
         Args:
@@ -56,9 +56,9 @@ class ProfitabilityAgent(EMySubAgent):
             dict: Profitability analysis report with metrics and recommendations
         """
         logger.info(f"[ProfitabilityAgent] execute() called")
-        return await self.analyze()
+        return self.analyze()
 
-    async def analyze(self) -> Dict:
+    def analyze(self) -> Dict:
         """Analyze profitability and generate recommendations.
 
         Returns:
@@ -170,7 +170,7 @@ class ProfitabilityAgent(EMySubAgent):
 
         try:
             # Placeholder: would query specific trades table
-            trades = self.db.query(
+            trades = self.db.query_all(
                 """
                 SELECT pair, outcome, pnl, hour, regime, signal_strength
                 FROM trades

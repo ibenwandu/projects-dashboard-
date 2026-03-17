@@ -1,4 +1,3 @@
-import asyncio
 import logging
 import os
 from datetime import datetime
@@ -27,7 +26,7 @@ try:
 except ImportError:
     logger.warning("Redis not installed - rate limiting disabled")
 
-async def log_polling_event(status: str, email_count: int, error_message: str = None):
+def log_polling_event(status: str, email_count: int, error_message: str = None):
     """Log polling event to database"""
     db = EMyDatabase()
     try:
@@ -59,15 +58,15 @@ def check_inbox_periodically(self):
 
             if check_count > 10:
                 logger.warning(f"Rate limit exceeded for inbox polling ({check_count}/hour)")
-                asyncio.run(log_polling_event('rate_limited', 0))
+                log_polling_event('rate_limited', 0)
                 return {'status': 'rate_limited', 'processed': 0}
 
-        # Run async email parsing
+        # Email parsing
         email_parser = EmailParser()
-        emails = asyncio.run(email_parser.check_inbox())
+        emails = email_parser.check_inbox()
 
         logger.info(f"Polling task: Found {len(emails)} new emails")
-        asyncio.run(log_polling_event('success', len(emails)))
+        log_polling_event('success', len(emails))
 
         return {
             'status': 'success',
@@ -77,7 +76,15 @@ def check_inbox_periodically(self):
 
     except Exception as exc:
         logger.error(f"Polling task failed: {exc}")
-        asyncio.run(log_polling_event('error', 0, str(exc)))
+        log_polling_event('error', 0, str(exc))
+
+        # Send alert via PushoverNotifier
+        try:
+            from emy.tools.notification_tool import PushoverNotifier
+            notifier = PushoverNotifier()
+            notifier.send_alert(f"Email polling failed: {exc}", priority=1)
+        except Exception:
+            pass  # Alert failure must never crash the task
 
         # Retry with exponential backoff
         raise self.retry(exc=exc, countdown=60, max_retries=3)

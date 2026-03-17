@@ -50,7 +50,7 @@ class LogAnalysisAgent(EMySubAgent):
 
         logger.info(f"[LogAnalysisAgent] Initialized: {self.name}")
 
-    async def execute(self, instruction: str = None, **kwargs):
+    def execute(self, instruction: str = None, **kwargs):
         """Execute the log analysis.
 
         Args:
@@ -61,9 +61,9 @@ class LogAnalysisAgent(EMySubAgent):
             dict: Analysis report with metrics, anomalies, and findings
         """
         logger.info(f"[LogAnalysisAgent] execute() called")
-        return await self.analyze()
+        return self.analyze()
 
-    async def analyze(self) -> Dict:
+    def analyze(self) -> Dict:
         """Analyze trading logs for last 24 hours and detect anomalies.
 
         Returns:
@@ -165,7 +165,7 @@ class LogAnalysisAgent(EMySubAgent):
         try:
             # Query database for recent trading activity
             # Placeholder: in real implementation, would query specific tables
-            signals = self.db.query(
+            signals = self.db.query_all(
                 """
                 SELECT id, outcome, pnl FROM trading_signals
                 WHERE timestamp >= datetime('now', '-24 hours')
@@ -195,7 +195,7 @@ class LogAnalysisAgent(EMySubAgent):
         try:
             # Query database for recent recommendations
             # Placeholder: in real implementation, would query specific tables
-            recommendations = self.db.query(
+            recommendations = self.db.query_all(
                 """
                 SELECT id, llm_name, hit FROM llm_recommendations
                 WHERE timestamp >= datetime('now', '-24 hours')
@@ -468,10 +468,6 @@ Closure Distribution:
         Args:
             severity (str): Alert severity ("critical", "warning", "info")
             report (dict): Analysis report with findings
-
-        Note:
-            This is a placeholder implementation. In production, this would integrate
-            with the Pushover API using an app token and user key from configuration.
         """
         anomaly_summary = f"{len(report['anomalies'])} anomalies detected: "
         anomaly_summary += ", ".join([f"{a['type']}" for a in report['anomalies'][:3]])
@@ -480,8 +476,15 @@ Closure Distribution:
 
         message = f"Trading Log Analysis Alert [{severity.upper()}]\n{anomaly_summary}\nWin rate: {report['metrics'].get('win_rate', 0.0):.1%}"
 
-        logger.info(f"[LogAnalysisAgent] [{severity.upper()}] {message}")
-        # Placeholder for actual Pushover client implementation
+        try:
+            from emy.tools.notification_tool import PushoverNotifier
+            notifier = PushoverNotifier()
+            # Map severity to priority: critical -> 2, warning -> 1, info -> 0
+            priority_map = {"critical": 2, "warning": 1, "high": 1, "info": 0}
+            priority = priority_map.get(severity, 0)
+            notifier.send_alert(message, priority=priority)
+        except Exception as e:
+            logger.error(f"[LogAnalysisAgent] Failed to send alert: {e}")
 
     def _store_report(self, report: Dict) -> None:
         """Store analysis report in database.

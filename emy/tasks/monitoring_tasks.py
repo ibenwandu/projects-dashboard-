@@ -5,7 +5,6 @@ This module defines shared tasks that wrap agent execution for Celery Beat sched
 Tasks are executed on configured schedules (crontab expressions) defined in celery_config.py.
 """
 
-import asyncio
 import logging
 from celery import shared_task
 from emy.agents.trading_hours_monitor_agent import TradingHoursMonitorAgent
@@ -33,8 +32,7 @@ def trading_hours_enforcement(self, enforcement_time: str = "21:30 Friday"):
     logger.info(f"[Task] Starting trading_hours_enforcement at {enforcement_time}")
     try:
         agent = TradingHoursMonitorAgent()
-        # Run async method in sync context
-        result = asyncio.run(agent._enforce_compliance(enforcement_time=enforcement_time))
+        result = agent._enforce_compliance(enforcement_time=enforcement_time)
         logger.info(
             f"[Task] Enforcement complete: {result.get('trades_closed', 0)} trades closed"
         )
@@ -60,8 +58,7 @@ def trading_hours_monitoring(self):
     logger.info("[Task] Starting trading_hours_monitoring")
     try:
         agent = TradingHoursMonitorAgent()
-        # Run async method in sync context
-        result = asyncio.run(agent._monitor_compliance())
+        result = agent._monitor_compliance()
         logger.info(
             f"[Task] Monitoring complete: {result.get('violations_detected', 0)} violations"
         )
@@ -87,8 +84,7 @@ def log_analysis_daily(self):
     logger.info("[Task] Starting log_analysis_daily")
     try:
         agent = LogAnalysisAgent()
-        # Run async method in sync context
-        result = asyncio.run(agent.analyze())
+        result = agent.analyze()
         logger.info(f"[Task] Log analysis complete: {result.get('anomalies', 0)} anomalies")
         return result
     except Exception as exc:
@@ -112,8 +108,7 @@ def profitability_analysis_weekly(self):
     logger.info("[Task] Starting profitability_analysis_weekly")
     try:
         agent = ProfitabilityAgent()
-        # Run async method in sync context
-        result = asyncio.run(agent.analyze())
+        result = agent.analyze()
         logger.info(
             f"[Task] Profitability analysis complete: "
             f"{len(result.get('recommendations', []))} recommendations"

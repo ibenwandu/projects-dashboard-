@@ -177,7 +177,7 @@ class TradingHoursMonitorAgent(EMySubAgent):
 
         return result
 
-    async def _enforce_compliance(self, enforcement_time: str = "21:30 Friday") -> Dict:
+    def _enforce_compliance(self, enforcement_time: str = "21:30 Friday") -> Dict:
         """Enforce trading hours compliance by closing non-compliant trades.
 
         Args:
@@ -338,15 +338,18 @@ class TradingHoursMonitorAgent(EMySubAgent):
         Args:
             severity (str): Alert severity ("critical", "warning", "info")
             message (str): Alert message content
-
-        Note:
-            This is a placeholder implementation. In production, this would integrate
-            with the Pushover API using an app token and user key from configuration.
         """
-        # Placeholder for actual Pushover client implementation
-        logger.info(f"[TradingHoursMonitorAgent] [{severity.upper()}] {message}")
+        try:
+            from emy.tools.notification_tool import PushoverNotifier
+            notifier = PushoverNotifier()
+            # Map severity to priority: critical -> 2, high/warning -> 1, info -> 0
+            priority_map = {"critical": 2, "warning": 1, "high": 1, "info": 0}
+            priority = priority_map.get(severity, 0)
+            notifier.send_alert(message, priority=priority)
+        except Exception as e:
+            logger.error(f"[TradingHoursMonitorAgent] Failed to send alert: {e}")
 
-    async def _monitor_compliance(self) -> Dict:
+    def _monitor_compliance(self) -> Dict:
         """Monitor compliance without closing trades.
 
         Detects trading hours violations and alerts if critical, but does not take enforcement action.

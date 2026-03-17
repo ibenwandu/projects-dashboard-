@@ -63,7 +63,7 @@ class EmailParser:
             logger.error(f'Gmail parser initialization failed: {e}')
             self._service = None
 
-    async def check_inbox(self) -> List[Dict[str, Any]]:
+    def check_inbox(self) -> List[Dict[str, Any]]:
         """Poll Gmail inbox for new unread emails.
 
         Returns:
@@ -90,7 +90,7 @@ class EmailParser:
             logger.error(f'Unexpected error checking inbox: {e}')
             return []
 
-    async def parse_email(self, email_id: str) -> Dict[str, Any]:
+    def parse_email(self, email_id: str) -> Dict[str, Any]:
         """Extract sender, subject, body from email.
 
         Args:
@@ -159,7 +159,7 @@ class EmailParser:
             logger.error(f'Error extracting body: {e}')
             return ''
 
-    async def classify_intent(self, email: Dict[str, Any]) -> str:
+    def classify_intent(self, email: Dict[str, Any]) -> str:
         """Classify email intent based on subject and body keywords.
 
         Args:
@@ -187,7 +187,7 @@ class EmailParser:
             logger.error(f'Error classifying intent: {e}')
             return 'other'
 
-    async def route_to_agent(self, email: Dict[str, Any]) -> str:
+    def route_to_agent(self, email: Dict[str, Any]) -> str:
         """Route email to appropriate agent based on intent.
 
         Args:
@@ -205,7 +205,7 @@ class EmailParser:
             logger.error(f'Error routing to agent: {e}')
             return 'KnowledgeAgent'
 
-    async def log_email(self, email: Dict[str, Any], status: str = 'received'):
+    def log_email(self, email: Dict[str, Any], status: str = 'received'):
         """Log received email in database.
 
         Args:
