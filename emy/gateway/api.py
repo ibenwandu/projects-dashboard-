@@ -58,7 +58,7 @@ app.add_middleware(
 # ============================================================================
 
 # Root endpoint - serve dashboard HTML
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 async def root():
     """Serve dashboard at root URL."""
     # Try multiple locations for the static files
