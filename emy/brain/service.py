@@ -11,7 +11,9 @@ from pydantic import BaseModel, field_validator, model_validator
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 
 from emy.brain.config import BRAIN_PORT, BRAIN_HOST, QUEUE_POLL_INTERVAL
 from emy.brain.rate_limit import rate_limiter
@@ -40,6 +42,26 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*'],
 )
+
+# Mount static files and serve UI
+import os
+# Try multiple paths to find the UI static folder
+possible_paths = [
+    Path(__file__).parent.parent / 'ui' / 'static',  # emy/ui/static
+    Path('/app/emy/ui/static'),  # Render Docker path
+    Path('/root/emy/ui/static'),  # Render alternative path
+]
+ui_static_path = None
+for path in possible_paths:
+    if path.exists():
+        ui_static_path = path
+        logger.info(f'Found UI static files at: {path}')
+        break
+
+if ui_static_path:
+    app.mount('/static', StaticFiles(directory=ui_static_path), name='static')
+else:
+    logger.warning('UI static files not found in any expected location')
 
 
 @app.middleware("http")
@@ -116,6 +138,22 @@ class HealthResponse(BaseModel):
 # ============================================================================
 # API Endpoints
 # ============================================================================
+
+@app.get('/', include_in_schema=False)
+async def dashboard():
+    """Serve the dashboard UI."""
+    # Try multiple paths to find index.html
+    possible_paths = [
+        Path(__file__).parent.parent / 'ui' / 'static' / 'index.html',
+        Path('/app/emy/ui/static/index.html'),
+        Path('/root/emy/ui/static/index.html'),
+    ]
+    for path in possible_paths:
+        if path.exists():
+            return FileResponse(path, media_type='text/html')
+    logger.error(f'Dashboard index.html not found in any expected location')
+    return JSONResponse({'error': 'Dashboard not found'}, status_code=404)
+
 
 @app.get('/health', response_model=HealthResponse)
 async def health_check():
