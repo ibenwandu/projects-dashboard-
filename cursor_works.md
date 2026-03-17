@@ -2,7 +2,7 @@
 
 This file records interactions, plans, and fixes implemented across projects under the personal folder so future sessions have context.
 
-**Last updated:** Part 23 (Mar 11, 2026) — Manual logs analysis: DeepSeek parser fix + logging improvements (Priority 1 & 2 implemented; see Part 23).
+**Last updated:** Part 25 (Mar 17, 2026) — Config-API logs now include Min Consensus/Required LLMs/client IP for config changes.
 
 **Quick reference — Parts:**
 
@@ -31,6 +31,8 @@ This file records interactions, plans, and fixes implemented across projects und
 | 21 | job-alert-resume | Gmail → Indeed job alerts → scrape → score (Gemini/OpenAI) → report → tailored resumes + PDF + job_links; schedule 7 AM/7 PM EST. Indeed redirect/unwrap fixes; OpenAI option; PDF export; workflow_run.log. See Part 21. |
 | 22 | Scalp-Engine: pnl_pips DB migration | Render logs showed sqlite3.OperationalError: no such column: pnl_pips in daily_learning → update_outcome_simulated. Cause: existing DBs created before pnl_pips was in schema; migration list in _init_db() omitted pnl_pips. Fix: add ('pnl_pips', 'REAL') to new_columns in scalping_rl_enhanced.py. Commit dd47b44 (Trade-Alerts). |
 | 23 | Manual logs analysis + DeepSeek parser fix + logging | Manual logs review (Mar 9-11): DeepSeek parser failure (0 opportunities parsed), RL learning blocked (0 evaluated recommendations), missing trade close logs, excessive max_trades_limit warnings. Plan: suggestions from cursor7.md. Priority 1: Fix DeepSeek parser (Pattern Set 10, MACHINE_READABLE JSON request, enhanced extraction) - COMPLETE. Priority 2: Improve logging (trade close audit logs, ATR trailing logs verified, max_trades_limit throttle) - COMPLETE. Backup: backup_before_cursor7_20260311_162509. Commits: fb2d8b1 (Priority 1), 83b685b (Priority 2). Verification pending before Priority 3. |
+| 24 | Google Drive token + ATR trailing default | Resolved `invalid_grant` and “Drive reader not enabled” by generating a new Google Drive refresh token with the same desktop OAuth client as Render, and by aligning `GOOGLE_DRIVE_CREDENTIALS_JSON` (client_id/client_secret/auth_uri) between local script and Render env. Also lowered ATR_TRAILING fallback activation from 100 pips to 40 pips when `trailing_activation_min_pips` is unset, and updated scalp-engine weekend cleanup to sync with OANDA before closing trades and log open-trade counts. |
+| 25 | Consensus config change logging | `config_api_server.update_config()` now logs every config save with `Min Consensus`, `Required LLMs`, and the client IP, so future sessions can see exactly when and from where consensus settings (e.g. `min_consensus_level` flipping 2→1) were changed. |
 
 ---
 
