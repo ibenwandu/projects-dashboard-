@@ -62,31 +62,42 @@ app.add_middleware(
 async def root():
     """Serve dashboard at root URL."""
     # Try multiple locations for the static files
-    api_dir = os.path.dirname(__file__)
+    api_file = os.path.abspath(__file__)
+    api_dir = os.path.dirname(api_file)
+    app_dir = os.path.dirname(api_dir)  # /app/emy
+
     static_candidates = [
-        os.path.join(api_dir, '..', 'static'),  # /app/emy/static
-        os.path.join(api_dir, '..', 'ui', 'static'),  # /app/emy/ui/static
+        os.path.join(app_dir, 'ui', 'static'),     # /app/emy/ui/static
+        os.path.join(app_dir, 'static'),            # /app/emy/static
+        os.path.join(app_dir, '..', 'emy', 'ui', 'static'),  # /app/emy/ui/static (alt)
+        os.path.join('/app', 'emy', 'ui', 'static'),  # Absolute path
     ]
+
+    logger.info(f"[Dashboard] api_file={api_file}, api_dir={api_dir}, app_dir={app_dir}")
 
     for static_dir in static_candidates:
         index_path = os.path.join(static_dir, 'index.html')
+        logger.info(f"[Dashboard] Checking: {index_path} (exists={os.path.exists(index_path)})")
         if os.path.exists(index_path):
-            logger.info(f"Serving dashboard from: {index_path}")
-            return FileResponse(index_path)
+            logger.info(f"[Dashboard] Serving dashboard from: {index_path}")
+            return FileResponse(index_path, media_type='text/html')
 
     # If we get here, no index.html was found
-    logger.error(f"Dashboard index.html not found in any location: {static_candidates}")
+    logger.error(f"[Dashboard] index.html not found in any location")
     debug_info = {
-        "candidates": static_candidates,
+        "api_file": api_file,
         "api_dir": api_dir,
+        "app_dir": app_dir,
+        "candidates": static_candidates,
     }
     for candidate in static_candidates:
-        debug_info[f"{candidate}_exists"] = os.path.exists(candidate)
+        debug_info[f"{candidate}__exists"] = os.path.exists(candidate)
         if os.path.exists(candidate):
             try:
-                debug_info[f"{candidate}_contents"] = os.listdir(candidate)
+                debug_info[f"{candidate}__contents"] = os.listdir(candidate)
             except Exception as e:
-                debug_info[f"{candidate}_error"] = str(e)
+                debug_info[f"{candidate}__error"] = str(e)
+    logger.error(f"[Dashboard] Debug info: {debug_info}")
     return {"message": "Dashboard not available", "debug": debug_info}
 
 # Backwards-compatible /ui/ alias
@@ -96,8 +107,24 @@ async def ui_redirect():
     return RedirectResponse(url="/")
 
 # Mount static assets (CSS, JS) at /static/
-if os.path.exists(static_dir):
-    app.mount("/static", StaticFiles(directory=static_dir), name="static")
+# Try to mount from first available location
+api_file = os.path.abspath(__file__)
+api_dir = os.path.dirname(api_file)
+app_dir = os.path.dirname(api_dir)  # /app/emy
+static_candidates = [
+    os.path.join(app_dir, 'ui', 'static'),
+    os.path.join(app_dir, 'static'),
+]
+for static_dir in static_candidates:
+    if os.path.exists(static_dir):
+        try:
+            app.mount("/static", StaticFiles(directory=static_dir), name="static")
+            logger.info(f"[StaticFiles] Mounted static assets from: {static_dir}")
+            break
+        except Exception as e:
+            logger.warning(f"[StaticFiles] Failed to mount {static_dir}: {e}")
+else:
+    logger.warning("[StaticFiles] No static directory found for /static/ mounting")
 
 # ============================================================================
 # WebSocket Management
